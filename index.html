@@ -4431,15 +4431,24 @@ try {
   if (cached) state = JSON.parse(cached);
 } catch(e) {}
 
-// Fetch authoritative state from server and apply
+function isEmptyState(st) {
+  return !st || ((!st.deleted||!st.deleted.length) && (!st.added||!st.added.length) && (!st.order||!st.order.length) && (!st.customImgs||!Object.keys(st.customImgs).length));
+}
+
+// Apply cached state immediately (fast)
+applyState(state);
+
+// Then fetch authoritative state from server and re-apply if it has data
 fetch('/api/state').then(function(r){ return r.json(); }).then(function(serverState) {
-  // Merge: server is truth, but apply it fresh
-  state = serverState;
-  localStorage.setItem('nb_state', JSON.stringify(state));
-  applyState(state);
+  // Only override if server has actual data, or local is also empty
+  if (!isEmptyState(serverState)) {
+    state = serverState;
+    localStorage.setItem('nb_state', JSON.stringify(state));
+    applyState(state);
+  }
+  // If server is empty but local has data, keep local (publish hasn't worked yet)
 }).catch(function(){
-  // Offline fallback: use localStorage cache
-  applyState(state);
+  // Offline: keep cached state already applied
 });
 
 function applyState(st) {
@@ -4506,9 +4515,12 @@ async function publishChanges() {
       btn.textContent = '\u{1F310} \u05e4\u05e8\u05e1\u05dd \u05e9\u05d9\u05e0\u05d5\u05d9\u05d9\u05dd';
       showToast('\u2705 \u05d4\u05e9\u05d9\u05e0\u05d5\u05d9\u05d9\u05dd \u05e4\u05d5\u05e8\u05e1\u05de\u05d5 \u05dc\u05db\u05dc \u05d4\u05de\u05d1\u05e7\u05e8\u05d9\u05dd!');
     } else {
+      var errData = await r.json().catch(function(){return {};});
+      var errMsg = (errData && errData.error) ? errData.error : ('HTTP ' + r.status);
       btn.disabled = false;
       btn.textContent = '\u{1F310} \u05e4\u05e8\u05e1\u05dd \u05e9\u05d9\u05e0\u05d5\u05d9\u05d9\u05dd';
-      showToast('\u274c \u05e9\u05d2\u05d9\u05d0\u05d4 \u05d1\u05e9\u05de\u05d9\u05e8\u05d4');
+      showToast('\u274c \u05e9\u05d2\u05d9\u05d0\u05d4: ' + errMsg);
+      console.error('Save failed:', errMsg);
     }
   } catch(e) {
     btn.disabled = false;
