@@ -4,10 +4,13 @@
     "orig_3",
     "orig_4",
     "orig_5",
-    "orig_2"
+    "orig_2",
+    "orig_10",
+    "orig_11"
   ],
   "customImgs": {
-    "orig_6": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_orig_6.jpg"
+    "orig_6": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_orig_6.jpg",
+    "orig_13": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_orig_13.jpg"
   },
   "added": [],
   "order": []
