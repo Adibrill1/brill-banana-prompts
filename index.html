@@ -4509,6 +4509,9 @@ async function publishChanges() {
       body: JSON.stringify({state: state})
     });
     if (r.ok) {
+      var rData = await r.json();
+      // Update local state with server response (images converted from base64 to URLs)
+      if (rData.state) { state = rData.state; }
       localStorage.setItem('nb_state', JSON.stringify(state));
       pendingChanges = false;
       document.getElementById('unsavedDot').classList.remove('show');
