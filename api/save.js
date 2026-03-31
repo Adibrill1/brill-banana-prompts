@@ -1,93 +1,39 @@
-const https = require('https');
-
-function githubGet(token, owner, repo, path) {
-  return new Promise(function(resolve, reject) {
-    const options = {
-      hostname: 'api.github.com',
-      path: '/repos/' + owner + '/' + repo + '/contents/' + path,
-      method: 'GET',
-      headers: {
-        'Authorization': 'Bearer ' + token,
-        'User-Agent': 'brill-banana',
-        'Accept': 'application/vnd.github.v3+json'
-      },
-      timeout: 8000
-    };
-    const req = https.request(options, function(res) {
-      let data = '';
-      res.on('data', function(c) { data += c; });
-      res.on('end', function() { resolve({ status: res.statusCode, body: data }); });
-    });
-    req.on('error', reject);
-    req.on('timeout', function() { req.destroy(); reject(new Error('GET timeout')); });
-    req.end();
-  });
-}
-
-function githubPut(token, owner, repo, path, bodyStr) {
-  return new Promise(function(resolve, reject) {
-    const buf = Buffer.from(bodyStr, 'utf8');
-    const options = {
-      hostname: 'api.github.com',
-      path: '/repos/' + owner + '/' + repo + '/contents/' + path,
-      method: 'PUT',
-      headers: {
-        'Authorization': 'Bearer ' + token,
-        'User-Agent': 'brill-banana',
-        'Accept': 'application/vnd.github.v3+json',
-        'Content-Type': 'application/json',
-        'Content-Length': buf.length
-      },
-      timeout: 15000
-    };
-    const req = https.request(options, function(res) {
-      let data = '';
-      res.on('data', function(c) { data += c; });
-      res.on('end', function() { resolve({ status: res.statusCode, body: data }); });
-    });
-    req.on('error', reject);
-    req.on('timeout', function() { req.destroy(); reject(new Error('PUT timeout')); });
-    req.write(buf);
-    req.end();
-  });
-}
+const owner = 'Adibrill1';
+const repo  = 'brill-banana-prompts';
+const path  = 'state.json';
 
 module.exports = async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   if (req.method !== 'POST') return res.status(405).end();
 
   const token = process.env.GITHUB_TOKEN;
-  const owner = 'Adibrill1';
-  const repo  = 'brill-banana-prompts';
-  const path  = 'state.json';
+  if (!token) return res.status(500).json({ error: 'no token' });
 
-  if (!token) return res.status(500).json({ error: 'GITHUB_TOKEN not set' });
+  const newState = (typeof req.body === 'string' ? JSON.parse(req.body) : req.body).state;
+  const content  = Buffer.from(JSON.stringify(newState, null, 2)).toString('base64');
+  const headers  = {
+    'Authorization': 'token ' + token,
+    'User-Agent': 'brill-banana',
+    'Accept': 'application/vnd.github.v3+json',
+    'Content-Type': 'application/json'
+  };
+  const apiBase = 'https://api.github.com/repos/' + owner + '/' + repo + '/contents/' + path;
 
   try {
-    const body      = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
-    const newState  = body.state;
-    const content   = Buffer.from(JSON.stringify(newState, null, 2)).toString('base64');
-
-    // Get SHA of existing file
+    // Get current SHA
     let sha;
-    try {
-      const getRes = await githubGet(token, owner, repo, path);
-      if (getRes.status === 200) sha = JSON.parse(getRes.body).sha;
-    } catch(e) {
-      // If GET fails, proceed without SHA (will create new file)
+    const getRes = await fetch(apiBase, { headers });
+    if (getRes.ok) {
+      const d = await getRes.json();
+      sha = d.sha;
     }
 
-    const payload = JSON.stringify(Object.assign(
-      { message: 'Update site state', content: content },
-      sha ? { sha: sha } : {}
-    ));
+    // Write new content
+    const body = JSON.stringify(Object.assign({ message: 'Update state', content }, sha ? { sha } : {}));
+    const putRes = await fetch(apiBase, { method: 'PUT', headers, body });
+    const putData = await putRes.json();
 
-    const putRes = await githubPut(token, owner, repo, path, payload);
-
-    if (putRes.status !== 200 && putRes.status !== 201) {
-      return res.status(500).json({ error: 'GitHub ' + putRes.status + ': ' + putRes.body.substring(0, 200) });
-    }
-
+    if (!putRes.ok) return res.status(500).json({ error: putData.message || putRes.status });
     res.status(200).json({ ok: true });
   } catch(e) {
     res.status(500).json({ error: e.message });
