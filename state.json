@@ -1,7 +1,12 @@
 {
-  "deleted": [],
+  "deleted": [
+    "test",
+    "orig_3",
+    "orig_4",
+    "orig_5",
+    "orig_2"
+  ],
   "customImgs": {},
   "added": [],
-  "order": [],
-  "_ping": 1
+  "order": []
 }
