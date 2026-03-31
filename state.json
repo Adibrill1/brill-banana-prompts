@@ -6,7 +6,9 @@
     "orig_5",
     "orig_2"
   ],
-  "customImgs": {},
+  "customImgs": {
+    "orig_6": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_orig_6.jpg"
+  },
   "added": [],
   "order": []
 }
