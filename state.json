@@ -9,12 +9,12 @@
     "orig_17"
   ],
   "customImgs": {
-    "orig_6": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_orig_6.jpg",
-    "orig_3": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_orig_3.jpg",
-    "orig_9": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_orig_9.jpg",
-    "orig_18": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_orig_18.jpg",
-    "orig_14": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_orig_14.jpg",
-    "orig_19": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_orig_19.jpg"
+    "orig_6": "/api/img?p=images%2Fcustom_orig_6.jpg",
+    "orig_3": "/api/img?p=images%2Fcustom_orig_3.jpg",
+    "orig_9": "/api/img?p=images%2Fcustom_orig_9.jpg",
+    "orig_18": "/api/img?p=images%2Fcustom_orig_18.jpg",
+    "orig_14": "/api/img?p=images%2Fcustom_orig_14.jpg",
+    "orig_19": "/api/img?p=images%2Fcustom_orig_19.jpg"
   },
   "added": [],
   "order": [
