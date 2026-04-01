@@ -67,7 +67,7 @@ module.exports = async function handler(req, res) {
       var putRes   = await ghRequest(token, 'PUT', imgPath, putBody);
 
       if (putRes.status === 200 || putRes.status === 201) {
-        newState.customImgs[key] = '/api/img?p=' + encodeURIComponent(imgPath);
+        newState.customImgs[key] = '/' + imgPath;
       }
     }
 
