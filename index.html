@@ -4792,10 +4792,29 @@ function filterCards(q){
 }
 function updateCount(){document.getElementById('count').textContent='\u05de\u05e6\u05d9\u05d2 '+document.querySelectorAll('.card').length+' \u05e4\u05e8\u05d5\u05de\u05e4\u05d8\u05d9\u05dd';}
 function escHtml(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function compressImage(src,maxDim,quality){
+  return new Promise(function(resolve){
+    var img=new Image();
+    img.onload=function(){
+      var w=img.naturalWidth,h=img.naturalHeight;
+      if(w>maxDim||h>maxDim){if(w>h){h=Math.round(h*maxDim/w);w=maxDim;}else{w=Math.round(w*maxDim/h);h=maxDim;}}
+      var c=document.createElement('canvas');c.width=w;c.height=h;
+      c.getContext('2d').drawImage(img,0,0,w,h);
+      resolve(c.toDataURL('image/jpeg',quality));
+    };
+    img.onerror=function(){resolve(src);};
+    img.src=src;
+  });
+}
 function fileToPreview(input,prevId,urlId){
   if(!input.files||!input.files[0])return;
   var r=new FileReader();
-  r.onload=function(e){var p=document.getElementById(prevId);p.src=e.target.result;p.classList.add('show');document.getElementById(urlId).value='';};
+  r.onload=function(e){
+    compressImage(e.target.result,900,0.82).then(function(compressed){
+      var p=document.getElementById(prevId);p.src=compressed;p.classList.add('show');
+      document.getElementById(urlId).value='';
+    });
+  };
   r.readAsDataURL(input.files[0]);
 }
 function urlToPreview(url,prevId,fileId){
