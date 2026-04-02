@@ -4426,6 +4426,7 @@ async function tryUnlock() {
 
 // State: localStorage as fast cache, /api/state as source of truth
 var state = { deleted:[], customImgs:{}, added:[], order:[] };
+var serverCustomImgs = {}; // image paths confirmed uploaded on server
 try {
   var cached = localStorage.getItem('nb_state');
   if (cached) state = JSON.parse(cached);
@@ -4440,13 +4441,12 @@ applyState(state);
 
 // Then fetch authoritative state from server and re-apply if it has data
 fetch('/api/state').then(function(r){ return r.json(); }).then(function(serverState) {
-  // Only override if server has actual data, or local is also empty
   if (!isEmptyState(serverState)) {
+    serverCustomImgs = serverState.customImgs || {};
     state = serverState;
     localStorage.setItem('nb_state', JSON.stringify(state));
     applyState(state);
   }
-  // If server is empty but local has data, keep local (publish hasn't worked yet)
 }).catch(function(){
   // Offline: keep cached state already applied
 });
@@ -4503,11 +4503,22 @@ async function publishChanges() {
   btn.disabled = true;
   btn.textContent = '\u{1F504} \u05e9\u05d5\u05de\u05e8...';
   try {
+    // Replace stale base64 with confirmed server paths to avoid exceeding 4.5MB body limit
+    var stateToPost = JSON.parse(JSON.stringify(state));
+    Object.keys(stateToPost.customImgs || {}).forEach(function(key) {
+      if ((stateToPost.customImgs[key] || '').startsWith('data:') && serverCustomImgs[key]) {
+        stateToPost.customImgs[key] = serverCustomImgs[key];
+      }
+    });
+    var ctrl = new AbortController();
+    var saveTimer = setTimeout(function(){ ctrl.abort(); }, 25000);
     var r = await fetch('/api/save', {
       method: 'POST',
       headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({state: state})
+      body: JSON.stringify({state: stateToPost}),
+      signal: ctrl.signal
     });
+    clearTimeout(saveTimer);
     if (r.ok) {
       var rData = await r.json();
       // Update local state with server response (images converted from base64 to URLs)
