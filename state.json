@@ -73,7 +73,7 @@
     "orig_82": "/images/custom_orig_82.jpg",
     "orig_80": "/images/custom_orig_80.jpg",
     "orig_86": "/images/custom_orig_86.jpg",
-    "orig_87": "/images/custom_orig_87.jpg",
+    "orig_87": "https://brill-banana-prompts-v3.vercel.app/images/custom_orig_87.jpg",
     "orig_85": "/images/custom_orig_85.jpg",
     "orig_84": "/images/custom_orig_84.jpg"
   },
@@ -389,6 +389,11 @@
       "title": "Hyper-Realistic Twitter Post with Einstein After Theory of Relativity",
       "cat": "Illustration",
       "prompt": "Create a hyper realistic twitter post by Albert Einstein right after finishing the theory of relativity. include a selfie of the person from attached photo \"Adi Brill\"  along with Albert Einstein where you can clearly see scribbled equations and a chalkboard in the background. have it visible that the post was liked by \"Brill.ai\""
+    },
+    "orig_87": {
+      "title": "Quiet Confidence",
+      "cat": "Portrait",
+      "prompt": "Create An ultra-realistic, full-body cinematic portrait based precisely on the uploaded reference image (male or female) - maintaining 100% fidelity to the subject’s real face and hairstyle, with no modification or change to facial features, expression, or hair texture.\n\nDepict the subject as a person in their early 30s, height 167 cm, weight approximately 70 kg, with a confident yet calm expression, staring directly at the camera.\nPose: leaning casually against a minimalist interior wall, right leg crossed over left, both hands tucked into pants pockets - a natural, poised stance that communicates quiet confidence.\n\nWardrobe:\n* Short-sleeved maroon polo shirt with a small white “LV” logo on the left chest.\n* Dark blue slim-fit denim jeans.\n* Black casual sneakers with white soles.\n* A black wristwatch visible on the left wrist.\n\nEnvironment:\nA modern minimalist interior - matte gray walls, dark wood flooring, and matching base plinths.\nTo the subject’s right (camera perspective) hangs a large framed artwork: a black-and-white vector-style portrait of the same subject’s face (based on the reference image), executed in stencil/graphic design style, with the inscription\"ADI BRILL\" in clean capital letters at the bottom.\n\nLighting setup:\nCinematic Chiaroscuro style - one hard light source from the top-left, acting like a dramatic spotlight.\nThis illumination emphasizes the left side of the face and body, leaving the right side in deep shadow, creating visual depth and emotional contrast.\nSoft ambient bounce light subtly reveals wall and floor details without breaking the moody atmosphere.\n\nCamera setup:\n* Eye-level angle, capturing the entire body.\n* Composition: balanced and deliberate, with the subject positioned slightly left and the artwork on the right for spatial harmony.\n* Lens simulation: 50mm full-frame, aperture f/4, maintaining crisp sharpness with natural depth of field.\n\nColor palette:\nA controlled, cool cinematic tone, dominated by grays, blacks, and dark blues, with the maroon shirt as a striking accent color drawing visual focus.\nSubtle reflections and color bleed from the maroon hue enrich the surrounding textures.\n\nTechnical details:\n* 8K resolution\n* Hyper-detailed realism (visible skin texture, fabric grain, polished leather surfaces)\n* High contrast cinematic grade\n* Professional portrait-photography aesthetic with filmic sharpness, balanced shadows, and dynamic range optimized for print or gallery display.\n\nAtmosphere:\nElegant, modern, introspective - a portrait that celebrates discipline, individuality, and creative confidence."
     }
   }
 }
