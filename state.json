@@ -60,9 +60,9 @@
     "orig_68": "/images/custom_orig_68.jpg",
     "orig_67": "/images/custom_orig_67.jpg",
     "orig_70": "/images/custom_orig_70.jpg",
-    "orig_66": "/images/custom_orig_66.jpg",
+    "orig_66": "https://brill-banana-prompts-v3.vercel.app/images/custom_orig_66.jpg",
     "orig_73": "/images/custom_orig_73.jpg",
-    "orig_74": "/images/custom_orig_74.jpg",
+    "orig_74": "https://brill-banana-prompts-v3.vercel.app/images/custom_orig_74.jpg",
     "orig_72": "/images/custom_orig_72.jpg",
     "orig_77": "/images/custom_orig_77.jpg",
     "orig_75": "/images/custom_orig_75.jpg",
@@ -379,6 +379,16 @@
       "title": "Young King Emerging from Cracked King of Spades Card",
       "cat": "Fantasy",
       "prompt": "CREATE a 64 K DSLR ultra-realistic cinematic portrait of the character (male or female, keeping the same face from the reference image), emerging dramatically from a large cracked playing card of the King of Spades.\nThe King figure has short hair and a well-groomed beard or refined facial features depending on gender, wearing an ornate crown with gold filigree and embedded red gems.\nThe character is dressed in luxurious robes with rich gold-and-crimson embroidery, draped across the shoulders with heavy regal folds.\nOne arm extends forward in a commanding, cinematic gesture, while the other rests naturally, revealing a subtle tattoo on the hand.\nThe cracked playing card looks like aged stone, with dust and debris breaking loose as the figure pushes through its surface.\nLighting is dramatic and low-key, emphasizing depth, shadows, and highlights across the crown and robes.\nBackground: dark gradient tone with faint atmospheric particles for a post-apocalyptic mood.\nRender in Octane Render / Unreal Engine 5 style with photoreal materials, sharp optics, HDR global illumination, and cinematic depth of field.\nThe overall image evokes grandeur, authority, and quiet power, blending realism with subtle fantasy energy."
+    },
+    "orig_66": {
+      "title": "Cinematic Urban Portrait with Custom Rings and Flag Patch",
+      "cat": "Portrait",
+      "prompt": "Create an ultra-realistic 8K ultra-detailed cinematic portrait of the character (male or female, keeping the same face from the reference image) standing in a gritty urban street scene with graffiti-painted walls in the background.\n\nThe character’s hands are raised in front, displaying large, custom silver rings - one spelling \"ADI\" and the other spelling \"BRILL\", reflecting ambient light vividly.\nThey wear a gray puffer coat with a hood and a black hat featuring a patch of the \"Brill.ai\".\nAround their neck hangs a silver chain necklace with a large, ornate lion’s head pendant crowned in gold, its diamond eyes sparkling brightly, glinting with crisp reflections and subtle lens flare.\n\nLighting is dramatic and cinematic, highlighting the metallic jewelry, the shine of the coat’s texture, and soft shadows that sculpt the facial features.\nThe character’s expression is serious and intense, gazing directly at the camera with commanding presence.\n\nThe wet pavement and graffiti-covered walls behind reflect neon city light in soft diffused tones, enhancing the urban realism.\nShot with a DSLR 50mm f/1.8 lens, showcasing natural color grading, deep contrast, hyper-realistic textures, and authentic light reflections - as if captured in a cinematic street editorial photoshoot."
+    },
+    "orig_74": {
+      "title": "Hyper-Realistic Twitter Post with Einstein After Theory of Relativity",
+      "cat": "Illustration",
+      "prompt": "Create a hyper realistic twitter post by Albert Einstein right after finishing the theory of relativity. include a selfie of the person from attached photo \"Adi Brill\"  along with Albert Einstein where you can clearly see scribbled equations and a chalkboard in the background. have it visible that the post was liked by \"Brill.ai\""
     }
   }
 }
