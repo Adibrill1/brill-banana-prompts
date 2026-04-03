@@ -31,7 +31,7 @@
     "orig_21": "/images/custom_orig_21.jpg",
     "orig_23": "/images/custom_orig_23.jpg",
     "orig_24": "/images/custom_orig_24.jpg",
-    "orig_43": "/images/custom_orig_43.jpg",
+    "orig_43": "https://brill-banana-prompts-v3.vercel.app/images/custom_orig_43.jpg",
     "orig_42": "/images/custom_orig_42.jpg",
     "orig_44": "/images/custom_orig_44.jpg",
     "orig_39": "/images/custom_orig_39.jpg",
@@ -349,6 +349,21 @@
       "title": "Blue studio fashion portrait blending elegance and androgyny",
       "cat": "Portrait",
       "prompt": "CREATE a photorealistic 8K full-body portrait inspired by both attached reference images. Use the facial structure, natural beauty, and hairstyle inspired by the portrait reference - smooth skin, expressive eyes, balanced features, and refined bone structure with realistic lighting and natural tones. Place the character in the same studio setting and pose as the blue-themed reference: seated casually on a modern designer lounge chair, leaning back with legs crossed and smiling subtly with relaxed confidence. Outfit: a bold blue unisex tracksuit with matching joggers, white socks, and chunky beige sneakers - a fashion-editorial look that works equally for masculine or feminine forms. Scene: seamless blue studio with a large light-blue abstract Brill shape in the background for a clean, magazine-style composition. Lighting: soft, even, and cinematic, highlighting contours while maintaining rich fabric texture and smooth shadows. Color palette: deep and light blues accented with subtle yellows. Aesthetic: modern, minimal, high-fashion editorial - sharp focus, smooth gradients, realistic fabric detail, and androgynous appeal preserving natural harmony and elegance."
+    },
+    "orig_15": {
+      "title": "Stylish full-body portrait interacting with 3D name text",
+      "cat": "Portrait",
+      "prompt": "Create ultra-realistic digital art of a person (use reference photo) in a dynamic full-body pose. The subject wears Red T-shirt, yellow jacket and pants, green sneakers), appearing stylish and modern. Add a single text \"ADI\" displayed vertically, rendered as large 3D block glossy letters in yellow color. The text should appear only once, without repetition, and be big enough to look like a real object. Make the model interact with the text, for example sitting on."
+    },
+    "orig_43": {
+      "title": "Futuristic transparent digital ID card",
+      "cat": "Product",
+      "prompt": "Create a hyper-realistic photograph of a futuristic transparent digital ID card held in hand. The card displays a portrait of the person from the uploaded reference image - keeping the EXACT SAME FACE, identity, proportions, skin texture, expression, and all natural facial details with zero changes or reinterpretation. No gender or age is altered - the portrait must match the reference image exactly. The ID card has a masculine tech aesthetic featuring electric blue, silver, graphite, and subtle neon-glow accents. Use cinematic lighting, natural photographic shadows, and a shallow 85mm depth-of-field for realism. Design elements on the card: A sharp glowing ring framing the portrait. Name: \"Adi Brill\" Title: \"Digital Content Creator\" A stats section with clean futuristic tech icons showing: 296K Followers 3 Years Experience \"AI Specialist\" Transparent glass-tech card design with sleek UI lines, micro-circuits, scanning graphics, and a refined modern masculine vibe. The person is styled in a black–gray futuristic suit, tailored and realistic, matching the overall aesthetic. Render the entire scene as a realistic cinematic photograph - crisp lighting, natural reflections, flawless clarity, no cartoon look, no distortions, and no alteration of the face from the reference image. IMPORTANT: The portrait on the ID must use the EXACT SAME FACE from the uploaded reference photo - same structure, same micro-details, same realism - perfectly integrated into the futuristic card."
+    },
+    "orig_22": {
+      "title": "Ultra-Realistic Instagram Frame Portrait with 3D Pose",
+      "cat": "Portrait",
+      "prompt": "Create Ultra realistic portrait of an individual presented inside an oversized Instagram post frame that dominates the scene. Keep uploaded face consistent and unchanged. The individual's facial features are delicate yet sharp, clean, flirting and naturally stunning, with eyes locked on the viewer with calm, magnetic intensity and lips softly relaxed and neutral, radiating a high-fashion model expression.\nThey stand in a modern, dynamic pose: upper body leaning subtly forward, one hand casually gripping the top edge of the Instagram frame, while one leg steps gracefully outward through the frame, creating a smooth and stylish 3D illusion.\nThe Instagram frame is ultra realistic with:\nusername \"Brill.ai\", verified badge,\ndisplay name \"Adi Brill\",\nprofile stats '[42k followers]',\ncaption '[NANO BANANA]',\nauthentic [Instagram] UI icons (like, comment, share, save, emoji reactions),\nand a circular profile picture identical to the subject.\nThe individual wears LIKE THE IMAGE REFRENCE\nThe background features a fresh modern gradient of PURPLE PINK PASTEL HOLOGRAPHIC GRADIENT, with airy highlights and subtle smooth textures that perfectly complement the cool toned outfit.\nShot on an 85mm lens at f/2.0, clean cinematic lighting, shallow depth of field, natural color grading, high resolution, detailed textures, photorealistic, viral ready editorial aesthetic."
     }
   }
 }
