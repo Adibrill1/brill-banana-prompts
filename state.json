@@ -1148,6 +1148,36 @@
       "images": [
         "/images/custom_added_1775332074370_img0.jpg"
       ]
+    },
+    {
+      "key": "added_1775332157679",
+      "id": "חדש",
+      "title": "number",
+      "cat": "",
+      "prompt": "{\"title\":\"Hyper-Realistic Portrait: Suited Woman in Mugshot Pose\",\"subject\":{\"clothing\":{\"jacket\":\"vintage-style tailored dark pinstripe suit jacket\",\"accessories\":[{\"type\":\"mugshot board\",\"text\":{\"name\":\"ADI BRILL\"}}]}},\"background\":{\"style\":\"naturally blurred bokeh\",\"details\":{\"height_chart\":\"vertical lines\"}},\"style\":\"Hyper-realistic photography, 8K clarity\"}",
+      "images": [
+        "/images/custom_added_1775332157679_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775332230889",
+      "id": "חדש",
+      "title": "Black",
+      "cat": "",
+      "prompt": "{\"prompt\":\"Hyperrealistic portrait of a young woman against a completely black background. Dark, dramatic, mysterious mood. Diagonal angled beam of light from top-left...\",\"negative_prompt\":\"anime smoothness, plastic skin...\",\"quality\":\"8K ultra-detailed\"}",
+      "images": [
+        "/images/custom_added_1775332230889_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775332261351",
+      "id": "חדש",
+      "title": "Boxing",
+      "cat": "",
+      "prompt": "{\"subject\":{\"description\":\"A male boxer sitting in the corner of a ring between rounds, heavy breathing\",\"face\":{\"makeup\":\"swollen eye, cut on eyebrow, vaseline smeared\"}},\"photography\":{\"camera_style\":\"Sports documentary style, 85mm portrait lens\",\"texture\":\"sharp pores, gritty noise, dramatic shadows\"}}",
+      "images": [
+        "/images/custom_added_1775332261351_img0.jpg"
+      ]
     }
   ],
   "order": [
