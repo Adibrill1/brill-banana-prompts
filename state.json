@@ -61,7 +61,8 @@
     "orig_225",
     "orig_234",
     "orig_239",
-    "orig_237"
+    "orig_237",
+    "added_1775331876977"
   ],
   "customImgs": {
     "orig_6": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_orig_6.jpg",
@@ -1126,6 +1127,26 @@
       "prompt": "{\"intent\":\"Generate a photorealistic, high-fidelity smartphone photograph simulating a raw night-time capture at a bustling Asian night market.\",\"subject\":{\"attire\":\"Vivid royal blue satin deep-V crop top with a front tie/knot detail...\",\"pose\":\"Seated at a table, facing the camera directly. Right hand holding a clear plastic cup...\"},\"environment\":{\"location\":\"Semi-outdoor night market dining tent.\",\"background\":\"White canopy tent structure visible above...\"},\"lighting\":{\"style\":\"Direct on-camera smartphone flash simulation.\"},\"camera\":{\"aesthetic\":\"Mobile photography, Apple iPhone 16 Pro Max simulation.\"}}",
       "images": [
         "/images/custom_added_1775331916971_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775332040436",
+      "id": "חדש",
+      "title": "Cassette",
+      "cat": "",
+      "prompt": "A top-down perspective of a young man lying on a clean white floor, styled in a classic 90s outfit: a loose graphic tee, light-washed denim jeans, chunky sneakers, and over-ear retro headphones. He holds a portable cassette player in one hand, the tape slightly exposed. Scattered around him are colorful vinyl records, chunky old CRT televisions, and vintage electronics, arranged with clear spacing to create a nostalgic 90s atmosphere.",
+      "images": [
+        "/images/custom_added_1775332040436_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775332074370",
+      "id": "חדש",
+      "title": "Cola",
+      "cat": "",
+      "prompt": "{\"scene\":{\"subject\":{\"pose\":\"Sitting on the floor, facing forward\",\"expression\":\"Slightly serious or pensive, direct eye contact\",\"apparel\":{\"top\":\"Off-white or cream tank top with small dark cherry embroidery\",\"bottom\":\"Distressed denim shorts\"}},\"action\":{\"right_hand\":\"Holding up a Coca-Cola can\"},\"environment\":{\"main_fixture\":\"Open, retro-style refrigerator\",\"fridge_contents\":[\"Coca-Cola cans\",\"Ramune bottles\"]},\"style_and_mood\":{\"lighting\":\"Warm, slightly muted\",\"aesthetic\":\"Cool, casual, retro\",\"theme\":\"Beverage focus\"}}}",
+      "images": [
+        "/images/custom_added_1775332074370_img0.jpg"
       ]
     }
   ],
