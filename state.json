@@ -536,6 +536,26 @@
       "images": [
         "/images/custom_added_1775318035626_img0.jpg"
       ]
+    },
+    {
+      "key": "added_1775318519248",
+      "id": "חדש",
+      "title": "Calendar",
+      "cat": "",
+      "prompt": "Prompt: {\n\"image_prompt\": {\n\"subject\": \"Top-down aerial view of a man (from the uploaded photo) wearing a quilted mountain parka, sitting in pristine snow holding a thermal coffee mug. Double exposure effect: His jacket and body silhouette showcase rolling alpine hills at dawn, wildflower meadows, mountain goats on rocky outcrops, and a winding mountain trail leading to a sunrise peak.\",\n\"composition\": \"Vertical 9:16. 60% Top: Subject with layered mountain landscape double exposure creating depth. 40% Bottom: Untouched powder snow with gentle terrain contours for clean calendar text area.\",\n\"lighting\": \"Warm sunrise alpenglow illuminating the silhouette from within, soft diffused daylight on surrounding snow, atmospheric haze adding depth layers.\",\n\"text_overlay\": {\n\"title\": \"2026 CALENDAR\",\n\"style\": \"Text embossed into weathered stone or carved into alpine wood, high-contrast typography with mountain texture.\",\n\"grid_data\": \"3x4 grid with subtle topographic line accents.\"\n},\n\"quality\": \"8K, Photorealistic, Razor-sharp detail on face and typography, Cinematic with enhanced atmospheric perspective.\"\n}\n}",
+      "images": [
+        "/images/custom_added_1775318519248_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775318635394",
+      "id": "חדש",
+      "title": "airport",
+      "cat": "",
+      "prompt": "An engaging photo capturing a moment of fascination and pride over a meticulously crafted miniature soekarno-hatta international airport terminal 3. The diorama showcases a comprehensive airport scene, illuminated with tiny lights, featuring a runways, terminals, airport control center building, maintenance fleet building, and numerous model commercial airplanes flag carrier (emirates, saudia, etihad, garuda, singapore airlines, qatar, oman, jal, etc) a man are seen learning over the diorama, On the apron, a jet bridge (garbarata) is attached to the aircraft door, its metal and glass structure reflecting warm sunlight. On the left side, a pushback tug in white and yellow is positioned under the aircraft’s nose, with hydraulic details and indicator lights glowing.\nIn front of the aircraft, a marshaller wearing a reflective vest and headset is signaling precise hand movements with illuminated batons, guiding the pilot into position. In the background, a modern airport shuttle bus with large windows waits to unload passengers. Heat distortion rises from the tarmac, reflections shimmer on the aircraft’s fuselage, and the orange sky enhances the dynamic, lively atmosphere of the busy airport. admiring their creation or presenting it. The background suggests a workshop or studio setting at morning vibe.\nHyper-realistic style, strong depth of field, vivid colors, wide-angle composition, cinematic tone.",
+      "images": [
+        "/images/custom_added_1775318635394_img0.jpg"
+      ]
     }
   ],
   "order": [
