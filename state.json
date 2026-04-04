@@ -1198,6 +1198,46 @@
       "images": [
         "/images/custom_added_1775332372463_img0.jpg"
       ]
+    },
+    {
+      "key": "added_1775332427485",
+      "id": "חדש",
+      "title": "athletic",
+      "cat": "",
+      "prompt": "{\"intent\":\"Generate a photorealistic, high-fidelity mirror selfie... performing an athletic pose in a disordered bedroom.\",\"frame\":{\"style_mode\":\"raw_lifestyle, next_gen_mobile_photography\"},\"subject\":{\"pose\":\"The subject performs a vertical standing split in the mirror...\",\"makeup\":\"Bare-faced aesthetic with no visible makeup.\"},\"environment\":{\"location\":\"A chaotic, lived-in personal bedroom.\",\"props_and_details\":\"The background is untidy and realistic... clothes strewn across the floor.\"}}",
+      "images": [
+        "/images/custom_added_1775332427485_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775332535360",
+      "id": "חדש",
+      "title": "Taylor",
+      "cat": "",
+      "prompt": "A close-up, euphoric concert photograph taken from the front row captures a world-famous pop icon in her 30s radiant on a glittering arena stage. She has wavy blonde hair, red lipstick, and is wearing a sparkling silver sequined bodysuit, passionately playing a rhinestone-covered acoustic guitar.",
+      "images": [
+        "/images/custom_added_1775332535360_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775332567454",
+      "id": "חדש",
+      "title": "Seq",
+      "cat": "",
+      "prompt": "[Project_Settings]Title=Studio_Portrait_Sequin_Dress... [Subject]Description=Stunning woman... [Attire]Dress_Style=Deep-V halter dress... [Render_Quality]Style=Fashion editorial photographyQuality_Tags=Lifelike lighting, 8k realism",
+      "images": [
+        "/images/custom_added_1775332567454_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775332597554",
+      "id": "חדש",
+      "title": "smoking",
+      "cat": "",
+      "prompt": "{\"Objective\":\"Create a cinematic vintage-romantic portrait featuring a stylish girl... smoking, standing beside a mysterious man... in an old Rome–like street.\",\"Scene_Details\":{\"Main_Subjects\":{\"Female\":{\"Outfit\":\"Long leather boots...\"}},\"Background\":{\"Description\":\"Narrow old Roman street at dusk...\"}},\"Artistic_Style\":{\"Genre\":\"Cinematic Vintage Noir Editorial\"}}",
+      "images": [
+        "/images/custom_added_1775332597554_img0.jpg"
+      ]
     }
   ],
   "order": [
