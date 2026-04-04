@@ -1298,6 +1298,106 @@
       "images": [
         "/images/custom_added_1775333008591_img0.jpg"
       ]
+    },
+    {
+      "key": "added_1775333047339",
+      "id": "חדש",
+      "title": "pow",
+      "cat": "",
+      "prompt": "{\n  \"scene_description\": \"A vibrant, mixed-media masterpiece featuring a photorealistic version of the person...\",\n  \"illustration_layer\": { \"style\": \"Thick-line Pop Art cartoons\" }\n}",
+      "images": [
+        "/images/custom_added_1775333047339_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775333195476",
+      "id": "חדש",
+      "title": "characters",
+      "cat": "",
+      "prompt": "Uploaded Image taking a selfie in a well-lit living room. He is wearing a turquoise t-shirt and holding the camera slightly above eye level, creating a wide-angle effect. Surrounding him are several colorful cartoon and anime characters from different universes, drawn in distinct animation styles... They crowd around him enthusiastically, interacting with each other and reacting to the selfie. The characters are integrated convincingly into the real space, casting soft shadows on the furniture. Background shows a bright window with cream curtains and soft indoor lighting. The overall vibe is fun, chaotic, and energetic.",
+      "images": [
+        "/images/custom_added_1775333195476_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775333369233",
+      "id": "חדש",
+      "title": "Magic",
+      "cat": "",
+      "prompt": "Keep the exact face and skin tone with sharp features wearing a black hoodie sits in a rustic wooden booth, staring intensely at the camera with one hand supporting his chin and the other reaching forward as if performing telekinesis. Dozens of playing cards float around him in mid-air, captured in dynamic slow motion with subtle motion blur. The background features vertical wooden panels and a framed photo of a man playing cards",
+      "images": [
+        "/images/custom_added_1775333369233_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775333414809",
+      "id": "חדש",
+      "title": "Camping",
+      "cat": "",
+      "prompt": "{\"Objective\":\"Transform the user's descriptive scene prompt into a structured JSON format...\",\"Persona_Details\":{\"Character\":\"Man wearing glasses\",\"Clothing\":{\"Outerwear\":\"Orange winter clothing\",\"Footwear\":\"Dark red and black ice boots\"},\"Behavior\":\"Ice fishing with a research-focused approach\"},\"Environment_Details\":{\"Setting\":\"Frozen ice pond\",\"Tent_Color\":\"Light brown\",\"Sky\":\"White, cloudy, heavy atmosphere\",\"Scene_Composition\":{\"Subject_Position\":\"Slightly right of center\",\"Purpose\":\"Emphasize ice landscape\"}},\"Objects_and_Props\":{\"Ice_Fishing_Equipment\":[\"Black front cover\",\"Fishing tools\"],\"Observed_Items\":[\"Small objects placed near the tent entrance\"]},\"Technical_Attributes\":{\"Style\":\"High-resolution realism\",\"Resolution\":\"4K\",\"Detail_Emphasis\":[\"Folds of tent fabric\",\"Texture of the ice\"]}}",
+      "images": [
+        "/images/custom_added_1775333414809_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775333454287",
+      "id": "חדש",
+      "title": "Art",
+      "cat": "",
+      "prompt": "{\"Objective\":\"Transform the user's descriptive scene prompt into a structured JSON format...\",\"Persona_Details\":{\"Character\":\"Man wearing glasses\",\"Clothing\":{\"Outerwear\":\"Orange winter clothing\",\"Footwear\":\"Dark red and black ice boots\"},\"Behavior\":\"Ice fishing with a research-focused approach\"},\"Environment_Details\":{\"Setting\":\"Frozen ice pond\",\"Tent_Color\":\"Light brown\",\"Sky\":\"White, cloudy, heavy atmosphere\",\"Scene_Composition\":{\"Subject_Position\":\"Slightly right of center\",\"Purpose\":\"Emphasize ice landscape\"}},\"Objects_and_Props\":{\"Ice_Fishing_Equipment\":[\"Black front cover\",\"Fishing tools\"],\"Observed_Items\":[\"Small objects placed near the tent entrance\"]},\"Technical_Attributes\":{\"Style\":\"High-resolution realism\",\"Resolution\":\"4K\",\"Detail_Emphasis\":[\"Folds of tent fabric\",\"Texture of the ice\"]}}",
+      "images": [
+        "/images/custom_added_1775333454287_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775333488877",
+      "id": "חדש",
+      "title": "movies",
+      "cat": "",
+      "prompt": "Show the behind the scenes view of this movie set of this exact scene. Keeping the characters in position, but showing the technical equipment, lighting, and ambient motion of the crew. Denoise and crisp the image.",
+      "images": [
+        "/images/custom_added_1775333488877_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775333527214",
+      "id": "חדש",
+      "title": "perspective",
+      "cat": "",
+      "prompt": "Recreate the person from [Image1] in four different camera perspectives. Keep the subject’s identity, body proportions, and clothing consistent across all four images.",
+      "images": [
+        "/images/custom_added_1775333527214_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775333663742",
+      "id": "חדש",
+      "title": "gaming",
+      "cat": "",
+      "prompt": "{\"label\":\"direct-flash-gamer-girl\",\"tags\":[\"direct-flash\",\"retro-gamer-room\",\"90s-photography\"],\"Subject\":[\"young woman in her early 20s... seated cross-legged on a couch, holding a game controller\"],\"Lighting\":\"strong direct on-camera flash aimed straight at the subject... ambient tungsten lamp in the background\",\"Mood\":\"intimate, playful, nostalgic, confidently casual with a strong gamer-at-home vibe\"}",
+      "images": [
+        "/images/custom_added_1775333663742_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775333713881",
+      "id": "חדש",
+      "title": "miror",
+      "cat": "",
+      "prompt": "{\"subject\":\"beautiful young woman mirror selfie in Disney store\",\"outfit\":\"strapless white ruched mini dress, pearl necklace\",\"headwear\":\"fluffy orange Nick Wilde fox-ear hat with green eyes\",\"reflection_companion\":\"life-size Judy Hopps police plush\",\"style\":\"playful wink, cute and flirty Disney selfie\"}",
+      "images": [
+        "/images/custom_added_1775333713881_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775333769897",
+      "id": "חדש",
+      "title": "green",
+      "cat": "",
+      "prompt": "{\"camera\":{\"lens\":\"ultra_wide_fisheye_12mm\",\"distortion\":\"strong_exaggeration\"},\"subject\":{\"pose\":\"leaning_forward_sipping_drink\",\"clothing\":{\"top\":\"bright_green_knit_sweater\",\"accessory\":\"chunky_blue_sunglasses\"}},\"drink\":{\"type\":\"iced_matcha_latte\"},\"composition\":{\"focus\":\"face_extreme_closeup\",\"mood\":\"funny_intimate_casual\"}}",
+      "images": [
+        "/images/custom_added_1775333769897_img0.jpg"
+      ]
     }
   ],
   "order": [
