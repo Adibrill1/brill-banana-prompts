@@ -334,6 +334,56 @@
       "images": [
         "/images/custom_added_1775315909697_img0.jpg"
       ]
+    },
+    {
+      "key": "added_1775315989744",
+      "id": "חדש",
+      "title": "Desert",
+      "cat": "",
+      "prompt": "\"Use the uploaded woman's face with exact accuracy. Cinematic desert traveler standing on a dune, a falcon perched calmly on a rock beside him, wings half-open as if sensing the wind.\",\n\"clothing\": {\n\"top\": \"light desert robe with layered textures\",\n\"bottom\": \"stone-beige tactical pants\",\n\"shoes\": \"sand-covered boots\"\n},\n\"pose\": \"standing sideways to the camera, looking forward with intensity\",\n\"camera_angle\": \"4:5 portrait, semi-low angle for hero mood\",\n\"lighting\": \"warm desert sunlight mixing with soft shadows\",\n\"environment\": \"high dune with windy sky, sand trails in air\",\n\"fx\": \"subtle particles and wind motion in clothes\",\n\"quality\": \"8K ultra-photoreal, sharp skin detail\"",
+      "images": [
+        "/images/custom_added_1775315989744_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775316026479",
+      "id": "חדש",
+      "title": "Lake",
+      "cat": "",
+      "prompt": "**A beautiful, high-angle portrait photo of a young woman sitting gracefully in a classic, wooden rowboat on a dark, calm lake at sunset. She is wearing an elegant, Cloud dancer or neutral white off-the-shoulder corset-style gown/dress with puffy sleeves, reminiscent of a historical or bridal aesthetic. Her face is illuminated by the warm, golden light of the setting sun, creating a dramatic chiaroscuro effect**\n>\n> **The boat contains a woven picnic basket and a bouquet of large, white, round hydrangeas or similar flowers held gently in her hand. A majestic white swan is swimming near the boat in the upper-left of the frame, its neck curved elegantly. The water is deep and dark, dotted with green lily pads. **\n>\n> **Styling:** *Romanticism, dark academia, classical art influence. **High detail, ultra-realistic photography, cinematic lighting, shallow depth of field, golden hour, 8k resolution.**\n* **Subject:** Young woman with a very long dark wavy hair, elegant Cloud dancer or neutral white gown, peaceful expression.\n* **Setting:** Dark, calm lake, wooden rowboat, lily pads.\n* **Atmosphere:** Serene, romantic, golden hour.\n* **Camera Angle:** High-angle shot (looking down into the boat).\n* **Color Palette:** Contrast between the dark water/wood and the bright white dress/swan/flowers, accented by warm golden light.",
+      "images": [
+        "/images/custom_added_1775316026479_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775316211404",
+      "id": "חדש",
+      "title": "Basketball",
+      "cat": "",
+      "prompt": "A photorealistic full-body shot of a stunning young woman standing at center court of a professional basketball arena. She is wearing a customized, cropped basketball jersey and matching loose athletic shorts, paired with high socks and high-top sneakers. She holds a basketball against her hip with one hand, looking confidently at the camera. Her hair is tied back in a high, sporty ponytail. The background features a blurred indoor arena with bright stadium lights reflecting off the polished wooden floor. The lighting is dramatic and crisp, capturing a K-pop idol aesthetic.",
+      "images": [
+        "/images/custom_added_1775316211404_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775316390609",
+      "id": "חדש",
+      "title": "Helicopter",
+      "cat": "",
+      "prompt": "A cinematic and ultra-realistic image of a confident woman (same face as uploaded reference) stepping into a powerful helicopter on a windswept landing strip during golden hour. She wears a dramatic layered technical light-gray jacket that billows wildly from the spinning rotor blades. One foot firmly planted on the boarding ramp, one hand gripping the edge of the hatch reflecting the blazing sky. Her expression is steely and fearless, like an elite operative embarking on a high-stakes mission. Dust, sparks, and dry leaves swirl dramatically around her from the helicopter engines, while cinematic lighting and subtle motion blur emphasize the sense of speed, power, and purpose in the scene",
+      "images": [
+        "/images/custom_added_1775316390609_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775316486740",
+      "id": "חדש",
+      "title": "Card",
+      "cat": "",
+      "prompt": "Create an ultra-realistic photo of a woman (uploaded photo for 100.999% facial reference) wearing sunglasses, white lacoste tshirt, black jeans and jordan1 sneakers, leans casually inside a giant weathered playing card frame marked \"A of Diamonds\" with graffiti text \"Adi Brill\". The scene is set in a moody, abandoned city, skycrapers and dramatic cinematic lighting. Extreme low angle in the middle of the city skyscrapers.",
+      "images": [
+        "/images/custom_added_1775316486740_img0.jpg"
+      ]
     }
   ],
   "order": [
