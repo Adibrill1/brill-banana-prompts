@@ -1398,6 +1398,26 @@
       "images": [
         "/images/custom_added_1775333769897_img0.jpg"
       ]
+    },
+    {
+      "key": "added_1775333813837",
+      "id": "חדש",
+      "title": "selfie",
+      "cat": "",
+      "prompt": "{\"prompt_details\":{\"subject\":\"A young... woman... seated in a gray ergonomic office chair, taking a selfie...\",\"clothing_and_appearance\":{\"top\":\"White halter-neck crop top with a black, spiky, gothic... design\",\"bottoms\":\"Pink and white patterned pajama pants\"},\"setting\":{\"type\":\"Gamer's room...\",\"background_elements\":[\"White shelving unit\",\"Large yellow Pikachu plush\"]},\"keywords\":[\"selfie\",\"gamer girl\",\"goth aesthetic\",\"indoor portrait\"]}}",
+      "images": [
+        "/images/custom_added_1775333813837_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775333853337",
+      "id": "חדש",
+      "title": "sweat",
+      "cat": "",
+      "prompt": "{\"subject\":{\"description\":\"A young woman sitting on yoga mat, wiping sweat with towel\",\"expression\":\"accomplished, slight breathlessness\"},\"clothing\":{\"top\":{\"type\":\"sports bra\",\"color\":\"dusty rose pink\"},\"bottom\":{\"type\":\"high-waisted leggings\",\"color\":\"black with mesh panels\"}},\"photography\":{\"camera_style\":\"gym selfie aesthetic, smartphone front camera\"},\"background\":{\"setting\":\"modern gym studio\",\"elements\":[\"purple yoga mat\",\"dumbbells\",\"resistance bands\"]}}",
+      "images": [
+        "/images/custom_added_1775333853337_img0.jpg"
+      ]
     }
   ],
   "order": [
