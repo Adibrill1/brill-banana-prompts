@@ -847,6 +847,56 @@
       "images": [
         "/images/custom_added_1775328841824_img0.jpg"
       ]
+    },
+    {
+      "key": "added_1775328880074",
+      "id": "חדש",
+      "title": "Poster",
+      "cat": "",
+      "prompt": "Flat poster design \"ADI BRILL\", an exhibition of 30 most iconic anime characters from Japanese animation, harmoniously integrated into one design, maximalism aesthetic. 4K output.",
+      "images": [
+        "/images/custom_added_1775328880074_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775329113871",
+      "id": "חדש",
+      "title": "polaroid",
+      "cat": "",
+      "prompt": "Create an image about \"ADI BRILL\" retold through a series of Polaroid photos pinned to a cork board. Each photo captures a key moment, with simple captions below. Arrange the photos in a loosely chronological path across the board, using colored strings to connect events and characters. Light the scene warmly to evoke nostalgia. Include incidental details, coffee cup rings, paper clips, handwritten notes, for authenticity.",
+      "images": [
+        "/images/custom_added_1775329113871_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775329152615",
+      "id": "חדש",
+      "title": "camera",
+      "cat": "",
+      "prompt": "A man is standing in a modern electronics store analyzing a digital camera. He is wearing a watch. On the table in front of him are sunglasses, headphones on a stand, a helmet, and a white sneaker. Use the labeled collage as a reference for all items. Style: realistic commercial photography.",
+      "images": [
+        "/images/custom_added_1775329152615_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775329400763",
+      "id": "חדש",
+      "title": "red",
+      "cat": "",
+      "prompt": "A masterpiece winter series editorial photograph titled \"Red Spirit\" in a 3:4 aspect ratio, featuring a 2x2 grid collage layout with strict character facial and clothing color matching across all panels.\n\nEnvironment: Heavy blizzard with dense, large snowflakes filling the entire depth of field. Strong directional light from the left creates deep textures and high-contrast Rembrandt shadows. The color theme is high-contrast: consistent vibrant scarlet red, pure snow white, and matte black.\n\nCharacter details: The subject has almond eyes, refined nose, and M-shaped lips with natural frost-chilled redness on cheeks and nose bridge. Realistic skin texture with visible pores. Dark espresso hair with scattered snow particles.\n\nPanel 1 (Top Left): Medium close-up with chin tucked in red scarf, gentle half-smile, looking at camera.\n\nPanel 2 (Top Right): Profile close-up, looking upwards with dreamy and pensive expression.\n\nPanel 3 (Bottom Left): Medium shot with a vibrant red umbrella. The umbrella is solid saturated scarlet red, matching the scarf and beanie perfectly. Expression is vulnerable and melancholic with moist glistening eyes, head tilted slightly downward. Standing in the blizzard, the red umbrella creates a bold color block against the white snow.\n\nPanel 4 (Bottom Right): Waist-up medium shot with dynamic joy. Broad laugh or mischievous expression with eyes crinkled with happiness. Playfully lifting the red scarf with energetic and spontaneous movement.\n\nMaterials: Uniformity in red saturation across beanie, scarf, and umbrella sharing the same vivid scarlet tone. Textures include chunky-knit wool, soft cashmere, matte umbrella fabric, and heavy wool coat.\n\nProfessional Vogue editorial style, high-fashion winter photography, emotional narrative, extreme color contrast, 8k raw photo.",
+      "images": [
+        "/images/custom_added_1775329400763_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775329459578",
+      "id": "חדש",
+      "title": "blond reading",
+      "cat": "",
+      "prompt": "Horizontal 16:9 cinematic continuous storyboard, realistic documentary style. Reference Image 1 for character spatial relationship, position, and style; Reference Image 2 for character appearance. This prompt includes four specific frame instructions:\n\nPanel 1 (Side Profile Close-up): Focus on the facial features (platinum blonde hair, green eyes) of the character from Image 2 reading in bed, referencing Image 1. Apply background blur and retain the cool-toned lighting from Image 1.\n\nPanel 2 (Reading Back View): Recreate the action of “lying on the bed reading” from Image 1, but use the clothing of the character from Image 2, emphasizing the cherry blossom season outside the window.\n\nPanel 3 (Medium Shot Low Angle): Reference Image 1 for the action position. This is a highly dramatic perspective, reflecting the narrowness of the room and the spatial relationship of the character, highlighting details of the bookshelf and poster wall.\n\nPanel 4 (Full View/Fisheye): Add a wide-angle shot (referencing the perspective of Image 1) to establish the overall environment and set the mood of “staying home on a snowy day.”",
+      "images": [
+        "/images/custom_added_1775329459578_img0.jpg"
+      ]
     }
   ],
   "order": [
