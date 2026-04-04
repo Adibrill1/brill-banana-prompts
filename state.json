@@ -827,6 +827,26 @@
       "images": [
         "/images/custom_added_1775328491396_img0.jpg"
       ]
+    },
+    {
+      "key": "added_1775328743271",
+      "id": "חדש",
+      "title": "Giantic wonab",
+      "cat": "",
+      "prompt": "A realistic scene where Tokyo Tower is occupied by a super gigantic woman. The surrounding buildings appear as small as toy models, while the woman is enormously large. The setting features a realistic city environment. The overall mood is quiet, warm, soothing, and cute.",
+      "images": [
+        "/images/custom_added_1775328743271_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775328841824",
+      "id": "חדש",
+      "title": "Challenge",
+      "cat": "",
+      "prompt": "Create a highly interactive challenge invitation thumbnail. Person action: The person in the image makes a provocative/inviting gesture (such as waving, pointing at the viewer, or giving a thumbs up). Expression: Confident, challenging smile or serious determined look. Background: Dynamic abstract geometric background with vibrant jumping colors. Interactive text prompts: Top large text: 'Do You Dare?' Central core text (with stroke and shadow): '7-Day Fitness Challenge' Bottom call-to-action (red button style): 'Click to Join ▶' Visual elements: Add countdown clock icon, place '50,000 participants' badge, top right difficulty label: '⭐⭐⭐ Medium Difficulty'. Effects: Dynamic light sweep effect creating urgency. Atmosphere: Full of energy and action, sparking viewer participation.",
+      "images": [
+        "/images/custom_added_1775328841824_img0.jpg"
+      ]
     }
   ],
   "order": [
