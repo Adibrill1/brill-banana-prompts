@@ -1067,6 +1067,36 @@
       "images": [
         "/images/custom_added_1775331529890_img0.jpg"
       ]
+    },
+    {
+      "key": "added_1775331633122",
+      "id": "חדש",
+      "title": "car",
+      "cat": "",
+      "prompt": "{\"image_prompt_structure\":{\"style_and_atmosphere\":{\"aesthetic\":\"Dark, grainy vintage film look (e.g., Kodak Portra 800)\",\"mood\":\"Dreamy, melancholic, blurry, atmospheric\",\"effects\":\"Heavy motion blur due to movement and wind, soft focus\"},\"subject\":{\"identity_instruction\":\"Crucial: Do not alter facial features from reference identity.\",\"appearance\":{\"hair\":\"Long, wavy brown hair, heavily blown about by the wind\"},\"attire\":\"Off-shoulder white knitted top\"},\"action_and_pose\":{\"description\":\"Subject is leaning their upper back backwards out of an open car window while the car is moving.\"},\"setting\":{\"location\":\"Passenger seat window of a vintage car\",\"time\":\"Night\",\"background\":\"Completely blurred streaks of dark city or road lights\"},\"lighting\":{\"description\":\"Low light, likely illuminated by a warm, soft vintage camera flash mixed with ambient streaking streetlights.\"}}}",
+      "images": [
+        "/images/custom_added_1775331633122_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775331685150",
+      "id": "חדש",
+      "title": "port",
+      "cat": "",
+      "prompt": "Ultra-realistic cinematic portrait of a young woman, standing outdoors in a quiet after-evening blue hour. She has a gentle, pensive expression, looking off to the side. She is wearing stylish, light-rimmed circular glasses, a black turtleneck or fitted shirt, and a dark grey charcoal overcoat/jacket draped over her shoulders... Shot on a DSLR with an 85mm lens... Features HDR lighting with a strong, warm, orange-toned dapple backlight illuminating her hair and shoulder, contrasting sharply with the soft blue ambient light of the background.",
+      "images": [
+        "/images/custom_added_1775331685150_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775331712606",
+      "id": "חדש",
+      "title": "wander",
+      "cat": "",
+      "prompt": "{\"character\":{\"identity\":\"rugged male wanderer\",\"age_range\":\"mid to late 30s\",\"face\":{\"keep_original\":true,\"weathering\":\"sun-worn skin, dirt streaks, natural roughness\",\"expression\":\"alert, scanning surroundings, fatigue visible\"},\"hair\":{\"color\":\"salt + pepper\",\"style\":\"untamed, beard untrimmed\"},\"outfit\":{\"upper\":{\"layers\":\"distressed plaid flannel under worn denim jacket\",\"tones\":\"faded reds + blues\"},\"lower\":{\"type\":\"heavy jeans\",\"condition\":\"dark grey, dirt-caked knees\"}}},\"gear\":{\"backpack\":{\"style\":\"large survival pack\",\"color\":\"olive green\"}},\"environment\":{\"location\":\"nature-reclaimed urban district\",\"details\":[\"abandoned vehicles pushed aside\",\"plant growth bursting through road fractures\"],\"atmosphere\":\"stillness, overgrown melancholy\",\"lighting\":\"soft cloud-covered daylight\"},\"camera\":{\"style\":\"cinematic realism\",\"lens\":\"35mm wide\",\"framing\":\"full-body, diagonal walk direction\",\"ratio\":\"16:9\"}}",
+      "images": [
+        "/images/custom_added_1775331712606_img0.jpg"
+      ]
     }
   ],
   "order": [
