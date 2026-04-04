@@ -937,6 +937,66 @@
       "images": [
         "/images/custom_added_1775329990059_img0.jpg"
       ]
+    },
+    {
+      "key": "added_1775330044207",
+      "id": "חדש",
+      "title": "Dress",
+      "cat": "",
+      "prompt": "A cozy room where the wall looks like a giant paper illustration, flat ink lines and watercolor washes, yet a corner of the “paper wall” is peeled back, revealing a fully 3D forest behind it. The peeled edge curls outward like thick cardstock, casting a real shadow on the illustrated surface. The illusion: the 2D drawn objects (a drawn lamp, drawn shelf) cast realistic 3D shadows, while the 3D forest casts faint “ink” shadows as if it’s becoming a drawing. A cat sits half-in, half-out: front paws in 3D forest moss, back body in 2D sketch form, seamlessly blended. Soft morning light, gentle pastel palette, tactile paper fibers visible, high detail, whimsical but believable “mixed-dimension” realism.",
+      "images": [
+        "/images/custom_added_1775330044207_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775330197096",
+      "id": "חדש",
+      "title": "leaf",
+      "cat": "",
+      "prompt": "Inspired by leaf-cutout art, delicately depict a fisherman casting a line into a serene lake through intricate hollow cutouts on a single, complete green leaf. All elements are organically connected by thin natural veins, ensuring no isolated or floating segments. The leaf surface has a glossy, wet appearance with tiny sparkling water droplets. Soft sunlight gently illuminates the leaf, creating subtle highlights and shadows. Background features a softly blurred lakeside landscape, providing a calm, peaceful atmosphere, captured in ultra-detailed 8K resolution for macro-level realism. Dynamic effect: drifting dandelion fluff gently floating through the air.",
+      "images": [
+        "/images/custom_added_1775330197096_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775330438300",
+      "id": "חדש",
+      "title": "Celebs",
+      "cat": "",
+      "prompt": "Create a hyper-realistic, ultra-sharp, full-color large-format image featuring a massive group of celebrities from different eras, all standing together in a single wide cinematic frame...",
+      "images": [
+        "/images/custom_added_1775330438300_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775330604184",
+      "id": "חדש",
+      "title": "profile photo",
+      "cat": "",
+      "prompt": "\"A professional, high-resolution profile photo, maintaining the exact facial structure...\"",
+      "images": [
+        "/images/custom_added_1775330604184_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775330727316",
+      "id": "חדש",
+      "title": "Chalkboard",
+      "cat": "",
+      "prompt": "\"intent\": \"Photorealistic documentation of a specific chalkboard art piece...\"",
+      "images": [
+        "/images/custom_added_1775330727316_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775330825249",
+      "id": "חדש",
+      "title": "fisheye wide-angle",
+      "cat": "",
+      "prompt": "A film-like fisheye wide-angle 360-degree selfie...",
+      "images": [
+        "/images/custom_added_1775330825249_img0.jpg"
+      ]
     }
   ],
   "order": [
