@@ -284,6 +284,36 @@
       "images": [
         "/images/custom_added_1775315125658_img0.jpg"
       ]
+    },
+    {
+      "key": "added_1775315294386",
+      "id": "חדש",
+      "title": "Popcorn",
+      "cat": "",
+      "prompt": "A photorealistic image of a vintage 1980s CRT television set on a wooden entertainment center. Inside the TV screen, [person from attached photo] is watching a movie, holding a bowl of popcorn. A real hand from outside the TV reaches into the screen, grabbing a handful of popcorn from the bowl. Popcorn pieces dramatically scatter in 3D, breaking out of the screen boundary with realistic physics. Nostalgic warm lighting, VHS aesthetic with subtle scan lines, hyperrealistic, 4K.",
+      "images": [
+        "/images/custom_added_1775315294386_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775315568090",
+      "id": "חדש",
+      "title": "Christmas",
+      "cat": "",
+      "prompt": "A detailed transparent gashapon capsule diorama, held gently between fingers, featuring an iconic Christmas-themed character based on [Attached Adi Image]. Recreate the character inside the capsule in a festive, heartwarming holiday style — cozy winter clothing, soft knit textures, tiny sparkles of snow, or magical glowing ornaments depending on the image's cues.\nInside the capsule, build a charming miniature holiday environment:\n\n— tiny snow-covered props\n\n— warm lantern lights\n\n— candy-cane arches\n\n— miniature gift boxes\n\n— shimmering golden particles floating around\n\nall arranged to complement the character’s personality and aesthetic.\nLighting should be cinematic and warm, inspired by classic Christmas ambience: golden fairy lights, fireplace glow, soft snowfall shimmer, or magical aurora hues — depending on what suits the attached image.\nThe capsule has a transparent dome and a colored base in a festive palette (deep red, pine green, gold, or frosted white). The base should feature subtle decorative motifs inspired by the character’s design. Add a small elegant nameplate on the base, where the character’s name is inferred from the attached image.\nThe entire design should resemble a high-end collectible holiday ornament: photorealistic details, tiny handcrafted imperfections, soft bokeh background, and a square 1080×1080 composition.\nAesthetic keywords: magical, heartwarming, premium collectible, festive glow, photorealistic, cozy winter mood, miniature Christmas world.",
+      "images": [
+        "/images/custom_added_1775315568090_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775315590220",
+      "id": "חדש",
+      "title": "Lion",
+      "cat": "",
+      "prompt": "A realistic and emotional portrait of a person sitting cross-legged on the dry grass in an African savanna at sunset. A majestic, male lion stands directly behind the person, resting one large paw gently on the person's shoulder or neck, and licking their head or cheek affectionately. The person should be smiling brightly, looking genuinely happy and relaxed.\nSetting & Lighting: Golden hour, soft warm light, deep shadows. Sparse acacia trees in the blurred background. Dry, golden-yellow grass in the foreground.\nCinematic quality, ultra-detailed, photorealistic, 8k, shot with a telephoto lens.",
+      "images": [
+        "/images/custom_added_1775315590220_img0.jpg"
+      ]
     }
   ],
   "order": [
