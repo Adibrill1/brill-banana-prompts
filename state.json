@@ -1097,6 +1097,36 @@
       "images": [
         "/images/custom_added_1775331712606_img0.jpg"
       ]
+    },
+    {
+      "key": "added_1775331833202",
+      "id": "חדש",
+      "title": "cold",
+      "cat": "",
+      "prompt": "Reference image: uploaded photo Face: keep the same face from the reference image. Pose: model standing with left arm resting on railing, holding cup of coffee, body slightly leaned to side, looking away. Clothes: fluffy white faux-fur coat, tight black leggings.Accessories:transparent rectangular sunglasses.Background: snowy mountain terrace, heavy snow on railings, forest in background. Lighting: cold daylight softened by fog, natural reflections on glass. Camera: 50mm f/2.0, natural cinematic winter tone. Mood: luxury après-ski, calm sophistication. Format:portrait 2:3.",
+      "images": [
+        "/images/custom_added_1775331833202_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775331876977",
+      "id": "חדש",
+      "title": "wine",
+      "cat": "",
+      "prompt": "{\"meta\":{\"image_quality\":\"High\",\"image_type\":\"Photo\",\"resolution_estimation\":\"High resolution, likely smartphone portrait mode\"},\"global_context\":{\"scene_description\":\"A high-angle, top-down selfie taken outdoors on a paved surface. The subject is a young woman crouching or squatting over a skateboard...\"},\"composition\":{\"camera_angle\":\"High-angle / Top-down / Selfie\",\"framing\":\"Close-up wide-angle\"},\"objects\":[{\"id\":\"obj_001\",\"label\":\"Person (Subject)\",\"pose_or_orientation\":\"Squatting, face tilted up towards camera\"},{\"id\":\"obj_007\",\"label\":\"Skateboard\",\"visual_attributes\":{\"color\":\"Light wood with faded green graphics\"}}]}",
+      "images": [
+        "/images/custom_added_1775331876977_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775331916971",
+      "id": "חדש",
+      "title": "night",
+      "cat": "",
+      "prompt": "{\"intent\":\"Generate a photorealistic, high-fidelity smartphone photograph simulating a raw night-time capture at a bustling Asian night market.\",\"subject\":{\"attire\":\"Vivid royal blue satin deep-V crop top with a front tie/knot detail...\",\"pose\":\"Seated at a table, facing the camera directly. Right hand holding a clear plastic cup...\"},\"environment\":{\"location\":\"Semi-outdoor night market dining tent.\",\"background\":\"White canopy tent structure visible above...\"},\"lighting\":{\"style\":\"Direct on-camera smartphone flash simulation.\"},\"camera\":{\"aesthetic\":\"Mobile photography, Apple iPhone 16 Pro Max simulation.\"}}",
+      "images": [
+        "/images/custom_added_1775331916971_img0.jpg"
+      ]
     }
   ],
   "order": [
