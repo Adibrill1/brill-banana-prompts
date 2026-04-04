@@ -1017,6 +1017,56 @@
       "images": [
         "/images/custom_added_1775331023815_img0.jpg"
       ]
+    },
+    {
+      "key": "added_1775331239702",
+      "id": "חדש",
+      "title": "Cyberpunk",
+      "cat": "",
+      "prompt": "A cyberpunk female assassin stands in the pouring rain, gripping a glowing red katana as neon lights reflect off the wet pavement. Her slick, drenched black outfit clings to her form while her futuristic goggles emit intense red illumination, casting a sharp glow across her face. Strands of wet hair frame her cold, focused expression as she prepares for confrontation. Behind her, a blurred figure approaches through teal and crimson bokeh, heightening the tension. Ultra-realistic lighting, dramatic rain streaks, high-contrast cyber-noir atmosphere, deep shadows, reflective surfaces, cinematic composition.",
+      "images": [
+        "/images/custom_added_1775331239702_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775331303053",
+      "id": "חדש",
+      "title": "model",
+      "cat": "",
+      "prompt": "{\"Objective\":\"Generate an ultra-realistic street-fashion portrait of a young man walking confidently outdoors based on the provided reference image.\",\"Scene_Description\":{\"Environment\":{\"Setting\":\"Wet pavement near a modern café\",\"Background\":{\"Style\":\"Blurred urban environment\",\"Elements\":[\"Palm tree\",\"Orange and black road barriers\",\"Soft urban structures\"]},\"Lighting\":{\"Type\":\"Warm natural sunlight\",\"Effects\":[\"Crisp shadows\",\"Golden highlights on clothing and hair\",\"Instagram-style warm color mood\"]},\"Atmosphere\":\"Casual, stylish, modern street fashion\"},\"Subject\":{\"Identity\":\"Maintain facial features consistent with the provided reference image\",\"Appearance\":{\"Hair\":\"Stylish, slightly messy natural hairstyle\",\"Expression\":\"Calm, confident\"},\"Pose\":{\"Action\":\"Walking confidently on wet pavement\",\"Hands\":\"Partially in pockets\",\"Body_Language\":\"Relaxed yet assured, modern fashion posture\"}}},\"Wardrobe\":{\"Outfit\":{\"Jacket\":\"Beige jacket\",\"Shirt\":\"White T-shirt\",\"Pants\":\"Baggy olive jeans\",\"Footwear\":\"White sneakers\"}},\"Visual_Style\":{\"Aesthetic\":\"Instagram-style street fashion\",\"Quality\":\"Ultra-realistic with sharp details\",\"Color_Profile\":\"Warm sunlight tones with soft urban contrast\",\"Detail_Characteristics\":[\"Realistic fabric texture\",\"Wet pavement reflections\",\"Cinematic blur and depth\",\"High clarity in subject’s face and clothing\"]},\"Output_Requirements\":{\"Format\":\"Image\",\"Quality\":\"High-detail, photorealistic, street-fashion editorial\"}}",
+      "images": [
+        "/images/custom_added_1775331303053_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775331353581",
+      "id": "חדש",
+      "title": "pool",
+      "cat": "",
+      "prompt": "A high-quality photorealistic portrait of a young woman sitting on the edge of a swimming pool on a sunny day. She has voluminous long wavy hair styled with a white flower hair clip on one side. She is wearing a vintage-inspired matching two-piece set: a white sleeveless crop top with a delicate sky blue floral print and a prominent sky blue collar with a bow and a matching mini skirt. She is looking directly at the camera with a soft expression. The background features bright blue shimmering pool water and blurred tropical greenery. The lighting is bright and natural highlighting the details of her outfit and hair. 8k resolution cinematic lighting.",
+      "images": [
+        "/images/custom_added_1775331353581_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775331501977",
+      "id": "חדש",
+      "title": "Mirror",
+      "cat": "",
+      "prompt": "{\"prompt\":\"A young woman with long, softly curled dark hair takes a cinematic mirror selfie in a bathroom lit by warm golden-hour light streaming through a small window. She wears a fitted charcoal tank top, and her silhouette glows with warm rim-light. Steam from a recent shower adds a hazy, atmospheric layer. The bathroom features tan stone tiles, a backlit mirror, and soft dust particles glowing in the light. The overall vibe is dramatic, moody, and film-like with rich contrast.\",\"negative_prompt\":\"blurry, grainy, flat lighting, low detail, bad reflections, distorted hands, cartoon, watercolor, overexposed highlights, washed-out colors\",\"steps\":50,\"sampler\":\"DPM++ 2M Karras\",\"cfg_scale\":8,\"model\":\"realisticVisionV60B1\"}",
+      "images": [
+        "/images/custom_added_1775331501977_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775331529890",
+      "id": "חדש",
+      "title": "Split",
+      "cat": "",
+      "prompt": "{ \"image_generation\": { \"requirements\": { \"face_preservation\": { \"preserve_original\": true, \"accuracy_level\": \"100% identical to reference\" }, \"lighting\": { \"type\": \"soft neon mixed lighting\", \"direction\": \"from left pink neon and right blue neon\", \"background_tone\": \"dark cyberpunk urban blur\" } }, \"subject\": { \"gender\": \"female\", \"expression\": \"calm, focused\", \"clothing\": { \"top\": \"sleek black techwear hoodie\", \"accessory\": \"thin glowing blue choker\" } }, \"composition\": { \"style\": \"hyper-realistic + cyber cartoon split\" }, \"special_effects\": { \"split_effect\": { \"type\": \"diagonal glitch tear\" } } } }",
+      "images": [
+        "/images/custom_added_1775331529890_img0.jpg"
+      ]
     }
   ],
   "order": [
