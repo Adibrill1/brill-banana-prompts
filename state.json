@@ -997,6 +997,26 @@
       "images": [
         "/images/custom_added_1775330825249_img0.jpg"
       ]
+    },
+    {
+      "key": "added_1775330983701",
+      "id": "חדש",
+      "title": "museum",
+      "cat": "",
+      "prompt": "A commercial grade photograph of [uploaed reference image] posing inside a high-end museum exhibition space...",
+      "images": [
+        "/images/custom_added_1775330983701_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775331023815",
+      "id": "חדש",
+      "title": "Banana cover",
+      "cat": "",
+      "prompt": "A photo of a glossy magazine cover, the cover has the large bold words \"Nano Banana Pro\"",
+      "images": [
+        "/images/custom_added_1775331023815_img0.jpg"
+      ]
     }
   ],
   "order": [
