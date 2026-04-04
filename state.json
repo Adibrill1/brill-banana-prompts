@@ -222,7 +222,8 @@
     "orig_232": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_orig_232.jpg",
     "orig_233": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_orig_233.jpg",
     "orig_240": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_orig_240.jpg",
-    "orig_238": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_orig_238.jpg"
+    "orig_238": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_orig_238.jpg",
+    "orig_12": "/images/custom_orig_12.jpg"
   },
   "added": [
     {
@@ -463,6 +464,76 @@
       "prompt": "Create a hyper-realistic studio-style collage of the person in the uploaded photo.\nIdentity: Apply a CRITICAL IDENTITY LOCK to preserve the exact likeness, including facial features, hairstyle, skin tone, proportions, age, and clothing style.\nLighting: Strong, studio-quality lighting.\nBackground: Simple light gray.\nComposition: Arrange in a 3x3 grid (9 images). Each frame should show the person breaking through torn white paper, creating a 3D effect as if emerging from the background.\nExpressions & Poses: Each image must be unique and playful: pointing, laughing, pretending to sleep, drinking, winking, thinking, gesturing, etc. Ensure variety in facial expressions and body language.\nOutfits: Different outfit in each frame.\nRange from casual, semi-formal, sporty, to humorous or eccentric styles.\nOutput Settings:\nAspect Ratio: 9:16\nHigh resolution\nElegant, modern composition",
       "images": [
         "/images/custom_added_1775317325942_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775317439415",
+      "id": "חדש",
+      "title": "Vogue",
+      "cat": "",
+      "prompt": "A luxurious fashion magazine cover inspired by [NY], featuring the exact person from the reference image as the main model, with perfectly preserved facial features, hairline, skin tone, and eye color, without changing facial structure or apparent age. The hairstyle and any visible accessories from the image are accurately maintained, with only minimal design adjustments if needed to harmonize with the scene. The model’s gender and age presentation remain neutral and respectful:  \n- If the person appears as an adult female, style them in elegant, contemporary full-body fashion appropriate for a high-end cover, aligned with local trends.  \n- If the person appears as an adult male, style them in sophisticated, tailored full-body fashion suitable for a luxury editorial.  \n- If the person appears as a female child, dress them in age-appropriate, modest, stylish full-body clothing with a gentle, aspirational tone.  \n- If the person appears as a male child, dress them in age-appropriate, modest, stylish full-body clothing with a polished yet youthful feel.  \nIf the person in the reference image is veiled, preserve a modern hijab/veil design and ensure the attire covers the entire body while remaining fashionable and contemporary. \nThe cover composition blends [NY]’s iconic landmarks, cultural symbols, and local fashion aesthetics, using a high-end editorial layout with headlines inspired by the country’s language but in English , lifestyle, and current trends. Sophisticated, cinematic lighting, vertical 9:16 format, ultra-detailed finishing, and Vogue-level elegance.",
+      "images": [
+        "/images/custom_added_1775317439415_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775317485371",
+      "id": "חדש",
+      "title": "Cinematic",
+      "cat": "",
+      "prompt": "Replace the man's face with the exact face from my uploaded photo. Use my real facial features 100% precisely: same eyes, nose, mouth, jawline, skin tone, hair color and hairstyle as in my photo. Do not change or stylize my face at all.\n\nThe person (me, with my real face from the photo) is a young man sitting in the open door of a white convertible car on a chaotic New York city street. He’s wearing a white slightly torn button-down shirt, black ripped jeans, and white sneakers. He’s holding a black pistol aimed forward with a serious, determined expression. Dynamic low-angle shot. Background: explosions, thick smoke, fire, shattered glass, abandoned cars, sparks flying near the car wheels. Warm dramatic lighting from the explosions, highly realistic action movie style, photorealistic, ultra-detailed, cinematic.",
+      "images": [
+        "/images/custom_added_1775317485371_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775317535528",
+      "id": "חדש",
+      "title": "Fire",
+      "cat": "",
+      "prompt": "the man in a tailored suit walking calmly while a controlled explosion happens behind him. Orange firelight outlining him, dust and debris in slow-motion, fearless expression, Hollywood-style action boss\nportrait.",
+      "images": [
+        "/images/custom_added_1775317535528_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775317632054",
+      "id": "חדש",
+      "title": "royal scene",
+      "cat": "",
+      "prompt": "Create a high-definition cinematic image of a vintage royal scene. The main character sits comfortably in an elegant gilded armchair in a lavish royal interior. {DOG_BREED} sits alertly beside the chair, matching the overall composition and perspective of the original reference image. Use the uploaded image as the sole source of the character's identity: preserve the face, age, skin tone, hairline, and proportions exactly as they are, without any changes to facial features or anatomy, regardless of gender or age. The character wears a finely tailored, double-breasted suit in a dark wool blend with a subtle striped pattern, white socks, and polished black leather shoes with laces, fitting naturally to their body shape. Soft ambient lighting, warm classic color gradations with shades of brown, muted gold, and gray, sophisticated cinematic tones, polished contrast, and fine film grain. Realistic 8K picture quality.\nMake sure to replace {DOG_BREED} with the user's answer before submitting.\nNegative comments: distortions, facial changes, extra limbs, malfunctions, unrealistic anatomy, inappropriate clothing, incorrect costume details, marks, low resolution, blurred face.",
+      "images": [
+        "/images/custom_added_1775317632054_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775317791902",
+      "id": "חדש",
+      "title": "luxury car",
+      "cat": "",
+      "prompt": "The man stepping out of a luxury black SUV with door held open by a guard. Street smoke, headlights flaring, stylish mini leader pose, crisp shadows, realistic boss attitude, ultrasmooth cinematic lighting.",
+      "images": [
+        "/images/custom_added_1775317791902_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775317904496",
+      "id": "חדש",
+      "title": "Fire wolf",
+      "cat": "",
+      "prompt": "A hyper-realistic fantasy scene of a serious young man, kneeling on one knee on cracked concrete floor, holding a glowing orb filled with swirling flames. From it emerges the head of a gigantic fiery wolf, howling toward the ceiling, shooting sparks upward. The man wears a dark trench coat and military boots, his face partially shadowed, gaze locked intensely on the creature. The fiery glow from the orb reflects off a smoky blue background, creating cinematic intensity. 8K, highly detailed, magical realism, fantastical atmosphere.",
+      "images": [
+        "/images/custom_added_1775317904496_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775318035626",
+      "id": "חדש",
+      "title": "robot",
+      "cat": "",
+      "prompt": "“A woman in a black suit, with a face 100% identical to the reference image, sits in the cockpit of a large, maneuverable robot. The robot's structure is cool and futuristic, with intricate metal limbs and mechanisms. The interior of an old factory has a workhorse atmosphere, with slight light coming through the roof. No cranes above or overhead equipment is visible. The focus is sharp on the robot and the man piloting it. The medium-range camera angle shows the robot in its entirety. The style is photorealistic, with ultra-detailed detail and dynamic lighting.”",
+      "images": [
+        "/images/custom_added_1775318035626_img0.jpg"
       ]
     }
   ],
