@@ -1178,6 +1178,26 @@
       "images": [
         "/images/custom_added_1775332261351_img0.jpg"
       ]
+    },
+    {
+      "key": "added_1775332342899",
+      "id": "חדש",
+      "title": "reading",
+      "cat": "",
+      "prompt": "A cozy indoor portrait of a young woman sitting on a sofa, wearing a loose, off-shoulder knitted sweater. She is quietly reading a book while blowing a small pink bubble with chewing gum. Her hair is tied in a relaxed messy bun, and a warm lamp in the background casts soft golden light.",
+      "images": [
+        "/images/custom_added_1775332342899_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775332372463",
+      "id": "חדש",
+      "title": "pose",
+      "cat": "",
+      "prompt": "{\"prompt\":\"A stunningly beautiful young woman... wears a highly detailed, avant-garde outfit inspired by a chess board and playing cards... The garment has elaborate baroque gold filigree armor plating... She is posing intimately with a large, intricately carved ram's skull...\",\"style\":[\"photorealistic\",\"cinematic lighting\",\"high detail\"]}",
+      "images": [
+        "/images/custom_added_1775332372463_img0.jpg"
+      ]
     }
   ],
   "order": [
