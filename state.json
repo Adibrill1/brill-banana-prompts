@@ -717,6 +717,16 @@
       "images": [
         "/images/custom_added_1775326163805_img0.jpg"
       ]
+    },
+    {
+      "key": "added_1775327121445",
+      "id": "חדש",
+      "title": "Nike",
+      "cat": "",
+      "prompt": "A dynamic fashion advertisement for Nike showing a hyper-realistic model mid-twist jump, light trails following her limbs. Background: prism-shifting gradient (hot magenta to sapphire) with refracted lens flares. The model wears iridescent Nike runner tights and a cropped tech hoodie in holographic white. Bold serif \"NIKE\" and motion-glitched \"ADI BRILL\" in layered text behind. High-energy, futuristic aesthetic with fashion gloss. --ar 3:4 --raw --stylize 750",
+      "images": [
+        "/images/custom_added_1775327121445_img0.jpg"
+      ]
     }
   ],
   "order": [
