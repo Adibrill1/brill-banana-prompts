@@ -4503,6 +4503,7 @@ function applyState(st) {
     });
   }
   updateCount();
+  renumberCards();
 }
 
 function markUnsaved() {
@@ -4624,6 +4625,7 @@ grid.addEventListener('drop', function(e) {
   else grid.insertBefore(dragSrcEl, target);
   cleanup();
   state.order = Array.from(document.querySelectorAll('.card')).map(function(c){ return c.getAttribute('data-key'); });
+  renumberCards();
   markUnsaved();
   showToast('\u2195\ufe0f \u05d4\u05e1\u05d3\u05e8 \u05e2\u05d5\u05d3\u05db\u05df \u2014 \u05dc\u05d7\u05e5 "\u05e4\u05e8\u05e1\u05dd" \u05dc\u05e9\u05de\u05d9\u05e8\u05d4');
 });
@@ -4654,7 +4656,7 @@ function deleteCard(key) {
   state.deleted.push(key);
   var el = document.querySelector('.card[data-key="' + key + '"]');
   if (el) el.remove();
-  updateCount();
+  updateCount(); renumberCards();
   markUnsaved();
   showToast('\u{1F5D1}\ufe0f \u05d4\u05e4\u05e8\u05d5\u05de\u05e4\u05d8 \u05e0\u05de\u05d7\u05e7 — \u05dc\u05d7\u05e5 "\u05e4\u05e8\u05e1\u05dd" \u05dc\u05e9\u05de\u05d9\u05e8\u05d4');
 }
@@ -4752,7 +4754,7 @@ function savePromptModal() {
     var newKey='added_'+Date.now();
     var newP={key:newKey,id:'\u05d7\u05d3\u05e9',title:title,cat:cat,prompt:prompt,images:imgSrc?[imgSrc]:[]};
     if (!state.added) state.added=[];
-    state.added.push(newP); appendCard(newP); updateCount();
+    state.added.push(newP); appendCard(newP); updateCount(); renumberCards();
     markUnsaved(); closeModal('promptModal'); showToast('\u2705 \u05d4\u05e4\u05e8\u05d5\u05de\u05e4\u05d8 \u05e0\u05d5\u05e1\u05e3 — \u05dc\u05d7\u05e5 "\u05e4\u05e8\u05e1\u05dd"');
   }
 }
@@ -4818,8 +4820,10 @@ function filterCards(q){
     c.style.display=show?'':'none'; if(show)visible++;
   });
   document.getElementById('count').textContent='\u05de\u05e6\u05d9\u05d2 '+visible+' \u05e4\u05e8\u05d5\u05de\u05e4\u05d8\u05d9\u05dd';
+  renumberCards();
 }
-function updateCount(){document.getElementById('count').textContent='\u05de\u05e6\u05d9\u05d2 '+document.querySelectorAll('.card').length+' \u05e4\u05e8\u05d5\u05de\u05e4\u05d8\u05d9\u05dd';}
+function updateCount(){var v=Array.from(document.querySelectorAll('.card')).filter(function(c){return c.style.display!=='none';}).length;document.getElementById('count').textContent='\u05de\u05e6\u05d9\u05d2 '+v+' \u05e4\u05e8\u05d5\u05de\u05e4\u05d8\u05d9\u05dd';}
+function renumberCards(){var n=1;document.querySelectorAll('.card').forEach(function(c){if(c.style.display==='none')return;var el=c.querySelector('.num');if(el)el.textContent='#'+n;n++;});}
 function escHtml(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function compressImage(src,maxDim,quality){
   return new Promise(function(resolve){
