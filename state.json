@@ -1238,6 +1238,66 @@
       "images": [
         "/images/custom_added_1775332597554_img0.jpg"
       ]
+    },
+    {
+      "key": "added_1775332706533",
+      "id": "חדש",
+      "title": "sitting",
+      "cat": "",
+      "prompt": "{\"objective\":\"Generate a cinematic, photo-realistic image of the person in the uploaded image\",\"scene_description\":{\"setting\":{\"location\":\"Rain-soaked flyover bench at dusk\",\"environment_details\":[\"wet pavement with puddle reflections\",\"vibrant neon cityscape\"]},\"subject\":{\"pose\":\"sitting on the bench, low-angle perspective\",\"appearance\":{\"outfit\":{\"jacket\":\"colorblock denim jacket\",\"inner_wear\":\"yellow hoodie\"}}}},\"camera_and_style\":{\"camera_angle\":\"cinematic low-angle shot\",\"aesthetics\":[\"cinematic depth\",\"high contrast\",\"atmospheric realism\"]}}",
+      "images": [
+        "/images/custom_added_1775332706533_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775332738232",
+      "id": "חדש",
+      "title": "walking",
+      "cat": "",
+      "prompt": "{\"Scene_Details\":{\"Setting\":\"Vast English landscape with rolling golden-brown hills.\",\"Atmosphere\":\"Moody and atmospheric with dark, brooding clouds.\"},\"Character_Details\":{\"Description\":\"Lone man walking through the landscape.\",\"Clothing\":\"Long, dark medieval-style cloak or hooded coat.\"},\"Stylistic_Instructions\":{\"Tone\":\"Cinematic, dramatic, solitary.\",\"Color_Grade\":\"Earthy ochres and cool greys.\"}}",
+      "images": [
+        "/images/custom_added_1775332738232_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775332819551",
+      "id": "חדש",
+      "title": "horse",
+      "cat": "",
+      "prompt": "Create a fashion editorial interpretation of the image provided, maintaining the nano-level of accuracy of all key elements. Maintain an intellectual understanding of the scene: leave the girl's initial pose, the soft movement of her hair, the direction of her gaze and the natural connection with the horse. Keep the winter landscape, but strengthen the shooting atmosphere so that it corresponds to the aesthetics of elite fashion magazines.",
+      "images": [
+        "/images/custom_added_1775332819551_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775332853748",
+      "id": "חדש",
+      "title": "bear",
+      "cat": "",
+      "prompt": "A rugged, intense close-up portrait of a middle-aged man with a textured beard and slightly long, messy hair falling across his face. He wears dark sunglasses with green-tinted lenses that reflect subtle light, enhancing the mysterious, cinematic mood. The lighting is dramatic and low-key.",
+      "images": [
+        "/images/custom_added_1775332853748_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775332972937",
+      "id": "חדש",
+      "title": "party",
+      "cat": "",
+      "prompt": "{\"subject\":{\"outfit\":{\"top\":{\"style\":\"off-the-shoulder\",\"details\":\"sheer mesh midsection\"},\"bottom\":{\"type\":\"denim cut-off shorts\"}}},\"environment\":{\"setting\":\"neon-lit nightclub or event\",\"lighting\":\"low key, dramatic shadows\"},\"mood\":\"glamorous, energetic nightlife aesthetic\"}",
+      "images": [
+        "/images/custom_added_1775332972937_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775333008591",
+      "id": "חדש",
+      "title": "storyboard",
+      "cat": "",
+      "prompt": "Create a storyboard from the uploaded image, highlighting key moments and transitions with cinematic angles, camera movements, and framing that capture the scene's mood and narrative flow.",
+      "images": [
+        "/images/custom_added_1775333008591_img0.jpg"
+      ]
     }
   ],
   "order": [
