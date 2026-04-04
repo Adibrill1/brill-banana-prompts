@@ -637,6 +637,56 @@
       "images": [
         "/images/custom_added_1775325309725_img0.jpg"
       ]
+    },
+    {
+      "key": "added_1775325404421",
+      "id": "חדש",
+      "title": "red",
+      "cat": "",
+      "prompt": "Create a clean, professional product advertisement poster. Feature the woman from the image holding the lipstick and looking directly at the camera. The scene should be well-lit with a minimalist background to emphasize the product. Style: high-end commercial photography.",
+      "images": [
+        "/images/custom_added_1775325404421_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775325455091",
+      "id": "חדש",
+      "title": "Comiket",
+      "cat": "",
+      "prompt": "Generate a photo of a girl cosplaying this illustration, with the background set at Comiket.",
+      "images": [
+        "/images/custom_added_1775325455091_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775325558079",
+      "id": "חדש",
+      "title": "ship it",
+      "cat": "",
+      "prompt": "A modern magazine collage style poster about software development. The central image is a young female programmer with twin braids working on a laptop. Surrounding her are various torn paper photo elements: close-ups of code on screens, mechanical keyboards, a cup of coffee, handwritten notes on a tablet, and whiteboard system diagrams. Large, bold typography is layered over the collage, including \"SHIP IT\" and \"上线\" at the top, and \"SYSTEMS THINKING PROGRAMMER\" and \"调试模式\" at the bottom. The background is a mix of dark code terminals and graphic shapes with an orange accent. The overall feel is energetic and professional.",
+      "images": [
+        "/images/custom_added_1775325558079_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775325615460",
+      "id": "חדש",
+      "title": "Silk slip dress poste",
+      "cat": "",
+      "prompt": "Poster 01 | Product - Silk Slip Dress | Main Hero KV\n9:16 vertical premium minimalist fashion poster. Soft studio daylight, warm cream gradient background (cream/oat color), ultra clean. Elegant Scandinavian model (25-30 years), refined features, natural nude makeup, long hair casually flowing, relaxed elegant posture, full body shot, one hand gently touching the dress hem.\nGarment must match uploaded product reference: champagne/cream satin short-length slip dress, thin straps, V-neckline, hem length to mid-thigh, silky lustrous fabric, maintain exact design consistency with reference image.\nLayout composition: Top left corner AURORA LUXE logo (small). Top center massive serif headline (2 lines): \"SILK SLIP DRESS\" / \"Nordic Elegance\" (bilingual stacked, clean). Left mid-section glassmorphism info card (3 bullet points, bilingual): Silk-like touch / Silkeaktig berøring; Flattering fit / Smigrende passform; Elegant at home / Elegant hjemme. Bottom right [rounded pill CTA]: \"Shop Now → / Kjøp Nå →\".\nNegative prompts: cluttered, busy, multiple patterns, gradients, shadows, watermark, logo repeated, messy text, low quality, blurry, plain face, unattractive",
+      "images": [
+        "/images/custom_added_1775325615460_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775325669753",
+      "id": "חדש",
+      "title": "Anti aging",
+      "cat": "",
+      "prompt": "A 4K resolution, 1:1 square collage poster, 10 distinct panels grid. Product: Luxury Anti-Aging Serum Bottle.1. [Hero] The amber glass bottle glowing under spotlight on a pedestal.2. [Texture] A smear of the liquid serum on clear glass, showing gold flakes.3. [Dropper] Close-up of the dropper dispensing a single perfect drop.4. [Application] A female model applying serum to her cheek (skin focus).5. [Ingredients] Fresh botanical plants and flowers next to the bottle (natural concept).6. [Absorption] Visual effect of serum penetrating skin layers (CGI style).7. [Hand] Holding the bottle against a bright bathroom window.8. [Box] The premium packaging box with gold embossing.9. [Before/After] Split screen of dry skin vs hydrated glowing skin texture.10. [Consistency] The liquid pouring smoothly, showing viscosity.Bright, clean, luxury beauty aesthetic.",
+      "images": [
+        "/images/custom_added_1775325669753_img0.jpg"
+      ]
     }
   ],
   "order": [
