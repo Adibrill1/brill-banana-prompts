@@ -727,6 +727,16 @@
       "images": [
         "/images/custom_added_1775327121445_img0.jpg"
       ]
+    },
+    {
+      "key": "added_1775327380345",
+      "id": "חדש",
+      "title": "Warrior",
+      "cat": "",
+      "prompt": "Subject Description: A cinematic female warrior inspired by Tomoe Gozen, strong, noble, and restrained beauty, calm yet determined expression\n Outfit: Elegant ornate Japanese Samurai armor with silk lacing inspired by traditional Heian-period style armor and flowing fabrics, minimal ornamentation, realistic textile texture, battle-worn yet refined\n Detail/Prop: Holding a long steel sword firmly in hand, simple and practical design, subtle reflections on the blade, heroic stance\n Setting: Quiet forest at early morning, soft mist among tall trees, muted natural colors, cinematic depth\n Style & Mood: High-end cinematic fantasy, realistic lighting, dramatic shadows, film still, epic yet poetic atmosphere, 35mm film look, cinematic color grading",
+      "images": [
+        "/images/custom_added_1775327380345_img0.jpg"
+      ]
     }
   ],
   "order": [
