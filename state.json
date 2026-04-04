@@ -566,6 +566,16 @@
       "images": [
         "/images/custom_added_1775318888805_img0.jpg"
       ]
+    },
+    {
+      "key": "added_1775319076768",
+      "id": "חדש",
+      "title": "Set",
+      "cat": "",
+      "prompt": "Create a picture of them on the set of a high-octane movie.",
+      "images": [
+        "/images/custom_added_1775319076768_img0.jpg"
+      ]
     }
   ],
   "order": [
