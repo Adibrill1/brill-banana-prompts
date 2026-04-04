@@ -687,6 +687,36 @@
       "images": [
         "/images/custom_added_1775325669753_img0.jpg"
       ]
+    },
+    {
+      "key": "added_1775325873241",
+      "id": "חדש",
+      "title": "Totoro",
+      "cat": "",
+      "prompt": "A hyperrealistic, editorial fashion photograph in a studio setting. A real human model with a natural, confident expression and a preserved face stands between giant, photorealistic 3D animated characters, Totoro and No-Face (Spirited Away). The human wears a chunky knitted sweater in warm grey and green tones, high-waisted dark jeans, and clean white minimalist sneakers. Totoro, rendered with incredible fur detail and soft textures, stands protectively holding a leaf umbrella. No-Face, slightly to the side, stands silently with highly detailed semi-transparent textures and a subtle mask reflection. The background is a clean, split studio backdrop of forest green and soft mist grey. Soft, professional studio lighting creates smooth shadows and highlights the contrasting textures of the knitwear, denim, fur, and spirit matter, preserving their animated identity without distortion. 3/4 body framing, magazine-cover quality. --ar 3:4",
+      "images": [
+        "/images/custom_added_1775325873241_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775326128417",
+      "id": "חדש",
+      "title": "Woman grid",
+      "cat": "",
+      "prompt": "**[Type]:** A scanned page from a high-end fine art photobook. **A 9-grid photo layout printed on textured matte art paper.**\n**[Layout Design]:** The 9 photos are arranged in a clean grid with **wide white margins** at the bottom to accommodate typography.\n\n**[Subject Consistency - STRICT]:**\n* **Source:** **Use the likeness of the woman provided in the attached reference image.** This **[SAME CHARACTER]** must be featured consistently in all 9 panels, maintaining her likeness, expression, and the specified styling across all contexts.\n* **Styling Strategy:** **{Soft}:** Beige knit cardigan + camisole.\n\n**[Typography & Artistic Elements - THE ARTISTIC TOUCH]:**\n*(AI must render a title text in the bottom white margin)*\n**[Title Theme]:**\n**{Theme: Air}:** Large elegant serif text **\"ESSENCE\"** with small text **\"AIRY MOMENTS\"** below it.\n* **Signature:** The handwritten text **\"By : Nanoprompts\"** is placed artistically next to the title or in the corner like a watermark.\n\n**[Grid Narrative - The \"Day to Night\" Journey]:**\n\n**Row 1: Outdoor Breath (Wind & Light)**\n1.  **Top-Left (Wide):** Subject standing in wind near a scenic riverbank, hair blowing, **backlit by sun**.\n2.  **Top-Middle (Detail):** Close-up of **hand holding a vintage glass bottle of sparkling water**.\n3.  **Top-Right (Motion):** Blurry candid shot of subject **walking away on a charming cobblestone street**.\n\n**Row 2: Indoor Play (Props & \"Hiding\")**\n4.  **Center-Left (Hiding):** Subject sitting on a cozy rug, **using a delicate folding fan to playfully cover one eye**.\n5.  **Center (Candid):** Subject **lying upside down on a sofa**, reading an art magazine, face relaxed.\n6.  **Center-Right (Interactive):** Subject looking through a clear glass cup, face distorted funnily/cutely.\n\n**Row 3: Evening/Mood (Texture & Gaze)**\n7.  **Bottom-Left (Atmosphere):** Subject near a brightly lit vending machine at night, neon light reflection.\n8.  **Bottom-Middle (Texture):** Wet hair texture after bath, wearing a white towel/robe, soft skin focus.\n9.  **Bottom-Right (Gaze):** Direct eye contact with camera, soft smile, holding a lit sparkler. --ar 2:3",
+      "images": [
+        "/images/custom_added_1775326128417_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1775326163805",
+      "id": "חדש",
+      "title": "Sand",
+      "cat": "",
+      "prompt": "A kinetic sand sculpture of a kiwi bird, fine-grain texture and flowing edges, caught mid-collapse, ambient natural lighting, soft tones of warm beige, soft terracotta, and pale sand, photographed in a windswept coastal blue setting.",
+      "images": [
+        "/images/custom_added_1775326163805_img0.jpg"
+      ]
     }
   ],
   "order": [
