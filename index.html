@@ -103,6 +103,15 @@ h3{font-size:13px;font-weight:600;color:#fff;margin-bottom:8px;line-height:1.4;d
 .reorder-mode .card .num{font-size:10px}
 .reorder-mode .card.drop-before{border-left:3px solid #4caf50 !important;box-shadow:-3px 0 8px rgba(76,175,80,0.6)}
 .reorder-mode .card.drop-after{border-right:3px solid #4caf50 !important;box-shadow:3px 0 8px rgba(76,175,80,0.6)}
+/* Columns slider */
+.cols-control{display:flex;align-items:center;gap:10px;justify-content:center;margin-bottom:14px;flex-wrap:wrap}
+.cols-label{color:#888;font-size:12px;white-space:nowrap}
+.cols-val{color:#f5a623;font-weight:bold;font-size:14px;min-width:22px;text-align:center}
+input[type=range].cols-slider{-webkit-appearance:none;appearance:none;width:220px;max-width:58vw;height:5px;border-radius:3px;background:linear-gradient(to right,#f5a623 var(--pct,31%),#333 var(--pct,31%));outline:none;cursor:pointer;flex-shrink:0}
+input[type=range].cols-slider::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:#f5a623;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.6);border:2px solid #1a1a1a;transition:transform .1s}
+input[type=range].cols-slider::-webkit-slider-thumb:active{transform:scale(1.25)}
+input[type=range].cols-slider::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#f5a623;cursor:pointer;border:2px solid #1a1a1a;box-shadow:0 2px 8px rgba(0,0,0,.6)}
+input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px;border-radius:3px}
 </style>
 </head>
 <body>
@@ -119,6 +128,11 @@ h3{font-size:13px;font-weight:600;color:#fff;margin-bottom:8px;line-height:1.4;d
 <div class="toolbar">
   <input class="search" type="search" placeholder="🔍 חפש לפי שם או תוכן..." oninput="filterCards(this.value)" autocomplete="off">
   <button class="btn" style="background:#1a1a1a;color:#555;border:1px solid #333;font-size:12px" onclick="tryUnlock()">🔒 כניסת מנהלת</button>
+</div>
+<div class="cols-control">
+  <span class="cols-label">📐 תמונות בשורה:</span>
+  <input type="range" id="colsSlider" class="cols-slider" min="1" max="17" value="5">
+  <span class="cols-val" id="colsVal">5</span>
 </div>
 <div class="count" id="count">מציג 241 פרומפטים</div>
 <div class="grid" id="grid">
@@ -4900,6 +4914,38 @@ function filterCards(q){
 }
 function updateCount(){var v=Array.from(document.querySelectorAll('.card')).filter(function(c){return c.style.display!=='none';}).length;document.getElementById('count').textContent='\u05de\u05e6\u05d9\u05d2 '+v+' \u05e4\u05e8\u05d5\u05de\u05e4\u05d8\u05d9\u05dd';var sc=document.getElementById('subtitle-count');if(sc)sc.textContent=v;}
 function renumberCards(){var n=1;document.querySelectorAll('.card').forEach(function(c){if(c.style.display==='none')return;var el=c.querySelector('.num');if(el)el.textContent='#'+n;n++;});}
+
+// Columns slider
+(function(){
+  var slider=document.getElementById('colsSlider');
+  var valEl=document.getElementById('colsVal');
+  var gridEl=document.getElementById('grid');
+  function defaultCols(){
+    var w=window.innerWidth;
+    if(w<=500)return 1;
+    if(w<=800)return 2;
+    if(w<=1200)return 3;
+    if(w<=1600)return 4;
+    return 5;
+  }
+  function setGridCols(n){
+    gridEl.style.gridTemplateColumns='repeat('+n+',1fr)';
+    slider.style.setProperty('--pct',((n-1)/16*100)+'%');
+    valEl.textContent=n;
+    slider.value=n;
+  }
+  var saved=localStorage.getItem('nb_cols');
+  setGridCols(saved?Math.min(17,Math.max(1,parseInt(saved))):defaultCols());
+  slider.addEventListener('input',function(){
+    var n=parseInt(this.value);
+    setGridCols(n);
+    localStorage.setItem('nb_cols',n);
+  });
+  // Re-apply after window resize if no saved preference
+  window.addEventListener('resize',function(){
+    if(!localStorage.getItem('nb_cols')) setGridCols(defaultCols());
+  });
+})();
 function escHtml(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function compressImage(src,maxDim,quality){
   return new Promise(function(resolve){
