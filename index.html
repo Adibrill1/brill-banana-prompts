@@ -88,6 +88,21 @@ h3{font-size:13px;font-weight:600;color:#fff;margin-bottom:8px;line-height:1.4;d
 .admin-bar .admin-label{color:#f5a623;font-size:13px;font-weight:bold;flex:1}
 .unsaved-dot{width:8px;height:8px;border-radius:50%;background:#e91e63;display:none;margin-right:4px}
 .unsaved-dot.show{display:inline-block}
+/* Reorder mode */
+.btn-reorder{background:#ff9800;color:#000}
+.btn-reorder:hover{background:#ffa726}
+.btn-reorder.active{background:#4caf50;color:#fff}
+.reorder-mode{grid-template-columns:repeat(auto-fill,minmax(105px,1fr)) !important;gap:5px !important}
+.reorder-mode .card{padding:5px;cursor:grab;border-radius:8px;user-select:none;transition:none}
+.reorder-mode .card .prompt-text,.reorder-mode .card .copy-btn,.reorder-mode .card .cat,.reorder-mode .card .ec-del,.reorder-mode .card .ec-img,.reorder-mode .card .ec-edit{display:none !important}
+.reorder-mode .card .edit-controls{margin-bottom:3px;justify-content:center}
+.reorder-mode .card .ec-drag{width:100%;justify-content:center;padding:2px 4px;font-size:10px;border-radius:3px;pointer-events:none}
+.reorder-mode .card .card-header{margin-bottom:3px}
+.reorder-mode .card h3{font-size:9px;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.2}
+.reorder-mode .card .thumb-wrap,.reorder-mode .card .no-thumb{margin-bottom:0;border-radius:5px;aspect-ratio:1/1}
+.reorder-mode .card .num{font-size:10px}
+.reorder-mode .card.drop-before{border-left:3px solid #4caf50 !important;box-shadow:-3px 0 8px rgba(76,175,80,0.6)}
+.reorder-mode .card.drop-after{border-right:3px solid #4caf50 !important;box-shadow:3px 0 8px rgba(76,175,80,0.6)}
 </style>
 </head>
 <body>
@@ -95,6 +110,7 @@ h3{font-size:13px;font-weight:600;color:#fff;margin-bottom:8px;line-height:1.4;d
   <span class="admin-label">🍌 Brill Banana Admin</span>
   <span class="unsaved-dot" id="unsavedDot" title="יש שינויים לא מפורסמים"></span>
   <button class="btn btn-edit" id="editToggle" onclick="toggleEditMode()">✏️ מצב עריכה</button>
+  <button class="btn btn-reorder" id="reorderToggle" onclick="toggleReorderMode()" style="display:none">🔀 סדר</button>
   <button class="btn btn-add" onclick="openAddModal()">➕ הוסף</button>
   <button class="btn btn-publish" id="btnPublish" onclick="publishChanges()" disabled>🌐 פרסם שינויים</button>
 </div>
@@ -4567,6 +4583,7 @@ function getCardData(key) {
   return (state.added||[]).find(function(a){ return a.key===key; }) || null;
 }
 
+var reorderMode = false;
 function toggleEditMode() {
   if (!ADMIN_UNLOCKED) return;
   editMode = !editMode;
@@ -4575,6 +4592,15 @@ function toggleEditMode() {
   btn.classList.toggle('active', editMode);
   btn.textContent = editMode ? '\u2705 \u05e1\u05d9\u05d5\u05dd \u05e2\u05e8\u05d9\u05db\u05d4' : '\u270f\ufe0f \u05de\u05e6\u05d1 \u05e2\u05e8\u05d9\u05db\u05d4';
   document.getElementById('fab').style.display = editMode ? 'block' : 'none';
+  document.getElementById('reorderToggle').style.display = editMode ? '' : 'none';
+  if (!editMode && reorderMode) toggleReorderMode(); // exit reorder if edit mode off
+}
+function toggleReorderMode() {
+  reorderMode = !reorderMode;
+  document.getElementById('grid').classList.toggle('reorder-mode', reorderMode);
+  var btn = document.getElementById('reorderToggle');
+  btn.textContent = reorderMode ? '\u2705 \u05e1\u05d9\u05d5\u05dd \u05e1\u05d9\u05d3\u05d5\u05e8' : '\ud83d\udd00 \u05e1\u05d3\u05e8';
+  btn.classList.toggle('active', reorderMode);
 }
 
 // Pointer-based drag-and-drop (smooth, works on touch too)
@@ -4598,23 +4624,45 @@ function getCardUnderPointer(x, y) {
   return null;
 }
 
+var scrollRaf = null;
+function autoScroll(clientY) {
+  var zone = 80, speed = 0;
+  if (clientY < zone) speed = -Math.round((zone - clientY) / 8);
+  else if (clientY > window.innerHeight - zone) speed = Math.round((clientY - (window.innerHeight - zone)) / 8);
+  if (scrollRaf) cancelAnimationFrame(scrollRaf);
+  if (speed !== 0) {
+    (function scroll(){ window.scrollBy(0, speed); scrollRaf = requestAnimationFrame(scroll); })();
+  }
+}
+
 document.addEventListener('pointerdown', function(e) {
   if (!editMode) return;
-  var handle = e.target.closest('.ec-drag');
-  if (!handle) return;
-  var card = handle.closest('.card');
+  var card = null;
+  if (reorderMode) {
+    // In reorder mode: drag from anywhere on the card (except action buttons)
+    if (e.target.closest('button') || e.target.closest('.modal-bg')) return;
+    card = e.target.closest('.card');
+  } else {
+    var handle = e.target.closest('.ec-drag');
+    if (!handle) return;
+    card = handle.closest('.card');
+  }
   if (!card) return;
   e.preventDefault();
   pDragEl = card;
   var rect = card.getBoundingClientRect();
   pOffX = e.clientX - rect.left;
   pOffY = e.clientY - rect.top;
+  // In reorder mode clone is smaller; in normal mode same size
+  var cloneW = reorderMode ? rect.width : rect.width;
   pClone = card.cloneNode(true);
-  pClone.style.cssText = 'position:fixed;z-index:9999;width:'+rect.width+'px;pointer-events:none;opacity:0.85;transform:scale(0.96) rotate(1deg);box-shadow:0 12px 40px rgba(0,0,0,0.6);border:2px solid #f5a623 !important;border-radius:8px;transition:none;';
+  var rot = reorderMode ? 'rotate(2deg)' : 'rotate(1deg)';
+  pClone.style.cssText = 'position:fixed;z-index:9999;width:'+cloneW+'px;pointer-events:none;opacity:0.88;transform:scale(0.95) '+rot+';box-shadow:0 16px 48px rgba(0,0,0,0.7);border:2px solid #f5a623 !important;border-radius:8px;transition:none;';
   pClone.style.left = (e.clientX - pOffX) + 'px';
   pClone.style.top  = (e.clientY - pOffY) + 'px';
   document.body.appendChild(pClone);
-  pDragEl.style.opacity = '0.25';
+  pDragEl.style.opacity = '0.2';
+  pDragEl.style.outline = '2px dashed #f5a623';
   document.body.style.userSelect = 'none';
   document.body.style.cursor = 'grabbing';
 }, {passive: false});
@@ -4624,6 +4672,7 @@ document.addEventListener('pointermove', function(e) {
   e.preventDefault();
   pClone.style.left = (e.clientX - pOffX) + 'px';
   pClone.style.top  = (e.clientY - pOffY) + 'px';
+  autoScroll(e.clientY);
   clearDropIndicators();
   var target = getCardUnderPointer(e.clientX, e.clientY);
   if (target) {
@@ -4634,6 +4683,7 @@ document.addEventListener('pointermove', function(e) {
 }, {passive: false});
 
 document.addEventListener('pointerup', function(e) {
+  if (scrollRaf) { cancelAnimationFrame(scrollRaf); scrollRaf = null; }
   if (!pDragEl) return;
   var target = getCardUnderPointer(e.clientX, e.clientY);
   if (target) {
@@ -4648,15 +4698,16 @@ document.addEventListener('pointerup', function(e) {
   }
   clearDropIndicators();
   if (pClone) { pClone.remove(); pClone = null; }
-  if (pDragEl) { pDragEl.style.opacity = ''; pDragEl = null; }
+  if (pDragEl) { pDragEl.style.opacity = ''; pDragEl.style.outline = ''; pDragEl = null; }
   document.body.style.userSelect = '';
   document.body.style.cursor = '';
 });
 
 document.addEventListener('pointercancel', function() {
+  if (scrollRaf) { cancelAnimationFrame(scrollRaf); scrollRaf = null; }
   clearDropIndicators();
   if (pClone) { pClone.remove(); pClone = null; }
-  if (pDragEl) { pDragEl.style.opacity = ''; pDragEl = null; }
+  if (pDragEl) { pDragEl.style.opacity = ''; pDragEl.style.outline = ''; pDragEl = null; }
   document.body.style.userSelect = '';
   document.body.style.cursor = '';
 });
@@ -4832,7 +4883,7 @@ document.addEventListener('keydown',function(e){
 
 function copyPrompt(key,btn){
   var p=getCardData(key); if(!p)return;
-  function done(){btn.textContent='\u2705 Copied!';btn.classList.add('ok');showToast('\u2705 \u05d4\u05d5\u05e2\u05ea\u05e7 \u05dc\u05dc\u05d5\u05d7!');setTimeout(function(){btn.textContent='\u{1F4CB} Copy';btn.classList.remove('ok');},2000);}
+  function done(){btn.textContent='\u2705 Copied!';btn.classList.add('ok');showToast('\u2705 \u05d4\u05d5\u05e2\u05ea\u05e7!');setTimeout(function(){btn.textContent='\u{1F4CB} Copy';btn.classList.remove('ok');},2000);}
   navigator.clipboard.writeText(p.prompt).then(done).catch(function(){
     var ta=document.createElement('textarea');ta.value=p.prompt;ta.style.cssText='position:fixed;opacity:0';
     document.body.appendChild(ta);ta.focus();ta.select();document.execCommand('copy');document.body.removeChild(ta);done();
