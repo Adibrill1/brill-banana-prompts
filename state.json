@@ -223,9 +223,9 @@
     "orig_233": "images/custom_orig_233.jpg",
     "orig_240": "images/custom_orig_240.jpg",
     "orig_238": "images/custom_orig_238.jpg",
-    "orig_12": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_orig_12.jpg",
-    "orig_1": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_orig_1.jpg",
-    "added_1775316390609": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775316390609.jpg"
+    "orig_12": "images/custom_orig_12.jpg",
+    "orig_1": "images/custom_orig_1.jpg",
+    "added_1775316390609": "images/custom_added_1775316390609.jpg"
   },
   "added": [
     {
@@ -235,7 +235,7 @@
       "cat": "",
       "prompt": "Transform this image\ninto a mixed live-action and cartoon scene inspired by classic Hollywood animation like Who\nFramed Roger Rabbit\nKeep the original photograph realistic, including lighting, textures, and environment.\nAdd hand-drawn 2D cartoon characters and animated elements interacting directly with the real objects in the scene.\nCartoon characters should touch, lean on, or react to real-world objects in the photo - for example: • pulling something • pushing objects • hanging from items • popping out from behind real objects\n• reacting with exaggerated cartoon expressions\nAdd playful animation effects like motion lines, comic stars, sparkles, squash-and-stretch motion, and exaggerated cartoon physics.\nSome real objects should slightly deform or react as if affected by cartoon energy - bending, bouncing, or stretching in a humorous animated way.\nUse bold hand-drawn outlines, vibrant cartoon colors, and classic 2D animation shading.\nThe cartoon elements should cast subtle shadows and integrate with the scene lighting so they feel like they exist inside the real photo.\nOverall style: Live-action world mixed with energetic vintage cartoon animation, playful, chaotic, expressive, cinematic composition.\nHigh detail, professional mixed-media look, vibrant and dynamic.\ncartoon characters leaving ink splashes, paint streaks, and animated smoke trails as they move",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775047240176_img0.jpg"
+        "images/custom_added_1775047240176_img0.jpg"
       ]
     },
     {
@@ -245,7 +245,7 @@
       "cat": "",
       "prompt": "A monumental, identity-locked photorealistic sculpture installation.\n\nSUBJECT: A colossal, hyper-realistic portrait sculpture of the specific man from the reference photo (image_0.png). The identity is paramount, featuring his exact facial structure, nose shape, high cheekbones, strong jawline, and preserved detailed skin texture, maintaining his youth.\n\nEXPRESSION: His face has a distinct, subtle, and controlled smirk—a knowing, closed-mouth expression that is mischievous and slightly sinister, but is a direct extension of his original jaw and mouth structure, not a distorted broad grin. His direct, intense brown eyes are perfectly rendered, staring forward.\n\nSCENE: The monumental face is bursting out from a jagged, massive hole in the side of a brutalist high-rise concrete apartment building. Broken rebar and concrete chunks frame the emergence.\n\nENVIRONMENT: The surrounding building facade is visible, with multiple windows, balconies, external air conditioning units, exposed pipes, and ventilation vents. People are seen on a distant street below, looking up, emphasizing the immense scale.\n\nSTYLE: Cinematic, highly detailed photography. Harsh, directional sunlight casts deep shadows, emphasizing the realism of the face and the raw, broken textures of the concrete and rebar. A true-to-life integration.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775114491412_img0.jpg"
+        "images/custom_added_1775114491412_img0.jpg"
       ]
     },
     {
@@ -255,7 +255,7 @@
       "cat": "",
       "prompt": "CREATE a 64 K DSLR ultra-realistic cinematic portrait of the character (female, keeping the same face from the reference image), emerging dramatically from a large cracked playing card of the Queen of Spades.\n\nThe Queen figure has elegant, refined facial features and regal hair, wearing an ornate, high-arched crown with intricate gold filigree and embedded red gems.\n\nThe character is dressed in luxurious royal gowns with rich gold-and-crimson embroidery, featuring a high stiff collar and heavy regal velvet folds draped across the shoulders.\n\nOne arm extends forward in a commanding, cinematic gesture, while the other rests naturally, revealing a subtle tattoo on the hand. The cracked playing card looks like aged stone, with dust and debris breaking loose as the figure pushes through its surface.\n\nLighting is dramatic and low-key, emphasizing depth, shadows, and highlights across the crown and the textures of the silk and velvet.\n\nBackground: dark gradient tone with faint atmospheric particles for a post-apocalyptic mood.\n\nRender in Octane Render / Unreal Engine 5 style with photoreal materials, sharp optics, HDR global illumination, and cinematic depth of field. The overall image evokes grandeur, authority, and quiet power, blending realism with subtle fantasy energy.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775206624742_img0.jpg"
+        "images/custom_added_1775206624742_img0.jpg"
       ]
     },
     {
@@ -265,7 +265,7 @@
       "cat": "",
       "prompt": "Create a hyper-realistic portrait using the uploaded photo keeping the real face, facial structure, skin tone, and expression of the person exactly the same.\n\nThe scene shows the person kneeling in the middle of a cozy vintage living room, wearing a denim jacket, white shirt and jeans.\n\nHe's smiling naturally while hugging two iconic characters:\n\nALF on left: a hairy full-bodied alien puppet with brown/orange hair, large muzzle, expressive eyes and large padded feet. Very detailed and realistic texture of skin and hands.\n\nE.T. on the right: a full-body, extremely detailed and realistic model with wrinkled skin, long neck, large expressive eyes, and a glowing fingertip on her right hand.\n\nBoth characters are close to the person as if they are posing for a warm family photo.\n\nThe background is a cozy 80s-style living room: vintage floral sofa, wooden furniture, bookshelves filled with ceramic vases, indoor plants, soft natural window light, warm tones, and a nostalgic homely atmosphere.\n\nUltra-detailed leather, fabric textures, realistic lighting, volumetric smoothness, 8K resolution, cinematic photography, perfect color gradation.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775311859714_img0.jpg"
+        "images/custom_added_1775311859714_img0.jpg"
       ]
     },
     {
@@ -275,7 +275,7 @@
       "cat": "",
       "prompt": "A hyper-realistic digital artwork showing a hand drawing a lifelike portrait of a man ( use uploaded photo don't alter the face) in a notebook. The portrait appears so real that it almost looks three-dimensional, with smooth shading and realistic lighting. The scene is set on a wooden desk, with the yellow pencil in hand giving the impression that art and reality are merging together.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775312000425_img0.jpg"
+        "images/custom_added_1775312000425_img0.jpg"
       ]
     },
     {
@@ -285,7 +285,7 @@
       "cat": "",
       "prompt": "photorealistic image of a smartphone screen displaying [person from attached photo] standing in a magical autumn forest. The person is gently blowing, and hundreds of colorful autumn leaves dramatically burst out of the phone screen into the real world, scattering across a cozy wooden desk. Leaves rendered with hyperrealistic detail, veins visible, some leaves landing on a coffee mug beside the phone. Warm golden hour lighting, 3D pop-out effect, cinematic, 4K.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775315125658_img0.jpg"
+        "images/custom_added_1775315125658_img0.jpg"
       ]
     },
     {
@@ -295,7 +295,7 @@
       "cat": "",
       "prompt": "A photorealistic image of a vintage 1980s CRT television set on a wooden entertainment center. Inside the TV screen, [person from attached photo] is watching a movie, holding a bowl of popcorn. A real hand from outside the TV reaches into the screen, grabbing a handful of popcorn from the bowl. Popcorn pieces dramatically scatter in 3D, breaking out of the screen boundary with realistic physics. Nostalgic warm lighting, VHS aesthetic with subtle scan lines, hyperrealistic, 4K.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775315294386_img0.jpg"
+        "images/custom_added_1775315294386_img0.jpg"
       ]
     },
     {
@@ -305,7 +305,7 @@
       "cat": "",
       "prompt": "A detailed transparent gashapon capsule diorama, held gently between fingers, featuring an iconic Christmas-themed character based on [Attached Adi Image]. Recreate the character inside the capsule in a festive, heartwarming holiday style — cozy winter clothing, soft knit textures, tiny sparkles of snow, or magical glowing ornaments depending on the image's cues.\nInside the capsule, build a charming miniature holiday environment:\n\n— tiny snow-covered props\n\n— warm lantern lights\n\n— candy-cane arches\n\n— miniature gift boxes\n\n— shimmering golden particles floating around\n\nall arranged to complement the character’s personality and aesthetic.\nLighting should be cinematic and warm, inspired by classic Christmas ambience: golden fairy lights, fireplace glow, soft snowfall shimmer, or magical aurora hues — depending on what suits the attached image.\nThe capsule has a transparent dome and a colored base in a festive palette (deep red, pine green, gold, or frosted white). The base should feature subtle decorative motifs inspired by the character’s design. Add a small elegant nameplate on the base, where the character’s name is inferred from the attached image.\nThe entire design should resemble a high-end collectible holiday ornament: photorealistic details, tiny handcrafted imperfections, soft bokeh background, and a square 1080×1080 composition.\nAesthetic keywords: magical, heartwarming, premium collectible, festive glow, photorealistic, cozy winter mood, miniature Christmas world.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775315568090_img0.jpg"
+        "images/custom_added_1775315568090_img0.jpg"
       ]
     },
     {
@@ -315,7 +315,7 @@
       "cat": "",
       "prompt": "A realistic and emotional portrait of a person sitting cross-legged on the dry grass in an African savanna at sunset. A majestic, male lion stands directly behind the person, resting one large paw gently on the person's shoulder or neck, and licking their head or cheek affectionately. The person should be smiling brightly, looking genuinely happy and relaxed.\nSetting & Lighting: Golden hour, soft warm light, deep shadows. Sparse acacia trees in the blurred background. Dry, golden-yellow grass in the foreground.\nCinematic quality, ultra-detailed, photorealistic, 8k, shot with a telephoto lens.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775315590220_img0.jpg"
+        "images/custom_added_1775315590220_img0.jpg"
       ]
     },
     {
@@ -325,7 +325,7 @@
       "cat": "",
       "prompt": "The women from the uploaded photo standing in a snowy winter forest, gently hugging a majestic white, blue-eyed giant lion, his cheek softly touching the lion’s face while his hand rests gently on its head, showing a deep emotional bond. She has sharp features, a soft expression, and closed eyes, wearing a luxurious white fur coat with delicate snowflakes on his hair and shoulders. The scene features bright natural light, a cinematic snowy background, and tall pine trees covered in snow, captured in an ultra-realistic, high-detail,",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775315717510_img0.jpg"
+        "images/custom_added_1775315717510_img0.jpg"
       ]
     },
     {
@@ -335,7 +335,7 @@
       "cat": "",
       "prompt": "Create an 8k ultra-realistic zoomed-in photo of a girl from the attached Photo sitting at a wooden table, her face resting in her hands, smiling happily with long wavy natural hair and a matching mini headband with small bow. She wears a soft, cozy, short-sleeved dress in warm tones, lit gently by the glow of a magical glass jar in front of her. Inside the jar, tiny luminous flowers, sparkles, and firefly-like lights create a bright, enchanted centerpiece that casts glowing reflections on the table. Behind the girl, form a large glowing heart shape made of sparkling light, filled with colorful daisies, blossoms, and soft bokeh particles, giving a warm, romantic, and whimsical mood. Many vibrant butterflies in shades of orange, blue, teal, pink, and yellow are fluttering around the girl, the jar, and the heart-shaped aura, some close to the viewer and some fading into the dreamy background. The overall color palette is pastel and luminous with blues, pinks, golds, and soft whites, in high resolution, ultra-detailed, with smooth lighting, gentle depth of field.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775315909697_img0.jpg"
+        "images/custom_added_1775315909697_img0.jpg"
       ]
     },
     {
@@ -345,7 +345,7 @@
       "cat": "",
       "prompt": "\"Use the uploaded woman's face with exact accuracy. Cinematic desert traveler standing on a dune, a falcon perched calmly on a rock beside him, wings half-open as if sensing the wind.\",\n\"clothing\": {\n\"top\": \"light desert robe with layered textures\",\n\"bottom\": \"stone-beige tactical pants\",\n\"shoes\": \"sand-covered boots\"\n},\n\"pose\": \"standing sideways to the camera, looking forward with intensity\",\n\"camera_angle\": \"4:5 portrait, semi-low angle for hero mood\",\n\"lighting\": \"warm desert sunlight mixing with soft shadows\",\n\"environment\": \"high dune with windy sky, sand trails in air\",\n\"fx\": \"subtle particles and wind motion in clothes\",\n\"quality\": \"8K ultra-photoreal, sharp skin detail\"",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775315989744_img0.jpg"
+        "images/custom_added_1775315989744_img0.jpg"
       ]
     },
     {
@@ -355,7 +355,7 @@
       "cat": "",
       "prompt": "**A beautiful, high-angle portrait photo of a young woman sitting gracefully in a classic, wooden rowboat on a dark, calm lake at sunset. She is wearing an elegant, Cloud dancer or neutral white off-the-shoulder corset-style gown/dress with puffy sleeves, reminiscent of a historical or bridal aesthetic. Her face is illuminated by the warm, golden light of the setting sun, creating a dramatic chiaroscuro effect**\n>\n> **The boat contains a woven picnic basket and a bouquet of large, white, round hydrangeas or similar flowers held gently in her hand. A majestic white swan is swimming near the boat in the upper-left of the frame, its neck curved elegantly. The water is deep and dark, dotted with green lily pads. **\n>\n> **Styling:** *Romanticism, dark academia, classical art influence. **High detail, ultra-realistic photography, cinematic lighting, shallow depth of field, golden hour, 8k resolution.**\n* **Subject:** Young woman with a very long dark wavy hair, elegant Cloud dancer or neutral white gown, peaceful expression.\n* **Setting:** Dark, calm lake, wooden rowboat, lily pads.\n* **Atmosphere:** Serene, romantic, golden hour.\n* **Camera Angle:** High-angle shot (looking down into the boat).\n* **Color Palette:** Contrast between the dark water/wood and the bright white dress/swan/flowers, accented by warm golden light.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775316026479_img0.jpg"
+        "images/custom_added_1775316026479_img0.jpg"
       ]
     },
     {
@@ -365,7 +365,7 @@
       "cat": "",
       "prompt": "A photorealistic full-body shot of a stunning young woman standing at center court of a professional basketball arena. She is wearing a customized, cropped basketball jersey and matching loose athletic shorts, paired with high socks and high-top sneakers. She holds a basketball against her hip with one hand, looking confidently at the camera. Her hair is tied back in a high, sporty ponytail. The background features a blurred indoor arena with bright stadium lights reflecting off the polished wooden floor. The lighting is dramatic and crisp, capturing a K-pop idol aesthetic.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775316211404_img0.jpg"
+        "images/custom_added_1775316211404_img0.jpg"
       ]
     },
     {
@@ -375,7 +375,7 @@
       "cat": "",
       "prompt": "A cinematic and ultra-realistic image of a confident woman (same face as uploaded reference) stepping into a powerful helicopter on a windswept landing strip during golden hour. She wears a dramatic layered technical light-gray jacket that billows wildly from the spinning rotor blades. One foot firmly planted on the boarding ramp, one hand gripping the edge of the hatch reflecting the blazing sky. Her expression is steely and fearless, like an elite operative embarking on a high-stakes mission. Dust, sparks, and dry leaves swirl dramatically around her from the helicopter engines, while cinematic lighting and subtle motion blur emphasize the sense of speed, power, and purpose in the scene",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775316390609_img0.jpg"
+        "images/custom_added_1775316390609_img0.jpg"
       ]
     },
     {
@@ -385,7 +385,7 @@
       "cat": "",
       "prompt": "Create an ultra-realistic photo of a woman (uploaded photo for 100.999% facial reference) wearing sunglasses, white lacoste tshirt, black jeans and jordan1 sneakers, leans casually inside a giant weathered playing card frame marked \"A of Diamonds\" with graffiti text \"Adi Brill\". The scene is set in a moody, abandoned city, skycrapers and dramatic cinematic lighting. Extreme low angle in the middle of the city skyscrapers.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775316486740_img0.jpg"
+        "images/custom_added_1775316486740_img0.jpg"
       ]
     },
     {
@@ -395,7 +395,7 @@
       "cat": "",
       "prompt": "Ultra high-definition, cinematic portrait of me as a Red Bull Racing F1 driver walking confidently through a pit lane. The image should appear sharp and highly detailed, with subtle cinematic grain, controlled vignetting, and rich contrast. Use a high-gloss professional motorsport aesthetic — neutral blacks, silvers, and whites, with signature Red Bull accents like deep blue, red, and yellow.\nThe driver is wearing official Red Bull Racing gear (full suit, gloves, boots) and holding a Red Bull helmet. His face is visible, unedited, and natural — no retouching. Skin texture must remain intact. Sunglasses optional. The lighting should highlight his facial features and gear textures realistically.\nThe F1 bolide behind him is a Red Bull Racing car, slightly out of focus due to shallow depth of field (85mm lens look), parked at an angle behind him in the pit lane.\nBackground includes blurred crew members, photographers, and a warm sun haze for cinematic flair.\nThe final result must evoke the energy and status of a Netflix sports documentary still or a premium racing magazine cover.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775316660885_img0.jpg"
+        "images/custom_added_1775316660885_img0.jpg"
       ]
     },
     {
@@ -405,7 +405,7 @@
       "cat": "",
       "prompt": "Ultra high-definition, cinematic portrait of me as a Red Bull Racing F1 driver walking confidently through a pit lane. The image should appear sharp and highly detailed, with subtle cinematic grain, controlled vignetting, and rich contrast. Use a high-gloss professional motorsport aesthetic — neutral blacks, silvers, and whites, with signature Red Bull accents like deep blue, red, and yellow.\nThe driver is wearing official Red Bull Racing gear (full suit, gloves, boots) and holding a Red Bull helmet. His face is visible, unedited, and natural — no retouching. Skin texture must remain intact. Sunglasses optional. The lighting should highlight his facial features and gear textures realistically.\nThe F1 bolide behind him is a Red Bull Racing car, slightly out of focus due to shallow depth of field (85mm lens look), parked at an angle behind him in the pit lane.\nBackground includes blurred crew members, photographers, and a warm sun haze for cinematic flair.\nThe final result must evoke the energy and status of a Netflix sports documentary still or a premium racing magazine cover.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775316698153_img0.jpg"
+        "images/custom_added_1775316698153_img0.jpg"
       ]
     },
     {
@@ -415,7 +415,7 @@
       "cat": "",
       "prompt": "i Create an ink drawing/blue Bic-pen sketch in a photographic style of the person or people, with a face or facesidentical to the reference image provided – keep every facial feature, proportion, and expression exactly the same. Use shades of blue ink with intricate details and fine lines, drawn over a notebook-style page background. Show a right hand holding a pen and an eraser near the sketch, as if the artist were still working.“",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775316742030_img0.jpg"
+        "images/custom_added_1775316742030_img0.jpg"
       ]
     },
     {
@@ -425,7 +425,7 @@
       "cat": "",
       "prompt": "100% Real face Gurita A hyper-realistic surreal composite on a wooden tabletop. A large smartphone dominates the scene, taking up most of the frame. On the screen, the man from the reference image appears much larger in a close-up winter environment, happily holding a glass with a Coca cola logo on it.\nA real human hand pours a light-black Coca cola soda from a cold bottle with condensation droplets directly toward the screen, and the liquid breaks through the display into the glass she is holding. The phone appears oversized compared to the book and black pen on the table, enhancing the dimensional-break illusion. Warm natural lighting, soft shadows, extremely sharp liquid details, hyper-realistic textures, surreal cinematic look.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775316780567_img0.jpg"
+        "images/custom_added_1775316780567_img0.jpg"
       ]
     },
     {
@@ -435,7 +435,7 @@
       "cat": "",
       "prompt": "A high-resolution, cinematic street mural on a large urban wall, featuring a close-up, semi-cartoon, semi-realistic portrait of a single person whose identity, facial features, hairstyle, accessories, skin tone, and age are taken exactly from the user’s uploaded reference photo, with the reference image used as the sole source for the main character’s appearance and expression, without altering bone structure or age, and only allowing minor styling tweaks to better integrate the character into the mural scene.\nThe character’s gender presentation is kept visually neutral, avoiding exaggerated masculine or feminine cues while still remaining fully consistent with the real person in the reference, preserving the same hairline, eye color, facial proportions, and any visible accessories such as glasses, earrings, or headwear, which should be redrawn faithfully unless a tiny adjustment is needed to match the mural composition.\nThe portrait shows the person from shoulders up, facing slightly toward the viewer with a calm, gentle, serene expression, eyes softly focused, conveying emotional ease and reassurance, with subtle line-work and soft shading that bridge the gap between realistic portraiture and clean cartoon outlines typical of polished contemporary street art.\nThe upper section of the wall is filled with an expansive field of blooming roses in various shades of soft pink, deep red, cream, and peach, surrounded by lush, saturated green leaves, painted with high-detail textures, layered petals, and subtle highlights that give the flowers a rich, almost tactile depth.\nClusters of roses cascade down the wall in flowing arcs, with some branches visually blending into the character’s hair so that sections of the hair transform seamlessly into layered rose petals and foliage, creating the illusion that the person is emerging from, or partially formed by, the floral composition.\nAround the character’s head, the densest roses and leaves form an elegant, organic floral crown, with overlapping blossoms that frame the face and create a romantic, dreamy halo effect, while still keeping the key facial features from the reference photo fully visible and accurate.\nA clear, soft blue sky with scattered fluffy white clouds occupies the upper background beyond the mural wall edges, adding airy depth and contrast to the saturated colors of the roses and the portrait, enhancing the serene and hopeful atmosphere.\nAt street level, the ground is rendered as realistic, slightly worn asphalt with detailed texture, subtle cracks, and reflected light, scattered with colorful fallen rose petals in different stages of fading, as if carried by wind from the mural into the real environment.\nA few casually dressed pedestrians walk or stand near the mural, painted small in scale and slightly blurred with soft motion to keep the focus on the portrait, reinforcing the sense that this is a living, urban street scene rather than a studio composition.\nThe overall lighting is bright yet soft, like an early morning or late afternoon glow, with gentle highlights on the character’s face and roses, and subtle shadows on the wall and asphalt, creating a dreamy, almost hyper-real visual quality typical of high-end photographic street art.\nColor grading leans toward warm, inviting tones with balanced contrast: vibrant rose colors, natural skin tones faithful to the reference photo, neutral gray asphalt, and a clean blue sky, all unified by a slightly cinematic, pastel-infused palette that supports a calm, reassuring mood.\nOn the mural wall, integrated into the composition near the portrait but not covering the character’s face, add the phrase\n“ Adi brill ” \nin a bold, legible, street-art graffiti style, with dynamic lettering, layered colors, and soft outlines, harmonizing with the floral palette while standing out clearly as a positive, encouraging message.\nThe Arabic text should read naturally as part of the artwork: slightly angled, with paint drips, spray textures, and subtle glow or shadow, placed so that some small rose elements weave in front of or behind parts of the letters, tying the message visually to the surrounding flowers and to the theme of emotional ease.\nEnsure the phrase’s meaning, “Adi brill ” is reflected in the character’s gentle expression, the light, open sky, and the soft scattering of petals, so that the entire mural communicates emotional simplicity, letting go of stress, and finding calm in the middle of the city’s hard surfaces.\nCompositionally, keep the character’s face as the central focal point, framed by the floral crown and guided by leading lines created by cascading roses and street-level perspective lines on the asphalt, with pedestrians and background details deliberately less sharp and less saturated to avoid stealing attention\nUse a high-resolution, ultra-detailed rendering style suitable for large-format wall art, with crisp edges, visible brush or spray-paint textures, and fine details \nFinal instruction: strictly base the main character’s identity, age, and key features on the single uploaded reference image, maintaining a gender-neutral presentation and avoiding any beautification that changes bone structure or age, while adapting clothing colors, lighting, and minor styling only as needed to harmonize with the dreamy, romantic, rose-filled street mural\nOutput:\nA realistic image that meets the above scene requirements. Please submit it in landscape dimensions, 16:9 aspect ratio, and high quality.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775317128020_img0.jpg"
+        "images/custom_added_1775317128020_img0.jpg"
       ]
     },
     {
@@ -445,7 +445,7 @@
       "cat": "",
       "prompt": "Create for me based on the reference image, a grid image divided into 9 parts, each part 16:9 in size. Each part has a different scene of the same face image. Eats different foods: apple, ice cream, hamburger, pizza, sandwich, drinks coffee, candy, pasta",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775317171851_img0.jpg"
+        "images/custom_added_1775317171851_img0.jpg"
       ]
     },
     {
@@ -455,7 +455,7 @@
       "cat": "",
       "prompt": "high-quality hybrid photo-illustration of a subject, featuring a clean \"mixed-media\" aesthetic where a realistic photograph is blended with bold, vector-style hand-drawn graphics.\nCore Stylistic Structure:\nRealistic Portrait Base: The central subject's face and hair, along with the immediate background, are high-quality and photorealistic. The background is slightly blurred to create depth.\nOverlaid Vector Illustration: Specific elements within the frame are replaced or overlaid with clean-lined, vibrantly colored 2D vector illustrations.\nHybrid Accessories: Any items worn on the head or face (e.g., sunglasses, hats, jewelry) are rendered as flat, stylized graphic overlays with sharp outlines.\nHybrid Held Items: Any object held by the subject (e.g., food, drink, or tools) is rendered entirely as a cartoon-style graphic piece, featuring bold outlines, simplified shading, and stylized details like drips or highlights.\nIllustrated Clothing: The subject's outfit is depicted as a flat, 2D illustrated graphic layer with vibrant colors, worn over the realistic portrait.\nGraphic Enhancements:\nVFX Overlays: Dynamic \"liquid splashes,\" \"pop-art sparkles,\" and tiny stars are scattered around the illustrated objects to add energy and movement.\nVisual Contrast: A sharp, intentional contrast between the natural skin tones/textures of the photo and the highly saturated, solid colors of the 2D illustrations (vivid reds, electric blues, bright yellows).\nAesthetic & Finish:\nA professional and artistic mixed-media composition. The transition between the realistic photo and the graphic drawing is crisp, clean, and seamless, creating a unique \"augmented reality\" look.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775317219474_img0.jpg"
+        "images/custom_added_1775317219474_img0.jpg"
       ]
     },
     {
@@ -465,7 +465,7 @@
       "cat": "",
       "prompt": "Create a hyper-realistic studio-style collage of the person in the uploaded photo.\nIdentity: Apply a CRITICAL IDENTITY LOCK to preserve the exact likeness, including facial features, hairstyle, skin tone, proportions, age, and clothing style.\nLighting: Strong, studio-quality lighting.\nBackground: Simple light gray.\nComposition: Arrange in a 3x3 grid (9 images). Each frame should show the person breaking through torn white paper, creating a 3D effect as if emerging from the background.\nExpressions & Poses: Each image must be unique and playful: pointing, laughing, pretending to sleep, drinking, winking, thinking, gesturing, etc. Ensure variety in facial expressions and body language.\nOutfits: Different outfit in each frame.\nRange from casual, semi-formal, sporty, to humorous or eccentric styles.\nOutput Settings:\nAspect Ratio: 9:16\nHigh resolution\nElegant, modern composition",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775317325942_img0.jpg"
+        "images/custom_added_1775317325942_img0.jpg"
       ]
     },
     {
@@ -475,7 +475,7 @@
       "cat": "",
       "prompt": "A luxurious fashion magazine cover inspired by [NY], featuring the exact person from the reference image as the main model, with perfectly preserved facial features, hairline, skin tone, and eye color, without changing facial structure or apparent age. The hairstyle and any visible accessories from the image are accurately maintained, with only minimal design adjustments if needed to harmonize with the scene. The model’s gender and age presentation remain neutral and respectful:  \n- If the person appears as an adult female, style them in elegant, contemporary full-body fashion appropriate for a high-end cover, aligned with local trends.  \n- If the person appears as an adult male, style them in sophisticated, tailored full-body fashion suitable for a luxury editorial.  \n- If the person appears as a female child, dress them in age-appropriate, modest, stylish full-body clothing with a gentle, aspirational tone.  \n- If the person appears as a male child, dress them in age-appropriate, modest, stylish full-body clothing with a polished yet youthful feel.  \nIf the person in the reference image is veiled, preserve a modern hijab/veil design and ensure the attire covers the entire body while remaining fashionable and contemporary. \nThe cover composition blends [NY]’s iconic landmarks, cultural symbols, and local fashion aesthetics, using a high-end editorial layout with headlines inspired by the country’s language but in English , lifestyle, and current trends. Sophisticated, cinematic lighting, vertical 9:16 format, ultra-detailed finishing, and Vogue-level elegance.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775317439415_img0.jpg"
+        "images/custom_added_1775317439415_img0.jpg"
       ]
     },
     {
@@ -485,7 +485,7 @@
       "cat": "",
       "prompt": "Replace the man's face with the exact face from my uploaded photo. Use my real facial features 100% precisely: same eyes, nose, mouth, jawline, skin tone, hair color and hairstyle as in my photo. Do not change or stylize my face at all.\n\nThe person (me, with my real face from the photo) is a young man sitting in the open door of a white convertible car on a chaotic New York city street. He’s wearing a white slightly torn button-down shirt, black ripped jeans, and white sneakers. He’s holding a black pistol aimed forward with a serious, determined expression. Dynamic low-angle shot. Background: explosions, thick smoke, fire, shattered glass, abandoned cars, sparks flying near the car wheels. Warm dramatic lighting from the explosions, highly realistic action movie style, photorealistic, ultra-detailed, cinematic.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775317485371_img0.jpg"
+        "images/custom_added_1775317485371_img0.jpg"
       ]
     },
     {
@@ -495,7 +495,7 @@
       "cat": "",
       "prompt": "the man in a tailored suit walking calmly while a controlled explosion happens behind him. Orange firelight outlining him, dust and debris in slow-motion, fearless expression, Hollywood-style action boss\nportrait.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775317535528_img0.jpg"
+        "images/custom_added_1775317535528_img0.jpg"
       ]
     },
     {
@@ -505,7 +505,7 @@
       "cat": "",
       "prompt": "Create a high-definition cinematic image of a vintage royal scene. The main character sits comfortably in an elegant gilded armchair in a lavish royal interior. {DOG_BREED} sits alertly beside the chair, matching the overall composition and perspective of the original reference image. Use the uploaded image as the sole source of the character's identity: preserve the face, age, skin tone, hairline, and proportions exactly as they are, without any changes to facial features or anatomy, regardless of gender or age. The character wears a finely tailored, double-breasted suit in a dark wool blend with a subtle striped pattern, white socks, and polished black leather shoes with laces, fitting naturally to their body shape. Soft ambient lighting, warm classic color gradations with shades of brown, muted gold, and gray, sophisticated cinematic tones, polished contrast, and fine film grain. Realistic 8K picture quality.\nMake sure to replace {DOG_BREED} with the user's answer before submitting.\nNegative comments: distortions, facial changes, extra limbs, malfunctions, unrealistic anatomy, inappropriate clothing, incorrect costume details, marks, low resolution, blurred face.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775317632054_img0.jpg"
+        "images/custom_added_1775317632054_img0.jpg"
       ]
     },
     {
@@ -515,7 +515,7 @@
       "cat": "",
       "prompt": "The man stepping out of a luxury black SUV with door held open by a guard. Street smoke, headlights flaring, stylish mini leader pose, crisp shadows, realistic boss attitude, ultrasmooth cinematic lighting.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775317791902_img0.jpg"
+        "images/custom_added_1775317791902_img0.jpg"
       ]
     },
     {
@@ -525,7 +525,7 @@
       "cat": "",
       "prompt": "A hyper-realistic fantasy scene of a serious young man, kneeling on one knee on cracked concrete floor, holding a glowing orb filled with swirling flames. From it emerges the head of a gigantic fiery wolf, howling toward the ceiling, shooting sparks upward. The man wears a dark trench coat and military boots, his face partially shadowed, gaze locked intensely on the creature. The fiery glow from the orb reflects off a smoky blue background, creating cinematic intensity. 8K, highly detailed, magical realism, fantastical atmosphere.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775317904496_img0.jpg"
+        "images/custom_added_1775317904496_img0.jpg"
       ]
     },
     {
@@ -535,7 +535,7 @@
       "cat": "",
       "prompt": "“A woman in a black suit, with a face 100% identical to the reference image, sits in the cockpit of a large, maneuverable robot. The robot's structure is cool and futuristic, with intricate metal limbs and mechanisms. The interior of an old factory has a workhorse atmosphere, with slight light coming through the roof. No cranes above or overhead equipment is visible. The focus is sharp on the robot and the man piloting it. The medium-range camera angle shows the robot in its entirety. The style is photorealistic, with ultra-detailed detail and dynamic lighting.”",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775318035626_img0.jpg"
+        "images/custom_added_1775318035626_img0.jpg"
       ]
     },
     {
@@ -545,7 +545,7 @@
       "cat": "",
       "prompt": "Prompt: {\n\"image_prompt\": {\n\"subject\": \"Top-down aerial view of a man (from the uploaded photo) wearing a quilted mountain parka, sitting in pristine snow holding a thermal coffee mug. Double exposure effect: His jacket and body silhouette showcase rolling alpine hills at dawn, wildflower meadows, mountain goats on rocky outcrops, and a winding mountain trail leading to a sunrise peak.\",\n\"composition\": \"Vertical 9:16. 60% Top: Subject with layered mountain landscape double exposure creating depth. 40% Bottom: Untouched powder snow with gentle terrain contours for clean calendar text area.\",\n\"lighting\": \"Warm sunrise alpenglow illuminating the silhouette from within, soft diffused daylight on surrounding snow, atmospheric haze adding depth layers.\",\n\"text_overlay\": {\n\"title\": \"2026 CALENDAR\",\n\"style\": \"Text embossed into weathered stone or carved into alpine wood, high-contrast typography with mountain texture.\",\n\"grid_data\": \"3x4 grid with subtle topographic line accents.\"\n},\n\"quality\": \"8K, Photorealistic, Razor-sharp detail on face and typography, Cinematic with enhanced atmospheric perspective.\"\n}\n}",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775318519248_img0.jpg"
+        "images/custom_added_1775318519248_img0.jpg"
       ]
     },
     {
@@ -555,7 +555,7 @@
       "cat": "",
       "prompt": "An engaging photo capturing a moment of fascination and pride over a meticulously crafted miniature soekarno-hatta international airport terminal 3. The diorama showcases a comprehensive airport scene, illuminated with tiny lights, featuring a runways, terminals, airport control center building, maintenance fleet building, and numerous model commercial airplanes flag carrier (emirates, saudia, etihad, garuda, singapore airlines, qatar, oman, jal, etc) a man are seen learning over the diorama, On the apron, a jet bridge (garbarata) is attached to the aircraft door, its metal and glass structure reflecting warm sunlight. On the left side, a pushback tug in white and yellow is positioned under the aircraft’s nose, with hydraulic details and indicator lights glowing.\nIn front of the aircraft, a marshaller wearing a reflective vest and headset is signaling precise hand movements with illuminated batons, guiding the pilot into position. In the background, a modern airport shuttle bus with large windows waits to unload passengers. Heat distortion rises from the tarmac, reflections shimmer on the aircraft’s fuselage, and the orange sky enhances the dynamic, lively atmosphere of the busy airport. admiring their creation or presenting it. The background suggests a workshop or studio setting at morning vibe.\nHyper-realistic style, strong depth of field, vivid colors, wide-angle composition, cinematic tone.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775318635394_img0.jpg"
+        "images/custom_added_1775318635394_img0.jpg"
       ]
     },
     {
@@ -565,7 +565,7 @@
       "cat": "",
       "prompt": "A daring man in all-black streetwear climbs the side of a tall rusted metal bridge tower high above a busy highway. , black beanie, gloves, . Cold misty air surrounds him as he exhales smoke from a cigar, creating a dramatic vapor trail. The scene is set on a gloomy overcast day, with a fog-covered city skyline and a wide river in the background. Cars with headlights on move along the highway far below, adding depth and scale. Moody teal-and-orange tones, realistic textures, gritty urban atmosphere, shallow depth of field, 85mm lens, cinematic contrast, hyper-realistic detail, action-thriller poster style.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775318888805_img0.jpg"
+        "images/custom_added_1775318888805_img0.jpg"
       ]
     },
     {
@@ -575,7 +575,7 @@
       "cat": "",
       "prompt": "Create a picture of them on the set of a high-octane movie.",
       "images": [
-        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1775319076768_img0.jpg"
+        "images/custom_added_1775319076768_img0.jpg"
       ]
     }
   ],
