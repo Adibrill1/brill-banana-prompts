@@ -270,7 +270,21 @@
     "added_imp_0285",
     "added_imp_0287",
     "added_imp_0289",
-    "added_imp_0291"
+    "added_imp_0291",
+    "added_imp_0296",
+    "added_imp_0297",
+    "added_imp_0298",
+    "added_imp_0294",
+    "added_imp_0293",
+    "added_imp_0299",
+    "added_imp_0302",
+    "added_imp_0304",
+    "added_imp_0305",
+    "added_imp_0308",
+    "added_imp_0310",
+    "added_imp_0313",
+    "added_imp_0312",
+    "added_imp_0311"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -4683,9 +4697,9 @@
       "id": "new",
       "title": "Editorial Portrait Shots",
       "cat": "",
-      "prompt": " A wildflower blooming in the desert.\n\nGoogle Gemini Nano Banana Pro and Grok Imagine.\n\nPROMPT : \n​Ultra-detailed cinematic close-up photograph, ultra-photorealistic, 8K resolution, shot on a medium format Hasselblad H6D-400c with a 100mm f/2.8 portrait lens. Impeccable sharpness combined with shallow cinematic depth of field, film-grade lighting, subtle grain, blockbuster photography look.\n​Black, wet, curly hair up to the chin. Strictly preserve from the attached first photo, without distortion. Wearing black rectangular sunglasses and a black oversized voluminous blazer.\n​Extreme close-up shot from a dramatic low angle looking upward, distorted perspective. In the foreground, a hand holding a delicate white wildflower slightly out of focus. The man is sitting inside a Belarus 82.1 tractor completely covered in carpet, leaning out of the side window. The tractor is parked in a vast, lifeless desert landscape stretching into the horizon.\n​Heavy cloudy sky, storm-like atmosphere, soft diffused light breaking through clouds, muted color palette, desaturated cinematic tones, subtle teal-and-orange grading.\n​Strong emphasis on facial micro-details, pores, skin texture, moisture on hair strands, wrinkles in the blazer fabric, carpet fibers on the tractor body. Volumetric light rays, atmospheric haze, editorial fashion photography mixed with epic movie still, IMAX-style realism, dramatic mood, hyper-detailed, ultra-sharp, 8K. ",
+      "prompt": "Editorial 3x3 photo grid in a clean soft beige studio. Character (matches reference 100%) wearing lightweight dark navy shirt, ivory trousers, barefoot for raw simplicity. Lighting: large diffused key light directly front-right, silver reflector left, subtle rim from top. Shots to include: 1. extreme close-up of lips + cheekbone with blurred hand partially covering (85mm, f/1.8, razor-thin DOF); 2. tight crop on eyes looking into lens with reflection of light strip visible (85mm, f/2.0); 3. black & white close portrait resting chin on fist, face filling frame (50mm, f/2.2); 4. over-shoulder shot, blurred foreground fabric curtain framing half face (85mm, f/2.0); 5. very close frontal with hands overlapping face, light streak across eyes (50mm, f/2.5); 6. tight angled portrait showing hair falling into eyes, soft-focus background (85mm, f/2.2); 7. crop of hands touching jawline, eyes cropped out (50mm, f/3.2, detail-focused); 8. half-body seated sideways on low cube, head turned sharply away, blurred foreground (35mm, f/ 4.5); 9. intense close-up of profile with single tear-like water droplet, cinematic light slice across (85mm, f/ 1.9). Angles: mostly tight headshots with slight high/low tilts, maintaining variation. Capture RAW, professional muted grade, smooth tonal contrast, subtle cinematic grain. Mood: intimate, introspective, character-led editorial minimalism with delicate use of fabric as prop.",
       "images": [
-        "images/imp_0303.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0303.jpg"
       ]
     },
     {
@@ -4743,9 +4757,9 @@
       "id": "new",
       "title": "Eyes Wearing Sunglasses",
       "cat": "",
-      "prompt": "Create An ultra-realistic cinematic photo inspired by Men in Black.\nIn the center: the person from the reference photo, unchanged - keep every facial feature exactly as in the original (mouth, eyebrows, nose, eyes, and face shape identical). The person wears a tailored black suit, white shirt, slim black tie, and a luxury steel watch on one wrist.\n\nThey hold a silver Samsung Galaxy S25 Ultra slightly above eye level, angled downward for a natural selfie perspective, with the other hand casually in their pocket.\n\nFlanking them:\n\nBugs Bunny on the left,\n\nDaffy Duck on the right,\nboth dressed in matching MIB-style black suits and dark sunglasses, rendered in hyper-realistic cinematic 3D - realistic fur and feathers, subtle specular reflections, and soft rim lighting that matches the person’s lighting perfectly.\n\nAll three are facing a large vertical mirror, captured from the waist up, with faint mirror reflections visible.\nBackground: a high-tech Men in Black armory, filled with futuristic weapons, glowing blue consoles, metallic textures, and ambient haze.\n\nLighting: controlled studio lighting setup - soft frontal key light, cool blue rim lighting from behind, and cinematic contrast to emphasize depth.\nCamera: 35mm full-frame lens, f/2.2 aperture, ISO 100, slight DOF focus on faces.\nColor grading: Kodak Vision3 250D film emulation, balanced tones, chrome highlights, deep blacks, and cinematic LUT contrast.\nPost-processing: realistic lens reflections, soft bloom on metal surfaces, mild film grain, and clean dynamic range.\nQuality: 8K hyper-realistic resolution, perfect material fidelity, detailed skin texture, and full photorealism from edge to edge.",
+      "prompt": "An extreme close-up, high-fashion editorial portrait of a chic city dweller cropped to focus on the eyes and nose. The subject is wearing oversized black Aviator sunglasses that dominate the frame. The lenses feature a crystal-clear, photorealistic reflection of the New York City skyline and yellow taxis, serving as the visual focal point. The subject is styled in a cashmere scarf in camel beige, emphasizing the texture. The skin is rendered with natural, soft matte makeup. The brand name \"Ray-Ban\" is printed in small, minimalist Script on the top corner of the lens. The lighting is diffused city shade, creating a sophisticated, metropolitan atmosphere.",
       "images": [
-        "images/imp_0309.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0309.jpg"
       ]
     },
     {
@@ -4791,11 +4805,11 @@
     {
       "key": "added_imp_0314",
       "id": "new",
-      "title": "Face Formed From",
+      "title": "coffee",
       "cat": "",
-      "prompt": "{\n\"image_request\": {\n\"goal\": \"Create a stylized mixed-media portrait with hand-drawn elements, showing the subject eating a sufganiyah.\",\n\"meta\": {\n\"image_type\": \"Mixed Media Portrait\",\n\"quality\": \"8K\",\n\"color_mode\": \"Black and White Photo with Vibrant Color Overlay\",\n\"style_mode\": \"mixed_media_doodle\",\n\"aspect_ratio\": \"4:5\",\n\"resolution\": \"1080x1350px\"\n},\n\"creative_style\": \"Mixed Media Art combining a classic black and white studio portrait with vibrant, playful, hand-drawn digital doodles and patterns. The style is whimsical, energetic, and pop-art inspired, blending realism with illustrative abstraction.\",\n\"overall_theme\": \"playful artistic expression\",\n\"mood_vibe\": \"cheerful creative charming\",\n\"style_keywords\": [\n\"mixed media\",\n\"doodle art\",\n\"black and white photography\",\n\"vibrant colors\",\n\"pop art\",\n\"illustrative overlay\",\n\"playful\",\n\"patterned\",\n\"energetic\",\n\"portrait\"\n],\n\"subject\": {\n\"count\": \"1\",\n\"type\": \"male or female\",\n\"identity\": \"the real person from the reference photo\",\n\"identity_preservation\": {\n\"description\": \"Preserve the exact facial identity, proportions, hairstyle, and expression from the reference photo\",\n\"notes\": \"Do not alter facial structure or change the subject into any other known person\"\n},\n\"age_appearance\": \"match reference photo\",\n\"skin\": \"smooth black and white tone based on the reference image\",\n\"makeup\": {\n\"lips\": \"natural\",\n\"eyes\": \"natural\",\n\"general\": \"none\"\n},\n\"facial_features\": {\n\"expression\": \"use the authentic expression from the reference image\",\n\"eyes\": {\n\"gaze\": \"looking directly at viewer, matching reference\",\n\"intensity\": \"friendly\"\n},\n\"lips\": {\n\"gesture\": \"eating a sufganiyah\"\n}\n},\n\"hair\": {\n\"length\": \"match reference photo\",\n\"texture\": \"match reference photo\",\n\"style\": \"match reference photo\",\n\"lighting_interaction\": {\n\"light\": \"studio lighting highlights\",\n\"shadow_play\": \"soft facial modeling\"\n}\n},\n\"clothing\": {\n\"top\": \"same type of top visible in the reference or a simple neutral top if not visible\",\n\"bottom\": \"not visible\",\n\"full_description\": \"The clothing acts as the canvas for the art: a black base covered in colorful hand-drawn abstract patterns, stripes, and shapes (yellow collar, blue, pink, orange abstract forms).\",\n\"accessories\": \"none real, but drawn elements act as accessories\"\n},\n\"props\": {\n\"bouquet\": \"none\",\n\"wine_glass\": \"none\",\n\"other\": \"drawn yellow crown floating above head, and a hand-drawn sufganiyah with powdered sugar and jelly is being eaten by the subject\"\n}\n},\n\"pose_action\": {\n\"description\": \"Bust portrait matching the reference pose, looking forward.\",\n\"overall_pose\": \"standing studio portrait\",\n\"head_turn\": \"match reference\",\n\"gaze\": \"direct\",\n\"body_position\": \"upper body\",\n\"hands\": \"not visible\",\n\"movement\": \"static pose, dynamic art\"\n},\n\"multiple_frames_expressions\": [],\n\"environment\": {\n\"setting\": \"studio white background\",\n\"location\": \"studio\",\n\"weather\": \"n/a\",\n\"time_of_day\": \"n/a\",\n\"atmosphere\": \"fun and artistic\"\n},\n\"background\": {\n\"color\": \"white with colorful doodles\",\n\"effect\": \"plain background filled with abstract black dashes, colorful swirls (blue, pink, orange), and scribbles\"\n},\n\"lighting\": {\n\"type\": \"studio strobe\",\n\"position\": \"front\",\n\"direction\": \"flat flattering light\",\n\"intensity\": \"balanced\",\n\"focus\": \"subject face\",\n\"falloff\": \"none\",\n\"light_source\": \"artificial\"\n}\n}\n}",
+      "prompt": "{\n\"task\": \"image_generation\",\n\"concept\": {\n  \"idea\": \"The character's face is physically formed from milk foam as latte art, not placed on top of the coffee\",\n  \"transformation\": \"Milk foam is actively morphing into facial features\"\n},\n\"character\": {\n  \"identity\": \"the same character as in the reference image\",\n  \"requirements\": [\n    \"Face must be recognizable\",\n    \"No gender-specific traits\",\n    \"Facial structure emerges naturally from foam texture\"\n  ]\n},\n\"scene\": {\n  \"main_object\": \"A cup of coffee seen from above or slight angle\",\n  \"foam_behavior\": [\n    \"Milk foam flows, swirls, and thickens into facial contours\",\n    \"Eyes, nose, lips, and hair are sculpted from foam texture\",\n    \"No sharp photographic edges — everything is foam-based\"\n  ],\n  \"secondary_object\": {\n    \"object\": \"Milk frothing pitcher\",\n    \"action\": \"Milk is being poured from the pitcher into the coffee\",\n    \"interaction\": \"The pouring milk directly shapes and completes the face\"\n  }\n},\n\"details\": {\n  \"texture\": \"Soft, airy milk foam with visible bubbles and latte art flow lines\",\n  \"integration\": \"Facial features blend seamlessly into the coffee surface\",\n  \"imperfection\": \"Slight asymmetry and organic flow to emphasize realism\"\n},\n\"art_direction\": {\n  \"style\": \"Photorealistic conceptual food photography\",\n  \"lighting\": \"Warm café lighting\",\n  \"mood\": \"Clever, surprising, playful\",\n  \"camera\": \"Close-up macro or top-down view emphasizing texture\"\n},\n\"constraints\": [\n  \"Do not paste a photographic face onto the coffee\",\n  \"Do not create smooth skin textures\",\n  \"All facial features must be made of foam\",\n  \"No text, logos, or watermarks\"\n],\n\"goal\": \"Create an image where the character's face clearly emerges from milk foam itself, as if sculpted by the pouring milk, creating a magical yet believable latte art moment\"\n}",
       "images": [
-        "images/imp_0314.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0314.jpg"
       ]
     },
     {
