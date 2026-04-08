@@ -174,7 +174,7 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
 /* Paywall */
 .prompt-wrap{position:relative;overflow:hidden;margin-bottom:0}
 .card.locked-prompt .prompt-wrap::after{content:'';position:absolute;bottom:0;left:0;right:0;height:55px;background:linear-gradient(to bottom,transparent,var(--card-bg) 90%);pointer-events:none}
-.card.locked-prompt .prompt-text{max-height:55px;overflow:hidden;margin-bottom:0}
+.card.locked-prompt .prompt-text{max-height:55px;overflow:hidden;margin-bottom:0;user-select:none;-webkit-user-select:none;pointer-events:none}
 .card.locked-prompt .copy-btn{display:none !important}
 .unlock-btn{width:100%;padding:10px 16px;background:linear-gradient(135deg,#f5a623,#f97316);color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:bold;cursor:pointer;margin-top:8px;display:none;transition:opacity .15s}
 .unlock-btn:hover{opacity:.85}
