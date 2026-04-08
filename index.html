@@ -123,6 +123,11 @@ input[type=range].cols-slider::-webkit-slider-thumb{-webkit-appearance:none;widt
 input[type=range].cols-slider::-webkit-slider-thumb:active{transform:scale(1.25)}
 input[type=range].cols-slider::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#f5a623;cursor:pointer;border:2px solid #1a1a1a;box-shadow:0 2px 8px rgba(0,0,0,.6)}
 input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px;border-radius:3px}
+.fav-btn{background:none;border:none;cursor:pointer;font-size:15px;padding:2px 3px;line-height:1;opacity:0.3;transition:opacity .15s,transform .15s;flex-shrink:0}
+.fav-btn:hover{opacity:0.75;transform:scale(1.2)}
+.fav-btn.fav-on{opacity:1}
+.btn-fav-filter{background:#2a2a2a;color:#e91e63;border:1px solid #e91e63}
+.btn-fav-filter:hover,.btn-fav-filter.active{background:#e91e63;color:#fff}
 </style>
 </head>
 <body>
@@ -139,6 +144,7 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
 <div class="toolbar">
   <input class="search" type="search" placeholder="🔍 חפש לפי שם או תוכן..." oninput="filterCards(this.value)" autocomplete="off">
   <button class="btn" style="background:#1a1a1a;color:#555;border:1px solid #333;font-size:12px" onclick="tryUnlock()">🔒 כניסת מנהלת</button>
+  <button class="btn btn-fav-filter" id="favFilterBtn" onclick="toggleFavFilter()">❤️ מועדפים</button>
 </div>
 <div class="cols-control">
   <span class="cols-label">מספר תמונות בשורה:</span>
@@ -4479,6 +4485,11 @@ function isEmptyState(st) {
   return !st || ((!st.deleted||!st.deleted.length) && (!st.added||!st.added.length) && (!st.order||!st.order.length) && (!st.customImgs||!Object.keys(st.customImgs).length) && (!st.promptEdits||!Object.keys(st.promptEdits).length));
 }
 
+// Favorites
+var favs = {};
+try { favs = JSON.parse(localStorage.getItem('bb_favs') || '{}'); } catch(e) {}
+var showFavsOnly = false;
+
 // Apply cached state immediately (fast)
 applyState(state);
 
@@ -4544,6 +4555,7 @@ function applyState(st) {
   }
   updateCount();
   renumberCards();
+  initFavBtns();
 }
 
 function markUnsaved() {
@@ -4782,6 +4794,8 @@ function appendCard(p) {
     +'<pre class="prompt-text">'+escHtml(p.prompt)+'</pre>';
   if (editMode) el.setAttribute('draggable','true');
   document.getElementById('grid').appendChild(el);
+  var header = el.querySelector('.card-header');
+  if (header) header.appendChild(makeFavBtn(p.key));
 }
 
 var editingKey = null;
@@ -4913,10 +4927,45 @@ function copyPrompt(key,btn){
     document.body.appendChild(ta);ta.focus();ta.select();document.execCommand('copy');document.body.removeChild(ta);done();
   });
 }
+function makeFavBtn(key) {
+  var b = document.createElement('button');
+  b.className = 'fav-btn' + (favs[key] ? ' fav-on' : '');
+  b.setAttribute('data-key', key);
+  b.title = 'מועדפים';
+  b.textContent = favs[key] ? '❤️' : '🤍';
+  b.addEventListener('click', function(e) {
+    e.stopPropagation();
+    if (favs[key]) delete favs[key]; else favs[key] = true;
+    localStorage.setItem('bb_favs', JSON.stringify(favs));
+    document.querySelectorAll('.fav-btn[data-key="'+key+'"]').forEach(function(btn){
+      btn.classList.toggle('fav-on', !!favs[key]);
+      btn.textContent = favs[key] ? '❤️' : '🤍';
+    });
+    if (showFavsOnly) filterCards(document.querySelector('.search').value);
+  });
+  return b;
+}
+function initFavBtns() {
+  document.querySelectorAll('.card').forEach(function(card) {
+    var key = card.getAttribute('data-key');
+    if (!key || card.querySelector('.fav-btn')) return;
+    var header = card.querySelector('.card-header');
+    if (header) header.appendChild(makeFavBtn(key));
+  });
+}
+function toggleFavFilter() {
+  showFavsOnly = !showFavsOnly;
+  var btn = document.getElementById('favFilterBtn');
+  if (btn) btn.classList.toggle('active', showFavsOnly);
+  filterCards(document.querySelector('.search').value);
+}
 function filterCards(q){
   q=q.toLowerCase().trim(); var visible=0;
   document.querySelectorAll('.card').forEach(function(c){
-    var show=!q||c.getAttribute('data-search').includes(q);
+    var key=c.getAttribute('data-key');
+    var matchQ=!q||c.getAttribute('data-search').includes(q);
+    var matchFav=!showFavsOnly||!!favs[key];
+    var show=matchQ&&matchFav;
     c.style.display=show?'':'none'; if(show)visible++;
   });
   var sc=document.getElementById('subtitle-count'); if(sc)sc.textContent=visible;
