@@ -253,7 +253,19 @@
     "added_imp_0261",
     "added_imp_0259",
     "added_imp_0260",
-    "added_imp_0255"
+    "added_imp_0255",
+    "added_imp_0263",
+    "added_imp_0265",
+    "added_imp_0267",
+    "added_imp_0269",
+    "added_imp_0271",
+    "added_imp_0273",
+    "added_imp_0272",
+    "added_imp_0275",
+    "added_imp_0276",
+    "added_imp_0277",
+    "added_imp_0279",
+    "added_imp_0280"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -437,7 +449,8 @@
     "added_imp_0141": "/images/custom_added_imp_0141.jpg",
     "added_imp_0235": "/images/custom_added_imp_0235.jpg",
     "added_imp_0240": "/images/custom_added_imp_0240.jpg",
-    "added_imp_0244": "/images/custom_added_imp_0244.jpg"
+    "added_imp_0244": "/images/custom_added_imp_0244.jpg",
+    "added_imp_0278": "/images/custom_added_imp_0278.jpg"
   },
   "added": [
     {
@@ -4417,7 +4430,7 @@
       "cat": "",
       "prompt": "Create an addictively intriguing 12 part story with 12 images with these two characters in a classic black and white film noir detective story. Make it about missing treasure that they get clues for throughout and then finally discover. The story is thrilling throughout with emotional highs and lows and ending on a great twist and high note. Do not include any words or text on the images but tell the story purely through the imagery itself.",
       "images": [
-        "images/imp_0278.jpg"
+        "/images/custom_added_imp_0278_img0.jpg"
       ]
     },
     {
