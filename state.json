@@ -265,7 +265,12 @@
     "added_imp_0276",
     "added_imp_0277",
     "added_imp_0279",
-    "added_imp_0280"
+    "added_imp_0280",
+    "added_imp_0282",
+    "added_imp_0285",
+    "added_imp_0287",
+    "added_imp_0289",
+    "added_imp_0291"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -4548,9 +4553,9 @@
       "id": "new",
       "title": "Double Exposure Effect",
       "cat": "",
-      "prompt": "Prompt: {\n\"image_prompt\": {\n\"subject\": \"Top-down aerial view of a man (from the uploaded photo) wearing a quilted mountain parka, sitting in pristine snow holding a thermal coffee mug. Double exposure effect: His jacket and body silhouette showcase rolling alpine hills at dawn, wildflower meadows, mountain goats on rocky outcrops, and a winding mountain trail leading to a sunrise peak.\",\n\"composition\": \"Vertical 9:16. 60% Top: Subject with layered mountain landscape double exposure creating depth. 40% Bottom: Untouched powder snow with gentle terrain contours for clean calendar text area.\",\n\"lighting\": \"Warm sunrise alpenglow illuminating the silhouette from within, soft diffused daylight on surrounding snow, atmospheric haze adding depth layers.\",\n\"text_overlay\": {\n\"title\": \"2026 CALENDAR\",\n\"style\": \"Text embossed into weathered stone or carved into alpine wood, high-contrast typography with mountain texture.\",\n\"grid_data\": \"3x4 grid with subtle topographic line accents.\"\n},\n\"quality\": \"8K, Photorealistic, Razor-sharp detail on face and typography, Cinematic with enhanced atmospheric perspective.\"\n}\n}",
+      "prompt": "Apply an artistic red–blue double-exposure effect using two poses of the same character. Keep the base layer as the original pose, and generate a second pose where character's head angle, facial direction, or expression is slightly different, as if captured a moment earlier or later. Color the second pose in red, the base pose in cyan, and offset the layers to create a clean ghosting effect. Preserve skin texture, tattoos, and contrast while keeping the background minimal.",
       "images": [
-        "images/imp_0290.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0290.jpg"
       ]
     },
     {
