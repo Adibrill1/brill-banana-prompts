@@ -4981,7 +4981,7 @@ function updateFavCount() {
 function toggleFavFilter() {
   showFavsOnly = !showFavsOnly;
   var btn = document.getElementById('favFilterBtn');
-  if (btn) { btn.classList.toggle('active', showFavsOnly); btn.textContent = showFavsOnly ? '← חזרה לגלריה' : '❤️ מועדפים'; }
+  if (btn) { btn.classList.toggle('active', showFavsOnly); btn.textContent = showFavsOnly ? '⬆️ חזרה לגלריה' : '❤️ מועדפים'; }
   var s = showFavsOnly ? '' : 'none';
   document.getElementById('btnSendFavs').style.display = s;
   document.getElementById('btnClearFavs').style.display = s;
@@ -5035,7 +5035,7 @@ function openShareModal() {
 function copyFavsList() {
   var cards = getFavCards();
   if (!cards.length) return;
-  var text = 'בחרתי ' + cards.length + ' מועדפים מ-Brill Banana Prompts:\n' + cards.map(function(c){
+  var text = 'בחרתי ' + cards.length + ' תמונות מ-Brill Banana Prompts:\n' + cards.map(function(c){
     var num = c.getAttribute('data-orig-num') || (c.querySelector('.num')||{}).textContent || '';
     var title = (c.querySelector('h3')||{}).textContent || '';
     return num + ' — ' + title;
@@ -5049,7 +5049,7 @@ function copyFavsList() {
 function sendFavsWhatsApp() {
   var cards = getFavCards();
   if (!cards.length) return;
-  var text = 'בחרתי ' + cards.length + ' מועדפים מ-Brill Banana Prompts:\n' + cards.map(function(c){
+  var text = 'בחרתי ' + cards.length + ' תמונות מ-Brill Banana Prompts:\n' + cards.map(function(c){
     var num = c.getAttribute('data-orig-num') || (c.querySelector('.num')||{}).textContent || '';
     var title = (c.querySelector('h3')||{}).textContent || '';
     return num + ' — ' + title;
