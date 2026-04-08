@@ -40,6 +40,8 @@ h1{text-align:center;color:#f5a623;font-size:2em;margin-bottom:6px}
 .copy-btn.ok{background:#4caf50;color:#fff}
 .edit-controls{display:none;gap:5px;margin-bottom:10px;flex-wrap:wrap;align-items:center}
 .body-edit .edit-controls{display:flex}
+.body-edit .ec-drag{display:none !important}
+#grid.reorder-mode .ec-drag{display:inline-flex !important}
 .ec-btn{border:none;border-radius:6px;padding:5px 10px;cursor:pointer;font-size:12px;font-weight:bold}
 .ec-del{background:#e53935;color:#fff}.ec-del:hover{background:#ef5350}
 .ec-img{background:#7b1fa2;color:#fff}.ec-img:hover{background:#9c27b0}
@@ -143,14 +145,14 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
   <button class="btn btn-reorder" id="reorderToggle" onclick="toggleReorderMode()" style="display:none">🔀 סדר</button>
   <button class="btn btn-add" onclick="openAddModal()">➕ הוסף</button>
   <button class="btn btn-publish" id="btnPublish" onclick="publishChanges()" disabled>🌐 פרסם שינויים</button>
+  <button class="btn btn-edit" id="waToggle" onclick="toggleWaShare()" title="שליחת מועדפים ב-WhatsApp">💬 WA</button>
 </div>
 <h1>Brill 🍌 Banana Prompts</h1>
 <p class="subtitle"><span id="subtitle-count">241</span> פרומפטים | 📋 Copy להעתקה | לחץ על תמונה לתצוגה מוגדלת</p>
 <div class="toolbar">
   <input class="search" type="search" placeholder="🔍 חפש לפי שם או תוכן..." oninput="filterCards(this.value)" autocomplete="off">
-  <button class="btn" style="background:#1a1a1a;color:#555;border:1px solid #333;font-size:12px" onclick="tryUnlock()">🔒</button>
+  <button class="btn" id="adminLockBtn" style="background:#1a1a1a;color:#555;border:1px solid #333;font-size:12px" onclick="tryUnlock()">🔒</button>
   <button class="btn btn-fav-filter" id="favFilterBtn" onclick="toggleFavFilter()">❤️ מועדפים</button>
-  <span id="favCount" style="display:none;color:#e91e63;font-size:12px;font-weight:bold;white-space:nowrap"></span>
   <button class="btn" id="btnSendFavs" style="display:none;background:#1a1a1a;color:#888;border:1px solid #333;font-size:12px" onclick="openShareModal()">📤 שלח מועדפים</button>
   <button class="btn" id="btnClearFavs" style="display:none;background:#1a1a1a;color:#888;border:1px solid #333;font-size:12px" onclick="clearFavs()">🗑️ אפס בחירה</button>
 </div>
@@ -159,6 +161,7 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
   <input type="range" id="colsSlider" class="cols-slider" min="1" max="17" value="5">
   <span class="cols-val" id="colsVal">5</span>
 </div>
+<div id="favCountRow" style="display:none;text-align:center;color:#f5a623;font-weight:bold;font-size:14px;margin-bottom:10px"></div>
 <div class="grid" id="grid">
 <div class="card" data-key="orig_0" data-search="artist painting a miniature figure of themselves create a portrait depicting the person as an artist painting a miniature figure. the person is dressed in their most iconic outfit, looking confidently directly at the camera, holding a small paintbrush in one hand. a mini version of themselves is prominently placed on a clean workbench in front of them—make the figure slightly larger to be more visible than actual scale, thus standing out more. the figure is also wearing the same iconic outfit and striking an iconic pose. the painting supplies on the workbench are minimal to avoid clutter—only two or three small bottles of paint and a spare brush, keeping the focus on the person and the figure. soft neutral white background, professional studio lighting, shallow depth of field. the composition highlights the person&#x27;s facial expression looking at the camera and the figure they are painting. the style is clean and crisp, pursuing photorealistic effects, and details of both the person and the figure need to be highly restored."><div class="edit-controls"><span class="ec-btn ec-drag">&#x22EE;&#x22EE; גרור</span><button class="ec-btn ec-del" data-action="del" data-key="orig_0">🗑️ מחק</button><button class="ec-btn ec-img" data-action="img" data-key="orig_0">🖼️ החלף</button><button class="ec-btn ec-edit" data-action="edit" data-key="orig_0">✏️ ערוך</button></div><div class="card-header"><span class="num">#241</span><span class="cat">Photography</span><button class="copy-btn" data-action="copy" data-key="orig_0">📋 Copy</button></div><h3>Artist Painting a Miniature Figure of Themselves</h3><div class="thumb-wrap" data-lb-key="orig_0"><img class="thumb" src="images/241.jpg" alt="" loading="lazy"><div class="thumb-overlay"><span>🔍 הצג תמונה</span></div></div><pre class="prompt-text">Create a portrait depicting the person as an artist painting a miniature figure. The person is dressed in their most iconic outfit, looking confidently directly at the camera, holding a small paintbrush in one hand. A mini version of themselves is prominently placed on a clean workbench in front of them—make the figure slightly larger to be more visible than actual scale, thus standing out more. The figure is also wearing the same iconic outfit and striking an iconic pose. The painting supplies on the workbench are minimal to avoid clutter—only two or three small bottles of paint and a spare brush, keeping the focus on the person and the figure. Soft neutral white background, professional studio lighting, shallow depth of field. The composition highlights the person&#x27;s facial expression looking at the camera and the figure they are painting. The style is clean and crisp, pursuing photorealistic effects, and details of both the person and the figure need to be highly restored.</pre></div>
 <div class="card" data-key="orig_1" data-search="extreme environment selfie - oil rig storm {
@@ -4487,6 +4490,8 @@ async function tryUnlock() {
     ADMIN_UNLOCKED = true;
     document.getElementById('adminBar').classList.add('open');
     document.body.classList.add('admin-open');
+    var waBtn = document.getElementById('waToggle');
+    if (waBtn) { waBtn.classList.toggle('active', shareWhatsApp); waBtn.title = shareWhatsApp ? 'WhatsApp מופעל — לחץ לכיבוי' : 'WhatsApp כבוי — לחץ להפעלה'; }
     showToast('\u2705 \u05e0\u05db\u05e0\u05e1\u05ea \u05db\u05de\u05e0\u05d4\u05dc\u05ea');
   } else {
     showToast('\u274c \u05e1\u05d9\u05e1\u05de\u05d0 \u05e9\u05d2\u05d5\u05d9\u05d4');
@@ -4507,6 +4512,7 @@ function isEmptyState(st) {
 
 // Favorites
 var ADMIN_WHATSAPP = '972523919350';
+var shareWhatsApp = localStorage.getItem('bb_share_wa') !== 'false';
 var favs = {};
 try { favs = JSON.parse(localStorage.getItem('bb_favs') || '{}'); } catch(e) {}
 var showFavsOnly = false;
@@ -4693,17 +4699,9 @@ function autoScroll(clientY) {
 }
 
 document.addEventListener('pointerdown', function(e) {
-  if (!editMode) return;
-  var card = null;
-  if (reorderMode) {
-    // In reorder mode: drag from anywhere on the card (except action buttons)
-    if (e.target.closest('button') || e.target.closest('.modal-bg')) return;
-    card = e.target.closest('.card');
-  } else {
-    var handle = e.target.closest('.ec-drag');
-    if (!handle) return;
-    card = handle.closest('.card');
-  }
+  if (!editMode || !reorderMode) return;
+  if (e.target.closest('button') || e.target.closest('.modal-bg')) return;
+  var card = e.target.closest('.card');
   if (!card) return;
   e.preventDefault();
   pDragEl = card;
@@ -4977,8 +4975,8 @@ function initFavBtns() {
 }
 function updateFavCount() {
   var count = Object.keys(favs).length;
-  var el = document.getElementById('favCount');
-  if (el) { el.style.display = showFavsOnly && count > 0 ? '' : 'none'; el.textContent = count + ' כרטיסים נבחרו'; }
+  var row = document.getElementById('favCountRow');
+  if (row) { row.style.display = showFavsOnly ? '' : 'none'; row.textContent = count + ' תמונות נבחרו'; }
 }
 function toggleFavFilter() {
   showFavsOnly = !showFavsOnly;
@@ -4987,8 +4985,16 @@ function toggleFavFilter() {
   var s = showFavsOnly ? '' : 'none';
   document.getElementById('btnSendFavs').style.display = s;
   document.getElementById('btnClearFavs').style.display = s;
+  document.querySelector('.search').style.display = showFavsOnly ? 'none' : '';
+  document.getElementById('adminLockBtn').style.display = showFavsOnly ? 'none' : '';
   updateFavCount();
   filterCards(document.querySelector('.search').value);
+}
+function toggleWaShare() {
+  shareWhatsApp = !shareWhatsApp;
+  localStorage.setItem('bb_share_wa', shareWhatsApp);
+  var btn = document.getElementById('waToggle');
+  if (btn) { btn.classList.toggle('active', shareWhatsApp); btn.title = shareWhatsApp ? 'WhatsApp מופעל — לחץ לכיבוי' : 'WhatsApp כבוי — לחץ להפעלה'; }
 }
 function clearFavs() {
   var count = Object.keys(favs).length;
@@ -5023,6 +5029,7 @@ function openShareModal() {
       list.appendChild(li);
     });
   }
+  document.getElementById('btnWA').style.display = shareWhatsApp ? '' : 'none';
   openModal('shareModal');
 }
 function copyFavsList() {
