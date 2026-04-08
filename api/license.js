@@ -1,23 +1,25 @@
 const https = require('https');
 
+const owner = 'Adibrill1';
+const repo  = 'brill-banana-prompts';
+
 function setCORS(res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 }
 
-function lemonValidate(licenseKey) {
+function ghGet(token, filePath) {
   return new Promise(function(resolve) {
-    var body = JSON.stringify({ license_key: licenseKey });
     var opts = {
-      hostname: 'api.lemonsqueezy.com',
+      hostname: 'api.github.com',
       port: 443,
-      path: '/v1/licenses/validate',
-      method: 'POST',
+      path: '/repos/' + owner + '/' + repo + '/contents/' + filePath,
+      method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'Content-Length': Buffer.byteLength(body)
+        'Authorization': 'token ' + token,
+        'User-Agent': 'brill-banana/1.0',
+        'Accept': 'application/vnd.github.v3+json'
       }
     };
     var req = https.request(opts, function(r) {
@@ -28,8 +30,8 @@ function lemonValidate(licenseKey) {
         catch(e) { resolve({ status: r.statusCode, data: {} }); }
       });
     });
-    req.on('error', function(e) { resolve({ status: 500, data: { error: e.message } }); });
-    req.write(body);
+    req.setTimeout(8000, function() { req.destroy(); resolve({ status: 0, data: {} }); });
+    req.on('error', function() { resolve({ status: 0, data: {} }); });
     req.end();
   });
 }
@@ -45,16 +47,22 @@ module.exports = async function handler(req, res) {
     return;
   }
 
-  try {
-    var result = await lemonValidate(license_key);
-    var data = result.data;
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) { res.status(500).json({ valid: false, error: 'Server config error' }); return; }
 
-    // Lemon Squeezy returns { valid: true, license_key: {...}, meta: {...} } on success
-    if (result.status === 200 && data.valid === true) {
-      res.status(200).json({ valid: true });
+  try {
+    var result = await ghGet(token, 'keys.json');
+    if (result.status !== 200 || !result.data.content) {
+      res.status(500).json({ valid: false, error: 'Could not load keys' });
+      return;
+    }
+    var keysData = JSON.parse(Buffer.from(result.data.content, 'base64').toString('utf8'));
+    var keys = keysData.keys || {};
+
+    if (keys[license_key]) {
+      res.status(200).json({ valid: true, name: keys[license_key].name || '' });
     } else {
-      var errMsg = (data && data.error) ? data.error : 'Invalid license key';
-      res.status(200).json({ valid: false, error: errMsg });
+      res.status(200).json({ valid: false, error: 'מפתח לא תקין' });
     }
   } catch(e) {
     res.status(500).json({ valid: false, error: 'Server error' });
