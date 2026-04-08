@@ -4981,7 +4981,7 @@ function updateFavCount() {
 function toggleFavFilter() {
   showFavsOnly = !showFavsOnly;
   var btn = document.getElementById('favFilterBtn');
-  if (btn) { btn.classList.toggle('active', showFavsOnly); btn.textContent = showFavsOnly ? '⬆️ חזרה לגלריה' : '❤️ מועדפים'; }
+  if (btn) { btn.classList.toggle('active', showFavsOnly); btn.innerHTML = showFavsOnly ? '<span style="color:#f5a623">⬆</span> חזרה לגלריה' : '❤️ מועדפים'; }
   var s = showFavsOnly ? '' : 'none';
   document.getElementById('btnSendFavs').style.display = s;
   document.getElementById('btnClearFavs').style.display = s;
@@ -5020,7 +5020,7 @@ function openShareModal() {
     if (countEl) countEl.textContent = '';
     list.innerHTML='<li style="color:#666">אין מועדפים עדיין — לחצי על 🤍 בכרטיסים שאהבת</li>';
   } else {
-    if (countEl) countEl.textContent = 'בחרת ' + cards.length + ' כרטיסים';
+    if (countEl) countEl.textContent = 'בחרת ' + cards.length + ' תמונות';
     cards.forEach(function(c){
       var num = c.getAttribute('data-orig-num') || (c.querySelector('.num')||{}).textContent || '';
       var title = (c.querySelector('h3')||{}).textContent || '';
