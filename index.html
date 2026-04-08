@@ -150,7 +150,9 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
   <input class="search" type="search" placeholder="🔍 חפש לפי שם או תוכן..." oninput="filterCards(this.value)" autocomplete="off">
   <button class="btn" style="background:#1a1a1a;color:#555;border:1px solid #333;font-size:12px" onclick="tryUnlock()">🔒</button>
   <button class="btn btn-fav-filter" id="favFilterBtn" onclick="toggleFavFilter()">❤️ מועדפים</button>
-  <button class="btn" style="background:#1a1a1a;color:#888;border:1px solid #333;font-size:12px" onclick="openShareModal()">📤 שלח מועדפים</button>
+  <span id="favCount" style="display:none;color:#e91e63;font-size:12px;font-weight:bold;white-space:nowrap"></span>
+  <button class="btn" id="btnSendFavs" style="display:none;background:#1a1a1a;color:#888;border:1px solid #333;font-size:12px" onclick="openShareModal()">📤 שלח מועדפים</button>
+  <button class="btn" id="btnClearFavs" style="display:none;background:#1a1a1a;color:#888;border:1px solid #333;font-size:12px" onclick="clearFavs()">🗑️ אפס בחירה</button>
 </div>
 <div class="cols-control">
   <span class="cols-label">מספר תמונות בשורה:</span>
@@ -4449,6 +4451,7 @@ set the scene indoors if possible</pre></div>
 <div class="modal-bg" id="shareModal">
   <div class="modal">
     <h2>❤️ המועדפים שלי</h2>
+    <p id="shareCount" style="color:#e91e63;font-size:13px;margin-bottom:4px"></p>
     <ul class="share-modal-list" id="shareList"></ul>
     <div class="modal-footer" style="flex-wrap:wrap;gap:8px">
       <button class="btn btn-cancel" onclick="closeModal('shareModal')">סגור</button>
@@ -4959,6 +4962,7 @@ function makeFavBtn(key) {
       btn.classList.toggle('fav-on', !!favs[key]);
       btn.textContent = favs[key] ? '❤️' : '🤍';
     });
+    updateFavCount();
     if (showFavsOnly) filterCards(document.querySelector('.search').value);
   });
   return b;
@@ -4971,10 +4975,29 @@ function initFavBtns() {
     if (header) header.appendChild(makeFavBtn(key));
   });
 }
+function updateFavCount() {
+  var count = Object.keys(favs).length;
+  var el = document.getElementById('favCount');
+  if (el) { el.style.display = showFavsOnly && count > 0 ? '' : 'none'; el.textContent = count + ' כרטיסים נבחרו'; }
+}
 function toggleFavFilter() {
   showFavsOnly = !showFavsOnly;
   var btn = document.getElementById('favFilterBtn');
-  if (btn) btn.classList.toggle('active', showFavsOnly);
+  if (btn) { btn.classList.toggle('active', showFavsOnly); btn.textContent = showFavsOnly ? '← חזרה לגלריה' : '❤️ מועדפים'; }
+  var s = showFavsOnly ? '' : 'none';
+  document.getElementById('btnSendFavs').style.display = s;
+  document.getElementById('btnClearFavs').style.display = s;
+  updateFavCount();
+  filterCards(document.querySelector('.search').value);
+}
+function clearFavs() {
+  var count = Object.keys(favs).length;
+  if (!count) return;
+  if (!confirm('האם למחוק את כל ' + count + ' המועדפים שלך?')) return;
+  favs = {};
+  localStorage.setItem('bb_favs', JSON.stringify(favs));
+  document.querySelectorAll('.fav-btn').forEach(function(b){ b.classList.remove('fav-on'); b.textContent = '🤍'; });
+  updateFavCount();
   filterCards(document.querySelector('.search').value);
 }
 function getFavCards() {
@@ -4985,21 +5008,27 @@ function getFavCards() {
 function openShareModal() {
   var cards = getFavCards();
   var list = document.getElementById('shareList');
+  var countEl = document.getElementById('shareCount');
   list.innerHTML = '';
-  if (!cards.length) { list.innerHTML='<li style="color:#666">אין מועדפים עדיין — לחצי על 🤍 בכרטיסים שאהבת</li>'; }
-  else { cards.forEach(function(c){
-    var num = c.getAttribute('data-orig-num') || (c.querySelector('.num')||{}).textContent || '';
-    var title = (c.querySelector('h3')||{}).textContent || '';
-    var li = document.createElement('li');
-    li.textContent = num + ' — ' + title;
-    list.appendChild(li);
-  }); }
+  if (!cards.length) {
+    if (countEl) countEl.textContent = '';
+    list.innerHTML='<li style="color:#666">אין מועדפים עדיין — לחצי על 🤍 בכרטיסים שאהבת</li>';
+  } else {
+    if (countEl) countEl.textContent = 'בחרת ' + cards.length + ' כרטיסים';
+    cards.forEach(function(c){
+      var num = c.getAttribute('data-orig-num') || (c.querySelector('.num')||{}).textContent || '';
+      var title = (c.querySelector('h3')||{}).textContent || '';
+      var li = document.createElement('li');
+      li.textContent = num + ' — ' + title;
+      list.appendChild(li);
+    });
+  }
   openModal('shareModal');
 }
 function copyFavsList() {
   var cards = getFavCards();
   if (!cards.length) return;
-  var text = 'המועדפים שלי מ-Brill Banana Prompts:\n' + cards.map(function(c){
+  var text = 'בחרתי ' + cards.length + ' מועדפים מ-Brill Banana Prompts:\n' + cards.map(function(c){
     var num = c.getAttribute('data-orig-num') || (c.querySelector('.num')||{}).textContent || '';
     var title = (c.querySelector('h3')||{}).textContent || '';
     return num + ' — ' + title;
@@ -5013,7 +5042,7 @@ function copyFavsList() {
 function sendFavsWhatsApp() {
   var cards = getFavCards();
   if (!cards.length) return;
-  var text = 'המועדפים שלי מ-Brill Banana Prompts:\n' + cards.map(function(c){
+  var text = 'בחרתי ' + cards.length + ' מועדפים מ-Brill Banana Prompts:\n' + cards.map(function(c){
     var num = c.getAttribute('data-orig-num') || (c.querySelector('.num')||{}).textContent || '';
     var title = (c.querySelector('h3')||{}).textContent || '';
     return num + ' — ' + title;
