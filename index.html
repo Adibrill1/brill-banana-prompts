@@ -197,6 +197,15 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
 .license-divider::before,.license-divider::after{content:'';position:absolute;top:50%;width:42%;height:1px;background:var(--border2)}
 .license-divider::before{left:0}.license-divider::after{right:0}
 .license-expiry{font-size:11px;color:#4caf50;margin-top:4px}
+.keys-list{list-style:none;max-height:260px;overflow-y:auto;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:8px;margin:12px 0}
+.keys-list li{display:flex;align-items:center;justify-content:space-between;padding:6px 4px;border-bottom:1px solid var(--border3);font-size:13px;gap:8px}
+.keys-list li:last-child{border-bottom:none}
+.key-val{font-family:'Consolas','Courier New',monospace;color:#f5a623;font-size:12px;flex:1}
+.key-name{color:var(--text2);font-size:12px;min-width:80px}
+.key-del{background:#e53935;color:#fff;border:none;border-radius:5px;padding:3px 9px;cursor:pointer;font-size:11px;white-space:nowrap}
+.key-del:hover{background:#ef5350}
+.keys-add-row{display:flex;gap:6px;flex-wrap:wrap}
+.keys-add-row input{flex:1;min-width:80px}
 </style>
 </head>
 <body>
@@ -208,6 +217,7 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
   <button class="btn btn-add" onclick="openAddModal()">➕ הוסף</button>
   <button class="btn btn-publish" id="btnPublish" onclick="publishChanges()" disabled>🌐 פרסם שינויים</button>
   <button class="btn btn-edit" id="waToggle" onclick="toggleWaShare()" title="שליחת מועדפים ב-WhatsApp">💬 WA</button>
+  <button class="btn btn-edit" onclick="openKeysModal()">🔑 ססמאות</button>
   <span class="free-counter" id="freeCounter">🆓 0/50</span>
 </div>
 <h1>Brill 🍌 Banana Prompts</h1>
@@ -4516,6 +4526,22 @@ set the scene indoors if possible</pre></div>
     </div>
   </div>
 </div>
+<div class="modal-bg" id="keysModal">
+  <div class="modal" style="max-width:500px">
+    <h2>🔑 ניהול ססמאות גישה</h2>
+    <ul class="keys-list" id="keysList"><li style="color:var(--text4);text-align:center">טוען...</li></ul>
+    <p style="color:var(--text2);font-size:12px;margin-bottom:8px">הוסף ססמא חדשה:</p>
+    <div class="keys-add-row">
+      <input type="text" id="newKeyVal" placeholder="ססמא (לדוגמה: BB-2024-SARAH)" style="direction:ltr">
+      <input type="text" id="newKeyName" placeholder="שם הלקוח">
+      <button class="btn btn-ok" onclick="addKey()">➕ הוסף</button>
+    </div>
+    <p id="keysError" style="display:none;color:#e53935;font-size:12px;margin-top:6px"></p>
+    <div class="modal-footer">
+      <button class="btn btn-cancel" onclick="closeModal('keysModal')">סגור</button>
+    </div>
+  </div>
+</div>
 <div class="modal-bg" id="licenseModal">
   <div class="modal" style="max-width:460px">
     <h2 id="licenseModalTitle">🍌 Unlock Full Prompt Access</h2>
@@ -4542,7 +4568,7 @@ set the scene indoors if possible</pre></div>
         <li>פרומפטים חדשים נוספים באופן שוטף</li>
         <li>תוקף ל-12 חודשים</li>
       </ul>
-      <a id="buyBtn" href="#" target="_blank" class="buy-btn">🛒 Buy Annual Access — 59 ₪</a>
+      <a id="buyBtn" href="#" target="_blank" class="buy-btn">💬 שלחי הודעה לרכישה — 59 ₪</a>
       <div class="modal-footer" style="margin-top:16px">
         <button class="btn btn-cancel" onclick="closeModal('licenseModal')">סגור</button>
       </div>
@@ -4553,7 +4579,7 @@ set the scene indoors if possible</pre></div>
   <div class="modal" style="max-width:420px">
     <h2>🔒 פרומפט פרימיום</h2>
     <p style="color:var(--text2);font-size:13px;margin:12px 0">כדי לראות את הפרומפט המלא ולהעתיק אותו, נדרשת גישת פרימיום.</p>
-    <a id="unlockBuyBtn" href="#" target="_blank" class="buy-btn">🛒 Buy Annual Access — 59 ₪</a>
+    <a id="unlockBuyBtn" href="#" target="_blank" class="buy-btn">💬 שלחי הודעה לרכישה — 59 ₪</a>
     <div class="license-divider" style="margin:14px 0">יש לך מפתח?</div>
     <div style="display:flex;gap:8px">
       <input type="text" id="unlockKeyInput" placeholder="הזן מפתח גישה..." style="flex:1;direction:ltr">
@@ -4624,9 +4650,92 @@ function isEmptyState(st) {
   return !st || ((!st.deleted||!st.deleted.length) && (!st.added||!st.added.length) && (!st.order||!st.order.length) && (!st.customImgs||!Object.keys(st.customImgs).length) && (!st.promptEdits||!Object.keys(st.promptEdits).length) && (!st.freePrompts||!Object.keys(st.freePrompts).length));
 }
 
+// ── Keys Management ──────────────────────────────────────
+var _adminToken = null;
+
+async function openKeysModal() {
+  if (!ADMIN_UNLOCKED) return;
+  if (!_adminToken) {
+    _adminToken = prompt('הזן את ה-Admin Token (מה-Vercel env):');
+    if (!_adminToken) return;
+  }
+  document.getElementById('keysError').style.display = 'none';
+  openModal('keysModal');
+  await loadKeys();
+}
+
+async function loadKeys() {
+  var list = document.getElementById('keysList');
+  list.innerHTML = '<li style="color:var(--text4);text-align:center">טוען...</li>';
+  try {
+    var r = await fetch('/api/keys', { headers: { 'X-Admin-Token': _adminToken } });
+    if (r.status === 401) { _adminToken = null; closeModal('keysModal'); showToast('❌ Token שגוי'); return; }
+    var data = await r.json();
+    renderKeysList(data.keys || {});
+  } catch(e) {
+    list.innerHTML = '<li style="color:#e53935">שגיאת חיבור</li>';
+  }
+}
+
+function renderKeysList(keys) {
+  var list = document.getElementById('keysList');
+  var entries = Object.entries(keys);
+  if (!entries.length) {
+    list.innerHTML = '<li style="color:var(--text4);text-align:center">אין ססמאות עדיין</li>';
+    return;
+  }
+  list.innerHTML = '';
+  entries.forEach(function(entry) {
+    var k = entry[0], v = entry[1];
+    var li = document.createElement('li');
+    li.innerHTML = '<span class="key-name">' + escHtml(v.name || '—') + '</span>'
+      + '<span class="key-val">' + escHtml(k) + '</span>'
+      + '<button class="key-del" onclick="deleteKey(\'' + escHtml(k) + '\')">🗑️ מחק</button>';
+    list.appendChild(li);
+  });
+}
+
+async function addKey() {
+  var keyVal  = document.getElementById('newKeyVal').value.trim();
+  var keyName = document.getElementById('newKeyName').value.trim();
+  var errEl   = document.getElementById('keysError');
+  if (!keyVal) { errEl.textContent = 'יש להזין ססמא'; errEl.style.display = ''; return; }
+  errEl.style.display = 'none';
+  try {
+    var r = await fetch('/api/keys', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Admin-Token': _adminToken },
+      body: JSON.stringify({ key: keyVal, name: keyName })
+    });
+    var data = await r.json();
+    if (r.ok) {
+      document.getElementById('newKeyVal').value = '';
+      document.getElementById('newKeyName').value = '';
+      renderKeysList(data.keys || {});
+      showToast('✅ ססמא נוספה');
+    } else {
+      errEl.textContent = data.error || 'שגיאה'; errEl.style.display = '';
+    }
+  } catch(e) { errEl.textContent = 'שגיאת חיבור'; errEl.style.display = ''; }
+}
+
+async function deleteKey(key) {
+  if (!confirm('למחוק ססמא: ' + key + '?')) return;
+  try {
+    var r = await fetch('/api/keys', {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json', 'X-Admin-Token': _adminToken },
+      body: JSON.stringify({ key: key })
+    });
+    var data = await r.json();
+    if (r.ok) { renderKeysList(data.keys || {}); showToast('🗑️ ססמא נמחקה'); }
+    else showToast('❌ ' + (data.error || 'שגיאה'));
+  } catch(e) { showToast('❌ שגיאת חיבור'); }
+}
+// ─────────────────────────────────────────────────────────
+
 // ── Paywall ──────────────────────────────────────────────
-var LEMON_SQUEEZY_URL = 'https://brillbanana.lemonsqueezy.com/buy/YOUR_PRODUCT_ID'; // ← עדכני אחרי הגדרת המוצר
-var LEMON_SQUEEZY_API = 'https://api.lemonsqueezy.com/v1/licenses/validate';
+var PURCHASE_WA_URL = 'https://wa.me/972523919350?text=' + encodeURIComponent('היי! אני רוצה לרכוש גישה מלאה ל-Brill Banana Prompts 🍌');
 
 function isPremiumUser() {
   try {
@@ -4671,14 +4780,14 @@ function openLicenseModal() {
   }
   document.getElementById('licenseError').style.display = 'none';
   document.getElementById('licenseKeyInput').value = '';
-  document.getElementById('buyBtn').href = LEMON_SQUEEZY_URL;
+  document.getElementById('buyBtn').href = PURCHASE_WA_URL;
   openModal('licenseModal');
 }
 
 function openUnlockModal() {
   document.getElementById('unlockError').style.display = 'none';
   document.getElementById('unlockKeyInput').value = '';
-  document.getElementById('unlockBuyBtn').href = LEMON_SQUEEZY_URL;
+  document.getElementById('unlockBuyBtn').href = PURCHASE_WA_URL;
   openModal('unlockModal');
 }
 
