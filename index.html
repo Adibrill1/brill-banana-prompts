@@ -4555,6 +4555,7 @@ set the scene indoors if possible</pre></div>
     <div class="keys-add-row">
       <input type="text" id="newKeyVal" placeholder="ססמא (לדוגמה: BB-2024-SARAH)" style="direction:ltr">
       <input type="text" id="newKeyName" placeholder="שם הלקוח">
+      <input type="number" id="newKeyMonths" placeholder="חודשים (ריק = לנצח)" min="1" max="120" style="width:80px">
       <button class="btn btn-ok" onclick="addKey()">➕ הוסף</button>
     </div>
     <p id="keysError" style="display:none;color:#e53935;font-size:12px;margin-top:6px"></p>
@@ -4712,29 +4713,48 @@ function renderKeysList(keys) {
     var li = document.createElement('li');
     li.setAttribute('data-key-val', k);
     li.setAttribute('data-key-name', v.name || '');
-    li.innerHTML = '<span class="key-name">' + escHtml(v.name || '—') + '</span>'
+    var now = new Date();
+    var expired = v.expiresAt && new Date(v.expiresAt) < now;
+    var expiryStr = v.expiresAt
+      ? (expired ? '⚠️ פג: ' : '⏳ עד: ') + new Date(v.expiresAt).toLocaleDateString('he-IL')
+      : '♾️ לנצח';
+    var lastUsedStr = v.lastUsed
+      ? '👁️ ' + new Date(v.lastUsed).toLocaleDateString('he-IL')
+      : '👁️ טרם נוצל';
+    li.innerHTML = '<div style="flex:1;min-width:0">'
+      + '<div style="display:flex;gap:8px;align-items:center">'
+      + '<span class="key-name">' + escHtml(v.name || '—') + '</span>'
       + '<span class="key-val">' + escHtml(k) + '</span>'
+      + '</div>'
+      + '<div style="display:flex;gap:12px;margin-top:3px;font-size:11px;color:var(--text4)">'
+      + '<span style="' + (expired ? 'color:#e53935' : '') + '">' + expiryStr + '</span>'
+      + '<span>' + lastUsedStr + '</span>'
+      + '</div></div>'
       + '<button class="key-del" onclick="deleteKey(\'' + escHtml(k) + '\')">🗑️ מחק</button>';
     list.appendChild(li);
   });
 }
 
 async function addKey() {
-  var keyVal  = document.getElementById('newKeyVal').value.trim();
-  var keyName = document.getElementById('newKeyName').value.trim();
-  var errEl   = document.getElementById('keysError');
+  var keyVal    = document.getElementById('newKeyVal').value.trim();
+  var keyName   = document.getElementById('newKeyName').value.trim();
+  var keyMonths = parseInt(document.getElementById('newKeyMonths').value) || 0;
+  var errEl     = document.getElementById('keysError');
   if (!keyVal) { errEl.textContent = 'יש להזין ססמא'; errEl.style.display = ''; return; }
   errEl.style.display = 'none';
   try {
+    var body = { key: keyVal, name: keyName };
+    if (keyMonths > 0) body.months = keyMonths;
     var r = await fetch('/api/keys', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'X-Admin-Token': _adminToken },
-      body: JSON.stringify({ key: keyVal, name: keyName })
+      body: JSON.stringify(body)
     });
     var data = await r.json();
     if (r.ok) {
       document.getElementById('newKeyVal').value = '';
       document.getElementById('newKeyName').value = '';
+      document.getElementById('newKeyMonths').value = '';
       renderKeysList(data.keys || {});
       showToast('✅ ססמא נוספה');
     } else {
