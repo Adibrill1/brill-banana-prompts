@@ -171,6 +171,32 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
 .share-modal-list li{padding:4px 0;border-bottom:1px solid #222;font-size:12px;color:#bbb}
 .share-modal-list li:last-child{border-bottom:none}
 .btn-wa{background:#25d366;color:#fff}.btn-wa:hover{background:#1ebe5d}
+/* Paywall */
+.prompt-wrap{position:relative;overflow:hidden;margin-bottom:0}
+.card.locked-prompt .prompt-wrap::after{content:'';position:absolute;bottom:0;left:0;right:0;height:55px;background:linear-gradient(to bottom,transparent,var(--card-bg) 90%);pointer-events:none}
+.card.locked-prompt .prompt-text{max-height:55px;overflow:hidden;margin-bottom:0}
+.card.locked-prompt .copy-btn{display:none !important}
+.unlock-btn{width:100%;padding:10px 16px;background:linear-gradient(135deg,#f5a623,#f97316);color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:bold;cursor:pointer;margin-top:8px;display:none;transition:opacity .15s}
+.unlock-btn:hover{opacity:.85}
+.card.locked-prompt .unlock-btn{display:block}
+.free-badge{position:absolute;top:8px;left:8px;background:#4caf50;color:#fff;padding:2px 7px;border-radius:6px;font-size:10px;font-weight:700;z-index:2;pointer-events:none;letter-spacing:.3px}
+.ec-free{background:#4caf50;color:#fff}.ec-free:hover{background:#66bb6a}
+.ec-free.is-premium{background:#f5a623;color:#000}.ec-free.is-premium:hover{background:#ffc04d}
+.free-counter{color:#4caf50;font-size:12px;font-weight:bold;white-space:nowrap;display:none}
+.free-counter.at-limit{color:#e53935}
+.body-edit .free-counter{display:inline}
+.btn-license{background:var(--bg2);color:#f5a623;border:1px solid #f5a623;font-size:12px}
+.btn-license:hover{background:#f5a623;color:#000}
+.btn-license.active{background:linear-gradient(135deg,#f5a623,#f97316);color:#000;border-color:#f97316}
+.license-benefits{list-style:none;margin:12px 0;padding:0}
+.license-benefits li{padding:4px 0;color:var(--text2);font-size:13px}
+.license-benefits li::before{content:'✓ ';color:#4caf50;font-weight:bold}
+.buy-btn{display:block;width:100%;padding:13px;background:linear-gradient(135deg,#f5a623,#f97316);color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:bold;cursor:pointer;text-align:center;text-decoration:none;margin-top:8px;transition:opacity .15s}
+.buy-btn:hover{opacity:.88}
+.license-divider{text-align:center;color:var(--text4);margin:16px 0;font-size:12px;position:relative}
+.license-divider::before,.license-divider::after{content:'';position:absolute;top:50%;width:42%;height:1px;background:var(--border2)}
+.license-divider::before{left:0}.license-divider::after{right:0}
+.license-expiry{font-size:11px;color:#4caf50;margin-top:4px}
 </style>
 </head>
 <body>
@@ -182,11 +208,13 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
   <button class="btn btn-add" onclick="openAddModal()">➕ הוסף</button>
   <button class="btn btn-publish" id="btnPublish" onclick="publishChanges()" disabled>🌐 פרסם שינויים</button>
   <button class="btn btn-edit" id="waToggle" onclick="toggleWaShare()" title="שליחת מועדפים ב-WhatsApp">💬 WA</button>
+  <span class="free-counter" id="freeCounter">🆓 0/50</span>
 </div>
 <h1>Brill 🍌 Banana Prompts</h1>
 <p class="subtitle"><span id="subtitle-count">241</span> פרומפטים | 📋 Copy להעתקה | לחץ על תמונה לתצוגה מוגדלת</p>
 <div class="toolbar">
   <input class="search" type="search" placeholder="🔍 חפש לפי שם או תוכן..." oninput="filterCards(this.value)" autocomplete="off">
+  <button class="btn btn-license" id="licenseBtn" onclick="openLicenseModal()">🔑 Activate</button>
   <button class="btn btn-theme" id="themeBtn" onclick="toggleTheme()" title="מצב לילה/יום">🌙</button>
   <button class="btn" id="adminLockBtn" style="background:var(--bg2);color:var(--text4);border:1px solid var(--border2);font-size:12px" onclick="tryUnlock()">🔒</button>
   <button class="btn btn-fav-filter" id="favFilterBtn" onclick="toggleFavFilter()">❤️ מועדפים</button>
@@ -4488,6 +4516,55 @@ set the scene indoors if possible</pre></div>
     </div>
   </div>
 </div>
+<div class="modal-bg" id="licenseModal">
+  <div class="modal" style="max-width:460px">
+    <h2 id="licenseModalTitle">🍌 Unlock Full Prompt Access</h2>
+    <div id="licenseActiveInfo" style="display:none">
+      <p style="color:#4caf50;font-size:14px;margin-bottom:8px">✅ Premium Active</p>
+      <p class="license-expiry" id="licenseExpiry"></p>
+      <div class="modal-footer">
+        <button class="btn btn-cancel" onclick="closeModal('licenseModal')">סגור</button>
+        <button class="btn" style="background:#e53935;color:#fff" onclick="deactivateLicense()">🗑️ הסר רישיון</button>
+      </div>
+    </div>
+    <div id="licenseInactiveInfo">
+      <label style="margin-top:0">יש לך מפתח גישה?</label>
+      <div style="display:flex;gap:8px;margin-bottom:4px">
+        <input type="text" id="licenseKeyInput" placeholder="הזן מפתח כאן..." style="flex:1;direction:ltr">
+        <button class="btn btn-ok" onclick="activateLicenseKey()">✅ הפעל</button>
+      </div>
+      <p id="licenseError" style="display:none;color:#e53935;font-size:12px;margin-top:4px"></p>
+      <div class="license-divider">or</div>
+      <p style="color:var(--text2);font-size:13px;margin-bottom:8px;font-weight:bold">גישה מלאה לשנה — 59 ₪</p>
+      <ul class="license-benefits">
+        <li>גישה מלאה לכל הפרומפטים</li>
+        <li>העתקה בלחיצה אחת</li>
+        <li>פרומפטים חדשים נוספים באופן שוטף</li>
+        <li>תוקף ל-12 חודשים</li>
+      </ul>
+      <a id="buyBtn" href="#" target="_blank" class="buy-btn">🛒 Buy Annual Access — 59 ₪</a>
+      <div class="modal-footer" style="margin-top:16px">
+        <button class="btn btn-cancel" onclick="closeModal('licenseModal')">סגור</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-bg" id="unlockModal">
+  <div class="modal" style="max-width:420px">
+    <h2>🔒 פרומפט פרימיום</h2>
+    <p style="color:var(--text2);font-size:13px;margin:12px 0">כדי לראות את הפרומפט המלא ולהעתיק אותו, נדרשת גישת פרימיום.</p>
+    <a id="unlockBuyBtn" href="#" target="_blank" class="buy-btn">🛒 Buy Annual Access — 59 ₪</a>
+    <div class="license-divider" style="margin:14px 0">יש לך מפתח?</div>
+    <div style="display:flex;gap:8px">
+      <input type="text" id="unlockKeyInput" placeholder="הזן מפתח גישה..." style="flex:1;direction:ltr">
+      <button class="btn btn-ok" onclick="activateLicenseKey('unlockKeyInput')">✅ הפעל</button>
+    </div>
+    <p id="unlockError" style="display:none;color:#e53935;font-size:12px;margin-top:4px"></p>
+    <div class="modal-footer">
+      <button class="btn btn-cancel" onclick="closeModal('unlockModal')">סגור</button>
+    </div>
+  </div>
+</div>
 <div class="modal-bg" id="shareModal">
   <div class="modal">
     <h2>❤️ המועדפים שלי</h2>
@@ -4544,8 +4621,179 @@ try {
 } catch(e) {}
 
 function isEmptyState(st) {
-  return !st || ((!st.deleted||!st.deleted.length) && (!st.added||!st.added.length) && (!st.order||!st.order.length) && (!st.customImgs||!Object.keys(st.customImgs).length) && (!st.promptEdits||!Object.keys(st.promptEdits).length));
+  return !st || ((!st.deleted||!st.deleted.length) && (!st.added||!st.added.length) && (!st.order||!st.order.length) && (!st.customImgs||!Object.keys(st.customImgs).length) && (!st.promptEdits||!Object.keys(st.promptEdits).length) && (!st.freePrompts||!Object.keys(st.freePrompts).length));
 }
+
+// ── Paywall ──────────────────────────────────────────────
+var LEMON_SQUEEZY_URL = 'https://brillbanana.lemonsqueezy.com/buy/YOUR_PRODUCT_ID'; // ← עדכני אחרי הגדרת המוצר
+var LEMON_SQUEEZY_API = 'https://api.lemonsqueezy.com/v1/licenses/validate';
+
+function isPremiumUser() {
+  try {
+    var d = JSON.parse(localStorage.getItem('brill_license') || 'null');
+    if (!d) return false;
+    return new Date(d.expiresAt) > new Date();
+  } catch(e) { return false; }
+}
+
+function getLicenseExpiry() {
+  try {
+    var d = JSON.parse(localStorage.getItem('brill_license') || 'null');
+    if (!d) return null;
+    return new Date(d.expiresAt);
+  } catch(e) { return null; }
+}
+
+function shouldShowFull(key) {
+  if (isPremiumUser()) return true;
+  return !!(state.freePrompts && state.freePrompts[key]);
+}
+
+function updateLicenseBtn() {
+  var btn = document.getElementById('licenseBtn');
+  if (!btn) return;
+  if (isPremiumUser()) {
+    btn.textContent = '✅ Premium';
+    btn.classList.add('active');
+  } else {
+    btn.textContent = '🔑 Activate';
+    btn.classList.remove('active');
+  }
+}
+
+function openLicenseModal() {
+  var active = isPremiumUser();
+  document.getElementById('licenseActiveInfo').style.display = active ? '' : 'none';
+  document.getElementById('licenseInactiveInfo').style.display = active ? 'none' : '';
+  if (active) {
+    var exp = getLicenseExpiry();
+    document.getElementById('licenseExpiry').textContent = exp ? 'תוקף עד: ' + exp.toLocaleDateString('he-IL') : '';
+  }
+  document.getElementById('licenseError').style.display = 'none';
+  document.getElementById('licenseKeyInput').value = '';
+  document.getElementById('buyBtn').href = LEMON_SQUEEZY_URL;
+  openModal('licenseModal');
+}
+
+function openUnlockModal() {
+  document.getElementById('unlockError').style.display = 'none';
+  document.getElementById('unlockKeyInput').value = '';
+  document.getElementById('unlockBuyBtn').href = LEMON_SQUEEZY_URL;
+  openModal('unlockModal');
+}
+
+async function activateLicenseKey(inputId) {
+  inputId = inputId || 'licenseKeyInput';
+  var key = document.getElementById(inputId).value.trim();
+  var errEl = document.getElementById(inputId === 'licenseKeyInput' ? 'licenseError' : 'unlockError');
+  if (!key) { errEl.textContent = 'יש להזין מפתח'; errEl.style.display = ''; return; }
+  errEl.style.display = 'none';
+
+  try {
+    var r = await fetch('/api/license', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({license_key: key})
+    });
+    var data = await r.json();
+    if (data.valid) {
+      var licenseData = {
+        key: key,
+        activatedAt: new Date().toISOString(),
+        expiresAt: new Date(Date.now() + 365*24*60*60*1000).toISOString()
+      };
+      localStorage.setItem('brill_license', JSON.stringify(licenseData));
+      closeModal('licenseModal');
+      closeModal('unlockModal');
+      updateLicenseBtn();
+      applyPaywallToAll();
+      showToast('🎉 גישת פרימיום הופעלה!');
+    } else {
+      errEl.textContent = data.error || 'מפתח לא תקין';
+      errEl.style.display = '';
+    }
+  } catch(e) {
+    errEl.textContent = 'שגיאת חיבור — נסי שוב';
+    errEl.style.display = '';
+  }
+}
+
+function deactivateLicense() {
+  if (!confirm('להסיר את הרישיון מהמכשיר הזה?')) return;
+  localStorage.removeItem('brill_license');
+  closeModal('licenseModal');
+  updateLicenseBtn();
+  applyPaywallToAll();
+  showToast('הרישיון הוסר');
+}
+
+function applyPaywallToAll() {
+  document.querySelectorAll('.card').forEach(function(card) {
+    var key = card.getAttribute('data-key');
+    applyPaywallToCard(card, key);
+  });
+}
+
+function applyPaywallToCard(card, key) {
+  var full = shouldShowFull(key);
+  card.classList.toggle('locked-prompt', !full);
+  var unlockBtn = card.querySelector('.unlock-btn');
+  if (unlockBtn) unlockBtn.style.display = full ? 'none' : 'block';
+  // free badge
+  var isFree = !!(state.freePrompts && state.freePrompts[key]);
+  var badge = card.querySelector('.free-badge');
+  if (badge) badge.style.display = isFree ? '' : 'none';
+}
+
+function updateFreeCounter() {
+  var count = Object.keys(state.freePrompts || {}).length;
+  var el = document.getElementById('freeCounter');
+  if (!el) return;
+  el.textContent = '🆓 ' + count + '/50';
+  el.classList.toggle('at-limit', count >= 50);
+}
+
+function toggleFreeStatus(key) {
+  if (!state.freePrompts) state.freePrompts = {};
+  var count = Object.keys(state.freePrompts).length;
+  if (!state.freePrompts[key] && count >= 50) {
+    showToast('⚠️ ניתן לסמן עד 50 פרומפטים חינמיים');
+    return;
+  }
+  if (state.freePrompts[key]) delete state.freePrompts[key];
+  else state.freePrompts[key] = true;
+  // update button text
+  var card = document.querySelector('.card[data-key="'+key+'"]');
+  if (card) {
+    var btn = card.querySelector('.ec-free');
+    if (btn) {
+      btn.classList.toggle('is-premium', !!state.freePrompts[key]);
+      btn.textContent = state.freePrompts[key] ? '🔒 Set Premium' : '🆓 Set Free';
+    }
+    applyPaywallToCard(card, key);
+  }
+  updateFreeCounter();
+  markUnsaved();
+}
+
+// Auto-activate from Lemon Squeezy redirect
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  var lk = params.get('license_key');
+  if (lk) {
+    window.history.replaceState({}, '', window.location.pathname);
+    fetch('/api/license', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({license_key:lk})})
+      .then(function(r){return r.json();}).then(function(data){
+        if (data.valid) {
+          localStorage.setItem('brill_license', JSON.stringify({key:lk, activatedAt:new Date().toISOString(), expiresAt:new Date(Date.now()+365*24*60*60*1000).toISOString()}));
+          showToast('🎉 גישת פרימיום הופעלה!');
+          updateLicenseBtn();
+          applyPaywallToAll();
+        }
+      }).catch(function(){});
+  }
+})();
+// ─────────────────────────────────────────────────────────
 
 // Theme
 (function(){
@@ -4637,6 +4885,10 @@ function applyState(st) {
   updateCount();
   renumberCards();
   initFavBtns();
+  initPaywallDOM();
+  updateFreeCounter();
+  updateLicenseBtn();
+  applyPaywallToAll();
 }
 
 function markUnsaved() {
@@ -4830,10 +5082,12 @@ grid.addEventListener('click', function(e) {
   }
   var action = btn.getAttribute('data-action');
   var key    = btn.getAttribute('data-key');
-  if (action === 'copy') copyPrompt(key, btn);
-  if (action === 'del')  { if (!ADMIN_UNLOCKED) return; deleteCard(key); }
-  if (action === 'img')  { if (!ADMIN_UNLOCKED) return; openImgModal(key); }
-  if (action === 'edit') { if (!ADMIN_UNLOCKED) return; openEditModal(key); }
+  if (action === 'copy')   copyPrompt(key, btn);
+  if (action === 'unlock') openUnlockModal();
+  if (action === 'del')    { if (!ADMIN_UNLOCKED) return; deleteCard(key); }
+  if (action === 'img')    { if (!ADMIN_UNLOCKED) return; openImgModal(key); }
+  if (action === 'edit')   { if (!ADMIN_UNLOCKED) return; openEditModal(key); }
+  if (action === 'free')   { if (!ADMIN_UNLOCKED) return; toggleFreeStatus(key); }
 });
 
 function deleteCard(key) {
@@ -4855,16 +5109,21 @@ function appendCard(p) {
   el.className = 'card';
   el.setAttribute('data-key', p.key);
   el.setAttribute('data-search', ((p.title||'')+' '+(p.prompt||'')).toLowerCase());
+  var isFree = !!(state.freePrompts && state.freePrompts[p.key]);
   el.innerHTML = '<div class="edit-controls">'
     +'<span class="ec-btn ec-drag">&#x22EE;&#x22EE; \u05d2\u05e8\u05d5\u05e8</span>'
     +'<button class="ec-btn ec-del" data-action="del" data-key="'+p.key+'">\u{1F5D1}\ufe0f \u05de\u05d7\u05e7</button>'
     +'<button class="ec-btn ec-img" data-action="img" data-key="'+p.key+'">\u{1F5BC}\ufe0f \u05d4\u05d7\u05dc\u05e3</button>'
     +'<button class="ec-btn ec-edit" data-action="edit" data-key="'+p.key+'">\u270f\ufe0f \u05e2\u05e8\u05d5\u05da</button>'
-    +'</div><div class="card-header"><span class="num">#'+p.id+'</span>'
+    +'<button class="ec-btn ec-free'+(isFree?' is-premium':'')+'" data-action="free" data-key="'+p.key+'">'+(isFree?'\u{1F512} Set Premium':'\u{1F193} Set Free')+'</button>'
+    +'</div>'
+    +'<span class="free-badge" style="'+(isFree?'':'display:none')+'">\u{1F193} Free</span>'
+    +'<div class="card-header"><span class="num">#'+p.id+'</span>'
     +'<span class="cat">'+(p.cat||'')+'</span>'
     +'<button class="copy-btn" data-action="copy" data-key="'+p.key+'">\u{1F4CB} Copy</button>'
     +'</div><h3>'+escHtml(p.title)+'</h3>'+thumbHtml
-    +'<pre class="prompt-text">'+escHtml(p.prompt)+'</pre>';
+    +'<div class="prompt-wrap"><pre class="prompt-text">'+escHtml(p.prompt)+'</pre></div>'
+    +'<button class="unlock-btn" data-action="unlock">\uD83D\uDD12 Unlock Full Prompt</button>';
   if (editMode) el.setAttribute('draggable','true');
   document.getElementById('grid').appendChild(el);
   var header = el.querySelector('.card-header');
@@ -5025,6 +5284,46 @@ function initFavBtns() {
     if (!key || card.querySelector('.fav-btn')) return;
     var header = card.querySelector('.card-header');
     if (header) header.appendChild(makeFavBtn(key));
+  });
+}
+function initPaywallDOM() {
+  // Inject paywall elements into orig_ cards (baked HTML, not via appendCard)
+  document.querySelectorAll('.card[data-key^="orig_"]').forEach(function(card) {
+    var key = card.getAttribute('data-key');
+    // wrap prompt-text in prompt-wrap if not already done
+    var pre = card.querySelector('.prompt-text');
+    if (pre && !pre.parentElement.classList.contains('prompt-wrap')) {
+      var wrap = document.createElement('div');
+      wrap.className = 'prompt-wrap';
+      pre.parentNode.insertBefore(wrap, pre);
+      wrap.appendChild(pre);
+    }
+    // add unlock button if missing
+    if (!card.querySelector('.unlock-btn')) {
+      var ub = document.createElement('button');
+      ub.className = 'unlock-btn';
+      ub.setAttribute('data-action', 'unlock');
+      ub.textContent = '🔒 Unlock Full Prompt';
+      card.appendChild(ub);
+    }
+    // add free badge if missing
+    if (!card.querySelector('.free-badge')) {
+      var badge = document.createElement('span');
+      badge.className = 'free-badge';
+      badge.textContent = '🆓 Free';
+      badge.style.display = 'none';
+      card.insertBefore(badge, card.firstChild);
+    }
+    // add ec-free button in edit-controls if missing
+    var ec = card.querySelector('.edit-controls');
+    if (ec && !ec.querySelector('.ec-free')) {
+      var fb = document.createElement('button');
+      fb.className = 'ec-btn ec-free';
+      fb.setAttribute('data-action', 'free');
+      fb.setAttribute('data-key', key);
+      fb.textContent = '🆓 Set Free';
+      ec.appendChild(fb);
+    }
   });
 }
 function updateFavCount() {
