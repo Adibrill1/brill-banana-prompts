@@ -199,7 +199,20 @@
     "added_imp_0168",
     "added_imp_0175",
     "added_imp_0176",
-    "added_imp_0179"
+    "added_imp_0179",
+    "added_imp_0181",
+    "added_imp_0183",
+    "added_imp_0186",
+    "added_imp_0185",
+    "added_imp_0188",
+    "added_imp_0189",
+    "added_imp_0191",
+    "added_imp_0190",
+    "added_imp_0193",
+    "added_imp_0194",
+    "added_imp_0195",
+    "added_imp_0196",
+    "added_imp_0197"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -3446,11 +3459,11 @@
     {
       "key": "added_imp_0187",
       "id": "new",
-      "title": "Child On Oil",
+      "title": "storm",
       "cat": "",
       "prompt": "{\n  \"scene\": {\n    \"type\": \"extreme_environment_selfie\",\n    \"location\": \"offshore oil rig during violent storm\",\n    \"description\": \"partially damaged oil rig platform surrounded by massive dark ocean waves, heavy rain and wind, dramatic industrial setting\"\n  },\n\n  \"subject\": {\n    \"reference\": \"@input_image\",\n    \"identity_lock\": true,\n    \"face\": {\n      \"preserve_exact_features\": true,\n      \"natural_skin_texture\": true,\n      \"no_age_modification\": true,\n      \"no_beautification\": true\n    },\n    \"expression\": \"calm and composed, slight natural curiosity\",\n    \"hair\": {\n      \"behavior\": \"wind-blown, reacting naturally to storm\",\n      \"no_style_change\": true\n    },\n    \"clothing\": {\n      \"type\": \"realistic waterproof jacket or hoodie\",\n      \"behavior\": \"wet, slightly moving in wind\",\n      \"fit\": \"appropriate for child\"\n    }\n  },\n\n  \"camera\": {\n    \"type\": \"smartphone selfie\",\n    \"lens\": \"26mm wide-angle\",\n    \"angle\": \"eye-level, arm-length\",\n    \"framing\": \"4:5 vertical\",\n    \"distortion\": \"slight edge distortion like real phone\",\n    \"focus\": \"sharp on face\"\n  },\n\n  \"lighting\": {\n    \"environment\": \"overcast storm light\",\n    \"tones\": \"cold gray and slate\",\n    \"secondary\": \"subtle orange industrial lights reflecting on wet metal\",\n    \"effects\": \"rain, mist, salt spray catching light\"\n  },\n\n  \"environment_details\": {\n    \"elements\": [\n      \"massive waves crashing\",\n      \"wet steel beams\",\n      \"rust, peeling paint\",\n      \"warning stripes\",\n      \"industrial cables\",\n      \"rotating hazard lights in fog\"\n    ],\n    \"depth\": \"strong atmospheric depth with fading ocean background\"\n  },\n\n  \"style\": {\n    \"photorealistic\": true,\n    \"cinematic\": true,\n    \"camera_simulation\": \"Sony A7R V\",\n    \"settings\": {\n      \"aperture\": \"f/4\",\n      \"shutter\": \"1/1600\",\n      \"ISO\": 640\n    },\n    \"details\": [\n      \"visible pores\",\n      \"realistic iris detail\",\n      \"fine hair strands\",\n      \"wet fabric texture\",\n      \"subtle sensor grain\",\n      \"slight chromatic aberration\"\n    ]\n  },\n\n  \"composition\": {\n    \"subject_dominant\": true,\n    \"leading_lines\": \"metal beams and catwalks\",\n    \"asymmetry\": \"open ocean in background\",\n    \"clean_frame\": true\n  },\n\n  \"negative_prompt\": [\n    \"no text\",\n    \"no watermark\",\n    \"no logos\",\n    \"no duplicated labels\",\n    \"no age estimation text\",\n    \"no extra fingers\",\n    \"no distorted hands\",\n    \"no warped anatomy\",\n    \"no duplicate limbs\",\n    \"no cartoon style\",\n    \"no plastic skin\",\n    \"no low resolution\",\n    \"no clutter\",\n    \"no gore\",\n    \"no injury\",\n    \"no panic\"\n  ]\n}",
       "images": [
-        "images/imp_0187.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0187.jpg"
       ]
     },
     {
@@ -3568,9 +3581,9 @@
       "id": "new",
       "title": "Close Up Macro Portrait",
       "cat": "",
-      "prompt": "Create an ultra-realistic macro close-up of an Israeli gold coin. The coin features a side profile portrait of [the attached figure], engraved in detail with a gilded metal texture, fine scratches, and wear marks that give it an authentic look. Surrounding the portrait is a prominent Hebrew inscription: at the top are the words '[State of Israel] and 'Adi Brill]', and at the bottom is the value '[50] New Shekels'. The menorah symbol appears in small print at the top. The background is pitch black. Dramatic side lighting emphasizes the prominence and depth of the engraving.",
+      "prompt": "An extreme close-up macro portrait of the subject, using the uploaded reference image as a strict identity source with zero deviation. The composition is left-eye dominant, cropped at the closest possible macro distance while still keeping the left eye, the bridge of the nose, and softly parted lips within the frame. Only a partial facial view is visible, with the opposite side of the face falling out of frame.\n\nHyper-realistic skin texture with visible pores and natural micro-details, a dewy fresh complexion, finely rendered eyelashes with a crisp catchlight, and an intimate, calm gaze. Loose, messy strands of hair fall naturally across the face and partially over the eye. Lips appear soft and naturally pink with subtle texture, no heavy makeup.\n\nLighting is soft, diffused, and cinematic with cool blue tonalities and gentle ambient shadows, shaping depth without harsh contrast. Photorealistic, cinematic raw photo quality, ultra-high detail, 8K realism, shot as an extreme macro using a 100mm macro lens at f/2.8, with razor-thin depth of field and sharp focus on the eye, with smooth falloff across the nose and lips.",
       "images": [
-        "images/imp_0199.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0199.jpg"
       ]
     },
     {
