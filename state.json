@@ -212,7 +212,23 @@
     "added_imp_0194",
     "added_imp_0195",
     "added_imp_0196",
-    "added_imp_0197"
+    "added_imp_0197",
+    "added_imp_0200",
+    "added_imp_0201",
+    "added_imp_0208",
+    "added_imp_0203",
+    "added_imp_0205",
+    "added_imp_0206",
+    "added_imp_0207",
+    "added_imp_0209",
+    "added_imp_0210",
+    "added_imp_0213",
+    "added_imp_0214",
+    "added_imp_0216",
+    "added_imp_0218",
+    "added_imp_0219",
+    "added_imp_0217",
+    "added_imp_0221"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -3629,11 +3645,11 @@
     {
       "key": "added_imp_0204",
       "id": "new",
-      "title": "Collectible Figure In",
+      "title": "glass bottle",
       "cat": "",
-      "prompt": "Create a hyper-realistic 4K collectible figure inside a bright yellow cardboard display box with a clear plastic window in the front.\nReplace the figure’s face with the human eyes and facial features taken from the uploaded external image.\nThe character is an original design called 'Nano Banana 2': a small stylized doll with tiny cartoonish legs, wearing bold red Nike Air sneakers.\nAdd a Santa-themed banana hat: a peeled banana shaped like a Santa hat, with the banana peel opening naturally around the head like stylized petals.\nPlace a custom artistic logo on the box titled 'Nano Banana 2' in a unique, creative font.\nSet the box on a luxurious wooden store shelf.\nBehind it, a modern TV screen displays animated Nano Banana branding.\nUse ultra-detailed textures, dramatic cinematic product-display lighting, and extremely sharp 4K hyper-realism.\nPreserve the holiday Santa atmosphere throughout the scene.",
+      "prompt": "A 1/7 scale commercialized collectible figure of the character from the photo, crafted in a highly realistic style. The figure is placed in a detailed beach environment with sand, seashells, and gentle ocean waves. The entire toy display is enclosed inside a clear souvenir glass bottle, giving it a premium miniature diorama look, with realistic lighting and shadows",
       "images": [
-        "images/imp_0204.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0204.jpg"
       ]
     },
     {
@@ -3809,21 +3825,21 @@
     {
       "key": "added_imp_0222",
       "id": "new",
-      "title": "Convert Image To",
+      "title": "holographic",
       "cat": "",
-      "prompt": "Convert this person into a retro vintage grainy but bright image, black party-wear saree, 90s film aesthetic. She is standing against a solid, deep wall with dramatic shadows and contrast, creating a mysterious and artistic atmosphere. The environment feels windy and romanticised. Lighting is warm, with golden sunset tones evoking golden hour glow. The background is minimalist and slightly textured. Her expression is moody, calm, yet subtly happy and introspective",
+      "prompt": "Based on the uploaded image, convert it into a holographic depiction using wireframe lines only.",
       "images": [
-        "images/imp_0222.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0222.jpg"
       ]
     },
     {
       "key": "added_imp_0223",
       "id": "new",
-      "title": "Convert Image To",
+      "title": "retro vintage grainy",
       "cat": "",
       "prompt": "Convert this person into a retro vintage grainy but bright image, black party-wear saree, 90s film aesthetic. She is standing against a solid, deep wall with dramatic shadows and contrast, creating a mysterious and artistic atmosphere. The environment feels windy and romanticised. Lighting is warm, with golden sunset tones evoking golden hour glow. The background is minimalist and slightly textured. Her expression is moody, calm, yet subtly happy and introspective",
       "images": [
-        "images/imp_0223.jpg"
+        "/images/custom_added_imp_0223_img0.jpg"
       ]
     },
     {
