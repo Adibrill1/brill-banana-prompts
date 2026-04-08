@@ -36,6 +36,39 @@ function ghGet(token, filePath) {
   });
 }
 
+function ghPut(token, filePath, content, sha, message) {
+  return new Promise(function(resolve) {
+    var bodyObj = { message: message, content: content };
+    if (sha) bodyObj.sha = sha;
+    var bodyStr = JSON.stringify(bodyObj);
+    var opts = {
+      hostname: 'api.github.com',
+      port: 443,
+      path: '/repos/' + owner + '/' + repo + '/contents/' + filePath,
+      method: 'PUT',
+      headers: {
+        'Authorization': 'token ' + token,
+        'User-Agent': 'brill-banana/1.0',
+        'Accept': 'application/vnd.github.v3+json',
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(bodyStr)
+      }
+    };
+    var req = https.request(opts, function(r) {
+      var chunks = [];
+      r.on('data', function(c) { chunks.push(c); });
+      r.on('end', function() {
+        try { resolve({ status: r.statusCode, data: JSON.parse(Buffer.concat(chunks).toString()) }); }
+        catch(e) { resolve({ status: r.statusCode, data: {} }); }
+      });
+    });
+    req.setTimeout(8000, function() { req.destroy(); resolve({ status: 0, data: {} }); });
+    req.on('error', function() { resolve({ status: 0, data: {} }); });
+    req.write(bodyStr);
+    req.end();
+  });
+}
+
 module.exports = async function handler(req, res) {
   setCORS(res);
   if (req.method === 'OPTIONS') { res.status(200).end(); return; }
@@ -56,14 +89,30 @@ module.exports = async function handler(req, res) {
       res.status(500).json({ valid: false, error: 'Could not load keys' });
       return;
     }
+    var sha = result.data.sha;
     var keysData = JSON.parse(Buffer.from(result.data.content, 'base64').toString('utf8'));
     var keys = keysData.keys || {};
 
-    if (keys[license_key]) {
-      res.status(200).json({ valid: true, name: keys[license_key].name || '' });
-    } else {
+    if (!keys[license_key]) {
       res.status(200).json({ valid: false, error: 'מפתח לא תקין' });
+      return;
     }
+
+    var keyEntry = keys[license_key];
+
+    // Check expiry
+    if (keyEntry.expiresAt && new Date(keyEntry.expiresAt) < new Date()) {
+      res.status(200).json({ valid: false, error: 'הרישיון פג תוקף' });
+      return;
+    }
+
+    // Update lastUsed (fire and forget — don't block the response)
+    keyEntry.lastUsed = new Date().toISOString();
+    keysData.keys = keys;
+    var encoded = Buffer.from(JSON.stringify(keysData, null, 2)).toString('base64');
+    ghPut(token, 'keys.json', encoded, sha, 'Update lastUsed: ' + license_key);
+
+    res.status(200).json({ valid: true, name: keyEntry.name || '' });
   } catch(e) {
     res.status(500).json({ valid: false, error: 'Server error' });
   }

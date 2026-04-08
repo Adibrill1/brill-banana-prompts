@@ -104,7 +104,10 @@ module.exports = async function handler(req, res) {
     if (!key) { res.status(400).json({ error: 'Missing key' }); return; }
     if (keys[key]) { res.status(400).json({ error: 'Key already exists' }); return; }
 
-    keys[key] = { name: name, createdAt: new Date().toISOString() };
+    var months = req.body && req.body.months ? parseInt(req.body.months) : 0;
+    var entry = { name: name, createdAt: new Date().toISOString() };
+    if (months > 0) entry.expiresAt = new Date(Date.now() + months * 30 * 24 * 60 * 60 * 1000).toISOString();
+    keys[key] = entry;
     keysData.keys = keys;
     var encoded = Buffer.from(JSON.stringify(keysData, null, 2)).toString('base64');
     var putResult = await ghPut(ghToken, 'keys.json', encoded, sha, 'Add license key: ' + (name || key));
