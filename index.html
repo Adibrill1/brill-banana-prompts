@@ -179,7 +179,7 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
 .unlock-btn{width:100%;padding:10px 16px;background:linear-gradient(135deg,#f5a623,#f97316);color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:bold;cursor:pointer;margin-top:8px;display:none;transition:opacity .15s}
 .unlock-btn:hover{opacity:.85}
 .card.locked-prompt .unlock-btn{display:block}
-.free-badge{position:absolute;top:8px;left:8px;background:#4caf50;color:#fff;padding:2px 7px;border-radius:6px;font-size:10px;font-weight:700;z-index:2;pointer-events:none;letter-spacing:.3px}
+.free-badge{display:none !important}
 .ec-free{background:#4caf50;color:#fff}.ec-free:hover{background:#66bb6a}
 .ec-free.is-premium{background:#f5a623;color:#000}.ec-free.is-premium:hover{background:#ffc04d}
 .free-counter{color:#4caf50;font-size:12px;font-weight:bold;white-space:nowrap;display:none}
@@ -206,6 +206,20 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
 .key-del:hover{background:#ef5350}
 .keys-add-row{display:flex;gap:6px;flex-wrap:wrap}
 .keys-add-row input{flex:1;min-width:80px}
+.keys-search{width:100%;padding:7px 10px;border:1px solid var(--border2);border-radius:6px;background:var(--input-bg);color:var(--text);font-size:12px;margin-bottom:4px}
+.keys-search:focus{outline:none;border-color:#f5a623}
+/* category filter bar */
+.cat-filter-bar{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:12px;padding:0 4px}
+.cat-filter-btn{background:var(--bg4);color:var(--text2);border:1px solid var(--border2);border-radius:20px;padding:5px 14px;font-size:12px;cursor:pointer;white-space:nowrap;transition:background .15s,color .15s}
+.cat-filter-btn:hover{background:var(--border2)}
+.cat-filter-btn.active{background:#f5a623;color:#000;border-color:#f5a623;font-weight:bold}
+/* customer preview mode */
+body.customer-preview .admin-bar{display:none}
+body.customer-preview.admin-open{padding-top:20px}
+.preview-exit-btn{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#e91e63;color:#fff;border:none;border-radius:24px;padding:10px 24px;font-size:14px;font-weight:bold;cursor:pointer;z-index:9999;box-shadow:0 4px 16px rgba(0,0,0,.5);display:none}
+body.customer-preview .preview-exit-btn{display:block}
+/* ec-dup button */
+.ec-dup{background:#0288d1;color:#fff}.ec-dup:hover{background:#0296d0}
 </style>
 </head>
 <body>
@@ -218,8 +232,13 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
   <button class="btn btn-publish" id="btnPublish" onclick="publishChanges()" disabled>🌐 פרסם שינויים</button>
   <button class="btn btn-edit" id="waToggle" onclick="toggleWaShare()" title="שליחת מועדפים ב-WhatsApp">💬 WA</button>
   <button class="btn btn-edit" onclick="openKeysModal()">🔑 ססמאות</button>
+  <button class="btn btn-edit" onclick="setAllFree()" title="סמן את כל הפרומפטים כחינמיים">🆓 פתח הכל</button>
+  <button class="btn btn-edit" onclick="setAllPremium()" title="החזר את כל הפרומפטים לנעול">🔒 סגור הכל</button>
+  <button class="btn btn-edit" onclick="exportCSV()" title="ייצוא לאקסל">📤 CSV</button>
+  <button class="btn btn-edit" id="previewToggle" onclick="toggleCustomerPreview()" title="תצוגת לקוח">👁️ תצוגת לקוח</button>
   <span class="free-counter" id="freeCounter">🆓 0/50</span>
 </div>
+<button class="preview-exit-btn" onclick="toggleCustomerPreview()">🚪 יציאה מתצוגת לקוח</button>
 <h1>Brill 🍌 Banana Prompts</h1>
 <p class="subtitle"><span id="subtitle-count">241</span> פרומפטים | 📋 Copy להעתקה | לחץ על תמונה לתצוגה מוגדלת</p>
 <div class="toolbar">
@@ -236,6 +255,7 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
   <input type="range" id="colsSlider" class="cols-slider" min="1" max="17" value="5">
   <span class="cols-val" id="colsVal">5</span>
 </div>
+<div class="cat-filter-bar" id="catFilterBar"></div>
 <div id="favCountRow" style="display:none;text-align:center;color:#f5a623;font-weight:bold;font-size:14px;margin-bottom:10px"></div>
 <div class="grid" id="grid" style="visibility:hidden">
 <div class="card" data-key="orig_0" data-search="artist painting a miniature figure of themselves create a portrait depicting the person as an artist painting a miniature figure. the person is dressed in their most iconic outfit, looking confidently directly at the camera, holding a small paintbrush in one hand. a mini version of themselves is prominently placed on a clean workbench in front of them—make the figure slightly larger to be more visible than actual scale, thus standing out more. the figure is also wearing the same iconic outfit and striking an iconic pose. the painting supplies on the workbench are minimal to avoid clutter—only two or three small bottles of paint and a spare brush, keeping the focus on the person and the figure. soft neutral white background, professional studio lighting, shallow depth of field. the composition highlights the person&#x27;s facial expression looking at the camera and the figure they are painting. the style is clean and crisp, pursuing photorealistic effects, and details of both the person and the figure need to be highly restored."><div class="edit-controls"><span class="ec-btn ec-drag">&#x22EE;&#x22EE; גרור</span><button class="ec-btn ec-del" data-action="del" data-key="orig_0">🗑️ מחק</button><button class="ec-btn ec-img" data-action="img" data-key="orig_0">🖼️ החלף</button><button class="ec-btn ec-edit" data-action="edit" data-key="orig_0">✏️ ערוך</button></div><div class="card-header"><span class="num">#241</span><span class="cat">Photography</span><button class="copy-btn" data-action="copy" data-key="orig_0">📋 Copy</button></div><h3>Artist Painting a Miniature Figure of Themselves</h3><div class="thumb-wrap" data-lb-key="orig_0"><img class="thumb" src="images/241.jpg" alt="" loading="lazy"><div class="thumb-overlay"><span>🔍 הצג תמונה</span></div></div><pre class="prompt-text">Create a portrait depicting the person as an artist painting a miniature figure. The person is dressed in their most iconic outfit, looking confidently directly at the camera, holding a small paintbrush in one hand. A mini version of themselves is prominently placed on a clean workbench in front of them—make the figure slightly larger to be more visible than actual scale, thus standing out more. The figure is also wearing the same iconic outfit and striking an iconic pose. The painting supplies on the workbench are minimal to avoid clutter—only two or three small bottles of paint and a spare brush, keeping the focus on the person and the figure. Soft neutral white background, professional studio lighting, shallow depth of field. The composition highlights the person&#x27;s facial expression looking at the camera and the figure they are painting. The style is clean and crisp, pursuing photorealistic effects, and details of both the person and the figure need to be highly restored.</pre></div>
@@ -4529,6 +4549,7 @@ set the scene indoors if possible</pre></div>
 <div class="modal-bg" id="keysModal">
   <div class="modal" style="max-width:500px">
     <h2>🔑 ניהול ססמאות גישה</h2>
+    <input class="keys-search" id="keysSearch" type="search" placeholder="🔍 חפש לפי שם או ססמא..." oninput="filterKeysList(this.value)">
     <ul class="keys-list" id="keysList"><li style="color:var(--text4);text-align:center">טוען...</li></ul>
     <p style="color:var(--text2);font-size:12px;margin-bottom:8px">הוסף ססמא חדשה:</p>
     <div class="keys-add-row">
@@ -4660,6 +4681,7 @@ async function openKeysModal() {
     if (!_adminToken) return;
   }
   document.getElementById('keysError').style.display = 'none';
+  var ks = document.getElementById('keysSearch'); if (ks) ks.value = '';
   openModal('keysModal');
   await loadKeys();
 }
@@ -4688,6 +4710,8 @@ function renderKeysList(keys) {
   entries.forEach(function(entry) {
     var k = entry[0], v = entry[1];
     var li = document.createElement('li');
+    li.setAttribute('data-key-val', k);
+    li.setAttribute('data-key-name', v.name || '');
     li.innerHTML = '<span class="key-name">' + escHtml(v.name || '—') + '</span>'
       + '<span class="key-val">' + escHtml(k) + '</span>'
       + '<button class="key-del" onclick="deleteKey(\'' + escHtml(k) + '\')">🗑️ מחק</button>';
@@ -4754,7 +4778,7 @@ function getLicenseExpiry() {
 }
 
 function shouldShowFull(key) {
-  if (isPremiumUser()) return true;
+  if (!previewMode && isPremiumUser()) return true;
   return !!(state.freePrompts && state.freePrompts[key]);
 }
 
@@ -4885,6 +4909,133 @@ function toggleFreeStatus(key) {
   markUnsaved();
 }
 
+// ── סגור הכל ──────────────────────────────────────────────
+function setAllPremium() {
+  state.freePrompts = {};
+  applyPaywallToAll();
+  updateFreeCounter();
+  // sync ec-free buttons
+  document.querySelectorAll('.ec-free').forEach(function(btn) {
+    btn.classList.remove('is-premium');
+    btn.textContent = '🆓 Set Free';
+  });
+  markUnsaved();
+  showToast('🔒 כל הפרומפטים הוחזרו למצב נעול');
+}
+
+// ── תצוגת לקוח ────────────────────────────────────────────
+var previewMode = false;
+function toggleCustomerPreview() {
+  previewMode = !previewMode;
+  document.body.classList.toggle('customer-preview', previewMode);
+  if (previewMode) applyPaywallToAll();
+  else applyPaywallToAll();
+}
+
+// ── שכפל כרטיס ────────────────────────────────────────────
+function duplicateCard(key) {
+  var p = getCardData(key);
+  if (!p) return;
+  var newKey = 'dup_' + Date.now();
+  var maxId = 0;
+  document.querySelectorAll('.card[data-key]').forEach(function(c) {
+    var d = getCardData(c.getAttribute('data-key'));
+    if (d && d.id > maxId) maxId = d.id;
+  });
+  var newCard = { key: newKey, id: maxId + 1, title: p.title + ' (עותק)', cat: p.cat, prompt: p.prompt, images: p.images ? p.images.slice() : [] };
+  if (!state.added) state.added = [];
+  state.added.push(newCard);
+  appendCard(newCard);
+  initPaywallDOM();
+  // move new card to appear right after original
+  var origEl = document.querySelector('.card[data-key="' + key + '"]');
+  var newEl  = document.querySelector('.card[data-key="' + newKey + '"]');
+  if (origEl && newEl && origEl.nextSibling !== newEl) {
+    origEl.parentNode.insertBefore(newEl, origEl.nextSibling);
+  }
+  applyPaywallToCard(newEl, newKey);
+  initFavBtns();
+  markUnsaved();
+  showToast('📋 הכרטיס שוכפל');
+}
+
+// ── קטגוריות ──────────────────────────────────────────────
+var activeCat = '';
+function buildCatFilters() {
+  var bar = document.getElementById('catFilterBar');
+  if (!bar) return;
+  var cats = {};
+  document.querySelectorAll('.card .cat').forEach(function(el) {
+    var c = el.textContent.trim();
+    if (c) cats[c] = (cats[c] || 0) + 1;
+  });
+  var sorted = Object.keys(cats).sort();
+  if (!sorted.length) { bar.style.display = 'none'; return; }
+  bar.innerHTML = '';
+  var allBtn = document.createElement('button');
+  allBtn.className = 'cat-filter-btn active';
+  allBtn.textContent = '🌐 הכל';
+  allBtn.onclick = function() { setActiveCat(''); };
+  bar.appendChild(allBtn);
+  sorted.forEach(function(cat) {
+    var btn = document.createElement('button');
+    btn.className = 'cat-filter-btn';
+    btn.textContent = cat + ' (' + cats[cat] + ')';
+    btn.onclick = function() { setActiveCat(cat); };
+    bar.appendChild(btn);
+  });
+}
+function setActiveCat(cat) {
+  activeCat = cat;
+  document.querySelectorAll('.cat-filter-btn').forEach(function(btn) {
+    btn.classList.toggle('active', btn.textContent === (cat ? cat + ' (' + document.querySelectorAll('.card .cat') .length + ')' : '🌐 הכל') || (!cat && btn.textContent === '🌐 הכל') || (cat && btn.textContent.startsWith(cat + ' (')));
+  });
+  filterCards(document.querySelector('.search').value);
+}
+
+// ── ייצוא CSV ──────────────────────────────────────────────
+function exportCSV() {
+  var rows = [['ID','Title','Category','Prompt']];
+  document.querySelectorAll('.card[data-key]').forEach(function(card) {
+    if (card.style.display === 'none') return;
+    var key = card.getAttribute('data-key');
+    var p = getCardData(key);
+    if (!p) return;
+    function esc(s) { s = (s||'').replace(/"/g,'""'); return '"'+s+'"'; }
+    rows.push([p.id, esc(p.title), esc(p.cat), esc(p.prompt)]);
+  });
+  var csv = rows.map(function(r){ return r.join(','); }).join('\r\n');
+  var blob = new Blob(['\uFEFF'+csv], {type:'text/csv;charset=utf-8;'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url; a.download = 'brill-banana-prompts.csv'; a.click();
+  URL.revokeObjectURL(url);
+  showToast('📤 הקובץ יורד...');
+}
+
+// ── חיפוש ססמאות ──────────────────────────────────────────
+function filterKeysList(q) {
+  q = q.toLowerCase().trim();
+  document.querySelectorAll('#keysList li[data-key-val]').forEach(function(li) {
+    var val = (li.getAttribute('data-key-val') || '').toLowerCase();
+    var name = (li.getAttribute('data-key-name') || '').toLowerCase();
+    li.style.display = (!q || val.includes(q) || name.includes(q)) ? '' : 'none';
+  });
+}
+
+function setAllFree() {
+  if (!state.freePrompts) state.freePrompts = {};
+  var cards = document.querySelectorAll('#grid .card[data-key]');
+  cards.forEach(function(card) {
+    var key = card.getAttribute('data-key');
+    if (key) state.freePrompts[key] = true;
+  });
+  applyPaywallToAll();
+  updateFreeCounter();
+  markUnsaved();
+  showToast('✅ כל הפרומפטים סומנו כחינמיים');
+}
+
 // Auto-activate from Lemon Squeezy redirect
 (function(){
   var params = new URLSearchParams(window.location.search);
@@ -4998,6 +5149,7 @@ function applyState(st) {
   updateFreeCounter();
   updateLicenseBtn();
   applyPaywallToAll();
+  buildCatFilters();
 }
 
 function markUnsaved() {
@@ -5197,6 +5349,7 @@ grid.addEventListener('click', function(e) {
   if (action === 'img')    { if (!ADMIN_UNLOCKED) return; openImgModal(key); }
   if (action === 'edit')   { if (!ADMIN_UNLOCKED) return; openEditModal(key); }
   if (action === 'free')   { if (!ADMIN_UNLOCKED) return; toggleFreeStatus(key); }
+  if (action === 'dup')    { if (!ADMIN_UNLOCKED) return; duplicateCard(key); }
 });
 
 function deleteCard(key) {
@@ -5224,6 +5377,7 @@ function appendCard(p) {
     +'<button class="ec-btn ec-del" data-action="del" data-key="'+p.key+'">\u{1F5D1}\ufe0f \u05de\u05d7\u05e7</button>'
     +'<button class="ec-btn ec-img" data-action="img" data-key="'+p.key+'">\u{1F5BC}\ufe0f \u05d4\u05d7\u05dc\u05e3</button>'
     +'<button class="ec-btn ec-edit" data-action="edit" data-key="'+p.key+'">\u270f\ufe0f \u05e2\u05e8\u05d5\u05da</button>'
+    +'<button class="ec-btn ec-dup" data-action="dup" data-key="'+p.key+'">📋 שכפל</button>'
     +'<button class="ec-btn ec-free'+(isFree?' is-premium':'')+'" data-action="free" data-key="'+p.key+'">'+(isFree?'\u{1F512} Set Premium':'\u{1F193} Set Free')+'</button>'
     +'</div>'
     +'<span class="free-badge" style="'+(isFree?'':'display:none')+'">\u{1F193} Free</span>'
@@ -5433,6 +5587,15 @@ function initPaywallDOM() {
       fb.textContent = '🆓 Set Free';
       ec.appendChild(fb);
     }
+    // add duplicate button in edit-controls if missing
+    if (ec && !ec.querySelector('.ec-dup')) {
+      var db = document.createElement('button');
+      db.className = 'ec-btn ec-dup';
+      db.setAttribute('data-action', 'dup');
+      db.setAttribute('data-key', key);
+      db.textContent = '📋 שכפל';
+      ec.appendChild(db);
+    }
   });
 }
 function updateFavCount() {
@@ -5524,7 +5687,8 @@ function filterCards(q){
     var key=c.getAttribute('data-key');
     var matchQ=!q||c.getAttribute('data-search').includes(q);
     var matchFav=!showFavsOnly||!!favs[key];
-    var show=matchQ&&matchFav;
+    var matchCat=!activeCat||(c.querySelector('.cat')||{textContent:''}).textContent.trim()===activeCat;
+    var show=matchQ&&matchFav&&matchCat;
     c.style.display=show?'':'none'; if(show)visible++;
   });
   var sc=document.getElementById('subtitle-count'); if(sc)sc.textContent=visible;
