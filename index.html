@@ -42,6 +42,7 @@ h1{text-align:center;color:#f5a623;font-size:2em;margin-bottom:6px}
 /* theme toggle */
 .btn-theme{position:fixed;top:12px;right:12px;z-index:9999;background:var(--bg4);color:var(--text);border:1px solid var(--border2);font-size:16px;padding:7px 12px;border-radius:7px;cursor:pointer;transition:background .15s}
 .btn-theme:hover{background:var(--border2)}
+#accessBtn{position:fixed;top:12px;right:60px;z-index:9999}
 .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;max-width:1900px;margin:0 auto}
 @media(max-width:1600px){.grid{grid-template-columns:repeat(4,1fr)}}
 @media(max-width:1200px){.grid{grid-template-columns:repeat(3,1fr)}}
@@ -5767,7 +5768,7 @@ function appendCard(p) {
   if (editMode) el.setAttribute('draggable','true');
   document.getElementById('grid').appendChild(el);
   var header = el.querySelector('.card-header');
-  if (header) header.appendChild(makeFavBtn(p.key));
+  if (header) { var copyBtn = header.querySelector('.copy-btn'); if (copyBtn) header.insertBefore(makeFavBtn(p.key), copyBtn); else header.appendChild(makeFavBtn(p.key)); }
 }
 
 var editingKey = null;
@@ -5923,7 +5924,7 @@ function initFavBtns() {
     var key = card.getAttribute('data-key');
     if (!key || card.querySelector('.fav-btn')) return;
     var header = card.querySelector('.card-header');
-    if (header) header.appendChild(makeFavBtn(key));
+    if (header) { var copyBtn = header.querySelector('.copy-btn'); if (copyBtn) header.insertBefore(makeFavBtn(key), copyBtn); else header.appendChild(makeFavBtn(key)); }
   });
 }
 function initPaywallDOM() {
