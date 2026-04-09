@@ -5495,7 +5495,7 @@ function appendCard(p) {
     +'<button class="copy-btn" data-action="copy" data-key="'+p.key+'">\u{1F4CB} Copy</button>'
     +'</div><h3>'+escHtml(p.title)+'</h3>'+thumbHtml
     +'<div class="prompt-wrap"><pre class="prompt-text">'+escHtml(p.prompt)+'</pre></div>'
-    +'<button class="unlock-btn" data-action="unlock">\uD83D\uDD12 Unlock Full Prompt</button>';
+    +'<button class="unlock-btn" data-action="unlock">🔒 פרימיום</button>';
   if (editMode) el.setAttribute('draggable','true');
   document.getElementById('grid').appendChild(el);
   var header = el.querySelector('.card-header');
