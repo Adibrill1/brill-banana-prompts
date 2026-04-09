@@ -4677,6 +4677,7 @@ async function tryUnlockFromModal() {
     var waBtn = document.getElementById('waToggle');
     if (waBtn) { waBtn.classList.toggle('active', shareWhatsApp); waBtn.title = shareWhatsApp ? 'WhatsApp מופעל — לחץ לכיבוי' : 'WhatsApp כבוי — לחץ להפעלה'; }
     closeModal('accessModal');
+    applyPaywallToAll();
     showToast('✅ נכנסת כמנהלת');
   } else {
     errEl.textContent = '❌ סיסמה שגויה';
