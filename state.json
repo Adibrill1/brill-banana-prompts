@@ -303,7 +303,12 @@
     "added_imp_0337",
     "added_imp_0339",
     "added_imp_0344",
-    "added_imp_0356"
+    "added_imp_0356",
+    "added_imp_0347",
+    "added_imp_0346",
+    "added_imp_0348",
+    "added_imp_0350",
+    "added_imp_0353"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -490,7 +495,8 @@
     "added_imp_0244": "/images/custom_added_imp_0244.jpg",
     "added_imp_0278": "/images/custom_added_imp_0278.jpg",
     "added_imp_0320": "/images/custom_added_imp_0320.jpg",
-    "added_imp_0325": "/images/custom_added_imp_0325.jpg"
+    "added_imp_0325": "/images/custom_added_imp_0325.jpg",
+    "added_imp_0355": "/images/custom_added_imp_0355.jpg"
   },
   "added": [
     {
@@ -5240,7 +5246,7 @@
       "cat": "",
       "prompt": "CREATE a hyper-realistic blister pack containing four miniature figurines, each required to replicate the exact facial identity of the person in the uploaded reference image.\n\nUse the uploaded reference image as a strict facial identity source.\n\nCRITICAL IDENTITY LOCK:\nThe face must match the reference image exactly — identical facial structure, proportions, eye shape and color, eyelids, brow thickness, lips, nose shape, beard pattern, beard color, skin tone, micro-texture, smile characteristics, and every subtle facial detail. \nNo reinterpretation, no stylization, no aging or de-aging, no facial-hair changes, and no anatomical alterations. \nA perfect 1:1 facial reproduction is mandatory for all four figurines, even if clothing or body type varies. This facial identity lock is absolute.\n\nScene:\nA pharmaceutical-style blister pack partially pulled from a white box labeled “Friends – Contains: Social Contacts,” positioned on a soft pastel pink background.\n\nCamera:\nFull-frame digital camera, 85mm macro lens, ultra-sharp optics, top-down flat-lay composition, product photography style.\n\nLighting:\nSoft diffused studio lighting at 45 degrees, gentle shadows, realistic plastic reflections, accurate subsurface scattering on skin.\n\nMaterials & realism:\nHyper-detailed blister plastic, subtle micro-scratches, realistic cardboard texture on the packaging, perfect light refractions.\n\nFigurine design:\nFour miniature figurines with different outfits (e.g., casual black shirt, business attire, color variations) but with the exact same locked facial identity. \nSkin rendering includes micro-pores, natural shine, and photorealistic shading.\n\nCinematic & technical:\nShallow depth of field, crisp focus on the blister and faces, mild filmic halation, light grain simulation, high dynamic range, ultra-clean product photography finish.\n\nnano-banana optimized.\nRefer to the uploaded image as the required identity reference.",
       "images": [
-        "images/imp_0355.jpg"
+        "/images/custom_added_imp_0355_img0.jpg"
       ]
     },
     {
@@ -15557,5 +15563,6 @@
   },
   "catHidden": true,
   "shareWhatsApp": true,
-  "freeMode": "partial"
+  "freeMode": "full",
+  "_publishedAt": 1775755414811
 }
