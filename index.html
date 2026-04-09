@@ -86,7 +86,7 @@ h1{text-align:center;color:#f5a623;font-size:2em;margin-bottom:6px}
 .ec-drag:hover{background:#666;color:#fff}
 .ec-drag:active{cursor:grabbing;background:#f5a623;color:#000}
 .thumb-wrap{position:relative;cursor:pointer;border-radius:8px;overflow:hidden;margin-bottom:10px;aspect-ratio:1/1;background:var(--thumb-bg)}
-.card.free-selected .thumb-wrap{outline:3px solid #4caf50;outline-offset:-3px}
+
 .thumb{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
 .thumb-wrap:hover .thumb{transform:scale(1.04)}
 .thumb-overlay{position:absolute;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s}
@@ -4967,8 +4967,6 @@ function applyPaywallToCard(card, key) {
   var isFree = !!(state.freePrompts && state.freePrompts[key]);
   var badge = card.querySelector('.free-badge');
   if (badge) badge.style.display = isFree ? '' : 'none';
-  // free-selected highlight (admin image-click indicator)
-  card.classList.toggle('free-selected', isFree);
 }
 
 function updateFreeCounter() {
@@ -5184,7 +5182,8 @@ function toggleCatBar() {
   bar.style.display = hidden ? '' : 'none';
   var btn = document.getElementById('catToggleBtn');
   if (btn) btn.classList.toggle('active', !hidden);
-  localStorage.setItem('bb_cat_hidden', hidden ? 'false' : 'true');
+  state.catHidden = !hidden;
+  markUnsaved();
 }
 
 
@@ -5308,12 +5307,16 @@ function applyState(st) {
   updateLicenseBtn();
   applyPaywallToAll();
   buildCatFilters();
-  // restore cat bar visibility from localStorage
+  // restore cat bar visibility from state
   var bar = document.getElementById('catFilterBar');
-  var catHidden = localStorage.getItem('bb_cat_hidden') === 'true';
+  var catHidden = !!st.catHidden;
   if (bar) bar.style.display = catHidden ? 'none' : '';
   var catBtn = document.getElementById('catToggleBtn');
   if (catBtn) catBtn.classList.toggle('active', catHidden);
+  // restore WA share from state (fallback to localStorage for old states)
+  shareWhatsApp = st.shareWhatsApp !== undefined ? !!st.shareWhatsApp : (localStorage.getItem('bb_share_wa') !== 'false');
+  var waBtn = document.getElementById('waToggle');
+  if (waBtn) { waBtn.classList.toggle('active', shareWhatsApp); waBtn.title = shareWhatsApp ? 'WhatsApp מופעל — לחץ לכיבוי' : 'WhatsApp כבוי — לחץ להפעלה'; }
   // restore free toggle button label
   var totalCards = document.querySelectorAll('#grid .card[data-key]').length;
   var freeCount = Object.keys(st.freePrompts || {}).length;
@@ -5799,7 +5802,8 @@ function toggleFavFilter() {
 }
 function toggleWaShare() {
   shareWhatsApp = !shareWhatsApp;
-  localStorage.setItem('bb_share_wa', shareWhatsApp);
+  state.shareWhatsApp = shareWhatsApp;
+  markUnsaved();
   var btn = document.getElementById('waToggle');
   if (btn) { btn.classList.toggle('active', shareWhatsApp); btn.title = shareWhatsApp ? 'WhatsApp מופעל — לחץ לכיבוי' : 'WhatsApp כבוי — לחץ להפעלה'; }
 }
