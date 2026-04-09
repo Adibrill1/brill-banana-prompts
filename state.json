@@ -16938,5 +16938,19 @@
     "added_1775318635394": true,
     "added_1775325669753": true,
     "orig_14": true
-  }
+  },
+  "hiddenCats": [
+    "Art Style",
+    "Collage",
+    "Conceptual",
+    "Design",
+    "Fantasy",
+    "Illustration",
+    "Photography",
+    "Portrait",
+    "Product",
+    "Realism",
+    "Retro",
+    "Storybook"
+  ]
 }
