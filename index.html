@@ -164,9 +164,9 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
 .fav-btn{background:none;border:none;cursor:pointer;font-size:15px;padding:2px 3px;line-height:1;opacity:0.3;transition:opacity .15s,transform .15s;flex-shrink:0}
 .fav-btn:hover{opacity:0.75;transform:scale(1.2)}
 .fav-btn.fav-on{opacity:1}
-.btn-fav-filter{background:#1a1a1a;color:#888;border:1px solid #333;font-size:12px}
-.btn-fav-filter:hover{background:#2a2a2a;color:#aaa}
-.btn-fav-filter.active{background:#2a2a2a;color:#e0e0e0;border-color:#666}
+.btn-fav-filter{background:var(--bg2);color:var(--text4);border:1px solid var(--border2);font-size:12px}
+.btn-fav-filter:hover{background:var(--bg4);color:var(--text2)}
+.btn-fav-filter.active{background:var(--bg4);color:var(--text);border-color:var(--border2)}
 .share-modal-list{list-style:none;max-height:300px;overflow-y:auto;background:#111;border:1px solid #333;border-radius:8px;padding:10px;margin:14px 0;direction:ltr;text-align:left}
 .share-modal-list li{padding:4px 0;border-bottom:1px solid #222;font-size:12px;color:#bbb}
 .share-modal-list li:last-child{border-bottom:none}
@@ -244,7 +244,7 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
 <p class="subtitle"><span id="subtitle-count">241</span> פרומפטים | 📋 Copy להעתקה | לחץ על תמונה לתצוגה מוגדלת</p>
 <div class="toolbar">
   <input class="search" type="search" placeholder="🔍 חפש לפי שם או תוכן..." oninput="filterCards(this.value)" autocomplete="off">
-  <button class="btn btn-license" id="accessBtn" onclick="openAccessModal('premium')">🔑 Activate</button>
+  <button class="btn btn-license" id="accessBtn" onclick="openAccessModal('premium')">🔒 פרימיום</button>
   <button class="btn btn-fav-filter" id="favFilterBtn" onclick="toggleFavFilter()">❤️ מועדפים</button>
   <button class="btn" id="btnSendFavs" style="display:none;background:#1a1a1a;color:#888;border:1px solid #333;font-size:12px" onclick="openShareModal()">📤 שלח מועדפים</button>
   <button class="btn" id="btnClearFavs" style="display:none;background:#1a1a1a;color:#888;border:1px solid #333;font-size:12px" onclick="clearFavs()">🗑️ אפס בחירה</button>
@@ -4833,10 +4833,10 @@ function updateLicenseBtn() {
   var btn = document.getElementById('accessBtn');
   if (!btn) return;
   if (isPremiumUser()) {
-    btn.textContent = '✅ Premium';
+    btn.textContent = '✅ פרימיום';
     btn.classList.add('active');
   } else {
-    btn.textContent = '🔑 Activate';
+    btn.textContent = '🔒 פרימיום';
     btn.classList.remove('active');
   }
 }
