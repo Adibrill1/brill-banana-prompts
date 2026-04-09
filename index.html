@@ -34,6 +34,8 @@ h1{text-align:center;color:#f5a623;font-size:2em;margin-bottom:6px}
 .btn{padding:9px 18px;border:none;border-radius:7px;cursor:pointer;font-weight:bold;font-size:13px;white-space:nowrap;transition:background .15s,color .15s}
 .btn-edit{background:var(--bg4);color:#f5a623;border:1px solid #f5a623}
 .btn-edit:hover,.btn-edit.active{background:#f5a623;color:#000}
+#waToggle.active{background:#25d366;color:#fff;border-color:#25d366}
+#waToggle.active:hover{background:#1ebe5d}
 .btn-add{background:#4caf50;color:#fff}
 .btn-add:hover{background:#66bb6a}
 .btn-publish{background:#e91e63;color:#fff}
@@ -272,6 +274,8 @@ body.admin-open .prompt-wrap{display:block !important}
   <button class="btn btn-fav-filter" id="favFilterBtn" onclick="toggleFavFilter()">❤️ מועדפים</button>
   <button class="btn btn-fav-action" id="btnSendFavs" style="display:none" onclick="openShareModal()">📤 שלח מועדפים</button>
   <button class="btn btn-fav-action" id="btnClearFavs" style="display:none" onclick="clearFavs()">🗑️ אפס בחירה</button>
+  <button class="btn" id="btnMainOrder" style="display:none;background:#e65100;color:#fff" onclick="orderImagesWhatsApp()">🛒 הזמן תמונות</button>
+  <button class="btn" id="btnMainSession" style="display:none;background:#1565c0;color:#fff" onclick="bookSessionWhatsApp()">📅 קבע סשן</button>
 </div>
 <div class="cols-control">
   <span class="cols-label">מספר תמונות בשורה:</span>
@@ -4771,8 +4775,7 @@ async function tryUnlockFromModal() {
     ADMIN_UNLOCKED = true;
     document.getElementById('adminBar').classList.add('open');
     document.body.classList.add('admin-open');
-    var waBtn = document.getElementById('waToggle');
-    if (waBtn) { waBtn.classList.toggle('active', shareWhatsApp); waBtn.title = shareWhatsApp ? 'WhatsApp מופעל — לחץ לכיבוי' : 'WhatsApp כבוי — לחץ להפעלה'; }
+    updateWaButtons();
     closeModal('accessModal');
     applyPaywallToAll();
     showToast('✅ נכנסת כמנהלת');
@@ -6061,12 +6064,20 @@ function toggleFavFilter() {
   updateFavCount();
   filterCards(document.querySelector('.search').value);
 }
+function updateWaButtons() {
+  var vis = shareWhatsApp ? '' : 'none';
+  ['btnMainOrder','btnMainSession'].forEach(function(id){
+    var el = document.getElementById(id);
+    if (el) el.style.display = vis;
+  });
+  var waBtn = document.getElementById('waToggle');
+  if (waBtn) { waBtn.classList.toggle('active', shareWhatsApp); waBtn.title = shareWhatsApp ? 'WhatsApp מופעל — לחץ לכיבוי' : 'WhatsApp כבוי — לחץ להפעלה'; }
+}
 function toggleWaShare() {
   shareWhatsApp = !shareWhatsApp;
   state.shareWhatsApp = shareWhatsApp;
   markUnsaved();
-  var btn = document.getElementById('waToggle');
-  if (btn) { btn.classList.toggle('active', shareWhatsApp); btn.title = shareWhatsApp ? 'WhatsApp מופעל — לחץ לכיבוי' : 'WhatsApp כבוי — לחץ להפעלה'; }
+  updateWaButtons();
 }
 function clearFavs() {
   var count = Object.keys(favs).length;
@@ -6102,8 +6113,7 @@ function openShareModal() {
     });
   }
   var waVisible = shareWhatsApp ? '' : 'none';
-  document.getElementById('btnOrder').style.display   = waVisible;
-  document.getElementById('btnSession').style.display = waVisible;
+  ['btnOrder','btnSession'].forEach(function(id){ document.getElementById(id).style.display = waVisible; });
   openModal('shareModal');
 }
 function copyFavsList() {
