@@ -83,7 +83,7 @@ h1{text-align:center;color:#f5a623;font-size:2em;margin-bottom:6px}
 .ec-btn{border:none;border-radius:6px;padding:5px 10px;cursor:pointer;font-size:12px;font-weight:bold}
 .ec-del{background:#e53935;color:#fff}.ec-del:hover{background:#ef5350}
 .ec-img{background:#7b1fa2;color:#fff}.ec-img:hover{background:#9c27b0}
-.ec-edit{background:#1565c0;color:#fff}.ec-edit:hover{background:#1976d2}
+.ec-edit{background:#1565c0;color:#fff;order:-1}.ec-edit:hover{background:#1976d2}
 .ec-drag{background:#555;color:#ddd;cursor:grab;user-select:none;display:inline-flex;align-items:center;gap:4px;padding:4px 10px;font-size:13px;border-radius:4px;letter-spacing:1px}
 .ec-drag:hover{background:#666;color:#fff}
 .ec-drag:active{cursor:grabbing;background:#f5a623;color:#000}
@@ -226,7 +226,8 @@ body.admin-open .prompt-wrap{display:block !important}
 .cat-filter-btn.active{background:#f5a623;color:#000;border-color:#f5a623;font-weight:bold}
 /* customer preview mode */
 /* ec-dup button */
-.ec-dup{background:#0288d1;color:#fff}.ec-dup:hover{background:#0296d0}
+.ec-dup{background:#4caf50;color:#fff}.ec-dup:hover{background:#66bb6a}
+.ec-free{display:none!important}
 /* access modal tabs */
 .access-tabs{display:flex;gap:0;border-bottom:2px solid var(--border2);margin-bottom:16px}
 .access-tab{flex:1;padding:9px;background:none;border:none;cursor:pointer;font-size:13px;font-weight:bold;color:var(--text4);border-bottom:2px solid transparent;margin-bottom:-2px;transition:color .15s}
@@ -5813,7 +5814,6 @@ function appendCard(p) {
     +'<button class="ec-btn ec-img" data-action="img" data-key="'+p.key+'">\u{1F5BC}\ufe0f \u05d4\u05d7\u05dc\u05e3</button>'
     +'<button class="ec-btn ec-edit" data-action="edit" data-key="'+p.key+'">\u270f\ufe0f \u05e2\u05e8\u05d5\u05da</button>'
     +'<button class="ec-btn ec-dup" data-action="dup" data-key="'+p.key+'">📋 שכפל</button>'
-    +'<button class="ec-btn ec-free'+(isFree?' is-premium':'')+'" data-action="free" data-key="'+p.key+'">'+(isFree?'\u{1F512} Set Premium':'\u{1F193} Set Free')+'</button>'
     +'</div>'
     +'<span class="free-badge" style="'+(isFree?'':'display:none')+'">\u{1F193} Free</span>'
     +'<div class="card-header"><span class="num">#'+p.id+'</span>'
@@ -6014,17 +6014,8 @@ function initPaywallDOM() {
       badge.style.display = 'none';
       card.insertBefore(badge, card.firstChild);
     }
-    // add ec-free button in edit-controls if missing
-    var ec = card.querySelector('.edit-controls');
-    if (ec && !ec.querySelector('.ec-free')) {
-      var fb = document.createElement('button');
-      fb.className = 'ec-btn ec-free';
-      fb.setAttribute('data-action', 'free');
-      fb.setAttribute('data-key', key);
-      fb.textContent = '🆓 Set Free';
-      ec.appendChild(fb);
-    }
     // add duplicate button in edit-controls if missing
+    var ec = card.querySelector('.edit-controls');
     if (ec && !ec.querySelector('.ec-dup')) {
       var db = document.createElement('button');
       db.className = 'ec-btn ec-dup';
