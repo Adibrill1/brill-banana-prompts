@@ -226,11 +226,6 @@ body.customer-preview .preview-exit-btn{display:block}
 .access-tab.active{color:#f5a623;border-bottom-color:#f5a623}
 .access-tab-panel{display:none}.access-tab-panel.active{display:block}
 /* hidden cats */
-.cat-filter-btn.hidden-cat{opacity:.4;text-decoration:line-through}
-.hide-cats-grid{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
-.hide-cat-btn{padding:6px 14px;border-radius:20px;border:2px solid var(--border2);background:var(--bg4);color:var(--text);cursor:pointer;font-size:12px;transition:all .15s}
-.hide-cat-btn.hidden{border-color:#e53935;background:#e5393520;color:#e53935;text-decoration:line-through}
-.hide-cat-btn:not(.hidden):hover{border-color:#4caf50;background:#4caf5020}
 </style>
 </head>
 <body>
@@ -243,7 +238,7 @@ body.customer-preview .preview-exit-btn{display:block}
   <button class="btn btn-publish" id="btnPublish" onclick="publishChanges()" disabled>🌐 פרסם שינויים</button>
   <button class="btn btn-edit" id="waToggle" onclick="toggleWaShare()" title="שליחת מועדפים ב-WhatsApp">💬 WA</button>
   <button class="btn btn-edit" onclick="openKeysModal()">🔑 ססמאות</button>
-  <button class="btn btn-edit" onclick="openHideCatsModal()">🙈 קטגוריות</button>
+  <button class="btn btn-edit" id="catToggleBtn" onclick="toggleCatBar()">🙈 קטגוריות</button>
   <button class="btn btn-edit" onclick="setAllFree()" title="סמן את כל הפרומפטים כחינמיים">🆓 פתח הכל</button>
   <button class="btn btn-edit" onclick="setAllPremium()" title="החזר את כל הפרומפטים לנעול">🔒 סגור הכל</button>
   <button class="btn btn-edit" onclick="exportCSV()" title="ייצוא לאקסל">📤 CSV</button>
@@ -4626,17 +4621,6 @@ set the scene indoors if possible</pre></div>
     </div>
   </div>
 </div>
-<div class="modal-bg" id="hideCatsModal">
-  <div class="modal" style="max-width:480px">
-    <h2>🙈 הסתרת קטגוריות</h2>
-    <p style="color:var(--text2);font-size:12px;margin-bottom:4px">לחצי על קטגוריה להסתירה מהמשתמשים. בצבע אדום = מוסתרת.</p>
-    <div class="hide-cats-grid" id="hideCatsGrid"></div>
-    <div class="modal-footer">
-      <button class="btn btn-cancel" onclick="closeModal('hideCatsModal')">סגור</button>
-      <button class="btn btn-publish" onclick="saveHiddenCats()">💾 שמור</button>
-    </div>
-  </div>
-</div>
 <div class="modal-bg" id="unlockModal">
   <div class="modal" style="max-width:420px">
     <h2>🔒 פרומפט פרימיום</h2>
@@ -5052,11 +5036,9 @@ function buildCatFilters() {
   allBtn.textContent = '🌐 הכל';
   allBtn.onclick = function() { setActiveCat(''); };
   bar.appendChild(allBtn);
-  var hiddenCats = state.hiddenCats || [];
   sorted.forEach(function(cat) {
-    if (!ADMIN_UNLOCKED && hiddenCats.indexOf(cat) !== -1) return;
     var btn = document.createElement('button');
-    btn.className = 'cat-filter-btn' + (hiddenCats.indexOf(cat) !== -1 ? ' hidden-cat' : '');
+    btn.className = 'cat-filter-btn';
     btn.textContent = cat + ' (' + cats[cat] + ')';
     btn.onclick = function() { setActiveCat(cat); };
     bar.appendChild(btn);
@@ -5109,36 +5091,13 @@ function switchAccessTab(tab) {
 }
 
 // ── הסתרת קטגוריות ────────────────────────────────────────
-function openHideCatsModal() {
-  if (!ADMIN_UNLOCKED) return;
-  var grid = document.getElementById('hideCatsGrid');
-  grid.innerHTML = '';
-  var cats = {};
-  document.querySelectorAll('.card .cat').forEach(function(el) {
-    var c = el.textContent.trim(); if (c) cats[c] = true;
-  });
-  var hidden = state.hiddenCats || [];
-  Object.keys(cats).sort().forEach(function(cat) {
-    var btn = document.createElement('button');
-    btn.className = 'hide-cat-btn' + (hidden.indexOf(cat) !== -1 ? ' hidden' : '');
-    btn.textContent = cat;
-    btn.onclick = function() { btn.classList.toggle('hidden'); };
-    grid.appendChild(btn);
-  });
-  openModal('hideCatsModal');
-}
-
-function saveHiddenCats() {
-  var hidden = [];
-  document.querySelectorAll('#hideCatsGrid .hide-cat-btn.hidden').forEach(function(btn) {
-    hidden.push(btn.textContent);
-  });
-  state.hiddenCats = hidden;
-  buildCatFilters();
-  filterCards(document.querySelector('.search').value);
-  closeModal('hideCatsModal');
-  markUnsaved();
-  showToast('✅ הגדרות קטגוריות נשמרו');
+function toggleCatBar() {
+  var bar = document.getElementById('catFilterBar');
+  if (!bar) return;
+  var hidden = bar.style.display === 'none';
+  bar.style.display = hidden ? '' : 'none';
+  var btn = document.getElementById('catToggleBtn');
+  if (btn) btn.classList.toggle('active', hidden);
 }
 
 function setAllFree() {
@@ -5807,9 +5766,7 @@ function filterCards(q){
     var matchFav=!showFavsOnly||!!favs[key];
     var cardCat=(c.querySelector('.cat')||{textContent:''}).textContent.trim();
     var matchCat=!activeCat||cardCat===activeCat;
-    var hidden=state.hiddenCats||[];
-    var matchHidden=!ADMIN_UNLOCKED&&hidden.indexOf(cardCat)!==-1?false:true;
-    var show=matchQ&&matchFav&&matchCat&&matchHidden;
+    var show=matchQ&&matchFav&&matchCat;
     c.style.display=show?'':'none'; if(show)visible++;
   });
   var sc=document.getElementById('subtitle-count'); if(sc)sc.textContent=visible;
