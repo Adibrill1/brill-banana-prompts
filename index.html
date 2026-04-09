@@ -5107,15 +5107,21 @@ async function activateLicenseKey(inputId) {
     });
     var data = await r.json();
     if (data.valid) {
-      // If activating a DIFFERENT key than the one stored, clear old favorites
       try {
         var prevLicense = JSON.parse(localStorage.getItem('brill_license') || 'null');
-        if (!prevLicense || prevLicense.key !== key) {
-          favs = {};
-          localStorage.setItem('bb_favs', JSON.stringify(favs));
-          document.querySelectorAll('.fav-btn').forEach(function(b){ b.classList.remove('fav-on'); b.textContent = '🤍'; });
-          updateFavCount();
+        if (prevLicense && prevLicense.key !== key) {
+          // Save current favorites under the old key before switching
+          localStorage.setItem('bb_favs_' + prevLicense.key, JSON.stringify(favs));
         }
+        // Load favorites saved for this key (empty if first time)
+        favs = JSON.parse(localStorage.getItem('bb_favs_' + key) || '{}');
+        localStorage.setItem('bb_favs', JSON.stringify(favs));
+        document.querySelectorAll('.fav-btn').forEach(function(b){
+          var k = b.getAttribute('data-key');
+          b.classList.toggle('fav-on', !!favs[k]);
+          b.textContent = favs[k] ? '❤️' : '🤍';
+        });
+        updateFavCount();
       } catch(e) {}
       var licenseData = {
         key: key,
@@ -5140,14 +5146,18 @@ async function activateLicenseKey(inputId) {
 
 function deactivateLicense() {
   if (!confirm('להסיר את הרישיון מהמכשיר הזה?')) return;
+  // Save favorites under this key before logging out, so they're restored on next login
+  try {
+    var cur = JSON.parse(localStorage.getItem('brill_license') || 'null');
+    if (cur && cur.key) {
+      localStorage.setItem('bb_favs_' + cur.key, JSON.stringify(favs));
+    }
+  } catch(e) {}
   localStorage.removeItem('brill_license');
-  // Favorites are intentionally kept — if the same user re-activates their
-  // key later, they'll find their favorites intact. Favorites are only
-  // cleared when a DIFFERENT key is activated (see activateLicenseKey).
   closeModal('accessModal');
   updateLicenseBtn();
   applyPaywallToAll();
-  showToast('הרישיון הוסר');
+  showToast('התנתקת בהצלחה');
 }
 
 function applyPaywallToAll() {
