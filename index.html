@@ -4693,6 +4693,10 @@ set the scene indoors if possible</pre></div>
     <textarea id="wtPurchaseMsg" rows="3" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);font-size:13px;resize:vertical;direction:rtl"></textarea>
     <label style="margin-top:14px">פתיחת הודעת מועדפים <span style="color:var(--text4);font-size:11px">(השתמש ב-{n} למספר הכרטיסיות)</span></label>
     <textarea id="wtFavsPrefix" rows="2" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);font-size:13px;resize:vertical;direction:rtl"></textarea>
+    <label style="margin-top:14px">🛒 הודעת הזמנת תמונות <span style="color:var(--text4);font-size:11px">({n} = מספר תמונות)</span></label>
+    <textarea id="wtOrderMsg" rows="2" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);font-size:13px;resize:vertical;direction:rtl"></textarea>
+    <label style="margin-top:14px">📅 הודעת קביעת סשן צילום</label>
+    <textarea id="wtSessionMsg" rows="3" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);font-size:13px;resize:vertical;direction:rtl"></textarea>
     <div class="modal-footer" style="margin-top:16px">
       <button class="btn btn-cancel" onclick="closeModal('waTextModal')">סגור</button>
       <button class="btn btn-ok" onclick="saveWaTexts()">✅ שמור</button>
@@ -4730,7 +4734,9 @@ set the scene indoors if possible</pre></div>
     <div class="modal-footer" style="flex-wrap:wrap;gap:8px">
       <button class="btn btn-cancel" onclick="closeModal('shareModal')">סגור</button>
       <button class="btn" style="background:#444;color:#fff" onclick="copyFavsList()">📋 העתק רשימה</button>
-      <button class="btn btn-wa" id="btnWA" onclick="sendFavsWhatsApp()">💬 שלח ב-WhatsApp</button>
+      <button class="btn btn-wa" id="btnWA" onclick="sendFavsWhatsApp()">💬 שלח רשימה</button>
+      <button class="btn" style="background:#e65100;color:#fff" id="btnOrder" onclick="orderImagesWhatsApp()">🛒 הזמן תמונות</button>
+      <button class="btn" style="background:#1565c0;color:#fff" id="btnSession" onclick="bookSessionWhatsApp()">📅 קבע סשן</button>
     </div>
   </div>
 </div>
@@ -4990,10 +4996,14 @@ function executeImport() {
 var DEFAULT_WA_CONFIG = {
   phone: '972523919350',
   purchaseMsg: 'היי! אני רוצה לרכוש גישה מלאה ל-Brill Banana Prompts 🍌',
-  favsPrefix: 'בחרתי {n} תמונות מ-Brill Banana Prompts:'
+  favsPrefix: 'בחרתי {n} תמונות מ-Brill Banana Prompts:',
+  orderMsg: 'היי! אני מעוניין/ת להזמין את התמונות הבאות ({n} תמונות) 🛒',
+  sessionMsg: 'היי! אני מעוניין/ת לקבוע סשן צילום 📅\n\nאלו התמונות שאהבתי:'
 };
 var PURCHASE_WA_URL = 'https://wa.me/972523919350?text=' + encodeURIComponent(DEFAULT_WA_CONFIG.purchaseMsg);
 var WA_FAVS_PREFIX = DEFAULT_WA_CONFIG.favsPrefix;
+var WA_ORDER_MSG   = DEFAULT_WA_CONFIG.orderMsg;
+var WA_SESSION_MSG = DEFAULT_WA_CONFIG.sessionMsg;
 
 function applyWaConfig(cfg) {
   cfg = cfg || {};
@@ -5001,9 +5011,13 @@ function applyWaConfig(cfg) {
   var phone  = (cfg.phone       || d.phone).replace(/\D/g,'');
   var purMsg = cfg.purchaseMsg  || d.purchaseMsg;
   var favsPfx= cfg.favsPrefix   || d.favsPrefix;
+  var orderMsg  = cfg.orderMsg   || d.orderMsg;
+  var sessionMsg= cfg.sessionMsg || d.sessionMsg;
   ADMIN_WHATSAPP = phone;
   PURCHASE_WA_URL = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(purMsg);
   WA_FAVS_PREFIX  = favsPfx;
+  WA_ORDER_MSG    = orderMsg;
+  WA_SESSION_MSG  = sessionMsg;
   // update buy buttons href
   ['buyBtn','unlockBuyBtn'].forEach(function(id) {
     var btn = document.getElementById(id);
@@ -5021,6 +5035,8 @@ function openWaTextModal() {
   document.getElementById('wtPhone').value       = cfg.phone       || d.phone;
   document.getElementById('wtPurchaseMsg').value = cfg.purchaseMsg || d.purchaseMsg;
   document.getElementById('wtFavsPrefix').value  = cfg.favsPrefix  || d.favsPrefix;
+  document.getElementById('wtOrderMsg').value    = cfg.orderMsg    || d.orderMsg;
+  document.getElementById('wtSessionMsg').value  = cfg.sessionMsg  || d.sessionMsg;
   openModal('waTextModal');
 }
 
@@ -5028,7 +5044,9 @@ function saveWaTexts() {
   state.waConfig = {
     phone:       document.getElementById('wtPhone').value.trim().replace(/\D/g,'') || DEFAULT_WA_CONFIG.phone,
     purchaseMsg: document.getElementById('wtPurchaseMsg').value.trim() || DEFAULT_WA_CONFIG.purchaseMsg,
-    favsPrefix:  document.getElementById('wtFavsPrefix').value.trim()  || DEFAULT_WA_CONFIG.favsPrefix
+    favsPrefix:  document.getElementById('wtFavsPrefix').value.trim()  || DEFAULT_WA_CONFIG.favsPrefix,
+    orderMsg:    document.getElementById('wtOrderMsg').value.trim()    || DEFAULT_WA_CONFIG.orderMsg,
+    sessionMsg:  document.getElementById('wtSessionMsg').value.trim()  || DEFAULT_WA_CONFIG.sessionMsg
   };
   applyWaConfig(state.waConfig);
   markUnsaved();
@@ -6084,7 +6102,10 @@ function openShareModal() {
       list.appendChild(li);
     });
   }
-  document.getElementById('btnWA').style.display = shareWhatsApp ? '' : 'none';
+  var waVisible = shareWhatsApp ? '' : 'none';
+  document.getElementById('btnWA').style.display      = waVisible;
+  document.getElementById('btnOrder').style.display   = waVisible;
+  document.getElementById('btnSession').style.display = waVisible;
   openModal('shareModal');
 }
 function copyFavsList() {
@@ -6101,15 +6122,31 @@ function copyFavsList() {
   document.execCommand('copy'); document.body.removeChild(ta);
   showToast('הרשימה הועתקה!');
 }
-function sendFavsWhatsApp() {
-  var cards = getFavCards();
-  if (!cards.length) return;
-  var prefix = (WA_FAVS_PREFIX || DEFAULT_WA_CONFIG.favsPrefix).replace('{n}', cards.length);
-  var text = prefix + '\n' + cards.map(function(c){
+function getFavListText() {
+  return getFavCards().map(function(c){
     var num = c.getAttribute('data-orig-num') || (c.querySelector('.num')||{}).textContent || '';
     var title = (c.querySelector('h3')||{}).textContent || '';
     return num + ' — ' + title;
   }).join('\n');
+}
+function sendFavsWhatsApp() {
+  var cards = getFavCards();
+  if (!cards.length) return;
+  var prefix = (WA_FAVS_PREFIX || DEFAULT_WA_CONFIG.favsPrefix).replace('{n}', cards.length);
+  var text = prefix + '\n' + getFavListText();
+  window.open('https://wa.me/'+ADMIN_WHATSAPP+'?text='+encodeURIComponent(text), '_blank');
+}
+function orderImagesWhatsApp() {
+  var cards = getFavCards();
+  if (!cards.length) return;
+  var prefix = (WA_ORDER_MSG || DEFAULT_WA_CONFIG.orderMsg).replace('{n}', cards.length);
+  var text = prefix + '\n' + getFavListText();
+  window.open('https://wa.me/'+ADMIN_WHATSAPP+'?text='+encodeURIComponent(text), '_blank');
+}
+function bookSessionWhatsApp() {
+  var cards = getFavCards();
+  var prefix = WA_SESSION_MSG || DEFAULT_WA_CONFIG.sessionMsg;
+  var text = cards.length ? prefix + '\n' + getFavListText() : prefix;
   window.open('https://wa.me/'+ADMIN_WHATSAPP+'?text='+encodeURIComponent(text), '_blank');
 }
 function filterCards(q){
