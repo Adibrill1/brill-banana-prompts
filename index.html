@@ -214,10 +214,6 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
 .cat-filter-btn:hover{background:var(--border2)}
 .cat-filter-btn.active{background:#f5a623;color:#000;border-color:#f5a623;font-weight:bold}
 /* customer preview mode */
-body.customer-preview .admin-bar{display:none}
-body.customer-preview.admin-open{padding-top:20px}
-.preview-exit-btn{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#e91e63;color:#fff;border:none;border-radius:24px;padding:10px 24px;font-size:14px;font-weight:bold;cursor:pointer;z-index:9999;box-shadow:0 4px 16px rgba(0,0,0,.5);display:none}
-body.customer-preview .preview-exit-btn{display:block}
 /* ec-dup button */
 .ec-dup{background:#0288d1;color:#fff}.ec-dup:hover{background:#0296d0}
 /* access modal tabs */
@@ -239,13 +235,10 @@ body.customer-preview .preview-exit-btn{display:block}
   <button class="btn btn-edit" id="waToggle" onclick="toggleWaShare()" title="שליחת מועדפים ב-WhatsApp">💬 WA</button>
   <button class="btn btn-edit" onclick="openKeysModal()">🔑 ססמאות</button>
   <button class="btn btn-edit" id="catToggleBtn" onclick="toggleCatBar()">🙈 קטגוריות</button>
-  <button class="btn btn-edit" onclick="setAllFree()" title="סמן את כל הפרומפטים כחינמיים">🆓 פתח הכל</button>
-  <button class="btn btn-edit" onclick="setAllPremium()" title="החזר את כל הפרומפטים לנעול">🔒 סגור הכל</button>
+  <button class="btn btn-edit" id="freeToggleBtn" onclick="toggleAllFree()" title="פתח/סגור את כל הפרומפטים">🆓 פתח הכל</button>
   <button class="btn btn-edit" onclick="exportCSV()" title="ייצוא לאקסל">📤 CSV</button>
-  <button class="btn btn-edit" id="previewToggle" onclick="toggleCustomerPreview()" title="תצוגת לקוח">👁️ תצוגת לקוח</button>
   <span class="free-counter" id="freeCounter">🆓 0/50</span>
 </div>
-<button class="preview-exit-btn" onclick="toggleCustomerPreview()">🚪 יציאה מתצוגת לקוח</button>
 <h1>Brill 🍌 Banana Prompts</h1>
 <p class="subtitle"><span id="subtitle-count">241</span> פרומפטים | 📋 Copy להעתקה | לחץ על תמונה לתצוגה מוגדלת</p>
 <div class="toolbar">
@@ -4830,7 +4823,7 @@ function getLicenseExpiry() {
 }
 
 function shouldShowFull(key) {
-  if (!previewMode && isPremiumUser()) return true;
+  if (isPremiumUser()) return true;
   return !!(state.freePrompts && state.freePrompts[key]);
 }
 
@@ -4968,27 +4961,32 @@ function toggleFreeStatus(key) {
   markUnsaved();
 }
 
-// ── סגור הכל ──────────────────────────────────────────────
-function setAllPremium() {
-  state.freePrompts = {};
+// ── פתח/סגור הכל ──────────────────────────────────────────
+var allFreeState = false;
+function toggleAllFree() {
+  var btn = document.getElementById('freeToggleBtn');
+  if (!allFreeState) {
+    // פתח הכל
+    if (!state.freePrompts) state.freePrompts = {};
+    document.querySelectorAll('#grid .card[data-key]').forEach(function(card) {
+      state.freePrompts[card.getAttribute('data-key')] = true;
+    });
+    allFreeState = true;
+    if (btn) { btn.textContent = '🔒 סגור הכל'; btn.classList.add('active'); }
+    showToast('✅ כל הפרומפטים פתוחים');
+  } else {
+    // סגור הכל
+    state.freePrompts = {};
+    document.querySelectorAll('.ec-free').forEach(function(b) {
+      b.classList.remove('is-premium'); b.textContent = '🆓 Set Free';
+    });
+    allFreeState = false;
+    if (btn) { btn.textContent = '🆓 פתח הכל'; btn.classList.remove('active'); }
+    showToast('🔒 כל הפרומפטים נעולים');
+  }
   applyPaywallToAll();
   updateFreeCounter();
-  // sync ec-free buttons
-  document.querySelectorAll('.ec-free').forEach(function(btn) {
-    btn.classList.remove('is-premium');
-    btn.textContent = '🆓 Set Free';
-  });
   markUnsaved();
-  showToast('🔒 כל הפרומפטים הוחזרו למצב נעול');
-}
-
-// ── תצוגת לקוח ────────────────────────────────────────────
-var previewMode = false;
-function toggleCustomerPreview() {
-  previewMode = !previewMode;
-  document.body.classList.toggle('customer-preview', previewMode);
-  if (previewMode) applyPaywallToAll();
-  else applyPaywallToAll();
 }
 
 // ── שכפל כרטיס ────────────────────────────────────────────
