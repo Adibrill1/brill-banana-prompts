@@ -248,7 +248,8 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
   <button class="btn btn-edit" onclick="openKeysModal()">🔑 ססמאות</button>
   <button class="btn btn-edit" id="catToggleBtn" onclick="toggleCatBar()">🙈 קטגוריות</button>
   <button class="btn btn-edit" id="freeToggleBtn" onclick="toggleFreeEnabled()" title="הדלק/כבה גישה חינמית">🔴 חינם כבוי</button>
-  <button class="btn btn-edit" onclick="openPremiumTextModal()" title="ערוך טקסטים בחלון הפרימיום">🖊️ חלון פרימיום</button>
+  <button class="btn btn-edit" onclick="openPremiumTextModal()" title="ערוך טקסטים בחלון הפרימיום">🔒 פרימיום</button>
+  <button class="btn btn-edit" onclick="openWaTextModal()" title="ערוך הודעות וואטסאפ">📱 הודעות WA</button>
   <button class="btn btn-edit" onclick="exportCSV()" title="ייצוא לאקסל">📤 CSV</button>
   <span class="free-counter" id="freeCounter">🆓 0/50</span>
 </div>
@@ -4642,6 +4643,21 @@ set the scene indoors if possible</pre></div>
     </div>
   </div>
 </div>
+<div class="modal-bg" id="waTextModal">
+  <div class="modal" style="max-width:460px">
+    <h2>📱 עריכת הודעות וואטסאפ</h2>
+    <label>מספר טלפון (ללא + וללא רווחים)</label>
+    <input type="text" id="wtPhone" placeholder="972523919350" style="direction:ltr">
+    <label style="margin-top:14px">הודעת בקשת רכישה</label>
+    <textarea id="wtPurchaseMsg" rows="3" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);font-size:13px;resize:vertical;direction:rtl"></textarea>
+    <label style="margin-top:14px">פתיחת הודעת מועדפים <span style="color:var(--text4);font-size:11px">(השתמש ב-{n} למספר הכרטיסיות)</span></label>
+    <textarea id="wtFavsPrefix" rows="2" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);font-size:13px;resize:vertical;direction:rtl"></textarea>
+    <div class="modal-footer" style="margin-top:16px">
+      <button class="btn btn-cancel" onclick="closeModal('waTextModal')">סגור</button>
+      <button class="btn btn-ok" onclick="saveWaTexts()">✅ שמור</button>
+    </div>
+  </div>
+</div>
 <div class="modal-bg" id="premiumTextModal">
   <div class="modal" style="max-width:460px">
     <h2>🖊️ עריכת חלון פרימיום</h2>
@@ -4732,7 +4748,7 @@ try {
 function isEmptyState(st) {
   if (!st) return true;
   if (st._saved) return false; // explicitly saved state, always use it
-  return ((!st.deleted||!st.deleted.length) && (!st.added||!st.added.length) && (!st.order||!st.order.length) && (!st.customImgs||!Object.keys(st.customImgs).length) && (!st.promptEdits||!Object.keys(st.promptEdits).length) && (!st.freePrompts||!Object.keys(st.freePrompts).length) && !st.freeEnabled);
+  return ((!st.deleted||!st.deleted.length) && (!st.added||!st.added.length) && (!st.order||!st.order.length) && (!st.customImgs||!Object.keys(st.customImgs).length) && (!st.promptEdits||!Object.keys(st.promptEdits).length) && (!st.freePrompts||!Object.keys(st.freePrompts).length) && !st.freeEnabled && !st.freeMode);
 }
 
 // ── Keys Management ──────────────────────────────────────
@@ -4842,7 +4858,54 @@ async function deleteKey(key) {
 // ─────────────────────────────────────────────────────────
 
 // ── Paywall ──────────────────────────────────────────────
-var PURCHASE_WA_URL = 'https://wa.me/972523919350?text=' + encodeURIComponent('היי! אני רוצה לרכוש גישה מלאה ל-Brill Banana Prompts 🍌');
+var DEFAULT_WA_CONFIG = {
+  phone: '972523919350',
+  purchaseMsg: 'היי! אני רוצה לרכוש גישה מלאה ל-Brill Banana Prompts 🍌',
+  favsPrefix: 'בחרתי {n} תמונות מ-Brill Banana Prompts:'
+};
+var PURCHASE_WA_URL = 'https://wa.me/972523919350?text=' + encodeURIComponent(DEFAULT_WA_CONFIG.purchaseMsg);
+var WA_FAVS_PREFIX = DEFAULT_WA_CONFIG.favsPrefix;
+
+function applyWaConfig(cfg) {
+  cfg = cfg || {};
+  var d = DEFAULT_WA_CONFIG;
+  var phone  = (cfg.phone       || d.phone).replace(/\D/g,'');
+  var purMsg = cfg.purchaseMsg  || d.purchaseMsg;
+  var favsPfx= cfg.favsPrefix   || d.favsPrefix;
+  ADMIN_WHATSAPP = phone;
+  PURCHASE_WA_URL = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(purMsg);
+  WA_FAVS_PREFIX  = favsPfx;
+  // update buy buttons href
+  ['buyBtn','unlockBuyBtn'].forEach(function(id) {
+    var btn = document.getElementById(id);
+    if (btn && (!btn.getAttribute('href') || btn.getAttribute('href') === '#' || btn.getAttribute('href').indexOf('wa.me') !== -1)) {
+      // only override if no custom URL was set via modalConfig
+      var mc = state.modalConfig;
+      if (!mc || !mc.buyUrl) btn.href = PURCHASE_WA_URL;
+    }
+  });
+}
+
+function openWaTextModal() {
+  var cfg = state.waConfig || {};
+  var d = DEFAULT_WA_CONFIG;
+  document.getElementById('wtPhone').value       = cfg.phone       || d.phone;
+  document.getElementById('wtPurchaseMsg').value = cfg.purchaseMsg || d.purchaseMsg;
+  document.getElementById('wtFavsPrefix').value  = cfg.favsPrefix  || d.favsPrefix;
+  openModal('waTextModal');
+}
+
+function saveWaTexts() {
+  state.waConfig = {
+    phone:       document.getElementById('wtPhone').value.trim().replace(/\D/g,'') || DEFAULT_WA_CONFIG.phone,
+    purchaseMsg: document.getElementById('wtPurchaseMsg').value.trim() || DEFAULT_WA_CONFIG.purchaseMsg,
+    favsPrefix:  document.getElementById('wtFavsPrefix').value.trim()  || DEFAULT_WA_CONFIG.favsPrefix
+  };
+  applyWaConfig(state.waConfig);
+  markUnsaved();
+  closeModal('waTextModal');
+  showToast('✅ הודעות WA עודכנו — לחץ פרסם לשמירה');
+}
 
 function isPremiumUser() {
   try {
@@ -4860,10 +4923,17 @@ function getLicenseExpiry() {
   } catch(e) { return null; }
 }
 
+function getFreeMode() {
+  if (state.freeMode) return state.freeMode;
+  return state.freeEnabled ? 'partial' : 'off'; // backward compat
+}
+
 function shouldShowFull(key) {
   if (!ADMIN_UNLOCKED && isPremiumUser()) return true;
-  if (!state.freeEnabled) return false;
-  return !!(state.freePrompts && state.freePrompts[key]);
+  var mode = getFreeMode();
+  if (mode === 'full') return true;
+  if (mode === 'partial') return !!(state.freePrompts && state.freePrompts[key]);
+  return false;
 }
 
 function updateLicenseBtn() {
@@ -4977,9 +5047,10 @@ function updateFreeCounter() {
   el.classList.toggle('at-limit', count >= 50);
   var btn = document.getElementById('freeToggleBtn');
   if (btn) {
-    var on = !!state.freeEnabled;
-    btn.textContent = on ? '🟢 חינם פעיל' : '🔴 חינם כבוי';
-    btn.classList.toggle('active', on);
+    var mode = getFreeMode();
+    var labels = { off: '🔴 חינם כבוי', partial: '🟡 חינם חלקי', full: '🟢 חינם מלא' };
+    btn.textContent = labels[mode] || '🔴 חינם כבוי';
+    btn.classList.toggle('active', mode !== 'off');
   }
 }
 
@@ -5068,11 +5139,17 @@ function savePremiumTexts() {
 }
 
 function toggleFreeEnabled() {
-  state.freeEnabled = !state.freeEnabled;
+  var mode = getFreeMode();
+  if (mode === 'off') mode = 'partial';
+  else if (mode === 'partial') mode = 'full';
+  else mode = 'off';
+  state.freeMode = mode;
+  delete state.freeEnabled;
   applyPaywallToAll();
   updateFreeCounter();
   markUnsaved();
-  showToast(state.freeEnabled ? '🟢 גישה חינמית הופעלה' : '🔴 גישה חינמית כובתה');
+  var msgs = { off: '🔴 גישה חינמית כבויה', partial: '🟡 חינם חלקי הופעל', full: '🟢 חינם מלא הופעל' };
+  showToast(msgs[mode]);
 }
 
 // ── שכפל כרטיס ────────────────────────────────────────────
@@ -5304,6 +5381,7 @@ function applyState(st) {
   initPaywallDOM();
   updateFreeCounter();
   applyModalConfig(st.modalConfig);
+  applyWaConfig(st.waConfig);
   updateLicenseBtn();
   applyPaywallToAll();
   buildCatFilters();
@@ -5362,10 +5440,10 @@ async function publishChanges() {
       btn.disabled = false;
       btn.textContent = '\u{1F310} \u05e4\u05e8\u05e1\u05dd \u05e9\u05d9\u05e0\u05d5\u05d9\u05d9\u05dd';
       var freeCount = Object.keys(state.freePrompts || {}).length;
-      var enabled = !!state.freeEnabled;
-      var statusMsg = !enabled
-        ? '🔴 גישה חינמית כבויה (' + freeCount + ' ברשימה)'
-        : '🟢 ' + freeCount + ' פרומפטים חינמיים פעילים';
+      var mode = getFreeMode();
+      var statusMsg = mode === 'full'    ? '🟢 חינם מלא — כל הפרומפטים חינמיים'
+                    : mode === 'partial' ? '🟡 חינם חלקי — ' + freeCount + ' פרומפטים'
+                    :                     '🔴 גישה חינמית כבויה (' + freeCount + ' ברשימה)';
       showToast('✅ פורסם — ' + statusMsg, 5000);
     } else {
       var errData = await r.json().catch(function(){return {};});
@@ -5860,7 +5938,8 @@ function copyFavsList() {
 function sendFavsWhatsApp() {
   var cards = getFavCards();
   if (!cards.length) return;
-  var text = 'בחרתי ' + cards.length + ' תמונות מ-Brill Banana Prompts:\n' + cards.map(function(c){
+  var prefix = (WA_FAVS_PREFIX || DEFAULT_WA_CONFIG.favsPrefix).replace('{n}', cards.length);
+  var text = prefix + '\n' + cards.map(function(c){
     var num = c.getAttribute('data-orig-num') || (c.querySelector('.num')||{}).textContent || '';
     var title = (c.querySelector('h3')||{}).textContent || '';
     return num + ' — ' + title;
