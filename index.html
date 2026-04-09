@@ -247,7 +247,7 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
   <button class="btn btn-edit" id="waToggle" onclick="toggleWaShare()" title="שליחת מועדפים ב-WhatsApp">💬 WA</button>
   <button class="btn btn-edit" onclick="openKeysModal()">🔑 ססמאות</button>
   <button class="btn btn-edit" id="catToggleBtn" onclick="toggleCatBar()">🙈 קטגוריות</button>
-  <button class="btn btn-edit" id="freeToggleBtn" onclick="toggleFreeEnabled()" title="הדלק/כבה גישה חינמית">🔴 חינם כבוי</button>
+  <button class="btn btn-edit" id="freeToggleBtn" onclick="toggleFreeEnabled()" title="הדלק/כבה גישה חינמית">🔴 כבוי</button>
   <button class="btn btn-edit" onclick="openPremiumTextModal()" title="ערוך טקסטים בחלון הפרימיום">🔒 פרימיום</button>
   <button class="btn btn-edit" onclick="openWaTextModal()" title="ערוך הודעות וואטסאפ">📱 הודעות WA</button>
   <button class="btn btn-edit" onclick="exportCSV()" title="ייצוא לאקסל">📤 CSV</button>
@@ -5048,8 +5048,8 @@ function updateFreeCounter() {
   var btn = document.getElementById('freeToggleBtn');
   if (btn) {
     var mode = getFreeMode();
-    var labels = { off: '🔴 חינם כבוי', partial: '🟡 חינם חלקי', full: '🟢 חינם מלא' };
-    btn.textContent = labels[mode] || '🔴 חינם כבוי';
+    var labels = { off: '🔴 כבוי', partial: '🟡 חינם חלקי', full: '🟢 חינם מלא' };
+    btn.textContent = labels[mode] || '🔴 כבוי';
     btn.classList.toggle('active', mode !== 'off');
   }
 }
