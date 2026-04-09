@@ -5434,6 +5434,11 @@ document.documentElement.style.opacity = '1';
 // Then fetch authoritative state from server and re-apply if it has data
 fetch('/api/state').then(function(r){ return r.json(); }).then(function(serverState) {
   if (!isEmptyState(serverState)) {
+    // Skip stale server state: if local state was published MORE recently, keep it
+    // (GitHub CDN can briefly serve old state.json right after a write)
+    if (serverState._publishedAt && state._publishedAt && serverState._publishedAt < state._publishedAt) {
+      return; // local state is newer — ignore stale CDN response
+    }
     serverCustomImgs = serverState.customImgs || {};
     state = serverState;
     localStorage.setItem('nb_state', JSON.stringify(state));
@@ -5532,6 +5537,7 @@ async function publishChanges() {
     // Replace stale base64 with confirmed server paths to avoid exceeding 4.5MB body limit
     var stateToPost = JSON.parse(JSON.stringify(state));
     stateToPost._saved = true;
+    stateToPost._publishedAt = Date.now();
     Object.keys(stateToPost.customImgs || {}).forEach(function(key) {
       if ((stateToPost.customImgs[key] || '').startsWith('data:') && serverCustomImgs[key]) {
         stateToPost.customImgs[key] = serverCustomImgs[key];

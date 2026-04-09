@@ -30,7 +30,7 @@ function ghGet(token, filePath) {
         catch(e) { resolve({ status: r.statusCode, data: {} }); }
       });
     });
-    req.setTimeout(4000, function() { req.destroy(); resolve({ status: 0, data: {} }); });
+    req.setTimeout(8000, function() { req.destroy(); resolve({ status: 0, data: {} }); });
     req.on('error', function() { resolve({ status: 0, data: {} }); });
     req.end();
   });
@@ -62,7 +62,7 @@ function ghPut(token, filePath, content, sha, message) {
         catch(e) { resolve({ status: r.statusCode, data: {} }); }
       });
     });
-    req.setTimeout(4000, function() { req.destroy(); resolve({ status: 0, data: {} }); });
+    req.setTimeout(8000, function() { req.destroy(); resolve({ status: 0, data: {} }); });
     req.on('error', function() { resolve({ status: 0, data: {} }); });
     req.write(bodyStr);
     req.end();
