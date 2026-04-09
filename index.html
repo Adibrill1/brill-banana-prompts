@@ -40,7 +40,7 @@ h1{text-align:center;color:#f5a623;font-size:2em;margin-bottom:6px}
 .btn-publish:disabled{background:#555;color:#888;cursor:not-allowed}
 .count{text-align:center;color:var(--text4);font-size:12px;margin-bottom:18px}
 /* theme toggle */
-.btn-theme{background:var(--bg4);color:var(--text);border:1px solid var(--border2);font-size:16px;padding:7px 12px}
+.btn-theme{position:fixed;top:12px;right:12px;z-index:9999;background:var(--bg4);color:var(--text);border:1px solid var(--border2);font-size:16px;padding:7px 12px;border-radius:7px;cursor:pointer;transition:background .15s}
 .btn-theme:hover{background:var(--border2)}
 .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;max-width:1900px;margin:0 auto}
 @media(max-width:1600px){.grid{grid-template-columns:repeat(4,1fr)}}
@@ -225,6 +225,7 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
 </style>
 </head>
 <body>
+<button class="btn btn-theme" id="themeBtn" onclick="toggleTheme()" title="מצב לילה/יום">🌙</button>
 <div class="admin-bar" id="adminBar">
   <span class="admin-label">🍌 Brill Banana Admin</span>
   <span class="unsaved-dot" id="unsavedDot" title="יש שינויים לא מפורסמים"></span>
@@ -244,7 +245,6 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
 <div class="toolbar">
   <input class="search" type="search" placeholder="🔍 חפש לפי שם או תוכן..." oninput="filterCards(this.value)" autocomplete="off">
   <button class="btn btn-license" id="accessBtn" onclick="openAccessModal('premium')">🔑 Activate</button>
-  <button class="btn btn-theme" id="themeBtn" onclick="toggleTheme()" title="מצב לילה/יום">🌙</button>
   <button class="btn btn-fav-filter" id="favFilterBtn" onclick="toggleFavFilter()">❤️ מועדפים</button>
   <button class="btn" id="btnSendFavs" style="display:none;background:#1a1a1a;color:#888;border:1px solid #333;font-size:12px" onclick="openShareModal()">📤 שלח מועדפים</button>
   <button class="btn" id="btnClearFavs" style="display:none;background:#1a1a1a;color:#888;border:1px solid #333;font-size:12px" onclick="clearFavs()">🗑️ אפס בחירה</button>
@@ -5095,9 +5095,8 @@ function toggleCatBar() {
   var hidden = bar.style.display === 'none';
   bar.style.display = hidden ? '' : 'none';
   var btn = document.getElementById('catToggleBtn');
-  if (btn) btn.classList.toggle('active', hidden);
-  state.catBarHidden = !hidden;
-  markUnsaved();
+  if (btn) btn.classList.toggle('active', !hidden);
+  localStorage.setItem('bb_cat_hidden', hidden ? 'false' : 'true');
 }
 
 function setAllFree() {
@@ -5227,11 +5226,12 @@ function applyState(st) {
   updateLicenseBtn();
   applyPaywallToAll();
   buildCatFilters();
-  // restore cat bar visibility
+  // restore cat bar visibility from localStorage
   var bar = document.getElementById('catFilterBar');
-  if (bar) bar.style.display = st.catBarHidden ? 'none' : '';
+  var catHidden = localStorage.getItem('bb_cat_hidden') === 'true';
+  if (bar) bar.style.display = catHidden ? 'none' : '';
   var catBtn = document.getElementById('catToggleBtn');
-  if (catBtn) catBtn.classList.toggle('active', !!st.catBarHidden);
+  if (catBtn) catBtn.classList.toggle('active', catHidden);
   // restore free toggle button label
   var totalCards = document.querySelectorAll('#grid .card[data-key]').length;
   var freeCount = Object.keys(st.freePrompts || {}).length;
