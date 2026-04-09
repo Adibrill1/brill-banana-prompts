@@ -5146,13 +5146,17 @@ async function activateLicenseKey(inputId) {
 
 function deactivateLicense() {
   if (!confirm('להתנתק מהמכשיר הזה?')) return;
-  // Save favorites under this key before logging out, so they're restored on next login
+  // Save favorites under this key before logging out, then clear the display
   try {
     var cur = JSON.parse(localStorage.getItem('brill_license') || 'null');
     if (cur && cur.key) {
       localStorage.setItem('bb_favs_' + cur.key, JSON.stringify(favs));
     }
   } catch(e) {}
+  favs = {};
+  localStorage.setItem('bb_favs', JSON.stringify(favs));
+  document.querySelectorAll('.fav-btn').forEach(function(b){ b.classList.remove('fav-on'); b.textContent = '🤍'; });
+  updateFavCount();
   localStorage.removeItem('brill_license');
   closeModal('accessModal');
   updateLicenseBtn();
