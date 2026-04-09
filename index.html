@@ -248,6 +248,7 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
   <button class="btn btn-edit" onclick="openKeysModal()">🔑 ססמאות</button>
   <button class="btn btn-edit" id="catToggleBtn" onclick="toggleCatBar()">🙈 קטגוריות</button>
   <button class="btn btn-edit" id="freeToggleBtn" onclick="toggleFreeEnabled()" title="הדלק/כבה גישה חינמית">🔴 כבוי</button>
+  <button class="btn btn-edit" onclick="openImportModal()" title="ייבוא כרטיסיות בקבוצה">📥 ייבוא</button>
   <button class="btn btn-edit" onclick="openPremiumTextModal()" title="ערוך טקסטים בחלון הפרימיום">🔒 פרימיום</button>
   <button class="btn btn-edit" onclick="openWaTextModal()" title="ערוך הודעות וואטסאפ">📱 הודעות WA</button>
   <button class="btn btn-edit" onclick="exportCSV()" title="ייצוא לאקסל">📤 CSV</button>
@@ -4643,6 +4644,25 @@ set the scene indoors if possible</pre></div>
     </div>
   </div>
 </div>
+<div class="modal-bg" id="importModal">
+  <div class="modal" style="max-width:500px">
+    <h2>📥 ייבוא כרטיסיות</h2>
+    <p style="color:var(--text2);font-size:12px;margin-bottom:14px">הכן קובץ JSON עם הפרומפטים ותמונות עם שמות תואמים.</p>
+    <label>1. קובץ JSON</label>
+    <input type="file" id="importJsonFile" accept=".json" style="margin-bottom:12px">
+    <label>2. תמונות (בחרי מספר קבצים)</label>
+    <input type="file" id="importImgFiles" accept="image/*" multiple style="margin-bottom:14px">
+    <div id="importPreview" style="display:none;max-height:220px;overflow-y:auto;border:1px solid var(--border2);border-radius:8px;padding:10px;margin-bottom:14px;font-size:12px"></div>
+    <p style="color:var(--text4);font-size:11px;margin-bottom:14px">
+      פורמט JSON לדוגמה:<br>
+      <code style="direction:ltr;display:block;background:var(--prompt-bg);padding:6px;border-radius:5px;margin-top:4px">[{"title":"שם","cat":"קטגוריה","prompt":"...","image":"photo.jpg"}]</code>
+    </p>
+    <div class="modal-footer">
+      <button class="btn btn-cancel" onclick="closeModal('importModal')">סגור</button>
+      <button class="btn btn-ok" id="importExecBtn" onclick="executeImport()" disabled>📥 ייבא</button>
+    </div>
+  </div>
+</div>
 <div class="modal-bg" id="waTextModal">
   <div class="modal" style="max-width:460px">
     <h2>📱 עריכת הודעות וואטסאפ</h2>
@@ -4858,6 +4878,93 @@ async function deleteKey(key) {
 // ─────────────────────────────────────────────────────────
 
 // ── Paywall ──────────────────────────────────────────────
+// ── Batch Import ──────────────────────────────────────────
+var _importData = { cards: [], images: {} };
+
+function openImportModal() {
+  _importData = { cards: [], images: {} };
+  document.getElementById('importJsonFile').value = '';
+  document.getElementById('importImgFiles').value = '';
+  document.getElementById('importPreview').style.display = 'none';
+  document.getElementById('importExecBtn').disabled = true;
+  openModal('importModal');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('importJsonFile').addEventListener('change', function(e) {
+    var file = e.target.files[0];
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function(ev) {
+      try {
+        _importData.cards = JSON.parse(ev.target.result);
+        if (!Array.isArray(_importData.cards)) throw new Error();
+        updateImportPreview();
+      } catch(err) {
+        alert('קובץ JSON לא תקין');
+        _importData.cards = [];
+      }
+    };
+    reader.readAsText(file);
+  });
+
+  document.getElementById('importImgFiles').addEventListener('change', function(e) {
+    _importData.images = {};
+    var files = Array.from(e.target.files);
+    var done = 0;
+    if (!files.length) { updateImportPreview(); return; }
+    files.forEach(function(file) {
+      var reader = new FileReader();
+      reader.onload = function(ev) {
+        _importData.images[file.name] = ev.target.result;
+        done++;
+        if (done === files.length) updateImportPreview();
+      };
+      reader.readAsDataURL(file);
+    });
+  });
+});
+
+function updateImportPreview() {
+  var cards = _importData.cards;
+  var images = _importData.images;
+  var preview = document.getElementById('importPreview');
+  var btn = document.getElementById('importExecBtn');
+  if (!cards.length) { preview.style.display = 'none'; btn.disabled = true; return; }
+  var rows = cards.map(function(c, i) {
+    var hasImg = c.image && images[c.image];
+    var imgStatus = !c.image ? '<span style="color:var(--text4)">ללא תמונה</span>'
+                  : hasImg   ? '<span style="color:#4caf50">✅ ' + c.image + '</span>'
+                  :            '<span style="color:#e53935">❌ לא נמצאה: ' + c.image + '</span>';
+    return '<div style="padding:4px 0;border-bottom:1px solid var(--border3)">'
+      + '<strong>' + (c.title || 'ללא שם') + '</strong> · ' + (c.cat || '') + '<br>' + imgStatus + '</div>';
+  }).join('');
+  preview.innerHTML = '<div style="margin-bottom:6px;font-weight:bold">' + cards.length + ' כרטיסיות:</div>' + rows;
+  preview.style.display = 'block';
+  btn.disabled = false;
+  btn.textContent = '📥 ייבא ' + cards.length + ' כרטיסיות';
+}
+
+function executeImport() {
+  var cards = _importData.cards;
+  var images = _importData.images;
+  if (!cards.length) return;
+  if (!state.added) state.added = [];
+  var ts = Date.now();
+  cards.forEach(function(c, i) {
+    var key = 'added_import_' + ts + '_' + i;
+    var imgSrc = (c.image && images[c.image]) ? images[c.image] : '';
+    var p = { key: key, title: c.title || '', cat: c.cat || '', prompt: c.prompt || '', images: imgSrc ? [imgSrc] : [] };
+    state.added.push(p);
+    if (imgSrc) { if (!state.customImgs) state.customImgs = {}; state.customImgs[key] = imgSrc; }
+    appendCard(p);
+  });
+  updateCount(); renumberCards();
+  markUnsaved();
+  closeModal('importModal');
+  showToast('✅ יובאו ' + cards.length + ' כרטיסיות — לחץ פרסם לשמירה');
+}
+
 var DEFAULT_WA_CONFIG = {
   phone: '972523919350',
   purchaseMsg: 'היי! אני רוצה לרכוש גישה מלאה ל-Brill Banana Prompts 🍌',
