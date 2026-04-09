@@ -5096,6 +5096,8 @@ function toggleCatBar() {
   bar.style.display = hidden ? '' : 'none';
   var btn = document.getElementById('catToggleBtn');
   if (btn) btn.classList.toggle('active', hidden);
+  state.catBarHidden = !hidden;
+  markUnsaved();
 }
 
 function setAllFree() {
@@ -5225,6 +5227,20 @@ function applyState(st) {
   updateLicenseBtn();
   applyPaywallToAll();
   buildCatFilters();
+  // restore cat bar visibility
+  var bar = document.getElementById('catFilterBar');
+  if (bar) bar.style.display = st.catBarHidden ? 'none' : '';
+  var catBtn = document.getElementById('catToggleBtn');
+  if (catBtn) catBtn.classList.toggle('active', !!st.catBarHidden);
+  // restore free toggle button label
+  var totalCards = document.querySelectorAll('#grid .card[data-key]').length;
+  var freeCount = Object.keys(st.freePrompts || {}).length;
+  allFreeState = freeCount > 0 && freeCount >= totalCards;
+  var ftBtn = document.getElementById('freeToggleBtn');
+  if (ftBtn) {
+    ftBtn.textContent = allFreeState ? '🔒 סגור הכל' : '🆓 פתח הכל';
+    ftBtn.classList.toggle('active', allFreeState);
+  }
 }
 
 function markUnsaved() {
