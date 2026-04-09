@@ -71,10 +71,8 @@ h1{text-align:center;color:#f5a623;font-size:2em;margin-bottom:6px}
 .card-header{display:flex;align-items:center;gap:8px;margin-bottom:8px}
 .num{color:#f5a623;font-weight:bold;font-size:12px;min-width:32px}
 .cat{background:var(--bg4);color:var(--text2);font-size:11px;padding:2px 8px;border-radius:20px;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.copy-btn{background:#4caf50;color:#fff;border:none;padding:7px 14px;border-radius:6px;cursor:pointer;font-weight:bold;font-size:12px;white-space:nowrap}
-.copy-btn:hover{background:#66bb6a}
-body.free-full .copy-btn{background:#f5a623;color:#000}
-body.free-full .copy-btn:hover{background:#ffc04d}
+.copy-btn{background:#f5a623;color:#000;border:none;padding:7px 14px;border-radius:6px;cursor:pointer;font-weight:bold;font-size:12px;white-space:nowrap}
+.copy-btn:hover{background:#ffc04d}
 .copy-btn.ok{background:#4caf50;color:#fff}
 .edit-controls{display:none;gap:5px;margin-bottom:10px;flex-wrap:wrap;align-items:center}
 .body-edit .edit-controls{display:flex}
@@ -184,9 +182,9 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
 .card.locked-prompt .prompt-wrap::after{content:'';position:absolute;bottom:0;left:0;right:0;height:55px;background:linear-gradient(to bottom,transparent,var(--card-bg) 90%);pointer-events:none}
 .card.locked-prompt .prompt-text{max-height:55px;overflow:hidden;margin-bottom:0;user-select:none;-webkit-user-select:none;pointer-events:none}
 .card.locked-prompt .copy-btn{display:none !important}
-.unlock-btn{width:100%;padding:10px 16px;background:linear-gradient(135deg,#f5a623,#f97316);color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:bold;cursor:pointer;margin-top:8px;display:none;transition:opacity .15s}
-.unlock-btn:hover{opacity:.85}
-.card.locked-prompt .unlock-btn{display:block}
+.unlock-btn{background:#e53935;color:#fff;border:none;padding:7px 14px;border-radius:6px;cursor:pointer;font-weight:bold;font-size:12px;white-space:nowrap;display:none}
+.unlock-btn:hover{background:#ef5350}
+.card.locked-prompt .unlock-btn{display:inline-block}
 .free-badge{display:none !important}
 .ec-free{background:#4caf50;color:#fff}.ec-free:hover{background:#66bb6a}
 .ec-free.is-premium{background:#f5a623;color:#000}.ec-free.is-premium:hover{background:#ffc04d}
@@ -5147,8 +5145,6 @@ function applyPaywallToAll() {
 function applyPaywallToCard(card, key) {
   var full = shouldShowFull(key);
   card.classList.toggle('locked-prompt', !full);
-  var unlockBtn = card.querySelector('.unlock-btn');
-  if (unlockBtn) unlockBtn.style.display = full ? 'none' : 'block';
   // free badge
   var isFree = !!(state.freePrompts && state.freePrompts[key]);
   var badge = card.querySelector('.free-badge');
@@ -5765,9 +5761,9 @@ function appendCard(p) {
     +'<div class="card-header"><span class="num">#'+p.id+'</span>'
     +'<span class="cat">'+(p.cat||'')+'</span>'
     +'<button class="copy-btn" data-action="copy" data-key="'+p.key+'">\u{1F4CB} Copy</button>'
+    +'<button class="unlock-btn" data-action="unlock">🔒 פרימיום</button>'
     +'</div><h3>'+escHtml(p.title)+'</h3>'+thumbHtml
-    +'<div class="prompt-wrap"><pre class="prompt-text">'+escHtml(p.prompt)+'</pre></div>'
-    +'<button class="unlock-btn" data-action="unlock">🔒 פרימיום</button>';
+    +'<div class="prompt-wrap"><pre class="prompt-text">'+escHtml(p.prompt)+'</pre></div>';
   if (editMode) el.setAttribute('draggable','true');
   document.getElementById('grid').appendChild(el);
   var header = el.querySelector('.card-header');
@@ -5942,13 +5938,15 @@ function initPaywallDOM() {
       pre.parentNode.insertBefore(wrap, pre);
       wrap.appendChild(pre);
     }
-    // add unlock button if missing
+    // add unlock button into card-header (next to copy-btn) if missing
     if (!card.querySelector('.unlock-btn')) {
       var ub = document.createElement('button');
       ub.className = 'unlock-btn';
       ub.setAttribute('data-action', 'unlock');
       ub.textContent = '🔒 פרימיום';
-      card.appendChild(ub);
+      var copyBtn = card.querySelector('.copy-btn');
+      if (copyBtn) copyBtn.insertAdjacentElement('afterend', ub);
+      else card.querySelector('.card-header').appendChild(ub);
     }
     // add free badge if missing
     if (!card.querySelector('.free-badge')) {
