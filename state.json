@@ -313,7 +313,23 @@
     "added_imp_0364",
     "added_imp_0363",
     "added_imp_0367",
-    "added_imp_0369"
+    "added_imp_0369",
+    "added_imp_0372",
+    "added_imp_0377",
+    "added_imp_0374",
+    "added_imp_0378",
+    "added_imp_0381",
+    "added_imp_0382",
+    "added_imp_0380",
+    "added_imp_0384",
+    "added_imp_0385",
+    "added_imp_0386",
+    "added_imp_0387",
+    "added_imp_0388",
+    "added_imp_0389",
+    "added_imp_0390",
+    "added_imp_0391",
+    "added_imp_0393"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -5429,9 +5445,9 @@
       "id": "new",
       "title": "Generate Portrait Based",
       "cat": "",
-      "prompt": "I. Overall Objective\n\n1. Function Description: Based on user-uploaded reference images, extract the subject's temperament, makeup style, lighting, and color characteristics to create a unique fashion portrait collage.\n\n2. Difference Requirements: Preserve the facial features and overall temperament of the reference subject; do not directly copy the original image. Makeup and composition should be creatively varied within the same stylistic framework.\n\nII. Input Reference Image Requirements\n\n1. Reference Content: A clear front-facing or two-thirds profile photo of a person, clearly showing facial features, skin texture, and general lighting atmosphere.\n\n2. Extraction Key Points: Extract skin tone, makeup intensity, main color tone, lighting direction, subject temperament, and clothing color scheme from the reference image.\n\nIII. Image Composition and Output Format\n\n1. Main Image: Generate a super close-up or close-up of the subject's face, with the head and shoulders occupying most of the image space. The gaze can be designed with reference to the temperament of the original image.\n\n2. Collage Structure: Add multiple small images to the right side or corner, including close-ups of profiles, hands, and makeup details, creating a magazine-like layout.\n\n3. Background: Keep the background simple and clean, using solid colors or slight brightness transitions to highlight the subject and makeup.\n\nIV. Text and Graphic Design\n\n1. Title Text: Place a large magazine title at the top of the image, with a simple and powerful font, centered or top-center aligned.\n\n2. Subtitles and Small Text: Add several lines of small text to one side or bottom of the image. This can include keywords, names, and dates, arranged neatly with a consistent font size.\n\n3. Geometric Shapes: Add thin lines, narrow rectangular color blocks, or semi-transparent color blocks around the subject, combining them with text to enhance the sense of planar composition.\n\nV. Style Inheritance Rules\n\n1. Color Inheritance: The overall color tone, contrast, and warm/cool tones should closely match the style of the reference image. The main color should come from the most prominent makeup or clothing color in the reference image.\n\n2. Lighting Inheritance: Refer to the original image's lighting direction and softness. If the original image uses soft lighting, maintain the soft lighting texture; if the original image has high contrast, retain a certain degree of sharpness.\n\n3. Makeup Inheritance: Maintain the same style level based on the makeup characteristics of the reference image (clear, intense, experimental, natural, etc.), then make subtle variations in eye makeup, blush, and lip makeup.\n\n4. Atmosphere Inheritance: Continue the emotional atmosphere of the reference image, such as a cool, sweet, rebellious, or mysterious feel, echoing it in expressions and postures.\n\nVI. Creative Variation Rules\n\n1. Makeup Variation: Add localized exaggerations to the reference style, such as expanding the blush area, enhancing lip shading, adding freckles or highlights.\n\n2. Composition Variation: Adjust the facial angle, cropping area, and small image collage position to ensure different compositions for each generation.\n\n3. Accessory Variation: Add simple yet stylish accessories to the neck, ears, or hands, echoing the main color scheme but not completely replicating the reference image. 4. Detailed Gestures: Add hand gestures such as touching the lips, cheeks, and under the eyes to make the image more narrative and engaging.\n\nVII. Overall Texture and Post-Production Style\n\n1. Clarity: Maintain the visibility of skin pores and details, avoid excessive smoothing, but appropriately soften non-focus areas.\n\n2. Tone Processing: Maintain a unified overall tone, moderately reduce distracting colors, and only enhance the main color and a few accent colors.\n\n3. Emotional Expression: Based on the mood of the reference image, control the intensity of facial expressions and eye contact to ensure the image retains its original style while possessing a unique personality.\n\nReferring to user-uploaded portrait photos, the image style is automatically read and created according to the above rules.",
+      "prompt": "Generate a portrait of the character based on the attached picture, keeping the facial features and gender completely faithful to the reference image.\n\nDepict the subject from neck to head, following strictly the engraving illustration style of the reference.\n\nApply dense hatch lines and fine cross-hatching on the face to enhance depth and realism.\n\nThe clothing should remain minimal - only clean, outer contour lines without interior detailing - to keep the focus on the engraved facial texture and expression.",
       "images": [
-        "images/imp_0373.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0373.jpg"
       ]
     },
     {
@@ -5439,9 +5455,9 @@
       "id": "new",
       "title": "Generate Views On",
       "cat": "",
-      "prompt": "Generate character design for me (Character Design). Proportion design (different height comparisons, head-to-body ratio, etc.). Three views (front, side, back). Expression design (Expression Sheet) → like the image you sent. Pose design (Pose Sheet) → various common poses. Costume design (Costume Design)",
+      "prompt": "Generate the Front, Rear, Left, Right, Top, Bottom views on white. Evenly spaced. Consistent subject. Isometric Perspective Equivalence.",
       "images": [
-        "images/imp_0374.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0374.jpg"
       ]
     },
     {
@@ -5449,9 +5465,9 @@
       "id": "new",
       "title": "Generate Views On",
       "cat": "",
-      "prompt": "Generate character design for me (Character Design). Proportion design (different height comparisons, head-to-body ratio, etc.). Three views (front, side, back). Expression design (Expression Sheet) → like the image you sent. Pose design (Pose Sheet) → various common poses. Costume design (Costume Design)",
+      "prompt": "Generate the Front, Rear, Left, Right, Top, Bottom views on white. Evenly spaced. Consistent subject. Isometric Perspective Equivalence.",
       "images": [
-        "images/imp_0375.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0375.jpg"
       ]
     },
     {
@@ -5619,9 +5635,9 @@
       "id": "new",
       "title": "Giant Head On",
       "cat": "",
-      "prompt": "The women from the uploaded photo standing in a snowy winter forest, gently hugging a majestic white, blue-eyed giant lion, his cheek softly touching the lion’s face while his hand rests gently on its head, showing a deep emotional bond. She has sharp features, a soft expression, and closed eyes, wearing a luxurious white fur coat with delicate snowflakes on his hair and shoulders. The scene features bright natural light, a cinematic snowy background, and tall pine trees covered in snow, captured in an ultra-realistic, high-detail,",
+      "prompt": "Create A surreal, humorous digital artwork using the uploaded person’s face as a giant head resting on a steep rocky hill. The expression appears tired, exaggerated, and slightly cartoonish, with detailed wrinkles and lifelike skin texture.\n\nA small character in a white T-shirt and gray pants pushes the enormous head upward with effort, symbolizing struggle and persistence. The background glows with a vivid orange sunset gradient, filling the scene with warmth and contrast.\n\nLighting is cinematic, featuring soft shadows and realistic highlights.\nArt style: hyper-realistic caricature, 3D render, detailed textures, expressive emotion, ultra-realistic 8K.\nUse the uploaded image’s face seamlessly blended into the scene for the giant head.\n(Optional: “based on the attached picture, keeping facial features and gender faithful to the reference.”)",
       "images": [
-        "images/imp_0392.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0392.jpg"
       ]
     },
     {
@@ -15569,5 +15585,5 @@
   "catHidden": true,
   "shareWhatsApp": true,
   "freeMode": "full",
-  "_publishedAt": 1775755948578
+  "_publishedAt": 1775756495365
 }
