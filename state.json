@@ -15516,15 +15516,7 @@
       "prompt": "A photorealistic image of an ultra-detailed sculpture of the subject in image made of shining marble. The sculpture should display smooth and reflective marble surface, emphasizing its luster and artistic craftsmanship. The design is elegant, highlighting the beauty and depth of marble. The lighting in the image should enhance the sculpture's contours and textures, creating a visually stunning and mesmerizing effect"
     }
   },
-  "freePrompts": {
-    "added_imp_0004": true,
-    "added_imp_0071": true,
-    "added_imp_0072": true,
-    "added_imp_0091": true,
-    "added_imp_0128": true,
-    "added_imp_0151": true,
-    "added_imp_0295": true
-  },
+  "freePrompts": {},
   "hiddenCats": [
     "Art Style",
     "Collage",
@@ -15540,5 +15532,6 @@
     "Storybook"
   ],
   "catBarHidden": true,
-  "_saved": true
+  "_saved": true,
+  "freeEnabled": true
 }
