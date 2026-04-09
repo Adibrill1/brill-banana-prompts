@@ -4581,6 +4581,17 @@ set the scene indoors if possible</pre></div>
     </div>
   </div>
 </div>
+<!-- Custom confirm dialog -->
+<div class="modal-bg" id="confirmModal">
+  <div class="modal" style="max-width:360px;text-align:center">
+    <p style="color:#f5a623;font-size:13px;font-weight:bold;margin-bottom:10px">Brill Banana Prompts</p>
+    <h2 style="color:var(--text);font-size:15px;margin-bottom:20px" id="confirmModalMsg"></h2>
+    <div class="modal-footer" style="justify-content:center;flex-direction:row-reverse;gap:12px">
+      <button class="btn btn-ok" id="confirmModalYes" style="min-width:80px">כן</button>
+      <button class="btn btn-cancel" onclick="closeModal('confirmModal')" style="min-width:80px">לא</button>
+    </div>
+  </div>
+</div>
 <div class="modal-bg" id="accessModal">
   <div class="modal" style="max-width:460px">
     <div class="access-tabs">
@@ -5144,24 +5155,32 @@ async function activateLicenseKey(inputId) {
   }
 }
 
+function customConfirm(msg, onYes) {
+  document.getElementById('confirmModalMsg').textContent = msg;
+  var yesBtn = document.getElementById('confirmModalYes');
+  yesBtn.onclick = function() { closeModal('confirmModal'); onYes(); };
+  openModal('confirmModal');
+}
+
 function deactivateLicense() {
-  if (!confirm('להתנתק מהמכשיר הזה?')) return;
-  // Save favorites under this key before logging out, then clear the display
-  try {
-    var cur = JSON.parse(localStorage.getItem('brill_license') || 'null');
-    if (cur && cur.key) {
-      localStorage.setItem('bb_favs_' + cur.key, JSON.stringify(favs));
-    }
-  } catch(e) {}
-  favs = {};
-  localStorage.setItem('bb_favs', JSON.stringify(favs));
-  document.querySelectorAll('.fav-btn').forEach(function(b){ b.classList.remove('fav-on'); b.textContent = '🤍'; });
-  updateFavCount();
-  localStorage.removeItem('brill_license');
-  closeModal('accessModal');
-  updateLicenseBtn();
-  applyPaywallToAll();
-  showToast('התנתקת בהצלחה');
+  customConfirm('להתנתק מהמכשיר הזה?', function() {
+    // Save favorites under this key before logging out, then clear the display
+    try {
+      var cur = JSON.parse(localStorage.getItem('brill_license') || 'null');
+      if (cur && cur.key) {
+        localStorage.setItem('bb_favs_' + cur.key, JSON.stringify(favs));
+      }
+    } catch(e) {}
+    favs = {};
+    localStorage.setItem('bb_favs', JSON.stringify(favs));
+    document.querySelectorAll('.fav-btn').forEach(function(b){ b.classList.remove('fav-on'); b.textContent = '🤍'; });
+    updateFavCount();
+    localStorage.removeItem('brill_license');
+    closeModal('accessModal');
+    updateLicenseBtn();
+    applyPaywallToAll();
+    showToast('התנתקת בהצלחה');
+  });
 }
 
 function applyPaywallToAll() {
