@@ -5141,11 +5141,9 @@ async function activateLicenseKey(inputId) {
 function deactivateLicense() {
   if (!confirm('להסיר את הרישיון מהמכשיר הזה?')) return;
   localStorage.removeItem('brill_license');
-  // Clear favorites when removing license (next user starts fresh)
-  favs = {};
-  localStorage.setItem('bb_favs', JSON.stringify(favs));
-  document.querySelectorAll('.fav-btn').forEach(function(b){ b.classList.remove('fav-on'); b.textContent = '🤍'; });
-  updateFavCount();
+  // Favorites are intentionally kept — if the same user re-activates their
+  // key later, they'll find their favorites intact. Favorites are only
+  // cleared when a DIFFERENT key is activated (see activateLicenseKey).
   closeModal('accessModal');
   updateLicenseBtn();
   applyPaywallToAll();
