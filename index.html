@@ -4662,11 +4662,7 @@ const IMAGES_ORIG  = [["images/241.jpg"], ["images/240.jpg"], ["images/239.jpg"]
 const ADMIN_HASH   = "5e197c727f35540497cc6ccf587287aa24793be3c54a89ee8009a2520b286fd0";
 
 
-var ADMIN_UNLOCKED = sessionStorage.getItem('bb_admin') === '1';
-if (ADMIN_UNLOCKED) {
-  document.getElementById('adminBar').classList.add('open');
-  document.body.classList.add('admin-open');
-}
+var ADMIN_UNLOCKED = false;
 var editMode = false;
 var pendingChanges = false;
 
@@ -4686,7 +4682,6 @@ async function tryUnlockFromModal() {
   var h = await hashStr(pw);
   if (h === ADMIN_HASH) {
     ADMIN_UNLOCKED = true;
-    sessionStorage.setItem('bb_admin', '1');
     document.getElementById('adminBar').classList.add('open');
     document.body.classList.add('admin-open');
     var waBtn = document.getElementById('waToggle');
