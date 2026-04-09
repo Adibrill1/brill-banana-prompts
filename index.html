@@ -5145,7 +5145,7 @@ async function activateLicenseKey(inputId) {
 }
 
 function deactivateLicense() {
-  if (!confirm('להסיר את הרישיון מהמכשיר הזה?')) return;
+  if (!confirm('להתנתק מהמכשיר הזה?')) return;
   // Save favorites under this key before logging out, so they're restored on next login
   try {
     var cur = JSON.parse(localStorage.getItem('brill_license') || 'null');
