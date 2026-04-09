@@ -340,7 +340,19 @@
     "added_imp_0402",
     "added_imp_0407",
     "added_imp_0409",
-    "added_imp_0411"
+    "added_imp_0411",
+    "added_imp_0414",
+    "added_imp_0417",
+    "added_imp_0416",
+    "added_imp_0419",
+    "added_imp_0421",
+    "added_imp_0422",
+    "added_imp_0424",
+    "added_imp_0425",
+    "added_imp_0426",
+    "added_imp_0429",
+    "added_imp_0430",
+    "added_imp_0427"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -528,7 +540,8 @@
     "added_imp_0278": "/images/custom_added_imp_0278.jpg",
     "added_imp_0320": "/images/custom_added_imp_0320.jpg",
     "added_imp_0325": "/images/custom_added_imp_0325.jpg",
-    "added_imp_0355": "/images/custom_added_imp_0355.jpg"
+    "added_imp_0355": "/images/custom_added_imp_0355.jpg",
+    "added_imp_0423": "/images/custom_added_imp_0423.jpg"
   },
   "added": [
     {
@@ -5876,9 +5889,9 @@
       "id": "new",
       "title": "Gorilla Holding Person",
       "cat": "",
-      "prompt": "A selfie taken by the person in the attached image with King Kong on the set of a monster movie. They are standing next to a massive, full-scale animatronic gorilla head and shoulder rig on a soundstage. The person is holding their phone, looking tiny next to the highly detailed, scarred face of the ape. A huge camera crane is sweeping past them.",
+      "prompt": "Use the uploaded reference image as a strict facial identity source.\nCRITICAL IDENTITY LOCK: The face must match the reference image exactly - identical facial structure, proportions, eyes, lips, nose, skin tone, texture, makeup style, hairstyle, and micro-details. No changes, no reinterpretation, no age shifts, no added or removed facial hair. An exact 1:1 reproduction of the face is mandatory.\n\n\nCreate an ultra-realistic fantasy scene where a gigantic gorilla gently holds the same person from the reference image in its open palm. The gorilla is massive, with extremely detailed fur, expressive deep brown eyes, and a calm, protective expression. The gorilla’s hand should show realistic skin folds, wrinkles, and rough texture, emphasizing scale and softness.\n\n\nThe person sits comfortably on the gorilla’s palm, confident and relaxed. They wear a blue denim jacket, white shirt, camouflage-pattern jogger pants, and clean white sneakers. Their pose is casual - one arm resting on their knee, the other placed naturally on the gorilla’s palm.\n\n\nThe face must be precisely identical to the reference image, including lighting compatibility, natural expression, makeup, and hair. No stylistic deviation from the original facial identity is allowed.\n\n\nLighting is warm golden-hour sunlight with soft highlights on both the gorilla and the person. The background is slightly blurred with cinematic depth of field, focusing attention on the gorilla’s face and the person.\nStyle: ultra-realistic, high-resolution, cinematic, with a gentle emotional bond between human and creature.\nTone: adventurous, epic, heartwarming.\nComposition: centered framing, strong depth, crisp details, and natural shadows.",
       "images": [
-        "images/imp_0415.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0415.jpg"
       ]
     },
     {
@@ -5926,9 +5939,9 @@
       "id": "new",
       "title": "Grid Image Of",
       "cat": "",
-      "prompt": "A technical sketch in a blueprint style on aged, textured paper, depicting the person from the uploaded reference image.The portrait must be reconstructed exclusively from the reference photo, preserving the exact facial identity, proportions, bone structure, and recognizable features. No stylization of facial anatomy, no idealization. The drawing is rendered with black ink cross-hatching and precise linework, including visible construction lines, circles, measurements, annotations, and geometric diagrams superimposed over and around the face. Facial guidelines, symmetry axes, proportional grids, and technical callouts are clearly visible, as if analyzing the subject’s face scientifically. Abstract lines and a small schematic skull diagram appear near the bottom of the page, along with a single drop of sepia ink. The overall aesthetic is that of a vintage engineering schematic or a Da Vinci–style anatomical notebook page. Monochrome. Hand-drawn. Analytical. Precise. The person must remain unmistakably the same individual as in the reference image.",
+      "prompt": "Create for me based on the reference image, a grid image divided into 9 parts, each part 16:9 in size. Each part has a different scene of the same face image. Eats different foods: apple, ice cream, hamburger, pizza, sandwich, drinks coffee, candy, pasta",
       "images": [
-        "images/imp_0420.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0420.jpg"
       ]
     },
     {
@@ -5954,11 +5967,11 @@
     {
       "key": "added_imp_0423",
       "id": "new",
-      "title": "Grid Image With",
+      "title": "Calendar",
       "cat": "",
       "prompt": "Prompt: {\n\"image_prompt\": {\n\"subject\": \"Top-down aerial view of a man (from the uploaded photo) wearing a quilted mountain parka, sitting in pristine snow holding a thermal coffee mug. Double exposure effect: His jacket and body silhouette showcase rolling alpine hills at dawn, wildflower meadows, mountain goats on rocky outcrops, and a winding mountain trail leading to a sunrise peak.\",\n\"composition\": \"Vertical 9:16. 60% Top: Subject with layered mountain landscape double exposure creating depth. 40% Bottom: Untouched powder snow with gentle terrain contours for clean calendar text area.\",\n\"lighting\": \"Warm sunrise alpenglow illuminating the silhouette from within, soft diffused daylight on surrounding snow, atmospheric haze adding depth layers.\",\n\"text_overlay\": {\n\"title\": \"2026 CALENDAR\",\n\"style\": \"Text embossed into weathered stone or carved into alpine wood, high-contrast typography with mountain texture.\",\n\"grid_data\": \"3x4 grid with subtle topographic line accents.\"\n},\n\"quality\": \"8K, Photorealistic, Razor-sharp detail on face and typography, Cinematic with enhanced atmospheric perspective.\"\n}\n}",
       "images": [
-        "images/imp_0423.jpg"
+        "/images/custom_added_imp_0423_img0.jpg"
       ]
     },
     {
@@ -15596,5 +15609,5 @@
   "catHidden": true,
   "shareWhatsApp": true,
   "freeMode": "full",
-  "_publishedAt": 1775756753220
+  "_publishedAt": 1775757148479
 }
