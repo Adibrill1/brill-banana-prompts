@@ -63,7 +63,7 @@ h1{text-align:center;color:#f5a623;font-size:2em;margin-bottom:6px}
   .prompt-text{font-size:10px;max-height:90px}
   h3{font-size:12px}
 }
-.card{background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:14px;transition:border-color .2s,box-shadow .2s,background .2s;position:relative}
+.card{background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:14px;transition:border-color .2s,box-shadow .2s,background .2s;position:relative;display:flex;flex-direction:column}
 .card:hover{border-color:#f5a623}
 .card.dragging{opacity:.25;transform:scale(0.97);border-color:#f5a623 !important;box-shadow:0 0 0 2px #f5a623}
 .card.drop-before{border-left:4px solid #4caf50 !important;box-shadow:-4px 0 12px rgba(76,175,80,0.5)}
@@ -174,7 +174,7 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
 .share-modal-list li:last-child{border-bottom:none}
 .btn-wa{background:#25d366;color:#fff}.btn-wa:hover{background:#1ebe5d}
 /* Paywall */
-.prompt-wrap{position:relative;overflow:hidden;margin-bottom:0}
+.prompt-wrap{position:relative;overflow:hidden;margin-bottom:0;flex:1}
 .card.locked-prompt .prompt-wrap::after{content:'';position:absolute;bottom:0;left:0;right:0;height:55px;background:linear-gradient(to bottom,transparent,var(--card-bg) 90%);pointer-events:none}
 .card.locked-prompt .prompt-text{max-height:55px;overflow:hidden;margin-bottom:0;user-select:none;-webkit-user-select:none;pointer-events:none}
 .card.locked-prompt .copy-btn{display:none !important}
