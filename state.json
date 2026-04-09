@@ -15555,7 +15555,7 @@
     "buyText": "💬 לרכישה שלח/י הודעה",
     "buyUrl": ""
   },
-  "catHidden": false,
-  "shareWhatsApp": false,
-  "freeMode": "partial"
+  "catHidden": true,
+  "shareWhatsApp": true,
+  "freeMode": "full"
 }
