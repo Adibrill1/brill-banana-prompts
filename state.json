@@ -308,7 +308,12 @@
     "added_imp_0346",
     "added_imp_0348",
     "added_imp_0350",
-    "added_imp_0353"
+    "added_imp_0353",
+    "added_imp_0362",
+    "added_imp_0364",
+    "added_imp_0363",
+    "added_imp_0367",
+    "added_imp_0369"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -5284,9 +5289,9 @@
       "id": "new",
       "title": "Fisheye Wide Angle Selfie",
       "cat": "",
-      "prompt": "A film-like fisheye wide-angle 360-degree selfie without any camera or phone visible in the subject’s hands. A real and exaggerated selfie of [person from uploaded image] with [CHARACTERS- Sinfeld].\n They are making faces at the camera.",
+      "prompt": "A film-like fisheye wide-angle 360-degree selfie...",
       "images": [
-        "images/imp_0359.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0359.jpg"
       ]
     },
     {
@@ -5374,9 +5379,9 @@
       "id": "new",
       "title": "Generate 3x3 Image",
       "cat": "",
-      "prompt": "Generate avatars of this person with different hairstyles in a 3x3 grid format\n",
+      "prompt": "Using the user-uploaded image as the primary visual reference, generate a cohesive 3×3 image grid (nine panels total).\n\nCORE CONCEPT:\nThe nine panels together form a short cinematic visual story.\nAll panels must depict the same character(s), environment, and universe established by the reference image.\nMaintain strict consistency in:\n- character identity (face, body, hairstyle)\n- clothing and accessories\n- art style and rendering quality\n- color palette and lighting logic\n\nSTORY STRUCTURE:\nThe grid should read naturally from left to right, top to bottom, like film storyboards or a manga page.\nEach panel represents a distinct moment, emotion, or action beat.\nThere should be a clear sense of progression, not repetition.\n\nPANEL DIRECTION (GUIDELINE):\n\n1. Anchor Frame – use the original uploaded image as-is, establishing character, style, and environment.\n2. Reframed Presence – same moment as Panel 1 but with a different crop or angle, showing posture or silhouette.\n3. Emotional Close-up – focus on face or key detail, highlighting expression or mood.\n4. Perspective Shift – side view, back view, or over-the-shoulder, showing subtle narrative progression.\n5. Key Moment – central narrative or emotional focal point of the story.\n6. Dynamic Action – character movement, interaction, or dynamic pose.\n7. Quiet Aftermath – calm moment after the action, reflection, or pause.\n8. World Detail – environment, objects, lighting, or atmosphere, may include partial character.\n9. Resolution / Open Ending – final emotional state or symbolic conclusion, leaving a lasting impression.\n\nCAMERA & COMPOSITION:\n- Vary camera angles (wide, medium, close-up, low-angle, top-down)\n- Use cinematic framing and depth of field\n- Avoid repeating identical compositions\n- Subtle changes in time, motion, or emotion across panels\n\nVISUAL QUALITY:\n- High detail, sharp focus\n- Cohesive cinematic lighting\n- Natural shadows and realistic or stylistically consistent materials\n- No text, no subtitles, no speech bubbles\n- No visible borders or frames between panels\n\nFINAL OUTPUT:\nA clean, evenly spaced 3×3 grid that feels like keyframes from a short film or a manga chapter.\nThe result should feel intentional, emotional, and story-driven.",
       "images": [
-        "images/imp_0368.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0368.jpg"
       ]
     },
     {
@@ -5394,9 +5399,9 @@
       "id": "new",
       "title": "Generate Black And",
       "cat": "",
-      "prompt": "Keep the subject’s facial features unchanged. Generate one fashion portrait with a gentle downward tilt of the head, either front-facing or in a soft side profile. Composition may be an extreme facial close-up or an ultra-close shot. The subject shows natural, relaxed expressions, with eyes either making direct eye contact with the camera, softly following a swimming fish, or gently closed. Clear, watery makeup look with translucent skin, finely defined eyelashes, and a smooth, luminous complexion. Subtle highlights drift across the face. One or several miniature tropical fish or goldfish slowly swim in the foreground of the aquarium, with transparent, lively tail fins. Optional finger interaction with the fish through the glass. Water surface refraction creates moving light patterns, with shimmering light fragments dancing across the face. Floating underwater particles surround the subject, with clear, reflective water textures. Overall mood is dreamy, quiet, and atmospheric. Dark brown and black color palette, strong sense of luxury. Floating defocus, subtle motion blur, and delicate film grain interwoven. Painterly, cinematic light and shadow. Shot behind aquarium glass, interacting with small fish.",
+      "prompt": "Your task is to generate a high-end black and white portrait using a selfie image that provided by the user. Follow these exact instructions:\n\n- The face must remain exactly as in the original selfie – no editing, no retouching, no smoothing.\n- The subject should be wearing a dark business suit with a white shirt.\n- Preserve every facial detail and skin texture for a raw, authentic look.\n- Use dramatic, studio-quality lighting with strong contrast and directional shadows that sculpt the facial features.\n- Use a clean, softly blurred studio-style background with gradients or subtle texture to keep the focus on the face.\n- Frame the portrait vertically (9:16), with centered composition and ultra-realistic rendering.\n- Do not apply digital makeup or beautification. No softening or artificial enhancements.\n- The final result should feel timeless, editorial, and emotionally powerful – suitable for display in a gallery or fashion context.\n\nThe selfie provided should be in good resolution and clearly show the face. Ask the user to upload a well-lit, unobstructed image with a neutral or minimal background if possible.\n\nIf the user does not upload an image, politely ask them to upload a selfie to begin.\n\nMaintain a warm, professional, and concise tone. Encourage the user with short, friendly messages like \"Just upload your selfie and I'll take care of the magic.\"\n\nDo not include any text, watermark, emoji, or writing inside the generated image itself. The image must be clean and free of any writing or overlays. Any message or caption should be presented below the image as plain text, not embedded in the image.\n\nbehavior rules:\n- Use \\",
       "images": [
-        "images/imp_0370.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0370.jpg"
       ]
     },
     {
@@ -15564,5 +15569,5 @@
   "catHidden": true,
   "shareWhatsApp": true,
   "freeMode": "full",
-  "_publishedAt": 1775755538700
+  "_publishedAt": 1775755948578
 }
