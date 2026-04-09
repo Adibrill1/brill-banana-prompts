@@ -220,6 +220,17 @@ body.customer-preview.admin-open{padding-top:20px}
 body.customer-preview .preview-exit-btn{display:block}
 /* ec-dup button */
 .ec-dup{background:#0288d1;color:#fff}.ec-dup:hover{background:#0296d0}
+/* access modal tabs */
+.access-tabs{display:flex;gap:0;border-bottom:2px solid var(--border2);margin-bottom:16px}
+.access-tab{flex:1;padding:9px;background:none;border:none;cursor:pointer;font-size:13px;font-weight:bold;color:var(--text4);border-bottom:2px solid transparent;margin-bottom:-2px;transition:color .15s}
+.access-tab.active{color:#f5a623;border-bottom-color:#f5a623}
+.access-tab-panel{display:none}.access-tab-panel.active{display:block}
+/* hidden cats */
+.cat-filter-btn.hidden-cat{opacity:.4;text-decoration:line-through}
+.hide-cats-grid{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.hide-cat-btn{padding:6px 14px;border-radius:20px;border:2px solid var(--border2);background:var(--bg4);color:var(--text);cursor:pointer;font-size:12px;transition:all .15s}
+.hide-cat-btn.hidden{border-color:#e53935;background:#e5393520;color:#e53935;text-decoration:line-through}
+.hide-cat-btn:not(.hidden):hover{border-color:#4caf50;background:#4caf5020}
 </style>
 </head>
 <body>
@@ -232,6 +243,7 @@ body.customer-preview .preview-exit-btn{display:block}
   <button class="btn btn-publish" id="btnPublish" onclick="publishChanges()" disabled>🌐 פרסם שינויים</button>
   <button class="btn btn-edit" id="waToggle" onclick="toggleWaShare()" title="שליחת מועדפים ב-WhatsApp">💬 WA</button>
   <button class="btn btn-edit" onclick="openKeysModal()">🔑 ססמאות</button>
+  <button class="btn btn-edit" onclick="openHideCatsModal()">🙈 קטגוריות</button>
   <button class="btn btn-edit" onclick="setAllFree()" title="סמן את כל הפרומפטים כחינמיים">🆓 פתח הכל</button>
   <button class="btn btn-edit" onclick="setAllPremium()" title="החזר את כל הפרומפטים לנעול">🔒 סגור הכל</button>
   <button class="btn btn-edit" onclick="exportCSV()" title="ייצוא לאקסל">📤 CSV</button>
@@ -243,9 +255,8 @@ body.customer-preview .preview-exit-btn{display:block}
 <p class="subtitle"><span id="subtitle-count">241</span> פרומפטים | 📋 Copy להעתקה | לחץ על תמונה לתצוגה מוגדלת</p>
 <div class="toolbar">
   <input class="search" type="search" placeholder="🔍 חפש לפי שם או תוכן..." oninput="filterCards(this.value)" autocomplete="off">
-  <button class="btn btn-license" id="licenseBtn" onclick="openLicenseModal()">🔑 Activate</button>
+  <button class="btn btn-license" id="accessBtn" onclick="openAccessModal('premium')">🔑 Activate</button>
   <button class="btn btn-theme" id="themeBtn" onclick="toggleTheme()" title="מצב לילה/יום">🌙</button>
-  <button class="btn" id="adminLockBtn" style="background:var(--bg2);color:var(--text4);border:1px solid var(--border2);font-size:12px" onclick="tryUnlock()">🔒</button>
   <button class="btn btn-fav-filter" id="favFilterBtn" onclick="toggleFavFilter()">❤️ מועדפים</button>
   <button class="btn" id="btnSendFavs" style="display:none;background:#1a1a1a;color:#888;border:1px solid #333;font-size:12px" onclick="openShareModal()">📤 שלח מועדפים</button>
   <button class="btn" id="btnClearFavs" style="display:none;background:#1a1a1a;color:#888;border:1px solid #333;font-size:12px" onclick="clearFavs()">🗑️ אפס בחירה</button>
@@ -4564,36 +4575,65 @@ set the scene indoors if possible</pre></div>
     </div>
   </div>
 </div>
-<div class="modal-bg" id="licenseModal">
+<div class="modal-bg" id="accessModal">
   <div class="modal" style="max-width:460px">
-    <h2 id="licenseModalTitle">🍌 Unlock Full Prompt Access</h2>
-    <div id="licenseActiveInfo" style="display:none">
-      <p style="color:#4caf50;font-size:14px;margin-bottom:8px">✅ Premium Active</p>
-      <p class="license-expiry" id="licenseExpiry"></p>
-      <div class="modal-footer">
-        <button class="btn btn-cancel" onclick="closeModal('licenseModal')">סגור</button>
-        <button class="btn" style="background:#e53935;color:#fff" onclick="deactivateLicense()">🗑️ הסר רישיון</button>
+    <div class="access-tabs">
+      <button class="access-tab active" id="tabPremium" onclick="switchAccessTab('premium')">🔑 פרימיום</button>
+      <button class="access-tab" id="tabAdmin" onclick="switchAccessTab('admin')">🔒 מנהלת</button>
+    </div>
+    <!-- Premium tab -->
+    <div class="access-tab-panel active" id="panelPremium">
+      <div id="licenseActiveInfo" style="display:none">
+        <p style="color:#4caf50;font-size:14px;margin-bottom:8px">✅ Premium Active</p>
+        <p class="license-expiry" id="licenseExpiry"></p>
+        <div class="modal-footer">
+          <button class="btn btn-cancel" onclick="closeModal('accessModal')">סגור</button>
+          <button class="btn" style="background:#e53935;color:#fff" onclick="deactivateLicense()">🗑️ הסר רישיון</button>
+        </div>
+      </div>
+      <div id="licenseInactiveInfo">
+        <label style="margin-top:0">יש לך מפתח גישה?</label>
+        <div style="display:flex;gap:8px;margin-bottom:4px">
+          <input type="text" id="licenseKeyInput" placeholder="הזן מפתח כאן..." style="flex:1;direction:ltr">
+          <button class="btn btn-ok" onclick="activateLicenseKey()">✅ הפעל</button>
+        </div>
+        <p id="licenseError" style="display:none;color:#e53935;font-size:12px;margin-top:4px"></p>
+        <div class="license-divider">or</div>
+        <p style="color:var(--text2);font-size:13px;margin-bottom:8px;font-weight:bold">גישה מלאה לשנה — 59 ₪</p>
+        <ul class="license-benefits">
+          <li>גישה מלאה לכל הפרומפטים</li>
+          <li>העתקה בלחיצה אחת</li>
+          <li>פרומפטים חדשים נוספים באופן שוטף</li>
+          <li>תוקף ל-12 חודשים</li>
+        </ul>
+        <a id="buyBtn" href="#" target="_blank" class="buy-btn">💬 שלחי הודעה לרכישה — 59 ₪</a>
+        <div class="modal-footer" style="margin-top:16px">
+          <button class="btn btn-cancel" onclick="closeModal('accessModal')">סגור</button>
+        </div>
       </div>
     </div>
-    <div id="licenseInactiveInfo">
-      <label style="margin-top:0">יש לך מפתח גישה?</label>
+    <!-- Admin tab -->
+    <div class="access-tab-panel" id="panelAdmin">
+      <label style="margin-top:0">סיסמת מנהלת:</label>
       <div style="display:flex;gap:8px;margin-bottom:4px">
-        <input type="text" id="licenseKeyInput" placeholder="הזן מפתח כאן..." style="flex:1;direction:ltr">
-        <button class="btn btn-ok" onclick="activateLicenseKey()">✅ הפעל</button>
+        <input type="password" id="adminPwInput" placeholder="הזן סיסמה..." style="flex:1;direction:ltr" onkeydown="if(event.key==='Enter')tryUnlockFromModal()">
+        <button class="btn btn-ok" onclick="tryUnlockFromModal()">🔓 כניסה</button>
       </div>
-      <p id="licenseError" style="display:none;color:#e53935;font-size:12px;margin-top:4px"></p>
-      <div class="license-divider">or</div>
-      <p style="color:var(--text2);font-size:13px;margin-bottom:8px;font-weight:bold">גישה מלאה לשנה — 59 ₪</p>
-      <ul class="license-benefits">
-        <li>גישה מלאה לכל הפרומפטים</li>
-        <li>העתקה בלחיצה אחת</li>
-        <li>פרומפטים חדשים נוספים באופן שוטף</li>
-        <li>תוקף ל-12 חודשים</li>
-      </ul>
-      <a id="buyBtn" href="#" target="_blank" class="buy-btn">💬 שלחי הודעה לרכישה — 59 ₪</a>
+      <p id="adminLoginError" style="display:none;color:#e53935;font-size:12px;margin-top:4px"></p>
       <div class="modal-footer" style="margin-top:16px">
-        <button class="btn btn-cancel" onclick="closeModal('licenseModal')">סגור</button>
+        <button class="btn btn-cancel" onclick="closeModal('accessModal')">סגור</button>
       </div>
+    </div>
+  </div>
+</div>
+<div class="modal-bg" id="hideCatsModal">
+  <div class="modal" style="max-width:480px">
+    <h2>🙈 הסתרת קטגוריות</h2>
+    <p style="color:var(--text2);font-size:12px;margin-bottom:4px">לחצי על קטגוריה להסתירה מהמשתמשים. בצבע אדום = מוסתרת.</p>
+    <div class="hide-cats-grid" id="hideCatsGrid"></div>
+    <div class="modal-footer">
+      <button class="btn btn-cancel" onclick="closeModal('hideCatsModal')">סגור</button>
+      <button class="btn btn-publish" onclick="saveHiddenCats()">💾 שמור</button>
     </div>
   </div>
 </div>
@@ -4644,8 +4684,13 @@ async function hashStr(s) {
   return Array.from(new Uint8Array(buf)).map(function(b){return b.toString(16).padStart(2,'0');}).join('');
 }
 
-async function tryUnlock() {
-  var pw = prompt('\U0001f512 \u05e1\u05d9\u05e1\u05de\u05d0:');
+function tryUnlock() {
+  openAccessModal('admin');
+}
+
+async function tryUnlockFromModal() {
+  var pw = document.getElementById('adminPwInput').value;
+  var errEl = document.getElementById('adminLoginError');
   if (!pw) return;
   var h = await hashStr(pw);
   if (h === ADMIN_HASH) {
@@ -4654,9 +4699,12 @@ async function tryUnlock() {
     document.body.classList.add('admin-open');
     var waBtn = document.getElementById('waToggle');
     if (waBtn) { waBtn.classList.toggle('active', shareWhatsApp); waBtn.title = shareWhatsApp ? 'WhatsApp מופעל — לחץ לכיבוי' : 'WhatsApp כבוי — לחץ להפעלה'; }
-    showToast('\u2705 \u05e0\u05db\u05e0\u05e1\u05ea \u05db\u05de\u05e0\u05d4\u05dc\u05ea');
+    closeModal('accessModal');
+    showToast('✅ נכנסת כמנהלת');
   } else {
-    showToast('\u274c \u05e1\u05d9\u05e1\u05de\u05d0 \u05e9\u05d2\u05d5\u05d9\u05d4');
+    errEl.textContent = '❌ סיסמה שגויה';
+    errEl.style.display = '';
+    document.getElementById('adminPwInput').value = '';
   }
 }
 
@@ -4803,7 +4851,7 @@ function shouldShowFull(key) {
 }
 
 function updateLicenseBtn() {
-  var btn = document.getElementById('licenseBtn');
+  var btn = document.getElementById('accessBtn');
   if (!btn) return;
   if (isPremiumUser()) {
     btn.textContent = '✅ Premium';
@@ -4814,18 +4862,25 @@ function updateLicenseBtn() {
   }
 }
 
-function openLicenseModal() {
-  var active = isPremiumUser();
-  document.getElementById('licenseActiveInfo').style.display = active ? '' : 'none';
-  document.getElementById('licenseInactiveInfo').style.display = active ? 'none' : '';
-  if (active) {
-    var exp = getLicenseExpiry();
-    document.getElementById('licenseExpiry').textContent = exp ? 'תוקף עד: ' + exp.toLocaleDateString('he-IL') : '';
+function openLicenseModal() { openAccessModal('premium'); }
+function openAccessModal(tab) {
+  tab = tab || 'premium';
+  switchAccessTab(tab);
+  if (tab === 'premium') {
+    var active = isPremiumUser();
+    document.getElementById('licenseActiveInfo').style.display = active ? '' : 'none';
+    document.getElementById('licenseInactiveInfo').style.display = active ? 'none' : '';
+    if (active) {
+      var exp = getLicenseExpiry();
+      document.getElementById('licenseExpiry').textContent = exp ? 'תוקף עד: ' + exp.toLocaleDateString('he-IL') : '';
+    }
+    document.getElementById('licenseError').style.display = 'none';
   }
-  document.getElementById('licenseError').style.display = 'none';
+  document.getElementById('adminLoginError').style.display = 'none';
+  document.getElementById('adminPwInput').value = '';
   document.getElementById('licenseKeyInput').value = '';
   document.getElementById('buyBtn').href = PURCHASE_WA_URL;
-  openModal('licenseModal');
+  openModal('accessModal');
 }
 
 function openUnlockModal() {
@@ -4856,7 +4911,7 @@ async function activateLicenseKey(inputId) {
         expiresAt: new Date(Date.now() + 365*24*60*60*1000).toISOString()
       };
       localStorage.setItem('brill_license', JSON.stringify(licenseData));
-      closeModal('licenseModal');
+      closeModal('accessModal');
       closeModal('unlockModal');
       updateLicenseBtn();
       applyPaywallToAll();
@@ -4874,7 +4929,7 @@ async function activateLicenseKey(inputId) {
 function deactivateLicense() {
   if (!confirm('להסיר את הרישיון מהמכשיר הזה?')) return;
   localStorage.removeItem('brill_license');
-  closeModal('licenseModal');
+  closeModal('accessModal');
   updateLicenseBtn();
   applyPaywallToAll();
   showToast('הרישיון הוסר');
@@ -4997,9 +5052,11 @@ function buildCatFilters() {
   allBtn.textContent = '🌐 הכל';
   allBtn.onclick = function() { setActiveCat(''); };
   bar.appendChild(allBtn);
+  var hiddenCats = state.hiddenCats || [];
   sorted.forEach(function(cat) {
+    if (!ADMIN_UNLOCKED && hiddenCats.indexOf(cat) !== -1) return;
     var btn = document.createElement('button');
-    btn.className = 'cat-filter-btn';
+    btn.className = 'cat-filter-btn' + (hiddenCats.indexOf(cat) !== -1 ? ' hidden-cat' : '');
     btn.textContent = cat + ' (' + cats[cat] + ')';
     btn.onclick = function() { setActiveCat(cat); };
     bar.appendChild(btn);
@@ -5041,6 +5098,47 @@ function filterKeysList(q) {
     var name = (li.getAttribute('data-key-name') || '').toLowerCase();
     li.style.display = (!q || val.includes(q) || name.includes(q)) ? '' : 'none';
   });
+}
+
+// ── לשוניות modal גישה ────────────────────────────────────
+function switchAccessTab(tab) {
+  ['premium','admin'].forEach(function(t) {
+    document.getElementById('tabPremium'.replace('premium', 'tab' + t.charAt(0).toUpperCase() + t.slice(1))).classList.toggle('active', t === tab);
+    document.getElementById('panel' + t.charAt(0).toUpperCase() + t.slice(1)).classList.toggle('active', t === tab);
+  });
+}
+
+// ── הסתרת קטגוריות ────────────────────────────────────────
+function openHideCatsModal() {
+  if (!ADMIN_UNLOCKED) return;
+  var grid = document.getElementById('hideCatsGrid');
+  grid.innerHTML = '';
+  var cats = {};
+  document.querySelectorAll('.card .cat').forEach(function(el) {
+    var c = el.textContent.trim(); if (c) cats[c] = true;
+  });
+  var hidden = state.hiddenCats || [];
+  Object.keys(cats).sort().forEach(function(cat) {
+    var btn = document.createElement('button');
+    btn.className = 'hide-cat-btn' + (hidden.indexOf(cat) !== -1 ? ' hidden' : '');
+    btn.textContent = cat;
+    btn.onclick = function() { btn.classList.toggle('hidden'); };
+    grid.appendChild(btn);
+  });
+  openModal('hideCatsModal');
+}
+
+function saveHiddenCats() {
+  var hidden = [];
+  document.querySelectorAll('#hideCatsGrid .hide-cat-btn.hidden').forEach(function(btn) {
+    hidden.push(btn.textContent);
+  });
+  state.hiddenCats = hidden;
+  buildCatFilters();
+  filterCards(document.querySelector('.search').value);
+  closeModal('hideCatsModal');
+  markUnsaved();
+  showToast('✅ הגדרות קטגוריות נשמרו');
 }
 
 function setAllFree() {
@@ -5631,7 +5729,7 @@ function toggleFavFilter() {
   document.getElementById('btnSendFavs').style.display = s;
   document.getElementById('btnClearFavs').style.display = s;
   document.querySelector('.search').style.display = showFavsOnly ? 'none' : '';
-  document.getElementById('adminLockBtn').style.display = showFavsOnly ? 'none' : '';
+  var alb = document.getElementById('accessBtn'); if (alb) alb.style.display = showFavsOnly ? 'none' : '';
   updateFavCount();
   filterCards(document.querySelector('.search').value);
 }
@@ -5707,8 +5805,11 @@ function filterCards(q){
     var key=c.getAttribute('data-key');
     var matchQ=!q||c.getAttribute('data-search').includes(q);
     var matchFav=!showFavsOnly||!!favs[key];
-    var matchCat=!activeCat||(c.querySelector('.cat')||{textContent:''}).textContent.trim()===activeCat;
-    var show=matchQ&&matchFav&&matchCat;
+    var cardCat=(c.querySelector('.cat')||{textContent:''}).textContent.trim();
+    var matchCat=!activeCat||cardCat===activeCat;
+    var hidden=state.hiddenCats||[];
+    var matchHidden=!ADMIN_UNLOCKED&&hidden.indexOf(cardCat)!==-1?false:true;
+    var show=matchQ&&matchFav&&matchCat&&matchHidden;
     c.style.display=show?'':'none'; if(show)visible++;
   });
   var sc=document.getElementById('subtitle-count'); if(sc)sc.textContent=visible;
