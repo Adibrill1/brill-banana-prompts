@@ -4776,13 +4776,14 @@ function isEmptyState(st) {
 }
 
 // ── Keys Management ──────────────────────────────────────
-var _adminToken = null;
+var _adminToken = localStorage.getItem('bb_admin_token') || null;
 
 async function openKeysModal() {
   if (!ADMIN_UNLOCKED) return;
   if (!_adminToken) {
     _adminToken = prompt('הזן את ה-Admin Token (מה-Vercel env):');
     if (!_adminToken) return;
+    localStorage.setItem('bb_admin_token', _adminToken);
   }
   document.getElementById('keysError').style.display = 'none';
   var ks = document.getElementById('keysSearch'); if (ks) ks.value = '';
@@ -4795,7 +4796,7 @@ async function loadKeys() {
   list.innerHTML = '<li style="color:var(--text4);text-align:center">טוען...</li>';
   try {
     var r = await fetch('/api/keys', { headers: { 'X-Admin-Token': _adminToken } });
-    if (r.status === 401) { _adminToken = null; closeModal('keysModal'); showToast('❌ Token שגוי'); return; }
+    if (r.status === 401) { _adminToken = null; localStorage.removeItem('bb_admin_token'); closeModal('keysModal'); showToast('❌ Token שגוי'); return; }
     var data = await r.json();
     renderKeysList(data.keys || {});
   } catch(e) {
