@@ -15541,5 +15541,16 @@
   ],
   "catBarHidden": true,
   "_saved": true,
-  "freeEnabled": false
+  "freeEnabled": true,
+  "modalConfig": {
+    "price": "גישה מלאה לשנה - 59 ₪",
+    "bullets": [
+      "גישה מלאה לכל הפרומפטים",
+      "העתקה בלחיצה אחת",
+      "פרומפטים חדשים נוספים מדי פעם",
+      "תקף ל-12 חודשים"
+    ],
+    "buyText": "💬 לרכישה שלח/י הודעה",
+    "buyUrl": ""
+  }
 }
