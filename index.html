@@ -225,6 +225,14 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
 .access-tab-panel{display:none}.access-tab-panel.active{display:block}
 /* hidden cats */
 </style>
+<script>
+(function(){
+  // Apply theme before first paint
+  if(localStorage.getItem('bb_theme')==='light') document.documentElement.setAttribute('data-theme','light');
+  // Hide until JS state is ready
+  document.documentElement.style.opacity='0';
+})();
+</script>
 </head>
 <body>
 <button class="btn btn-theme" id="themeBtn" onclick="toggleTheme()" title="מצב לילה/יום">🌙</button>
@@ -5164,6 +5172,9 @@ var showFavsOnly = false;
 // Apply cached state immediately (fast)
 applyState(state);
 document.getElementById('grid').style.visibility = '';
+// Reveal page with fade after state is applied
+document.documentElement.style.transition = 'opacity .15s';
+document.documentElement.style.opacity = '1';
 
 // Then fetch authoritative state from server and re-apply if it has data
 fetch('/api/state').then(function(r){ return r.json(); }).then(function(serverState) {
