@@ -246,7 +246,7 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
   <button class="btn btn-edit" id="waToggle" onclick="toggleWaShare()" title="שליחת מועדפים ב-WhatsApp">💬 WA</button>
   <button class="btn btn-edit" onclick="openKeysModal()">🔑 ססמאות</button>
   <button class="btn btn-edit" id="catToggleBtn" onclick="toggleCatBar()">🙈 קטגוריות</button>
-  <button class="btn btn-edit" id="freeToggleBtn" onclick="toggleAllFree()" title="פתח/סגור את כל הפרומפטים">🆓 פתח הכל</button>
+  <button class="btn btn-edit" id="freeToggleBtn" onclick="toggleFreeEnabled()" title="הדלק/כבה גישה חינמית">🔴 חינם כבוי</button>
   <button class="btn btn-edit" onclick="exportCSV()" title="ייצוא לאקסל">📤 CSV</button>
   <span class="free-counter" id="freeCounter">🆓 0/50</span>
 </div>
@@ -4707,7 +4707,7 @@ try {
 function isEmptyState(st) {
   if (!st) return true;
   if (st._saved) return false; // explicitly saved state, always use it
-  return ((!st.deleted||!st.deleted.length) && (!st.added||!st.added.length) && (!st.order||!st.order.length) && (!st.customImgs||!Object.keys(st.customImgs).length) && (!st.promptEdits||!Object.keys(st.promptEdits).length) && (!st.freePrompts||!Object.keys(st.freePrompts).length));
+  return ((!st.deleted||!st.deleted.length) && (!st.added||!st.added.length) && (!st.order||!st.order.length) && (!st.customImgs||!Object.keys(st.customImgs).length) && (!st.promptEdits||!Object.keys(st.promptEdits).length) && (!st.freePrompts||!Object.keys(st.freePrompts).length) && !st.freeEnabled);
 }
 
 // ── Keys Management ──────────────────────────────────────
@@ -4836,9 +4836,8 @@ function getLicenseExpiry() {
 }
 
 function shouldShowFull(key) {
-  // Admin sees exactly what guests see (based on freePrompts), so she can verify the state.
-  // Copy still works for admin via copyPrompt regardless of lock.
   if (!ADMIN_UNLOCKED && isPremiumUser()) return true;
+  if (!state.freeEnabled) return false;
   return !!(state.freePrompts && state.freePrompts[key]);
 }
 
@@ -4951,6 +4950,12 @@ function updateFreeCounter() {
   if (!el) return;
   el.textContent = '🆓 ' + count + '/50';
   el.classList.toggle('at-limit', count >= 50);
+  var btn = document.getElementById('freeToggleBtn');
+  if (btn) {
+    var on = !!state.freeEnabled;
+    btn.textContent = on ? '🟢 חינם פעיל' : '🔴 חינם כבוי';
+    btn.classList.toggle('active', on);
+  }
 }
 
 function toggleFreeStatus(key) {
@@ -4977,31 +4982,12 @@ function toggleFreeStatus(key) {
 }
 
 // ── פתח/סגור הכל ──────────────────────────────────────────
-var allFreeState = false;
-function toggleAllFree() {
-  var btn = document.getElementById('freeToggleBtn');
-  if (!allFreeState) {
-    // פתח הכל
-    if (!state.freePrompts) state.freePrompts = {};
-    document.querySelectorAll('#grid .card[data-key]').forEach(function(card) {
-      state.freePrompts[card.getAttribute('data-key')] = true;
-    });
-    allFreeState = true;
-    if (btn) { btn.textContent = '🔒 סגור הכל'; btn.classList.add('active'); }
-    showToast('✅ כל הפרומפטים פתוחים');
-  } else {
-    // סגור הכל
-    state.freePrompts = {};
-    document.querySelectorAll('.ec-free').forEach(function(b) {
-      b.classList.remove('is-premium'); b.textContent = '🆓 Set Free';
-    });
-    allFreeState = false;
-    if (btn) { btn.textContent = '🆓 פתח הכל'; btn.classList.remove('active'); }
-    showToast('🔒 כל הפרומפטים נעולים');
-  }
+function toggleFreeEnabled() {
+  state.freeEnabled = !state.freeEnabled;
   applyPaywallToAll();
   updateFreeCounter();
   markUnsaved();
+  showToast(state.freeEnabled ? '🟢 גישה חינמית הופעלה' : '🔴 גישה חינמית כובתה');
 }
 
 // ── שכפל כרטיס ────────────────────────────────────────────
@@ -5114,18 +5100,6 @@ function toggleCatBar() {
   localStorage.setItem('bb_cat_hidden', hidden ? 'false' : 'true');
 }
 
-function setAllFree() {
-  if (!state.freePrompts) state.freePrompts = {};
-  var cards = document.querySelectorAll('#grid .card[data-key]');
-  cards.forEach(function(card) {
-    var key = card.getAttribute('data-key');
-    if (key) state.freePrompts[key] = true;
-  });
-  applyPaywallToAll();
-  updateFreeCounter();
-  markUnsaved();
-  showToast('✅ כל הפרומפטים סומנו כחינמיים');
-}
 
 // Auto-activate from Lemon Squeezy redirect
 (function(){
@@ -5255,12 +5229,7 @@ function applyState(st) {
   // restore free toggle button label
   var totalCards = document.querySelectorAll('#grid .card[data-key]').length;
   var freeCount = Object.keys(st.freePrompts || {}).length;
-  allFreeState = freeCount > 0 && freeCount >= totalCards;
-  var ftBtn = document.getElementById('freeToggleBtn');
-  if (ftBtn) {
-    ftBtn.textContent = allFreeState ? '🔒 סגור הכל' : '🆓 פתח הכל';
-    ftBtn.classList.toggle('active', allFreeState);
-  }
+  updateFreeCounter();
 }
 
 function markUnsaved() {
@@ -5302,10 +5271,10 @@ async function publishChanges() {
       btn.disabled = false;
       btn.textContent = '\u{1F310} \u05e4\u05e8\u05e1\u05dd \u05e9\u05d9\u05e0\u05d5\u05d9\u05d9\u05dd';
       var freeCount = Object.keys(state.freePrompts || {}).length;
-      var totalCards = document.querySelectorAll('#grid .card[data-key]').length;
-      var statusMsg = freeCount === 0
-        ? '🔒 כל ' + totalCards + ' הפרומפטים נעולים לאורחים'
-        : '🆓 ' + freeCount + ' פרומפטים פתוחים מתוך ' + totalCards;
+      var enabled = !!state.freeEnabled;
+      var statusMsg = !enabled
+        ? '🔴 גישה חינמית כבויה (' + freeCount + ' ברשימה)'
+        : '🟢 ' + freeCount + ' פרומפטים חינמיים פעילים';
       showToast('✅ פורסם — ' + statusMsg, 5000);
     } else {
       var errData = await r.json().catch(function(){return {};});
