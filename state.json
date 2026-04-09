@@ -15523,7 +15523,8 @@
     "added_imp_0068": true,
     "added_imp_0085": true,
     "added_imp_0086": true,
-    "added_imp_0122": true
+    "added_imp_0122": true,
+    "added_imp_0006": true
   },
   "hiddenCats": [
     "Art Style",
@@ -15552,5 +15553,6 @@
     ],
     "buyText": "💬 לרכישה שלח/י הודעה",
     "buyUrl": ""
-  }
+  },
+  "catHidden": true
 }
