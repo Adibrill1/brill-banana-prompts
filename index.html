@@ -71,8 +71,8 @@ h1{text-align:center;color:#f5a623;font-size:2em;margin-bottom:6px}
 .card-header{display:flex;align-items:center;gap:8px;margin-bottom:8px}
 .num{color:#f5a623;font-weight:bold;font-size:12px;min-width:32px}
 .cat{background:var(--bg4);color:var(--text2);font-size:11px;padding:2px 8px;border-radius:20px;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.copy-btn{background:#f5a623;color:#000;border:none;padding:7px 14px;border-radius:6px;cursor:pointer;font-weight:bold;font-size:12px;white-space:nowrap}
-.copy-btn:hover{background:#ffc04d}
+.copy-btn{background:#4caf50;color:#fff;border:none;padding:7px 14px;border-radius:6px;cursor:pointer;font-weight:bold;font-size:12px;white-space:nowrap}
+.copy-btn:hover{background:#66bb6a}
 .copy-btn.ok{background:#4caf50;color:#fff}
 .edit-controls{display:none;gap:5px;margin-bottom:10px;flex-wrap:wrap;align-items:center}
 .body-edit .edit-controls{display:flex}
@@ -86,6 +86,8 @@ h1{text-align:center;color:#f5a623;font-size:2em;margin-bottom:6px}
 .ec-drag:hover{background:#666;color:#fff}
 .ec-drag:active{cursor:grabbing;background:#f5a623;color:#000}
 .thumb-wrap{position:relative;cursor:pointer;border-radius:8px;overflow:hidden;margin-bottom:10px;aspect-ratio:1/1;background:var(--thumb-bg)}
+.card.free-selected .thumb-wrap{outline:3px solid #4caf50;outline-offset:-3px}
+.card.free-selected .thumb-wrap::after{content:'🆓';position:absolute;top:6px;right:6px;background:rgba(76,175,80,.85);color:#fff;font-size:14px;padding:2px 6px;border-radius:20px;pointer-events:none}
 .thumb{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
 .thumb-wrap:hover .thumb{transform:scale(1.04)}
 .thumb-overlay{position:absolute;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s}
@@ -4604,7 +4606,7 @@ set the scene indoors if possible</pre></div>
           <li>פרומפטים חדשים נוספים מדי פעם</li>
           <li>תוקף ל-12 חודשים</li>
         </ul>
-        <a id="buyBtn" href="#" target="_blank" class="buy-btn">💬 שלחי הודעה לרכישה — 59 ₪</a>
+        <a id="buyBtn" href="#" target="_blank" class="buy-btn">💬 לרכישה שלח/י הודעה — 59 ₪</a>
         <div class="modal-footer" style="margin-top:16px">
           <button class="btn btn-cancel" onclick="closeModal('accessModal')">סגור</button>
         </div>
@@ -4628,7 +4630,7 @@ set the scene indoors if possible</pre></div>
   <div class="modal" style="max-width:420px">
     <h2>🔒 פרומפט פרימיום</h2>
     <p style="color:var(--text2);font-size:13px;margin:12px 0">כדי לראות את הפרומפט המלא ולהעתיק אותו, נדרשת גישת פרימיום.</p>
-    <a id="unlockBuyBtn" href="#" target="_blank" class="buy-btn">💬 שלחי הודעה לרכישה — 59 ₪</a>
+    <a id="unlockBuyBtn" href="#" target="_blank" class="buy-btn">💬 לרכישה שלח/י הודעה — 59 ₪</a>
     <div class="license-divider" style="margin:14px 0">יש לך מפתח?</div>
     <div style="display:flex;gap:8px">
       <input type="text" id="unlockKeyInput" placeholder="הזן מפתח גישה..." style="flex:1;direction:ltr">
@@ -4942,6 +4944,8 @@ function applyPaywallToCard(card, key) {
   var isFree = !!(state.freePrompts && state.freePrompts[key]);
   var badge = card.querySelector('.free-badge');
   if (badge) badge.style.display = isFree ? '' : 'none';
+  // free-selected highlight (admin image-click indicator)
+  card.classList.toggle('free-selected', isFree);
 }
 
 function updateFreeCounter() {
@@ -5425,7 +5429,14 @@ grid.addEventListener('click', function(e) {
   var btn = e.target.closest('[data-action]');
   if (!btn) {
     var wrap = e.target.closest('.thumb-wrap');
-    if (wrap) openLightbox(wrap.getAttribute('data-lb-key'));
+    if (wrap) {
+      if (ADMIN_UNLOCKED && !editMode && !reorderMode) {
+        var card = wrap.closest('.card[data-key]');
+        if (card) { toggleFreeStatus(card.getAttribute('data-key')); markUnsaved(); updateFreeCounter(); }
+      } else {
+        openLightbox(wrap.getAttribute('data-lb-key'));
+      }
+    }
     return;
   }
   var action = btn.getAttribute('data-action');
