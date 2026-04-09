@@ -5301,7 +5301,12 @@ async function publishChanges() {
       document.getElementById('unsavedDot').classList.remove('show');
       btn.disabled = false;
       btn.textContent = '\u{1F310} \u05e4\u05e8\u05e1\u05dd \u05e9\u05d9\u05e0\u05d5\u05d9\u05d9\u05dd';
-      showToast('\u2705 \u05d4\u05e9\u05d9\u05e0\u05d5\u05d9\u05d9\u05dd \u05e4\u05d5\u05e8\u05e1\u05de\u05d5 \u05dc\u05db\u05dc \u05d4\u05de\u05d1\u05e7\u05e8\u05d9\u05dd!');
+      var freeCount = Object.keys(state.freePrompts || {}).length;
+      var totalCards = document.querySelectorAll('#grid .card[data-key]').length;
+      var statusMsg = freeCount === 0
+        ? '🔒 כל ' + totalCards + ' הפרומפטים נעולים לאורחים'
+        : '🆓 ' + freeCount + ' פרומפטים פתוחים מתוך ' + totalCards;
+      showToast('✅ פורסם — ' + statusMsg, 5000);
     } else {
       var errData = await r.json().catch(function(){return {};});
       var errMsg = (errData && errData.error) ? errData.error : ('HTTP ' + r.status);
@@ -5897,7 +5902,7 @@ function closeModal(id){document.getElementById(id).classList.remove('open');}
   document.getElementById(id).addEventListener('click',function(e){if(e.target===this)closeModal(id);});
 });
 var toastT;
-function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove('show');},2800);}
+function showToast(msg,dur){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove('show');},dur||2800);}
 
 </script>
 </body>
