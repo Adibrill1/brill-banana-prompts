@@ -5437,7 +5437,7 @@ grid.addEventListener('click', function(e) {
   var action = btn.getAttribute('data-action');
   var key    = btn.getAttribute('data-key');
   if (action === 'copy')   copyPrompt(key, btn);
-  if (action === 'unlock') openUnlockModal();
+  if (action === 'unlock') openAccessModal('premium');
   if (action === 'del')    { if (!ADMIN_UNLOCKED) return; deleteCard(key); }
   if (action === 'img')    { if (!ADMIN_UNLOCKED) return; openImgModal(key); }
   if (action === 'edit')   { if (!ADMIN_UNLOCKED) return; openEditModal(key); }
