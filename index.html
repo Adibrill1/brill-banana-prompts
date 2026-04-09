@@ -87,7 +87,6 @@ h1{text-align:center;color:#f5a623;font-size:2em;margin-bottom:6px}
 .ec-drag:active{cursor:grabbing;background:#f5a623;color:#000}
 .thumb-wrap{position:relative;cursor:pointer;border-radius:8px;overflow:hidden;margin-bottom:10px;aspect-ratio:1/1;background:var(--thumb-bg)}
 .card.free-selected .thumb-wrap{outline:3px solid #4caf50;outline-offset:-3px}
-.card.free-selected .thumb-wrap::after{content:'🆓';position:absolute;top:6px;right:6px;background:rgba(76,175,80,.85);color:#fff;font-size:14px;padding:2px 6px;border-radius:20px;pointer-events:none}
 .thumb{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
 .thumb-wrap:hover .thumb{transform:scale(1.04)}
 .thumb-overlay{position:absolute;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s}
@@ -249,6 +248,7 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
   <button class="btn btn-edit" onclick="openKeysModal()">🔑 ססמאות</button>
   <button class="btn btn-edit" id="catToggleBtn" onclick="toggleCatBar()">🙈 קטגוריות</button>
   <button class="btn btn-edit" id="freeToggleBtn" onclick="toggleFreeEnabled()" title="הדלק/כבה גישה חינמית">🔴 חינם כבוי</button>
+  <button class="btn btn-edit" onclick="openPremiumTextModal()" title="ערוך טקסטים בחלון הפרימיום">🖊️ חלון פרימיום</button>
   <button class="btn btn-edit" onclick="exportCSV()" title="ייצוא לאקסל">📤 CSV</button>
   <span class="free-counter" id="freeCounter">🆓 0/50</span>
 </div>
@@ -4599,12 +4599,12 @@ set the scene indoors if possible</pre></div>
         </div>
         <p id="licenseError" style="display:none;color:#e53935;font-size:12px;margin-top:4px"></p>
         <div class="license-divider">or</div>
-        <p style="color:var(--text2);font-size:13px;margin-bottom:8px;font-weight:bold">גישה מלאה לשנה — 59 ₪</p>
+        <p id="modalPrice" style="color:var(--text2);font-size:13px;margin-bottom:8px;font-weight:bold">גישה מלאה לשנה — 59 ₪</p>
         <ul class="license-benefits">
-          <li>גישה מלאה לכל הפרומפטים</li>
-          <li>העתקה בלחיצה אחת</li>
-          <li>פרומפטים חדשים נוספים מדי פעם</li>
-          <li>תוקף ל-12 חודשים</li>
+          <li id="modalBullet1">גישה מלאה לכל הפרומפטים</li>
+          <li id="modalBullet2">העתקה בלחיצה אחת</li>
+          <li id="modalBullet3">פרומפטים חדשים נוספים מדי פעם</li>
+          <li id="modalBullet4">תוקף ל-12 חודשים</li>
         </ul>
         <a id="buyBtn" href="#" target="_blank" class="buy-btn">💬 לרכישה שלח/י הודעה — 59 ₪</a>
         <div class="modal-footer" style="margin-top:16px">
@@ -4639,6 +4639,29 @@ set the scene indoors if possible</pre></div>
     <p id="unlockError" style="display:none;color:#e53935;font-size:12px;margin-top:4px"></p>
     <div class="modal-footer">
       <button class="btn btn-cancel" onclick="closeModal('unlockModal')">סגור</button>
+    </div>
+  </div>
+</div>
+<div class="modal-bg" id="premiumTextModal">
+  <div class="modal" style="max-width:460px">
+    <h2>🖊️ עריכת חלון פרימיום</h2>
+    <label>כותרת מחיר</label>
+    <input type="text" id="ptPrice" placeholder="גישה מלאה לשנה — 59 ₪">
+    <label style="margin-top:10px">שורה 1</label>
+    <input type="text" id="ptB1" placeholder="גישה מלאה לכל הפרומפטים">
+    <label style="margin-top:10px">שורה 2</label>
+    <input type="text" id="ptB2" placeholder="העתקה בלחיצה אחת">
+    <label style="margin-top:10px">שורה 3</label>
+    <input type="text" id="ptB3" placeholder="פרומפטים חדשים נוספים מדי פעם">
+    <label style="margin-top:10px">שורה 4</label>
+    <input type="text" id="ptB4" placeholder="תוקף ל-12 חודשים">
+    <label style="margin-top:10px">טקסט כפתור רכישה</label>
+    <input type="text" id="ptBuyText" placeholder="💬 לרכישה שלח/י הודעה — 59 ₪">
+    <label style="margin-top:10px">קישור כפתור רכישה (URL)</label>
+    <input type="text" id="ptBuyUrl" placeholder="https://wa.me/..." style="direction:ltr">
+    <div class="modal-footer" style="margin-top:16px">
+      <button class="btn btn-cancel" onclick="closeModal('premiumTextModal')">סגור</button>
+      <button class="btn btn-ok" onclick="savePremiumTexts()">✅ שמור</button>
     </div>
   </div>
 </div>
@@ -4986,6 +5009,66 @@ function toggleFreeStatus(key) {
 }
 
 // ── פתח/סגור הכל ──────────────────────────────────────────
+var DEFAULT_MODAL_CONFIG = {
+  price: 'גישה מלאה לשנה — 59 ₪',
+  bullets: ['גישה מלאה לכל הפרומפטים','העתקה בלחיצה אחת','פרומפטים חדשים נוספים מדי פעם','תוקף ל-12 חודשים'],
+  buyText: '💬 לרכישה שלח/י הודעה — 59 ₪',
+  buyUrl: ''
+};
+
+function applyModalConfig(cfg) {
+  cfg = cfg || {};
+  var d = DEFAULT_MODAL_CONFIG;
+  var price = cfg.price || d.price;
+  var bullets = cfg.bullets && cfg.bullets.length === 4 ? cfg.bullets : d.bullets;
+  var buyText = cfg.buyText || d.buyText;
+  var buyUrl  = cfg.buyUrl  || d.buyUrl;
+  var el;
+  el = document.getElementById('modalPrice');   if (el) el.textContent = price;
+  el = document.getElementById('modalBullet1'); if (el) el.textContent = bullets[0];
+  el = document.getElementById('modalBullet2'); if (el) el.textContent = bullets[1];
+  el = document.getElementById('modalBullet3'); if (el) el.textContent = bullets[2];
+  el = document.getElementById('modalBullet4'); if (el) el.textContent = bullets[3];
+  ['buyBtn','unlockBuyBtn'].forEach(function(id) {
+    var btn = document.getElementById(id);
+    if (!btn) return;
+    btn.textContent = buyText;
+    if (buyUrl) { btn.href = buyUrl; btn.style.pointerEvents = ''; btn.style.opacity = ''; }
+    else        { btn.href = '#'; }
+  });
+}
+
+function openPremiumTextModal() {
+  var cfg = state.modalConfig || {};
+  var d = DEFAULT_MODAL_CONFIG;
+  document.getElementById('ptPrice').value   = cfg.price   || d.price;
+  document.getElementById('ptB1').value      = (cfg.bullets && cfg.bullets[0]) || d.bullets[0];
+  document.getElementById('ptB2').value      = (cfg.bullets && cfg.bullets[1]) || d.bullets[1];
+  document.getElementById('ptB3').value      = (cfg.bullets && cfg.bullets[2]) || d.bullets[2];
+  document.getElementById('ptB4').value      = (cfg.bullets && cfg.bullets[3]) || d.bullets[3];
+  document.getElementById('ptBuyText').value = cfg.buyText || d.buyText;
+  document.getElementById('ptBuyUrl').value  = cfg.buyUrl  || d.buyUrl;
+  openModal('premiumTextModal');
+}
+
+function savePremiumTexts() {
+  state.modalConfig = {
+    price:   document.getElementById('ptPrice').value.trim()   || DEFAULT_MODAL_CONFIG.price,
+    bullets: [
+      document.getElementById('ptB1').value.trim() || DEFAULT_MODAL_CONFIG.bullets[0],
+      document.getElementById('ptB2').value.trim() || DEFAULT_MODAL_CONFIG.bullets[1],
+      document.getElementById('ptB3').value.trim() || DEFAULT_MODAL_CONFIG.bullets[2],
+      document.getElementById('ptB4').value.trim() || DEFAULT_MODAL_CONFIG.bullets[3]
+    ],
+    buyText: document.getElementById('ptBuyText').value.trim() || DEFAULT_MODAL_CONFIG.buyText,
+    buyUrl:  document.getElementById('ptBuyUrl').value.trim()
+  };
+  applyModalConfig(state.modalConfig);
+  markUnsaved();
+  closeModal('premiumTextModal');
+  showToast('✅ החלון עודכן — לחץ פרסם לשמירה');
+}
+
 function toggleFreeEnabled() {
   state.freeEnabled = !state.freeEnabled;
   applyPaywallToAll();
@@ -5221,6 +5304,7 @@ function applyState(st) {
   initFavBtns();
   initPaywallDOM();
   updateFreeCounter();
+  applyModalConfig(st.modalConfig);
   updateLicenseBtn();
   applyPaywallToAll();
   buildCatFilters();
