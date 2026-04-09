@@ -180,6 +180,8 @@ input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px
 .btn-wa{background:#25d366;color:#fff}.btn-wa:hover{background:#1ebe5d}
 /* Paywall */
 .prompt-wrap{position:relative;overflow:hidden;margin-bottom:0;flex:1}
+/* Hide prompt text for regular users — admin still sees it */
+body:not(.admin-open) .prompt-wrap{display:none}
 .card.locked-prompt .prompt-wrap::after{content:'';position:absolute;bottom:0;left:0;right:0;height:55px;background:linear-gradient(to bottom,transparent,var(--card-bg) 90%);pointer-events:none}
 .card.locked-prompt .prompt-text{max-height:55px;overflow:hidden;margin-bottom:0;user-select:none;-webkit-user-select:none;pointer-events:none}
 .card.locked-prompt .copy-btn{display:none !important}
