@@ -4705,7 +4705,9 @@ try {
 } catch(e) {}
 
 function isEmptyState(st) {
-  return !st || ((!st.deleted||!st.deleted.length) && (!st.added||!st.added.length) && (!st.order||!st.order.length) && (!st.customImgs||!Object.keys(st.customImgs).length) && (!st.promptEdits||!Object.keys(st.promptEdits).length) && (!st.freePrompts||!Object.keys(st.freePrompts).length));
+  if (!st) return true;
+  if (st._saved) return false; // explicitly saved state, always use it
+  return ((!st.deleted||!st.deleted.length) && (!st.added||!st.added.length) && (!st.order||!st.order.length) && (!st.customImgs||!Object.keys(st.customImgs).length) && (!st.promptEdits||!Object.keys(st.promptEdits).length) && (!st.freePrompts||!Object.keys(st.freePrompts).length));
 }
 
 // ── Keys Management ──────────────────────────────────────
@@ -5275,6 +5277,7 @@ async function publishChanges() {
   try {
     // Replace stale base64 with confirmed server paths to avoid exceeding 4.5MB body limit
     var stateToPost = JSON.parse(JSON.stringify(state));
+    stateToPost._saved = true;
     Object.keys(stateToPost.customImgs || {}).forEach(function(key) {
       if ((stateToPost.customImgs[key] || '').startsWith('data:') && serverCustomImgs[key]) {
         stateToPost.customImgs[key] = serverCustomImgs[key];
