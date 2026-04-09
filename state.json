@@ -15639,9 +15639,9 @@
     "buyUrl": ""
   },
   "catHidden": true,
-  "shareWhatsApp": true,
+  "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1775763003655,
+  "_publishedAt": 1775763343465,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
