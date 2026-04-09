@@ -4823,7 +4823,9 @@ function getLicenseExpiry() {
 }
 
 function shouldShowFull(key) {
-  if (isPremiumUser()) return true;
+  // Admin sees exactly what guests see (based on freePrompts), so she can verify the state.
+  // Copy still works for admin via copyPrompt regardless of lock.
+  if (!ADMIN_UNLOCKED && isPremiumUser()) return true;
   return !!(state.freePrompts && state.freePrompts[key]);
 }
 
