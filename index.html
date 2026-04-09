@@ -5149,6 +5149,8 @@ function setAllFree() {
     document.body.classList.toggle('light');
     localStorage.setItem('bb_theme', document.body.classList.contains('light') ? 'light' : 'dark');
     updateBtn();
+    var s = document.getElementById('colsSlider');
+    if (s && window._updateSliderTrack) window._updateSliderTrack(parseInt(s.value));
   };
 })();
 
@@ -5817,11 +5819,17 @@ function renumberCards(){
     if(w<=1600)return 4;
     return 5;
   }
+  function updateSliderTrack(n){
+    var pct=((n-1)/16*100)+'%';
+    var trackColor=document.body.classList.contains('light')?'#ccc':'#444';
+    slider.style.background='linear-gradient(to right,#f5a623 '+pct+','+trackColor+' '+pct+')';
+  }
+  window._updateSliderTrack = updateSliderTrack;
   function setGridCols(n){
     gridEl.style.gridTemplateColumns='repeat('+n+',1fr)';
     gridEl.style.maxWidth = n >= 8 ? 'none' : '';
     gridEl.classList.toggle('compact-mode', n >= 8);
-    slider.style.setProperty('--pct',((n-1)/16*100)+'%');
+    updateSliderTrack(n);
     valEl.textContent=n;
     slider.value=n;
   }
