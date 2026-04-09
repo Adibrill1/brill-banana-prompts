@@ -15543,7 +15543,6 @@
   ],
   "catBarHidden": true,
   "_saved": true,
-  "freeEnabled": true,
   "modalConfig": {
     "price": "גישה מלאה לשנה - 59 ₪",
     "bullets": [
@@ -15556,5 +15555,6 @@
     "buyUrl": ""
   },
   "catHidden": true,
-  "shareWhatsApp": false
+  "shareWhatsApp": false,
+  "freeMode": "off"
 }
