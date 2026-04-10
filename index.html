@@ -314,13 +314,14 @@ body.admin-open .prompt-wrap{display:block !important}
   <button class="btn btn-edit" onclick="openImportModal()" title="ייבוא כרטיסיות בקבוצה">📥 ייבוא</button>
   <button class="btn btn-edit" onclick="openPremiumTextModal()" title="ערוך טקסטים בחלון הפרימיום">🔒 פרימיום</button>
   <button class="btn btn-edit" onclick="openWaTextModal()" title="ערוך הודעות וואטסאפ">📱 הודעות WA</button>
+  <button class="btn btn-edit" onclick="openHeaderModal()" title="ערוך כותרת ראשית">✏️ כותרת</button>
   <button class="btn btn-edit" onclick="openServicesModal()" title="ערוך עמוד שירותים">🛍️ שירותים</button>
   <button class="btn btn-edit" onclick="exportCSV()" title="ייצוא לאקסל">📤 CSV</button>
   <span class="free-counter" id="freeCounter">🆓 0/50</span>
 </div>
-<h1>Brill <span class="banana">🍌</span> Banana Prompts</h1>
-<p class="subtitle" style="margin-bottom:4px">קטלוג פרומפטים מתעדכן ליצירת תמונות אישיות ב- Nano Banana 2</p>
-<p class="subtitle" style="margin-bottom:20px"><span id="subtitle-count">241</span> פרומפטים | 📋 Copy להעתקה | לחץ על תמונה לתצוגה מוגדלת</p>
+<h1 id="mainTitle">Brill <span class="banana">🍌</span> Banana Prompts</h1>
+<p class="subtitle" id="subtitle1" style="margin-bottom:4px">קטלוג פרומפטים מתעדכן ליצירת תמונות אישיות ב- Nano Banana 2</p>
+<p class="subtitle" style="margin-bottom:20px"><span id="subtitle-count">241</span> <span id="subtitle2">פרומפטים | 📋 Copy להעתקה | לחץ על תמונה לתצוגה מוגדלת</span></p>
 <div id="orderBar" style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:14px">
   <button class="btn" id="btnMainOrder" style="display:none;background:#4caf50;color:#fff" onclick="location.href='/services#order'"><span style="font-size:18px;vertical-align:middle">🛒</span> הזמנת תמונות</button>
   <button class="btn" id="btnMainSession" style="display:none;background:#1565c0;color:#fff" onclick="location.href='/services#session'">📅 קביעת סשן</button>
@@ -4781,6 +4782,21 @@ set the scene indoors if possible</pre></div>
     </div>
   </div>
 </div>
+<div class="modal-bg" id="headerModal">
+  <div class="modal" style="max-width:480px">
+    <h2>✏️ עריכת כותרת ראשית</h2>
+    <label>כותרת ראשית (הטקסט לצידי הבננה)</label>
+    <input type="text" id="hdr_title" placeholder="Brill Banana Prompts">
+    <label style="margin-top:12px">שורה 1 — כתובית עליונה</label>
+    <input type="text" id="hdr_sub1" placeholder="קטלוג פרומפטים מתעדכן ליצירת תמונות אישיות ב- Nano Banana 2">
+    <label style="margin-top:12px">שורה 2 — כתובית תחתונה (אחרי מספר הפרומפטים)</label>
+    <input type="text" id="hdr_sub2" placeholder="פרומפטים | 📋 Copy להעתקה | לחץ על תמונה לתצוגה מוגדלת">
+    <div class="modal-footer" style="margin-top:16px">
+      <button class="btn btn-cancel" onclick="closeModal('headerModal')">סגור</button>
+      <button class="btn btn-ok" onclick="saveHeaderContent()">✅ שמור</button>
+    </div>
+  </div>
+</div>
 <div class="modal-bg" id="servicesModal">
   <div class="modal" style="max-width:540px">
     <h2>🛍️ עריכת עמוד שירותים</h2>
@@ -5010,6 +5026,11 @@ function openImportModal() {
   openModal('importModal');
 }
 
+// Apply header config on load
+(function(){
+  var cfg = JSON.parse(localStorage.getItem('bb_header_config') || 'null');
+  if (cfg) applyHeaderConfig(cfg);
+})();
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('importJsonFile').addEventListener('change', function(e) {
     var file = e.target.files[0];
@@ -5420,6 +5441,38 @@ function savePremiumTexts() {
   showToast('✅ החלון עודכן — לחץ פרסם לשמירה');
 }
 
+var DEFAULT_HEADER_CONFIG = {
+  title: 'Brill 🍌 Banana Prompts',
+  sub1: 'קטלוג פרומפטים מתעדכן ליצירת תמונות אישיות ב- Nano Banana 2',
+  sub2: 'פרומפטים | 📋 Copy להעתקה | לחץ על תמונה לתצוגה מוגדלת'
+};
+function applyHeaderConfig(cfg) {
+  cfg = cfg || DEFAULT_HEADER_CONFIG;
+  var t = document.getElementById('mainTitle');
+  if (t) t.innerHTML = (cfg.title || DEFAULT_HEADER_CONFIG.title).replace('🍌','<span class="banana">🍌</span>');
+  var s1 = document.getElementById('subtitle1');
+  if (s1) s1.textContent = cfg.sub1 || DEFAULT_HEADER_CONFIG.sub1;
+  var s2 = document.getElementById('subtitle2');
+  if (s2) s2.textContent = cfg.sub2 || DEFAULT_HEADER_CONFIG.sub2;
+}
+function openHeaderModal() {
+  var cfg = JSON.parse(localStorage.getItem('bb_header_config') || 'null') || DEFAULT_HEADER_CONFIG;
+  document.getElementById('hdr_title').value = cfg.title || DEFAULT_HEADER_CONFIG.title;
+  document.getElementById('hdr_sub1').value  = cfg.sub1  || DEFAULT_HEADER_CONFIG.sub1;
+  document.getElementById('hdr_sub2').value  = cfg.sub2  || DEFAULT_HEADER_CONFIG.sub2;
+  openModal('headerModal');
+}
+function saveHeaderContent() {
+  var cfg = {
+    title: document.getElementById('hdr_title').value.trim() || DEFAULT_HEADER_CONFIG.title,
+    sub1:  document.getElementById('hdr_sub1').value.trim()  || DEFAULT_HEADER_CONFIG.sub1,
+    sub2:  document.getElementById('hdr_sub2').value.trim()  || DEFAULT_HEADER_CONFIG.sub2
+  };
+  localStorage.setItem('bb_header_config', JSON.stringify(cfg));
+  applyHeaderConfig(cfg);
+  closeModal('headerModal');
+  showToast('✅ הכותרת עודכנה');
+}
 var DEFAULT_SERVICES_CONFIG = {
   heroTitle: 'הזמנת תמונות AI אישיות 🍌',
   heroSub: 'תמונות מקצועיות שנוצרות ב-AI על בסיס התמונה שלך — בסגנונות מרהיבים ובדיוק מושלם',
