@@ -271,7 +271,7 @@ body.admin-open .prompt-wrap{display:block !important}
 .keys-search{width:100%;padding:7px 10px;border:1px solid var(--border2);border-radius:6px;background:var(--input-bg);color:var(--text);font-size:12px;margin-bottom:4px}
 .keys-search:focus{outline:none;border-color:#f5a623}
 /* category filter bar */
-.cat-filter-bar{display:flex;flex-wrap:nowrap;gap:6px;justify-content:flex-start;margin-bottom:0;padding:0}
+.cat-filter-bar{display:flex;flex-wrap:nowrap;gap:6px;justify-content:flex-end;max-width:1900px;margin:0 auto 8px;padding:0}
 .cat-filter-btn{background:var(--bg4);color:var(--text2);border:1px solid var(--border2);border-radius:20px;padding:5px 14px;font-size:12px;cursor:pointer;white-space:nowrap;transition:background .15s,color .15s}
 .cat-filter-btn:hover{background:var(--border2)}
 .cat-filter-btn.active{background:#f5a623;color:#000;border-color:#f5a623;font-weight:bold}
@@ -327,11 +327,11 @@ body.admin-open .prompt-wrap{display:block !important}
   <button class="btn btn-fav-action" id="btnSendFavs" style="display:none" onclick="openShareModal()">📤 שלח מועדפים</button>
   <button class="btn btn-fav-action" id="btnClearFavs" style="display:none" onclick="clearFavs()">🗑️ אפס בחירה</button>
 </div>
+<div class="cat-filter-bar" id="catFilterBar" style="display:none"></div>
 <div class="cols-control">
   <span class="cols-label">מספר תמונות בשורה:</span>
   <input type="range" id="colsSlider" class="cols-slider" min="1" max="17" value="5">
   <span class="cols-val" id="colsVal">5</span>
-  <div class="cat-filter-bar" id="catFilterBar" style="display:none;margin-right:auto;margin-left:0"></div>
 </div>
 <div id="favCountRow" style="display:none;text-align:center;color:#f5a623;font-weight:bold;font-size:14px;margin-bottom:10px"></div>
 <div class="grid" id="grid" style="visibility:hidden">
