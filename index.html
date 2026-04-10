@@ -176,6 +176,11 @@ h3{font-size:13px;font-weight:600;color:var(--h3);margin-bottom:8px;line-height:
 .or-div{text-align:center;color:var(--text4);margin:10px 0;font-size:12px}
 .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:#4caf50;color:#fff;padding:10px 24px;border-radius:8px;font-weight:bold;font-size:14px;pointer-events:none;opacity:0;transition:opacity .25s;z-index:9999}
 .toast.show{opacity:1}
+.svc-size-row{display:flex;align-items:center;gap:8px;font-size:12px}
+.svc-size-row label{min-width:120px;color:var(--text2);text-align:right;white-space:nowrap}
+.svc-size-ctrl{display:flex;align-items:center;gap:6px;flex:1}
+.svc-size-ctrl input[type=range]{flex:1;accent-color:var(--primary)}
+.svc-sz-val{min-width:36px;text-align:left;color:var(--primary);font-weight:700;font-size:12px}
 .fab{display:none;position:fixed;bottom:28px;right:28px;background:#4caf50;color:#fff;border:none;width:56px;height:56px;border-radius:50%;font-size:28px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.5);z-index:500}
 .fab:hover{background:#66bb6a}
 .admin-bar{display:none;position:fixed;top:0;left:0;right:0;height:48px;background:#1a0800;border-bottom:2px solid #f5a623;padding:0 16px;z-index:800;align-items:center;gap:8px;flex-wrap:nowrap;overflow-x:auto}
@@ -4835,6 +4840,18 @@ set the scene indoors if possible</pre></div>
     <b>🖼️ גלריית דוגמאות</b>
     <p style="font-size:12px;color:var(--text2);margin:4px 0 10px">עדכן/י עד 8 תמונות - כתובת URL וכיתוב לכל תמונה</p>
     <div id="svc_galleryRows" style="display:flex;flex-direction:column;gap:8px"></div>
+    <hr style="border-color:var(--border2);margin:16px 0">
+    <b>📐 גודל איזורים</b>
+    <p style="font-size:12px;color:var(--text2);margin:4px 0 10px">שנה/י את גודל הטקסט בכל חלק של העמוד (באחוזים)</p>
+    <div style="display:flex;flex-direction:column;gap:8px" id="svc_sizesWrap">
+      <div class="svc-size-row"><label>Hero - כותרת ראשית</label><div class="svc-size-ctrl"><input type="range" min="60" max="160" step="5" id="svc_sz_hero" oninput="document.getElementById('svc_sz_hero_val').textContent=this.value+'%'"><span class="svc-sz-val" id="svc_sz_hero_val">100%</span></div></div>
+      <div class="svc-size-row"><label>איך זה עובד</label><div class="svc-size-ctrl"><input type="range" min="60" max="160" step="5" id="svc_sz_how" oninput="document.getElementById('svc_sz_how_val').textContent=this.value+'%'"><span class="svc-sz-val" id="svc_sz_how_val">100%</span></div></div>
+      <div class="svc-size-row"><label>מחירים</label><div class="svc-size-ctrl"><input type="range" min="60" max="160" step="5" id="svc_sz_pricing" oninput="document.getElementById('svc_sz_pricing_val').textContent=this.value+'%'"><span class="svc-sz-val" id="svc_sz_pricing_val">100%</span></div></div>
+      <div class="svc-size-row"><label>גלריה - טקסט</label><div class="svc-size-ctrl"><input type="range" min="60" max="160" step="5" id="svc_sz_gallery" oninput="document.getElementById('svc_sz_gallery_val').textContent=this.value+'%'"><span class="svc-sz-val" id="svc_sz_gallery_val">100%</span></div></div>
+      <div class="svc-size-row"><label>גלריה - עמודות</label><div class="svc-size-ctrl"><input type="range" min="2" max="6" step="1" id="svc_sz_galcols" oninput="document.getElementById('svc_sz_galcols_val').textContent=this.value"><span class="svc-sz-val" id="svc_sz_galcols_val">4</span></div></div>
+      <div class="svc-size-row"><label>שאלות נפוצות</label><div class="svc-size-ctrl"><input type="range" min="60" max="160" step="5" id="svc_sz_faq" oninput="document.getElementById('svc_sz_faq_val').textContent=this.value+'%'"><span class="svc-sz-val" id="svc_sz_faq_val">100%</span></div></div>
+      <div class="svc-size-row"><label>יצירת קשר</label><div class="svc-size-ctrl"><input type="range" min="60" max="160" step="5" id="svc_sz_contact" oninput="document.getElementById('svc_sz_contact_val').textContent=this.value+'%'"><span class="svc-sz-val" id="svc_sz_contact_val">100%</span></div></div>
+    </div>
     <div class="modal-footer" style="margin-top:16px">
       <button class="btn btn-cancel" onclick="closeModal('servicesModal')">סגור</button>
       <button class="btn btn-ok" onclick="saveServicesContent()">✅ שמור ופרסם</button>
@@ -5488,6 +5505,7 @@ var DEFAULT_SERVICES_CONFIG = {
   orderMsg: 'היי, אשמח להזמין תמונות AI 🍌',
   subMsg: 'היי, אשמח לרכוש מנוי שנתי לקטלוג 🍌',
   sessionMsg: 'היי, אשמח לקבוע סשן אישי בזום 🍌',
+  sectionSizes: { hero:100, how:100, pricing:100, gallery:100, galcols:4, faq:100, contact:100 },
   gallery: [
     {src:'images/241.jpg', caption:'ציור מיניאטורה'},
     {src:'images/226.jpg', caption:'אינטראקציה תלת-מימדית'},
@@ -5512,6 +5530,18 @@ function openServicesModal() {
   document.getElementById('svc_orderMsg').value    = cfg.orderMsg    || DEFAULT_SERVICES_CONFIG.orderMsg;
   document.getElementById('svc_subMsg').value      = cfg.subMsg      || DEFAULT_SERVICES_CONFIG.subMsg;
   document.getElementById('svc_sessionMsg').value  = cfg.sessionMsg  || DEFAULT_SERVICES_CONFIG.sessionMsg;
+  // Populate size sliders
+  var sz = cfg.sectionSizes || DEFAULT_SERVICES_CONFIG.sectionSizes;
+  [['hero',100],['how',100],['pricing',100],['gallery',100],['faq',100],['contact',100]].forEach(function(pair){
+    var el = document.getElementById('svc_sz_'+pair[0]);
+    var vl = document.getElementById('svc_sz_'+pair[0]+'_val');
+    if (el) { el.value = sz[pair[0]] !== undefined ? sz[pair[0]] : pair[1]; }
+    if (vl) { vl.textContent = el.value + '%'; }
+  });
+  var colEl = document.getElementById('svc_sz_galcols');
+  var colVl = document.getElementById('svc_sz_galcols_val');
+  if (colEl) { colEl.value = sz.galcols !== undefined ? sz.galcols : 4; }
+  if (colVl) { colVl.textContent = colEl.value; }
   // Build gallery rows
   var galRows = document.getElementById('svc_galleryRows');
   galRows.innerHTML = '';
@@ -5600,6 +5630,10 @@ function saveServicesContent() {
     subMsg:       document.getElementById('svc_subMsg').value.trim()       || DEFAULT_SERVICES_CONFIG.subMsg,
     sessionMsg:   document.getElementById('svc_sessionMsg').value.trim()   || DEFAULT_SERVICES_CONFIG.sessionMsg,
     phone: phone,
+    sectionSizes: (function(){
+      function szVal(id){ var el=document.getElementById('svc_sz_'+id); return el ? parseInt(el.value) : 100; }
+      return { hero:szVal('hero'), how:szVal('how'), pricing:szVal('pricing'), gallery:szVal('gallery'), galcols:szVal('galcols'), faq:szVal('faq'), contact:szVal('contact') };
+    })(),
     gallery: (function(){
       var g = [];
       var rows = document.getElementById('svc_galleryRows').children;
