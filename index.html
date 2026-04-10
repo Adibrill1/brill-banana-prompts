@@ -36,8 +36,6 @@ h1{text-align:center;color:#f5a623;font-size:2em;margin-bottom:6px}
 .btn-edit:hover,.btn-edit.active{background:#f5a623;color:#000}
 #waToggle.active{background:#25d366;color:#fff;border-color:#25d366}
 #waToggle.active:hover{background:#1ebe5d}
-#catToggleBtn.active{background:#f5c800;color:#000;border-color:#f5c800}
-#catToggleBtn.active:hover{background:#ffe033}
 #freeToggleBtn.free-off{background:#e53935;color:#fff;border-color:#e53935}
 #freeToggleBtn.free-off:hover{background:#ef5350}
 #freeToggleBtn.free-partial{background:#f5a623;color:#000;border-color:#f5a623}
@@ -259,6 +257,7 @@ body.admin-open .prompt-wrap{display:block !important}
 <div class="admin-bar" id="adminBar">
   <span class="admin-label">🍌 Brill Banana Admin</span>
   <span class="unsaved-dot" id="unsavedDot" title="יש שינויים לא מפורסמים"></span>
+  <button class="btn btn-edit free-off" id="freeToggleBtn" onclick="toggleFreeEnabled()" title="הדלק/כבה גישה חינמית">כבוי</button>
   <button class="btn btn-edit" id="editToggle" onclick="toggleEditMode()">✏️ מצב עריכה</button>
   <button class="btn btn-reorder" id="reorderToggle" onclick="toggleReorderMode()" style="display:none">🔀 סדר</button>
   <button class="btn btn-add" onclick="openAddModal()">➕ הוסף</button>
@@ -266,7 +265,6 @@ body.admin-open .prompt-wrap{display:block !important}
   <button class="btn btn-edit" id="waToggle" onclick="toggleWaShare()" title="שליחת מועדפים ב-WhatsApp">💬 WA</button>
   <button class="btn btn-edit" onclick="openKeysModal()">🔑 ססמאות</button>
   <button class="btn btn-edit" id="catToggleBtn" onclick="toggleCatBar()">קטגוריות</button>
-  <button class="btn btn-edit free-off" id="freeToggleBtn" onclick="toggleFreeEnabled()" title="הדלק/כבה גישה חינמית">כבוי</button>
   <button class="btn btn-edit" onclick="openImportModal()" title="ייבוא כרטיסיות בקבוצה">📥 ייבוא</button>
   <button class="btn btn-edit" onclick="openPremiumTextModal()" title="ערוך טקסטים בחלון הפרימיום">🔒 פרימיום</button>
   <button class="btn btn-edit" onclick="openWaTextModal()" title="ערוך הודעות וואטסאפ">📱 הודעות WA</button>
