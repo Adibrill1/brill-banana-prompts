@@ -36,6 +36,14 @@ h1{text-align:center;color:#f5a623;font-size:2em;margin-bottom:6px}
 .btn-edit:hover,.btn-edit.active{background:#f5a623;color:#000}
 #waToggle.active{background:#25d366;color:#fff;border-color:#25d366}
 #waToggle.active:hover{background:#1ebe5d}
+#catToggleBtn.active{background:#f5c800;color:#000;border-color:#f5c800}
+#catToggleBtn.active:hover{background:#ffe033}
+#freeToggleBtn.free-off{background:#e53935;color:#fff;border-color:#e53935}
+#freeToggleBtn.free-off:hover{background:#ef5350}
+#freeToggleBtn.free-partial{background:#f5a623;color:#000;border-color:#f5a623}
+#freeToggleBtn.free-partial:hover{background:#ffc04d}
+#freeToggleBtn.free-full{background:#4caf50;color:#fff;border-color:#4caf50}
+#freeToggleBtn.free-full:hover{background:#66bb6a}
 .btn-add{background:#4caf50;color:#fff}
 .btn-add:hover{background:#66bb6a}
 .btn-publish{background:#e91e63;color:#fff}
@@ -257,8 +265,8 @@ body.admin-open .prompt-wrap{display:block !important}
   <button class="btn btn-publish" id="btnPublish" onclick="publishChanges()" disabled>🌐 פרסם שינויים</button>
   <button class="btn btn-edit" id="waToggle" onclick="toggleWaShare()" title="שליחת מועדפים ב-WhatsApp">💬 WA</button>
   <button class="btn btn-edit" onclick="openKeysModal()">🔑 ססמאות</button>
-  <button class="btn btn-edit" id="catToggleBtn" onclick="toggleCatBar()">🙈 קטגוריות</button>
-  <button class="btn btn-edit" id="freeToggleBtn" onclick="toggleFreeEnabled()" title="הדלק/כבה גישה חינמית">🔴 כבוי</button>
+  <button class="btn btn-edit" id="catToggleBtn" onclick="toggleCatBar()">קטגוריות</button>
+  <button class="btn btn-edit free-off" id="freeToggleBtn" onclick="toggleFreeEnabled()" title="הדלק/כבה גישה חינמית">כבוי</button>
   <button class="btn btn-edit" onclick="openImportModal()" title="ייבוא כרטיסיות בקבוצה">📥 ייבוא</button>
   <button class="btn btn-edit" onclick="openPremiumTextModal()" title="ערוך טקסטים בחלון הפרימיום">🔒 פרימיום</button>
   <button class="btn btn-edit" onclick="openWaTextModal()" title="ערוך הודעות וואטסאפ">📱 הודעות WA</button>
@@ -5236,9 +5244,10 @@ function updateFreeCounter() {
   document.body.classList.toggle('free-full', mode === 'full');
   var btn = document.getElementById('freeToggleBtn');
   if (btn) {
-    var labels = { off: '🔴 כבוי', partial: '🟡 חינם חלקי', full: '🟢 חינם מלא' };
-    btn.textContent = labels[mode] || '🔴 כבוי';
-    btn.classList.toggle('active', mode !== 'off');
+    var labels = { off: 'כבוי', partial: 'חינם חלקי', full: 'חינם מלא' };
+    btn.textContent = labels[mode] || 'כבוי';
+    btn.classList.remove('free-off', 'free-partial', 'free-full');
+    btn.classList.add('free-' + (mode || 'off'));
   }
 }
 
