@@ -123,6 +123,17 @@ module.exports = async function handler(req, res) {
       }));
     }
 
+    // Upload base64 gallery images from servicesConfig
+    if (newState.servicesConfig && Array.isArray(newState.servicesConfig.gallery)) {
+      newState.servicesConfig.gallery = await Promise.all(
+        newState.servicesConfig.gallery.map(async function(item, idx) {
+          if (!item || !item.src || !item.src.startsWith('data:')) return item;
+          var uploaded = await uploadImg('gallery_' + idx, item.src);
+          return { src: uploaded, caption: item.caption || '' };
+        })
+      );
+    }
+
     // Save state.json
     var stateContent = Buffer.from(JSON.stringify(newState, null, 2)).toString('base64');
     var existing2    = await ghGet(token, 'state.json');
