@@ -36,7 +36,7 @@ body.admin-open .search{top:70px}
 .btn-edit{background:var(--bg4);color:#f5a623;border:1px solid #f5a623}
 .btn-edit:hover,.btn-edit.active{background:#f5a623;color:#000}
 #orderBar{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
-.toolbar #catFilterBar{display:contents}
+#catFilterBar{justify-content:center}
 #waToggle.active{background:#25d366;color:#fff;border-color:#25d366}
 #waToggle.active:hover{background:#1ebe5d}
 #freeToggleBtn.free-off{background:#e53935;color:#fff;border-color:#e53935}
@@ -278,7 +278,7 @@ body.admin-open .prompt-wrap{display:block !important}
 <p class="subtitle" style="margin-bottom:20px"><span id="subtitle-count">241</span> פרומפטים | 📋 Copy להעתקה | לחץ על תמונה לתצוגה מוגדלת</p>
 <input class="search" id="mainSearch" type="search" placeholder="🔍 חיפוש..." oninput="filterCards(this.value)" autocomplete="off">
 <div id="orderBar" style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:14px">
-  <button class="btn" id="btnMainOrder" style="display:none;background:#4caf50;color:#fff" onclick="orderImagesWhatsApp()">🖼️ הזמנת תמונות</button>
+  <button class="btn" id="btnMainOrder" style="display:none;background:#4caf50;color:#fff" onclick="orderImagesWhatsApp()">🛒 הזמנת תמונות</button>
   <button class="btn" id="btnMainSession" style="display:none;background:#1565c0;color:#fff" onclick="bookSessionWhatsApp()">📅 קביעת סשן</button>
   <button class="btn btn-fav-filter" id="favFilterBtn" onclick="toggleFavFilter()">❤️ מועדפים</button>
   <button class="btn btn-fav-action" id="btnSendFavs" style="display:none" onclick="openShareModal()">📤 שלח מועדפים</button>
@@ -286,8 +286,8 @@ body.admin-open .prompt-wrap{display:block !important}
 </div>
 <div class="toolbar">
   <button class="btn btn-license" id="accessBtn" onclick="openAccessModal('premium')">🔒 פרימיום</button>
-  <div class="cat-filter-bar" id="catFilterBar" style="display:none"></div>
 </div>
+<div class="cat-filter-bar" id="catFilterBar" style="display:none"></div>
 <div class="cols-control">
   <span class="cols-label">מספר תמונות בשורה:</span>
   <input type="range" id="colsSlider" class="cols-slider" min="1" max="17" value="5">
@@ -5392,7 +5392,7 @@ function buildCatFilters() {
   bar.innerHTML = '';
   var defs = [
     { id: '',     label: '🌐 הכל' },
-    { id: 'free', label: '🆓 חינם' },
+    { id: 'free', label: '✅ חינם' },
     { id: 'paid', label: '🔒 בתשלום' }
   ];
   defs.forEach(function(d) {
