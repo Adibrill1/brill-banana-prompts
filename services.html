@@ -127,8 +127,8 @@ section{padding:80px 20px;max-width:1000px;margin:0 auto}
 <!-- ── HERO ── -->
 <section id="hero">
   <div class="fade-in">
-    <h1>הזמנת תמונות AI אישיות 🍌</h1>
-    <p>תמונות מקצועיות שנוצרות ב-AI על בסיס התמונה שלך — בסגנונות מרהיבים ובדיוק מושלם</p>
+    <h1 id="heroTitle">הזמנת תמונות AI אישיות 🍌</h1>
+    <p id="heroSub">תמונות מקצועיות שנוצרות ב-AI על בסיס התמונה שלך — בסגנונות מרהיבים ובדיוק מושלם</p>
     <a class="btn-cta" href="#pricing">בחר/י מסלול והזמן/י</a>
   </div>
 </section>
@@ -175,15 +175,15 @@ section{padding:80px 20px;max-width:1000px;margin:0 auto}
       <div class="price-card fade-in" id="order">
         <h2><span style="font-size:18px">🛒</span> הזמנת תמונות</h2>
         <p class="desc">בחר/י פרומפטים מהקטלוג, שלח/י תמונה, וקבל/י תמונות מוכנות</p>
-        <div class="price-amount">10 ₪</div>
-        <div class="price-note">לתמונה בודדת &nbsp;|&nbsp; <strong style="color:var(--primary)">5 ₪</strong> לתמונה בחבילה של 20+</div>
+        <div class="price-amount" id="orderPrice">10 ₪</div>
+        <div class="price-note" id="orderNote">לתמונה בודדת &nbsp;|&nbsp; <strong style="color:var(--primary)">5 ₪</strong> לתמונה בחבילה של 20+</div>
         <ul class="price-list">
           <li>בחירה חופשית מתוך 241+ פרומפטים בקטלוג</li>
           <li>שמירה על הזהות — התמונות נראות בדיוק כמוך</li>
           <li>קבלת התמונות באיכות גבוהה דרך WhatsApp</li>
           <li>אפשרות לבקש התאמות קלות</li>
         </ul>
-        <a class="btn-wa" href="https://wa.me/972523919350?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%96%D7%9E%D7%99%D7%9F%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%20AI%20%F0%9F%8D%8C" target="_blank">🛒 הזמן/י עכשיו בוואטסאפ</a>
+        <a class="btn-wa" id="orderWaBtn" href="https://wa.me/972523919350?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%96%D7%9E%D7%99%D7%9F%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%20AI%20%F0%9F%8D%8C" target="_blank">🛒 הזמן/י עכשיו בוואטסאפ</a>
       </div>
 
       <!-- Subscription card -->
@@ -191,15 +191,15 @@ section{padding:80px 20px;max-width:1000px;margin:0 auto}
         <div class="price-badge" style="background:#7b2ff7;color:#fff">🔑 גישה מלאה</div>
         <h2><span style="font-size:18px">🔓</span> מנוי שנתי לקטלוג</h2>
         <p class="desc">גישה בלתי מוגבלת לכל הפרומפטים בקטלוג — לשנה שלמה, בתשלום חד-פעמי</p>
-        <div class="price-amount">59 ₪</div>
-        <div class="price-note">תשלום חד-פעמי לשנה שלמה</div>
+        <div class="price-amount" id="subPrice">59 ₪</div>
+        <div class="price-note" id="subNote">תשלום חד-פעמי לשנה שלמה</div>
         <ul class="price-list">
           <li>גישה מיידית לכל 1,354+ הפרומפטים</li>
           <li>פרומפטים חדשים מתווספים באופן שוטף</li>
           <li>העתקה בלחיצה אחת לשימוש ב-Nano Banana 2</li>
           <li>תמיכה בכל עדכוני הקטלוג לאורך השנה</li>
         </ul>
-        <a class="btn-wa" style="background:#7b2ff7;animation:none" href="https://wa.me/972523919350?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A8%D7%9B%D7%95%D7%A9%20%D7%9E%D7%A0%D7%95%D7%99%20%D7%A9%D7%A0%D7%AA%D7%99%20%D7%9C%D7%A7%D7%98%D7%9C%D7%95%D7%92%20%F0%9F%8D%8C" target="_blank">🔓 רכוש/י גישה מלאה</a>
+        <a class="btn-wa" id="subWaBtn" style="background:#7b2ff7;animation:none" href="https://wa.me/972523919350?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A8%D7%9B%D7%95%D7%A9%20%D7%9E%D7%A0%D7%95%D7%99%20%D7%A9%D7%A0%D7%AA%D7%99%20%D7%9C%D7%A7%D7%98%D7%9C%D7%95%D7%92%20%F0%9F%8D%8C" target="_blank">🔓 רכוש/י גישה מלאה</a>
       </div>
 
       <!-- Session card -->
@@ -207,8 +207,8 @@ section{padding:80px 20px;max-width:1000px;margin:0 auto}
         <div class="price-badge">⭐ החוויה המלאה</div>
         <h2><span style="font-size:18px">📅</span> סשן אישי בזום</h2>
         <p class="desc">מפגש אישי בזום שבו ניצור יחד תמונות AI מותאמות בדיוק לטעם שלך</p>
-        <div class="price-amount">350 ₪</div>
-        <div class="price-note">סשן של שעה מלאה</div>
+        <div class="price-amount" id="sessionPrice">350 ₪</div>
+        <div class="price-note" id="sessionNote">סשן של שעה מלאה</div>
         <ul class="price-list">
           <li>שעה של יצירה משותפת בזום — אחד על אחד</li>
           <li>בחירת סגנונות ופרומפטים יחד בזמן אמת</li>
@@ -216,7 +216,7 @@ section{padding:80px 20px;max-width:1000px;margin:0 auto}
           <li>קבלת כל התמונות בסוף המפגש</li>
           <li>הנחיה מקצועית לתוצאות מושלמות</li>
         </ul>
-        <a class="btn-wa" href="https://wa.me/972523919350?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A1%D7%A9%D7%9F%20%D7%90%D7%99%D7%A9%D7%99%20%D7%91%D7%96%D7%95%D7%9D%20%F0%9F%8D%8C" target="_blank">📅 קבע/י סשן בוואטסאפ</a>
+        <a class="btn-wa" id="sessionWaBtn" href="https://wa.me/972523919350?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A1%D7%A9%D7%9F%20%D7%90%D7%99%D7%A9%D7%99%20%D7%91%D7%96%D7%95%D7%9D%20%F0%9F%8D%8C" target="_blank">📅 קבע/י סשן בוואטסאפ</a>
       </div>
 
     </div>
@@ -304,6 +304,26 @@ section{padding:80px 20px;max-width:1000px;margin:0 auto}
 </div>
 
 <script>
+// ── SERVICES CONFIG ──
+(function(){
+  var cfg = JSON.parse(localStorage.getItem('bb_services_config') || 'null');
+  if (!cfg) return;
+  var phone = cfg.phone || '972523919350';
+  function waUrl(msg){ return 'https://wa.me/'+phone+'?text='+encodeURIComponent(msg); }
+  function set(id, val){ var el=document.getElementById(id); if(el&&val) el.textContent=val; }
+  function setHref(id, msg){ var el=document.getElementById(id); if(el&&msg) el.href=waUrl(msg); }
+  set('heroTitle',    cfg.heroTitle);
+  set('heroSub',      cfg.heroSub);
+  set('orderPrice',   cfg.orderPrice);
+  set('orderNote',    cfg.orderNote);
+  set('subPrice',     cfg.subPrice);
+  set('subNote',      cfg.subNote);
+  set('sessionPrice', cfg.sessionPrice);
+  set('sessionNote',  cfg.sessionNote);
+  setHref('orderWaBtn',   cfg.orderMsg);
+  setHref('subWaBtn',     cfg.subMsg);
+  setHref('sessionWaBtn', cfg.sessionMsg);
+})();
 // ── THEME ──
 (function(){
   if(localStorage.getItem('bb_theme')==='light') document.documentElement.setAttribute('data-theme','light');
