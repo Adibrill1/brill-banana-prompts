@@ -114,20 +114,52 @@ body.admin-open #topRightBar{top:70px}
   .prompt-text{font-size:10px;max-height:90px}
   h3{font-size:12px}
 }
-.card{background:linear-gradient(180deg,#1c1608 0%,#0d0b04 100%);border:1px solid #5a4210;border-radius:10px;padding:12px;transition:border-color .2s,box-shadow .2s;position:relative;display:flex;flex-direction:column;box-shadow:0 2px 12px rgba(0,0,0,0.6)}
-/* metallic shimmer via pseudo-element */
-.card::before{content:'';position:absolute;inset:0;border-radius:10px;pointer-events:none;background:linear-gradient(135deg,rgba(255,210,80,0.08) 0%,rgba(255,255,255,0.03) 40%,transparent 60%,rgba(255,200,50,0.05) 100%)}
-/* free cards — blue border */
-.card:not(.locked-prompt){border-color:#1a4a7a;box-shadow:0 2px 12px rgba(0,0,0,0.6)}
-.card:not(.locked-prompt)::before{background:linear-gradient(135deg,rgba(80,160,255,0.1) 0%,rgba(255,255,255,0.03) 40%,transparent 60%,rgba(50,130,255,0.06) 100%)}
-.card:not(.locked-prompt):hover{border-color:#4a90d9;box-shadow:0 0 16px rgba(74,144,217,0.3)}
-/* premium cards — gold border */
-.card.locked-prompt{border-color:#7a5c10}
-.card.locked-prompt:hover{border-color:#c9a227;box-shadow:0 0 16px rgba(201,162,39,0.3)}
-body.light .card{background:linear-gradient(180deg,#fffdf4 0%,#f5efda 100%);box-shadow:0 2px 8px rgba(0,0,0,0.1)}
-body.light .card::before{opacity:0.5}
-body.light .card:not(.locked-prompt){border-color:#2a6aaa}
-body.light .card.locked-prompt{border-color:#c9a227}
+/* ── CARD BASE ────────────────────────────────────────────── */
+.card{background:linear-gradient(180deg,#1c1608 0%,#0d0b04 100%);border:none;border-radius:10px;padding:12px;transition:box-shadow .3s,transform .2s;position:relative;display:flex;flex-direction:column;isolation:isolate;box-shadow:0 4px 20px rgba(0,0,0,0.7)}
+
+/* Metallic border: conic-gradient peek-through behind card bg */
+.card::before{content:'';position:absolute;inset:-1.5px;border-radius:11.5px;z-index:-1;transition:box-shadow .3s}
+
+/* Shimmer light streak sweeping across card face */
+.card::after{content:'';position:absolute;inset:0;border-radius:10px;pointer-events:none;z-index:2;
+  background:linear-gradient(105deg,transparent 25%,rgba(255,255,255,0.055) 45%,rgba(255,255,255,0.09) 50%,rgba(255,255,255,0.055) 55%,transparent 75%);
+  background-size:300% 100%;background-position:200% center;
+  animation:shimmer-sweep 7s ease-in-out infinite}
+@keyframes shimmer-sweep{
+  0%,100%{background-position:200% center;opacity:0}
+  8%{opacity:1}
+  50%{background-position:-100% center;opacity:1}
+  58%{opacity:0}}
+
+/* PREMIUM — warm gold conic border */
+.card.locked-prompt::before{
+  background:conic-gradient(from 190deg at 50% 50%,
+    #1a0e00 0deg, #6b4408 45deg, #c49010 80deg,
+    #f0c830 105deg, #fff8b0 120deg, #f0c830 135deg,
+    #c49010 165deg, #4a2e04 200deg, #1a0e00 240deg,
+    #3d2808 280deg, #aa7c18 315deg, #e8c040 340deg,
+    #1a0e00 360deg);
+  box-shadow:0 0 18px rgba(201,162,39,0.18),0 0 5px rgba(240,200,50,0.12)}
+.card.locked-prompt:hover::before{
+  box-shadow:0 0 28px rgba(201,162,39,0.45),0 0 10px rgba(240,200,50,0.25)}
+.card.locked-prompt:hover{box-shadow:0 6px 30px rgba(0,0,0,0.8),0 0 20px rgba(180,140,20,0.15)}
+
+/* FREE — cool blue conic border */
+.card:not(.locked-prompt)::before{
+  background:conic-gradient(from 190deg at 50% 50%,
+    #010810 0deg, #0c2d5a 45deg, #1460a8 80deg,
+    #3a90e0 105deg, #90d8ff 120deg, #3a90e0 135deg,
+    #1460a8 165deg, #071830 200deg, #010810 240deg,
+    #092040 280deg, #1a70c0 315deg, #5ab0f5 340deg,
+    #010810 360deg);
+  box-shadow:0 0 18px rgba(58,144,224,0.18),0 0 5px rgba(100,200,255,0.1)}
+.card:not(.locked-prompt):hover::before{
+  box-shadow:0 0 28px rgba(58,144,224,0.45),0 0 10px rgba(100,200,255,0.22)}
+.card:not(.locked-prompt):hover{box-shadow:0 6px 30px rgba(0,0,0,0.8),0 0 20px rgba(30,100,200,0.15)}
+
+body.light .card{background:linear-gradient(180deg,#fefcf0 0%,#f2ecd5 100%)}
+body.light .card.locked-prompt::before{box-shadow:0 0 14px rgba(180,130,10,0.25)}
+body.light .card:not(.locked-prompt)::before{box-shadow:0 0 14px rgba(30,100,200,0.2)}
 .card.dragging{opacity:.25;transform:scale(0.97);border-color:#f5a623 !important;box-shadow:0 0 0 2px #f5a623}
 .card.drop-before{border-left:4px solid #4caf50 !important;box-shadow:-4px 0 12px rgba(76,175,80,0.5)}
 .card.drop-after{border-right:4px solid #4caf50 !important;box-shadow:4px 0 12px rgba(76,175,80,0.5)}
