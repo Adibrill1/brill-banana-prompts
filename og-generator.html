@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:1200px;height:630px;overflow:hidden;background:#0f0f0f;font-family:'Segoe UI',Arial,sans-serif}
+  .root{width:1200px;height:630px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;background:linear-gradient(135deg,#0f0f0f 0%,#1a1a0f 50%,#0f0f0f 100%)}
+  /* bg glow */
+  .glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:400px;background:radial-gradient(ellipse,rgba(245,166,35,0.12) 0%,transparent 70%);pointer-events:none}
+  /* top section */
+  .header{text-align:center;z-index:2;margin-bottom:28px}
+  .logo{font-size:52px;font-weight:900;color:#f5a623;letter-spacing:-1px;line-height:1}
+  .logo .banana{font-size:56px}
+  .tagline{font-size:17px;color:#888;margin-top:6px;letter-spacing:0.5px}
+  .badge{display:inline-block;margin-top:12px;background:#f5a623;color:#000;font-weight:900;font-size:22px;padding:6px 22px;border-radius:30px;letter-spacing:0.5px}
+  /* image grid */
+  .grid{display:flex;gap:10px;z-index:2}
+  .img-wrap{border-radius:10px;overflow:hidden;border:2px solid #2a2a2a;flex-shrink:0}
+  .img-wrap img{display:block;object-fit:cover}
+  .img-wrap.tall{width:130px;height:180px}
+  .img-wrap.wide{width:180px;height:130px}
+  /* bottom strip */
+  .strip{position:absolute;bottom:0;left:0;right:0;height:44px;background:linear-gradient(90deg,#1a1a0f,#f5a623 50%,#1a1a0f);opacity:0.15}
+  .url{position:absolute;bottom:12px;right:0;left:0;text-align:center;color:#555;font-size:13px;z-index:2;letter-spacing:1px}
+</style>
+</head>
+<body>
+<div class="root">
+  <div class="glow"></div>
+  <div class="header">
+    <div class="logo">Brill <span class="banana">🍌</span> Banana Prompts</div>
+    <div class="tagline">קטלוג פרומפטים מתקדמים ליצירת תמונות אישיות ב-Nano Banana 2</div>
+    <div class="badge">1,354 AI Prompts</div>
+  </div>
+  <div class="grid">
+    <div class="img-wrap tall"><img src="images/11.jpg"  width="130" height="180"></div>
+    <div class="img-wrap tall"><img src="images/105.jpg" width="130" height="180"></div>
+    <div class="img-wrap tall"><img src="images/109.jpg" width="130" height="180"></div>
+    <div class="img-wrap tall"><img src="images/116.jpg" width="130" height="180"></div>
+    <div class="img-wrap tall"><img src="images/122.jpg" width="130" height="180"></div>
+    <div class="img-wrap tall"><img src="images/123.jpg" width="130" height="180"></div>
+  </div>
+  <div class="strip"></div>
+  <div class="url">brill-banana-prompts-v3.vercel.app</div>
+</div>
+</body>
+</html>
