@@ -5517,20 +5517,72 @@ function openServicesModal() {
   var galCfg = (cfg.gallery && cfg.gallery.length) ? cfg.gallery : DEFAULT_SERVICES_CONFIG.gallery;
   for (var i = 0; i < 8; i++) {
     var item = galCfg[i] || {src:'', caption:''};
+    var isLocal = item.src && item.src.startsWith('data:');
     var row = document.createElement('div');
-    row.style.cssText = 'display:flex;gap:6px;align-items:center';
-    row.innerHTML = '<span style="min-width:18px;color:var(--text2);font-size:12px;text-align:left">'+(i+1)+'.</span>'
-      + '<img id="svc_gal_prev_'+i+'" src="'+(item.src||'')+'" style="width:36px;height:36px;object-fit:cover;border-radius:4px;border:1px solid var(--border2);background:var(--bg4);flex-shrink:0" onerror="this.src=\'\'">'
-      + '<input type="text" id="svc_gal_src_'+i+'" placeholder="URL תמונה" value="'+escHtml(item.src||'')+'" style="flex:2;padding:5px 8px;font-size:12px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);direction:ltr" oninput="updateGalPreview('+i+')">'
-      + '<input type="text" id="svc_gal_cap_'+i+'" placeholder="כיתוב" value="'+escHtml(item.caption||'')+'" style="flex:1;padding:5px 8px;font-size:12px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);direction:rtl">';
+    row.style.cssText = 'display:flex;gap:6px;align-items:center;padding:6px 8px;border-radius:8px;background:var(--bg3);border:1px solid var(--border2)';
+    // Preview thumbnail (clickable = open file picker)
+    var previewHtml = '<div style="position:relative;flex-shrink:0;cursor:pointer" onclick="document.getElementById(\'svc_gal_file_'+i+'\').click()" title="לחץ/י להחלפת תמונה">'
+      + '<img id="svc_gal_prev_'+i+'" src="'+(item.src||'')+'" style="width:52px;height:52px;object-fit:cover;border-radius:6px;border:2px solid var(--border2);background:var(--bg4);display:block" onerror="this.style.opacity=0.3">'
+      + '<div style="position:absolute;inset:0;background:rgba(0,0,0,0.45);border-radius:6px;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .15s" class="gal-hover-overlay"><span style="color:#fff;font-size:18px">📷</span></div>'
+      + '<input type="file" id="svc_gal_file_'+i+'" accept="image/*" style="display:none" onchange="galFileChosen('+i+',this)">'
+      + '</div>';
+    // URL input (hidden when local file, shown for URL mode)
+    var urlHtml = '<input type="text" id="svc_gal_src_'+i+'" placeholder="URL תמונה" value="'+(isLocal ? '' : escHtml(item.src||''))+'" style="flex:2;padding:5px 8px;font-size:11px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);direction:ltr'+(isLocal ? ';display:none' : '')+'" oninput="updateGalPreview('+i+')">';
+    // Local file badge
+    var localBadge = '<span id="svc_gal_local_'+i+'" style="font-size:10px;color:#4caf50;flex:2;text-align:right;padding-right:4px;'+(isLocal ? '' : 'display:none')+'">✅ מהמחשב</span>';
+    var capHtml = '<input type="text" id="svc_gal_cap_'+i+'" placeholder="כיתוב" value="'+escHtml(item.caption||'')+'" style="flex:1;min-width:80px;padding:5px 8px;font-size:12px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);direction:rtl">';
+    var numHtml = '<span style="min-width:16px;color:var(--text2);font-size:11px;text-align:center">'+(i+1)+'</span>';
+    row.innerHTML = numHtml + previewHtml + urlHtml + localBadge + capHtml;
     galRows.appendChild(row);
+    // Store local data separately so save can retrieve it
+    if (isLocal) row.dataset.localSrc = item.src;
   }
+  // Hover overlay effect
+  document.querySelectorAll('.gal-hover-overlay').forEach(function(ov){
+    var wrap = ov.parentElement;
+    wrap.addEventListener('mouseenter', function(){ ov.style.opacity='1'; });
+    wrap.addEventListener('mouseleave', function(){ ov.style.opacity='0'; });
+  });
   openModal('servicesModal');
 }
 function escHtml(s){ return s.replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 function updateGalPreview(i) {
   var src = document.getElementById('svc_gal_src_'+i).value.trim();
   document.getElementById('svc_gal_prev_'+i).src = src || '';
+}
+function galFileChosen(i, input) {
+  var file = input.files[0];
+  if (!file) return;
+  var MAX = 900; // max dimension px
+  var QUALITY = 0.82;
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var img = new Image();
+    img.onload = function() {
+      var w = img.width, h = img.height;
+      if (w > MAX || h > MAX) {
+        var ratio = Math.min(MAX/w, MAX/h);
+        w = Math.round(w*ratio); h = Math.round(h*ratio);
+      }
+      var canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+      var dataUrl = canvas.toDataURL('image/jpeg', QUALITY);
+      // Update preview
+      document.getElementById('svc_gal_prev_'+i).src = dataUrl;
+      document.getElementById('svc_gal_prev_'+i).style.opacity = '1';
+      // Store on row dataset
+      var rows = document.getElementById('svc_galleryRows').children;
+      rows[i].dataset.localSrc = dataUrl;
+      // Hide URL input, show badge
+      var urlIn = document.getElementById('svc_gal_src_'+i);
+      var badge = document.getElementById('svc_gal_local_'+i);
+      if (urlIn) urlIn.style.display = 'none';
+      if (badge) badge.style.display = '';
+    };
+    img.src = e.target.result;
+  };
+  reader.readAsDataURL(file);
 }
 function saveServicesContent() {
   var phone = ADMIN_WHATSAPP || '972523919350';
@@ -5549,10 +5601,13 @@ function saveServicesContent() {
     phone: phone,
     gallery: (function(){
       var g = [];
+      var rows = document.getElementById('svc_galleryRows').children;
       for (var i = 0; i < 8; i++) {
         var srcEl = document.getElementById('svc_gal_src_'+i);
         var capEl = document.getElementById('svc_gal_cap_'+i);
-        if (srcEl) g.push({src: srcEl.value.trim(), caption: capEl ? capEl.value.trim() : ''});
+        var localSrc = rows[i] ? rows[i].dataset.localSrc : '';
+        var src = localSrc || (srcEl ? srcEl.value.trim() : '');
+        g.push({src: src, caption: capEl ? capEl.value.trim() : ''});
       }
       return g;
     })()
