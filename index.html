@@ -73,7 +73,7 @@ h1{text-align:center;color:#f5a623;font-size:2em;margin-bottom:6px}
 .btn-edit{background:var(--bg4);color:#f5a623;border:1px solid #f5a623}
 .btn-edit:hover,.btn-edit.active{background:#f5a623;color:#000}
 #orderBar{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
-#catFilterBar{justify-content:flex-end}
+#catFilterBar{justify-content:flex-start}
 #waToggle.active{background:#25d366;color:#fff;border-color:#25d366}
 #waToggle.active:hover{background:#1ebe5d}
 #freeToggleBtn.free-off{background:#e53935;color:#fff;border-color:#e53935}
@@ -91,6 +91,8 @@ h1{text-align:center;color:#f5a623;font-size:2em;margin-bottom:6px}
 /* theme toggle */
 .btn-theme{background:var(--bg4);color:var(--text);border:1px solid var(--border2);font-size:16px;padding:7px 12px;border-radius:7px;cursor:pointer;transition:background .15s}
 .btn-theme:hover{background:var(--border2)}
+#themeBtn{position:fixed;top:12px;left:12px;z-index:9999}
+body.admin-open #themeBtn{top:70px}
 #topRightBar{position:fixed;top:12px;right:12px;z-index:9999;display:flex;align-items:center;gap:10px}
 body.admin-open #topRightBar{top:70px}
 .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;max-width:1900px;margin:0 auto}
@@ -294,8 +296,8 @@ body.admin-open .prompt-wrap{display:block !important}
 </script>
 </head>
 <body>
+<button class="btn btn-theme" id="themeBtn" onclick="toggleTheme()" title="מצב לילה/יום">🌙</button>
 <div id="topRightBar">
-  <button class="btn btn-theme" id="themeBtn" onclick="toggleTheme()" title="מצב לילה/יום">🌙</button>
   <button class="btn btn-license" id="accessBtn" onclick="openAccessModal('premium')">🔒 פרימיום</button>
   <input class="search" id="mainSearch" type="search" placeholder="🔍 חיפוש..." oninput="filterCards(this.value)" autocomplete="off">
 </div>
