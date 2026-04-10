@@ -107,6 +107,21 @@ section{padding:80px 20px;max-width:1000px;margin:0 auto}
 
 /* ── CONTACT/CTA ── */
 #contact{background:var(--bg2);max-width:100%;padding:80px 20px;text-align:center}
+
+/* ── ADMIN RESIZE ── */
+#adminResizeBtn{position:fixed;bottom:70px;left:12px;z-index:9999;background:var(--primary);color:#000;border:none;border-radius:50px;padding:10px 18px;font-size:13px;font-weight:900;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.4);display:none;transition:background .15s,transform .15s}
+#adminResizeBtn:hover{transform:scale(1.04)}
+#adminResizeBtn.active{background:#4caf50;color:#fff}
+.rh{height:0;position:relative;z-index:8000;cursor:ns-resize;display:none}
+body.rh-mode .rh{display:block}
+.rh-line{position:absolute;left:0;right:0;top:-3px;height:6px;background:var(--primary);opacity:.35;transition:opacity .15s,height .15s}
+body.rh-mode .rh:hover .rh-line,.rh.dragging .rh-line{opacity:1;height:8px}
+.rh-knob{position:absolute;left:50%;top:-16px;transform:translateX(-50%);background:var(--primary);color:#000;font-size:13px;font-weight:900;padding:5px 16px;border-radius:20px;white-space:nowrap;box-shadow:0 2px 10px rgba(0,0,0,.5);user-select:none;letter-spacing:1px;transition:transform .15s}
+body.rh-mode .rh:hover .rh-knob,.rh.dragging .rh-knob{transform:translateX(-50%) scale(1.08)}
+#rh-tooltip{position:fixed;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.9);color:var(--primary);font-size:1.6em;font-weight:900;padding:12px 28px;border-radius:12px;border:2px solid var(--primary);pointer-events:none;display:none;z-index:9999;white-space:nowrap;top:50%;margin-top:-30px}
+#galColsCtrl{position:absolute;top:16px;left:20px;z-index:200;background:var(--bg4);border:1px solid var(--border2);border-radius:10px;padding:8px 14px;font-size:13px;color:var(--text);align-items:center;gap:8px;display:none;box-shadow:0 4px 16px rgba(0,0,0,.3)}
+#galColsCtrl button{background:none;border:1px solid var(--border2);border-radius:6px;color:var(--primary);width:26px;height:26px;cursor:pointer;font-size:16px;font-weight:900;line-height:1;transition:background .1s}
+#galColsCtrl button:hover{background:var(--primary);color:#000}
 .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:40px}
 .btn-wa-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--wa);border:2px solid var(--wa);font-weight:900;font-size:1em;padding:14px 28px;border-radius:8px;text-decoration:none;transition:background .15s,color .15s}
 .btn-wa-outline:hover{background:var(--wa);color:#fff}
@@ -406,6 +421,133 @@ var obs = new IntersectionObserver(function(entries){
   entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
 },{threshold:0.12});
 document.querySelectorAll('.fade-in').forEach(function(el){ obs.observe(el); });
+
+// ── ADMIN DRAG RESIZE ──
+(function(){
+  if (!localStorage.getItem('bb_admin_token')) return;
+
+  var btn = document.getElementById('adminResizeBtn');
+  btn.style.display = '';
+
+  var SECTIONS = [
+    {id:'hero',       key:'hero',    label:'Hero'},
+    {id:'how-it-works',key:'how',   label:'איך זה עובד'},
+    {id:'pricing',    key:'pricing', label:'מחירים'},
+    {id:'gallery',    key:'gallery', label:'גלריה'},
+    {id:'faq',        key:'faq',     label:'שאלות נפוצות'},
+  ];
+
+  // Insert handles after each section (controls section above)
+  SECTIONS.forEach(function(s) {
+    var el = document.getElementById(s.id);
+    if (!el) return;
+    var h = document.createElement('div');
+    h.className = 'rh';
+    h.dataset.for = s.id;
+    h.dataset.key = s.key;
+    h.innerHTML = '<div class="rh-line"></div><div class="rh-knob">↕ ' + s.label + '</div>';
+    el.parentNode.insertBefore(h, el.nextSibling);
+  });
+
+  // Gallery columns control
+  var galleryEl = document.getElementById('gallery');
+  if (galleryEl) {
+    galleryEl.style.position = 'relative';
+    var colCtrl = document.createElement('div');
+    colCtrl.id = 'galColsCtrl';
+    var cfg0 = JSON.parse(localStorage.getItem('bb_services_config') || 'null') || {};
+    var initCols = (cfg0.sectionSizes && cfg0.sectionSizes.galcols) || 4;
+    colCtrl.innerHTML = '<span style="color:var(--text2)">עמודות:</span>'
+      + '<button onclick="adjCols(-1)">-</button>'
+      + '<b id="galColsNum">' + initCols + '</b>'
+      + '<button onclick="adjCols(1)">+</button>';
+    galleryEl.appendChild(colCtrl);
+  }
+
+  window.adjCols = function(d) {
+    var numEl = document.getElementById('galColsNum');
+    var n = Math.max(2, Math.min(6, parseInt(numEl.textContent) + d));
+    numEl.textContent = n;
+    var grid = document.querySelector('.gallery-grid');
+    if (grid) grid.style.gridTemplateColumns = 'repeat(' + n + ',1fr)';
+    persist('galcols', n);
+  };
+
+  // Drag state
+  var drag = null;
+  var tooltip = document.getElementById('rh-tooltip');
+
+  function startDrag(handle, clientY) {
+    var sId = handle.dataset.for;
+    var sEl = document.getElementById(sId);
+    var cur = parseInt(sEl.style.fontSize) || 100;
+    drag = {handle:handle, sEl:sEl, key:handle.dataset.key, y0:clientY, s0:cur};
+    handle.classList.add('dragging');
+    tooltip.style.display = 'block';
+    tooltip.textContent = cur + '%';
+  }
+  function moveDrag(clientY) {
+    if (!drag) return;
+    var delta = clientY - drag.y0;
+    var ns = Math.max(60, Math.min(160, drag.s0 + Math.round(delta / 2)));
+    drag.sEl.style.fontSize = ns + '%';
+    tooltip.textContent = ns + '%';
+  }
+  function endDrag() {
+    if (!drag) return;
+    var size = parseInt(drag.sEl.style.fontSize) || 100;
+    persist(drag.key, size);
+    drag.handle.classList.remove('dragging');
+    tooltip.textContent = '✓ ' + size + '%';
+    setTimeout(function(){ tooltip.style.display = 'none'; }, 700);
+    drag = null;
+    document.body.style.userSelect = '';
+    document.body.style.cursor = '';
+  }
+
+  function persist(key, val) {
+    var cfg = JSON.parse(localStorage.getItem('bb_services_config') || 'null') || {};
+    if (!cfg.sectionSizes) cfg.sectionSizes = {hero:100,how:100,pricing:100,gallery:100,galcols:4,faq:100,contact:100};
+    cfg.sectionSizes[key] = val;
+    localStorage.setItem('bb_services_config', JSON.stringify(cfg));
+  }
+
+  // Mouse events
+  document.addEventListener('mousedown', function(e) {
+    var h = e.target.closest('.rh');
+    if (!h || !document.body.classList.contains('rh-mode')) return;
+    startDrag(h, e.clientY);
+    document.body.style.userSelect = 'none';
+    document.body.style.cursor = 'ns-resize';
+    e.preventDefault();
+  });
+  document.addEventListener('mousemove', function(e) { moveDrag(e.clientY); });
+  document.addEventListener('mouseup', endDrag);
+
+  // Touch events
+  document.addEventListener('touchstart', function(e) {
+    var h = e.target.closest('.rh');
+    if (!h || !document.body.classList.contains('rh-mode')) return;
+    startDrag(h, e.touches[0].clientY);
+    e.preventDefault();
+  }, {passive:false});
+  document.addEventListener('touchmove', function(e) {
+    if (drag) { moveDrag(e.touches[0].clientY); e.preventDefault(); }
+  }, {passive:false});
+  document.addEventListener('touchend', endDrag);
+
+  // Toggle button
+  btn.addEventListener('click', function() {
+    var on = document.body.classList.toggle('rh-mode');
+    btn.textContent = on ? '✅ סגור עריכה' : '📐 ערוך גדלים';
+    btn.classList.toggle('active', on);
+    var gc = document.getElementById('galColsCtrl');
+    if (gc) gc.style.display = on ? 'flex' : 'none';
+  });
+})();
 </script>
+
+<button id="adminResizeBtn">📐 ערוך גדלים</button>
+<div id="rh-tooltip"></div>
 </body>
 </html>
