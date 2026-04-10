@@ -323,6 +323,22 @@ section{padding:80px 20px;max-width:1000px;margin:0 auto}
   setHref('orderWaBtn',   cfg.orderMsg);
   setHref('subWaBtn',     cfg.subMsg);
   setHref('sessionWaBtn', cfg.sessionMsg);
+  // Gallery
+  if (cfg.gallery && cfg.gallery.length) {
+    var grid = document.querySelector('.gallery-grid');
+    if (grid) {
+      grid.innerHTML = '';
+      cfg.gallery.forEach(function(item) {
+        if (!item.src) return;
+        var div = document.createElement('div');
+        div.className = 'gallery-item';
+        div.setAttribute('onclick', 'openLb(this)');
+        div.innerHTML = '<img src="' + item.src + '" alt="' + item.caption + '" loading="lazy">'
+          + '<div class="gallery-caption">' + item.caption + '</div>';
+        grid.appendChild(div);
+      });
+    }
+  }
 })();
 // ── THEME ──
 (function(){

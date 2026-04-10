@@ -4831,6 +4831,10 @@ set the scene indoors if possible</pre></div>
     <input type="text" id="svc_subMsg" placeholder="היי, אשמח לרכוש מנוי שנתי לקטלוג 🍌">
     <label style="margin-top:10px">הודעה - סשן בזום</label>
     <input type="text" id="svc_sessionMsg" placeholder="היי, אשמח לקבוע סשן אישי בזום 🍌">
+    <hr style="border-color:var(--border2);margin:16px 0">
+    <b>🖼️ גלריית דוגמאות</b>
+    <p style="font-size:12px;color:var(--text2);margin:4px 0 10px">עדכן/י עד 8 תמונות - כתובת URL וכיתוב לכל תמונה</p>
+    <div id="svc_galleryRows" style="display:flex;flex-direction:column;gap:8px"></div>
     <div class="modal-footer" style="margin-top:16px">
       <button class="btn btn-cancel" onclick="closeModal('servicesModal')">סגור</button>
       <button class="btn btn-ok" onclick="saveServicesContent()">✅ שמור ופרסם</button>
@@ -5482,7 +5486,17 @@ var DEFAULT_SERVICES_CONFIG = {
   sessionPrice: '350 ₪', sessionNote: 'סשן של שעה מלאה',
   orderMsg: 'היי, אשמח להזמין תמונות AI 🍌',
   subMsg: 'היי, אשמח לרכוש מנוי שנתי לקטלוג 🍌',
-  sessionMsg: 'היי, אשמח לקבוע סשן אישי בזום 🍌'
+  sessionMsg: 'היי, אשמח לקבוע סשן אישי בזום 🍌',
+  gallery: [
+    {src:'images/241.jpg', caption:'ציור מיניאטורה'},
+    {src:'images/226.jpg', caption:'אינטראקציה תלת-מימדית'},
+    {src:'images/181.jpg', caption:'פורטרט מטבע בולט'},
+    {src:'https://nanobananai.site/images/case232/output.webp', caption:'פורצלן ביו-מכני'},
+    {src:'https://nanobananai.site/images/case206/output.webp', caption:'אריזת מוצר'},
+    {src:'https://nanobananai.site/images/case190/output.webp', caption:'שער מגזין TIME'},
+    {src:'https://nanobananai.site/images/case183/output.webp', caption:'פנטזיה סרוגה'},
+    {src:'https://nanobananai.site/images/case199/output.webp', caption:'פוסטר קומיקס'}
+  ]
 };
 function openServicesModal() {
   var cfg = JSON.parse(localStorage.getItem('bb_services_config') || 'null') || DEFAULT_SERVICES_CONFIG;
@@ -5497,7 +5511,26 @@ function openServicesModal() {
   document.getElementById('svc_orderMsg').value    = cfg.orderMsg    || DEFAULT_SERVICES_CONFIG.orderMsg;
   document.getElementById('svc_subMsg').value      = cfg.subMsg      || DEFAULT_SERVICES_CONFIG.subMsg;
   document.getElementById('svc_sessionMsg').value  = cfg.sessionMsg  || DEFAULT_SERVICES_CONFIG.sessionMsg;
+  // Build gallery rows
+  var galRows = document.getElementById('svc_galleryRows');
+  galRows.innerHTML = '';
+  var galCfg = (cfg.gallery && cfg.gallery.length) ? cfg.gallery : DEFAULT_SERVICES_CONFIG.gallery;
+  for (var i = 0; i < 8; i++) {
+    var item = galCfg[i] || {src:'', caption:''};
+    var row = document.createElement('div');
+    row.style.cssText = 'display:flex;gap:6px;align-items:center';
+    row.innerHTML = '<span style="min-width:18px;color:var(--text2);font-size:12px;text-align:left">'+(i+1)+'.</span>'
+      + '<img id="svc_gal_prev_'+i+'" src="'+(item.src||'')+'" style="width:36px;height:36px;object-fit:cover;border-radius:4px;border:1px solid var(--border2);background:var(--bg4);flex-shrink:0" onerror="this.src=\'\'">'
+      + '<input type="text" id="svc_gal_src_'+i+'" placeholder="URL תמונה" value="'+escHtml(item.src||'')+'" style="flex:2;padding:5px 8px;font-size:12px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);direction:ltr" oninput="updateGalPreview('+i+')">'
+      + '<input type="text" id="svc_gal_cap_'+i+'" placeholder="כיתוב" value="'+escHtml(item.caption||'')+'" style="flex:1;padding:5px 8px;font-size:12px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);direction:rtl">';
+    galRows.appendChild(row);
+  }
   openModal('servicesModal');
+}
+function escHtml(s){ return s.replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function updateGalPreview(i) {
+  var src = document.getElementById('svc_gal_src_'+i).value.trim();
+  document.getElementById('svc_gal_prev_'+i).src = src || '';
 }
 function saveServicesContent() {
   var phone = ADMIN_WHATSAPP || '972523919350';
@@ -5513,7 +5546,16 @@ function saveServicesContent() {
     orderMsg:     document.getElementById('svc_orderMsg').value.trim()     || DEFAULT_SERVICES_CONFIG.orderMsg,
     subMsg:       document.getElementById('svc_subMsg').value.trim()       || DEFAULT_SERVICES_CONFIG.subMsg,
     sessionMsg:   document.getElementById('svc_sessionMsg').value.trim()   || DEFAULT_SERVICES_CONFIG.sessionMsg,
-    phone: phone
+    phone: phone,
+    gallery: (function(){
+      var g = [];
+      for (var i = 0; i < 8; i++) {
+        var srcEl = document.getElementById('svc_gal_src_'+i);
+        var capEl = document.getElementById('svc_gal_cap_'+i);
+        if (srcEl) g.push({src: srcEl.value.trim(), caption: capEl ? capEl.value.trim() : ''});
+      }
+      return g;
+    })()
   };
   localStorage.setItem('bb_services_config', JSON.stringify(cfg));
   closeModal('servicesModal');
