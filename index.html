@@ -314,6 +314,7 @@ body.admin-open .prompt-wrap{display:block !important}
   <button class="btn btn-edit" onclick="openImportModal()" title="ייבוא כרטיסיות בקבוצה">📥 ייבוא</button>
   <button class="btn btn-edit" onclick="openPremiumTextModal()" title="ערוך טקסטים בחלון הפרימיום">🔒 פרימיום</button>
   <button class="btn btn-edit" onclick="openWaTextModal()" title="ערוך הודעות וואטסאפ">📱 הודעות WA</button>
+  <button class="btn btn-edit" onclick="openServicesModal()" title="ערוך עמוד שירותים">🛍️ שירותים</button>
   <button class="btn btn-edit" onclick="exportCSV()" title="ייצוא לאקסל">📤 CSV</button>
   <span class="free-counter" id="freeCounter">🆓 0/50</span>
 </div>
@@ -4780,6 +4781,45 @@ set the scene indoors if possible</pre></div>
     </div>
   </div>
 </div>
+<div class="modal-bg" id="servicesModal">
+  <div class="modal" style="max-width:540px">
+    <h2>🛍️ עריכת עמוד שירותים</h2>
+    <label>כותרת Hero</label>
+    <input type="text" id="svc_heroTitle" placeholder="הזמנת תמונות AI אישיות 🍌">
+    <label style="margin-top:10px">תת-כותרת Hero</label>
+    <textarea id="svc_heroSub" rows="2" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);font-size:13px;resize:vertical;direction:rtl"></textarea>
+    <hr style="border-color:var(--border2);margin:16px 0">
+    <b style="color:var(--primary)">🛒 הזמנת תמונות</b>
+    <label style="margin-top:10px">מחיר (תמונה בודדת)</label>
+    <input type="text" id="svc_orderPrice" placeholder="10 ₪">
+    <label style="margin-top:10px">הערת מחיר</label>
+    <input type="text" id="svc_orderNote" placeholder="לתמונה בודדת | 5 ₪ לתמונה בחבילה של 20+">
+    <hr style="border-color:var(--border2);margin:16px 0">
+    <b style="color:#7b2ff7">🔓 מנוי שנתי</b>
+    <label style="margin-top:10px">מחיר מנוי</label>
+    <input type="text" id="svc_subPrice" placeholder="59 ₪">
+    <label style="margin-top:10px">הערת מנוי</label>
+    <input type="text" id="svc_subNote" placeholder="תשלום חד-פעמי לשנה שלמה">
+    <hr style="border-color:var(--border2);margin:16px 0">
+    <b style="color:var(--primary)">📅 סשן בזום</b>
+    <label style="margin-top:10px">מחיר סשן</label>
+    <input type="text" id="svc_sessionPrice" placeholder="350 ₪">
+    <label style="margin-top:10px">הערת סשן</label>
+    <input type="text" id="svc_sessionNote" placeholder="סשן של שעה מלאה">
+    <hr style="border-color:var(--border2);margin:16px 0">
+    <b>📞 הודעות WhatsApp</b>
+    <label style="margin-top:10px">הודעה — הזמנת תמונות</label>
+    <input type="text" id="svc_orderMsg" placeholder="היי, אשמח להזמין תמונות AI 🍌">
+    <label style="margin-top:10px">הודעה — מנוי שנתי</label>
+    <input type="text" id="svc_subMsg" placeholder="היי, אשמח לרכוש מנוי שנתי לקטלוג 🍌">
+    <label style="margin-top:10px">הודעה — סשן בזום</label>
+    <input type="text" id="svc_sessionMsg" placeholder="היי, אשמח לקבוע סשן אישי בזום 🍌">
+    <div class="modal-footer" style="margin-top:16px">
+      <button class="btn btn-cancel" onclick="closeModal('servicesModal')">סגור</button>
+      <button class="btn btn-ok" onclick="saveServicesContent()">✅ שמור ופרסם</button>
+    </div>
+  </div>
+</div>
 <div class="modal-bg" id="shareModal">
   <div class="modal">
     <h2>❤️ המועדפים שלי</h2>
@@ -5380,6 +5420,51 @@ function savePremiumTexts() {
   showToast('✅ החלון עודכן — לחץ פרסם לשמירה');
 }
 
+var DEFAULT_SERVICES_CONFIG = {
+  heroTitle: 'הזמנת תמונות AI אישיות 🍌',
+  heroSub: 'תמונות מקצועיות שנוצרות ב-AI על בסיס התמונה שלך — בסגנונות מרהיבים ובדיוק מושלם',
+  orderPrice: '10 ₪', orderNote: 'לתמונה בודדת | 5 ₪ לתמונה בחבילה של 20+',
+  subPrice: '59 ₪', subNote: 'תשלום חד-פעמי לשנה שלמה',
+  sessionPrice: '350 ₪', sessionNote: 'סשן של שעה מלאה',
+  orderMsg: 'היי, אשמח להזמין תמונות AI 🍌',
+  subMsg: 'היי, אשמח לרכוש מנוי שנתי לקטלוג 🍌',
+  sessionMsg: 'היי, אשמח לקבוע סשן אישי בזום 🍌'
+};
+function openServicesModal() {
+  var cfg = JSON.parse(localStorage.getItem('bb_services_config') || 'null') || DEFAULT_SERVICES_CONFIG;
+  document.getElementById('svc_heroTitle').value   = cfg.heroTitle   || DEFAULT_SERVICES_CONFIG.heroTitle;
+  document.getElementById('svc_heroSub').value     = cfg.heroSub     || DEFAULT_SERVICES_CONFIG.heroSub;
+  document.getElementById('svc_orderPrice').value  = cfg.orderPrice  || DEFAULT_SERVICES_CONFIG.orderPrice;
+  document.getElementById('svc_orderNote').value   = cfg.orderNote   || DEFAULT_SERVICES_CONFIG.orderNote;
+  document.getElementById('svc_subPrice').value    = cfg.subPrice    || DEFAULT_SERVICES_CONFIG.subPrice;
+  document.getElementById('svc_subNote').value     = cfg.subNote     || DEFAULT_SERVICES_CONFIG.subNote;
+  document.getElementById('svc_sessionPrice').value= cfg.sessionPrice|| DEFAULT_SERVICES_CONFIG.sessionPrice;
+  document.getElementById('svc_sessionNote').value = cfg.sessionNote || DEFAULT_SERVICES_CONFIG.sessionNote;
+  document.getElementById('svc_orderMsg').value    = cfg.orderMsg    || DEFAULT_SERVICES_CONFIG.orderMsg;
+  document.getElementById('svc_subMsg').value      = cfg.subMsg      || DEFAULT_SERVICES_CONFIG.subMsg;
+  document.getElementById('svc_sessionMsg').value  = cfg.sessionMsg  || DEFAULT_SERVICES_CONFIG.sessionMsg;
+  openModal('servicesModal');
+}
+function saveServicesContent() {
+  var phone = ADMIN_WHATSAPP || '972523919350';
+  var cfg = {
+    heroTitle:    document.getElementById('svc_heroTitle').value.trim()    || DEFAULT_SERVICES_CONFIG.heroTitle,
+    heroSub:      document.getElementById('svc_heroSub').value.trim()      || DEFAULT_SERVICES_CONFIG.heroSub,
+    orderPrice:   document.getElementById('svc_orderPrice').value.trim()   || DEFAULT_SERVICES_CONFIG.orderPrice,
+    orderNote:    document.getElementById('svc_orderNote').value.trim()    || DEFAULT_SERVICES_CONFIG.orderNote,
+    subPrice:     document.getElementById('svc_subPrice').value.trim()     || DEFAULT_SERVICES_CONFIG.subPrice,
+    subNote:      document.getElementById('svc_subNote').value.trim()      || DEFAULT_SERVICES_CONFIG.subNote,
+    sessionPrice: document.getElementById('svc_sessionPrice').value.trim() || DEFAULT_SERVICES_CONFIG.sessionPrice,
+    sessionNote:  document.getElementById('svc_sessionNote').value.trim()  || DEFAULT_SERVICES_CONFIG.sessionNote,
+    orderMsg:     document.getElementById('svc_orderMsg').value.trim()     || DEFAULT_SERVICES_CONFIG.orderMsg,
+    subMsg:       document.getElementById('svc_subMsg').value.trim()       || DEFAULT_SERVICES_CONFIG.subMsg,
+    sessionMsg:   document.getElementById('svc_sessionMsg').value.trim()   || DEFAULT_SERVICES_CONFIG.sessionMsg,
+    phone: phone
+  };
+  localStorage.setItem('bb_services_config', JSON.stringify(cfg));
+  closeModal('servicesModal');
+  showToast('✅ עמוד השירותים עודכן');
+}
 function toggleFreeEnabled() {
   var mode = getFreeMode();
   if (mode === 'off') mode = 'partial';
