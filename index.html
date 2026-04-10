@@ -5376,34 +5376,31 @@ function duplicateCard(key) {
 
 // ── קטגוריות ──────────────────────────────────────────────
 var activeCat = '';
+function isFreeCard(key) {
+  return getFreeMode() === 'full' || !!(state.freePrompts && state.freePrompts[key]);
+}
 function buildCatFilters() {
   var bar = document.getElementById('catFilterBar');
   if (!bar) return;
-  var cats = {};
-  document.querySelectorAll('.card .cat').forEach(function(el) {
-    var c = el.textContent.trim();
-    if (c) cats[c] = (cats[c] || 0) + 1;
-  });
-  var sorted = Object.keys(cats).sort();
-  if (!sorted.length) { bar.style.display = 'none'; return; }
   bar.innerHTML = '';
-  var allBtn = document.createElement('button');
-  allBtn.className = 'cat-filter-btn active';
-  allBtn.textContent = '🌐 הכל';
-  allBtn.onclick = function() { setActiveCat(''); };
-  bar.appendChild(allBtn);
-  sorted.forEach(function(cat) {
+  var defs = [
+    { id: '',     label: '🌐 הכל' },
+    { id: 'free', label: '🆓 חינם' },
+    { id: 'paid', label: '🔒 בתשלום' }
+  ];
+  defs.forEach(function(d) {
     var btn = document.createElement('button');
-    btn.className = 'cat-filter-btn';
-    btn.textContent = cat + ' (' + cats[cat] + ')';
-    btn.onclick = function() { setActiveCat(cat); };
+    btn.className = 'cat-filter-btn' + (d.id === activeCat ? ' active' : '');
+    btn.textContent = d.label;
+    btn.setAttribute('data-cat', d.id);
+    btn.onclick = function() { setActiveCat(d.id); };
     bar.appendChild(btn);
   });
 }
 function setActiveCat(cat) {
   activeCat = cat;
   document.querySelectorAll('.cat-filter-btn').forEach(function(btn) {
-    btn.classList.toggle('active', btn.textContent === (cat ? cat + ' (' + document.querySelectorAll('.card .cat') .length + ')' : '🌐 הכל') || (!cat && btn.textContent === '🌐 הכל') || (cat && btn.textContent.startsWith(cat + ' (')));
+    btn.classList.toggle('active', btn.getAttribute('data-cat') === cat);
   });
   filterCards(document.querySelector('.search').value);
 }
@@ -6169,8 +6166,8 @@ function filterCards(q){
     var key=c.getAttribute('data-key');
     var matchQ=!q||c.getAttribute('data-search').includes(q);
     var matchFav=!showFavsOnly||!!favs[key];
-    var cardCat=(c.querySelector('.cat')||{textContent:''}).textContent.trim();
-    var matchCat=!activeCat||cardCat===activeCat;
+    var free=isFreeCard(key);
+    var matchCat=!activeCat||(activeCat==='free'&&free)||(activeCat==='paid'&&!free);
     var show=matchQ&&matchFav&&matchCat;
     c.style.display=show?'':'none'; if(show)visible++;
   });
