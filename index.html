@@ -34,7 +34,8 @@ h1{text-align:center;color:#f5a623;font-size:2em;margin-bottom:6px}
 .btn{padding:9px 18px;border:none;border-radius:7px;cursor:pointer;font-weight:bold;font-size:13px;white-space:nowrap;transition:background .15s,color .15s}
 .btn-edit{background:var(--bg4);color:#f5a623;border:1px solid #f5a623}
 .btn-edit:hover,.btn-edit.active{background:#f5a623;color:#000}
-#catToggleBtn,#catToggleBtn.active,#catToggleBtn:hover{background:var(--bg4);color:#f5a623;border-color:#f5a623}
+#orderBar{display:none;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.toolbar #catFilterBar{display:contents}
 #waToggle.active{background:#25d366;color:#fff;border-color:#25d366}
 #waToggle.active:hover{background:#1ebe5d}
 #freeToggleBtn.free-off{background:#e53935;color:#fff;border-color:#e53935}
@@ -265,7 +266,6 @@ body.admin-open .prompt-wrap{display:block !important}
   <button class="btn btn-publish" id="btnPublish" onclick="publishChanges()" disabled>🌐 פרסם שינויים</button>
   <button class="btn btn-edit" id="waToggle" onclick="toggleWaShare()" title="שליחת מועדפים ב-WhatsApp">💬 WA</button>
   <button class="btn btn-edit" onclick="openKeysModal()">🔑 ססמאות</button>
-  <button class="btn btn-edit" id="catToggleBtn" onclick="toggleCatBar()">קטגוריות</button>
   <button class="btn btn-edit" onclick="openImportModal()" title="ייבוא כרטיסיות בקבוצה">📥 ייבוא</button>
   <button class="btn btn-edit" onclick="openPremiumTextModal()" title="ערוך טקסטים בחלון הפרימיום">🔒 פרימיום</button>
   <button class="btn btn-edit" onclick="openWaTextModal()" title="ערוך הודעות וואטסאפ">📱 הודעות WA</button>
@@ -275,21 +275,23 @@ body.admin-open .prompt-wrap{display:block !important}
 <h1>Brill <span class="banana">🍌</span> Banana Prompts</h1>
 <p class="subtitle" style="margin-bottom:4px">קטלוג פרומפטים מתעדכן ליצירת תמונות אישיות ב- Nano Banana 2</p>
 <p class="subtitle" style="margin-bottom:20px"><span id="subtitle-count">241</span> פרומפטים | 📋 Copy להעתקה | לחץ על תמונה לתצוגה מוגדלת</p>
+<div id="orderBar" style="display:none;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:14px">
+  <button class="btn" id="btnMainOrder" style="display:none;background:#4caf50;color:#fff" onclick="orderImagesWhatsApp()">🛒 הזמנת תמונות</button>
+  <button class="btn" id="btnMainSession" style="display:none;background:#1565c0;color:#fff" onclick="bookSessionWhatsApp()">📅 קביעת סשן</button>
+</div>
 <div class="toolbar">
   <input class="search" type="search" placeholder="🔍 חפש לפי שם או תוכן..." oninput="filterCards(this.value)" autocomplete="off">
   <button class="btn btn-license" id="accessBtn" onclick="openAccessModal('premium')">🔒 פרימיום</button>
   <button class="btn btn-fav-filter" id="favFilterBtn" onclick="toggleFavFilter()">❤️ מועדפים</button>
   <button class="btn btn-fav-action" id="btnSendFavs" style="display:none" onclick="openShareModal()">📤 שלח מועדפים</button>
   <button class="btn btn-fav-action" id="btnClearFavs" style="display:none" onclick="clearFavs()">🗑️ אפס בחירה</button>
-  <button class="btn" id="btnMainOrder" style="display:none;background:#4caf50;color:#fff" onclick="orderImagesWhatsApp()">🛒 הזמנת תמונות</button>
-  <button class="btn" id="btnMainSession" style="display:none;background:#1565c0;color:#fff" onclick="bookSessionWhatsApp()">📅 קביעת סשן</button>
+  <div class="cat-filter-bar" id="catFilterBar" style="display:none"></div>
 </div>
 <div class="cols-control">
   <span class="cols-label">מספר תמונות בשורה:</span>
   <input type="range" id="colsSlider" class="cols-slider" min="1" max="17" value="5">
   <span class="cols-val" id="colsVal">5</span>
 </div>
-<div class="cat-filter-bar" id="catFilterBar"></div>
 <div id="favCountRow" style="display:none;text-align:center;color:#f5a623;font-weight:bold;font-size:14px;margin-bottom:10px"></div>
 <div class="grid" id="grid" style="visibility:hidden">
 <div class="card" data-key="orig_0" data-search="artist painting a miniature figure of themselves create a portrait depicting the person as an artist painting a miniature figure. the person is dressed in their most iconic outfit, looking confidently directly at the camera, holding a small paintbrush in one hand. a mini version of themselves is prominently placed on a clean workbench in front of them—make the figure slightly larger to be more visible than actual scale, thus standing out more. the figure is also wearing the same iconic outfit and striking an iconic pose. the painting supplies on the workbench are minimal to avoid clutter—only two or three small bottles of paint and a spare brush, keeping the focus on the person and the figure. soft neutral white background, professional studio lighting, shallow depth of field. the composition highlights the person&#x27;s facial expression looking at the camera and the figure they are painting. the style is clean and crisp, pursuing photorealistic effects, and details of both the person and the figure need to be highly restored."><div class="edit-controls"><span class="ec-btn ec-drag">&#x22EE;&#x22EE; גרור</span><button class="ec-btn ec-del" data-action="del" data-key="orig_0">🗑️ מחק</button><button class="ec-btn ec-img" data-action="img" data-key="orig_0">🖼️ החלף</button><button class="ec-btn ec-edit" data-action="edit" data-key="orig_0">✏️ ערוך</button></div><div class="card-header"><span class="num">#241</span><span class="cat">Photography</span><button class="copy-btn" data-action="copy" data-key="orig_0">📋 Copy</button></div><h3>Artist Painting a Miniature Figure of Themselves</h3><div class="thumb-wrap" data-lb-key="orig_0"><img class="thumb" src="images/241.jpg" alt="" loading="lazy"><div class="thumb-overlay"><span>🔍 הצג תמונה</span></div></div><pre class="prompt-text">Create a portrait depicting the person as an artist painting a miniature figure. The person is dressed in their most iconic outfit, looking confidently directly at the camera, holding a small paintbrush in one hand. A mini version of themselves is prominently placed on a clean workbench in front of them—make the figure slightly larger to be more visible than actual scale, thus standing out more. The figure is also wearing the same iconic outfit and striking an iconic pose. The painting supplies on the workbench are minimal to avoid clutter—only two or three small bottles of paint and a spare brush, keeping the focus on the person and the figure. Soft neutral white background, professional studio lighting, shallow depth of field. The composition highlights the person&#x27;s facial expression looking at the camera and the figure they are painting. The style is clean and crisp, pursuing photorealistic effects, and details of both the person and the figure need to be highly restored.</pre></div>
@@ -5248,6 +5250,9 @@ function updateFreeCounter() {
     btn.classList.remove('free-off', 'free-partial', 'free-full');
     btn.classList.add('free-' + (mode || 'off'));
   }
+  // Show category filter only in partial mode
+  var catBar = document.getElementById('catFilterBar');
+  if (catBar) catBar.style.display = (mode === 'partial') ? '' : 'none';
 }
 
 function toggleFreeStatus(key) {
@@ -5444,17 +5449,7 @@ function switchAccessTab(tab) {
   });
 }
 
-// ── הסתרת קטגוריות ────────────────────────────────────────
-function toggleCatBar() {
-  var bar = document.getElementById('catFilterBar');
-  if (!bar) return;
-  var hidden = bar.style.display === 'none';
-  bar.style.display = hidden ? '' : 'none';
-  var btn = document.getElementById('catToggleBtn');
-  if (btn) btn.classList.toggle('active', !hidden);
-  state.catHidden = !hidden;
-  markUnsaved();
-}
+// ── הסתרת קטגוריות — נשלט ע"י מצב חינם, ללא כפתור ידני ──
 
 
 // Auto-activate from Lemon Squeezy redirect
@@ -5583,12 +5578,6 @@ function applyState(st) {
   updateLicenseBtn();
   applyPaywallToAll();
   buildCatFilters();
-  // restore cat bar visibility from state
-  var bar = document.getElementById('catFilterBar');
-  var catHidden = !!st.catHidden;
-  if (bar) bar.style.display = catHidden ? 'none' : '';
-  var catBtn = document.getElementById('catToggleBtn');
-  if (catBtn) catBtn.classList.toggle('active', catHidden);
   // restore WA share from state (fallback to localStorage for old states)
   shareWhatsApp = st.shareWhatsApp !== undefined ? !!st.shareWhatsApp : (localStorage.getItem('bb_share_wa') !== 'false');
   updateWaButtons();
@@ -6070,6 +6059,8 @@ function toggleFavFilter() {
 }
 function updateWaButtons() {
   var vis = shareWhatsApp ? '' : 'none';
+  var orderBar = document.getElementById('orderBar');
+  if (orderBar) orderBar.style.display = shareWhatsApp ? 'flex' : 'none';
   ['btnMainOrder','btnMainSession'].forEach(function(id){
     var el = document.getElementById(id);
     if (el) el.style.display = vis;
