@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>הזמנת תמונות AI אישיות | Brill Banana Prompts</title>
+<meta name="description" content="הזמינו תמונות AI מותאמות אישית — תמונה בודדת מ-10 ₪, חבילות מ-5 ₪ לתמונה, או סשן אישי בזום. 241+ סגנונות לבחירה.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0f0f0f;--bg2:#1a1a1a;--bg3:#111;--bg4:#2a2a2a;
+  --border:#2a2a2a;--border2:#333;
+  --text:#e0e0e0;--text2:#aaa;--text4:#888;
+  --card-bg:#1a1a1a;--modal-bg:#1e1e1e;
+  --primary:#f5a623;--wa:#25d366;
+  --radius:12px;
+}
+[data-theme="light"]{
+  --bg:#f0f0f0;--bg2:#ffffff;--bg3:#f8f8f8;--bg4:#e8e8e8;
+  --border:#ddd;--border2:#ccc;
+  --text:#1a1a1a;--text2:#555;--text4:#777;
+  --card-bg:#ffffff;--modal-bg:#ffffff;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);direction:rtl;transition:background .2s,color .2s}
+
+/* ── THEME TOGGLE ── */
+#themeBtn{position:fixed;top:12px;left:12px;z-index:999;background:var(--bg4);color:var(--text);border:1px solid var(--border2);font-size:16px;padding:7px 12px;border-radius:7px;cursor:pointer;transition:background .15s}
+#themeBtn:hover{background:var(--border2)}
+
+/* ── BACK BUTTON ── */
+#backBtn{position:fixed;top:12px;right:16px;z-index:999;background:var(--bg4);color:var(--primary);border:1px solid var(--border2);font-size:13px;font-weight:bold;padding:8px 16px;border-radius:7px;cursor:pointer;text-decoration:none;transition:background .15s}
+#backBtn:hover{background:var(--border2)}
+
+/* ── SECTIONS ── */
+section{padding:80px 20px;max-width:1000px;margin:0 auto}
+.section-title{font-size:2em;font-weight:900;color:var(--primary);text-align:center;margin-bottom:12px}
+.section-sub{text-align:center;color:var(--text2);font-size:1em;margin-bottom:48px;line-height:1.6}
+
+/* ── FADE-IN ANIMATION ── */
+.fade-in{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+.fade-in.visible{opacity:1;transform:none}
+
+/* ── HERO ── */
+#hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 20px 60px;background:linear-gradient(180deg,#0f0f0f 0%,#1a1200 50%,#0f0f0f 100%);max-width:100%}
+[data-theme="light"] #hero{background:linear-gradient(180deg,#f0f0f0 0%,#fff9e6 50%,#f0f0f0 100%)}
+#hero h1{font-size:clamp(2em,5vw,3.2em);font-weight:900;color:var(--primary);line-height:1.15;margin-bottom:20px}
+#hero p{font-size:clamp(1em,2.5vw,1.25em);color:var(--text2);max-width:600px;line-height:1.7;margin-bottom:40px}
+.btn-cta{display:inline-block;background:var(--primary);color:#000;font-weight:900;font-size:1.1em;padding:16px 36px;border-radius:50px;text-decoration:none;cursor:pointer;border:none;transition:transform .15s,box-shadow .15s;animation:pulse-glow 2.5s ease-in-out infinite}
+.btn-cta:hover{transform:scale(1.04);box-shadow:0 0 28px rgba(245,166,35,0.5)}
+@keyframes pulse-glow{0%,100%{box-shadow:0 0 8px rgba(245,166,35,0.3)}50%{box-shadow:0 0 24px rgba(245,166,35,0.6)}}
+
+/* ── HOW IT WORKS ── */
+#how-it-works{background:var(--bg2);max-width:100%;padding:80px 20px}
+.steps-wrap{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;max-width:900px;margin:0 auto}
+.step{flex:1;min-width:220px;max-width:280px;text-align:center;padding:32px 24px;background:var(--bg3);border-radius:var(--radius);border:1px solid var(--border)}
+.step-icon{font-size:3em;margin-bottom:16px;display:block}
+.step-num{display:inline-block;background:var(--primary);color:#000;font-weight:900;font-size:12px;width:24px;height:24px;border-radius:50%;line-height:24px;text-align:center;margin-bottom:10px}
+.step h3{font-size:1.05em;font-weight:700;color:var(--text);margin-bottom:8px}
+.step p{font-size:.9em;color:var(--text2);line-height:1.6}
+
+/* ── PRICING ── */
+#pricing{padding:80px 20px;max-width:100%}
+.pricing-wrap{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;max-width:900px;margin:0 auto}
+.price-card{flex:1;min-width:280px;max-width:420px;background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);padding:36px 32px;transition:transform .2s,box-shadow .2s;position:relative}
+.price-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,0.4)}
+.price-card.featured{border-color:var(--primary);box-shadow:0 0 0 1px var(--primary)}
+.price-badge{position:absolute;top:-14px;right:28px;background:var(--primary);color:#000;font-weight:900;font-size:12px;padding:4px 14px;border-radius:20px}
+.price-card h2{font-size:1.4em;font-weight:900;color:var(--text);margin-bottom:12px}
+.price-card .desc{color:var(--text2);font-size:.9em;line-height:1.6;margin-bottom:24px}
+.price-amount{font-size:2.8em;font-weight:900;color:var(--primary);margin-bottom:4px;line-height:1}
+.price-note{font-size:.8em;color:var(--text2);margin-bottom:24px}
+.price-list{list-style:none;margin-bottom:32px}
+.price-list li{padding:7px 0;font-size:.9em;color:var(--text2);border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:8px}
+.price-list li::before{content:'✓';color:var(--primary);font-weight:900;flex-shrink:0}
+.btn-wa{display:block;text-align:center;background:var(--wa);color:#fff;font-weight:900;font-size:1em;padding:14px;border-radius:8px;text-decoration:none;transition:background .15s,transform .15s;animation:pulse-glow-wa 3s ease-in-out infinite}
+.btn-wa:hover{background:#1ebe5d;transform:scale(1.02)}
+@keyframes pulse-glow-wa{0%,100%{box-shadow:0 0 6px rgba(37,211,102,0.2)}50%{box-shadow:0 0 18px rgba(37,211,102,0.5)}}
+
+/* ── GALLERY ── */
+#gallery{background:var(--bg2);max-width:100%;padding:80px 20px}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:920px;margin:0 auto 40px}
+@media(max-width:700px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+.gallery-item{border-radius:8px;overflow:hidden;cursor:pointer;position:relative;aspect-ratio:1;background:var(--bg4)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.gallery-item:hover img{transform:scale(1.05)}
+.gallery-caption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#fff;font-size:11px;padding:18px 8px 8px;text-align:center}
+.btn-catalog{display:block;text-align:center;background:var(--bg4);color:var(--primary);font-weight:700;font-size:.95em;padding:14px 32px;border-radius:8px;text-decoration:none;border:1px solid var(--primary);max-width:280px;margin:0 auto;transition:background .15s}
+.btn-catalog:hover{background:var(--primary);color:#000}
+
+/* ── LIGHTBOX ── */
+#lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:9999;align-items:center;justify-content:center;cursor:pointer}
+#lb.open{display:flex}
+#lb img{max-width:90vw;max-height:90vh;border-radius:8px;object-fit:contain}
+
+/* ── FAQ ── */
+#faq{padding:80px 20px;max-width:100%}
+.faq-wrap{max-width:750px;margin:0 auto}
+.faq-item{border-bottom:1px solid var(--border);overflow:hidden}
+.faq-q{width:100%;text-align:right;background:none;border:none;color:var(--text);font-size:1em;font-weight:700;padding:20px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:inherit}
+.faq-q:hover{color:var(--primary)}
+.faq-arrow{font-size:.8em;color:var(--primary);transition:transform .3s;flex-shrink:0}
+.faq-item.open .faq-arrow{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease}
+.faq-item.open .faq-a{max-height:300px;padding-bottom:20px}
+.faq-a p{color:var(--text2);font-size:.92em;line-height:1.7}
+
+/* ── CONTACT/CTA ── */
+#contact{background:var(--bg2);max-width:100%;padding:80px 20px;text-align:center}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:40px}
+.btn-wa-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--wa);border:2px solid var(--wa);font-weight:900;font-size:1em;padding:14px 28px;border-radius:8px;text-decoration:none;transition:background .15s,color .15s}
+.btn-wa-outline:hover{background:var(--wa);color:#fff}
+
+@media(max-width:600px){
+  section{padding:60px 16px}
+  #hero h1{font-size:1.8em}
+  .steps-wrap,.pricing-wrap{flex-direction:column;align-items:center}
+  .price-card{max-width:100%}
+}
+</style>
+</head>
+<body>
+
+<button id="themeBtn" onclick="toggleTheme()" title="מצב לילה/יום">🌙</button>
+<a id="backBtn" href="/">← חזרה לקטלוג</a>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="fade-in">
+    <h1>הזמנת תמונות AI אישיות 🍌</h1>
+    <p>תמונות מקצועיות שנוצרות ב-AI על בסיס התמונה שלך — בסגנונות מרהיבים ובדיוק מושלם</p>
+    <a class="btn-cta" href="#pricing">בחר/י מסלול והזמן/י</a>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<div id="how-it-works" style="background:var(--bg2)">
+<section>
+  <div class="fade-in">
+    <h2 class="section-title">איך זה עובד?</h2>
+    <p class="section-sub">תהליך פשוט בשלושה צעדים</p>
+    <div class="steps-wrap">
+      <div class="step fade-in">
+        <span class="step-icon">📸</span>
+        <div class="step-num">1</div>
+        <h3>שלח/י תמונה שלך</h3>
+        <p>שלח/י תמונת פנים ברורה ואיכותית דרך WhatsApp</p>
+      </div>
+      <div class="step fade-in">
+        <span class="step-icon">🎨</span>
+        <div class="step-num">2</div>
+        <h3>בחר/י סגנון</h3>
+        <p>בחר/י פרומפטים מהקטלוג שלנו, או תאר/י רעיון משלך</p>
+      </div>
+      <div class="step fade-in">
+        <span class="step-icon">✨</span>
+        <div class="step-num">3</div>
+        <h3>קבל/י את התמונות</h3>
+        <p>התמונות המוכנות ישלחו אליך באיכות גבוהה</p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ── PRICING ── -->
+<div id="pricing">
+<section>
+  <div class="fade-in">
+    <h2 class="section-title">מסלולים ומחירים</h2>
+    <p class="section-sub">בחר/י את המסלול המתאים לך</p>
+    <div class="pricing-wrap">
+
+      <!-- Order card -->
+      <div class="price-card fade-in" id="order">
+        <h2><span style="font-size:18px">🛒</span> הזמנת תמונות</h2>
+        <p class="desc">בחר/י פרומפטים מהקטלוג, שלח/י תמונה, וקבל/י תמונות מוכנות</p>
+        <div class="price-amount">10 ₪</div>
+        <div class="price-note">לתמונה בודדת &nbsp;|&nbsp; <strong style="color:var(--primary)">5 ₪</strong> לתמונה בחבילה של 20+</div>
+        <ul class="price-list">
+          <li>בחירה חופשית מתוך 241+ פרומפטים בקטלוג</li>
+          <li>שמירה על הזהות — התמונות נראות בדיוק כמוך</li>
+          <li>קבלת התמונות באיכות גבוהה דרך WhatsApp</li>
+          <li>אפשרות לבקש התאמות קלות</li>
+        </ul>
+        <a class="btn-wa" href="https://wa.me/972523919350?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%96%D7%9E%D7%99%D7%9F%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%20AI%20%F0%9F%8D%8C" target="_blank">🛒 הזמן/י עכשיו בוואטסאפ</a>
+      </div>
+
+      <!-- Session card -->
+      <div class="price-card featured fade-in" id="session">
+        <div class="price-badge">⭐ החוויה המלאה</div>
+        <h2><span style="font-size:18px">📅</span> סשן אישי בזום</h2>
+        <p class="desc">מפגש אישי בזום שבו ניצור יחד תמונות AI מותאמות בדיוק לטעם שלך</p>
+        <div class="price-amount">350 ₪</div>
+        <div class="price-note">סשן של שעה מלאה</div>
+        <ul class="price-list">
+          <li>שעה של יצירה משותפת בזום — אחד על אחד</li>
+          <li>בחירת סגנונות ופרומפטים יחד בזמן אמת</li>
+          <li>התאמה אישית של כל תמונה בדיוק לטעם שלך</li>
+          <li>קבלת כל התמונות בסוף המפגש</li>
+          <li>הנחיה מקצועית לתוצאות מושלמות</li>
+        </ul>
+        <a class="btn-wa" href="https://wa.me/972523919350?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A1%D7%A9%D7%9F%20%D7%90%D7%99%D7%A9%D7%99%20%D7%91%D7%96%D7%95%D7%9D%20%F0%9F%8D%8C" target="_blank">📅 קבע/י סשן בוואטסאפ</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- ── GALLERY ── -->
+<div id="gallery" style="background:var(--bg2)">
+<section>
+  <div class="fade-in">
+    <h2 class="section-title">דוגמאות מתמונות שיצרנו</h2>
+    <p class="section-sub">מבחר סגנונות — פורטרט, מוצר, פנטזיה, ואמנות</p>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openLb(this)">
+        <img src="images/241.jpg" alt="אמן מציור" loading="lazy">
+        <div class="gallery-caption">ציור מיניאטורה</div>
+      </div>
+      <div class="gallery-item" onclick="openLb(this)">
+        <img src="images/226.jpg" alt="3D שם" loading="lazy">
+        <div class="gallery-caption">אינטראקציה תלת-מימדית</div>
+      </div>
+      <div class="gallery-item" onclick="openLb(this)">
+        <img src="images/181.jpg" alt="מטבע בולט" loading="lazy">
+        <div class="gallery-caption">פורטרט מטבע בולט</div>
+      </div>
+      <div class="gallery-item" onclick="openLb(this)">
+        <img src="https://nanobananai.site/images/case232/output.webp" alt="פורצלן ביומכני" loading="lazy">
+        <div class="gallery-caption">פורצלן ביו-מכני</div>
+      </div>
+      <div class="gallery-item" onclick="openLb(this)">
+        <img src="https://nanobananai.site/images/case206/output.webp" alt="אריזת בליסטר" loading="lazy">
+        <div class="gallery-caption">אריזת מוצר</div>
+      </div>
+      <div class="gallery-item" onclick="openLb(this)">
+        <img src="https://nanobananai.site/images/case190/output.webp" alt="שער מגזין TIME" loading="lazy">
+        <div class="gallery-caption">שער מגזין TIME</div>
+      </div>
+      <div class="gallery-item" onclick="openLb(this)">
+        <img src="https://nanobananai.site/images/case183/output.webp" alt="פנטזיה סרוגה" loading="lazy">
+        <div class="gallery-caption">פנטזיה סרוגה</div>
+      </div>
+      <div class="gallery-item" onclick="openLb(this)">
+        <img src="https://nanobananai.site/images/case199/output.webp" alt="פוסטר קומיקס" loading="lazy">
+        <div class="gallery-caption">פוסטר קומיקס</div>
+      </div>
+    </div>
+    <a class="btn-catalog" href="/">צפה/י בקטלוג המלא ←</a>
+  </div>
+</section>
+</div>
+
+<!-- Lightbox -->
+<div id="lb" onclick="closeLb()"><img id="lbImg" src="" alt=""></div>
+
+<!-- ── FAQ ── -->
+<div id="faq">
+<section>
+  <div class="fade-in">
+    <h2 class="section-title">שאלות נפוצות</h2>
+    <p class="section-sub">כל מה שרצית לדעת</p>
+    <div class="faq-wrap" id="faqWrap"></div>
+  </div>
+</section>
+</div>
+
+<!-- ── CONTACT ── -->
+<div id="contact" style="background:var(--bg2)">
+<section>
+  <div class="fade-in">
+    <h2 class="section-title">מוכנים ליצור תמונות מדהימות?</h2>
+    <p class="section-sub">שלחו הודעה ונתחיל 🍌</p>
+    <div class="cta-btns">
+      <a class="btn-wa" style="text-decoration:none;padding:16px 32px;border-radius:8px;font-size:1em;display:inline-flex;align-items:center;gap:8px"
+         href="https://wa.me/972523919350?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%96%D7%9E%D7%99%D7%9F%20%D7%AA%D7%9E%D7%95%D7%A0%D7%95%D7%AA%20AI%20%F0%9F%8D%8C" target="_blank">
+        🛒 הזמנת תמונות
+      </a>
+      <a class="btn-wa-outline"
+         href="https://wa.me/972523919350?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%95%D7%A2%20%D7%A1%D7%A9%D7%9F%20%D7%90%D7%99%D7%A9%D7%99%20%D7%91%D7%96%D7%95%D7%9D%20%F0%9F%8D%8C" target="_blank">
+        📅 קביעת סשן
+      </a>
+    </div>
+  </div>
+</section>
+</div>
+
+<script>
+// ── THEME ──
+(function(){
+  if(localStorage.getItem('bb_theme')==='light') document.documentElement.setAttribute('data-theme','light');
+})();
+function toggleTheme(){
+  var light = document.documentElement.getAttribute('data-theme')==='light';
+  document.documentElement.setAttribute('data-theme', light ? '' : 'light');
+  document.body.classList.toggle('light', !light);
+  localStorage.setItem('bb_theme', light ? '' : 'light');
+  document.getElementById('themeBtn').textContent = light ? '🌙' : '🌞';
+}
+if(localStorage.getItem('bb_theme')==='light'){
+  document.getElementById('themeBtn').textContent='🌞';
+  document.body.classList.add('light');
+}
+
+// ── FAQ ──
+var faqs = [
+  {q:'איזו תמונה כדאי לשלוח?', a:'תמונת פנים ברורה, חדה, עם תאורה טובה. עדיף תמונה ישירה (פרונטלית) בלי משקפי שמש או כובע. ככל שהתמונה באיכות גבוהה יותר — כך התוצאות יהיו טובות יותר.'},
+  {q:'כמה זמן לוקח לקבל את התמונות?', a:'הזמנת תמונות — בדרך כלל עד 24 שעות. בסשן בזום — מקבלים את כל התמונות מיד בסוף המפגש.'},
+  {q:'אפשר לבקש תיקונים?', a:'בהחלט! אם התוצאה לא בדיוק מה שדמיינת, נשמח להתאים ולשפר.'},
+  {q:'באיזה פורמט מקבלים את התמונות?', a:'התמונות נשלחות באיכות גבוהה בפורמט JPG/PNG, מוכנות לשימוש ברשתות חברתיות, הדפסה, או כל מטרה אחרת.'},
+  {q:'מה ההבדל בין הזמנת תמונות לסשן בזום?', a:'בהזמנת תמונות — אתם בוחרים פרומפטים ושולחים תמונה, ואנחנו עושים את השאר. בסשן בזום — אנחנו יוצרים יחד בזמן אמת, עם אפשרות לכוונן כל תמונה בדיוק לטעם שלכם, ומקבלים הכל מיד.'},
+  {q:'אפשר להזמין תמונה בסגנון שלא קיים בקטלוג?', a:'כמובן! אפשר לתאר רעיון או סגנון ונתאים פרומפט מותאם אישית. זה מתאים במיוחד במסגרת סשן בזום.'}
+];
+var wrap = document.getElementById('faqWrap');
+faqs.forEach(function(f, i){
+  var item = document.createElement('div');
+  item.className = 'faq-item';
+  item.innerHTML = '<button class="faq-q" aria-expanded="false"><span>'+f.q+'</span><span class="faq-arrow">▼</span></button>'
+    + '<div class="faq-a"><p>'+f.a+'</p></div>';
+  item.querySelector('.faq-q').addEventListener('click', function(){
+    var open = item.classList.toggle('open');
+    this.setAttribute('aria-expanded', open);
+  });
+  wrap.appendChild(item);
+});
+
+// ── LIGHTBOX ──
+function openLb(el){
+  var src = el.querySelector('img').src;
+  document.getElementById('lbImg').src = src;
+  document.getElementById('lb').classList.add('open');
+}
+function closeLb(){ document.getElementById('lb').classList.remove('open'); }
+
+// ── FADE-IN ON SCROLL ──
+var obs = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }});
+},{threshold:0.12});
+document.querySelectorAll('.fade-in').forEach(function(el){ obs.observe(el); });
+</script>
+</body>
+</html>
