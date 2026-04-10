@@ -15641,12 +15641,60 @@
   "catHidden": false,
   "shareWhatsApp": true,
   "freeMode": "partial",
-  "_publishedAt": 1775817055886,
+  "_publishedAt": 1775833371420,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
     "favsPrefix": "בחרתי {n} תמונות מ-Brill Banana Prompts:",
     "orderMsg": "היי! אני מעוניין/ת להזמין את התמונות הבאות ({n} תמונות) 🛒",
     "sessionMsg": "היי! אני מעוניין/ת לקבוע סשן צילום 📅"
+  },
+  "servicesConfig": {
+    "heroTitle": "הזמנת תמונות אישיות",
+    "heroSub": "תמונות מקצועיות שנוצרות ב-AI על בסיס התמונה שלך - בסגנונות מרהיבים ובדיוק מושלם",
+    "orderPrice": "10 ₪",
+    "orderNote": "לתמונה בודדת | 5 ₪ לתמונה בחבילה של 20+",
+    "subPrice": "59 ₪",
+    "subNote": "תשלום חד-פעמי לשנה שלמה",
+    "sessionPrice": "350 ₪",
+    "sessionNote": "סשן של שעה מלאה",
+    "orderMsg": "היי, אשמח להזמין תמונות AI 🍌",
+    "subMsg": "היי, אשמח לרכוש מנוי שנתי לקטלוג 🍌",
+    "sessionMsg": "היי, אשמח לקבוע סשן אישי בזום 🍌",
+    "phone": "972523919350",
+    "gallery": [
+      {
+        "src": "images/241.jpg",
+        "caption": "ציור מיניאטורה"
+      },
+      {
+        "src": "images/226.jpg",
+        "caption": "אינטראקציה תלת-מימדית"
+      },
+      {
+        "src": "images/181.jpg",
+        "caption": "פורטרט מטבע בולט"
+      },
+      {
+        "src": "/images/custom_gallery_3.jpg",
+        "caption": "פורצלן ביו-מכני"
+      },
+      {
+        "src": "https://nanobananai.site/images/case206/output.webp",
+        "caption": "אריזת מוצר"
+      },
+      {
+        "src": "https://nanobananai.site/images/case190/output.webp",
+        "caption": "שער מגזין TIME"
+      },
+      {
+        "src": "https://nanobananai.site/images/case183/output.webp",
+        "caption": "פנטזיה סרוגה"
+      },
+      {
+        "src": "https://nanobananai.site/images/case199/output.webp",
+        "caption": "פוסטר קומיקס"
+      }
+    ]
   }
 }
