@@ -5476,7 +5476,8 @@ function saveHeaderContent() {
   localStorage.setItem('bb_header_config', JSON.stringify(cfg));
   applyHeaderConfig(cfg);
   closeModal('headerModal');
-  showToast('✅ הכותרת עודכנה');
+  markUnsaved();
+  showToast('✅ הכותרת עודכנה - לחץ פרסם לשמירה');
 }
 var DEFAULT_SERVICES_CONFIG = {
   heroTitle: 'הזמנת תמונות AI אישיות 🍌',
@@ -5614,7 +5615,8 @@ function saveServicesContent() {
   };
   localStorage.setItem('bb_services_config', JSON.stringify(cfg));
   closeModal('servicesModal');
-  showToast('✅ עמוד השירותים עודכן');
+  markUnsaved();
+  showToast('✅ עמוד השירותים עודכן - לחץ פרסם לשמירה');
 }
 function toggleFreeEnabled() {
   var mode = getFreeMode();
@@ -5858,6 +5860,14 @@ function applyState(st) {
   // restore WA share from state (fallback to localStorage for old states)
   shareWhatsApp = st.shareWhatsApp !== undefined ? !!st.shareWhatsApp : (localStorage.getItem('bb_share_wa') !== 'false');
   updateWaButtons();
+  // Apply header and services configs from server state
+  if (st.headerConfig) {
+    localStorage.setItem('bb_header_config', JSON.stringify(st.headerConfig));
+    applyHeaderConfig(st.headerConfig);
+  }
+  if (st.servicesConfig) {
+    localStorage.setItem('bb_services_config', JSON.stringify(st.servicesConfig));
+  }
   // restore free toggle button label
   var totalCards = document.querySelectorAll('#grid .card[data-key]').length;
   var freeCount = Object.keys(st.freePrompts || {}).length;
@@ -5880,6 +5890,11 @@ async function publishChanges() {
     var stateToPost = JSON.parse(JSON.stringify(state));
     stateToPost._saved = true;
     stateToPost._publishedAt = Date.now();
+    // Include header and services configs from localStorage
+    var hdrCfg = JSON.parse(localStorage.getItem('bb_header_config') || 'null');
+    if (hdrCfg) stateToPost.headerConfig = hdrCfg;
+    var svcCfg = JSON.parse(localStorage.getItem('bb_services_config') || 'null');
+    if (svcCfg) stateToPost.servicesConfig = svcCfg;
     Object.keys(stateToPost.customImgs || {}).forEach(function(key) {
       if ((stateToPost.customImgs[key] || '').startsWith('data:') && serverCustomImgs[key]) {
         stateToPost.customImgs[key] = serverCustomImgs[key];
