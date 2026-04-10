@@ -322,6 +322,7 @@ body.admin-open .prompt-wrap{display:block !important}
 <h1 id="mainTitle">Brill <span class="banana">🍌</span> Banana Prompts</h1>
 <p class="subtitle" id="subtitle1" style="margin-bottom:4px">קטלוג פרומפטים מתעדכן ליצירת תמונות אישיות ב- Nano Banana 2</p>
 <p class="subtitle" style="margin-bottom:20px"><span id="subtitle-count">241</span> <span id="subtitle2">פרומפטים | 📋 Copy להעתקה | לחץ על תמונה לתצוגה מוגדלת</span></p>
+<a id="servicesLink" href="/services" style="display:none;color:var(--primary);font-size:13px;text-decoration:none;border:1px solid var(--primary);padding:4px 14px;border-radius:20px;margin-bottom:16px;transition:background .15s">🛍️ שירותים והזמנות</a>
 <div id="orderBar" style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:14px">
   <button class="btn" id="btnMainOrder" style="display:none;background:#4caf50;color:#fff" onclick="location.href='/services#order'"><span style="font-size:18px;vertical-align:middle">🛒</span> הזמנת תמונות</button>
   <button class="btn" id="btnMainSession" style="display:none;background:#1565c0;color:#fff" onclick="location.href='/services#session'">📅 קביעת סשן</button>
@@ -6237,7 +6238,7 @@ function toggleFavFilter() {
 }
 function updateWaButtons() {
   var vis = shareWhatsApp ? '' : 'none';
-  ['btnMainOrder','btnMainSession'].forEach(function(id){
+  ['btnMainOrder','btnMainSession','servicesLink'].forEach(function(id){
     var el = document.getElementById(id);
     if (el) el.style.display = vis;
   });
