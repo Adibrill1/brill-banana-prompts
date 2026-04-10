@@ -5595,8 +5595,7 @@ function applyState(st) {
   if (catBtn) catBtn.classList.toggle('active', catHidden);
   // restore WA share from state (fallback to localStorage for old states)
   shareWhatsApp = st.shareWhatsApp !== undefined ? !!st.shareWhatsApp : (localStorage.getItem('bb_share_wa') !== 'false');
-  var waBtn = document.getElementById('waToggle');
-  if (waBtn) { waBtn.classList.toggle('active', shareWhatsApp); waBtn.title = shareWhatsApp ? 'WhatsApp מופעל — לחץ לכיבוי' : 'WhatsApp כבוי — לחץ להפעלה'; }
+  updateWaButtons();
   // restore free toggle button label
   var totalCards = document.querySelectorAll('#grid .card[data-key]').length;
   var freeCount = Object.keys(st.freePrompts || {}).length;
