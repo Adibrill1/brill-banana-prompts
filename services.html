@@ -318,6 +318,9 @@ body.rh-mode .rh:hover .rh-knob,.rh.dragging .rh-knob{transform:translateX(-50%)
 </section>
 </div>
 
+<button id="adminResizeBtn">📐 ערוך גדלים</button>
+<div id="rh-tooltip"></div>
+
 <script>
 // ── SERVICES CONFIG ──
 (function(){
@@ -427,7 +430,8 @@ document.querySelectorAll('.fade-in').forEach(function(el){ obs.observe(el); });
   if (!localStorage.getItem('bb_admin_token')) return;
 
   var btn = document.getElementById('adminResizeBtn');
-  btn.style.display = '';
+  if (!btn) return;
+  btn.style.display = 'block';
 
   var SECTIONS = [
     {id:'hero',       key:'hero',    label:'Hero'},
@@ -546,8 +550,5 @@ document.querySelectorAll('.fade-in').forEach(function(el){ obs.observe(el); });
   });
 })();
 </script>
-
-<button id="adminResizeBtn">📐 ערוך גדלים</button>
-<div id="rh-tooltip"></div>
 </body>
 </html>
