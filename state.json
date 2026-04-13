@@ -428,7 +428,22 @@
     "added_imp_0550",
     "added_imp_0549",
     "added_imp_0551",
-    "added_imp_0554"
+    "added_imp_0554",
+    "added_imp_0559",
+    "added_imp_0557",
+    "added_imp_0561",
+    "added_imp_0565",
+    "added_imp_0567",
+    "added_imp_0570",
+    "added_imp_0572",
+    "added_imp_0573",
+    "added_imp_0571",
+    "added_imp_0576",
+    "added_imp_0577",
+    "added_imp_0578",
+    "added_imp_0579",
+    "added_imp_0581",
+    "added_imp_0582"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -7379,9 +7394,9 @@
       "id": "new",
       "title": "Man In Suit",
       "cat": "",
-      "prompt": "“A man in a black suit, with a face 100% identical to the reference image, sits in the cockpit of a large, maneuverable robot. The robot's structure is cool and futuristic, with intricate metal limbs and mechanisms. The interior of an old factory has a workhorse atmosphere, with slight light coming through the roof. No cranes above or overhead equipment is visible. The focus is sharp on the robot and the man piloting it. The medium-range camera angle shows the robot in its entirety. The style is photorealistic, with ultra-detailed detail and dynamic lighting.”\n",
+      "prompt": "Stylish portrait of the character sitting position inside a white 3D [LinkedIn] frame cutout with the logo, in professional suit. Dark background, cinematic lighting, ultra-realistic. [LinkedIn] id : 'Adi Brill' with blue checkmark. Caption should be \"Create with prompts #promptwall !\"",
       "images": [
-        "images/imp_0556.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0556.jpg"
       ]
     },
     {
@@ -7399,9 +7414,9 @@
       "id": "new",
       "title": "Man In Suit",
       "cat": "",
-      "prompt": "“A man in a black suit, with a face 100% identical to the reference image, sits in the cockpit of a large, maneuverable robot. The robot's structure is cool and futuristic, with intricate metal limbs and mechanisms. The interior of an old factory has a workhorse atmosphere, with slight light coming through the roof. No cranes above or overhead equipment is visible. The focus is sharp on the robot and the man piloting it. The medium-range camera angle shows the robot in its entirety. The style is photorealistic, with ultra-detailed detail and dynamic lighting.”\n",
+      "prompt": "Create a high-definition cinematic image of a vintage royal scene. The main character sits comfortably in an elegant gilded armchair in a lavish royal interior. {DOG_BREED} sits alertly beside the chair, matching the overall composition and perspective of the original reference image. Use the uploaded image as the sole source of the character's identity: preserve the face, age, skin tone, hairline, and proportions exactly as they are, without any changes to facial features or anatomy, regardless of gender or age. The character wears a finely tailored, double-breasted suit in a dark wool blend with a subtle striped pattern, white socks, and polished black leather shoes with laces, fitting naturally to their body shape. Soft ambient lighting, warm classic color gradations with shades of brown, muted gold, and gray, sophisticated cinematic tones, polished contrast, and fine film grain. Realistic 8K picture quality.\nMake sure to replace {DOG_BREED} with the user's answer before submitting.\nNegative comments: distortions, facial changes, extra limbs, malfunctions, unrealistic anatomy, inappropriate clothing, incorrect costume details, marks, low resolution, blurred face.",
       "images": [
-        "images/imp_0558.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0558.jpg"
       ]
     },
     {
@@ -7419,9 +7434,9 @@
       "id": "new",
       "title": "Man In Suit",
       "cat": "",
-      "prompt": "“A man in a black suit, with a face 100% identical to the reference image, sits in the cockpit of a large, maneuverable robot. The robot's structure is cool and futuristic, with intricate metal limbs and mechanisms. The interior of an old factory has a workhorse atmosphere, with slight light coming through the roof. No cranes above or overhead equipment is visible. The focus is sharp on the robot and the man piloting it. The medium-range camera angle shows the robot in its entirety. The style is photorealistic, with ultra-detailed detail and dynamic lighting.”\n",
+      "prompt": "Create a high-definition cinematic image of a vintage royal scene. The main character sits comfortably in an elegant gilded armchair in a lavish royal interior. {DOG_BREED} sits alertly beside the chair, matching the overall composition and perspective of the original reference image. Use the uploaded image as the sole source of the character's identity: preserve the face, age, skin tone, hairline, and proportions exactly as they are, without any changes to facial features or anatomy, regardless of gender or age. The character wears a finely tailored, double-breasted suit in a dark wool blend with a subtle striped pattern, white socks, and polished black leather shoes with laces, fitting naturally to their body shape. Soft ambient lighting, warm classic color gradations with shades of brown, muted gold, and gray, sophisticated cinematic tones, polished contrast, and fine film grain. Realistic 8K picture quality.\nMake sure to replace {DOG_BREED} with the user's answer before submitting.\nNegative comments: distortions, facial changes, extra limbs, malfunctions, unrealistic anatomy, inappropriate clothing, incorrect costume details, marks, low resolution, blurred face.",
       "images": [
-        "images/imp_0560.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0560.jpg"
       ]
     },
     {
@@ -7439,9 +7454,9 @@
       "id": "new",
       "title": "Man Laughing With",
       "cat": "",
-      "prompt": "A surreal Renaissance-style oil painting of a [banquet]scene, featuring two curly-haired men in Roman togas sitting at a table full of food, laughing with their tongues out, with a large [a man with an oversized papier-mâché bird head]in the center, also sticking out his tongue. Classical lighting, textured brushstrokes, dramatic shadows, rich details, humorous and ironic composition, Baroque style.ratio[2:3]",
+      "prompt": "Create A dynamic, candid-style photo in a dimly lit, rustic tavern. A character beasd on the picture I attached here, with facial features and hairstyle faithfully preserved from the input image, is laughing exuberantly, arm around a companion, raising a beer mug. Beside him, a highly realistic Darth Vader in full costume with red glowing eyes that looks evil also holds a beer mug. A strong star-like lens flare emanates from Vader's helmet, The background and scene takes place in an Irish bar with happy people around drinking a lot.",
       "images": [
-        "images/imp_0562.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0562.jpg"
       ]
     },
     {
@@ -7479,9 +7494,9 @@
       "id": "new",
       "title": "Man Making Funny",
       "cat": "",
-      "prompt": "A selfie taken by the person in the attached image with the Pale Man on the set of Pan's Labyrinth. The Pale Man is played by a towering actor in detailed, terrifying prosthetic makeup, with the hands held up showing the eyes in the palms. The person is making a scared face for the camera. A makeup artist is doing a final touch-up on the intricate details of the Pale Man’s face. The set is dark and detailed.",
+      "prompt": "Create a Ultra-realistic vertical photo, 9:16, of me based on the picture I attached here with \"The Cheetos Tiger.\" Both of us  making exaggerated and funny faces. There are Cheetos cookies and packages of various flavors flying through the air, 3D effects, a fun and messy photo effect, The body, from the waist up, is captured in playful movements. In a bright, white and gray living room, high camera angle. Extreme fisheye distortion. Realistic lighting and cinematic realism, characters blended in stylized realism. (I'm wearing black Ray-Ban sunglasses, a thick gray Reebok sweatshirt with a black print.",
       "images": [
-        "images/imp_0566.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0566.jpg"
       ]
     },
     {
@@ -7499,9 +7514,9 @@
       "id": "new",
       "title": "Man Meditating On",
       "cat": "",
-      "prompt": "A young man sitting casually at a modern café counter in Wellington, New Zealand, smiling while holding a glass of iced flat white coffee. On the table in front of him stands a small 3D chibi character version of the same man. The chibi has super-deformed proportions with a large head, big expressive eyes, and simplified facial features. It has a smooth 3D plastic or clay-like texture with soft studio lighting and a clear shadow on the table surface. The chibi is holding a tiny glass of coffee. The café features warm pendant lights with a rimu wood interior and minimalist Scandinavian design elements. The scene combines cinematic realistic human photography with stylized 3D chibi character, using shallow depth of field in vertical composition.",
+      "prompt": "Create a photorealistic image of a man (use the provided image for accurate facial features) wearing all-white clothing—a linen shirt and light trousers—floating serenely in the lotus position on the calm surface of a body of water. The man's eyes are closed, in a state of meditation and tranquility, with a serene and balanced expression. Below him, a gentle circular ripple forms in the water, as if the air around him is gently touching the surface. The perfect reflection of the man and the sky appears in the body of water. The setting is natural and harmonious, with gentle mountains in the background and a golden late-afternoon sky dotted with scattered clouds illuminated by the soft light of sunset. The atmosphere should convey peace, balance, and spirituality. Warm natural lighting, photographic realism, sharp focus, and balanced composition.",
       "images": [
-        "images/imp_0568.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0568.jpg"
       ]
     },
     {
@@ -7509,9 +7524,9 @@
       "id": "new",
       "title": "Man Painted With",
       "cat": "",
-      "prompt": "Vibrant expressive portrait of a man looking upwards with wonder, wearing oversized bright orange-red glasses (glass light colour full shade). The face is sketched in dynamic black strokes on a textured newspaper background, enriched with splashes of vivid blue and orange paint. The composition blends realism and abstract expressionism, evoking innocence, hope, and creativity. Take full face of the attached picture.",
+      "prompt": "Use the uploaded photo as the facial reference without altering their facial features or appearance. The background is clean white, filled with dynamic and expressive watercolor paint splashes in blue, orange, and purple spreading organically across the scene. In the foreground, a realistic human hand holds a paintbrush as if actively painting the sleeve of the man’s hoodie, creating the illusion that the portrait is being painted at that exact moment. The visual style combines detailed ink line art with loose watercolor textures, including paint drips, fine splatters, soft pigment diffusion, watercolor blooming effects, and natural paper texture. The image features strong contrast, an expressive and dynamic artistic look, a clear hand-painted aesthetic, centered composition, soft lighting, high level of detail, and a modern illustration style.",
       "images": [
-        "images/imp_0569.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0569.jpg"
       ]
     },
     {
@@ -7619,9 +7634,9 @@
       "id": "new",
       "title": "Man Posing At",
       "cat": "",
-      "prompt": "Create a cheerful (man/woman — same face as in the reference image) taking a selfie at home with the Teenage Mutant Ninja Turtles — Leonardo, Michelangelo, Donatello, and Raphael — all smiling and posing happily around them. The scene is bright and friendly, lit by natural daylight streaming through a window behind them.\nCharacter details: Keep the exact face, expression, and features from the reference photo — skin texture, eye color, hairstyle, and facial hair (if present). Match lighting direction and tone from the original photo for a natural composite. Outfit: blue t-shirt (or similar casual wear).\nCamera setup: wide-angle selfie perspective, arm extended holding the phone camera close to the lens. Lens: 24 mm full-frame, aperture f/2.8, shallow depth of field for cinematic focus on faces.\nLighting & atmosphere: soft daylight diffused through the window; warm highlights and subtle shadows; pleasant indoor contrast.\nTurtle details: realistic-cartoon hybrid style, expressive faces, detailed textures of skin, shells, and gear. Balanced composition — the character centered, surrounded by the four Turtles leaning in.\nColor grading: cinematic tone with warm midtones, vibrant greens and oranges, natural skin tones, gentle film grain.\nPost-processing: ultra-realistic textures, depth-mapped lighting, lens reflections, and subtle chromatic aberration for authenticity.\nMood: joyful, nostalgic, friendly — like a spontaneous selfie among friends.",
+      "prompt": "Create a high-quality, editorial-style photoshoot of the same man as in the reference, at a luxurious swimming pool during daytime. The scene has bright sunshine and perfectly clear weather. He is alone, posing classically and confidently for the camera as if for a fashion magazine cover. The lighting is minimal yet sophisticated, highlighting his face and outfit with soft, natural contrast. He is wearing a fashionable, well-tailored outfit suited for a summer poolside editorial, stylish, modern, and elegant. The pool water glimmers under the sunlight, with reflections adding depth and vibrance. The background is clean, with no people around, emphasizing the premium, cinematic aesthetic and polished magazine look.",
       "images": [
-        "images/imp_0580.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0580.jpg"
       ]
     },
     {
@@ -7649,9 +7664,9 @@
       "id": "new",
       "title": "Man Posing With",
       "cat": "",
-      "prompt": "Create a cheerful (man/woman — same face as in the reference image) taking a selfie at home with the Teenage Mutant Ninja Turtles — Leonardo, Michelangelo, Donatello, and Raphael — all smiling and posing happily around them. The scene is bright and friendly, lit by natural daylight streaming through a window behind them.\nCharacter details: Keep the exact face, expression, and features from the reference photo — skin texture, eye color, hairstyle, and facial hair (if present). Match lighting direction and tone from the original photo for a natural composite. Outfit: blue t-shirt (or similar casual wear).\nCamera setup: wide-angle selfie perspective, arm extended holding the phone camera close to the lens. Lens: 24 mm full-frame, aperture f/2.8, shallow depth of field for cinematic focus on faces.\nLighting & atmosphere: soft daylight diffused through the window; warm highlights and subtle shadows; pleasant indoor contrast.\nTurtle details: realistic-cartoon hybrid style, expressive faces, detailed textures of skin, shells, and gear. Balanced composition — the character centered, surrounded by the four Turtles leaning in.\nColor grading: cinematic tone with warm midtones, vibrant greens and oranges, natural skin tones, gentle film grain.\nPost-processing: ultra-realistic textures, depth-mapped lighting, lens reflections, and subtle chromatic aberration for authenticity.\nMood: joyful, nostalgic, friendly — like a spontaneous selfie among friends.",
+      "prompt": "Highly detailed close-up photograph, ultra-photorealistic, 8K resolution shot on a digital camera with 100mm f/2.8 studio portrait lens. Impeccable sharpness, extreme details, cinematic depth of field, consistent neutral color grading with uniform tones across the entire image, no color shifts. He is dressed in black wide-leg trousers and a black t-shirt He wears a voluminous black fur coat, fashionable sunglasses, and black leather gloves His hairstyle matches exactly the reference from the app: clean, medium-shortlength, neatly styled, smooth and controlled, natural volume, no curls, no wet efect Strictly maintain the facial structure and overall appearance from the attached first photo without distortion. The man stands next to a black G-Wagon, striking a stylish pose; one of his hands is slightly raised, while the other holds the edge of the fur coat, creating a confident and fashionable mood. The background is a snow-covered landscape with tall trees, snowflakes gently falling to the ground, adding a subtle cinematic atmosphere. Natural lighting with balanced exposure and consistent color temperature, emphasizing the outfit and winter environment. Focus on facial details, realistic skin texture, and the textures of the clothing",
       "images": [
-        "images/imp_0583.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0583.jpg"
       ]
     },
     {
@@ -15699,7 +15714,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776061010133,
+  "_publishedAt": 1776061748391,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
