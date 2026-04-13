@@ -453,7 +453,15 @@
     "added_imp_0595",
     "added_imp_0598",
     "added_imp_0600",
-    "added_imp_0601"
+    "added_imp_0601",
+    "added_imp_0602",
+    "added_imp_0605",
+    "added_imp_0608",
+    "added_imp_0606",
+    "added_imp_0610",
+    "added_imp_0611",
+    "added_imp_0612",
+    "added_imp_0615"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -7874,9 +7882,9 @@
       "id": "new",
       "title": "Man Taking Selfie",
       "cat": "",
-      "prompt": "\"I'm taking a selfie with Dorothy and the Tin Man on the set of The Yellow Brick Road. We are on a full-scale outdoor set. The Tin Man is getting a oil-can touch-up from a crew member, and I'm capturing the moment. In the far background, a large green structure representing the Emerald City is visible (inspired by image_11.png).\"",
+      "prompt": "Create a cheerful (man/woman — same face as in the reference image) taking a selfie at home with the Teenage Mutant Ninja Turtles — Leonardo, Michelangelo, Donatello, and Raphael — all smiling and posing happily around them. The scene is bright and friendly, lit by natural daylight streaming through a window behind them.\nCharacter details: Keep the exact face, expression, and features from the reference photo — skin texture, eye color, hairstyle, and facial hair (if present). Match lighting direction and tone from the original photo for a natural composite. Outfit: blue t-shirt (or similar casual wear).\nCamera setup: wide-angle selfie perspective, arm extended holding the phone camera close to the lens. Lens: 24 mm full-frame, aperture f/2.8, shallow depth of field for cinematic focus on faces.\nLighting & atmosphere: soft daylight diffused through the window; warm highlights and subtle shadows; pleasant indoor contrast.\nTurtle details: realistic-cartoon hybrid style, expressive faces, detailed textures of skin, shells, and gear. Balanced composition — the character centered, surrounded by the four Turtles leaning in.\nColor grading: cinematic tone with warm midtones, vibrant greens and oranges, natural skin tones, gentle film grain.\nPost-processing: ultra-realistic textures, depth-mapped lighting, lens reflections, and subtle chromatic aberration for authenticity.\nMood: joyful, nostalgic, friendly — like a spontaneous selfie among friends.",
       "images": [
-        "images/imp_0603.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0603.jpg"
       ]
     },
     {
@@ -7884,9 +7892,9 @@
       "id": "new",
       "title": "Man Taking Selfie",
       "cat": "",
-      "prompt": "\"I'm taking a selfie with Dorothy and the Tin Man on the set of The Yellow Brick Road. We are on a full-scale outdoor set. The Tin Man is getting a oil-can touch-up from a crew member, and I'm capturing the moment. In the far background, a large green structure representing the Emerald City is visible (inspired by image_11.png).\"",
+      "prompt": "Uploaded Image taking a selfie in a well-lit living room. He is wearing a turquoise t-shirt and holding the camera slightly above eye level, creating a wide-angle effect. Surrounding him are several colorful cartoon and anime characters from different universes, drawn in distinct animation styles... They crowd around him enthusiastically, interacting with each other and reacting to the selfie. The characters are integrated convincingly into the real space, casting soft shadows on the furniture. Background shows a bright window with cream curtains and soft indoor lighting. The overall vibe is fun, chaotic, and energetic.",
       "images": [
-        "images/imp_0604.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0604.jpg"
       ]
     },
     {
@@ -7974,9 +7982,9 @@
       "id": "new",
       "title": "Man Walking With",
       "cat": "",
-      "prompt": "{\"Scene_Details\":{\"Setting\":\"Vast English landscape with rolling golden-brown hills.\",\"Atmosphere\":\"Moody and atmospheric with dark, brooding clouds.\"},\"Character_Details\":{\"Description\":\"Lone man walking through the landscape.\",\"Clothing\":\"Long, dark medieval-style cloak or hooded coat.\"},\"Stylistic_Instructions\":{\"Tone\":\"Cinematic, dramatic, solitary.\",\"Color_Grade\":\"Earthy ochres and cool greys.\"}}",
+      "prompt": "Create a hyper-realistic movie poster inspired by The Black Phone 2, based on the uploaded reference photo of me. The composition should look like a professional cinematic poster - dramatic, moody, and detailed.\n\nI am walking down a suburban sidewalk wearing a white T-shirt with a black home telephone print, gray jeans, and white Air Force Ones. The scene features elegant villas, green lawns, and a dark flat-black 1986 Chevrolet van beside me. The driver, seen through the open window, is the masked villain from The Black Phone, wearing the same mask, hat, and glasses as in the original movie - make his likeness exact and cinematic.\n\nUse dynamic poster lighting - contrast of golden-hour sunlight and dark cinematic tones. The focus is on both faces, my realistic likeness and the villain’s accurate masked face.\n\nAdd a movie-poster layout:\n- Title: “THE BLACK PHONE II” (in large bold cinematic font, positioned at the bottom or center).\n- Subtitle: “A Blumhouse Production” or similar tagline at the top.\n- Maintain realistic shadows, color grading, and film-style composition.\n\nThe result should look like an official The Black Phone 2 poster where I am the main character.",
       "images": [
-        "images/imp_0613.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0613.jpg"
       ]
     },
     {
@@ -7984,9 +7992,9 @@
       "id": "new",
       "title": "Man Wearing Sunglasses",
       "cat": "",
-      "prompt": " A wildflower blooming in the desert.\n\nGoogle Gemini Nano Banana Pro and Grok Imagine.\n\nPROMPT : \n​Ultra-detailed cinematic close-up photograph, ultra-photorealistic, 8K resolution, shot on a medium format Hasselblad H6D-400c with a 100mm f/2.8 portrait lens. Impeccable sharpness combined with shallow cinematic depth of field, film-grade lighting, subtle grain, blockbuster photography look.\n​Black, wet, curly hair up to the chin. Strictly preserve from the attached first photo, without distortion. Wearing black rectangular sunglasses and a black oversized voluminous blazer.\n​Extreme close-up shot from a dramatic low angle looking upward, distorted perspective. In the foreground, a hand holding a delicate white wildflower slightly out of focus. The man is sitting inside a Belarus 82.1 tractor completely covered in carpet, leaning out of the side window. The tractor is parked in a vast, lifeless desert landscape stretching into the horizon.\n​Heavy cloudy sky, storm-like atmosphere, soft diffused light breaking through clouds, muted color palette, desaturated cinematic tones, subtle teal-and-orange grading.\n​Strong emphasis on facial micro-details, pores, skin texture, moisture on hair strands, wrinkles in the blazer fabric, carpet fibers on the tractor body. Volumetric light rays, atmospheric haze, editorial fashion photography mixed with epic movie still, IMAX-style realism, dramatic mood, hyper-detailed, ultra-sharp, 8K. ",
+      "prompt": "Create Ultra-realistic black-and-white cinematic close-up portrait of the character from the reference image. Maintain 100% fidelity to the original facial structure, proportions, gender, hair texture, and skin detail.\nSide-lit with high-contrast key lighting (Rembrandt-style), emphasizing cheekbones, jawline, and beard contours while casting deep, dramatic shadows across half the face.\nHe wears round, reflective sunglasses that mirror a towering nighttime city skyline in crisp detail - reflections shaped by wide-angle perspective and faint chromatic distortion from the glass curvature.\nThe subject’s gaze is directed confidently upward, creating a feeling of ambition and mystery against a minimalist black background that isolates him completely.\nFine-grain film simulation (Ilford Delta 3200 look), with micro-contrast on pores, beard texture, and light falloff from the key source.\nAtmosphere: moody, cinematic, and intimate, blending optical depth, lens bloom, and subtle film halation on highlight edges.\nCaptured with a Sony A7R IV + Zeiss 85mm f/1.4 lens, aperture wide open for shallow depth of field and soft background gradient.\nRendered in 4K ultra-detail, preserving every strand of hair and skin texture with lifelike tonality and grayscale dynamic range.",
       "images": [
-        "images/imp_0614.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0614.jpg"
       ]
     },
     {
@@ -15724,7 +15732,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776062121772,
+  "_publishedAt": 1776062639389,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
