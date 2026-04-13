@@ -421,7 +421,14 @@
     "added_imp_0535",
     "added_imp_0536",
     "added_imp_0538",
-    "added_imp_0540"
+    "added_imp_0540",
+    "added_imp_0542",
+    "added_imp_0545",
+    "added_imp_0546",
+    "added_imp_0550",
+    "added_imp_0549",
+    "added_imp_0551",
+    "added_imp_0554"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -7282,9 +7289,9 @@
       "id": "new",
       "title": "Man In Black",
       "cat": "",
-      "prompt": "Vibrant expressive portrait of a man looking upwards with wonder, wearing oversized bright orange-red glasses (glass light colour full shade). The face is sketched in dynamic black strokes on a textured newspaper background, enriched with splashes of vivid blue and orange paint. The composition blends realism and abstract expressionism, evoking innocence, hope, and creativity. Take full face of the attached picture.",
+      "prompt": "Use the person in the uploaded image. Do not change or alter the face, bone structure, gender, age, skin tone, hairstyle, or identity. Keep the same hair length and style exactly as in the uploaded photo.\nPose: Head slightly tilted downward, eyes looking directly into the camera, creating a strong, mysterious expression.\nClothing: A black high-neck sweater. One hand casually touching or lightly adjusting the collar (not covering the mouth). The face remains mostly visible, only a subtle gesture with the hand near the collar.\nLighting & Background: Warm, soft studio lighting with a gentle shadow on one side of the face. Dark red background, plain, uniform, no patterns. Slight background blur, delicate film grain, and soft vignette on the edges.\nFraming: Chest-up portrait, subject centered in the frame.\nRendering Style: Photorealistic, high resolution, natural realistic skin texture, no beautification, preserve real facial details and identity.",
       "images": [
-        "images/imp_0547.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0547.jpg"
       ]
     },
     {
@@ -7332,9 +7339,9 @@
       "id": "new",
       "title": "Man In Green",
       "cat": "",
-      "prompt": "Create a Ultra-realistic cinematic portrait based on my attached photo: a confident character sits ON TOP of large 3D neon letters spelling “ADI BRILL”. Make all of the writing clear and easy to read.\nHe wears a blue suit, black Button-down shirt and blue tie, dark boots, and sunglasses with a yellow lenses; he sits on a stole\nhands clasped, elbows on knees, legs apart. Night scene with a dark background, orange neon glow behind and under him, strong rim light, volumetric smoke, concert lights, subtle lens flares. Wet reflective floor showing clear orange reflections of the neon and the man. Warm orange/yellow tones mixed with deep green shadows; moody, slightly post-apocalyptic atmosphere. Sharp details, glossy textures, realistic materials, proper physical shadows, no distortion.",
+      "prompt": "Use the uploaded reference image as a strict facial identity source.\n\n\nCRITICAL IDENTITY LOCK:\nThe face must match the reference image exactly - identical facial structure, proportions, eyes, lips, nose, skin tone, texture, hairstyle, and micro-details.\nNo changes, no reinterpretation, no age shifts, no added or removed facial hair.\nA perfect 1:1 identity reproduction is mandatory.\nThis applies whether the character is interpreted as male or female.\n\n\nCREATE an ultra-realistic full-body portrait based on the uploaded reference image (maintain the original face exactly as-is).\n\n\nThe character stands against a monochromatic emerald-green studio backdrop with a soft gradient and faint diagonal geometric grid patterns.\n\n\nBody & Outfit:\n• Maintain the same overall body posture as in the uploaded reference image.\n• Outfit: minimalist deep-green tailored suit, crisp white shirt, and green New Balance trainers with the white “N” logo.\n• Shoes must appear clean, modern, and performance-styled.\n\n\nLighting:\nDirectional lighting from the left side creates clean, engineered shadow lines across the suit and background.\nSubtle rim-light separation on the right side for studio-grade clarity.\n\n\nComposition & Style:\n• Ultra-realistic textures in skin, fabric, shadows, and footwear.\n• Professional studio photography style.\n• High dynamic range with smooth tonal transitions.\n• Balanced color palette dominated by emerald and deep-green shades.\n• Clean, refined, performance-precision aesthetic.\n\n\nBranding (top-right corner):\n• White New Balance logotype\n• Tagline: “CRAFTED TO MOVE”\n• Script line below: “Fearlessly Independent”\n\n\nFinal aesthetic:\nMinimalist, high-end fashion campaign look with precision lighting, structured geometry, and a clean emerald studio environment.",
       "images": [
-        "images/imp_0552.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0552.jpg"
       ]
     },
     {
@@ -7342,9 +7349,9 @@
       "id": "new",
       "title": "Man In Hoodie",
       "cat": "",
-      "prompt": "Use the uploaded photo as the facial reference without altering their facial features or appearance. The background is clean white, filled with dynamic and expressive watercolor paint splashes in blue, orange, and purple spreading organically across the scene. In the foreground, a realistic human hand holds a paintbrush as if actively painting the sleeve of the man’s hoodie, creating the illusion that the portrait is being painted at that exact moment. The visual style combines detailed ink line art with loose watercolor textures, including paint drips, fine splatters, soft pigment diffusion, watercolor blooming effects, and natural paper texture. The image features strong contrast, an expressive and dynamic artistic look, a clear hand-painted aesthetic, centered composition, soft lighting, high level of detail, and a modern illustration style.",
+      "prompt": "Keep the exact face and skin tone with sharp features wearing a black hoodie sits in a rustic wooden booth, staring intensely at the camera with one hand supporting his chin and the other reaching forward as if performing telekinesis. Dozens of playing cards float around him in mid-air, captured in dynamic slow motion with subtle motion blur. The background features vertical wooden panels and a framed photo of a man playing cards",
       "images": [
-        "images/imp_0553.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0553.jpg"
       ]
     },
     {
@@ -7362,9 +7369,9 @@
       "id": "new",
       "title": "Man In School",
       "cat": "",
-      "prompt": "Vibrant expressive portrait of a man looking upwards with wonder, wearing oversized bright orange-red glasses (glass light colour full shade). The face is sketched in dynamic black strokes on a textured newspaper background, enriched with splashes of vivid blue and orange paint. The composition blends realism and abstract expressionism, evoking innocence, hope, and creativity. Take full face of the attached picture.",
+      "prompt": "Create a Polaroid-style vintage photo. Keep my real face unchanged, natural, and realistic. The photo should have a slight blur and a consistent light source, like a flash spreading in a dark room. Replace the background with a simple white curtain. Show me wearing a magical school uniform (Harry Potter style) and holding a wand, smiling cutely. Next to me, add a white snowy owl sitting closely, as if it is my magical companion. The photo should look like a cute, magical snapshot",
       "images": [
-        "images/imp_0555.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0555.jpg"
       ]
     },
     {
@@ -15692,7 +15699,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776060509732,
+  "_publishedAt": 1776061010133,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
