@@ -443,7 +443,17 @@
     "added_imp_0578",
     "added_imp_0579",
     "added_imp_0581",
-    "added_imp_0582"
+    "added_imp_0582",
+    "added_imp_0587",
+    "added_imp_0588",
+    "added_imp_0589",
+    "added_imp_0591",
+    "added_imp_0592",
+    "added_imp_0596",
+    "added_imp_0595",
+    "added_imp_0598",
+    "added_imp_0600",
+    "added_imp_0601"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -7694,9 +7704,9 @@
       "id": "new",
       "title": "Man Sitting In",
       "cat": "",
-      "prompt": " A wildflower blooming in the desert.\n\nGoogle Gemini Nano Banana Pro and Grok Imagine.\n\nPROMPT : \n​Ultra-detailed cinematic close-up photograph, ultra-photorealistic, 8K resolution, shot on a medium format Hasselblad H6D-400c with a 100mm f/2.8 portrait lens. Impeccable sharpness combined with shallow cinematic depth of field, film-grade lighting, subtle grain, blockbuster photography look.\n​Black, wet, curly hair up to the chin. Strictly preserve from the attached first photo, without distortion. Wearing black rectangular sunglasses and a black oversized voluminous blazer.\n​Extreme close-up shot from a dramatic low angle looking upward, distorted perspective. In the foreground, a hand holding a delicate white wildflower slightly out of focus. The man is sitting inside a Belarus 82.1 tractor completely covered in carpet, leaning out of the side window. The tractor is parked in a vast, lifeless desert landscape stretching into the horizon.\n​Heavy cloudy sky, storm-like atmosphere, soft diffused light breaking through clouds, muted color palette, desaturated cinematic tones, subtle teal-and-orange grading.\n​Strong emphasis on facial micro-details, pores, skin texture, moisture on hair strands, wrinkles in the blazer fabric, carpet fibers on the tractor body. Volumetric light rays, atmospheric haze, editorial fashion photography mixed with epic movie still, IMAX-style realism, dramatic mood, hyper-detailed, ultra-sharp, 8K. ",
+      "prompt": "Create a cinematic portrait of the same person as in the uploaded image, sitting confidently in an elegant vintage pantene green armchair inside a luxurious 70s-inspired lounge. He is wearing a perfectly tailored dark blue three-piece suit, and brown dress shoes. A glass of whiskey rests in his right hand. His expression is thoughtful and composed, exuding power and mystery. The lighting is moody and cinematic, with a mix of cool blue and warm golden tones. On a dark wooden table beside him are a whiskey bottle, an PPK/s Stainless Walnut, illuminated by soft neon reflections. The atmosphere feels like a stylish movie scene or luxury magazine cover — elegant, atlhetic, sheereded, muscular, masculine, and modern-retro. The background is softly blurred, emphasizing the subject’s face and fashion.\n\nUse the attached image and maintain 100% face consistency.",
       "images": [
-        "images/imp_0586.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0586.jpg"
       ]
     },
     {
@@ -7734,9 +7744,9 @@
       "id": "new",
       "title": "Man Sitting In",
       "cat": "",
-      "prompt": " A wildflower blooming in the desert.\n\nGoogle Gemini Nano Banana Pro and Grok Imagine.\n\nPROMPT : \n​Ultra-detailed cinematic close-up photograph, ultra-photorealistic, 8K resolution, shot on a medium format Hasselblad H6D-400c with a 100mm f/2.8 portrait lens. Impeccable sharpness combined with shallow cinematic depth of field, film-grade lighting, subtle grain, blockbuster photography look.\n​Black, wet, curly hair up to the chin. Strictly preserve from the attached first photo, without distortion. Wearing black rectangular sunglasses and a black oversized voluminous blazer.\n​Extreme close-up shot from a dramatic low angle looking upward, distorted perspective. In the foreground, a hand holding a delicate white wildflower slightly out of focus. The man is sitting inside a Belarus 82.1 tractor completely covered in carpet, leaning out of the side window. The tractor is parked in a vast, lifeless desert landscape stretching into the horizon.\n​Heavy cloudy sky, storm-like atmosphere, soft diffused light breaking through clouds, muted color palette, desaturated cinematic tones, subtle teal-and-orange grading.\n​Strong emphasis on facial micro-details, pores, skin texture, moisture on hair strands, wrinkles in the blazer fabric, carpet fibers on the tractor body. Volumetric light rays, atmospheric haze, editorial fashion photography mixed with epic movie still, IMAX-style realism, dramatic mood, hyper-detailed, ultra-sharp, 8K. ",
+      "prompt": "Prompt: {\n\"image_prompt\": {\n\"subject\": \"Top-down aerial view of a man (from the uploaded photo) wearing a quilted mountain parka, sitting in pristine snow holding a thermal coffee mug. Double exposure effect: His jacket and body silhouette showcase rolling alpine hills at dawn, wildflower meadows, mountain goats on rocky outcrops, and a winding mountain trail leading to a sunrise peak.\",\n\"composition\": \"Vertical 9:16. 60% Top: Subject with layered mountain landscape double exposure creating depth. 40% Bottom: Untouched powder snow with gentle terrain contours for clean calendar text area.\",\n\"lighting\": \"Warm sunrise alpenglow illuminating the silhouette from within, soft diffused daylight on surrounding snow, atmospheric haze adding depth layers.\",\n\"text_overlay\": {\n\"title\": \"2026 CALENDAR\",\n\"style\": \"Text embossed into weathered stone or carved into alpine wood, high-contrast typography with mountain texture.\",\n\"grid_data\": \"3x4 grid with subtle topographic line accents.\"\n},\n\"quality\": \"8K, Photorealistic, Razor-sharp detail on face and typography, Cinematic with enhanced atmospheric perspective.\"\n}\n}",
       "images": [
-        "images/imp_0590.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0590.jpg"
       ]
     },
     {
@@ -7764,9 +7774,9 @@
       "id": "new",
       "title": "Man Sitting On",
       "cat": "",
-      "prompt": "Replace the man's face with the exact face from my uploaded photo. Use my real facial features 100% precisely: same eyes, nose, mouth, jawline, skin tone, hair color and hairstyle as in my photo. Do not change or stylize my face at all.\n\nThe person (me, with my real face from the photo) is a young man sitting in the open door of a white convertible car on a chaotic New York city street. He’s wearing a white slightly torn button-down shirt, black ripped jeans, and white sneakers. He’s holding a black pistol aimed forward with a serious, determined expression. Dynamic low-angle shot. Background: explosions, thick smoke, fire, shattered glass, abandoned cars, sparks flying near the car wheels. Warm dramatic lighting from the explosions, highly realistic action movie style, photorealistic, ultra-detailed, cinematic.",
+      "prompt": "Create a Ultra-realistic cinematic portrait based on my attached photo: a confident character sits ON TOP of large 3D neon letters spelling “ADI BRILL”. Make all of the writing clear and easy to read.\nHe wears a blue suit, black Button-down shirt and blue tie, dark boots, and sunglasses with a yellow lenses; he sits on a stole\nhands clasped, elbows on knees, legs apart. Night scene with a dark background, orange neon glow behind and under him, strong rim light, volumetric smoke, concert lights, subtle lens flares. Wet reflective floor showing clear orange reflections of the neon and the man. Warm orange/yellow tones mixed with deep green shadows; moody, slightly post-apocalyptic atmosphere. Sharp details, glossy textures, realistic materials, proper physical shadows, no distortion.",
       "images": [
-        "images/imp_0593.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0593.jpg"
       ]
     },
     {
@@ -7774,9 +7784,9 @@
       "id": "new",
       "title": "Man Sitting On",
       "cat": "",
-      "prompt": "Replace the man's face with the exact face from my uploaded photo. Use my real facial features 100% precisely: same eyes, nose, mouth, jawline, skin tone, hair color and hairstyle as in my photo. Do not change or stylize my face at all.\n\nThe person (me, with my real face from the photo) is a young man sitting in the open door of a white convertible car on a chaotic New York city street. He’s wearing a white slightly torn button-down shirt, black ripped jeans, and white sneakers. He’s holding a black pistol aimed forward with a serious, determined expression. Dynamic low-angle shot. Background: explosions, thick smoke, fire, shattered glass, abandoned cars, sparks flying near the car wheels. Warm dramatic lighting from the explosions, highly realistic action movie style, photorealistic, ultra-detailed, cinematic.",
+      "prompt": "Depict me (use my face exactly as in the uploaded photo) sitting on a flying drone with my legs fully dangling, laughing and looking at the camera while holding a steaming cup of hot coffee. Keep my hairstyle, glasses, and facial details 100% accurate. Outfit: beige overcoat layered over a black knit sweater, slim-fit trousers, and sleek shoes.\n\nThe drone hovers over an Indonesian urban cityscape with tall buildings and roads below.\n\nUltra-realistic style, soft natural lighting, DSLR quality, highly detailed textures on skin, hair, clothing, and the coffee cup.\n\nCinematic aerial perspective, vertical 9:16 composition, dynamic yet balanced framing, emphasizing the drone and the joyful coffee moment with freely hanging legs",
       "images": [
-        "images/imp_0594.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0594.jpg"
       ]
     },
     {
@@ -7804,9 +7814,9 @@
       "id": "new",
       "title": "Man Sitting Ruined",
       "cat": "",
-      "prompt": " A wildflower blooming in the desert.\n\nGoogle Gemini Nano Banana Pro and Grok Imagine.\n\nPROMPT : \n​Ultra-detailed cinematic close-up photograph, ultra-photorealistic, 8K resolution, shot on a medium format Hasselblad H6D-400c with a 100mm f/2.8 portrait lens. Impeccable sharpness combined with shallow cinematic depth of field, film-grade lighting, subtle grain, blockbuster photography look.\n​Black, wet, curly hair up to the chin. Strictly preserve from the attached first photo, without distortion. Wearing black rectangular sunglasses and a black oversized voluminous blazer.\n​Extreme close-up shot from a dramatic low angle looking upward, distorted perspective. In the foreground, a hand holding a delicate white wildflower slightly out of focus. The man is sitting inside a Belarus 82.1 tractor completely covered in carpet, leaning out of the side window. The tractor is parked in a vast, lifeless desert landscape stretching into the horizon.\n​Heavy cloudy sky, storm-like atmosphere, soft diffused light breaking through clouds, muted color palette, desaturated cinematic tones, subtle teal-and-orange grading.\n​Strong emphasis on facial micro-details, pores, skin texture, moisture on hair strands, wrinkles in the blazer fabric, carpet fibers on the tractor body. Volumetric light rays, atmospheric haze, editorial fashion photography mixed with epic movie still, IMAX-style realism, dramatic mood, hyper-detailed, ultra-sharp, 8K. ",
+      "prompt": "Create an ultra-realistic cinematic editorial portrait, 9:16 ratio.\nLow-angle shot, camera near ground level, looking up at the character (male or female, keeping the same face from the reference image) sitting and leaning against the massive, ruined head of a destroyed Gundam.\nThe character wears a weathered post-apocalypse editorial outfit - a layered dark utility jacket with torn edges, tactical belts, a faded undershirt, and worn combat boots.\n\nTheir expression conveys resilience and quiet defiance, gazing slightly past the camera as dust particles float through shafts of late-afternoon light.\nThe environment around them is filled with metal debris, rusted armor plates, and faint embers or drifting ash hinting at a recent battle.\n\nLighting is cinematic and naturalistic, a soft golden rim light contrasting with the cold, desaturated ruins.\n\nRendered in hyper-detailed textures, photorealistic skin, natural color grading, and editorial magazine quality.\n\nA fine layer of atmospheric haze enhances the depth and realism, emphasizing the scale between the human figure and the colossal Gundam remains.",
       "images": [
-        "images/imp_0597.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0597.jpg"
       ]
     },
     {
@@ -15714,7 +15724,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776061748391,
+  "_publishedAt": 1776062121772,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
