@@ -461,7 +461,30 @@
     "added_imp_0610",
     "added_imp_0611",
     "added_imp_0612",
-    "added_imp_0615"
+    "added_imp_0615",
+    "added_imp_0618",
+    "added_imp_0620",
+    "added_imp_0622",
+    "added_imp_0621",
+    "added_imp_0624",
+    "added_imp_0627",
+    "added_imp_0628",
+    "added_imp_0631",
+    "added_imp_0633",
+    "added_imp_0634",
+    "added_imp_0639",
+    "added_imp_0637",
+    "added_imp_0640",
+    "added_imp_0642",
+    "added_imp_0641",
+    "added_imp_0643",
+    "added_imp_0653",
+    "added_imp_0645",
+    "added_imp_0647",
+    "added_imp_0652",
+    "added_imp_0648",
+    "added_imp_0649",
+    "added_imp_0651"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -654,7 +677,8 @@
     "added_imp_0459": "/images/custom_added_imp_0459.jpg",
     "added_imp_0458": "/images/custom_added_imp_0458.jpg",
     "added_imp_0463": "/images/custom_added_imp_0463.jpg",
-    "added_imp_0482": "/images/custom_added_imp_0482.jpg"
+    "added_imp_0482": "/images/custom_added_imp_0482.jpg",
+    "added_imp_0623": "/images/custom_added_imp_0623.jpg"
   },
   "added": [
     {
@@ -8042,9 +8066,9 @@
       "id": "new",
       "title": "Man With Red",
       "cat": "",
-      "prompt": "Vibrant expressive portrait of a man looking upwards with wonder, wearing oversized bright orange-red glasses (glass light colour full shade). The face is sketched in dynamic black strokes on a textured newspaper background, enriched with splashes of vivid blue and orange paint. The composition blends realism and abstract expressionism, evoking innocence, hope, and creativity. Take full face of the attached picture.",
+      "prompt": "Create Ultra-realistic cinematic portrait based precisely on the uploaded reference image (male or female) - keeping 100% fidelity to the subject’s original facial structure, gender, hairstyle, and proportions, with no facial modification.\n\nDepict the subject seated gracefully in a grand, ornate armchair - dark mahogany or deep leather texture, highlighted with subtle gloss reflections.\nThe subject wears a dark trench coat layered over a tailored suit, exuding elegance and control.\nAdd distinctive round sunglasses, capturing reflections of cascading digital code across the lenses to enhance the enigmatic aura.\n\nPose: composed and intentional - the subject sits upright, centered in the frame, extending both hands forward.\nIn one palm rests a red pill, in the other a blue pill - symbolizing the pivotal choice of truth versus illusion.\n\nThe background is a dimly lit, sterile room bathed in subtle cyan and green tones, visually dominated by cascading streams of green digital code flowing vertically down the walls, as if projected or suspended in holographic space.\nThis creates the sensation of being inside a simulated digital reality - immersive, cold, and infinite.\n\nLighting: dramatic, cinematic chiaroscuro setup with controlled top-light and rim highlights accentuating facial contours, coat textures, and the reflective surfaces of the pills.\nColor palette: deep blacks, emerald greens, and faint silver accents, balancing mystery and modernity.\nAdd realistic reflections, lens bloom, and volumetric light shafts to emphasize atmosphere and digital depth.\n\nCamera setup: medium-wide composition with 35mm lens perspective, cinematic framing from eye level, soft background depth for isolation of the subject.\nRender in 8K ultra-realistic detail, preserving every texture - from fabric grain to subtle reflections in the glasses.\nTone: philosophical, suspenseful, iconic, evoking the tension of a life-altering choice.",
       "images": [
-        "images/imp_0619.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0619.jpg"
       ]
     },
     {
@@ -8084,7 +8108,7 @@
       "cat": "",
       "prompt": "A highly detailed 8K haute couture editorial portrait of a man. (Use face as published photo) The image shows a male figure with Superman-like features, wearing a dark suit with a red symbol and striking a confident pose, against a background with reddish tones and lighting effects.\n\nThe image composition is centered and symmetrical, with the main subject positioned in the center, creating a sense of balance and strength. The background features a color gradient ranging from dark red at the bottom and sides, transitioning to lighter, brighter tones in the center, which highlights the figure. The man's pose is with crossed arms and a direct gaze, demonstrating confidence and determination. The interplay of light and shadow adds depth and volume, highlighting the contours and texture of the suit.\n\nThe main subject is a man with defined facial features, dark hair combed back, and eyes that appear to glow red. He wears a dark suit with a red symbol resembling Superman's traditional \"S,\" but with a different design. The suit appears to be made of a textured material, suggesting strength and flexibility. The man's facial expression is serious and focused, with an intense gaze that conveys a sense of power and determination.\n\nThe image appears to be a digital illustration or image edit, heavily influenced by comic book and superhero art styles. The technical execution demonstrates skill in the use of light and shadow effects, which emphasize the forms and create a sense of volume and depth. The color palette is dominated by dark and reddish tones, contributing to the atmosphere of mystery and power. The suit design and the symbol on the chest suggest an alternative interpretation or a different version of the iconic Superman character.\n\nThe setting is undefined, with a background featuring a gradient of reddish colors that blends with light and shine effects, creating a dramatic and mysterious atmosphere. The lighting is directional, with the brightness concentrated in the center, highlighting the figure and creating a striking visual contrast. The use of dark colors and dramatic lighting reinforces the sense of power and mystery, while the man's confident pose suggests he is ready to face any challenge. The subject of the sung image, the face, the painted face, the identity, the skin tone, or the real body remain unchanged. Maintain 100% of the facial features from the attached photo. DO NOT CHANGE THE FACE.",
       "images": [
-        "images/imp_0623.jpg"
+        "/images/custom_added_imp_0623_img0.jpg"
       ]
     },
     {
@@ -8102,9 +8126,9 @@
       "id": "new",
       "title": "Man Working On",
       "cat": "",
-      "prompt": "Vibrant expressive portrait of a man looking upwards with wonder, wearing oversized bright orange-red glasses (glass light colour full shade). The face is sketched in dynamic black strokes on a textured newspaper background, enriched with splashes of vivid blue and orange paint. The composition blends realism and abstract expressionism, evoking innocence, hope, and creativity. Take full face of the attached picture.",
+      "prompt": "Using the uploaded image, keep the exact real face, hairstyle, and skin tone unchanged. Fashion photography of a stylish male model sitting casually on a soft textured beanbag chair, working on a MacBook Pro 2025. He is wearing oversized off-white wide-leg trousers, a textured oversized grey sweater, and clean chunky white sneakers. He holds a A glass of red wine  in one hand and the laptop rests naturally on his lap. Background: smooth neutral wall with soft natural sunlight casting diagonal shadows. Lighting: bright, minimalist, editorial, muted neutral tones with a modern marketing aesthetic. Camera angle: straight-on eye-level shot with slight upward perspective. Lens: 50mm prime, close-up editorial framing. Clean minimalist composition, high-resolution detail.",
       "images": [
-        "images/imp_0625.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0625.jpg"
       ]
     },
     {
@@ -8152,9 +8176,9 @@
       "id": "new",
       "title": "Masterpiece Featuring Photoreali…",
       "cat": "",
-      "prompt": "kind-hearted children's book, featuring joyful characters, watercolor, warm colors, by greg rutkowski, iridescent accents, ray tracing, product lighting, sharp, smooth, masterpiece",
+      "prompt": "{\n  \"scene_description\": \"A vibrant, mixed-media masterpiece featuring a photorealistic version of the person...\",\n  \"illustration_layer\": { \"style\": \"Thick-line Pop Art cartoons\" }\n}",
       "images": [
-        "images/imp_0630.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0630.jpg"
       ]
     },
     {
@@ -15732,7 +15756,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776062639389,
+  "_publishedAt": 1776063326476,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
