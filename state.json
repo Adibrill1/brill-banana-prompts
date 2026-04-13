@@ -371,7 +371,28 @@
     "added_imp_0453",
     "added_imp_0455",
     "added_imp_0456",
-    "added_imp_0460"
+    "added_imp_0460",
+    "added_imp_0464",
+    "added_imp_0466",
+    "added_imp_0467",
+    "added_imp_0472",
+    "added_imp_0470",
+    "added_imp_0469",
+    "added_imp_0475",
+    "added_imp_0473",
+    "added_imp_0471",
+    "added_imp_0468",
+    "added_imp_0476",
+    "added_imp_0477",
+    "added_imp_0479",
+    "added_imp_0480",
+    "added_imp_0478",
+    "added_imp_0483",
+    "added_imp_0485",
+    "added_imp_0486",
+    "added_imp_0488",
+    "added_imp_0489",
+    "added_imp_0491"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -563,7 +584,8 @@
     "added_imp_0423": "/images/custom_added_imp_0423.jpg",
     "added_imp_0459": "/images/custom_added_imp_0459.jpg",
     "added_imp_0458": "/images/custom_added_imp_0458.jpg",
-    "added_imp_0463": "/images/custom_added_imp_0463.jpg"
+    "added_imp_0463": "/images/custom_added_imp_0463.jpg",
+    "added_imp_0482": "/images/custom_added_imp_0482.jpg"
   },
   "added": [
     {
@@ -6411,9 +6433,9 @@
       "id": "new",
       "title": "Image Posing In",
       "cat": "",
-      "prompt": "{ \"Objective\": \"Create a 3x3 Instagram-style grid of low-quality smartphone photos featuring the same attractive, beautiful, sensual, athletic Asian woman enjoying Disneyland, clearly showing iconic park elements, rides, and mascots.\", \"Composition\": { \"layout\": \"3x3 grid\", \"aspect_ratio\": \"1:1\", \"framing\": \"each square captures a different candid Disneyland moment, forming a cohesive Instagram profile\" }, \"Subject\": { \"type\": \"young Asian woman\", \"appearance\": { \"beauty\": \"extremely attractive, natural beauty\", \"body\": \"athletic, fit physique\", \"skin\": \"natural texture, no glossiness, no smoothing\", \"makeup\": \"light, natural\", \"expression\": \"joyful, playful, candid\" }, \"consistency\": \"same woman across all 9 photos\" }, \"Wardrobe\": { \"style\": \"Disneyland themed outfits\", \"details\": [ \"Mickey/Minnie ears headband\", \"Disney-themed crop tops or hoodies\", \"casual shorts or skirts\", \"sneakers\", \"colorful, playful  clothing\" ] }, \"Scenes\": [ { \"position\": \"top left\", \"location\": \"roller coaster ride\", \"pose\": \"mid-ride candid, wind-blown hair, excited expression\" }, { \"position\": \"top center\", \"location\": \"Disney castle\", \"pose\": \"standing in front, casual pose, slightly off-center\" }, { \"position\": \"top right\", \"location\": \"posing with mascot (e.g., Mickey Mouse)\", \"pose\": \"playful pose, smiling\" }, { \"position\": \"middle left\", \"location\": \"theme park street with shops\", \"pose\": \"walking candid, holding snack or drink\" }, { \"position\": \"middle center\", \"location\": \"carousel or classic ride\", \"pose\": \"sitting on ride, laughing naturally\" }, { \"position\": \"middle right\", \"location\": \"posing with another mascot (e.g., princess or character)\", \"pose\": \"fun interaction, slightly posed but natural\" }, { \"position\": \"bottom left\", \"location\": \"nighttime Disneyland lights\", \"pose\": \"slightly blurred candid shot, glowing lights behind\" }, { \"position\": \"bottom center\", \"location\": \"food stand\", \"pose\": \"holding Disneyland snack (e.g., churro), casual smile\" }, { \"position\": \"bottom right\", \"location\": \"wide park view with rides\", \"pose\": \"back facing  camera or looking away, scenic shot\" } ], \"Photography\": {\n\"camera\": \"smartphone\",\n\"style\": \"Instagram casual travel\",\n\"quality\": \"intentionally low quality\",\n\"lighting\": \"natural sunlight, uneven exposure\",\n\"imperfections\": [\n\"motion blur\",\n\"grain/noise\",\n\"slight overexposure or underexposure\",\n\"lens distortion\",\n\"unbalanced framing\" ], \"effects\": [ \"no beauty filter\", \"no skin retouching\", \"authentic dynamic range\", \"slightly inconsistent color tones\" ] }, \"Mood\": \"fun, energetic, playful, theme park adventure\", \"Rendering\": { \"style_keywords\": [ \"instagram grid\", \"disneyland photos\", \"theme park lifestyle\", \"smartphone photography\", \"candid moments\", \"low quality aesthetic\" ], \"realism\": \"highly realistic smartphone look\", \"detail_level\": \"natural imperfect detail\", \"aspect_ratio\": \"--ar 1:1\" }, \"Response_Format\": { \"type\": \"image_generation_prompt_json\", \"editable_fields\": [ \"scenes\", \"wardrobe\", \"lighting\", \"poses\" ] }\n}",
+      "prompt": "A commercial grade photograph of [uploaed reference image] posing inside a high-end museum exhibition space...",
       "images": [
-        "images/imp_0465.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0465.jpg"
       ]
     },
     {
@@ -6581,9 +6603,9 @@
       "id": "new",
       "title": "Influencer Daily Routine",
       "cat": "",
-      "prompt": "A photorealistic 12-panel grid collage layout (3 columns x 4 rows) depicting the 24-hour daily routine of a trendy 24-year-old Japanese beauty influencer named Mina. Aspect ratio 3:4. Each panel is a high-quality snapshot with a specific handwritten-style cute Japanese text caption overlay. Cinematic, highly detailed, photorealistic, lifestyle photography. The Japanese text should be legible, cute handwriting style, placed naturally in each frame.",
+      "prompt": "A photorealistic 12-panel grid collage layout (3 columns x 4 rows) depicting the 24-hour daily routine of a trendy 24-year-old  beauty influencer named \"ADI\". Aspect ratio 3:4. Each panel is a high-quality snapshot. Cinematic, highly detailed, photorealistic, lifestyle photography.",
       "images": [
-        "images/imp_0482.jpg"
+        "/images/custom_added_imp_0482_img0.jpg"
       ]
     },
     {
@@ -6661,9 +6683,9 @@
       "id": "new",
       "title": "Ink Illustration With",
       "cat": "",
-      "prompt": "Create an ultra-realistic premium chocolate spread jar packaging mockup featuring the reference person inside the label scene, with dynamic brand typography styling and full breakfast table visibility.\n\nIdentity Preservation (Strict Identity Lock):\n- Preserve the exact facial identity, proportions, hairstyle, and expression from the reference photo.\n- Do not alter facial structure or change the subject into any other known person.\n- Maintain 100% identical appearance as in the reference image.\n\nSubject:\n- Fully photorealistic human (no illustration look).\n- Subject occupies no more than 55% of label height.\n- Placed slightly deeper in the scene to allow full table visibility.\n- Naturally seated at breakfast table holding toast with chocolate spread.\n- Warm natural expression consistent with real-life breakfast moment.\n- Real skin texture, natural pores, accurate lighting response.\n\nScene:\n- Entire breakfast table must be fully visible. No food items cropped. Clear foreground table edge. Balanced spatial depth between subject and table.\n- Food items: Plate with chocolate toast, open chocolate spread jar, fruit bowl, glass of orange juice, additional breakfast elements.\n- Background: Soft warm kitchen environment integrated into label with realistic depth.\n\nProduct:\n- Premium chocolate spread jar mockup.\n- Rich glossy chocolate texture inside jar, realistic glass reflections, subtle studio highlight rolloff, natural grounded shadow under jar.\n\nLabel Design:\n- Brand name: Brill.ai\n- Automatically style first character of Brill.ai in black (#000000) and all remaining characters in red (#E10600).\n- Bold rounded sans-serif similar to premium chocolate spread branding, heavy weight, tight commercial kerning, straight horizontal baseline.\n- Subtle micro ink texture, matte label with slight light absorption, apply subtle horizontal distortion following jar curvature. Text must appear printed on the label, not floating above it.\n- Brand name placed in upper third of label, behind the subject, never overlap the face or head, fully readable despite depth layering.\n\nArt Direction:\n- Premium supermarket-ready packaging photography.\n- Warm, authentic, inviting breakfast branding.\n- Soft natural morning tones with controlled highlights.\n- Indistinguishable from real commercial product photo.\n\nCamera & Lighting:\n- Commercial product photography, 50mm full-frame equivalent, f/8, slightly tilted dynamic presentation angle.\n- Wide enough framing to include entire table scene inside label.\n- Soft studio lighting mimicking natural morning light, front-side soft key light, soft controlled shadows, no harsh contrast.\n- Jar fully sharp, subtle background blur.\n\nNegative Constraints: No original Nutella logo, no floating text, no cartoon style, no text overlapping face, no watermark.",
+      "prompt": "Transform this image into an expressive ink illustration with watercolor wash.Use loose, irregular ink lines with visible gestures, slightly shaky and full of energy.Apply color with soft, diluted strokes that go beyond the outlines.Characters should be stylized and very expressive, with a hand-drawn, imperfect charm.Leave some areas uncolored or barely suggested.Ratio[3:2]",
       "images": [
-        "images/imp_0490.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0490.jpg"
       ]
     },
     {
@@ -15641,7 +15663,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1775921027569,
+  "_publishedAt": 1776059305763,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
