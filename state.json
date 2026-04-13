@@ -407,7 +407,21 @@
     "added_imp_0510",
     "added_imp_0514",
     "added_imp_0517",
-    "added_imp_0520"
+    "added_imp_0520",
+    "added_imp_0522",
+    "added_imp_0523",
+    "added_imp_0524",
+    "added_imp_0526",
+    "added_imp_0527",
+    "added_imp_0528",
+    "added_imp_0529",
+    "added_imp_0530",
+    "added_imp_0533",
+    "added_imp_0532",
+    "added_imp_0535",
+    "added_imp_0536",
+    "added_imp_0538",
+    "added_imp_0540"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -7048,9 +7062,9 @@
       "id": "new",
       "title": "Man Holding Futuristic",
       "cat": "",
-      "prompt": "Create an ultra realistic photograph based on the picture I attached here without changing your facial features with a 100% faithful and accurate face, No mask on the face,\nThe scene shows the character dressed as version of \"punk Deadpool\" walking in serious and determined expression in lit Times Square at night.\nIs costume is tight, in dark red and black, with detailed texture of technological fabric and turquoise web black lines covering the torso and arms. On the chest is the Deadpool symbol in turquoise black. Over the man's costume the traditional wears a vest with torn sleeves. There are pointed metal rivet details, spikes, and band patches and anarchist symbols on the vest.\nOn feet wear high top red old skool tennis vans.\nOn his wrists she wears leather punk munhequeiras with pointed metal spikes.\nIn one hand he holds the traditional Deadpool mask, It has at the top of the mask a sharp,\nOn the other hand he carries a guitar, with a dark blue strap, customized inspired by the Dean ML model, accompanied by rock band and anarchist symbols.\nScenario:\nA busy urban street at night, similar to Times Square, New York. The scene is saturated with vibrant neon lights from skyscrapers and digital billboards (outdoors) with advertisements. The street is wet, heavily reflecting the purple, magenta and cyan lights. There is a yellow taxi in the middle of the street. The sky is dark and hazy, adding dramatic contrast to the bright lights.\nAmerican shot, street perspective, high contrast, depth of field, bokeh, night photography, subtle cyberpunk-futuristic style, ultra realistic cinematic photography ultra detailed quality 8k\nWell-marked clothing texture",
+      "prompt": "Create a hyper-realistic photograph of a futuristic transparent digital ID card held in hand. The card displays a portrait of the person from the uploaded reference image - keeping the EXACT SAME FACE, identity, proportions, skin texture, expression, and all natural facial details with zero changes or reinterpretation. No gender or age is altered - the portrait must match the reference image exactly. The ID card has a masculine tech aesthetic featuring electric blue, silver, graphite, and subtle neon-glow accents. Use cinematic lighting, natural photographic shadows, and a shallow 85mm depth-of-field for realism. Design elements on the card: A sharp glowing ring framing the portrait. Name: [Adi Brill] Title: [Digital Content Creator] A stats section with clean futuristic tech icons showing: 296K Followers 3 Years Experience [AI Specialist] Transparent glass-tech card design with sleek UI lines, micro-circuits, scanning graphics, and a refined modern masculine vibe. The person is styled in a black–gray futuristic suit, tailored and realistic, matching the overall aesthetic. Render the entire scene as a realistic cinematic photograph - crisp lighting, natural reflections, flawless clarity, no cartoon look, no distortions, and no alteration of the face from the reference image. IMPORTANT: The portrait on the ID must use the EXACT SAME FACE from the uploaded reference photo - same structure, same micro-details, same realism - perfectly integrated into the futuristic card.",
       "images": [
-        "images/imp_0525.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0525.jpg"
       ]
     },
     {
@@ -7188,9 +7202,9 @@
       "id": "new",
       "title": "Man Hugging Alf",
       "cat": "",
-      "prompt": "Take a photo of me, without changing my features, taken in the water, showing a man and a dolphin.\nThe man:\n​100% identical to the attached image and with wet hair, he is looking at the camera.\n​He is wearing what appears to be a life jacket and beach trunks.\n​He is hugging the dolphin, or with his head against his.\nThe Dolphin:\n​The dolphin's head is very close to the man, floating on the surface of the water. He appears to be looking directly at the camera or the man\nYour skin is smooth and gray.\n​The Environment:\n​The water is incredibly clear and a brilliant turquoise, suggesting a tropical or Caribbean environment.\n​The background, slightly out of focus, shows some vegetation and structures (perhaps piers or buildings) on land.\n​The day is sunny, and the intense light contributes to the brightness and clarity of the scene.\n​The photo conveys a feeling of joy, adventure and close interaction with marine life in a paradisiacal environment.",
+      "prompt": "Create a hyper-realistic portrait using the uploaded photo keeping the real face, facial structure, skin tone, and expression of the person exactly the same.\n\nThe scene shows the person kneeling in the middle of a cozy vintage living room, wearing a denim jacket, white shirt and jeans.\n\nHe's smiling naturally while hugging two iconic characters:\n\nALF on left: a hairy full-bodied alien puppet with brown/orange hair, large muzzle, expressive eyes and large padded feet. Very detailed and realistic texture of skin and hands.\n\nE.T. on the right: a full-body, extremely detailed and realistic model with wrinkled skin, long neck, large expressive eyes, and a glowing fingertip on her right hand.\n\nBoth characters are close to the person as if they are posing for a warm family photo.\n\nThe background is a cozy 80s-style living room: vintage floral sofa, wooden furniture, bookshelves filled with ceramic vases, indoor plants, soft natural window light, warm tones, and a nostalgic homely atmosphere.\n\nUltra-detailed leather, fabric textures, realistic lighting, volumetric smoothness, 8K resolution, cinematic photography, perfect color gradation.",
       "images": [
-        "images/imp_0539.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0539.jpg"
       ]
     },
     {
@@ -15678,7 +15692,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776059996048,
+  "_publishedAt": 1776060509732,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
