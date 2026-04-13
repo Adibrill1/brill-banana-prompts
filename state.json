@@ -403,7 +403,10 @@
     "added_imp_0504",
     "added_imp_0505",
     "added_imp_0506",
-    "added_imp_0508"
+    "added_imp_0508",
+    "added_imp_0510",
+    "added_imp_0514",
+    "added_imp_0517"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -6902,11 +6905,11 @@
     {
       "key": "added_imp_0511",
       "id": "new",
-      "title": "Make This Object",
+      "title": "Transparent",
       "cat": "",
-      "prompt": "Design a geometric portrait of a [object] head in the style of contemporary paper craft collage. Use multiple overlapping paper textures and shadow effects to build dimensional depth. Focus on botanical-inspired color palettes with matte finish aesthetics. The composition should feature bold, angular cuts that form the object's distinctive characteristics while maintaining facial symmetry. Set against a minimalist backdrop with subtle gradient. The final piece should evoke the craftsmanship of museum-quality paper installations. Square format, 1080x1080 pixels.",
+      "prompt": "Make this object transparent.",
       "images": [
-        "images/imp_0511.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0511.jpg"
       ]
     },
     {
@@ -6984,9 +6987,9 @@
       "id": "new",
       "title": "Man Dodging Splashing",
       "cat": "",
-      "prompt": "Vibrant expressive portrait of a man looking upwards with wonder, wearing oversized bright orange-red glasses (glass light colour full shade). The face is sketched in dynamic black strokes on a textured newspaper background, enriched with splashes of vivid blue and orange paint. The composition blends realism and abstract expressionism, evoking innocence, hope, and creativity. Take full face of the attached picture.",
+      "prompt": "Surreal comedic scene inside a modern kitchen: a young man bends backward in an extreme dodge pose, acrobatic and exaggerated, with a kettle mid-air above him splashing hot tea in a dramatic frozen moment. A woman in the background extends her arm as if she accidentally threw the kettle, expression shocked and energetic.Dynamic action freeze-frame, dramatic liquid splash, wide-angle lens distortion, sharp details, realistic lighting, cinematic color grading, humorous storytelling, high-resolution digital art.",
       "images": [
-        "images/imp_0519.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0519.jpg"
       ]
     },
     {
@@ -15674,7 +15677,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776059705360,
+  "_publishedAt": 1776059940813,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
