@@ -392,7 +392,18 @@
     "added_imp_0486",
     "added_imp_0488",
     "added_imp_0489",
-    "added_imp_0491"
+    "added_imp_0491",
+    "added_imp_0496",
+    "added_imp_0498",
+    "added_imp_0499",
+    "added_imp_0500",
+    "added_imp_0497",
+    "added_imp_0502",
+    "added_imp_0503",
+    "added_imp_0504",
+    "added_imp_0505",
+    "added_imp_0506",
+    "added_imp_0508"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -6705,7 +6716,7 @@
       "cat": "",
       "prompt": "Create an ultra-realistic macro close-up of an Israeli gold coin. The coin features a side profile portrait of [the attached figure], engraved in detail with a gilded metal texture, fine scratches, and wear marks that give it an authentic look. Surrounding the portrait is a prominent Hebrew inscription: at the top are the words '[State of Israel] and 'Adi Brill]', and at the bottom is the value '[50] New Shekels'. The menorah symbol appears in small print at the top. The background is pitch black. Dramatic side lighting emphasizes the prominence and depth of the engraving.",
       "images": [
-        "images/imp_0492.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0492.jpg"
       ]
     },
     {
@@ -6733,9 +6744,9 @@
       "id": "new",
       "title": "Kinetic Sand Kiwi",
       "cat": "",
-      "prompt": "A kinetic sand sculpture of a kiwi bird, fine-grain texture and flowing edges, caught mid-collapse, ambient natural lighting, soft tones of warm beige, soft terracotta, and pale sand, photographed in a windswept coastal blue setting.",
+      "prompt": "A kinetic sand sculpture of a person, fine-grain texture and flowing edges, caught mid-collapse, ambient natural lighting, soft tones of warm beige, soft terracotta, and pale sand, photographed in a windswept coastal blue setting.",
       "images": [
-        "images/imp_0495.jpg"
+        "/images/custom_added_imp_0495_img0.jpg"
       ]
     },
     {
@@ -6755,7 +6766,7 @@
       "cat": "",
       "prompt": "create a hyper-realistic composite image of a LABUBU-style collectible figure inside a branded 3D toy box.\n\n Use the exact real human face from the uploaded photo, preserving all lighting, texture, and expression exactly as captured. Do not modify or stylize the face in any way.\n The figure has fluffy fur in [FUR COLOR].\n Maintain strong visual contrast between the hyper-realistic human face and the illustrated LABUBU-style body.\n The body holds a small yellow rubber duck.\n The ears are fully covered by the fur.\n The box design follows these specifications precisely:\n\n   White vertical 3D toy box with visible perspective.\n   Transparent front window showing the full figure.\n   Top section: “LABUBU!” in bold white on dark blue strip, white circle with “01” top-right.\n   Bottom section: purple banner with \"ADI BRILL\" in uppercase black letters.\n   Inside background gradient orange → blue.\n   Small round sticker bottom-left with text “Brill.ai.”\n The box rests on a clean light wooden table with soft natural shadows.\n Cinematic studio lighting, subtle reflections, and professional product photography look.\n The final image should look like a premium, physical collectible photographed in a real studio, highlighting the contrast between realism and fantasy.",
       "images": [
-        "images/imp_0497.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0497.jpg"
       ]
     },
     {
@@ -15663,7 +15674,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776059305763,
+  "_publishedAt": 1776059705360,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
