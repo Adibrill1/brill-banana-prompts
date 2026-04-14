@@ -497,7 +497,18 @@
     "added_imp_0672",
     "added_imp_0676",
     "added_imp_0677",
-    "added_imp_0680"
+    "added_imp_0680",
+    "dup_1776162464985",
+    "added_imp_0683",
+    "added_imp_0685",
+    "added_imp_0687",
+    "added_imp_0691",
+    "added_imp_0693",
+    "added_imp_0695",
+    "added_imp_0698",
+    "added_imp_0700",
+    "added_imp_0702",
+    "added_imp_0703"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -8709,9 +8720,9 @@
       "id": "new",
       "title": "Naïve Anime Illustration",
       "cat": "",
-      "prompt": "A layout page from a vintage Japanese RPG strategy guide book, printed on aged parchment paper with visible texture, stains, and faint arcane symbol watermarks. The dominant style is 'sketchy ink and watercolor wash illustration.' The main subject on the left is a female anime mage with blonde bob hair, wearing a hooded indigo robe and leather gear, holding an open glowing grimoire, casting swirling fire magic. Her art style shows visible pencil lines and watercolor texture bleeding. To her left is a vertical column of retro RPG UI stats bars (HP/MP/ATK/DEF) designed as glass tubes in ornate metal frames, and below that a branching skill tree diagram with circular icons and glowing connecting lines. The top right features a contrasting 16-bit isometric pixel art sprite of the same character. The bottom right contains small, low-resolution gameplay screenshots of turn-based combat. Dense Japanese serif typography text describing the character and skills fills the remaining spaces. The overall aesthetic is historical fantasy, mixed media graphic design, official art book quality. --ar 2:3 --v 6.0 --stylize 250",
+      "prompt": "Transform this image into a Naïve Anime-style illustration, inspired by shows like Shin Chan. Use thick, uneven outlines with a crayon or marker-like texture.Use flat, bright colors — reds, greens, yellows, blues — with no gradients or complex shading.The background should be minimal and childlike, as if drawn by a kid.The final result should look like a frame from a humorous Japanese children's cartoon, with a deliberately rough, innocent, and highly expressive aesthetic.Ratio[2:3]",
       "images": [
-        "images/imp_0682.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0682.jpg"
       ]
     },
     {
@@ -8729,9 +8740,9 @@
       "id": "new",
       "title": "Object Transformed Into",
       "cat": "",
-      "prompt": "{\"Objective\":\"Transform the user's descriptive scene prompt into a structured JSON format...\",\"Persona_Details\":{\"Character\":\"Man wearing glasses\",\"Clothing\":{\"Outerwear\":\"Orange winter clothing\",\"Footwear\":\"Dark red and black ice boots\"},\"Behavior\":\"Ice fishing with a research-focused approach\"},\"Environment_Details\":{\"Setting\":\"Frozen ice pond\",\"Tent_Color\":\"Light brown\",\"Sky\":\"White, cloudy, heavy atmosphere\",\"Scene_Composition\":{\"Subject_Position\":\"Slightly right of center\",\"Purpose\":\"Emphasize ice landscape\"}},\"Objects_and_Props\":{\"Ice_Fishing_Equipment\":[\"Black front cover\",\"Fishing tools\"],\"Observed_Items\":[\"Small objects placed near the tent entrance\"]},\"Technical_Attributes\":{\"Style\":\"High-resolution realism\",\"Resolution\":\"4K\",\"Detail_Emphasis\":[\"Folds of tent fabric\",\"Texture of the ice\"]}}",
+      "prompt": "Transform the original object into a human-like character, strictly preserving the object’s shape, materials, and distinctive design features.\nAdd proportionate human arms and legs, and expressive eyes with a slight cartoonish charm - eyes full of personality and a warm, friendly smile.\nPlace the character in a visually coherent environment that reflects the object’s personality and function, enhanced with dramatic cinematic light and shadow interplay that emphasizes texture and depth.\n\nRender in a hyper-realistic visual style with sharp, detailed surfaces, vivid yet natural colors, and soft atmospheric lighting.\nApply subtle post-processing polish, realistic reflections, and refined material realism to achieve a balanced look - both amusing and surprising, yet faithful to the visual essence of the original object.\n\nCamera: full-frame DSLR simulation, 50mm lens, shallow depth of field.\nLighting: cinematic soft key with natural rim highlights.\nMood: whimsical realism - playful but physically grounded.",
       "images": [
-        "images/imp_0684.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0684.jpg"
       ]
     },
     {
@@ -8769,9 +8780,9 @@
       "id": "new",
       "title": "Oil Painting Of",
       "cat": "",
-      "prompt": "Create Transform the provided image into a hand-painted, cinematic illustration in the style of classic movie posters from the 1980s and early 1990s. The artwork should appear as a realistic acrylic or oil painting, featuring expressive brushstroke textures, dramatic highlights, and warm, contrasting tones that evoke nostalgia and epic storytelling.\n\nDesired characteristics:\n– Art style inspired by legendary poster artists such as Drew Struzan and Richard Amsel.\n– Vibrant colors, dynamic accent lighting, and cinematic shadows that add depth and emotion.\n– The character should display confidence and charisma, striking a cinematic pose reminiscent of a timeless movie protagonist - equally suited to any gender.\n– The background should incorporate narrative elements - such as ancient relics, sleek sports cars, glowing cityscapes at night, magical energy, starry skies, or dynamic lighting effects - depending on the theme.\n– Artistic typography may be subtly implied in the composition, but with no legible text.\n\nThe final result should feel like an authentic poster for an adventure, fantasy, or comedy film from the 1980s, blending realistic painting, heroic yet inclusive composition, and nostalgic vintage cinema atmosphere.\n\nVisual inspirations:\nBack to the Future, Indiana Jones and the Temple of Doom, The Goonies, E.T. the Extra-Terrestrial, Blade Runner, The Thing, Harry Potter, Return of the Jedi.",
+      "prompt": "Create a cinematic scene in a modern art gallery using the uploaded image - keep every facial feature exactly as in the photo. On a dark blue wall hangs a large oil painting of the same person, realistic and expressive with textured brushstrokes and muted colors.",
       "images": [
-        "images/imp_0688.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0688.jpg"
       ]
     },
     {
@@ -8829,9 +8840,9 @@
       "id": "new",
       "title": "Person's Face Framed",
       "cat": "",
-      "prompt": "Create an ultra-realistic premium chocolate spread jar packaging mockup featuring the reference person inside the label scene, with dynamic brand typography styling and full breakfast table visibility.\n\nIdentity Preservation (Strict Identity Lock):\n- Preserve the exact facial identity, proportions, hairstyle, and expression from the reference photo.\n- Do not alter facial structure or change the subject into any other known person.\n- Maintain 100% identical appearance as in the reference image.\n\nSubject:\n- Fully photorealistic human (no illustration look).\n- Subject occupies no more than 55% of label height.\n- Placed slightly deeper in the scene to allow full table visibility.\n- Naturally seated at breakfast table holding toast with chocolate spread.\n- Warm natural expression consistent with real-life breakfast moment.\n- Real skin texture, natural pores, accurate lighting response.\n\nScene:\n- Entire breakfast table must be fully visible. No food items cropped. Clear foreground table edge. Balanced spatial depth between subject and table.\n- Food items: Plate with chocolate toast, open chocolate spread jar, fruit bowl, glass of orange juice, additional breakfast elements.\n- Background: Soft warm kitchen environment integrated into label with realistic depth.\n\nProduct:\n- Premium chocolate spread jar mockup.\n- Rich glossy chocolate texture inside jar, realistic glass reflections, subtle studio highlight rolloff, natural grounded shadow under jar.\n\nLabel Design:\n- Brand name: Brill.ai\n- Automatically style first character of Brill.ai in black (#000000) and all remaining characters in red (#E10600).\n- Bold rounded sans-serif similar to premium chocolate spread branding, heavy weight, tight commercial kerning, straight horizontal baseline.\n- Subtle micro ink texture, matte label with slight light absorption, apply subtle horizontal distortion following jar curvature. Text must appear printed on the label, not floating above it.\n- Brand name placed in upper third of label, behind the subject, never overlap the face or head, fully readable despite depth layering.\n\nArt Direction:\n- Premium supermarket-ready packaging photography.\n- Warm, authentic, inviting breakfast branding.\n- Soft natural morning tones with controlled highlights.\n- Indistinguishable from real commercial product photo.\n\nCamera & Lighting:\n- Commercial product photography, 50mm full-frame equivalent, f/8, slightly tilted dynamic presentation angle.\n- Wide enough framing to include entire table scene inside label.\n- Soft studio lighting mimicking natural morning light, front-side soft key light, soft controlled shadows, no harsh contrast.\n- Jar fully sharp, subtle background blur.\n\nNegative Constraints: No original Nutella logo, no floating text, no cartoon style, no text overlapping face, no watermark.",
+      "prompt": "Extreme close-up portrait of the person as uploaded with exactly same face and hairstyle, the person's face framed by a vibrant red textured hood. Dramatic cinematic lighting creates sharp shadows across the person's features, with fine strands of hair blowing across her face. High-fashion editorial photography style, hyper-realistic, sharp focus, intense gaze, and a high-contrast color palette of deep reds and blacks.",
       "images": [
-        "images/imp_0694.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0694.jpg"
       ]
     },
     {
@@ -15273,6 +15284,16 @@
       "images": [
         "/images/custom_added_1775758572651_img0.jpg"
       ]
+    },
+    {
+      "key": "dup_1776162464985",
+      "id": 242,
+      "title": "Naïve Anime Illustration (עותק)",
+      "cat": "",
+      "prompt": "A layout page from a vintage Japanese RPG strategy guide book, printed on aged parchment paper with visible texture, stains, and faint arcane symbol watermarks. The dominant style is 'sketchy ink and watercolor wash illustration.' The main subject on the left is a female anime mage with blonde bob hair, wearing a hooded indigo robe and leather gear, holding an open glowing grimoire, casting swirling fire magic. Her art style shows visible pencil lines and watercolor texture bleeding. To her left is a vertical column of retro RPG UI stats bars (HP/MP/ATK/DEF) designed as glass tubes in ornate metal frames, and below that a branching skill tree diagram with circular icons and glowing connecting lines. The top right features a contrasting 16-bit isometric pixel art sprite of the same character. The bottom right contains small, low-resolution gameplay screenshots of turn-based combat. Dense Japanese serif typography text describing the character and skills fills the remaining spaces. The overall aesthetic is historical fantasy, mixed media graphic design, official art book quality. --ar 2:3 --v 6.0 --stylize 250",
+      "images": [
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0682.jpg"
+      ]
     }
   ],
   "order": [
@@ -15769,7 +15790,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776162417154,
+  "_publishedAt": 1776162956040,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
