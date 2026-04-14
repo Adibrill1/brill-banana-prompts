@@ -525,7 +525,20 @@
     "added_imp_0719",
     "dup_1776175921315",
     "added_imp_0725",
-    "added_imp_0726"
+    "added_imp_0726",
+    "added_imp_0728",
+    "added_imp_0730",
+    "added_imp_0732",
+    "added_imp_0733",
+    "dup_1776176266203",
+    "added_imp_0735",
+    "added_imp_0738",
+    "added_imp_0739",
+    "added_imp_0740",
+    "added_imp_0741",
+    "added_imp_0743",
+    "added_imp_0744",
+    "added_imp_0745"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -9207,9 +9220,9 @@
       "id": "new",
       "title": "Person Featured On",
       "cat": "",
-      "prompt": "Create a dramatic, ultra-realistic nighttime urban scene. A person from the uploaded reference image - keeping the exact same face, expression, proportions, skin texture, hair, and all unique facial details with zero alteration - sits confidently in the center of an empty city street beneath an overpass. They lean casually against a graffiti-covered concrete pillar, surrounded by the glow of a modern skyline filled with tall glass buildings, illuminated windows, and neon reflections. The person wears a white-yellow shirt with bold red text, olive joggers, and red-white sneakers, captured in rich, detailed fabric texture. Long-exposure light trails from passing vehicles streak dynamically through the background in blue, red, orange, and white, adding a futuristic sense of motion. Shot from a low-angle, centered, symmetrical perspective, creating deep cinematic drama and powerful compositional balance. The atmosphere blends street photography with cyberpunk-style colors - moody, energetic, modern - with strong contrast, rich shadows, highly detailed surfaces, and professional lighting. Rendered in hyper-realistic 4K resolution, sharp, vivid, and immersive. Important: The person must retain 100% of the exact face from the uploaded reference image - same identity, same micro-details, same natural features - seamlessly integrated into this urban night scene.",
+      "prompt": "Create a cinematic, magazine-cover-style image from the provided photo. The person (keep the exact face from the reference image) appears as the featured star on the cover of Epoch Magazine. The layout includes bold headlines, elegant typography, and dynamic lighting - like a high-end fashion-meets-intelligence cover story. The background glows with a soft studio light gradient (cream, gold, or deep blue tones). The person stands confidently, slightly angled, with a powerful expression. Add humorous, classy fake headlines such as “Caffeine, Confidence & World Domination,” and “Exclusive: How to Look This Good Under Pressure.” Keep natural proportions, consistent lighting, and realistic shadows for a premium cinematic look.",
       "images": [
-        "images/imp_0729.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0729.jpg"
       ]
     },
     {
@@ -9227,9 +9240,9 @@
       "id": "new",
       "title": "Person Holding Jar",
       "cat": "",
-      "prompt": "Create an ultra-realistic premium chocolate spread jar packaging mockup featuring the reference person inside the label scene, with dynamic brand typography styling and full breakfast table visibility.\n\nIdentity Preservation (Strict Identity Lock):\n- Preserve the exact facial identity, proportions, hairstyle, and expression from the reference photo.\n- Do not alter facial structure or change the subject into any other known person.\n- Maintain 100% identical appearance as in the reference image.\n\nSubject:\n- Fully photorealistic human (no illustration look).\n- Subject occupies no more than 55% of label height.\n- Placed slightly deeper in the scene to allow full table visibility.\n- Naturally seated at breakfast table holding toast with chocolate spread.\n- Warm natural expression consistent with real-life breakfast moment.\n- Real skin texture, natural pores, accurate lighting response.\n\nScene:\n- Entire breakfast table must be fully visible. No food items cropped. Clear foreground table edge. Balanced spatial depth between subject and table.\n- Food items: Plate with chocolate toast, open chocolate spread jar, fruit bowl, glass of orange juice, additional breakfast elements.\n- Background: Soft warm kitchen environment integrated into label with realistic depth.\n\nProduct:\n- Premium chocolate spread jar mockup.\n- Rich glossy chocolate texture inside jar, realistic glass reflections, subtle studio highlight rolloff, natural grounded shadow under jar.\n\nLabel Design:\n- Brand name: Brill.ai\n- Automatically style first character of Brill.ai in black (#000000) and all remaining characters in red (#E10600).\n- Bold rounded sans-serif similar to premium chocolate spread branding, heavy weight, tight commercial kerning, straight horizontal baseline.\n- Subtle micro ink texture, matte label with slight light absorption, apply subtle horizontal distortion following jar curvature. Text must appear printed on the label, not floating above it.\n- Brand name placed in upper third of label, behind the subject, never overlap the face or head, fully readable despite depth layering.\n\nArt Direction:\n- Premium supermarket-ready packaging photography.\n- Warm, authentic, inviting breakfast branding.\n- Soft natural morning tones with controlled highlights.\n- Indistinguishable from real commercial product photo.\n\nCamera & Lighting:\n- Commercial product photography, 50mm full-frame equivalent, f/8, slightly tilted dynamic presentation angle.\n- Wide enough framing to include entire table scene inside label.\n- Soft studio lighting mimicking natural morning light, front-side soft key light, soft controlled shadows, no harsh contrast.\n- Jar fully sharp, subtle background blur.\n\nNegative Constraints: No original Nutella logo, no floating text, no cartoon style, no text overlapping face, no watermark.",
+      "prompt": "A meticulously crafted, vertically composed artistic Christmas portrait.\n\nA real person stands bathed in soft, warm holiday glow, cradling a transparent glass jar close to their face as if holding a gentle star.\n\nInside the jar resides a miniature version of their younger self—the same individual—standing alone within a self-contained, snow-covered microcosm.\n\nThese two \"selves\" are not mirror images; instead, their gazes intersect, initiating a silent dialogue between reality and distilled identity.\n\nThe real figure is illuminated by gentle amber Christmas lights, their radiance dissolving softly into the background like a diffused constellation. The glass surface dances with fragmented reflections, splintering the true visage into layered shards that gradually fade along the jar's curvature—forming a visual bridge between the outer world and the inner realm.\n\nWithin the jar, snow is sculpted into evocative, lunar-like contours. Beside the tiny figure stands a solitary bottlebrush tree. The miniature self wears intricately detailed festive attire: woven textures, tufted wool fibers, and the plush tactility of winter garments are rendered with astonishing clarity. A serene luminescence glows from deep within the snow, casting an upward light upon the small figure—as if the snow itself still holds the memory of light.\n\nFrost patterns crystallize on the jar's surface—not random snowflakes, but symbolic constellations echoing the twinkling lights behind the figure. Warm-toned fairy lights wrap around the vessel in abstract spirals, transforming it into a quiet cosmic nucleus.\n\nThe real person's expression is contemplative, almost cinematic in its depth. Their breath condenses into a delicate mist along the glass rim, adding a fleeting tenderness to the scene.\n\nThe entire composition evokes layered universes: the external world lush and warm, the internal world refined, suspended, and sacred.\nFor visual cohesion, costumes and props should remain consistent between the inner and outer figures.\n\nRendered in 8K ultra-photorealistic quality, with masterful artistic lighting, sculptural reflections, and poetic textural detail—this image embodies an intimate, symbolic, and quietly supernatural Christmas aesthetic.",
       "images": [
-        "images/imp_0731.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0731.jpg"
       ]
     },
     {
@@ -9257,9 +9270,9 @@
       "id": "new",
       "title": "Person Holding Pink",
       "cat": "",
-      "prompt": "Create A high-quality cartoon illustration in a humorous modern-comic poster style. Using the exact face, expression, skin texture, and hair from the reference image, depict the same person (male or female as in the photo) sitting on a wooden dock by a calm lake at sunset. The sky is painted in bright orange and pink tones with stylized soft clouds, and a dark forest silhouette stretches across the horizon, perfectly reflected in the water.\n\nThe character wears a black hoodie with a cool graphic print, blue jeans, and Jordan 11 sneakers. They hold a cup of coffee in one hand, sitting relaxed, slightly smiling, and looking directly at the viewer. Preserve the facial identity and lighting direction from the reference image while translating the person into clean vector-style line art with strong black outlines and flat bright colors with gentle comic-style shading.\n\nAbove the character’s head, place a large white comic-style speech bubble with a thick black outline. Inside, write in bold all-caps: “Enjoy The Little Things In Life.”\n\nUse centered composition, crisp poster-grade detailing, and a vibrant stylized sunset palette. Make the illustration perfect for a social-media post or printed poster.",
+      "prompt": "Natural handheld outdoor selfie of the person from the upload standing on a quiet residential European street during daytime, gently smiling at the camera while holding a large bouquet of soft pastel pink flowers wrapped in white paper. The bouquet contains pale pink roses, gerbera daisies, lisianthus, and small cream accent flowers arranged tightly. The person slightly tilts  head toward the bouquet with a relaxed expression. The person's hair is tied back in a loose bun with a few strands falling naturally near the face. The person is wearing a simple sleeveless black top. The photo is taken at arm’s length as a selfie with natural perspective. Background shows leafy green trees, parked cars, street signs, and light colored residential buildings softly blurred by shallow depth of field. Lighting is soft natural daylight filtered through trees, creating gentle shadows and even skin tones. The image should look like a real smartphone photograph captured casually while walking outside, authentic colors, realistic skin texture, subtle imperfections, and natural background detail.",
       "images": [
-        "images/imp_0734.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0734.jpg"
       ]
     },
     {
@@ -9287,9 +9300,9 @@
       "id": "new",
       "title": "Person Holding Yellow",
       "cat": "",
-      "prompt": "Create a serene, top-down portrait of a person lying peacefully in a lush meadow filled with wildflowers. He rests on his back among tall green grass, white daisies, and scattered pink blossoms, completely immersed in nature. One arm is bent behind his head in a relaxed pose, while the other gently holds a small bouquet of freshly picked daisies against his chest. He has soft, natural facial features, light stubble, and slightly tousled dark hair. His eyes are closed with a faint, content smile, conveying calmness, tenderness, and quiet joy. His expression feels intimate and emotionally warm, as if caught in a private moment of rest and reflection. He wears a textured mauve or dusty-rose knit sweater paired with clean white trousers, creating a gentle contrast against the vibrant greens and florals. The outfit feels cozy, romantic, and timeless. The scene is bathed in warm, natural daylight, soft afternoon, sunlight filtering through leaves and petals. Highlights gently kiss the skin and flowers, while shadows remain soft and organic. Foreground leaves and flowers partially frame the subject, adding depth and a dreamy, cinematic feel. Colors are rich yet natural: lush greens, creamy whites, soft yellows, and muted pinks, with a harmonious, film-like color grade.",
+      "prompt": "Create a monochrome (black and white) hyperrealistic portrait illustration of a person (from the provided reference image, keeping the exact same face, expression, features, skin texture, and hair) standing solemnly in an overcast environment. The person is wearing a dark gray somber overcoat, with a bright yellow ribbon pin attached to it - the only color visible in the scene besides the yellow balloon they gently hold. Their face appears serious, sorrowful, and emotionally heavy, with a single tear running down the cheek, enhancing the quiet grief. The background is gloomy, overcast, and atmospheric, contributing to a deep sense of melancholy. Everything is black and white, except the yellow ribbon and yellow balloon, which stand out vividly, drawing symbolic focus. Rendered in hyperrealistic detail, soft lighting, subtle film grain, and fine contrast, with cinematic tonal depth and realistic shading to preserve emotion and integrity. Important: The person’s face must remain identical to the one in the uploaded reference image - same proportions, features, and natural imperfections - seamlessly integrated into the monochrome lighting and mood.",
       "images": [
-        "images/imp_0737.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0737.jpg"
       ]
     },
     {
@@ -9377,9 +9390,9 @@
       "id": "new",
       "title": "Person In Bright",
       "cat": "",
-      "prompt": "Convert this person into a retro vintage grainy but bright image, black party-wear saree, 90s film aesthetic. She is standing against a solid, deep wall with dramatic shadows and contrast, creating a mysterious and artistic atmosphere. The environment feels windy and romanticised. Lighting is warm, with golden sunset tones evoking golden hour glow. The background is minimalist and slightly textured. Her expression is moody, calm, yet subtly happy and introspective",
+      "prompt": "Create a highly cinematic, Hollywood-style photo of a person using the face from the uploaded image. The person is standing in a dark room, facing slightly toward the camera, while a large open doorway behind them emits an intense bright white light. The light is so strong that it creates a powerful silhouette effect around the person, with glowing edges outlining their body. Soft fog or smoke fills the air, making the light rays visible and dramatic. The contrast between the dark room and the bright doorway is strong and cinematic. The person is wearing a stylish  outfit such as a long coat, fitted clothes, and boots. Their posture is calm, confident, and slightly mysterious. Ultra realistic photography, dramatic lighting, volumetric light rays, deep shadows, atmospheric depth, Hollywood movie scene composition, 8k detail.",
       "images": [
-        "images/imp_0746.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0746.jpg"
       ]
     },
     {
@@ -15321,6 +15334,16 @@
       "images": [
         "images/imp_0723.jpg"
       ]
+    },
+    {
+      "key": "dup_1776176266203",
+      "id": 242,
+      "title": "Person Holding Pink (עותק)",
+      "cat": "",
+      "prompt": "Create A high-quality cartoon illustration in a humorous modern-comic poster style. Using the exact face, expression, skin texture, and hair from the reference image, depict the same person (male or female as in the photo) sitting on a wooden dock by a calm lake at sunset. The sky is painted in bright orange and pink tones with stylized soft clouds, and a dark forest silhouette stretches across the horizon, perfectly reflected in the water.\n\nThe character wears a black hoodie with a cool graphic print, blue jeans, and Jordan 11 sneakers. They hold a cup of coffee in one hand, sitting relaxed, slightly smiling, and looking directly at the viewer. Preserve the facial identity and lighting direction from the reference image while translating the person into clean vector-style line art with strong black outlines and flat bright colors with gentle comic-style shading.\n\nAbove the character’s head, place a large white comic-style speech bubble with a thick black outline. Inside, write in bold all-caps: “Enjoy The Little Things In Life.”\n\nUse centered composition, crisp poster-grade detailing, and a vibrant stylized sunset palette. Make the illustration perfect for a social-media post or printed poster.",
+      "images": [
+        "images/imp_0734.jpg"
+      ]
     }
   ],
   "order": [
@@ -15817,7 +15840,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776176015789,
+  "_publishedAt": 1776176602708,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
