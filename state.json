@@ -544,7 +544,12 @@
     "added_imp_0751",
     "added_imp_0752",
     "added_imp_0754",
-    "added_imp_0755"
+    "added_imp_0755",
+    "added_imp_0758",
+    "added_imp_0759",
+    "added_imp_0761",
+    "added_imp_0762",
+    "added_imp_0763"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -9506,9 +9511,9 @@
       "id": "new",
       "title": "Person Laughing With",
       "cat": "",
-      "prompt": "A hyperrealistic 8K cinematic portrait of a character full of joyful energy, captured mid-freefall high above glowing white clouds in a heavenly sky.\nThe character, a normal person dressed in casual, loose-fitting clothing (jeans and a t-shirt), is laughing out loud as they plummet through the air. Their hair is wild, their face shows pure excitement, and they are giving a big thumbs-up to the camera.\nStrapped in tandem behind them is an experienced, human skydiving instructor. The instructor wears technical skydiving gear (jumpsuit, helmet, harness) and has a wide, encouraging smile. The instructor also has their arms raised high, spread wide in a triumphant pose.\nBoth individuals are falling through the air with immense velocity. Their clothing is rippling dramatically from the wind. Behind them, a small propeller aircraft with an open door is visible, sunlight catching the fuselage as it banks away in the distance.\n\nCamera: ARRI Alexa 65, 35mm anamorphic lens, aperture f/2.8, cinematic depth of field.\nLighting: strong golden sunlight from above, creating rim light and soft atmospheric scattering; volumetric haze with god-rays; natural skin reflections.\nDetails: hyperrealistic facial features, fabric texture with micro-folds, wind-distorted clothing, motion blur edges, and authentic high-altitude glow.\nColor Grading: vivid sky blue, radiant whites, golden highlights, contrasting clothing colors, Kodak Vision3 250D film emulation for cinematic warmth.\nMood & Style: joyful adrenaline, cinematic realism, physical light behavior, extreme detail and depth, dynamic composition with heroic motion energy.",
+      "prompt": "A tropical forest photo shows the person attached in the uploaded reference image (keep the face 100% accurate) laughing as a bright parrot lands on their shoulder. Leaves shine all around them.",
       "images": [
-        "images/imp_0757.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0757.jpg"
       ]
     },
     {
@@ -9536,9 +9541,9 @@
       "id": "new",
       "title": "Person Leaning Against",
       "cat": "",
-      "prompt": "Create a dramatic, ultra-realistic nighttime urban scene. A person from the uploaded reference image - keeping the exact same face, expression, proportions, skin texture, hair, and all unique facial details with zero alteration - sits confidently in the center of an empty city street beneath an overpass. They lean casually against a graffiti-covered concrete pillar, surrounded by the glow of a modern skyline filled with tall glass buildings, illuminated windows, and neon reflections. The person wears a white-yellow shirt with bold red text, olive joggers, and red-white sneakers, captured in rich, detailed fabric texture. Long-exposure light trails from passing vehicles streak dynamically through the background in blue, red, orange, and white, adding a futuristic sense of motion. Shot from a low-angle, centered, symmetrical perspective, creating deep cinematic drama and powerful compositional balance. The atmosphere blends street photography with cyberpunk-style colors - moody, energetic, modern - with strong contrast, rich shadows, highly detailed surfaces, and professional lighting. Rendered in hyper-realistic 4K resolution, sharp, vivid, and immersive. Important: The person must retain 100% of the exact face from the uploaded reference image - same identity, same micro-details, same natural features - seamlessly integrated into this urban night scene.",
+      "prompt": "Ultra-realistic cinematic street-style photo of a the person with the same face, hairstyle, outfit as the reference image. The person is leaning casually against a tall metal pole with one leg crossed, looking slightly to the side. On the other side of the pole stands a cute chibi cartoon version of the same character wearing the same outfit, face, outfit. Clean urban sidewalk with light stone tiles, modern glass building in the background, bright natural daylight, shallow depth of field, cinematic colors, ultra-detailed, 50mm lens, Instagram aesthetic.",
       "images": [
-        "images/imp_0760.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0760.jpg"
       ]
     },
     {
@@ -9576,9 +9581,9 @@
       "id": "new",
       "title": "Person Lying On",
       "cat": "",
-      "prompt": "A selfie taken by the person in the attached image with Oscar the Grouch on the set of Sesame Street. They are kneeling next to Oscar’s trash can. Oscar the Grouch, the puppet, is peeking out with a grumpy expression. Below him, a puppeteer is clearly visible operating the mechanics. A clapperboard is lying on the ground, and crew members are preparing for the next shot.",
+      "prompt": "The person attached in the image ( Keep the face of the person 100% accurate from the reference image ) is lying flat on whose back on a dark wooden floor in the middle of a chaotic party aftermath. The person's body is stretched out and relaxed, slightly diagonal within the frame. One of arms is bent at the elbow, resting loosely near their torso, while the other arm lies relaxed by their side. The posture feels careless and exhausted, as if having completely given in to the moment after a long night of celebration. The head is turned slightly to the side, resting directly on the floor.\n\nThe person attached in the image is wearing dark sunglasses, completely obscuring eyes, giving an indifferent, detached expression. Between lips, the person is holding a party horn angled upward, frozen mid-blow, reinforcing a playful yet worn-out party mood. The facial expression appears calm, detached, and slightly dazed rather than joyful or posed.\n\nThe person attached in the image is dressed in a classic black suit with a clean. The suit jacket is slightly open, revealing a white dress shirt underneath with the top buttons undone, adding to the relaxed, end-of-the-night feeling. Wrapped loosely around neck and shoulders is a metallic gold tinsel garland, creating a festive contrast against the dark suit fabric. The textures of the suit are matte and smooth, while the tinsel reflects light in sharp highlights.\n\nThe floor around the person attached in the image is covered in colorful party confetti, metallic streamers, and scattered decorative pieces in gold, silver, and bright colors. Surrounding the person attached in the image, only the lower bodies of other party guests are visible: legs in formal trousers, dress shoes, and sheer stockings with high heels. These figures stand around the person casually, partially cropped by the frame, emphasizing their position on the ground and the chaotic party environment.\n\nThe lighting is low and dramatic, with focused highlights illuminating the face, suit, tinsel, and the confetti immediately around the person attached in the image. Shadows fall naturally across the floor, adding depth and contrast. The scene feels candid, cinematic, and slightly decadent, capturing the raw aftermath of a celebration rather than a polished party moment.\n\nThe camera is positioned above the person attached in the image, shooting from a high angle directly downward, creating a strong top-down perspective. The image is captured with a moderately wide lens (approximately 28mm–35mm), allowing the surrounding environment, confetti, and people’s legs to remain visible while keeping the person attached in the image as the central subject. The depth of field is moderate, with clear detail across the scene and slight softening toward the edges.\n\nThe final image has a cinematic, editorial photography style with realistic lighting, rich contrast, visible textures, and a gritty, end-of-the-night party atmosphere. The face of the person attached in the image must remain exactly the same as the reference, fully preserved with accurate facial structure, proportions, and expression.",
       "images": [
-        "images/imp_0764.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0764.jpg"
       ]
     },
     {
@@ -15846,7 +15851,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776177102108,
+  "_publishedAt": 1776177445690,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
