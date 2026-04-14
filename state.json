@@ -538,7 +538,13 @@
     "added_imp_0741",
     "added_imp_0743",
     "added_imp_0744",
-    "added_imp_0745"
+    "added_imp_0745",
+    "added_imp_0747",
+    "added_imp_0749",
+    "added_imp_0751",
+    "added_imp_0752",
+    "added_imp_0754",
+    "added_imp_0755"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -9410,9 +9416,9 @@
       "id": "new",
       "title": "Person Inside X",
       "cat": "",
-      "prompt": "Create an ultra-realistic premium chocolate spread jar packaging mockup featuring the reference person inside the label scene, with dynamic brand typography styling and full breakfast table visibility.\n\nIdentity Preservation (Strict Identity Lock):\n- Preserve the exact facial identity, proportions, hairstyle, and expression from the reference photo.\n- Do not alter facial structure or change the subject into any other known person.\n- Maintain 100% identical appearance as in the reference image.\n\nSubject:\n- Fully photorealistic human (no illustration look).\n- Subject occupies no more than 55% of label height.\n- Placed slightly deeper in the scene to allow full table visibility.\n- Naturally seated at breakfast table holding toast with chocolate spread.\n- Warm natural expression consistent with real-life breakfast moment.\n- Real skin texture, natural pores, accurate lighting response.\n\nScene:\n- Entire breakfast table must be fully visible. No food items cropped. Clear foreground table edge. Balanced spatial depth between subject and table.\n- Food items: Plate with chocolate toast, open chocolate spread jar, fruit bowl, glass of orange juice, additional breakfast elements.\n- Background: Soft warm kitchen environment integrated into label with realistic depth.\n\nProduct:\n- Premium chocolate spread jar mockup.\n- Rich glossy chocolate texture inside jar, realistic glass reflections, subtle studio highlight rolloff, natural grounded shadow under jar.\n\nLabel Design:\n- Brand name: Brill.ai\n- Automatically style first character of Brill.ai in black (#000000) and all remaining characters in red (#E10600).\n- Bold rounded sans-serif similar to premium chocolate spread branding, heavy weight, tight commercial kerning, straight horizontal baseline.\n- Subtle micro ink texture, matte label with slight light absorption, apply subtle horizontal distortion following jar curvature. Text must appear printed on the label, not floating above it.\n- Brand name placed in upper third of label, behind the subject, never overlap the face or head, fully readable despite depth layering.\n\nArt Direction:\n- Premium supermarket-ready packaging photography.\n- Warm, authentic, inviting breakfast branding.\n- Soft natural morning tones with controlled highlights.\n- Indistinguishable from real commercial product photo.\n\nCamera & Lighting:\n- Commercial product photography, 50mm full-frame equivalent, f/8, slightly tilted dynamic presentation angle.\n- Wide enough framing to include entire table scene inside label.\n- Soft studio lighting mimicking natural morning light, front-side soft key light, soft controlled shadows, no harsh contrast.\n- Jar fully sharp, subtle background blur.\n\nNegative Constraints: No original Nutella logo, no floating text, no cartoon style, no text overlapping face, no watermark.",
+      "prompt": "A hyper-realistic portrait of the uploaded person inside a giant X (formerly Twitter) post frame that dominates the scene. Their face remains the same, sharp and untouched, wearing stylish sunglasses and sleek shoes, exuding bold charisma. Their relaxed pose shows their right elbow resting on their knee, left arm casual, and one leg stepping out of the X frame in a 3D illusion. The X frame is highly realistic with username GoogleGeminiPrompts, verified checkmark, display name \"ADI BRILL\", caption: \"Too real to stay inside the frame #AlCreation #GoogleGeminiPrompts\", and authentic X-style icons. The background is designed for boldness and energy: deep cobalt blue blending into cyan, with subtle light streaks enhancing the dynamic feel. Clean, cinematic lighting highlights their clothing textures and the 3D illusion, making them the viral centerpiece.",
       "images": [
-        "images/imp_0748.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0748.jpg"
       ]
     },
     {
@@ -9430,9 +9436,9 @@
       "id": "new",
       "title": "Person Interacting With",
       "cat": "",
-      "prompt": "Create Ultra-realistic 8K cinematic portrait based precisely on the uploaded reference image (male or female) - maintaining 100% fidelity to the subject’s real facial structure, gender, skin tone, hairstyle, and natural proportions, without any facial modification.\n\nDepict the subject as a Pokémon Trainer, centered in the frame and posing confidently, wearing casual yet adventurous trainer attire inspired by the modern Pokémon universe - textured jacket, tactical backpack, and fingerless gloves.\nThe expression shows a very subtle, natural smile, conveying calm confidence and connection with the Pokémon world.\n\nSurround the trainer with friendly Pokémon companions - Pikachu, Bulbasaur, Charmander, and Squirtle - each interacting in a playful, dynamic, and affectionate manner:\n\nPikachu perched on the shoulder, glowing faintly with electric sparks.\n\nBulbasaur leaning forward with curiosity.\n\nCharmander’s flame tail casting warm reflections.\n\nSquirtle laughing near the trainer’s side, droplets in motion.\n\nThe background features a vibrant, sunlit training field, bathed in a golden sunset sky with warm orange, pink, and lavender tones.\nHigh above, Legendary Pokémon soar majestically, their forms illuminated by radiant sunlight and soft clouds, giving a sense of scale and epic adventure.\n\nLighting and optics: cinematic HDR setup with soft directional sunlight, lens flares, and shallow depth of field from a wide-angle (35mm f/1.8) lens simulation.\nInclude micro-textures on Pokémon fur, fabrics, and skin, realistic reflections, motion blur, and fine atmospheric particles for dynamic realism.\n\nComposition: heroic game-poster framing, vibrant yet balanced color palette, joyful and adventurous energy.\nRender in 8K ultra-detail, ensuring a lifelike Pokémon world and authentic emotional tone faithful to the real person in the image.",
+      "prompt": "Create ultra-realistic digital art of a person (use reference photo) in a dynamic full-body pose. The subject wears Red T-shirt, yellow jacket and pants, green sneakers), appearing stylish and modern. Add a single text \"ADI\" displayed vertically, rendered as large 3D block glossy letters in yellow color. The text should appear only once, without repetition, and be big enough to look like a real object. Make the model interact with the text, for example sitting on",
       "images": [
-        "images/imp_0750.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0750.jpg"
       ]
     },
     {
@@ -9462,7 +9468,7 @@
       "cat": "",
       "prompt": "Transform the person in the photo into a Gundam model kit packaging box style, presented in isometric perspective. Label the box with the title \"ADI BRILL\". Inside the box, display a Gundam-style mechanical version of the person from the photo, along with their essentials (such as makeup, bags, or other items) redesigned as futuristic mechanical accessories. The packaging should resemble real Gunpla boxes, including technical illustrations, instruction manual-style details, and sci-fi fonts. Beside the box, also display the actual Gundam-style mechanical figure itself, outside the packaging, rendered in a realistic and lifelike style, similar to official Bandai promotional renders.",
       "images": [
-        "images/imp_0753.jpg"
+        "/images/custom_added_imp_0753_img0.jpg"
       ]
     },
     {
@@ -9490,9 +9496,9 @@
       "id": "new",
       "title": "Person Kneeling With",
       "cat": "",
-      "prompt": "A selfie taken by the person in the attached image with Oscar the Grouch on the set of Sesame Street. They are kneeling next to Oscar’s trash can. Oscar the Grouch, the puppet, is peeking out with a grumpy expression. Below him, a puppeteer is clearly visible operating the mechanics. A clapperboard is lying on the ground, and crew members are preparing for the next shot.",
+      "prompt": "A selfie taken by the person in the attached image with R2-D2 on the set of Star Wars in Tatooine. They are on a sandy outdoor filming location. The astromech droid is a detailed practical prop, slightly weathered by the desert. The person is kneeling next to it with their phone, while a crew member with a remote control stands just out of frame. Large light reflectors are visible.",
       "images": [
-        "images/imp_0756.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0756.jpg"
       ]
     },
     {
@@ -15840,7 +15846,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776176602708,
+  "_publishedAt": 1776177102108,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
