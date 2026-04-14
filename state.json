@@ -508,7 +508,24 @@
     "added_imp_0698",
     "added_imp_0700",
     "added_imp_0702",
-    "added_imp_0703"
+    "added_imp_0703",
+    "added_imp_0708",
+    "added_imp_0706",
+    "added_imp_0705",
+    "added_imp_0709",
+    "added_imp_0713",
+    "added_imp_0711",
+    "added_imp_0714",
+    "added_imp_0715",
+    "added_imp_0716",
+    "added_imp_0718",
+    "added_imp_0721",
+    "added_imp_0722",
+    "added_imp_0720",
+    "added_imp_0719",
+    "dup_1776175921315",
+    "added_imp_0725",
+    "added_imp_0726"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -9130,9 +9147,9 @@
       "id": "new",
       "title": "Person By Windy",
       "cat": "",
-      "prompt": "Convert this person into a retro vintage grainy but bright image, black party-wear saree, 90s film aesthetic. She is standing against a solid, deep wall with dramatic shadows and contrast, creating a mysterious and artistic atmosphere. The environment feels windy and romanticised. Lighting is warm, with golden sunset tones evoking golden hour glow. The background is minimalist and slightly textured. Her expression is moody, calm, yet subtly happy and introspective",
+      "prompt": "Use the uploaded photo as the exact identity reference. Keep the same person, the same face, the same facial features, proportions, and natural expression.\nCreate a photorealistic cinematic triptych portrait, a three-frame composition combined into one image.\nScene: a windy seaside with a cold sea, overcast sky, flying seagulls, strong ocean wind, and a vivid, alive atmosphere.\nFrame 1 (top): wide cinematic shot. The person stands by the sea, smiling naturally. Their hair is blowing in the wind. Seagulls are flying in the background.\nFrame 2 (middle): medium shot from behind or from the side. The person is looking at the sea. Their coat and hair are moving in the wind. Seagulls fly nearby.\nFrame 3 (bottom): close-up emotional portrait. Wind in the hair, natural skin texture, thoughtful gaze, cinematic mood.\nStyle: real photography, cinematic lifestyle portrait, documentary fashion photography.\nLighting: natural overcast daylight, soft shadows, cold seaside tones.\nCamera: full-frame DSLR look, 85mm lens aesthetic, shallow depth of field.\nColor grading: muted cinematic colors, cool palette, film-like mood.\nUltra photorealistic, natural skin texture, real moment. No illustration, no CGI. No text, no logos, no watermark.",
       "images": [
-        "images/imp_0723.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0723.jpg"
       ]
     },
     {
@@ -15294,6 +15311,16 @@
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0682.jpg"
       ]
+    },
+    {
+      "key": "dup_1776175921315",
+      "id": 242,
+      "title": "Person By Windy (עותק)",
+      "cat": "",
+      "prompt": "Convert this person into a retro vintage grainy but bright image, black party-wear saree, 90s film aesthetic. She is standing against a solid, deep wall with dramatic shadows and contrast, creating a mysterious and artistic atmosphere. The environment feels windy and romanticised. Lighting is warm, with golden sunset tones evoking golden hour glow. The background is minimalist and slightly textured. Her expression is moody, calm, yet subtly happy and introspective",
+      "images": [
+        "images/imp_0723.jpg"
+      ]
     }
   ],
   "order": [
@@ -15790,7 +15817,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776175728256,
+  "_publishedAt": 1776176015789,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
