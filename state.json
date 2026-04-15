@@ -609,7 +609,13 @@
     "added_imp_0865",
     "added_imp_0867",
     "added_imp_0870",
-    "added_imp_0872"
+    "added_imp_0872",
+    "added_imp_0876",
+    "added_imp_0875",
+    "added_imp_0878",
+    "added_imp_0881",
+    "added_imp_0879",
+    "added_imp_0883"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -10771,9 +10777,9 @@
       "id": "new",
       "title": "Picture On Movie",
       "cat": "",
-      "prompt": "Create Transform the provided image into a hand-painted, cinematic illustration in the style of classic movie posters from the 1980s and early 1990s. The artwork should appear as a realistic acrylic or oil painting, featuring expressive brushstroke textures, dramatic highlights, and warm, contrasting tones that evoke nostalgia and epic storytelling.\n\nDesired characteristics:\n– Art style inspired by legendary poster artists such as Drew Struzan and Richard Amsel.\n– Vibrant colors, dynamic accent lighting, and cinematic shadows that add depth and emotion.\n– The character should display confidence and charisma, striking a cinematic pose reminiscent of a timeless movie protagonist - equally suited to any gender.\n– The background should incorporate narrative elements - such as ancient relics, sleek sports cars, glowing cityscapes at night, magical energy, starry skies, or dynamic lighting effects - depending on the theme.\n– Artistic typography may be subtly implied in the composition, but with no legible text.\n\nThe final result should feel like an authentic poster for an adventure, fantasy, or comedy film from the 1980s, blending realistic painting, heroic yet inclusive composition, and nostalgic vintage cinema atmosphere.\n\nVisual inspirations:\nBack to the Future, Indiana Jones and the Temple of Doom, The Goonies, E.T. the Extra-Terrestrial, Blade Runner, The Thing, Harry Potter, Return of the Jedi.",
+      "prompt": "Create a picture of them on the set of a high-octane movie.",
       "images": [
-        "images/imp_0877.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0877.jpg"
       ]
     },
     {
@@ -15911,7 +15917,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776264649465,
+  "_publishedAt": 1776264874347,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
