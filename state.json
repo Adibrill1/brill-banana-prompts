@@ -572,7 +572,44 @@
     "added_imp_0801",
     "added_imp_0819",
     "added_imp_0804",
-    "added_imp_0770"
+    "added_imp_0770",
+    "added_imp_0817",
+    "added_imp_0813",
+    "added_imp_0814",
+    "added_imp_0816",
+    "added_imp_0818",
+    "added_imp_0820",
+    "added_imp_0825",
+    "added_imp_0829",
+    "added_imp_0826",
+    "added_imp_0827",
+    "added_imp_0830",
+    "added_imp_0832",
+    "added_imp_0833",
+    "added_imp_0835",
+    "added_imp_0837",
+    "added_imp_0841",
+    "added_imp_0842",
+    "added_imp_0845",
+    "added_imp_0846",
+    "added_imp_0848",
+    "added_imp_0847",
+    "added_imp_0850",
+    "added_imp_0849",
+    "added_imp_0851",
+    "added_imp_0854",
+    "added_imp_0856",
+    "added_imp_0858",
+    "added_imp_0857",
+    "added_imp_0862",
+    "added_imp_0863",
+    "added_imp_0864",
+    "added_imp_0860",
+    "added_imp_0866",
+    "added_imp_0865",
+    "added_imp_0867",
+    "added_imp_0870",
+    "added_imp_0872"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -10044,9 +10081,9 @@
       "id": "new",
       "title": "Person Taking Selfie",
       "cat": "",
-      "prompt": "A selfie taken by the person in the attached image with the Grinch on the set of How the Grinch Stole Christmas. They are in a snowy, whimsical Whoville physical set. The Grinch is played by an actor in extensive, detailed green furry prosthetic makeup. The person is taking the photo, and a makeup artist is doing a final touch-up on the Grinch's long, furry fingers.",
+      "prompt": "A selfie taken by the person in the attached image with the Demogorgon on the set of Stranger Things. They are in a physical set of the Upside Down, filled with practical-effect vines and floating spores. The Demogorgon is a towering actor in a highly detailed, terrifying rubber monster suit. The person is holding up their phone, and a film crew is adjusting the blue atmospheric lighting behind them.",
       "images": [
-        "images/imp_0808.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0808.jpg"
       ]
     },
     {
@@ -10054,9 +10091,9 @@
       "id": "new",
       "title": "Person Taking Selfie",
       "cat": "",
-      "prompt": "A selfie taken by the person in the attached image with the Grinch on the set of How the Grinch Stole Christmas. They are in a snowy, whimsical Whoville physical set. The Grinch is played by an actor in extensive, detailed green furry prosthetic makeup. The person is taking the photo, and a makeup artist is doing a final touch-up on the Grinch's long, furry fingers.",
+      "prompt": "A selfie taken by the person in the attached image with Gollum on the set of The Lord of the Rings. They are standing in a rocky cave set. Next to them is an actor in a grey motion-capture suit covered in reference dots, crouching and pulling the iconic Gollum expression. The person is holding their phone, and the director is visible in the background looking at a monitor.",
       "images": [
-        "images/imp_0809.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0809.jpg"
       ]
     },
     {
@@ -10074,9 +10111,9 @@
       "id": "new",
       "title": "Person Taking Selfie",
       "cat": "",
-      "prompt": "A selfie taken by the person in the attached image with the Grinch on the set of How the Grinch Stole Christmas. They are in a snowy, whimsical Whoville physical set. The Grinch is played by an actor in extensive, detailed green furry prosthetic makeup. The person is taking the photo, and a makeup artist is doing a final touch-up on the Grinch's long, furry fingers.",
+      "prompt": "A selfie taken by the person in the attached image with Sonic on the set of Sonic the Hedgehog. They are in a practical set of a high-tech lab. Next to them is a detailed, realistic CGI stand-in puppet of Sonic, wearing his iconic red sneakers. The person is smiling at their phone, and a visual effects supervisor is placing reference spheres in the background. Green screens are visible on the walls.",
       "images": [
-        "images/imp_0811.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0811.jpg"
       ]
     },
     {
@@ -10114,9 +10151,9 @@
       "id": "new",
       "title": "Person Taking Selfie",
       "cat": "",
-      "prompt": "A selfie taken by the person in the attached image with the Grinch on the set of How the Grinch Stole Christmas. They are in a snowy, whimsical Whoville physical set. The Grinch is played by an actor in extensive, detailed green furry prosthetic makeup. The person is taking the photo, and a makeup artist is doing a final touch-up on the Grinch's long, furry fingers.",
+      "prompt": "A selfie taken by the person in the attached image with Ludo on the set of Labyrinth. They are standing in a physical set of the Goblin City. Ludo is an enormous, incredibly heavy, full-body monster suit worn by a performer, covered in shaggy red hair and horns. The person is smiling at the phone, and a crew member is using a large fan to keep the performer inside the suit cool.",
       "images": [
-        "images/imp_0815.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0815.jpg"
       ]
     },
     {
@@ -10174,9 +10211,9 @@
       "id": "new",
       "title": "Person Taking Selfie",
       "cat": "",
-      "prompt": "A selfie taken by the person in the attached image with the Grinch on the set of How the Grinch Stole Christmas. They are in a snowy, whimsical Whoville physical set. The Grinch is played by an actor in extensive, detailed green furry prosthetic makeup. The person is taking the photo, and a makeup artist is doing a final touch-up on the Grinch's long, furry fingers.",
+      "prompt": "A selfie taken by the person in the attached image with Optimus Prime on the set of Transformers. They are standing in a destroyed city street set. Next to them is a massive, highly detailed practical-effect bust of the Autobot leader's head and shoulders. They are looking up at their phone, and a huge camera crane is sweeping over them.",
       "images": [
-        "images/imp_0821.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0821.jpg"
       ]
     },
     {
@@ -10184,9 +10221,9 @@
       "id": "new",
       "title": "Person Taking Selfie",
       "cat": "",
-      "prompt": "A selfie taken by the person in the attached image with the Grinch on the set of How the Grinch Stole Christmas. They are in a snowy, whimsical Whoville physical set. The Grinch is played by an actor in extensive, detailed green furry prosthetic makeup. The person is taking the photo, and a makeup artist is doing a final touch-up on the Grinch's long, furry fingers.",
+      "prompt": "A selfie taken by the person in the attached image with BB-8 on the set of Star Wars: The Force Awakens. They are in a practical set of a resistance base hangar, filled with spaceship parts and cargo. BB-8 is a functional, rolling robotic prop. The person is smiling at their phone, and a technician with a remote control is adjusting the droid's dome in the background. Lighting rigs are visible above.",
       "images": [
-        "images/imp_0822.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0822.jpg"
       ]
     },
     {
@@ -10194,9 +10231,9 @@
       "id": "new",
       "title": "Person Taking Selfie",
       "cat": "",
-      "prompt": "A selfie taken by the person in the attached image with the Grinch on the set of How the Grinch Stole Christmas. They are in a snowy, whimsical Whoville physical set. The Grinch is played by an actor in extensive, detailed green furry prosthetic makeup. The person is taking the photo, and a makeup artist is doing a final touch-up on the Grinch's long, furry fingers.",
+      "prompt": "A selfie taken by the person in the attached image with an Alien Xenomorph on the set of Alien. They are in a dark, grimy corridor of the USCSS Nostromo, filled with practical fog and flashing emergency lights. The Xenomorph is a tall actor in a terrifying, detailed rubber suit, leaning close to the person. The person holds up their phone, and a film crew is visible in the background adjusting the dramatic backlighting.",
       "images": [
-        "images/imp_0823.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0823.jpg"
       ]
     },
     {
@@ -10244,9 +10281,9 @@
       "id": "new",
       "title": "Person Transformed Into",
       "cat": "",
-      "prompt": "{\"prompt\": \"Transform the person in the provided reference image (@img1) into a 3x3 grid of nine photorealistic close-up portraits. In every panel, keep the subject’s original facial features, bone structure, skin tone, and natural hair color exactly as seen in @img1. Do not alter age, gender, expression, or face shape. Only the hairstyle should change. Go wild, extreme, creative, exaggerated, and varied with the hair designs while maintaining the original hair color. Each of the nine panels should feature a dramatically different hairstyle, including realistic, surreal, avant-garde, and over-the-top styles. Maintain identity consistency across all nine portraits.\", \"hairstyles\": [ \"Ultra-short classic fade\", \"Massive wavy shoulder-length volume\", \"Hyper-slicked glass-shine backcombed hair\", \"Oversized geometric afro\", \"Samurai top-knot with shaved patterns\", \"Wild explosive curls with chaotic texture\", \"Completely bald (keeping facial features intact)\", \"Aggressive high mohawk with sharp silhouette\", \"Super-long straight hair with heavy dramatic bangs\" ], \"format\": \"3x3 grid\", \"style\": \"photorealistic, high-contrast, premium studio lighting\", \"subject\": \"The person from @img1 with identity preserved\", \"background\": \"Solid black\"}",
+      "prompt": "{\n  \"task\": \"image_generation\",\n  \"model_hint\": \"nano_banana_pro\",\n  \"input_requirements\": {\n    \"reference_images\": 1,\n    \"reference_role\": \"identity\",\n    \"notes\": \"Identity reference exclusively from the uploaded image. Absolute identity lock.\"\n  },\n  \"image_request\": {\n    \"goal\": \"Transform the subject into an Avatar-inspired extraterrestrial body within a lush, Pandora-like alien world while preserving the human facial identity with absolute anatomical fidelity.\",\n    \"meta\": {\n      \"image_type\": \"cinematic portrait\",\n      \"quality\": \"ultra\",\n      \"aspect_ratio\": \"4:5\",\n      \"resolution_hint\": \"match_model_default\",\n      \"reference_image_path\": \"/mnt/data/3534b18c-9090-4f71-bb43-8a7eca24c2fc.png\"\n    },\n    \"identity_preservation\": {\n      \"mode\": \"strict_identity_lock\",\n      \"must_keep\": [\n        \"exact facial identity\",\n        \"facial structure and bone geometry\",\n        \"precise proportions\",\n        \"eye shape, size, and spacing\",\n        \"nose shape\",\n        \"mouth shape\",\n        \"jawline\",\n        \"cheekbones\",\n        \"forehead height\",\n        \"age appearance\",\n        \"hairline and density\"\n      ],\n      \"must_not\": [\n        \"reshape or stylize the face\",\n        \"use a Na'vi or fictional face template\",\n        \"face swap\",\n        \"blend with other faces\",\n        \"generic alien facial features\",\n        \"change identity\"\n      ],\n      \"enforcement_text\": [\n        \"Preserve the exact facial identity, proportions, hairstyle, and age from the reference photo.\",\n        \"Do not alter facial structure or replace the face with any fictional or Na'vi template.\",\n        \"Maintain 100% identical facial anatomy as in the reference image.\"\n      ]\n    },\n    \"subject\": {\n      \"count\": 1,\n      \"category\": \"person\",\n      \"gender\": \"match_reference\",\n      \"age_appearance\": \"match_reference\",\n      \"pose_action\": \"Calm, confident, grounded stance connected to nature; balanced and open posture.\",\n      \"wardrobe\": \"Minimal, organic Avatar-inspired garments made from natural fibers, beads, and woven alien materials; no armor, no modern clothing.\",\n      \"expression\": \"Serene and powerful; subtle strength; identity-clear neutral expression.\",\n      \"framing\": \"Three-quarter to full-body cinematic portrait with face clearly visible and sharply rendered.\"\n    },\n    \"scene\": {\n      \"setting\": \"Lush alien jungle inspired by a Pandora-like world.\",\n      \"background\": \"Bioluminescent flora, glowing plants, floating spores, soft mist, layered depth with atmospheric perspective; original environment, not a direct scene recreation.\",\n      \"supporting_characters_or_objects\": [],\n      \"constraints\": [\n        \"Pandora-inspired aesthetics without recreating specific copyrighted scenes.\",\n        \"Environment glow interacts naturally with skin and body.\"\n      ]\n    },\n    \"art_direction\": {\n      \"style\": \"High-end cinematic sci-fi fantasy portrait with strict identity preservation.\",\n      \"mood\": \"Powerful, serene, otherworldly yet human.\",\n      \"color_grade\": \"Cinematic teal-blue with bioluminescent accents; natural skin shading preserved on the face.\",\n      \"texture\": \"Ultra-detailed, organic skin texture; smooth and natural, not plastic or cartoonish.\"\n    },\n    \"camera_lighting\": {\n      \"camera\": {\n        \"shot_type\": \"cinematic portrait\",\n        \"lens\": \"35–50mm equivalent\",\n        \"aperture\": \"f/1.8–f/2.8\",\n        \"perspective\": \"Natural eye-level perspective preserving facial proportions\"\n      },\n      \"lighting\": {\n        \"type\": \"Cinematic mixed lighting\",\n        \"quality\": \"Soft natural key light on the face with environmental bioluminescent rim light\",\n        \"direction\": \"Front-soft for identity clarity; subtle back/side glow from flora\"\n      },\n      \"depth_of_field\": \"Shallow depth of field; face and upper body sharp, background softly blurred.\"\n    },\n    \"skin_and_features\": {\n      \"skin\": \"Blue-toned alien skin with subtle bioluminescent patterns and natural striping applied uniformly across the body while preserving identical facial anatomy.\",\n      \"eyes\": \"Identical shape, size, and spacing as reference; iris color shifted to a glowing alien hue only; no enlargement or stylization.\",\n      \"hair\": \"Same hairstyle identity as reference translated into long, natural alien hair or braids; original volume, flow, silhouette, hairline, and density preserved.\"\n    },\n    \"negative_constraints\": [\n      \"no text\",\n      \"no logos\",\n      \"no watermarks\"\n    ]\n  }\n}",
       "images": [
-        "images/imp_0828.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0828.jpg"
       ]
     },
     {
@@ -10274,9 +10311,9 @@
       "id": "new",
       "title": "Person Trapped In",
       "cat": "",
-      "prompt": "Create 8K ultra-realistic cinematic photograph - a real human (based on the attached photo) wearing a white t-shirt, black hoodie, blue jeans, and Air Jordan 1s.\nScene: inside a giant open comic book lying across an aesthetic, slightly messy bedroom. Around the subject - colorful posters, sketch papers, sunlight filtering through window blinds.\nStory moment: the real person appears half-trapped in the comic pages, reaching out and breaking free from the illustrated world into reality. Fragments of drawn ink and paper tear around them, blending with real light and textures.\nCamera: full-frame DSLR, 50 mm f/1.4 lens, shallow depth of field; focus on the subject’s face and hands as they emerge from the comic.\nLighting: soft diffused daylight from the left side, natural shadows, volumetric glow, subtle lens flares for cinematic realism.\nTextures & realism: lifelike skin tone, micro-details (pores, fabric fibers, paper texture), realistic reflections, and accurate material fidelity.\nColor & grading: bright, vivid, high-contrast cinematic color palette with warm midtones and subtle film grain.\nAtmosphere: surreal yet believable - comic art fusing with reality, dimensional rift effects, soft particles floating in the air, sense of depth and movement.\nRender in 8K with hyper-realistic clarity, immersive lighting, and perfect balance between fantasy and realism.",
+      "prompt": "Create A hyper-realistic, 8k, low-angle shot with a slight Dutch tilt captures a colossal, clear plastic water bottle, partially buried and angled in coarse beach sand, dominating the mid-ground. Inside this giant bottle, a character based on the picture I attached here, is depicted in a state of distress, thrashing in water that fills the lower half of the bottle. The person, wearing a black t-shirt, dark blue pants, and white sneakers, has their arms raised, mouth open, and is surrounded by dynamic, splashing water, creating a powerful sense of entrapment and struggle. The scene is illuminated by harsh, high-contrast cinematic daylight, with strong highlights reflecting off the wet plastic bottle and the churning water within, indicating a bright, sunny day. Volumetric lighting emphasizes the water's transparency and movement. The foreground features highly detailed texture of the sand, interspersed with various pieces of plastic debris, including a crumpled white plastic bag, an orange bottle cap, and a red plastic bottle fragment, reinforcing a theme of pollution. In the background, a vibrant turquoise ocean with gentle waves meets a bright, slightly hazy blue sky, with the sun's glare visible in the upper left, all rendered with sharp focus on the immediate subject and a subtle depth of field for the background elements.",
       "images": [
-        "images/imp_0831.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0831.jpg"
       ]
     },
     {
@@ -10514,9 +10551,9 @@
       "id": "new",
       "title": "Person With Dragon",
       "cat": "",
-      "prompt": "A selfie taken by the person in the attached image with Toothless on the set of How to Train Your Dragon. They are posing next to a stunning, life-sized animatronic Night Fury dragon. The dragon's green eyes are glowing, and it's slightly tilting its head towards the phone. They are on a soundstage with a massive green screen and motion tracking cameras.",
+      "prompt": "A selfie taken by the person in the attached image with a practical dragon bust on the set of House of the Dragon. They are standing next to a massive, detailed physical prop of a dragon’s head, covered in CGI tracking markers and texture reference spheres. The person holds their phone up, and a visual effects supervisor is placing reference targets in the background. Large studio lights illuminate the scene.",
       "images": [
-        "images/imp_0855.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0855.jpg"
       ]
     },
     {
@@ -10636,7 +10673,7 @@
       "cat": "",
       "prompt": "{\n    \"generation_request\": {\n      \"meta_data\": { \"tool\": \"NanoBananaPro\", \"task_type\": \"photorealistic_multi_panel_grid\", \"version\": \"v1.0\" },\n      \"output_settings\": { \"layout\": { \"type\": \"2x2_grid\", \"border\": \"thin_white_gutter\", \"frame_consistency_rule\": \"same_person_same_outfit\" }, \"aspect_ratio\": \"4:5\", \"resolution\": \"ultra_high_res\", \"render_style\": \"flash_pop_color\" },\n      \"reference_constraints\": { \"character_reference_image\": \"{argument name=\"character reference image\" default=\"UPLOAD_REF_IMAGE\"}\", \"use_reference_face_only\": true, \"identity_lock\": true, \"strict_face_match\": true },\n      \"global_prompt\": {\n        \"scene\": \"American Diner, retro 50s style. Red leather booths, checkerboard floor, neon sign outside window.\",\n        \"subject\": {\n          \"type\": \"influencer\",\n          \"identity\": \"same person as reference image\",\n          \"hair\": \"high pigtails with ribbons\",\n          \"makeup\": \"winged liner, freckles\",\n          \"outfit\": \"cropped ringer tee, denim shorts, knee high socks, converse\",\n          \"prop\": \"strawberry milkshake with two straws and cherry\"\n        },\n        \"camera\": { \"capture\": \"retro flash\", \"lens_equivalent\": \"35mm\", \"focus\": \"subject\", \"depth_of_field\": \"sharp\" }\n      },\n      \"frames\": [\n        { \"frame_id\": \"A\", \"position\": \"top_left\", \"shot_type\": \"sipping_milkshake\", \"pose\": \"Sipping milkshake aggressively, looking up at camera under lashes.\", \"expression\": \"playful, innocent\" },\n        { \"frame_id\": \"B\", \"position\": \"top_right\", \"shot_type\": \"cherry_bite\", \"pose\": \"Holding the cherry by the stem near mouth.\", \"expression\": \"seductive, fun\" },\n        { \"frame_id\": \"C\", \"position\": \"bottom_left\", \"shot_type\": \"booth_knees\", \"pose\": \"Kneeling on the booth seat, looking out the window.\", \"expression\": \"bored, waiting\" },\n        { \"frame_id\": \"D\", \"position\": \"bottom_right\", \"shot_type\": \"messy_face\", \"pose\": \"Swipe of whipped cream on nose, laughing.\", \"expression\": \"goofy\" }\n      ]\n    }\n  }",
       "images": [
-        "images/imp_0867.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0867.jpg"
       ]
     },
     {
@@ -10644,9 +10681,9 @@
       "id": "new",
       "title": "Photo Booth Grid",
       "cat": "",
-      "prompt": "{\n    \"generation_request\": {\n      \"meta_data\": { \"tool\": \"NanoBananaPro\", \"task_type\": \"photorealistic_multi_panel_grid\", \"version\": \"v1.0\" },\n      \"output_settings\": { \"layout\": { \"type\": \"2x2_grid\", \"border\": \"thin_white_gutter\", \"frame_consistency_rule\": \"same_person_same_outfit\" }, \"aspect_ratio\": \"4:5\", \"resolution\": \"ultra_high_res\", \"render_style\": \"flash_pop_color\" },\n      \"reference_constraints\": { \"character_reference_image\": \"{argument name=\"character reference image\" default=\"UPLOAD_REF_IMAGE\"}\", \"use_reference_face_only\": true, \"identity_lock\": true, \"strict_face_match\": true },\n      \"global_prompt\": {\n        \"scene\": \"American Diner, retro 50s style. Red leather booths, checkerboard floor, neon sign outside window.\",\n        \"subject\": {\n          \"type\": \"influencer\",\n          \"identity\": \"same person as reference image\",\n          \"hair\": \"high pigtails with ribbons\",\n          \"makeup\": \"winged liner, freckles\",\n          \"outfit\": \"cropped ringer tee, denim shorts, knee high socks, converse\",\n          \"prop\": \"strawberry milkshake with two straws and cherry\"\n        },\n        \"camera\": { \"capture\": \"retro flash\", \"lens_equivalent\": \"35mm\", \"focus\": \"subject\", \"depth_of_field\": \"sharp\" }\n      },\n      \"frames\": [\n        { \"frame_id\": \"A\", \"position\": \"top_left\", \"shot_type\": \"sipping_milkshake\", \"pose\": \"Sipping milkshake aggressively, looking up at camera under lashes.\", \"expression\": \"playful, innocent\" },\n        { \"frame_id\": \"B\", \"position\": \"top_right\", \"shot_type\": \"cherry_bite\", \"pose\": \"Holding the cherry by the stem near mouth.\", \"expression\": \"seductive, fun\" },\n        { \"frame_id\": \"C\", \"position\": \"bottom_left\", \"shot_type\": \"booth_knees\", \"pose\": \"Kneeling on the booth seat, looking out the window.\", \"expression\": \"bored, waiting\" },\n        { \"frame_id\": \"D\", \"position\": \"bottom_right\", \"shot_type\": \"messy_face\", \"pose\": \"Swipe of whipped cream on nose, laughing.\", \"expression\": \"goofy\" }\n      ]\n    }\n  }",
+      "prompt": "Using this photo, create a 3*3 photo booth grid, each one with a different pose and expression, no repeats",
       "images": [
-        "images/imp_0868.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0868.jpg"
       ]
     },
     {
@@ -10656,7 +10693,7 @@
       "cat": "",
       "prompt": "Create a vertical vintage photo booth strip with 3 frames one under the other, showing the same person from the reference photo at age, 80, 90 and 100.\n\nKeep the face perfectly identical to the reference in all frames, same facial structure, same features, same identity.\n\nThe aging must be very clear and realistic, with strong elderly characteristics.\n\nAge 80 with deep wrinkles, age spots, thinner frame and reduced white or silver hair.\n\nAge 90 with very advanced aging, fragile posture, very thin white hair with visible scalp.\n\nAge 100 extremely old, very fragile body, almost bald or only a few thin white strands, very strong skin texture.\n\nThe person must be fully dressed in all frames.",
       "images": [
-        "images/imp_0869.jpg"
+        "/images/custom_added_imp_0869_img0.jpg"
       ]
     },
     {
@@ -10674,9 +10711,9 @@
       "id": "new",
       "title": "Photo Into Geometric",
       "cat": "",
-      "prompt": "I. Overall Objective\n\n1. Function Description: Based on user-uploaded reference images, extract the subject's temperament, makeup style, lighting, and color characteristics to create a unique fashion portrait collage.\n\n2. Difference Requirements: Preserve the facial features and overall temperament of the reference subject; do not directly copy the original image. Makeup and composition should be creatively varied within the same stylistic framework.\n\nII. Input Reference Image Requirements\n\n1. Reference Content: A clear front-facing or two-thirds profile photo of a person, clearly showing facial features, skin texture, and general lighting atmosphere.\n\n2. Extraction Key Points: Extract skin tone, makeup intensity, main color tone, lighting direction, subject temperament, and clothing color scheme from the reference image.\n\nIII. Image Composition and Output Format\n\n1. Main Image: Generate a super close-up or close-up of the subject's face, with the head and shoulders occupying most of the image space. The gaze can be designed with reference to the temperament of the original image.\n\n2. Collage Structure: Add multiple small images to the right side or corner, including close-ups of profiles, hands, and makeup details, creating a magazine-like layout.\n\n3. Background: Keep the background simple and clean, using solid colors or slight brightness transitions to highlight the subject and makeup.\n\nIV. Text and Graphic Design\n\n1. Title Text: Place a large magazine title at the top of the image, with a simple and powerful font, centered or top-center aligned.\n\n2. Subtitles and Small Text: Add several lines of small text to one side or bottom of the image. This can include keywords, names, and dates, arranged neatly with a consistent font size.\n\n3. Geometric Shapes: Add thin lines, narrow rectangular color blocks, or semi-transparent color blocks around the subject, combining them with text to enhance the sense of planar composition.\n\nV. Style Inheritance Rules\n\n1. Color Inheritance: The overall color tone, contrast, and warm/cool tones should closely match the style of the reference image. The main color should come from the most prominent makeup or clothing color in the reference image.\n\n2. Lighting Inheritance: Refer to the original image's lighting direction and softness. If the original image uses soft lighting, maintain the soft lighting texture; if the original image has high contrast, retain a certain degree of sharpness.\n\n3. Makeup Inheritance: Maintain the same style level based on the makeup characteristics of the reference image (clear, intense, experimental, natural, etc.), then make subtle variations in eye makeup, blush, and lip makeup.\n\n4. Atmosphere Inheritance: Continue the emotional atmosphere of the reference image, such as a cool, sweet, rebellious, or mysterious feel, echoing it in expressions and postures.\n\nVI. Creative Variation Rules\n\n1. Makeup Variation: Add localized exaggerations to the reference style, such as expanding the blush area, enhancing lip shading, adding freckles or highlights.\n\n2. Composition Variation: Adjust the facial angle, cropping area, and small image collage position to ensure different compositions for each generation.\n\n3. Accessory Variation: Add simple yet stylish accessories to the neck, ears, or hands, echoing the main color scheme but not completely replicating the reference image. 4. Detailed Gestures: Add hand gestures such as touching the lips, cheeks, and under the eyes to make the image more narrative and engaging.\n\nVII. Overall Texture and Post-Production Style\n\n1. Clarity: Maintain the visibility of skin pores and details, avoid excessive smoothing, but appropriately soften non-focus areas.\n\n2. Tone Processing: Maintain a unified overall tone, moderately reduce distracting colors, and only enhance the main color and a few accent colors.\n\n3. Emotional Expression: Based on the mood of the reference image, control the intensity of facial expressions and eye contact to ensure the image retains its original style while possessing a unique personality.\n\nReferring to user-uploaded portrait photos, the image style is automatically read and created according to the above rules.",
+      "prompt": "Transform the uploaded photo into a geometric, flat-style travel stamp illustration. Use bold, simplified shapes, clean vector lines, and a limited 3–5 color flat palette. Keep 2–3 key elements from the original image (e.g. main object, background shape, landmark). Apply no gradients or shadows. Center the artwork in a square canvas with a perforated stamp border, taking up 60–70% of the space. Use a solid contrasting background outside the stamp. No text or labels.",
       "images": [
-        "images/imp_0871.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0871.jpg"
       ]
     },
     {
@@ -15874,7 +15911,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776263502237,
+  "_publishedAt": 1776264649465,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
