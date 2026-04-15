@@ -615,7 +615,8 @@
     "added_imp_0878",
     "added_imp_0881",
     "added_imp_0879",
-    "added_imp_0883"
+    "added_imp_0883",
+    "added_imp_0886"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -10847,9 +10848,9 @@
       "id": "new",
       "title": "Plush Toys In",
       "cat": "",
-      "prompt": "Erase the background and replace the characters with the following:\n\nCosplayers and Character Goods\n\nCharacter/Motif:\nCharacter goods based on the illustration\n\nHairstyle, Eyes, and Appearance:\n(Focus on merchandise, not the character itself.)\n\nMain Character: A cosplayer is holding a figurine in the center of the screen.\n\nLocation:\nComic Market (a doujinshi sales event).\nA spacious booth is filled with merchandise lined up on tables and shelves. The atmosphere is filled with excitement and anticipation.\n\nMerchandise Lineup:\n• A large, approximately 100cm figure is displayed in the center of the booth, creating an eye-catching display.\n• The character is displayed on an 80-inch LCD panel.\n• Acrylic Stands\n• Chibi Figures (Deformed)\n• Body Pillows (Large, Full-Length Character Print)\n• Jigsaw Puzzles (Using Character Artwork)\n• Stationery (Notebooks, Pens, Clear Files, etc.)\n• Desk Pads\n• Plush Toys (Deformed)\nExhibition/Display:\n• Goods neatly arranged throughout the booth, creating a unified look.\n• Utilizing desks and shelves reminiscent of doujinshi sales events, the layout encourages fans to pick up items.\n• With the energy of the visitors as a backdrop, the venue is presented as a special \"fan sanctuary.\"\nOverall Tone:\nA dreamlike sales space.\nWhile emphasizing cuteness and pop, the space evokes the unique enthusiasm of doujin events and the feeling of a \"sanctuary for fan activities.\"\nSwarms of people.\n\nImage Quality:\nPhotorealistic, 4K (4000px x 3000px)",
+      "prompt": "Generate an image showing this animal as a simplified and deformed as an anime-like plush toy (made of short-pile, soft-touch polyester knit fabric), with multiple units inside a UFO catcher machine. On either side are additional UFO Catcher machines containing multiple plush toys of different animals, distinct from the main image. The setting is a Japanese game center, with an overall very bright impression. Only the top section of the UFO catcher is painted in vibrant colors. The lower section is painted white. The background is a wall, and the area behind the UFO catcher is quite blurred.　The floor is carpeted. The shooting angle is from the front. Most importantly, absolutely no text or logos should appear in the output.",
       "images": [
-        "images/imp_0884.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0884.jpg"
       ]
     },
     {
@@ -10877,9 +10878,9 @@
       "id": "new",
       "title": "Pop Art Portrait",
       "cat": "",
-      "prompt": "high-quality hybrid photo-illustration of a subject, featuring a clean \"mixed-media\" aesthetic where a realistic photograph is blended with bold, vector-style hand-drawn graphics.\nCore Stylistic Structure:\nRealistic Portrait Base: The central subject's face and hair, along with the immediate background, are high-quality and photorealistic. The background is slightly blurred to create depth.\nOverlaid Vector Illustration: Specific elements within the frame are replaced or overlaid with clean-lined, vibrantly colored 2D vector illustrations.\nHybrid Accessories: Any items worn on the head or face (e.g., sunglasses, hats, jewelry) are rendered as flat, stylized graphic overlays with sharp outlines.\nHybrid Held Items: Any object held by the subject (e.g., food, drink, or tools) is rendered entirely as a cartoon-style graphic piece, featuring bold outlines, simplified shading, and stylized details like drips or highlights.\nIllustrated Clothing: The subject's outfit is depicted as a flat, 2D illustrated graphic layer with vibrant colors, worn over the realistic portrait.\nGraphic Enhancements:\nVFX Overlays: Dynamic \"liquid splashes,\" \"pop-art sparkles,\" and tiny stars are scattered around the illustrated objects to add energy and movement.\nVisual Contrast: A sharp, intentional contrast between the natural skin tones/textures of the photo and the highly saturated, solid colors of the 2D illustrations (vivid reds, electric blues, bright yellows).\nAesthetic & Finish:\nA professional and artistic mixed-media composition. The transition between the realistic photo and the graphic drawing is crisp, clean, and seamless, creating a unique \"augmented reality\" look.",
+      "prompt": "Use the uploaded reference image as a strict facial identity source.\n\nCRITICAL IDENTITY LOCK:\nThe face must match the reference image exactly — identical facial structure, proportions, eyes, lips, nose, skin tone, texture, hairstyle, and micro-details.\nNo changes, no reinterpretation, no beautification, no age shifts, and no added or removed facial hair.\nA perfect 1:1 facial reproduction is mandatory.\nThis applies whether the subject is interpreted as male or female.\n\nYou are an expert digital artist specializing in vibrant, stylized portrait creation with deep knowledge of Pop Art aesthetics, color theory, and modern digital illustration techniques. You excel at transforming reference photographs into bold, contemporary artworks that capture both the subject's essence and artistic vision.\n\n\n\nTASK:\nCreate a vibrant, stylized Pop Art digital portrait based entirely on the uploaded reference image. The artwork must maintain the subject’s exact facial identity, features, and serious expression while applying strong Pop Art stylization.\n\nOBJECTIVE:\nTransform the reference photograph into a striking Pop Art–inspired portrait that balances artistic interpretation with strict facial identity accuracy, resulting in a modern, gallery-worthy piece with bold color choices and high visual impact.\n\nAESTHETIC & STYLE GUIDELINES:\n• Use bold accent colors: bright pink, vivid blue, and energetic orange \n• Background must be deep navy blue to provide strong contrast \n• Maintain the subject’s serious expression and well-defined face \n• High-contrast Pop Art lighting and exaggerated tones \n• Dynamic, modern, contemporary feel \n• Hard edges, graphic color blocks, expressive shading \n• Clear definition of facial features while allowing stylization \n• Avoid photorealism — prioritize artistic energy and visual boldness \n\nFinal composition:\nA modern Pop Art portrait with perfect identity retention, vibrant color impact, and strong gallery-grade artistic clarity.",
       "images": [
-        "images/imp_0887.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0887.jpg"
       ]
     },
     {
@@ -15917,7 +15918,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776264874347,
+  "_publishedAt": 1776265061723,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
