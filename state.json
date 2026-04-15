@@ -561,7 +561,10 @@
     "added_imp_0781",
     "added_imp_0783",
     "added_imp_0784",
-    "added_imp_0785"
+    "added_imp_0785",
+    "added_imp_0789",
+    "added_imp_0793",
+    "added_imp_0792"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -9833,9 +9836,9 @@
       "id": "new",
       "title": "Person Sitting On",
       "cat": "",
-      "prompt": "A colorful flat vector illustration of the person from the image sitting in a park. The person from the image has a red shirt and sitting next to Pikachu, Bingo from Bluey, and Gabby from Gabby's Dollhouse. The background is a peaceful park with trees. Playful art style, vibrant colors, clean lines",
+      "prompt": "{\"objective\":\"Generate a cinematic, photo-realistic image of the person in the uploaded image\",\"scene_description\":{\"setting\":{\"location\":\"Rain-soaked flyover bench at dusk\",\"environment_details\":[\"wet pavement with puddle reflections\",\"vibrant neon cityscape\"]},\"subject\":{\"pose\":\"sitting on the bench, low-angle perspective\",\"appearance\":{\"outfit\":{\"jacket\":\"colorblock denim jacket\",\"inner_wear\":\"yellow hoodie\"}}}},\"camera_and_style\":{\"camera_angle\":\"cinematic low-angle shot\",\"aesthetics\":[\"cinematic depth\",\"high contrast\",\"atmospheric realism\"]}}",
       "images": [
-        "images/imp_0788.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0788.jpg"
       ]
     },
     {
@@ -9853,9 +9856,9 @@
       "id": "new",
       "title": "Person Sitting With",
       "cat": "",
-      "prompt": "A colorful flat vector illustration of the person from the image sitting in a park. The person from the image has a red shirt and sitting next to Pikachu, Bingo from Bluey, and Gabby from Gabby's Dollhouse. The background is a peaceful park with trees. Playful art style, vibrant colors, clean lines",
+      "prompt": "Hyper-realistic full-body portrait of the uploaded person, sitting. A large vertical TikTok logo icon stands beside them, slightly tilted; they lean one arm on it while holding a cup in the other hand. Shot in a full-frame DSLR style (85mm, f/1.x) with shallow depth of field and the face in razor-sharp focus, showing real skin texture and lifelike eyes. Set in a minimal pastel-green studio with soft cinematic lighting. Ultra-detailed clothing, skin, hair, and surfaces. Outfit: black streetwear hoodie, white trousers, white Converse. Clean, modern, professional fashion-photo look—not CGI",
       "images": [
-        "images/imp_0790.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0790.jpg"
       ]
     },
     {
@@ -9863,9 +9866,9 @@
       "id": "new",
       "title": "Person Sitting With",
       "cat": "",
-      "prompt": "A colorful flat vector illustration of the person from the image sitting in a park. The person from the image has a red shirt and sitting next to Pikachu, Bingo from Bluey, and Gabby from Gabby's Dollhouse. The background is a peaceful park with trees. Playful art style, vibrant colors, clean lines",
+      "prompt": "Hyper-realistic full-body portrait of the uploaded person, sitting. A large vertical [Vine] icon stands beside them, slightly tilted; they lean one arm on it while holding a cup in the other hand. Shot in a full-frame DSLR style (85mm, f/1.x) with shallow depth of field and the face in razor-sharp focus, showing real skin texture and lifelike eyes. Set in a minimal pastel-green studio with soft cinematic lighting. Ultra-detailed clothing, skin, hair, and surfaces. Outfit: black streetwear hoodie, white trousers, white Converse. Clean, modern, professional fashion-photo look—not CGI.",
       "images": [
-        "images/imp_0791.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0791.jpg"
       ]
     },
     {
@@ -15863,7 +15866,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776262534040,
+  "_publishedAt": 1776262931604,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
