@@ -558,7 +558,10 @@
     "added_imp_0775",
     "added_imp_0777",
     "added_imp_0778",
-    "added_imp_0781"
+    "added_imp_0781",
+    "added_imp_0783",
+    "added_imp_0784",
+    "added_imp_0785"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -9770,9 +9773,9 @@
       "id": "new",
       "title": "Person Posing With",
       "cat": "",
-      "prompt": "Create Ultra-realistic 8K cinematic portrait based precisely on the uploaded reference image (male or female) - maintaining 100% fidelity to the subject’s real facial structure, gender, skin tone, hairstyle, and natural proportions, without any facial modification.\n\nDepict the subject as a Pokémon Trainer, centered in the frame and posing confidently, wearing casual yet adventurous trainer attire inspired by the modern Pokémon universe - textured jacket, tactical backpack, and fingerless gloves.\nThe expression shows a very subtle, natural smile, conveying calm confidence and connection with the Pokémon world.\n\nSurround the trainer with friendly Pokémon companions - Pikachu, Bulbasaur, Charmander, and Squirtle - each interacting in a playful, dynamic, and affectionate manner:\n\nPikachu perched on the shoulder, glowing faintly with electric sparks.\n\nBulbasaur leaning forward with curiosity.\n\nCharmander’s flame tail casting warm reflections.\n\nSquirtle laughing near the trainer’s side, droplets in motion.\n\nThe background features a vibrant, sunlit training field, bathed in a golden sunset sky with warm orange, pink, and lavender tones.\nHigh above, Legendary Pokémon soar majestically, their forms illuminated by radiant sunlight and soft clouds, giving a sense of scale and epic adventure.\n\nLighting and optics: cinematic HDR setup with soft directional sunlight, lens flares, and shallow depth of field from a wide-angle (35mm f/1.8) lens simulation.\nInclude micro-textures on Pokémon fur, fabrics, and skin, realistic reflections, motion blur, and fine atmospheric particles for dynamic realism.\n\nComposition: heroic game-poster framing, vibrant yet balanced color palette, joyful and adventurous energy.\nRender in 8K ultra-detail, ensuring a lifelike Pokémon world and authentic emotional tone faithful to the real person in the image.",
+      "prompt": "A selfie taken by the person in the attached image with Jabba the Hutt on the set of Star Wars: Return of the Jedi. They are in a dimly lit practical set of Jabba's throne room. Next to them is the massive Jabba the Hutt puppet, operated by several unseen puppeteers. The person is posing with a look of awe, while a makeup artist adjusts the slime effects on Jabba's skin. Camera tracks are visible on the floor.",
       "images": [
-        "images/imp_0782.jpg"
+        "/images/custom_added_imp_0782_img0.jpg"
       ]
     },
     {
@@ -9810,9 +9813,9 @@
       "id": "new",
       "title": "Person Sitting On",
       "cat": "",
-      "prompt": "A colorful flat vector illustration of the person from the image sitting in a park. The person from the image has a red shirt and sitting next to Pikachu, Bingo from Bluey, and Gabby from Gabby's Dollhouse. The background is a peaceful park with trees. Playful art style, vibrant colors, clean lines",
+      "prompt": "Create a dramatic, ultra-realistic nighttime urban scene. A person from the uploaded reference image - keeping the exact same face, expression, proportions, skin texture, hair, and all unique facial details with zero alteration - sits confidently in the center of an empty city street beneath an overpass. They lean casually against a graffiti-covered concrete pillar, surrounded by the glow of a modern skyline filled with tall glass buildings, illuminated windows, and neon reflections. The person wears a white-yellow shirt with bold red text, olive joggers, and red-white sneakers, captured in rich, detailed fabric texture. Long-exposure light trails from passing vehicles streak dynamically through the background in blue, red, orange, and white, adding a futuristic sense of motion. Shot from a low-angle, centered, symmetrical perspective, creating deep cinematic drama and powerful compositional balance. The atmosphere blends street photography with cyberpunk-style colors - moody, energetic, modern - with strong contrast, rich shadows, highly detailed surfaces, and professional lighting. Rendered in hyper-realistic 4K resolution, sharp, vivid, and immersive. Important: The person must retain 100% of the exact face from the uploaded reference image - same identity, same micro-details, same natural features - seamlessly integrated into this urban night scene.",
       "images": [
-        "images/imp_0786.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0786.jpg"
       ]
     },
     {
@@ -9820,9 +9823,9 @@
       "id": "new",
       "title": "Person Sitting On",
       "cat": "",
-      "prompt": "A colorful flat vector illustration of the person from the image sitting in a park. The person from the image has a red shirt and sitting next to Pikachu, Bingo from Bluey, and Gabby from Gabby's Dollhouse. The background is a peaceful park with trees. Playful art style, vibrant colors, clean lines",
+      "prompt": "Create a surreal, vertical hyperrealistic cinematic shot of a person (from the provided reference image, keeping the exact same face, expression, skin tone, eye color, and hair texture) sitting cross-legged in a lotus position on top of a giant transparent glass cookie jar overflowing with chocolate chip cookies. The person is wearing soft pajamas and looking down at their smartphone, absorbed in the moment. The scene takes place in a dimly lit, cozy kitchen, with warm overhead lighting casting a gentle golden glow across the wooden countertop. A steaming mug of tea and scattered cookies rest on the surface below. The mood is calm, introspective, and slightly whimsical. Rendered in hyperrealistic cinematic quality with a slightly desaturated color palette, soft volumetric lighting, visible lens reflections, and realistic textures for skin, fabric, glass, and cookies. Shot on ARRI Alexa 35, 35mm T1.4 lens, shallow depth of field (f/1.8), natural film grain, and Kodak Vision3 250D color grading. Atmosphere: quiet, intimate, warm, with a surreal twist - lifelike yet dreamlike. Important: The person’s face must remain identical to the one from the uploaded photo - same proportions, age, expression, and natural imperfections - seamlessly integrated into the lighting and scene.",
       "images": [
-        "images/imp_0787.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0787.jpg"
       ]
     },
     {
@@ -15860,7 +15863,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776259456204,
+  "_publishedAt": 1776262534040,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
