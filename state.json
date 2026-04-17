@@ -639,7 +639,12 @@
     "added_imp_0928",
     "added_imp_0929",
     "added_imp_0930",
-    "added_imp_0931"
+    "added_imp_0931",
+    "added_imp_0934",
+    "added_imp_0937",
+    "added_imp_0939",
+    "added_imp_0940",
+    "added_imp_0944"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -11442,9 +11447,9 @@
       "id": "new",
       "title": "Selfie With Baby",
       "cat": "",
-      "prompt": "A selfie taken by the person in the attached image with Grogu (Baby Yoda) on the set of The Mandalorian. They are in a practical set of a desert marketplace. Grogu is an incredibly detailed, small animatronic puppet in a floating pod. The person is kneeling next to it with their phone, and a puppeteer is adjusting the ear mechanics from below. A boom mic hangs overhead.",
+      "prompt": "\"I'm taking a selfie with Baby Groot on the set of Guardians of the Galaxy Vol. 2. I'm holding my phone high, and Groot, the small tree-like creature (referencing image_21.png style), is dancing in a tiny pot on a complex space station set. Green screens and motion capture cameras are visible behind us.\"",
       "images": [
-        "images/imp_0941.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0941.jpg"
       ]
     },
     {
@@ -11452,9 +11457,9 @@
       "id": "new",
       "title": "Selfie With Baymax",
       "cat": "",
-      "prompt": "'m taking a selfie with Baymax on the set of Big Hero 6. Baymax, the large, inflatable robot (like in image_2.png style), is giving me a gentle hug. We are in a highly detailed 'Hiro's workshop' set. The camera is on a jib arm, and there are many glowing computer screens.\"",
+      "prompt": "I'm taking a selfie with Baymax on the set of Big Hero 6. Baymax, the large, inflatable robot (like in image_2.png style), is giving me a gentle hug. We are in a highly detailed 'Hiro's workshop' set. The camera is on a jib arm, and there are many glowing computer screens.\"",
       "images": [
-        "images/imp_0942.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0942.jpg"
       ]
     },
     {
@@ -16757,7 +16762,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776416247865,
+  "_publishedAt": 1776416492010,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
