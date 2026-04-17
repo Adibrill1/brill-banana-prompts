@@ -620,7 +620,14 @@
     "added_imp_0890",
     "added_imp_0891",
     "added_imp_0896",
-    "added_imp_0898"
+    "added_imp_0898",
+    "added_imp_0903",
+    "added_imp_0905",
+    "added_imp_0907",
+    "added_imp_0908",
+    "added_imp_0909",
+    "added_imp_0911",
+    "added_imp_0913"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -814,7 +821,8 @@
     "added_imp_0458": "/images/custom_added_imp_0458.jpg",
     "added_imp_0463": "/images/custom_added_imp_0463.jpg",
     "added_imp_0482": "/images/custom_added_imp_0482.jpg",
-    "added_imp_0623": "/images/custom_added_imp_0623.jpg"
+    "added_imp_0623": "/images/custom_added_imp_0623.jpg",
+    "added_imp_0900": "/images/custom_added_imp_0900.jpg"
   },
   "added": [
     {
@@ -11014,7 +11022,7 @@
       "cat": "",
       "prompt": "I. Overall Objective\n\n1. Function Description: Based on user-uploaded reference images, extract the subject's temperament, makeup style, lighting, and color characteristics to create a unique fashion portrait collage.\n\n2. Difference Requirements: Preserve the facial features and overall temperament of the reference subject; do not directly copy the original image. Makeup and composition should be creatively varied within the same stylistic framework.\n\nII. Input Reference Image Requirements\n\n1. Reference Content: A clear front-facing or two-thirds profile photo of a person, clearly showing facial features, skin texture, and general lighting atmosphere.\n\n2. Extraction Key Points: Extract skin tone, makeup intensity, main color tone, lighting direction, subject temperament, and clothing color scheme from the reference image.\n\nIII. Image Composition and Output Format\n\n1. Main Image: Generate a super close-up or close-up of the subject's face, with the head and shoulders occupying most of the image space. The gaze can be designed with reference to the temperament of the original image.\n\n2. Collage Structure: Add multiple small images to the right side or corner, including close-ups of profiles, hands, and makeup details, creating a magazine-like layout.\n\n3. Background: Keep the background simple and clean, using solid colors or slight brightness transitions to highlight the subject and makeup.\n\nIV. Text and Graphic Design\n\n1. Title Text: Place a large magazine title at the top of the image, with a simple and powerful font, centered or top-center aligned.\n\n2. Subtitles and Small Text: Add several lines of small text to one side or bottom of the image. This can include keywords, names, and dates, arranged neatly with a consistent font size.\n\n3. Geometric Shapes: Add thin lines, narrow rectangular color blocks, or semi-transparent color blocks around the subject, combining them with text to enhance the sense of planar composition.\n\nV. Style Inheritance Rules\n\n1. Color Inheritance: The overall color tone, contrast, and warm/cool tones should closely match the style of the reference image. The main color should come from the most prominent makeup or clothing color in the reference image.\n\n2. Lighting Inheritance: Refer to the original image's lighting direction and softness. If the original image uses soft lighting, maintain the soft lighting texture; if the original image has high contrast, retain a certain degree of sharpness.\n\n3. Makeup Inheritance: Maintain the same style level based on the makeup characteristics of the reference image (clear, intense, experimental, natural, etc.), then make subtle variations in eye makeup, blush, and lip makeup.\n\n4. Atmosphere Inheritance: Continue the emotional atmosphere of the reference image, such as a cool, sweet, rebellious, or mysterious feel, echoing it in expressions and postures.\n\nVI. Creative Variation Rules\n\n1. Makeup Variation: Add localized exaggerations to the reference style, such as expanding the blush area, enhancing lip shading, adding freckles or highlights.\n\n2. Composition Variation: Adjust the facial angle, cropping area, and small image collage position to ensure different compositions for each generation.\n\n3. Accessory Variation: Add simple yet stylish accessories to the neck, ears, or hands, echoing the main color scheme but not completely replicating the reference image. 4. Detailed Gestures: Add hand gestures such as touching the lips, cheeks, and under the eyes to make the image more narrative and engaging.\n\nVII. Overall Texture and Post-Production Style\n\n1. Clarity: Maintain the visibility of skin pores and details, avoid excessive smoothing, but appropriately soften non-focus areas.\n\n2. Tone Processing: Maintain a unified overall tone, moderately reduce distracting colors, and only enhance the main color and a few accent colors.\n\n3. Emotional Expression: Based on the mood of the reference image, control the intensity of facial expressions and eye contact to ensure the image retains its original style while possessing a unique personality.\n\nReferring to user-uploaded portrait photos, the image style is automatically read and created according to the above rules.",
       "images": [
-        "images/imp_0900.jpg"
+        "/images/custom_added_imp_0900_img0.jpg"
       ]
     },
     {
@@ -11022,9 +11030,9 @@
       "id": "new",
       "title": "Profile Photo Maintaining",
       "cat": "",
-      "prompt": "I. Overall Objective\n\n1. Function Description: Based on user-uploaded reference images, extract the subject's temperament, makeup style, lighting, and color characteristics to create a unique fashion portrait collage.\n\n2. Difference Requirements: Preserve the facial features and overall temperament of the reference subject; do not directly copy the original image. Makeup and composition should be creatively varied within the same stylistic framework.\n\nII. Input Reference Image Requirements\n\n1. Reference Content: A clear front-facing or two-thirds profile photo of a person, clearly showing facial features, skin texture, and general lighting atmosphere.\n\n2. Extraction Key Points: Extract skin tone, makeup intensity, main color tone, lighting direction, subject temperament, and clothing color scheme from the reference image.\n\nIII. Image Composition and Output Format\n\n1. Main Image: Generate a super close-up or close-up of the subject's face, with the head and shoulders occupying most of the image space. The gaze can be designed with reference to the temperament of the original image.\n\n2. Collage Structure: Add multiple small images to the right side or corner, including close-ups of profiles, hands, and makeup details, creating a magazine-like layout.\n\n3. Background: Keep the background simple and clean, using solid colors or slight brightness transitions to highlight the subject and makeup.\n\nIV. Text and Graphic Design\n\n1. Title Text: Place a large magazine title at the top of the image, with a simple and powerful font, centered or top-center aligned.\n\n2. Subtitles and Small Text: Add several lines of small text to one side or bottom of the image. This can include keywords, names, and dates, arranged neatly with a consistent font size.\n\n3. Geometric Shapes: Add thin lines, narrow rectangular color blocks, or semi-transparent color blocks around the subject, combining them with text to enhance the sense of planar composition.\n\nV. Style Inheritance Rules\n\n1. Color Inheritance: The overall color tone, contrast, and warm/cool tones should closely match the style of the reference image. The main color should come from the most prominent makeup or clothing color in the reference image.\n\n2. Lighting Inheritance: Refer to the original image's lighting direction and softness. If the original image uses soft lighting, maintain the soft lighting texture; if the original image has high contrast, retain a certain degree of sharpness.\n\n3. Makeup Inheritance: Maintain the same style level based on the makeup characteristics of the reference image (clear, intense, experimental, natural, etc.), then make subtle variations in eye makeup, blush, and lip makeup.\n\n4. Atmosphere Inheritance: Continue the emotional atmosphere of the reference image, such as a cool, sweet, rebellious, or mysterious feel, echoing it in expressions and postures.\n\nVI. Creative Variation Rules\n\n1. Makeup Variation: Add localized exaggerations to the reference style, such as expanding the blush area, enhancing lip shading, adding freckles or highlights.\n\n2. Composition Variation: Adjust the facial angle, cropping area, and small image collage position to ensure different compositions for each generation.\n\n3. Accessory Variation: Add simple yet stylish accessories to the neck, ears, or hands, echoing the main color scheme but not completely replicating the reference image. 4. Detailed Gestures: Add hand gestures such as touching the lips, cheeks, and under the eyes to make the image more narrative and engaging.\n\nVII. Overall Texture and Post-Production Style\n\n1. Clarity: Maintain the visibility of skin pores and details, avoid excessive smoothing, but appropriately soften non-focus areas.\n\n2. Tone Processing: Maintain a unified overall tone, moderately reduce distracting colors, and only enhance the main color and a few accent colors.\n\n3. Emotional Expression: Based on the mood of the reference image, control the intensity of facial expressions and eye contact to ensure the image retains its original style while possessing a unique personality.\n\nReferring to user-uploaded portrait photos, the image style is automatically read and created according to the above rules.",
+      "prompt": "\"A professional, high-resolution profile photo, maintaining the exact facial structure...\"",
       "images": [
-        "images/imp_0901.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0901.jpg"
       ]
     },
     {
@@ -11032,9 +11040,9 @@
       "id": "new",
       "title": "Program For Broadway",
       "cat": "",
-      "prompt": "A photo of a program for the Broadway show about TCG players on a nice theater seat, it's professional and well made, glossy, we can see the cover and a page showing a photo of the stage.",
+      "prompt": "A photo of a program for the Broadway show about \"Brill.ai\" players on a nice theater seat, it's professional and well made, glossy, we can see the cover and a page showing a photo of the stage.",
       "images": [
-        "images/imp_0902.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0902.jpg"
       ]
     },
     {
@@ -11044,7 +11052,7 @@
       "cat": "",
       "prompt": "A photo of a program for the Broadway show about TCG players on a nice theater seat, it's professional and well made, glossy, we can see the cover and a page showing a photo of the stage.",
       "images": [
-        "images/imp_0903.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0903.jpg"
       ]
     },
     {
@@ -16737,7 +16745,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776415136782,
+  "_publishedAt": 1776415495626,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
