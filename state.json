@@ -627,7 +627,19 @@
     "added_imp_0908",
     "added_imp_0909",
     "added_imp_0911",
-    "added_imp_0913"
+    "added_imp_0913",
+    "added_imp_0914",
+    "added_imp_0917",
+    "added_imp_0918",
+    "added_imp_0919",
+    "added_imp_0921",
+    "added_imp_0922",
+    "added_imp_0923",
+    "added_imp_0926",
+    "added_imp_0928",
+    "added_imp_0929",
+    "added_imp_0930",
+    "added_imp_0931"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -11180,9 +11192,9 @@
       "id": "new",
       "title": "Replace Cat With",
       "cat": "",
-      "prompt": "Based on the uploaded photo, perform the following edits:\n1. Remove the motorcycle and the person riding it on the left side of the image.\n2. Add a small cat crouching next to the main person, maintaining a reasonable proportion.\n3. Replace the cat with a dog, keeping the original pose.\n",
+      "prompt": "Based on the uploaded photo, perform the following edits:\nAdd a small dog crouching next to the main person, maintaining a reasonable proportion.",
       "images": [
-        "images/imp_0916.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0916.jpg"
       ]
     },
     {
@@ -11290,9 +11302,9 @@
       "id": "new",
       "title": "Selfie Em Calçada",
       "cat": "",
-      "prompt": "{\"meta\":{\"image_quality\":\"High\",\"image_type\":\"Photo\",\"resolution_estimation\":\"High resolution, likely smartphone portrait mode\"},\"global_context\":{\"scene_description\":\"A high-angle, top-down selfie taken outdoors on a paved surface. The subject is a young woman crouching or squatting over a skateboard...\"},\"composition\":{\"camera_angle\":\"High-angle / Top-down / Selfie\",\"framing\":\"Close-up wide-angle\"},\"objects\":[{\"id\":\"obj_001\",\"label\":\"Person (Subject)\",\"pose_or_orientation\":\"Squatting, face tilted up towards camera\"},{\"id\":\"obj_007\",\"label\":\"Skateboard\",\"visual_attributes\":{\"color\":\"Light wood with faded green graphics\"}}]}",
+      "prompt": "📱🍂 Editorial Theme: “Selfie de Outono — Realidade em Alta”\n🎭 Conceito\nUm retrato hiper realista capturado como uma selfie casual com iPhone, em uma calçada urbana durante o outono. A imagem simula um momento espontâneo, não intencional, com estética 100% natural — sem filtros, sem gradação de cor, sem estilização. O modelo — com rosto fiel à imagem original — aparece descentralizado no enquadramento, com parte do rosto cortada e o braço esquerdo estendido para cima, segurando o celular. A expressão é neutra com leve curiosidade, boca relaxada, olhos atentos. O cabelo está levemente bagunçado, com fios soltos refletindo a luz solar intensa do fim da tarde. A composição transmite autenticidade, estilo urbano e conexão com o ambiente.\n\n🎥 Especificações Técnicas\nDispositivo simulado: iPhone (câmera frontal, lente grande angular nativa)\n\nFormato da imagem: 4:3 — proporção padrão de captura casual\n\nEnquadramento: selfie descentralizada, levemente torta, parte do rosto cortada\n\nÂngulo da câmera: alto (high angle), com o braço esquerdo estendido — reforça espontaneidade e perspectiva pessoal\n\nDistância focal: curta, com leve distorção nas bordas — típica de lente de celular\n\nDesfoque de movimento: sutil nas pontas dos dedos e fios de cabelo — reforça realismo\n\nFoco: uniforme — tanto o rosto quanto o fundo estão nítidos, sem bokeh ou modo retrato\n\nIluminação: luz natural intensa do fim da tarde — sombras nítidas e reflexos quentes\n\nFaixa dinâmica: realista — contraste entre luz e sombra preservado sem exageros\n\nEstilo visual: fotografia documental urbana — sem retoques, sem filtros, aparência humana e crua\n\n🧍‍♂️ Pose Principal: “Selfie em Perspectiva”\nPostura corporal: corpo levemente inclinado para trás, cabeça voltada para a lente com leve inclinação lateral\n\nBraço visível: esquerdo — estendido para cima e à frente, antebraço entrando no quadro\n\nExpressão facial: neutra com leve inquisitividade — transmite presença e naturalidade\n\nCabelo: levemente bagunçado, com fios soltos refletindo a luz — reforça espontaneidade\n\nTextura da pele: preservada com fidelidade — sem retoques, com brilho natural e poros visíveis\n\n👕 Detalhes do Look\nJaqueta: boxy felpuda com zíper, em bloco de cores sálvia/cinza — textura visível e bem definida\n\nCamiseta: preta canelada — aparece discretamente sob a jaqueta\n\nCalça: jeans ultra-largos com lavagem de areia — não visível na selfie, mas parte do conjunto\n\nTênis: slip-on creme robustos — não visíveis no enquadramento atual\n\nFones de ouvido: brancos over-ear — encaixados sobre a cabeça, com arco visível no topo do cabelo\n\nAcessórios: nenhum adicional visível — foco na composição e na expressão\n\n🌇 Detalhes do Ambiente\nLocal: calçada urbana com pavimentação de pedra quadrada\n\nElementos visíveis:\n\nFaixa tátil de meio-fio — textura realista e funcional\n\nFolhas amarelas espalhadas — reforça estação de outono\n\nSombra diagonal de árvore — cria composição gráfica e profundidade\n\nParte do pneu de um carro estacionado — visível no canto superior direito\n\nLuz: sol brilhante do fim da tarde — cria sombras definidas e reflexos quentes sobre o rosto e o chão\n\nEstilo: fotografia casual urbana — ideal para retratos de estilo pessoal, lifestyle ou redes sociais",
       "images": [
-        "images/imp_0927.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0927.jpg"
       ]
     },
     {
@@ -16745,7 +16757,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776415495626,
+  "_publishedAt": 1776416247865,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
