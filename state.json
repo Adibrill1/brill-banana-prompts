@@ -680,7 +680,12 @@
     "added_imp_1018",
     "added_imp_1020",
     "added_imp_1024",
-    "added_imp_1023"
+    "added_imp_1023",
+    "added_imp_1025",
+    "added_imp_1028",
+    "added_imp_1029",
+    "added_imp_1031",
+    "added_imp_1032"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -16809,7 +16814,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776620935221,
+  "_publishedAt": 1776621247906,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
