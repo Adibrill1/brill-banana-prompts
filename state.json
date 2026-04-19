@@ -652,7 +652,12 @@
     "dup_1776416824931",
     "added_imp_0958",
     "added_imp_0961",
-    "added_imp_0963"
+    "added_imp_0963",
+    "added_imp_0969",
+    "added_imp_0972",
+    "added_imp_0974",
+    "added_imp_0976",
+    "added_imp_0977"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -11705,9 +11710,9 @@
       "id": "new",
       "title": "Selfie With E.t.",
       "cat": "",
-      "prompt": "\"I'm taking a selfie with Sherlock Holmes on the set of Victorian London. I'm holding a modern phone, and Holmes, in his deerstalker cap and holding a magnifying glass (as seen in image_6.png), looks puzzled by it. We are standing outside a meticulously recreated 221B Baker Street on a foggy filming set.\"",
+      "prompt": "\"I'm taking a selfie with E.T. on the set of E.T. The Extra-Terrestrial. We are outside at night. E.T. is wrapped in a blanket in a bicycle basket, and his finger is glowing (referencing image_26.png and image_27.png). I'm smiling, and a large crane camera is positioning itself in the background.\"",
       "images": [
-        "images/imp_0966.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0966.jpg"
       ]
     },
     {
@@ -11775,9 +11780,9 @@
       "id": "new",
       "title": "Selfie With Godzilla",
       "cat": "",
-      "prompt": "A selfie taken by the person in the attached image with Godzilla on the set of a classic Toho movie. They are standing in a beautifully detailed miniature set of a Japanese city. Next to them is an actor wearing the iconic, bulky rubber Godzilla suit. The person is smiling at their phone, and a crew member is adjusting a miniature building that the monster is about to step on.",
+      "prompt": "i'm taking a selfie with Godzilla on the set of Hong Kong. I'm standing in a miniaturized 'city street' set, which is full of practical-effect smoke and sparks. I'm taking the picture, and a complex, life-sized 'torso' puppet (like image_2.png style) of Godzilla is roaring next to me. A massive film camera is on a dolly.",
       "images": [
-        "images/imp_0973.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_0973.jpg"
       ]
     },
     {
@@ -16780,7 +16785,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776417069822,
+  "_publishedAt": 1776620171340,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
