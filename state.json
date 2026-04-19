@@ -676,7 +676,11 @@
     "added_imp_1011",
     "added_imp_1012",
     "added_imp_1015",
-    "added_imp_1016"
+    "added_imp_1016",
+    "added_imp_1018",
+    "added_imp_1020",
+    "added_imp_1024",
+    "added_imp_1023"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -12280,9 +12284,9 @@
       "id": "new",
       "title": "Selfie With R2 D2",
       "cat": "",
-      "prompt": "\"I'm taking a selfie with a Minion on the set of Despicable Me 3. The set is a massive 'supervillain lair'. I'm smiling, and a Minion, a small, yellow cylindrical creature with goggles and overalls, is trying to reach a control panel behind me. A film crew is managing a large green-screen background.\"",
+      "prompt": "I'm taking a selfie with R2-D2 on the set of Star Wars in Tatooine. We are on a sandy outdoor filming location. The astromech droid is a detailed practical prop, slightly weathered by the desert. I'm kneeling next to it with my phone, while a crew member with a remote control stands just out of frame. Large light reflectors are visible.",
       "images": [
-        "images/imp_1021.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1021.jpg"
       ]
     },
     {
@@ -16805,7 +16809,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776620831367,
+  "_publishedAt": 1776620935221,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
