@@ -669,7 +669,14 @@
     "added_imp_0997",
     "added_imp_1002",
     "added_imp_1000",
-    "added_imp_1001"
+    "added_imp_1001",
+    "added_imp_1004",
+    "added_imp_1006",
+    "added_imp_1009",
+    "added_imp_1011",
+    "added_imp_1012",
+    "added_imp_1015",
+    "added_imp_1016"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -12113,9 +12120,9 @@
       "id": "new",
       "title": "Selfie With Na'vi",
       "cat": "",
-      "prompt": "\"I'm taking a selfie with a Minion on the set of Despicable Me 3. The set is a massive 'supervillain lair'. I'm smiling, and a Minion, a small, yellow cylindrical creature with goggles and overalls, is trying to reach a control panel behind me. A film crew is managing a large green-screen background.\"",
+      "prompt": "A selfie taken by the person in the attached image with a Na'vi on the set of Avatar. They are in a massive motion-capture volume studio with grey walls. Next to them is a tall actor in a grey skin-tight suit covered in reference dots, wearing a helmet camera pointing at their face. The person is holding their phone, and digital screens in the background show the real-time CGI rendering of the alien jungle.",
       "images": [
-        "images/imp_1005.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1005.jpg"
       ]
     },
     {
@@ -16798,7 +16805,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776620627172,
+  "_publishedAt": 1776620831367,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
