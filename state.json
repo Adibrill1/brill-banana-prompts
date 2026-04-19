@@ -662,7 +662,14 @@
     "added_imp_0980",
     "added_imp_0984",
     "added_imp_0985",
-    "added_imp_0987"
+    "added_imp_0987",
+    "added_imp_0990",
+    "added_imp_0993",
+    "added_imp_0995",
+    "added_imp_0997",
+    "added_imp_1002",
+    "added_imp_1000",
+    "added_imp_1001"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -857,7 +864,8 @@
     "added_imp_0463": "/images/custom_added_imp_0463.jpg",
     "added_imp_0482": "/images/custom_added_imp_0482.jpg",
     "added_imp_0623": "/images/custom_added_imp_0623.jpg",
-    "added_imp_0900": "/images/custom_added_imp_0900.jpg"
+    "added_imp_0900": "/images/custom_added_imp_0900.jpg",
+    "added_imp_0999": "/images/custom_added_imp_0999.jpg"
   },
   "added": [
     {
@@ -12047,7 +12055,7 @@
       "cat": "",
       "prompt": "A selfie taken by the person in the attached image with Miss Piggy on the set of The Muppets. They are on a grand, plush theater stage set. Miss Piggy is a detailed puppet in an elegant gown, sitting on a desk and looking dramatically at the phone. The person is laughing at the camera, and in the background, a puppeteer is carefully adjusting the hidden cables. Production equipment is everywhere.",
       "images": [
-        "images/imp_0999.jpg"
+        "/images/custom_added_imp_0999_img0.jpg"
       ]
     },
     {
@@ -12085,9 +12093,9 @@
       "id": "new",
       "title": "Selfie With Mr.",
       "cat": "",
-      "prompt": "{\"meta\":{\"image_quality\":\"High\",\"image_type\":\"Photo\",\"resolution_estimation\":\"High resolution, likely smartphone portrait mode\"},\"global_context\":{\"scene_description\":\"A high-angle, top-down selfie taken outdoors on a paved surface. The subject is a young woman crouching or squatting over a skateboard...\"},\"composition\":{\"camera_angle\":\"High-angle / Top-down / Selfie\",\"framing\":\"Close-up wide-angle\"},\"objects\":[{\"id\":\"obj_001\",\"label\":\"Person (Subject)\",\"pose_or_orientation\":\"Squatting, face tilted up towards camera\"},{\"id\":\"obj_007\",\"label\":\"Skateboard\",\"visual_attributes\":{\"color\":\"Light wood with faded green graphics\"}}]}",
+      "prompt": "A selfie taken by the person in the attached image with a Mr. Meeseeks suit actor on the set of a live-action Rick and Morty project. Several actors are dressed in bright blue Mr. Meeseeks costumes with stylized masks. The person is surrounded by them, laughing at the phone. Production crew are setting up cameras and lighting gear on the soundstage.",
       "images": [
-        "images/imp_1003.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1003.jpg"
       ]
     },
     {
@@ -16790,7 +16798,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776620350163,
+  "_publishedAt": 1776620627172,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
