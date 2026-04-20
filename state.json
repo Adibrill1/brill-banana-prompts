@@ -905,7 +905,17 @@
     "orig_64",
     "orig_75",
     "added_imp_0717",
-    "added_imp_0614"
+    "orig_77",
+    "orig_78",
+    "orig_79",
+    "orig_80",
+    "orig_81",
+    "orig_84",
+    "orig_85",
+    "orig_86",
+    "orig_89",
+    "orig_90",
+    "orig_94"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -935,7 +945,7 @@
     "orig_52": "images/custom_orig_52.jpg",
     "orig_29": "images/custom_orig_29.jpg",
     "added_1775114491412": "images/custom_added_1775114491412.jpg",
-    "orig_15": "https://brill-banana-prompts.vercel.app/images/226.jpg",
+    "orig_15": "/images/custom_orig_15.jpg",
     "orig_48": "https://brill-banana-prompts-v3.vercel.app/images/custom_orig_48.jpg",
     "orig_47": "https://brill-banana-prompts-v3.vercel.app/images/custom_orig_47.jpg",
     "orig_46": "images/custom_orig_46.jpg",
@@ -17080,7 +17090,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776685193501,
+  "_publishedAt": 1776685254113,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
