@@ -852,17 +852,58 @@
     "added_imp_1332",
     "added_imp_1335",
     "added_1775630066393",
-    "added_imp_0661",
-    "added_imp_0379",
-    "added_imp_0925",
-    "added_imp_0039",
-    "added_imp_0295",
-    "added_imp_0292",
-    "added_imp_0359",
-    "added_imp_1177",
-    "added_imp_0617",
-    "added_imp_0553",
-    "added_imp_0674"
+    "added_1775206624742",
+    "added_imp_1282",
+    "added_1775315717510",
+    "added_1775317439415",
+    "added_1775325455091",
+    "added_1775325558079",
+    "added_1775325615460",
+    "added_1775325873241",
+    "added_1775326128417",
+    "added_1775326163805",
+    "added_1775327479954",
+    "added_1775327793704",
+    "added_1775327908607",
+    "added_1775328040902",
+    "added_1775324952074",
+    "added_1775328163435",
+    "added_1775328399194",
+    "added_1775328841824",
+    "added_1775329113871",
+    "added_1775329152615",
+    "added_1775329719082",
+    "added_1775329946140",
+    "added_1775324689277",
+    "added_1775319076768",
+    "added_1775330044207",
+    "added_1775330197096",
+    "added_1775330438300",
+    "added_1775330604184",
+    "added_1775330727316",
+    "added_1775330983701",
+    "added_1775331353581",
+    "added_1775331501977",
+    "added_1775331685150",
+    "added_1775331833202",
+    "added_1775331916971",
+    "added_1775324628005",
+    "added_1775332157679",
+    "added_1775332230889",
+    "added_1775332427485",
+    "added_1775332372463",
+    "added_1775318519248",
+    "added_1775332535360",
+    "added_1775332567454",
+    "added_1775332597554",
+    "added_1775332706533",
+    "added_1775332738232",
+    "added_1775332853748",
+    "added_1775325309725",
+    "added_1775333008591",
+    "added_1775333195476",
+    "added_1775333454287",
+    "added_1775333713881"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -1061,8 +1102,7 @@
     "added_imp_0999": "/images/custom_added_imp_0999.jpg",
     "added_imp_1064": "/images/custom_added_imp_1064.jpg",
     "added_imp_1234": "/images/custom_added_imp_1234.jpg",
-    "added_imp_1247": "/images/custom_added_imp_1247.jpg",
-    "added_imp_0110": "/images/custom_added_imp_0110.jpg"
+    "added_imp_1247": "/images/custom_added_imp_1247.jpg"
   },
   "added": [
     {
@@ -1462,7 +1502,7 @@
       "cat": "",
       "prompt": "The breed of dog which biden had as a pet holding up a newspaper with the top headline from october 1st 2018 on a skateboard. A photo of the man/woman from the attached image, on the newspaper",
       "images": [
-        "/images/custom_added_1775325259630_img0.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/custom_added_1775325259630_img0.jpg"
       ]
     },
     {
@@ -1772,7 +1812,7 @@
       "cat": "",
       "prompt": "A cozy room where the wall looks like a giant paper illustration, flat ink lines and watercolor washes, yet a corner of the “paper wall” is peeled back, revealing a fully 3D forest behind it. The peeled edge curls outward like thick cardstock, casting a real shadow on the illustrated surface. The illusion: the 2D drawn objects (a drawn lamp, drawn shelf) cast realistic 3D shadows, while the 3D forest casts faint “ink” shadows as if it’s becoming a drawing. A cat sits half-in, half-out: front paws in 3D forest moss, back body in 2D sketch form, seamlessly blended. Soft morning light, gentle pastel palette, tactile paper fibers visible, high detail, whimsical but believable “mixed-dimension” realism.",
       "images": [
-        "/images/custom_added_1775329990059_img0.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/custom_added_1775329990059_img0.jpg"
       ]
     },
     {
@@ -1902,7 +1942,7 @@
       "cat": "",
       "prompt": "{ \"image_generation\": { \"requirements\": { \"face_preservation\": { \"preserve_original\": true, \"accuracy_level\": \"100% identical to reference\" }, \"lighting\": { \"type\": \"soft neon mixed lighting\", \"direction\": \"from left pink neon and right blue neon\", \"background_tone\": \"dark cyberpunk urban blur\" } }, \"subject\": { \"gender\": \"female\", \"expression\": \"calm, focused\", \"clothing\": { \"top\": \"sleek black techwear hoodie\", \"accessory\": \"thin glowing blue choker\" } }, \"composition\": { \"style\": \"hyper-realistic + cyber cartoon split\" }, \"special_effects\": { \"split_effect\": { \"type\": \"diagonal glitch tear\" } } } }",
       "images": [
-        "/images/custom_added_1775331529890_img0.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/custom_added_1775331529890_img0.jpg"
       ]
     },
     {
@@ -3362,7 +3402,7 @@
       "cat": "",
       "prompt": "CREATE a 64 K DSLR ultra-realistic cinematic portrait of the character (male or female, keeping the same face from the reference image), emerging dramatically from a large cracked playing card of the King of Spades.\nThe King figure has short hair and a well-groomed beard or refined facial features depending on gender, wearing an ornate crown with gold filigree and embedded red gems.\nThe character is dressed in luxurious robes with rich gold-and-crimson embroidery, draped across the shoulders with heavy regal folds.\nOne arm extends forward in a commanding, cinematic gesture, while the other rests naturally, revealing a subtle tattoo on the hand.\nThe cracked playing card looks like aged stone, with dust and debris breaking loose as the figure pushes through its surface.\nLighting is dramatic and low-key, emphasizing depth, shadows, and highlights across the crown and robes.\nBackground: dark gradient tone with faint atmospheric particles for a post-apocalyptic mood.\nThe name \"\nEnter Tomer\n\" is printed in fine lettering at the lower-right corner of the card.\nRender in Octane Render / Unreal Engine 5 style with photoreal materials, sharp optics, HDR global illumination, and cinematic depth of field.\nThe overall image evokes grandeur, authority, and quiet power, blending realism with subtle fantasy energy.\n",
       "images": [
-        "/images/custom_added_imp_0110_img0.jpg"
+        "images/imp_0110.jpg"
       ]
     },
     {
@@ -17015,7 +17055,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776676402673,
+  "_publishedAt": 1776676418176,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
