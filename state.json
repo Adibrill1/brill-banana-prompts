@@ -751,7 +751,9 @@
     "added_imp_1143",
     "added_imp_1141",
     "added_imp_1144",
-    "added_imp_1145"
+    "added_imp_1145",
+    "dup_1776662718797",
+    "added_imp_0349"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -15574,11 +15576,11 @@
     {
       "key": "dup_1776662718797",
       "id": 242,
-      "title": "Vintage Polaroids Of (עותק)",
+      "title": "Vintage Polaroids",
       "cat": "",
       "prompt": "Use character from uploaded photo to create an artistic collage of 6 vintage Polaroid photos, attached with a decorative rope and mini clothespins, like a home photo gallery. Each Polaroid frame has a slight fading and an old paper effect. The background is a soft pastel wall with light shadows, creating a cozy and creatively chaotic atmosphere.\nEmotions and poses:\n * Light laughter — eyes closed, natural joy.\n * Dreamy gaze upwards, relaxed pose.\n * Playful wink.\n * Calm smile with a head tilted to the side.Dynamic gesture hands raised high, full of energy.\n\n* Romantic half-glance over the shoulder.\n\nThe atmosphere is an art-retro style with elements of a '70s fashion magazine, soft diffused lighting, and muted warm and golden tones. Each photograph looks like a unique behind-the-scenes shot, with a touch of nostalgia and a sense of personal history.",
       "images": [
-        "/images/custom_dup_1776662718797_img0.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/custom_dup_1776662718797_img0.jpg"
       ]
     }
   ],
@@ -16891,7 +16893,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776662900225,
+  "_publishedAt": 1776663926956,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
