@@ -685,7 +685,13 @@
     "added_imp_1028",
     "added_imp_1029",
     "added_imp_1031",
-    "added_imp_1032"
+    "added_imp_1032",
+    "added_imp_1035",
+    "added_imp_1036",
+    "added_imp_1038",
+    "added_imp_1041",
+    "added_imp_1044",
+    "added_imp_1045"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -12449,9 +12455,9 @@
       "id": "new",
       "title": "Selfie With Snow",
       "cat": "",
-      "prompt": "{\n  \"image_generation_request\": {\n    \"meta_protocols\": {\n      \"reference_adherence\": {\n        \"instruction\": \"Use the provided photo as a strict face reference.\",\n        \"tolerance\": \"Zero deviation\",\n        \"parameters\": \"Preserve facial proportions, skin texture, expression, and identity with 100% accuracy.\",\n        \"stylization_constraint\": \"Do not stylize or alter facial features.\"\n      },\n      \"format_style\": \"Editorial winter poster–style multi-panel collage\",\n      \"aesthetic_quality\": \"Spontaneous iPhone photography (candid, cozy, realistic)\",\n      \"global_textures\": \"Soft snowfall, subtle analog grain, slight handheld imperfections\"\n    },\n    \"consistent_elements\": {\n      \"subject_wardrobe\": {\n        \"coat\": \"Short faux-fur coat\",\n        \"legwear\": \"Black tights\",\n        \"footwear\": \"Classic UGG boots\",\n        \"style_notes\": \"Simple, cozy, unmistakably winter\"\n      },\n      \"primary_device\": {\n        \"model\": \"iPhone 17 Pro Max\",\n        \"color\": \"Silver\",\n        \"usage\": \"Held by subject in relevant frames\"\n      },\n      \"color_palette\": [\n        \"Warm ambers\",\n        \"Soft reds\",\n        \"Pine greens\",\n        \"Muted winter greys\"\n      ]\n    },\n    \"layout_configuration\": {\n      \"panel_1_top_left\": {\n        \"scene_type\": \"Reflective shop-window shot at dusk\",\n        \"lighting_and_atmosphere\": \"Faint Christmas lights, garlands, frosted glass edges, warm highlights on fur\",\n        \"subject_action\": \"Holding phone partially covering face\",\n        \"optical_effects\": \"Passing silhouettes, layered reflections, gentle ghosting, natural glass curvature distortion\"\n      },\n      \"panel_2_top_right\": {\n        \"scene_type\": \"Ultra-wide street portrait (snowy sidewalk/Christmas market)\",\n        \"camera_angle\": \"Close, downward-angled\",\n        \"subject_pose\": \"Leaning forward casually, hands in coat pockets\",\n        \"visibility_check\": \"Black tights and UGG boots clearly visible\",\n        \"motion_dynamics\": \"Falling snow with slight motion blur\",\n        \"lens_characteristics\": \"Subtle perspective warping to reinforce handheld unstaged feel\"\n      },\n      \"panel_3_bottom_right\": {\n        \"scene_type\": \"Intimate overhead selfie\",\n        \"lighting\": \"Warm street or café lighting\",\n        \"props\": {\n          \"held_item\": \"Takeaway holiday drink (coffee or mulled wine)\",\n          \"accessories\": \"Wired earphones visible\"\n        },\n        \"texture_focus\": \"Sharply detailed fur texture and winter fabrics\",\n        \"mood\": \"Nostalgic holiday atmosphere enhanced by soft grain\"\n      }\n    },\n    \"graphic_overlay\": {\n      \"element\": \"Minimal Apple Music–style mini player\",\n      \"content\": \"Popular Christmas song (e.g., 'Last Christmas' or 'All I Want for Christmas Is You')\",\n      \"style\": \"Rendered flat and clean, no shadows\",\n      \"position\": \"Floating across the center of the collage\"\n    }\n  }\n}",
+      "prompt": "\"I'm taking a selfie with Snow White on the set of The Dwarfs' Cottage in the Forest. It's an outdoor location filming set. I'm holding the phone, and Snow White, in a simple traditional dress, is surrounded by practical effects 'animals' and the 'dwarfs' cottage' exterior.\"",
       "images": [
-        "images/imp_1037.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1037.jpg"
       ]
     },
     {
@@ -12479,9 +12485,9 @@
       "id": "new",
       "title": "Selfie With Stitch",
       "cat": "",
-      "prompt": "\"I'm taking a selfie with Frankenstein's Monster on the set of The Gothic Laboratory. We are standing next to elaborate, old-fashioned electrical equipment with sparks (visible in image_4.png and image_5.png). The Monster, with his stitched face, is trying to smile for the camera. The set is dark and detailed.\"",
+      "prompt": "\"I'm taking a selfie with Stitch on the set of Lilo & Stitch. It's an outdoor beach set with palm trees. I'm taking the photo, and Stitch, a small, fuzzy alien with large ears, is hanging from a boom microphone, upside down. A clapperboard is near my face.\"",
       "images": [
-        "images/imp_1040.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1040.jpg"
       ]
     },
     {
@@ -16814,7 +16820,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776621247906,
+  "_publishedAt": 1776659689506,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
