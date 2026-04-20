@@ -691,7 +691,13 @@
     "added_imp_1038",
     "added_imp_1041",
     "added_imp_1044",
-    "added_imp_1045"
+    "added_imp_1045",
+    "added_imp_1047",
+    "added_imp_1050",
+    "added_imp_1053",
+    "added_imp_1055",
+    "added_imp_1056",
+    "added_imp_1059"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -12575,9 +12581,9 @@
       "id": "new",
       "title": "Selfie With Wall E",
       "cat": "",
-      "prompt": "A selfie taken by the person in the attached image with Sonic on the set of Sonic the Hedgehog. They are in a practical set of a high-tech lab. Next to them is a detailed, realistic CGI stand-in puppet of Sonic, wearing his iconic red sneakers. The person is smiling at their phone, and a visual effects supervisor is placing reference spheres in the background. Green screens are visible on the walls.",
+      "prompt": "\"I'm taking a selfie with WALL-E on the set of The Axiom. We are in a large studio recreating a garbage-covered Earth. WALL-E, the rusty, small robot with binocular eyes, is showing me a plant in a boot. There are large green screens on the walls and massive studio lights.\"",
       "images": [
-        "images/imp_1049.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1049.jpg"
       ]
     },
     {
@@ -12595,9 +12601,9 @@
       "id": "new",
       "title": "Selfie With White",
       "cat": "",
-      "prompt": "Create An ultra-realistic cinematic photo inspired by Men in Black.\nIn the center: the person from the reference photo, unchanged - keep every facial feature exactly as in the original (mouth, eyebrows, nose, eyes, and face shape identical). The person wears a tailored black suit, white shirt, slim black tie, and a luxury steel watch on one wrist.\n\nThey hold a silver Samsung Galaxy S25 Ultra slightly above eye level, angled downward for a natural selfie perspective, with the other hand casually in their pocket.\n\nFlanking them:\n\nBugs Bunny on the left,\n\nDaffy Duck on the right,\nboth dressed in matching MIB-style black suits and dark sunglasses, rendered in hyper-realistic cinematic 3D - realistic fur and feathers, subtle specular reflections, and soft rim lighting that matches the person’s lighting perfectly.\n\nAll three are facing a large vertical mirror, captured from the waist up, with faint mirror reflections visible.\nBackground: a high-tech Men in Black armory, filled with futuristic weapons, glowing blue consoles, metallic textures, and ambient haze.\n\nLighting: controlled studio lighting setup - soft frontal key light, cool blue rim lighting from behind, and cinematic contrast to emphasize depth.\nCamera: 35mm full-frame lens, f/2.2 aperture, ISO 100, slight DOF focus on faces.\nColor grading: Kodak Vision3 250D film emulation, balanced tones, chrome highlights, deep blacks, and cinematic LUT contrast.\nPost-processing: realistic lens reflections, soft bloom on metal surfaces, mild film grain, and clean dynamic range.\nQuality: 8K hyper-realistic resolution, perfect material fidelity, detailed skin texture, and full photorealism from edge to edge.",
+      "prompt": "A selfie taken by the person in the attached image with a White Walker on the set of Game of Thrones. They are in a snowy, outdoor filming location at night. The White Walker is a towering actor in detailed, ice-like prosthetic makeup and armor. The person holds up their phone, and a film crew is adjusting the practical fire effects behind them.",
       "images": [
-        "images/imp_1051.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1051.jpg"
       ]
     },
     {
@@ -12605,9 +12611,9 @@
       "id": "new",
       "title": "Selfie With Yoda",
       "cat": "",
-      "prompt": "A selfie taken by the person in the attached image with Grogu (Baby Yoda) on the set of The Mandalorian. They are in a practical set of a desert marketplace. Grogu is an incredibly detailed, small animatronic puppet in a floating pod. The person is kneeling next to it with their phone, and a puppeteer is adjusting the ear mechanics from below. A boom mic hangs overhead.",
+      "prompt": "\"I'm taking a selfie with Yoda on the set of Dagobah. We are standing in a large, artificial swamp set with ancient-looking trees (like image_38.png and image_39.png). I'm holding the phone, and Yoda, a small, intricate puppet managed by a hidden operator, is giving a wisdom-filled look. Crew members are visible adjusting practical-effect 'plants'.\"",
       "images": [
-        "images/imp_1052.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1052.jpg"
       ]
     },
     {
@@ -12625,9 +12631,9 @@
       "id": "new",
       "title": "Selfie With Actors",
       "cat": "",
-      "prompt": "A selfie taken by the person in the attached image with the Grinch on the set of How the Grinch Stole Christmas. They are in a snowy, whimsical Whoville physical set. The Grinch is played by an actor in extensive, detailed green furry prosthetic makeup. The person is taking the photo, and a makeup artist is doing a final touch-up on the Grinch's long, furry fingers.",
+      "prompt": "A selfie taken by the person in the attached image with a large group of actors from a gritty, early-2000s New Jersey crime drama series. The men are all dressed in retro silk shirts and tailored suits. They are sitting in leather booths at a detailed, authentic Italian restaurant filming location. Camera tracks and softbox lighting are visible on the floor and ceiling.",
       "images": [
-        "images/imp_1054.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1054.jpg"
       ]
     },
     {
@@ -12655,9 +12661,9 @@
       "id": "new",
       "title": "Selfie With Actors",
       "cat": "",
-      "prompt": "A selfie taken by the person in the attached image with the Grinch on the set of How the Grinch Stole Christmas. They are in a snowy, whimsical Whoville physical set. The Grinch is played by an actor in extensive, detailed green furry prosthetic makeup. The person is taking the photo, and a makeup artist is doing a final touch-up on the Grinch's long, furry fingers.",
+      "prompt": "A selfie taken by the person in the attached image with a large group of actors from a medieval fantasy television epic. The diverse group is wearing incredibly detailed, multi-layered wool and leather costumes with elaborate, functional armor. They are gathered in a stone castle hall filled with practical-effect fire torches. A camera crane is visible overhead.",
       "images": [
-        "images/imp_1057.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1057.jpg"
       ]
     },
     {
@@ -12665,9 +12671,9 @@
       "id": "new",
       "title": "Selfie With Actors",
       "cat": "",
-      "prompt": "A selfie taken by the person in the attached image with the Grinch on the set of How the Grinch Stole Christmas. They are in a snowy, whimsical Whoville physical set. The Grinch is played by an actor in extensive, detailed green furry prosthetic makeup. The person is taking the photo, and a makeup artist is doing a final touch-up on the Grinch's long, furry fingers.",
+      "prompt": "A selfie taken by the person in the attached image with a large group of actors from a classic 1920s Hollywood musical. They are in an enormous Art Deco theater set with large staircases. The actors are dressed in sparkling flapper dresses and tailcoats. A massive camera boom crane is sweeping past them.",
       "images": [
-        "images/imp_1058.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1058.jpg"
       ]
     },
     {
@@ -16820,7 +16826,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776659689506,
+  "_publishedAt": 1776660129342,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
