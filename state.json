@@ -791,7 +791,13 @@
     "added_imp_1224",
     "added_imp_1227",
     "added_imp_1231",
-    "added_imp_1233"
+    "added_imp_1233",
+    "added_imp_1236",
+    "added_imp_1238",
+    "added_imp_1241",
+    "added_imp_1242",
+    "added_imp_1243",
+    "added_imp_1245"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -989,7 +995,8 @@
     "added_imp_0900": "/images/custom_added_imp_0900.jpg",
     "added_imp_0999": "/images/custom_added_imp_0999.jpg",
     "added_imp_1064": "/images/custom_added_imp_1064.jpg",
-    "added_imp_1234": "/images/custom_added_imp_1234.jpg"
+    "added_imp_1234": "/images/custom_added_imp_1234.jpg",
+    "added_imp_1247": "/images/custom_added_imp_1247.jpg"
   },
   "added": [
     {
@@ -14587,9 +14594,9 @@
       "id": "new",
       "title": "Woman Playing In",
       "cat": "",
-      "prompt": "{\"label\":\"direct-flash-gamer-girl\",\"tags\":[\"direct-flash\",\"retro-gamer-room\",\"90s-photography\"],\"Subject\":[\"young woman in her early 20s... seated cross-legged on a couch, holding a game controller\"],\"Lighting\":\"strong direct on-camera flash aimed straight at the subject... ambient tungsten lamp in the background\",\"Mood\":\"intimate, playful, nostalgic, confidently casual with a strong gamer-at-home vibe\"}",
+      "prompt": "A young, cheerful woman is captured in a fun and spontaneous moment, playing in an outdoor water fountain. She is completely wet, her dark hair drenched and dripping, and she has a wide, infectious smile, looking at the camera. She is wearing a loose summer dress in a wine or burgundy shade, with lace or textured details on the bodice and a bow at the waist, which is wet and slightly transparent in some areas, creating a light-through effect. She is barefoot, holding her shoes, a similar color to the dress, in her left hand. The pose is dynamic, with her slightly lifting the skirt of her dress with her right hand, as if dancing or having fun in the water. The fountain's splashes are visible around her, with water droplets sparkling in the light. In the background, a large, rustic flowerpot adds a touch of color and nature. The lighting is natural and bright, possibly from a sunny day, which enhances the water's shimmer and the joy of the scene.\n\nProfessional camera settings: Camera: Full-frame DSLR/Mirrorless with a high frame rate (FPS) to capture the movement of the water. Lens: 50mm f/1.4 or 85mm f/1.8 (for a full-body close-up that highlights the model and the environment). Aperture (f-stop): f/3.5 - f/5.6 (to ensure sharpness on the model and water splashes, while the background remains slightly blurred). ISO: 200 - 400 (to take advantage of daylight). Shutter speed: 1/1000s - 1/2000s (essential for freezing water droplets and movement). Lighting: Direct, abundant natural sunlight, ideally in the morning or late afternoon for a softer glow. The light should come from a direction that makes the water droplets sparkle. A silver reflector can be used discreetly to fill in shadows and highlight the face.\n\nInstructions for the \"nano banana\": Instruct the model to pose in a water fountain, completely wet, with wet hair and a wide, cheerful smile, looking at the camera. She should wear a wine-colored summer dress and be barefoot, holding her shoes in her hand. The pose should be dynamic, as if she were dancing, with her hand lifting the skirt of her dress. The splashes of water from the fountain should be visible around her.\n\n\"Please use the female user's reference photo to apply all of her facial features, facial structure, eye color, skin tone, hair style, and color to the female figure in the image.\"",
       "images": [
-        "images/imp_1240.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1240.jpg"
       ]
     },
     {
@@ -14647,9 +14654,9 @@
       "id": "new",
       "title": "Woman Posing With",
       "cat": "",
-      "prompt": "Beautiful woman with a perfectly proportioned figure, smiling happily and naturally, posing beside a large cheerful snowman in deep fresh snow, heavy snowfall all around, wearing a cream-colored tight knit sweater with realistic fabric texture, elegant burgundy wool scarf wrapped warmly around her neck, fitted grey leggings suitable for winter, natural confident pose, relaxed body language, detailed realistic face with soft freckles, bright expressive eyes, gentle rosy cheeks from the cold, subtle natural makeup, glossy lips, flowing hair with individual strands visible, snowflakes resting on hair and clothing, charming snowy European alpine village in the background, traditional wooden chalets with sloped roofs covered in thick snow, warm glowing windows creating cozy contrast, snow-covered trees and pathways, visible footprints in the snow, cinematic winter lighting with soft diffused highlights, cold blue tones balanced by warm ambient light, shallow depth of field, ultra-high resolution, photorealistic style, hyper-detailed textures, realistic skin tones, crisp focus, professional photography look, magical winter wonderland atmosphere, cozy yet cinematic mood, masterpiece quality, sharp, clean, flawless composition",
+      "prompt": "{\"prompt\":\"A stunningly beautiful young woman... wears a highly detailed, avant-garde outfit inspired by a chess board and playing cards... The garment has elaborate baroque gold filigree armor plating... She is posing intimately with a large, intricately carved ram's skull...\",\"style\":[\"photorealistic\",\"cinematic lighting\",\"high detail\"]}",
       "images": [
-        "images/imp_1246.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1246.jpg"
       ]
     },
     {
@@ -14659,7 +14666,7 @@
       "cat": "",
       "prompt": "A cozy indoor portrait of a young woman sitting on a sofa, wearing a loose, off-shoulder knitted sweater. She is quietly reading a book while blowing a small pink bubble with chewing gum. Her hair is tied in a relaxed messy bun, and a warm lamp in the background casts soft golden light.",
       "images": [
-        "images/imp_1247.jpg"
+        "/images/custom_added_imp_1247_img0.jpg"
       ]
     },
     {
@@ -14667,9 +14674,9 @@
       "id": "new",
       "title": "Woman Reading By",
       "cat": "",
-      "prompt": "A cozy indoor portrait of a young woman sitting on a sofa, wearing a loose, off-shoulder knitted sweater. She is quietly reading a book while blowing a small pink bubble with chewing gum. Her hair is tied in a relaxed messy bun, and a warm lamp in the background casts soft golden light.",
+      "prompt": "אישה יושבת על עדן החלון בפיג'מת משי, קוראת ספר בזמן שיורד שלג בחוץ, חתול מתכרבל לידה, אווירת \"Hygge\" סקנדינבית חמימה.",
       "images": [
-        "images/imp_1248.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1248.jpg"
       ]
     },
     {
@@ -16942,7 +16949,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776668651107,
+  "_publishedAt": 1776668939238,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
