@@ -2794,9 +2794,9 @@
       "id": "new",
       "title": "Apply Makeup To",
       "cat": "",
-      "prompt": "Apply the makeup from Image 2 to the character in Image 1, while maintaining the pose from Image 1.",
+      "prompt": "Apply the makeup on the person - Eyes: The eye makeup is prominent, featuring a shimmery gold eyeshadow in the inner corners and on the eyelids. A bold black eyeliner is used, extended at both the inner and outer corners of the eyes to create an elongated, \"doe-eyed\" shape. Additionally, long false eyelashes are applied.\n\nNose and Mouth: The tip of the nose is painted black in an animal-like shape, with a thin, vertical black line dropping down to connect it to the upper lip. The entire upper lip is painted black, while the lower lip is left in its natural pink shade.\n\nFace and Complexion: There is a noticeable use of bronzer or reddish-brown contouring along the cheekbones and the sides of the face, giving the skin a warm tone that resembles a deer's coat.\n\nDecorations: Small white dots are randomly scattered across the upper forehead, above the eyebrows, and on the sides of the face near the eyes, characteristic of a young fawn's spots.",
       "images": [
-        "images/imp_0045.jpg"
+        "/images/custom_added_imp_0045_img0.jpg"
       ]
     },
     {
@@ -17119,7 +17119,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776691293471,
+  "_publishedAt": 1776691785064,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
