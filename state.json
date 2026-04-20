@@ -747,7 +747,11 @@
     "added_imp_1136",
     "added_imp_1137",
     "added_imp_1139",
-    "added_imp_1140"
+    "added_imp_1140",
+    "added_imp_1143",
+    "added_imp_1141",
+    "added_imp_1144",
+    "added_imp_1145"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -13622,9 +13626,9 @@
       "id": "new",
       "title": "Vintage Polaroids Of",
       "cat": "",
-      "prompt": "Use character from uploaded photo to create an artistic collage of 6 vintage Polaroid photos, attached with a decorative rope and mini clothespins, like a home photo gallery. Each Polaroid frame has a slight fading and an old paper effect. The background is a soft pastel wall with light shadows, creating a cozy and creatively chaotic atmosphere.\nEmotions and poses:\n * Light laughter — eyes closed, natural joy.\n * Dreamy gaze upwards, relaxed pose.\n * Playful wink.\n * Calm smile with a head tilted to the side.Dynamic gesture hands raised high, full of energy.\n\n* Romantic half-glance over the shoulder.\n\nThe atmosphere is an art-retro style with elements of a '70s fashion magazine, soft diffused lighting, and muted warm and golden tones. Each photograph looks like a unique behind-the-scenes shot, with a touch of nostalgia and a sense of personal history.",
+      "prompt": "{\n  \"prompt\": {\n    \"subject\": {\n      \"description\": \"A collection of five vintage Polaroid instant photographs featuring the same young Asian woman, arranged casually on a textured surface.Use the face without any change\",\n      \"appearance\": {\n        \"hair\": \"Wavy, black hair.\",\n        \"skin\": \"smooth and fair skin.\",\n        \"makeup\": \"Natural, dewy makeup with defined brows and neutral lip color.\",\n        \"clothing\": \"Black tank top.\",\n        \"accessories\": \"Gold pendant necklaces.\"\n      },\n      \"poses\": [\n        {\n          \"photo\": \"Top left\",\n          \"description\": \"Winking, sticking out tongue, making a peace sign.\"\n        },\n        {\n          \"photo\": \"Top right\",\n          \"description\": \"Blowing a kiss.\"\n        },\n        {\n          \"photo\": \"Center\",\n          \"description\": \"Looking off-camera, hand on cheek.\"\n        },\n        {\n          \"photo\": \"Bottom left\",\n          \"description\": \"Making a kissy face, peace sign.\"\n        },\n        {\n          \"photo\": \"Bottom right\",\n          \"description\": \"Laughing broadly, head tilted.\"\n        }\n      ]\n    },\n    \"environment\": {\n      \"surface\": \"Thick, cream-colored knit wool blanket with a textured stitch pattern.\",\n      \"details\": \"Several red lipstick kiss marks imprinted directly onto the blanket fabric.\",\n      \"arrangement\": \"The five Polaroid prints are scattered naturally, overlapping slightly.\"\n    },\n    \"lighting\": {\n      \"type\": \"Soft, overhead ambient light, likely natural daylight, illuminating the entire scene.\",\n      \"photo_lighting\": \"Direct studio flash within the Polaroid photos, creating a bright, slightly overexposed look with soft shadows.\"\n    },\n    \"mood\": \"Playful, casual, nostalgic, warm, and personal.\",\n    \"camera_details\": {\n      \"style\": \"Ultra Photorealistic overhead photograph.\",\n      \"focus\": \"Sharp focus on the Polaroid prints and the textures of the blanket.\",\n      \"perspective\": \"Top-down view.\",\n      \"film_type\": \"Vintage Polaroid instant film with classic white borders and slight wear.\" Ratio 3.4\n    }\n  }\n}",
       "images": [
-        "images/imp_1148.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1148.jpg"
       ]
     },
     {
@@ -15566,6 +15570,16 @@
       "images": [
         "images/imp_0956.jpg"
       ]
+    },
+    {
+      "key": "dup_1776662718797",
+      "id": 242,
+      "title": "Vintage Polaroids Of (עותק)",
+      "cat": "",
+      "prompt": "Use character from uploaded photo to create an artistic collage of 6 vintage Polaroid photos, attached with a decorative rope and mini clothespins, like a home photo gallery. Each Polaroid frame has a slight fading and an old paper effect. The background is a soft pastel wall with light shadows, creating a cozy and creatively chaotic atmosphere.\nEmotions and poses:\n * Light laughter — eyes closed, natural joy.\n * Dreamy gaze upwards, relaxed pose.\n * Playful wink.\n * Calm smile with a head tilted to the side.Dynamic gesture hands raised high, full of energy.\n\n* Romantic half-glance over the shoulder.\n\nThe atmosphere is an art-retro style with elements of a '70s fashion magazine, soft diffused lighting, and muted warm and golden tones. Each photograph looks like a unique behind-the-scenes shot, with a touch of nostalgia and a sense of personal history.",
+      "images": [
+        "images/imp_1148.jpg"
+      ]
     }
   ],
   "order": [
@@ -16877,7 +16891,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776662217693,
+  "_publishedAt": 1776662758681,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
