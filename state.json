@@ -811,7 +811,8 @@
     "added_imp_1270",
     "added_imp_1271",
     "added_imp_1273",
-    "added_imp_1272"
+    "added_imp_1272",
+    "added_imp_1275"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -14968,9 +14969,9 @@
       "id": "new",
       "title": "Woman Standing Center",
       "cat": "",
-      "prompt": "Scene: Night city crosswalk in heavy rain; taxis and umbrellas stream past. A young woman stands motionless on the zebra, phone lowered, eyes glassy with held-back tears; puddles mirror streetlights. Light: High-contrast mix—cool overhead sodium/LED as key, warm shop window spill as fill; strong backlight from a taxi headlamp to rim the hair and rain; rain streaks glow; reflections pulse on wet asphalt. Camera Position: [eye level] [mid-shot] from curb edge, slightly off-center for tension; 50–85 mm for a cinematic portrait field. Object Placement: Subject on the left third, shoulders turned 3/4 to camera; crowd forms blurred streams right-to-left; a taxi passes behind, headlights forming a luminous halo; puddle in foreground gives a secondary reflection of her face. Atmosphere: Intimate, caught-between-choices moment; noise of traffic, rain hiss; city indifferent, emotion intense. Exposure/Motion: 1/10–1/15 s with gentle camera drag + a rear-curtain flash feel to keep her eyes and mouth tack-sharp while crowd, rain, and lights streak; f/2.8, ISO 200. Effects/Tags: dramatic, blurredvision (soft edge halation on highlights through rain), Photoreal, ultra-detailed, high micro-contrast, natural skin, optical refraction/caustics in droplets and tears, film grain subtle, 4K PNG.",
+      "prompt": "A photorealistic full-body shot of a stunning young woman standing at center court of a professional basketball arena. She is wearing a customized, cropped basketball jersey and matching loose athletic shorts, paired with high socks and high-top sneakers. She holds a basketball against her hip with one hand, looking confidently at the camera. Her hair is tied back in a high, sporty ponytail. The background features a blurred indoor arena with bright stadium lights reflecting off the polished wooden floor. The lighting is dramatic and crisp, capturing a K-pop idol aesthetic.",
       "images": [
-        "images/imp_1276.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1276.jpg"
       ]
     },
     {
@@ -16963,7 +16964,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776669554288,
+  "_publishedAt": 1776669610843,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
