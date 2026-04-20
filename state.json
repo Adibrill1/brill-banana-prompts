@@ -761,7 +761,9 @@
     "added_imp_1158",
     "added_imp_1159",
     "added_imp_1161",
-    "added_imp_1163"
+    "added_imp_1163",
+    "added_imp_1168",
+    "added_imp_1171"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -13826,9 +13828,9 @@
       "id": "new",
       "title": "Woman At Night",
       "cat": "",
-      "prompt": "Scene: Night city crosswalk in heavy rain; taxis and umbrellas stream past. A young woman stands motionless on the zebra, phone lowered, eyes glassy with held-back tears; puddles mirror streetlights. Light: High-contrast mix—cool overhead sodium/LED as key, warm shop window spill as fill; strong backlight from a taxi headlamp to rim the hair and rain; rain streaks glow; reflections pulse on wet asphalt. Camera Position: [eye level] [mid-shot] from curb edge, slightly off-center for tension; 50–85 mm for a cinematic portrait field. Object Placement: Subject on the left third, shoulders turned 3/4 to camera; crowd forms blurred streams right-to-left; a taxi passes behind, headlights forming a luminous halo; puddle in foreground gives a secondary reflection of her face. Atmosphere: Intimate, caught-between-choices moment; noise of traffic, rain hiss; city indifferent, emotion intense. Exposure/Motion: 1/10–1/15 s with gentle camera drag + a rear-curtain flash feel to keep her eyes and mouth tack-sharp while crowd, rain, and lights streak; f/2.8, ISO 200. Effects/Tags: dramatic, blurredvision (soft edge halation on highlights through rain), Photoreal, ultra-detailed, high micro-contrast, natural skin, optical refraction/caustics in droplets and tears, film grain subtle, 4K PNG.",
+      "prompt": "{\"intent\":\"Generate a photorealistic, high-fidelity smartphone photograph simulating a raw night-time capture at a bustling Asian night market.\",\"subject\":{\"attire\":\"Vivid royal blue satin deep-V crop top with a front tie/knot detail...\",\"pose\":\"Seated at a table, facing the camera directly. Right hand holding a clear plastic cup...\"},\"environment\":{\"location\":\"Semi-outdoor night market dining tent.\",\"background\":\"White canopy tent structure visible above...\"},\"lighting\":{\"style\":\"Direct on-camera smartphone flash simulation.\"},\"camera\":{\"aesthetic\":\"Mobile photography, Apple iPhone 16 Pro Max simulation.\"}}",
       "images": [
-        "images/imp_1167.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1167.jpg"
       ]
     },
     {
@@ -13856,9 +13858,9 @@
       "id": "new",
       "title": "Woman Casting Blue",
       "cat": "",
-      "prompt": "\"A colossal woman standing in a city street, appearing to be 'under construction' with scaffolding surrounding her body.\",\n      \"aesthetic\": \"Hyper-realistic composite, cinematic, urban fantasy.\"\n    },\n    \"subject_details\": {\n      \"celebrity_likeness\": \"Taylor Swift.\",\n      \"features\": {\n        \"face\": \"Blue eyes, signature red lipstick, distinct facial structure.\",\n        \"hair\": \"Golden blonde, long, wavy texture cascading over shoulders.\"\n      },\n      \"apparel\": {\n        \"dress\": \"Black satin slip dress with a deep V-neck and a high slit on the right thigh.\",\n        \"accessories\": \"Holding a standard white disposable coffee cup in the right hand. Carrying a brown leather luxury handbag in the left hand.\",\n        \"footwear\": \"Bare feet or heels (obscured by street debris/cracks).\"\n      }\n    },\n    \"surreal_elements\": {\n      \"scaffolding\": \"Intricate metal construction scaffolding structures built around her arms, torso, and legs, following the contour of her body.\",\n      \"miniatures\": \"Tiny construction workers in yellow hard hats and high-vis vests climbing the scaffolding on her body.\",\n      \"destruction\": \"The asphalt street beneath her feet is cracking and shattering under the immense weight, creating a crater pattern.\"\n    },\n    \"exact_pose_anatomical\": {\n      \"posture\": \"Standing tall with a slight contrapposto (weight shifted to one hip).\",\n      \"orientation\": \"Front-facing, towering over the viewer/city.\",\n      \"right_arm\": \"Bent at the elbow, raised to hold the coffee cup at chest level.\",\n      \"left_arm\": \"Extended downwards holding the handbag.\",\n      \"gaze\": \"Direct, calm eye contact with the camera.\",\n      \"scale\": \"Subject appears to be approximately 50 stories tall, matching the height of surrounding skyscrapers.\"\n    },\n    \"environment\": {\n      \"location\": \"Avenue in a major metropolis (resembling Chicago or NYC).\",\n      \"elements\": \"Skyscrapers flanking both sides, busy traffic with miniature yellow taxis and buses way below.\",\n      \"perspective\": \"Aerial view relative to the city, but eye-level relative to the subject.\"\n    },\n    \"camera_technical_values\": {\n      \"lens\": \"35mm (Wide angle to capture the full scale of the subject against the skyline).\",\n      \"aperture\": \"f/11 (Deep depth of field to keep both the giant subject and the city background relatively sharp).\",\n      \"shutter_speed\": \"1/500s.\",\n      \"iso\": \"ISO 100.\",\n      \"resolution\": \"8k, high fidelity textures.\"\n    },\n    \"lighting_setup\": {\n      \"source\": \"Natural Daylight.\",\n      \"quality\": \"Soft, diffused sunlight (slightly overcast).\",\n      \"direction\": \"Overhead/Frontal.\",\n      \"shadows\": \"Subject casts a massive, long shadow onto the city streets below.\"",
+      "prompt": "Ultra-realistic portrait of a young woman standing in a dark forest, holding a wand in her right hand while casting a glowing blue Patronus-like spell. The spell forms a swirling mist around her and takes the shape of a bright, ghostly blue animal spirit behind her.\nShe has shoulder-length brown hair, round glasses, and a serious focused expression as she looks directly at the camera.\nShe wears a black coat and a red-and-gold Gryffindor-style scarf wrapped around her neck.\n\nLighting: dramatic cool blue light from the Patronus spell illuminating her face and scarf, with soft natural ambient forest light in the background. High contrast with deep shadows.\n\nEnvironment: dark, blurred forest with brown fallen leaves on the ground. Magical blue mist swirls around her, glowing particles floating in the air, and the animal spirit shining with ethereal light.\n\nPose: centered, holding the wand diagonally upward with one hand, other hand resting lightly on her arm, calm and confident posture.\n\nCamera: close-up portrait shot, eye-level, shallow depth of field, subject sharp with soft background blur.\n\nDetails: photorealistic skin texture, crisp fabric details on the scarf, glowing magical light effects, swirling mist, cinematic fantasy atmosphere, 8K clarity.”",
       "images": [
-        "images/imp_1170.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1170.jpg"
       ]
     },
     {
@@ -13876,9 +13878,9 @@
       "id": "new",
       "title": "Woman Crying On",
       "cat": "",
-      "prompt": "East asian krean beautiful young woman, calm confident expression, subtle smirk, short white bob haircut, black lipstick, sharp eyeliner, tattoos on neck, buxom body, wearing sleeveless low neck bodycon blackdress, gothic elegant fashion, multiple ear piercings background dark studio, cinematic rim lighting, high contrast light and shadow, smoky atmosphere, professional portrait, full-body shot, soft diffused lighting, moody tone, ultra-detailed, realistic, 8k, masterpiece",
+      "prompt": "Scene: Night city crosswalk in heavy rain; taxis and umbrellas stream past. A young woman stands motionless on the zebra, phone lowered, eyes glassy with held-back tears; puddles mirror streetlights. Light: High-contrast mix—cool overhead sodium/LED as key, warm shop window spill as fill; strong backlight from a taxi headlamp to rim the hair and rain; rain streaks glow; reflections pulse on wet asphalt. Camera Position: [eye level] [mid-shot] from curb edge, slightly off-center for tension; 50–85 mm for a cinematic portrait field. Object Placement: Subject on the left third, shoulders turned 3/4 to camera; crowd forms blurred streams right-to-left; a taxi passes behind, headlights forming a luminous halo; puddle in foreground gives a secondary reflection of her face. Atmosphere: Intimate, caught-between-choices moment; noise of traffic, rain hiss; city indifferent, emotion intense. Exposure/Motion: 1/10–1/15 s with gentle camera drag + a rear-curtain flash feel to keep her eyes and mouth tack-sharp while crowd, rain, and lights streak; f/2.8, ISO 200. Effects/Tags: dramatic, blurredvision (soft edge halation on highlights through rain), Photoreal, ultra-detailed, high micro-contrast, natural skin, optical refraction/caustics in droplets and tears, film grain subtle, 4K PNG.",
       "images": [
-        "images/imp_1172.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1172.jpg"
       ]
     },
     {
@@ -16901,7 +16903,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776664215154,
+  "_publishedAt": 1776664485844,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
