@@ -770,7 +770,10 @@
     "added_imp_1180",
     "added_imp_1183",
     "added_imp_1185",
-    "added_imp_1187"
+    "added_imp_1187",
+    "added_imp_1193",
+    "added_imp_1196",
+    "added_imp_1197"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -14075,9 +14078,9 @@
       "id": "new",
       "title": "Woman In Hanfu",
       "cat": "",
-      "prompt": "East asian krean beautiful young woman, calm confident expression, subtle smirk, short white bob haircut, black lipstick, sharp eyeliner, tattoos on neck, buxom body, wearing sleeveless low neck bodycon blackdress, gothic elegant fashion, multiple ear piercings background dark studio, cinematic rim lighting, high contrast light and shadow, smoky atmosphere, professional portrait, full-body shot, soft diffused lighting, moody tone, ultra-detailed, realistic, 8k, masterpiece",
+      "prompt": "Ultra-realistic 8K portrait of the uploaded person in traditional [Chinese Hanfu] dress and relevant accessories, holding a colorful woven basket of flowers on her shoulder, soft smile, natural makeup, outdoor mountain background, shallow depth of field, cinematic lighting, DSLR, 85mm lens.",
       "images": [
-        "images/imp_1191.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1191.jpg"
       ]
     },
     {
@@ -14085,9 +14088,9 @@
       "id": "new",
       "title": "Woman In Supergirl",
       "cat": "",
-      "prompt": "A young woman reference form uploaded image kneeling in deep snow, captured in a front profile view while taking a photograph. \nShe is positioned in the center of the frame, leaning forward slightly to look through her camera's viewfinder. \n\nClothing : \n\nA thick, winter parka jacket in a color-block design featuring light pastel blue and white panels. She is wearing black winter trousers and thick, beige, knitted mittens/gloves. \n\n Accessories \nA professional black DSLR or mirrorless camera with a prominent zoom lens held in her hands.\nA mustard-yellow canvas backpack is strapped to her back, providing a colorful contrast to the cool tones. \n\nEnvironment \n\nA serene winter forest setting. The background is filled with tall pine trees heavily laden with fresh white snow. The ground is covered in a thick, soft layer of undisturbed snow.\n\nCamera \nMedium shot, eye-level angle. Shallow depth of field (bokeh) used to keep the subject sharp while softly blurring the snowy trees in the background. High-resolution photography style.\n\n Style \nPhotorealistic, cinematic winter lifestyle photography, nature portrait, serene and cold aesthetic, 8k resolution, highly detailed",
+      "prompt": "{\n  \"scene\": \"Outdoor close-up on a skyscraper rooftop in New York City at dusk\",\n  \"setting\": {\n    \"location\": \"High-rise skyscraper rooftop\",\n    \"environment\": \"Panoramic New York City skyline with towering buildings, glowing city lights below, faint wind effects\",\n    \"lighting\": \"Warm golden hour sunset mixed with cool city glow and dramatic long shadows\"\n  },\n  \"subject\": {\n    \"type\": \"person\",\n    \"gender_presentation\": \"female\",\n    \"appearance\": {\n      \"skin_tone\": \"fair glowing\",\n      \"hair\": \"long wavy blonde hair flowing freely in the rooftop breeze\",\n      \"outfit\": \"full-body Supergirl-inspired DC costume: form-fitting blue long-sleeve leotard with red House of El 'S' emblem on chest, short red skirt, flowing red cape billowing behind, red knee-high boots with gold trim\",\n      \"footwear\": \"iconic red Supergirl boots\"\n    },\n    \"pose\": \"standing confidently near the rooftop edge, both hands on hips\",\n    \"expression\": \"neutral yet composed with subtle confident smile and heroic intensity\",\n    \"body_language\": \"powerful, relaxed heroic stance emphasizing strength and poise\"\n  },\n  \"objects\": {\n    \"held_items\": [\n      \"smartphone\"\n    ],\n    \"background_items\": [\n      \"distant Empire State Building and city skyline\",\n      \"rooftop HVAC units\",\n      \"safety railing\",\n      \"ambient city haze\"\n    ]\n  },\n  \"composition\": {\n    \"shot_type\": \"full-body close-up,\n    \"camera_angle\": \"slightly low eye-level for heroic emphasis\",\n    \"framing\": \"centered subject with dramatic city skyline filling the background\"\n  },\n  \"mood\": [\n    \"confident\",\n    \"powerful\",\n    \"heroic\",\n    \"bold\"\n  ],\n  \"themes\": [\n    \"superhero empowerment\",\n    \"DC character cosplay\",\n    \"urban adventure\",\n    \"strength and confidence\"\n  ],\n  \"use_cases\": [\n    \"social media content\",\n    \"superhero cosplay branding\",\n    \"character-inspired visuals\",\n    \"empowerment and fantasy imagery\"\n  ]\n}",
       "images": [
-        "images/imp_1192.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1192.jpg"
       ]
     },
     {
@@ -14105,9 +14108,9 @@
       "id": "new",
       "title": "Woman In Black",
       "cat": "",
-      "prompt": "A young woman reference form uploaded image kneeling in deep snow, captured in a front profile view while taking a photograph. \nShe is positioned in the center of the frame, leaning forward slightly to look through her camera's viewfinder. \n\nClothing : \n\nA thick, winter parka jacket in a color-block design featuring light pastel blue and white panels. She is wearing black winter trousers and thick, beige, knitted mittens/gloves. \n\n Accessories \nA professional black DSLR or mirrorless camera with a prominent zoom lens held in her hands.\nA mustard-yellow canvas backpack is strapped to her back, providing a colorful contrast to the cool tones. \n\nEnvironment \n\nA serene winter forest setting. The background is filled with tall pine trees heavily laden with fresh white snow. The ground is covered in a thick, soft layer of undisturbed snow.\n\nCamera \nMedium shot, eye-level angle. Shallow depth of field (bokeh) used to keep the subject sharp while softly blurring the snowy trees in the background. High-resolution photography style.\n\n Style \nPhotorealistic, cinematic winter lifestyle photography, nature portrait, serene and cold aesthetic, 8k resolution, highly detailed",
+      "prompt": "Transform the image into a top-tier, studio-style, close-up face portrait. She is wearing a fitted black turtleneck knit sweater, with a delicate fabric texture, clear knit patterns, and natural folds that show rich tonal variation in the shadows under the light, rather than being a pure black block. The overall style is minimalist and high-end/sophisticated. She is slightly turned to the side, with her hands naturally crossed over her chest, and her gaze is resolute and focused. The background is a dark gradient with contrasting cold blue and warm golden light halos to highlight the subject. The image utilizes a Rim Light (Back Light) to outline the hair and the edges of the shoulders and neck, while a soft Key Light is added to the front to illuminate the face, making the skin tone translucent and natural. The overall aesthetic is a cinematic color portrait, featuring a warm/cool color contrast, delicate Film Grain, and a deep, elegant atmosphere. The composition is non-centered, with the subject positioned to one side of the frame, leaving negative space on the other side to create a sense of breathing room.",
       "images": [
-        "images/imp_1194.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1194.jpg"
       ]
     },
     {
@@ -14115,9 +14118,9 @@
       "id": "new",
       "title": "Woman In Black",
       "cat": "",
-      "prompt": "A young woman reference form uploaded image kneeling in deep snow, captured in a front profile view while taking a photograph. \nShe is positioned in the center of the frame, leaning forward slightly to look through her camera's viewfinder. \n\nClothing : \n\nA thick, winter parka jacket in a color-block design featuring light pastel blue and white panels. She is wearing black winter trousers and thick, beige, knitted mittens/gloves. \n\n Accessories \nA professional black DSLR or mirrorless camera with a prominent zoom lens held in her hands.\nA mustard-yellow canvas backpack is strapped to her back, providing a colorful contrast to the cool tones. \n\nEnvironment \n\nA serene winter forest setting. The background is filled with tall pine trees heavily laden with fresh white snow. The ground is covered in a thick, soft layer of undisturbed snow.\n\nCamera \nMedium shot, eye-level angle. Shallow depth of field (bokeh) used to keep the subject sharp while softly blurring the snowy trees in the background. High-resolution photography style.\n\n Style \nPhotorealistic, cinematic winter lifestyle photography, nature portrait, serene and cold aesthetic, 8k resolution, highly detailed",
+      "prompt": "Convert this person into a retro vintage grainy but bright image, black party-wear saree, 90s film aesthetic. She is standing against a solid, deep wall with dramatic shadows and contrast, creating a mysterious and artistic atmosphere. The environment feels windy and romanticised. Lighting is warm, with golden sunset tones evoking golden hour glow. The background is minimalist and slightly textured. Her expression is moody, calm, yet subtly happy and introspective",
       "images": [
-        "images/imp_1195.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1195.jpg"
       ]
     },
     {
@@ -14145,9 +14148,9 @@
       "id": "new",
       "title": "Woman In Blue",
       "cat": "",
-      "prompt": "A young woman reference form uploaded image kneeling in deep snow, captured in a front profile view while taking a photograph. \nShe is positioned in the center of the frame, leaning forward slightly to look through her camera's viewfinder. \n\nClothing : \n\nA thick, winter parka jacket in a color-block design featuring light pastel blue and white panels. She is wearing black winter trousers and thick, beige, knitted mittens/gloves. \n\n Accessories \nA professional black DSLR or mirrorless camera with a prominent zoom lens held in her hands.\nA mustard-yellow canvas backpack is strapped to her back, providing a colorful contrast to the cool tones. \n\nEnvironment \n\nA serene winter forest setting. The background is filled with tall pine trees heavily laden with fresh white snow. The ground is covered in a thick, soft layer of undisturbed snow.\n\nCamera \nMedium shot, eye-level angle. Shallow depth of field (bokeh) used to keep the subject sharp while softly blurring the snowy trees in the background. High-resolution photography style.\n\n Style \nPhotorealistic, cinematic winter lifestyle photography, nature portrait, serene and cold aesthetic, 8k resolution, highly detailed",
+      "prompt": "CREATE a photorealistic 8K full-body portrait inspired by both attached reference images. Use the facial structure, natural beauty, and hairstyle inspired by the portrait reference - smooth skin, expressive eyes, balanced features, and refined bone structure with realistic lighting and natural tones. Place the character in the same studio setting and pose as the blue-themed reference: seated casually on a modern designer lounge chair, leaning back with legs crossed and smiling subtly with relaxed confidence. Outfit: a bold blue unisex tracksuit with matching joggers, white socks, and chunky beige sneakers - a fashion-editorial look that works equally for masculine or feminine forms. Scene: seamless blue studio with a large light-blue abstract \"Brill\" shape in the background for a clean, magazine-style composition. Lighting: soft, even, and cinematic, highlighting contours while maintaining rich fabric texture and smooth shadows. Color palette: deep and light blues accented with subtle yellows. Aesthetic: modern, minimal, high-fashion editorial - sharp focus, smooth gradients, realistic fabric detail, and  ndrogynous appeal preserving natural harmony and elegance.",
       "images": [
-        "images/imp_1198.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1198.jpg"
       ]
     },
     {
@@ -16910,7 +16913,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776666821520,
+  "_publishedAt": 1776667185255,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
