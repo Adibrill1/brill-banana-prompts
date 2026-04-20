@@ -863,14 +863,46 @@
     "added_imp_0617",
     "added_imp_0553",
     "added_imp_0674",
-    "added_imp_0539",
-    "added_imp_0002",
+    "added_1775333713881",
+    "added_1775333813837",
+    "added_1775333853337",
+    "added_1775312000425",
+    "orig_6",
     "added_1775114491412",
-    "added_imp_0869",
-    "added_imp_0114",
-    "added_imp_1074",
+    "orig_0",
+    "orig_12",
+    "orig_13",
+    "orig_18",
+    "orig_20",
+    "orig_21",
+    "orig_23",
+    "orig_24",
+    "orig_25",
     "orig_26",
-    "added_imp_0787"
+    "orig_27",
+    "orig_29",
+    "orig_32",
+    "orig_34",
+    "orig_35",
+    "orig_36",
+    "orig_37",
+    "orig_38",
+    "orig_39",
+    "orig_40",
+    "orig_41",
+    "orig_42",
+    "orig_43",
+    "orig_45",
+    "orig_46",
+    "orig_48",
+    "orig_51",
+    "orig_52",
+    "orig_50",
+    "orig_55",
+    "orig_56",
+    "orig_57",
+    "orig_58",
+    "orig_64"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -902,7 +934,7 @@
     "added_1775114491412": "images/custom_added_1775114491412.jpg",
     "orig_15": "https://brill-banana-prompts.vercel.app/images/226.jpg",
     "orig_48": "https://brill-banana-prompts-v3.vercel.app/images/custom_orig_48.jpg",
-    "orig_47": "images/custom_orig_47.jpg",
+    "orig_47": "https://brill-banana-prompts-v3.vercel.app/images/custom_orig_47.jpg",
     "orig_46": "images/custom_orig_46.jpg",
     "orig_45": "images/custom_orig_45.jpg",
     "orig_55": "https://brill-banana-prompts-v3.vercel.app/images/custom_orig_55.jpg",
@@ -910,7 +942,7 @@
     "orig_54": "images/custom_orig_54.jpg",
     "orig_61": "images/custom_orig_61.jpg",
     "orig_57": "images/custom_orig_57.jpg",
-    "orig_59": "images/custom_orig_59.jpg",
+    "orig_59": "https://brill-banana-prompts-v3.vercel.app/images/custom_orig_59.jpg",
     "orig_64": "https://brill-banana-prompts-v3.vercel.app/images/custom_orig_64.jpg",
     "orig_58": "images/custom_orig_58.jpg",
     "orig_63": "images/custom_orig_63.jpg",
@@ -1033,7 +1065,7 @@
     "orig_240": "images/custom_orig_240.jpg",
     "orig_238": "images/custom_orig_238.jpg",
     "orig_12": "/images/custom_orig_12.jpg",
-    "orig_1": "/images/custom_orig_1.jpg",
+    "orig_1": "https://brill-banana-prompts-v3.vercel.app/images/custom_orig_1.jpg",
     "added_1775316390609": "/images/custom_added_1775316390609.jpg",
     "added_import_0051": "/images/custom_added_import_0051.jpg",
     "added_import_0060": "/images/custom_added_import_0060.jpg",
@@ -1070,7 +1102,9 @@
     "added_imp_1064": "/images/custom_added_imp_1064.jpg",
     "added_imp_1234": "/images/custom_added_imp_1234.jpg",
     "added_imp_1247": "/images/custom_added_imp_1247.jpg",
-    "added_imp_0110": "/images/custom_added_imp_0110.jpg"
+    "added_imp_0110": "/images/custom_added_imp_0110.jpg",
+    "orig_7": "https://brill-banana-prompts-v3.vercel.app/images/234.jpg",
+    "orig_33": "/images/custom_orig_33.jpg"
   },
   "added": [
     {
@@ -1106,11 +1140,11 @@
     {
       "key": "added_1775311859714",
       "id": "חדש",
-      "title": "איטי ואלף",
+      "title": "E.T. & Alf",
       "cat": "",
       "prompt": "Create a hyper-realistic portrait using the uploaded photo keeping the real face, facial structure, skin tone, and expression of the person exactly the same.\n\nThe scene shows the person kneeling in the middle of a cozy vintage living room, wearing a denim jacket, white shirt and jeans.\n\nHe's smiling naturally while hugging two iconic characters:\n\nALF on left: a hairy full-bodied alien puppet with brown/orange hair, large muzzle, expressive eyes and large padded feet. Very detailed and realistic texture of skin and hands.\n\nE.T. on the right: a full-body, extremely detailed and realistic model with wrinkled skin, long neck, large expressive eyes, and a glowing fingertip on her right hand.\n\nBoth characters are close to the person as if they are posing for a warm family photo.\n\nThe background is a cozy 80s-style living room: vintage floral sofa, wooden furniture, bookshelves filled with ceramic vases, indoor plants, soft natural window light, warm tones, and a nostalgic homely atmosphere.\n\nUltra-detailed leather, fabric textures, realistic lighting, volumetric smoothness, 8K resolution, cinematic photography, perfect color gradation.",
       "images": [
-        "images/custom_added_1775311859714_img0.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/custom_added_1775311859714_img0.jpg"
       ]
     },
     {
@@ -16979,6 +17013,26 @@
       "title": "Custom Marble Sculpture",
       "cat": "Art Style",
       "prompt": "A photorealistic image of an ultra-detailed sculpture of the subject in image made of shining marble. The sculpture should display smooth and reflective marble surface, emphasizing its luster and artistic craftsmanship. The design is elegant, highlighting the beauty and depth of marble. The lighting in the image should enhance the sculpture's contours and textures, creating a visually stunning and mesmerizing effect"
+    },
+    "orig_7": {
+      "title": "Banana Box",
+      "cat": "Design",
+      "prompt": "Create a hyper-realistic 4K collectible figure inside a bright yellow cardboard display box with a clear plastic window in the front.\nReplace the figure’s face with the human eyes and facial features taken from the uploaded external image.\nThe character is an original design called 'Nano Banana 2': a small stylized doll with tiny cartoonish legs, wearing bold red Nike Air sneakers.\nAdd a Santa-themed banana hat: a peeled banana shaped like a Santa hat, with the banana peel opening naturally around the head like stylized petals.\nPlace a custom artistic logo on the box titled 'Nano Banana 2' in a unique, creative font.\nSet the box on a luxurious wooden store shelf.\nBehind it, a modern TV screen displays animated Nano Banana branding.\nUse ultra-detailed textures, dramatic cinematic product-display lighting, and extremely sharp 4K hyper-realism.\nPreserve the holiday Santa atmosphere throughout the scene."
+    },
+    "orig_1": {
+      "title": "Extreme Environment Selfie - Oil Rig Storm",
+      "cat": "Photography",
+      "prompt": "{\n  \"scene\": {\n    \"type\": \"extreme_environment_selfie\",\n    \"location\": \"offshore oil rig during violent storm\",\n    \"description\": \"partially damaged oil rig platform surrounded by massive dark ocean waves, heavy rain and wind, dramatic industrial setting\"\n  },\n\n  \"subject\": {\n    \"reference\": \"@input_image\",\n    \"identity_lock\": true,\n    \"face\": {\n      \"preserve_exact_features\": true,\n      \"natural_skin_texture\": true,\n      \"no_age_modification\": true,\n      \"no_beautification\": true\n    },\n    \"expression\": \"calm and composed, slight natural curiosity\",\n    \"hair\": {\n      \"behavior\": \"wind-blown, reacting naturally to storm\",\n      \"no_style_change\": true\n    },\n    \"clothing\": {\n      \"type\": \"realistic waterproof jacket or hoodie\",\n      \"behavior\": \"wet, slightly moving in wind\",\n      \"fit\": \"appropriate for child\"\n    }\n  },\n\n  \"camera\": {\n    \"type\": \"smartphone selfie\",\n    \"lens\": \"26mm wide-angle\",\n    \"angle\": \"eye-level, arm-length\",\n    \"framing\": \"4:5 vertical\",\n    \"distortion\": \"slight edge distortion like real phone\",\n    \"focus\": \"sharp on face\"\n  },\n\n  \"lighting\": {\n    \"environment\": \"overcast storm light\",\n    \"tones\": \"cold gray and slate\",\n    \"secondary\": \"subtle orange industrial lights reflecting on wet metal\",\n    \"effects\": \"rain, mist, salt spray catching light\"\n  },\n\n  \"environment_details\": {\n    \"elements\": [\n      \"massive waves crashing\",\n      \"wet steel beams\",\n      \"rust, peeling paint\",\n      \"warning stripes\",\n      \"industrial cables\",\n      \"rotating hazard lights in fog\"\n    ],\n    \"depth\": \"strong atmospheric depth with fading ocean background\"\n  },\n\n  \"style\": {\n    \"photorealistic\": true,\n    \"cinematic\": true,\n    \"camera_simulation\": \"Sony A7R V\",\n    \"settings\": {\n      \"aperture\": \"f/4\",\n      \"shutter\": \"1/1600\",\n      \"ISO\": 640\n    },\n    \"details\": [\n      \"visible pores\",\n      \"realistic iris detail\",\n      \"fine hair strands\",\n      \"wet fabric texture\",\n      \"subtle sensor grain\",\n      \"slight chromatic aberration\"\n    ]\n  },\n\n  \"composition\": {\n    \"subject_dominant\": true,\n    \"leading_lines\": \"metal beams and catwalks\",\n    \"asymmetry\": \"open ocean in background\",\n    \"clean_frame\": true\n  },\n\n  \"negative_prompt\": [\n    \"no text\",\n    \"no watermark\",\n    \"no logos\",\n    \"no duplicated labels\",\n    \"no age estimation text\",\n    \"no extra fingers\",\n    \"no distorted hands\",\n    \"no warped anatomy\",\n    \"no duplicate limbs\",\n    \"no cartoon style\",\n    \"no plastic skin\",\n    \"no low resolution\",\n    \"no clutter\",\n    \"no gore\",\n    \"no injury\",\n    \"no panic\"\n  ]\n}"
+    },
+    "orig_47": {
+      "title": "Pastel studio portrait with TikTok icon",
+      "cat": "Product",
+      "prompt": "Hyper-realistic full-body portrait of the uploaded person, sitting. A large vertical TikTok logo icon stands beside them, slightly tilted; they lean one arm on it while holding a cup in the other hand. Shot in a full-frame DSLR style (85mm, f/1.x) with shallow depth of field and the face in razor-sharp focus, showing real skin texture and lifelike eyes. Set in a minimal pastel-green studio with soft cinematic lighting. Ultra-detailed clothing, skin, hair, and surfaces. Outfit: black streetwear hoodie, white trousers, white Converse. Clean, modern, professional fashion-photo look—not CGI"
+    },
+    "orig_59": {
+      "title": "Party scene me with superheroes",
+      "cat": "Fantasy",
+      "prompt": "Create A picture of a character beasd on the picture I attached here I'm standing in the middle And I'm wearing dark blue jeans, a white T-shirt, and a black leather jacket over that I'm holding a bottle of Corona beer in my hand and cheering. next to me are Deadpool, Venom You can see his teeth and tongue sticking out, just like his iconic face from the movie, and Superman Batman and Spiderman, Spiderman Hanging upside down from the ceiling with cobwebs and it's look like he coming down with his webs, Make sure these five characters are in the picture, standing next to me, and are clear, and whatever is behind us will be random people. We are all smiling in a crowded, dimly lit basement club. The party is wild,a lot of led and RGB lights smoky room and chaotic with people running around. They're having fun, holding red cups and beer bottles all of them smiling and having fun sweat and motion blur-paparazzi style, raw and gritty. Realistic, cinematic lighting, and shot with a 4k dlsr hyper realistic picture."
     }
   },
   "freePrompts": {
@@ -17023,7 +17077,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776679969914,
+  "_publishedAt": 1776679996276,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
