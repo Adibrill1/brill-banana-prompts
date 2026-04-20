@@ -851,7 +851,10 @@
     "added_imp_1334",
     "added_imp_1332",
     "added_imp_1335",
-    "added_1775630066393"
+    "added_1775630066393",
+    "added_1775206624742",
+    "added_imp_1282",
+    "added_1775315717510"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -1050,8 +1053,7 @@
     "added_imp_0999": "/images/custom_added_imp_0999.jpg",
     "added_imp_1064": "/images/custom_added_imp_1064.jpg",
     "added_imp_1234": "/images/custom_added_imp_1234.jpg",
-    "added_imp_1247": "/images/custom_added_imp_1247.jpg",
-    "added_imp_0110": "/images/custom_added_imp_0110.jpg"
+    "added_imp_1247": "/images/custom_added_imp_1247.jpg"
   },
   "added": [
     {
@@ -3351,7 +3353,7 @@
       "cat": "",
       "prompt": "CREATE a 64 K DSLR ultra-realistic cinematic portrait of the character (male or female, keeping the same face from the reference image), emerging dramatically from a large cracked playing card of the King of Spades.\nThe King figure has short hair and a well-groomed beard or refined facial features depending on gender, wearing an ornate crown with gold filigree and embedded red gems.\nThe character is dressed in luxurious robes with rich gold-and-crimson embroidery, draped across the shoulders with heavy regal folds.\nOne arm extends forward in a commanding, cinematic gesture, while the other rests naturally, revealing a subtle tattoo on the hand.\nThe cracked playing card looks like aged stone, with dust and debris breaking loose as the figure pushes through its surface.\nLighting is dramatic and low-key, emphasizing depth, shadows, and highlights across the crown and robes.\nBackground: dark gradient tone with faint atmospheric particles for a post-apocalyptic mood.\nThe name \"\nEnter Tomer\n\" is printed in fine lettering at the lower-right corner of the card.\nRender in Octane Render / Unreal Engine 5 style with photoreal materials, sharp optics, HDR global illumination, and cinematic depth of field.\nThe overall image evokes grandeur, authority, and quiet power, blending realism with subtle fantasy energy.\n",
       "images": [
-        "/images/custom_added_imp_0110_img0.jpg"
+        "images/imp_0110.jpg"
       ]
     },
     {
@@ -17004,7 +17006,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776673712352,
+  "_publishedAt": 1776673853603,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
