@@ -988,7 +988,8 @@
     "added_imp_0623": "/images/custom_added_imp_0623.jpg",
     "added_imp_0900": "/images/custom_added_imp_0900.jpg",
     "added_imp_0999": "/images/custom_added_imp_0999.jpg",
-    "added_imp_1064": "/images/custom_added_imp_1064.jpg"
+    "added_imp_1064": "/images/custom_added_imp_1064.jpg",
+    "added_imp_1234": "/images/custom_added_imp_1234.jpg"
   },
   "added": [
     {
@@ -14524,11 +14525,11 @@
     {
       "key": "added_imp_1234",
       "id": "new",
-      "title": "Woman Looking Up",
+      "title": "Church hall",
       "cat": "",
       "prompt": "Gorgeous woman like a devil flirty instagram model standing in church hall, behind she is a mosaic fresco, an uncovered shaped body with gold eyelashes, fabrick vail, Use the rule of thirds, Look for curves, lines& interesting shapes, Emotion is more important than composition, by famous fashion photographer --q 2 --s 750 --v 7.0 --raw --ar 9:16",
       "images": [
-        "images/imp_1234.jpg"
+        "/images/custom_added_imp_1234_img0.jpg"
       ]
     },
     {
@@ -15619,6 +15620,16 @@
       "prompt": "Use character from uploaded photo to create an artistic collage of 6 vintage Polaroid photos, attached with a decorative rope and mini clothespins, like a home photo gallery. Each Polaroid frame has a slight fading and an old paper effect. The background is a soft pastel wall with light shadows, creating a cozy and creatively chaotic atmosphere.\nEmotions and poses:\n * Light laughter — eyes closed, natural joy.\n * Dreamy gaze upwards, relaxed pose.\n * Playful wink.\n * Calm smile with a head tilted to the side.Dynamic gesture hands raised high, full of energy.\n\n* Romantic half-glance over the shoulder.\n\nThe atmosphere is an art-retro style with elements of a '70s fashion magazine, soft diffused lighting, and muted warm and golden tones. Each photograph looks like a unique behind-the-scenes shot, with a touch of nostalgia and a sense of personal history.",
       "images": [
         "/images/custom_dup_1776662718797_img0.jpg"
+      ]
+    },
+    {
+      "key": "dup_1776668518499",
+      "id": 243,
+      "title": "Woman Looking Up",
+      "cat": "",
+      "prompt": "\"{ \"prompt\\_type\": \"photorealistic\\_portrait\", \"subject\": { \"name\": \"person in the reference image\", \"identity\\_rules\": \"use the exact same person and facial identity from the reference image, preserve facial structure and proportions, no face swap, no identity change\", \"appearance\": \"authentic detailed facial features matching the reference image, soft skin texture, slight smile, looking upwards away from camera, relaxed expression\", \"hair\": \"messy high bun, blonde highlights, loose wispy strands framing the face, casual updo\" }, \"attire\": { \"clothing\": \"dark burgundy ribbed knit long-sleeve top, tight fit, crew neck, casual style\", \"accessories\": \"none visible\" }, \"props\": { \"main\\_prop\": \"none\", \"details\": \"no visible weapons, no sword visible in frame, clean foreground, no objects obstructing the subject\" }, \"environment\": { \"setting\": \"indoor interior with vintage aesthetics\", \"background\": \"dark wooden coffered ceiling, architectural beams, antique style brass chandelier with glowing bulbs\", \"atmosphere\": \"warm, cozy, slightly dramatic due to angle\" }, \"camera\\_and\\_perspective\": { \"angle\": \"extreme low angle shot, worm's-eye view, looking up at the subject\", \"shot\\_type\": \"medium close-up\", \"focus\": \"sharp focus on face, depth of field with softly blurred background only\" }, \"lighting\": { \"type\": \"warm artificial indoor lighting\", \"source\": \"ceiling chandelier lights\", \"effect\": \"soft warm glow on face, highlights on cheeks and nose, shadows under jawline, ambient tungsten color tone\" }, \"technical\\_specs\": { \"resolution\": \"8k\", \"quality\": \"masterpiece, high fidelity, raw photo style\", \"film\\_stock\": \"Kodak Portra 400 vibe, slight grain\" } }\"",
+      "images": [
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1234.jpg"
       ]
     }
   ],
@@ -16931,7 +16942,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776668472719,
+  "_publishedAt": 1776668651107,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
