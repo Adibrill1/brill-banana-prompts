@@ -15788,6 +15788,26 @@
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1234.jpg"
       ]
+    },
+    {
+      "key": "added_1776693480699",
+      "id": "חדש",
+      "title": "Makeup",
+      "cat": "",
+      "prompt": "A stunning, hyper-realistic portrait of the person in the reference image, featuring intricate and spectacular [animal]-inspired theatrical makeup. The face paint is masterfully applied, blending high-fashion beauty with wild animalistic features, using vibrant colors, bold patterns, and exquisite details. Professional studio lighting, sharp focus, cinematic composition, 8k resolution, highly detailed, photorealistic.",
+      "images": [
+        "/images/custom_added_1776693480699_img0.jpg"
+      ]
+    },
+    {
+      "key": "added_1776693593909",
+      "id": "חדש",
+      "title": "Butterfly",
+      "cat": "",
+      "prompt": "A stunning, hyper-realistic portrait of the person in the reference image, featuring ethereal Butterfly-inspired theatrical makeup. The face paint features vibrant, delicate wing patterns sweeping across the eyes and cheeks, with iridescent colors, symmetrical details, and soft glowing accents. Professional studio lighting, sharp focus, cinematic composition, 8k resolution, highly detailed, photorealistic.",
+      "images": [
+        "/images/custom_added_1776693593909_img0.jpg"
+      ]
     }
   ],
   "order": [
@@ -17119,7 +17139,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776692609090,
+  "_publishedAt": 1776693597268,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
