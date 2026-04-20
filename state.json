@@ -863,11 +863,8 @@
     "added_imp_0617",
     "added_imp_0553",
     "added_imp_0674",
-    "added_1775333713881",
-    "added_1775333813837",
-    "added_1775333853337",
-    "added_1775312000425",
-    "orig_6",
+    "added_imp_0539",
+    "added_imp_0002",
     "added_1775114491412"
   ],
   "customImgs": {
@@ -1104,11 +1101,11 @@
     {
       "key": "added_1775311859714",
       "id": "חדש",
-      "title": "E.T. & Alf",
+      "title": "איטי ואלף",
       "cat": "",
       "prompt": "Create a hyper-realistic portrait using the uploaded photo keeping the real face, facial structure, skin tone, and expression of the person exactly the same.\n\nThe scene shows the person kneeling in the middle of a cozy vintage living room, wearing a denim jacket, white shirt and jeans.\n\nHe's smiling naturally while hugging two iconic characters:\n\nALF on left: a hairy full-bodied alien puppet with brown/orange hair, large muzzle, expressive eyes and large padded feet. Very detailed and realistic texture of skin and hands.\n\nE.T. on the right: a full-body, extremely detailed and realistic model with wrinkled skin, long neck, large expressive eyes, and a glowing fingertip on her right hand.\n\nBoth characters are close to the person as if they are posing for a warm family photo.\n\nThe background is a cozy 80s-style living room: vintage floral sofa, wooden furniture, bookshelves filled with ceramic vases, indoor plants, soft natural window light, warm tones, and a nostalgic homely atmosphere.\n\nUltra-detailed leather, fabric textures, realistic lighting, volumetric smoothness, 8K resolution, cinematic photography, perfect color gradation.",
       "images": [
-        "https://brill-banana-prompts-v3.vercel.app/images/custom_added_1775311859714_img0.jpg"
+        "images/custom_added_1775311859714_img0.jpg"
       ]
     },
     {
@@ -17021,7 +17018,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776677069924,
+  "_publishedAt": 1776677076051,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
