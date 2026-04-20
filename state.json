@@ -738,7 +738,16 @@
     "added_imp_1127",
     "added_imp_1126",
     "added_imp_1125",
-    "added_imp_1124"
+    "added_imp_1124",
+    "added_imp_1129",
+    "added_imp_1133",
+    "added_imp_1132",
+    "added_imp_1131",
+    "added_imp_1135",
+    "added_imp_1136",
+    "added_imp_1137",
+    "added_imp_1139",
+    "added_imp_1140"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -13433,9 +13442,9 @@
       "id": "new",
       "title": "Transform Image Into",
       "cat": "",
-      "prompt": "Use the uploaded reference image as a strict facial identity source.\n\nCRITICAL IDENTITY LOCK:\nThe face must match the reference image exactly — identical facial structure, proportions, eyes, lips, nose, skin tone, texture, hairstyle, and micro-details.\nNo changes, no reinterpretation, no beautification, no age shifts, and no added or removed facial hair.\nA perfect 1:1 facial reproduction is mandatory.\nThis applies whether the subject is interpreted as male or female.\n\nYou are an expert digital artist specializing in vibrant, stylized portrait creation with deep knowledge of Pop Art aesthetics, color theory, and modern digital illustration techniques. You excel at transforming reference photographs into bold, contemporary artworks that capture both the subject's essence and artistic vision.\n\n\n\nTASK:\nCreate a vibrant, stylized Pop Art digital portrait based entirely on the uploaded reference image. The artwork must maintain the subject’s exact facial identity, features, and serious expression while applying strong Pop Art stylization.\n\nOBJECTIVE:\nTransform the reference photograph into a striking Pop Art–inspired portrait that balances artistic interpretation with strict facial identity accuracy, resulting in a modern, gallery-worthy piece with bold color choices and high visual impact.\n\nAESTHETIC & STYLE GUIDELINES:\n• Use bold accent colors: bright pink, vivid blue, and energetic orange \n• Background must be deep navy blue to provide strong contrast \n• Maintain the subject’s serious expression and well-defined face \n• High-contrast Pop Art lighting and exaggerated tones \n• Dynamic, modern, contemporary feel \n• Hard edges, graphic color blocks, expressive shading \n• Clear definition of facial features while allowing stylization \n• Avoid photorealism — prioritize artistic energy and visual boldness \n\nFinal composition:\nA modern Pop Art portrait with perfect identity retention, vibrant color impact, and strong gallery-grade artistic clarity.",
+      "prompt": "Transform this image into a 5-piece jewelry collection.",
       "images": [
-        "images/imp_1130.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1130.jpg"
       ]
     },
     {
@@ -13473,9 +13482,9 @@
       "id": "new",
       "title": "Turn Photo Into",
       "cat": "",
-      "prompt": "{\n\"image_request\": {\n\"goal\": \"Create a stylized mixed-media portrait with hand-drawn elements, showing the subject eating a sufganiyah.\",\n\"meta\": {\n\"image_type\": \"Mixed Media Portrait\",\n\"quality\": \"8K\",\n\"color_mode\": \"Black and White Photo with Vibrant Color Overlay\",\n\"style_mode\": \"mixed_media_doodle\",\n\"aspect_ratio\": \"4:5\",\n\"resolution\": \"1080x1350px\"\n},\n\"creative_style\": \"Mixed Media Art combining a classic black and white studio portrait with vibrant, playful, hand-drawn digital doodles and patterns. The style is whimsical, energetic, and pop-art inspired, blending realism with illustrative abstraction.\",\n\"overall_theme\": \"playful artistic expression\",\n\"mood_vibe\": \"cheerful creative charming\",\n\"style_keywords\": [\n\"mixed media\",\n\"doodle art\",\n\"black and white photography\",\n\"vibrant colors\",\n\"pop art\",\n\"illustrative overlay\",\n\"playful\",\n\"patterned\",\n\"energetic\",\n\"portrait\"\n],\n\"subject\": {\n\"count\": \"1\",\n\"type\": \"male or female\",\n\"identity\": \"the real person from the reference photo\",\n\"identity_preservation\": {\n\"description\": \"Preserve the exact facial identity, proportions, hairstyle, and expression from the reference photo\",\n\"notes\": \"Do not alter facial structure or change the subject into any other known person\"\n},\n\"age_appearance\": \"match reference photo\",\n\"skin\": \"smooth black and white tone based on the reference image\",\n\"makeup\": {\n\"lips\": \"natural\",\n\"eyes\": \"natural\",\n\"general\": \"none\"\n},\n\"facial_features\": {\n\"expression\": \"use the authentic expression from the reference image\",\n\"eyes\": {\n\"gaze\": \"looking directly at viewer, matching reference\",\n\"intensity\": \"friendly\"\n},\n\"lips\": {\n\"gesture\": \"eating a sufganiyah\"\n}\n},\n\"hair\": {\n\"length\": \"match reference photo\",\n\"texture\": \"match reference photo\",\n\"style\": \"match reference photo\",\n\"lighting_interaction\": {\n\"light\": \"studio lighting highlights\",\n\"shadow_play\": \"soft facial modeling\"\n}\n},\n\"clothing\": {\n\"top\": \"same type of top visible in the reference or a simple neutral top if not visible\",\n\"bottom\": \"not visible\",\n\"full_description\": \"The clothing acts as the canvas for the art: a black base covered in colorful hand-drawn abstract patterns, stripes, and shapes (yellow collar, blue, pink, orange abstract forms).\",\n\"accessories\": \"none real, but drawn elements act as accessories\"\n},\n\"props\": {\n\"bouquet\": \"none\",\n\"wine_glass\": \"none\",\n\"other\": \"drawn yellow crown floating above head, and a hand-drawn sufganiyah with powdered sugar and jelly is being eaten by the subject\"\n}\n},\n\"pose_action\": {\n\"description\": \"Bust portrait matching the reference pose, looking forward.\",\n\"overall_pose\": \"standing studio portrait\",\n\"head_turn\": \"match reference\",\n\"gaze\": \"direct\",\n\"body_position\": \"upper body\",\n\"hands\": \"not visible\",\n\"movement\": \"static pose, dynamic art\"\n},\n\"multiple_frames_expressions\": [],\n\"environment\": {\n\"setting\": \"studio white background\",\n\"location\": \"studio\",\n\"weather\": \"n/a\",\n\"time_of_day\": \"n/a\",\n\"atmosphere\": \"fun and artistic\"\n},\n\"background\": {\n\"color\": \"white with colorful doodles\",\n\"effect\": \"plain background filled with abstract black dashes, colorful swirls (blue, pink, orange), and scribbles\"\n},\n\"lighting\": {\n\"type\": \"studio strobe\",\n\"position\": \"front\",\n\"direction\": \"flat flattering light\",\n\"intensity\": \"balanced\",\n\"focus\": \"subject face\",\n\"falloff\": \"none\",\n\"light_source\": \"artificial\"\n}\n}\n}",
+      "prompt": "turn this photo into a character figure. Behind it, place a box with the character's image printed on it, and a computer showing the Blender modeling process on its screen.\nIn front of the box, add a round plastic base with the character figure standing on it.\nset the scene indoors if possible",
       "images": [
-        "images/imp_1134.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1134.jpg"
       ]
     },
     {
@@ -16868,7 +16877,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776661960711,
+  "_publishedAt": 1776662217693,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
