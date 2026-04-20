@@ -841,7 +841,17 @@
     "added_imp_1319",
     "added_imp_1318",
     "added_imp_1321",
-    "added_imp_1323"
+    "added_imp_1323",
+    "added_imp_1326",
+    "added_imp_1327",
+    "added_imp_1328",
+    "added_imp_1329",
+    "added_imp_1331",
+    "added_imp_1333",
+    "added_imp_1334",
+    "added_imp_1332",
+    "added_imp_1335",
+    "added_1775630066393"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -15538,9 +15548,9 @@
       "id": "new",
       "title": "Young Woman With",
       "cat": "",
-      "prompt": "A young woman reference form uploaded image kneeling in deep snow, captured in a front profile view while taking a photograph. \nShe is positioned in the center of the frame, leaning forward slightly to look through her camera's viewfinder. \n\nClothing : \n\nA thick, winter parka jacket in a color-block design featuring light pastel blue and white panels. She is wearing black winter trousers and thick, beige, knitted mittens/gloves. \n\n Accessories \nA professional black DSLR or mirrorless camera with a prominent zoom lens held in her hands.\nA mustard-yellow canvas backpack is strapped to her back, providing a colorful contrast to the cool tones. \n\nEnvironment \n\nA serene winter forest setting. The background is filled with tall pine trees heavily laden with fresh white snow. The ground is covered in a thick, soft layer of undisturbed snow.\n\nCamera \nMedium shot, eye-level angle. Shallow depth of field (bokeh) used to keep the subject sharp while softly blurring the snowy trees in the background. High-resolution photography style.\n\n Style \nPhotorealistic, cinematic winter lifestyle photography, nature portrait, serene and cold aesthetic, 8k resolution, highly detailed",
+      "prompt": "Using the exact facial features from the attached image \nCreate an hyperrealistic and high quality close-up portrait of a styling young woman,  her dark thick long hair styled in twin high artistic braids that falls over her ears, few loose trendils clipped using a different style matte brown statement hair clips ,with few loose strands falls across and frames her face, wearing a drawstring halter top, a thick-frame  brown cat-eye eyeglasses slightly lowered, soft hazel nut eyes, glossy red pouty lips, peached dewy blush and soft warm tone eyeshadows with a little bit shimmers and glitters on her cheeks and under her eyes, artistic brown eyeliner, natural dewy skin, head slightly tilted, relaxed and confident gaze hand-on-cheek pose, minimalistic background, warm beige and brown tones, bright and harsh illumination coming from the camera highlighting the texture of her figure, soft studio background lighting, K-fashion editorial aesthetic, Seoul street style influence, hyper-detailed face texture, cinematic tone, 85mm lens photography, Vogue Korea vibe, stylish and modern mood --ar 2:3 --v 6 --style raw --q 2 --s 250",
       "images": [
-        "images/imp_1330.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1330.jpg"
       ]
     },
     {
@@ -15610,7 +15620,7 @@
       "cat": "",
       "prompt": "Create a serene, top-down portrait of a person lying peacefully in a lush meadow filled with wildflowers. They rest on their back among tall green grass, white daisies, and scattered pink blossoms, completely immersed in nature. One arm is bent behind their head in a relaxed pose, while the other gently holds a small bouquet of freshly picked daisies against their chest. They have soft, natural facial features and slightly tousled dark hair. Their eyes are closed with a faint, content smile, conveying calmness, tenderness, and quiet joy. Their expression feels intimate and emotionally warm, as if caught in a private moment of rest and reflection. They wear a textured mauve or dusty-rose knit sweater paired with clean white trousers, creating a gentle contrast against the vibrant greens and florals. The outfit feels cozy, romantic, and timeless. The scene is bathed in warm, natural daylight, soft afternoon sunlight filtering through leaves and petals. Highlights gently kiss the skin and flowers, while shadows remain soft and organic. Foreground leaves and flowers partially frame the subject, adding depth and a dreamy, cinematic feel. Colors are rich yet natural: lush greens, creamy whites, soft yellows, and muted pinks, with a harmonious, film-like color grade.",
       "images": [
-        "/images/custom_added_1775630229561_img0.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/custom_added_1775630229561_img0.jpg"
       ]
     },
     {
@@ -16993,7 +17003,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776673281537,
+  "_publishedAt": 1776673552760,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
