@@ -700,7 +700,14 @@
     "added_imp_1059",
     "added_imp_1062",
     "added_imp_1067",
-    "added_imp_1068"
+    "added_imp_1068",
+    "added_imp_1073",
+    "added_imp_1071",
+    "added_imp_1070",
+    "added_imp_1075",
+    "added_imp_1076",
+    "added_imp_1077",
+    "added_imp_1078"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -12885,9 +12892,9 @@
       "id": "new",
       "title": "Soldier In Combat",
       "cat": "",
-      "prompt": "Create an image based on the person in the attached photo that shows a soldier with the face of the person in the image in combat uniform, in the foreground, during a military attack with tanks in the background, following all the soldier details described below.\nSoldier Details:\n• Uniform: He wears a forest camouflage uniform (green, brown, and black) that is typical of the Brazilian Army (EB). The long-sleeved shirt/jacket is buttoned, and he wears trousers (although the trousers are not fully visible, the pattern is the same).\n\n• Helmet: He is wearing a modern combat helmet, olive green in color, with a chin strap that is fastened.\n\n• Facial Detail: He has a serious and cordial look without camouflage, only with a slightly dirty face.\n\n• Armament: He carries an assault rifle, which appears to be an IMBEL A2 or a modernized FAL family rifle, in black. The weapon is resting on the front of his body, with the barrel pointing down and to the viewer's right, and he is holding it with his right hand. The inserted magazine is visible.\n• Equipment: He is wearing a tactical vest or load-bearing equipment (suspenders and belt) over his uniform. On his left shoulder (viewer's right side), there is a patch or insignia on his uniform. On his belt, to the left, he has a holster or utility pouch that is olive green or khaki in color. His gloves appear to be thin, or he is either ungloved but has camouflage paint on his hands.\n• Identification: It is possible to read what appears to be a first or last name (his last name) on the left chest of his uniform, above the pocket.",
+      "prompt": "Crie uma imagem com base na pessoa da foto anexada que mostra um soldado com o rosto da pessoa da imagem em uniforme de combate, em primeiro plano, durante um ataque militar com tanques de guerra ao fundo seguindo todos os detalhe do soldado descritos abaixo.\nDetalhes do Soldado:\n• Uniforme: Ele veste um uniforme de camuflagem de padrão florestal (verde, marrom e preto) que é típico do Exército Brasileiro (EB). A camisa/gandola de manga comprida está abotoada e ele usa calças (embora as calças não estejam totalmente visíveis, o padrão é o mesmo).\n• Capacete: Está usando um capacete de combate moderno, de cor verde-oliva, com uma jugular de retenção que está afivelada.\n• Detalhe Facial: Ele apresenta um olhar sério e cordial sem camuflagem, apenas com rosto levemente sujo. \n• Armamento: Ele carrega um fuzil de assalto, que parece ser um IMBEL A2 ou um fuzil da família FAL modernizado, na cor preta. A arma está apoiada na parte frontal do corpo, com o cano apontando para baixo e para a direita do espectador, e ele a segura com a mão direita. É possível ver o carregador inserido.\n• Equipamento: Ele usa um colete tático ou equipamento de suporte de carga (suspensório e cinto) por cima do uniforme. No ombro esquerdo (lado direito do espectador), há um patch ou insígnia no uniforme. No cinto, à esquerda, ele possui um coldre ou bolsa utilitária de cor verde-oliva ou cáqui. As luvas parecem ser finas ou ele está com as mãos sem luvas, mas com a pintura camuflagem.\n• Identificação: É possível ler o que parece ser um nome ou sobrenome (seu sobrenome) no peito esquerdo do uniforme, acima do bolso.",
       "images": [
-        "images/imp_1079.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1079.jpg"
       ]
     },
     {
@@ -16830,7 +16837,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776660527702,
+  "_publishedAt": 1776660680023,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
