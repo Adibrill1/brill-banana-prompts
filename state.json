@@ -812,7 +812,9 @@
     "added_imp_1271",
     "added_imp_1273",
     "added_imp_1272",
-    "added_imp_1275"
+    "added_imp_1275",
+    "added_imp_1234",
+    "added_imp_1278"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -14551,7 +14553,7 @@
       "cat": "",
       "prompt": "Gorgeous woman like a devil flirty instagram model standing in church hall, behind she is a mosaic fresco, an uncovered shaped body with gold eyelashes, fabrick vail, Use the rule of thirds, Look for curves, lines& interesting shapes, Emotion is more important than composition, by famous fashion photographer --q 2 --s 750 --v 7.0 --raw --ar 9:16",
       "images": [
-        "/images/custom_added_imp_1234_img0.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/custom_added_imp_1234_img0.jpg"
       ]
     },
     {
@@ -14977,11 +14979,11 @@
     {
       "key": "added_imp_1277",
       "id": "new",
-      "title": "Woman Standing In",
+      "title": "Church hall",
       "cat": "",
-      "prompt": "Create a surreal fashion editorial photograph featuring a young Scandinavian woman with platinum blonde hair standing encased inside a large vertical block of transparent ice. She wears a vibrant crimson red pleated maxi dress with subtle Nordic geometric patterns at the hem that contrasts sharply with the cold blue tones of the ice. Her long hair is voluminous and wavy with small ice crystals forming in the strands. At the base of the ice block is a frozen arrangement of deep red arctic poppies and purple heather mixed with dried birch branches and moss. She holds a thin curved branch of Norwegian spruce in her hand. The background is a deep blue-teal gradient suggesting the colors of Nordic winter twilight. The lighting is cinematic and cool-toned, highlighting realistic frost patterns, cracks, and air bubbles within the ice to create a mysterious ethereal atmosphere evoking Scandinavian winter mythology.",
+      "prompt": "Gorgeous woman like a devil flirty instagram model standing in church hall, behind she is a mosaic fresco, an uncovered shaped body with gold eyelashes, fabrick vail, Use the rule of thirds, Look for curves, lines& interesting shapes, Emotion is more important than composition, by famous fashion photographer --q 2 --s 750 --v 7.0 --raw --ar 9:16",
       "images": [
-        "images/imp_1277.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1277.jpg"
       ]
     },
     {
@@ -14999,9 +15001,9 @@
       "id": "new",
       "title": "Woman Standing On",
       "cat": "",
-      "prompt": "Create a surreal fashion editorial photograph featuring a young Scandinavian woman with platinum blonde hair standing encased inside a large vertical block of transparent ice. She wears a vibrant crimson red pleated maxi dress with subtle Nordic geometric patterns at the hem that contrasts sharply with the cold blue tones of the ice. Her long hair is voluminous and wavy with small ice crystals forming in the strands. At the base of the ice block is a frozen arrangement of deep red arctic poppies and purple heather mixed with dried birch branches and moss. She holds a thin curved branch of Norwegian spruce in her hand. The background is a deep blue-teal gradient suggesting the colors of Nordic winter twilight. The lighting is cinematic and cool-toned, highlighting realistic frost patterns, cracks, and air bubbles within the ice to create a mysterious ethereal atmosphere evoking Scandinavian winter mythology.",
+      "prompt": "Reference image: uploaded photo Face: keep the same face from the reference image. Pose: model standing with left arm resting on railing, holding cup of coffee, body slightly leaned to side, looking away. Clothes: fluffy white faux-fur coat, tight black leggings.Accessories:transparent rectangular sunglasses.Background: snowy mountain terrace, heavy snow on railings, forest in background. Lighting: cold daylight softened by fog, natural reflections on glass. Camera: 50mm f/2.0, natural cinematic winter tone. Mood: luxury après-ski, calm sophistication. Format:portrait 2:3.",
       "images": [
-        "images/imp_1279.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1279.jpg"
       ]
     },
     {
@@ -16964,7 +16966,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776669610843,
+  "_publishedAt": 1776669730706,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
