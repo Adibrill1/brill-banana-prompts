@@ -707,7 +707,12 @@
     "added_imp_1075",
     "added_imp_1076",
     "added_imp_1077",
-    "added_imp_1078"
+    "added_imp_1078",
+    "added_imp_1081",
+    "added_imp_1082",
+    "added_imp_1084",
+    "added_imp_1086",
+    "added_imp_1088"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -12930,11 +12935,11 @@
     {
       "key": "added_imp_1083",
       "id": "new",
-      "title": "Statue Of Liberty",
+      "title": "Statue Of sand",
       "cat": "",
-      "prompt": "A miniature 3D sculpted sand of [Head of Statue of Liberty], with half visible and the other half covered by sand, gives a hyper-realistic impression of emerging from the sand.ratio[2:3]",
+      "prompt": "A hyper-realistic miniature 3D sculpted sand model, with half of it emerging from the sand, creating a surreal and immersive visual effect.ratio[2:3]",
       "images": [
-        "images/imp_1083.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1083.jpg"
       ]
     },
     {
@@ -16837,7 +16842,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776660680023,
+  "_publishedAt": 1776661023539,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
