@@ -697,7 +697,10 @@
     "added_imp_1053",
     "added_imp_1055",
     "added_imp_1056",
-    "added_imp_1059"
+    "added_imp_1059",
+    "added_imp_1062",
+    "added_imp_1067",
+    "added_imp_1068"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -893,7 +896,8 @@
     "added_imp_0482": "/images/custom_added_imp_0482.jpg",
     "added_imp_0623": "/images/custom_added_imp_0623.jpg",
     "added_imp_0900": "/images/custom_added_imp_0900.jpg",
-    "added_imp_0999": "/images/custom_added_imp_0999.jpg"
+    "added_imp_0999": "/images/custom_added_imp_0999.jpg",
+    "added_imp_1064": "/images/custom_added_imp_1064.jpg"
   },
   "added": [
     {
@@ -12691,9 +12695,9 @@
       "id": "new",
       "title": "Selfie With Actors",
       "cat": "",
-      "prompt": "A selfie taken by the person in the attached image with the Grinch on the set of How the Grinch Stole Christmas. They are in a snowy, whimsical Whoville physical set. The Grinch is played by an actor in extensive, detailed green furry prosthetic makeup. The person is taking the photo, and a makeup artist is doing a final touch-up on the Grinch's long, furry fingers.",
+      "prompt": "A selfie taken by the person in the attached image with a large group of actors from a retro 1980s sci-fi adventure series. They are gathered in a full-scale physical set of a teenager's bedroom, packed with authentic 1980s props. The actors are dressed in period-accurate clothing. Green screens are visible outside the set windows.",
       "images": [
-        "images/imp_1060.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1060.jpg"
       ]
     },
     {
@@ -12701,9 +12705,9 @@
       "id": "new",
       "title": "Selfie With Alien",
       "cat": "",
-      "prompt": "A selfie taken by the person in the attached image with Audrey II on the set of Little Shop of Horrors. They are standing in the skid row flower shop set, right next to a massive, incredibly detailed giant alien plant puppet. The plant has its mouth wide open in a comical way. Several puppeteers are visible operating the heavy vines from below.",
+      "prompt": "A selfie taken by the person in the attached image with a giant alien insect on the set of a sci-fi factory movie. They are in an industrial set filled with conveyor belts and glowing pipes. The insect is a massive, practical-effect animatronic creature with sharp mandibles. The person is holding up their phone, and a film crew is adjusting the dramatic orange and green lighting behind them.",
       "images": [
-        "images/imp_1061.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1061.jpg"
       ]
     },
     {
@@ -12721,9 +12725,9 @@
       "id": "new",
       "title": "Selfie With Dragon",
       "cat": "",
-      "prompt": "\"I'm taking a selfie with Dragon on the set of Shrek 2. We are on a giant, full-scale outdoor set of 'Far Far Away'. I'm standing next to the enormous Dragon, who is a complex CGI-ready practical effect. She is nuzzling my arm. There's a camera crew on a platform and large fabric backdrops.\"",
+      "prompt": "\"I'm taking a selfie with Smaug on the set of Erebor, the Lonely Mountain. I'm standing next to an immense, practical-effects dragon head, covered in detailed CGI markers, on a massive pile of prop gold. I'm taking the picture, and Smaug is releasing a small puff of smoke. A camera crew on a jib is visible.\"",
       "images": [
-        "images/imp_1063.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1063.jpg"
       ]
     },
     {
@@ -12733,7 +12737,7 @@
       "cat": "",
       "prompt": "\"I'm taking a selfie with Dragon on the set of Shrek 2. We are on a giant, full-scale outdoor set of 'Far Far Away'. I'm standing next to the enormous Dragon, who is a complex CGI-ready practical effect. She is nuzzling my arm. There's a camera crew on a platform and large fabric backdrops.\"",
       "images": [
-        "images/imp_1064.jpg"
+        "/images/custom_added_imp_1064_img0.jpg"
       ]
     },
     {
@@ -16826,7 +16830,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776660129342,
+  "_publishedAt": 1776660527702,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
