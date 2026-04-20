@@ -729,7 +729,16 @@
     "added_imp_1111",
     "added_imp_1113",
     "added_imp_1114",
-    "added_imp_1115"
+    "added_imp_1115",
+    "added_imp_1120",
+    "added_imp_1118",
+    "added_imp_1117",
+    "added_imp_1121",
+    "added_imp_1123",
+    "added_imp_1127",
+    "added_imp_1126",
+    "added_imp_1125",
+    "added_imp_1124"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -13404,9 +13413,9 @@
       "id": "new",
       "title": "Transform Image Into",
       "cat": "",
-      "prompt": "Use the uploaded reference image as a strict facial identity source.\n\nCRITICAL IDENTITY LOCK:\nThe face must match the reference image exactly — identical facial structure, proportions, eyes, lips, nose, skin tone, texture, hairstyle, and micro-details.\nNo changes, no reinterpretation, no beautification, no age shifts, and no added or removed facial hair.\nA perfect 1:1 facial reproduction is mandatory.\nThis applies whether the subject is interpreted as male or female.\n\nYou are an expert digital artist specializing in vibrant, stylized portrait creation with deep knowledge of Pop Art aesthetics, color theory, and modern digital illustration techniques. You excel at transforming reference photographs into bold, contemporary artworks that capture both the subject's essence and artistic vision.\n\n\n\nTASK:\nCreate a vibrant, stylized Pop Art digital portrait based entirely on the uploaded reference image. The artwork must maintain the subject’s exact facial identity, features, and serious expression while applying strong Pop Art stylization.\n\nOBJECTIVE:\nTransform the reference photograph into a striking Pop Art–inspired portrait that balances artistic interpretation with strict facial identity accuracy, resulting in a modern, gallery-worthy piece with bold color choices and high visual impact.\n\nAESTHETIC & STYLE GUIDELINES:\n• Use bold accent colors: bright pink, vivid blue, and energetic orange \n• Background must be deep navy blue to provide strong contrast \n• Maintain the subject’s serious expression and well-defined face \n• High-contrast Pop Art lighting and exaggerated tones \n• Dynamic, modern, contemporary feel \n• Hard edges, graphic color blocks, expressive shading \n• Clear definition of facial features while allowing stylization \n• Avoid photorealism — prioritize artistic energy and visual boldness \n\nFinal composition:\nA modern Pop Art portrait with perfect identity retention, vibrant color impact, and strong gallery-grade artistic clarity.",
+      "prompt": "Transform the uploaded image into a minimalist illustration with an airy, warm pastel palette. Use clean, crisp lines, a flat 2‑D perspective, and subtle, gentle shadows. Keep the composition light and uncluttered, emphasizing simplicity and the soft glow of the color scheme",
       "images": [
-        "images/imp_1128.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1128.jpg"
       ]
     },
     {
@@ -16859,7 +16868,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776661802373,
+  "_publishedAt": 1776661960711,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
