@@ -712,7 +712,15 @@
     "added_imp_1082",
     "added_imp_1084",
     "added_imp_1086",
-    "added_imp_1088"
+    "added_imp_1088",
+    "added_imp_1090",
+    "added_imp_1091",
+    "added_imp_1094",
+    "added_imp_1095",
+    "added_imp_1096",
+    "added_imp_1098",
+    "added_imp_1099",
+    "added_imp_1103"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -12997,9 +13005,9 @@
       "id": "new",
       "title": "Street Graffiti Style",
       "cat": "",
-      "prompt": "Create a dramatic, ultra-realistic nighttime urban scene. A person from the uploaded reference image - keeping the exact same face, expression, proportions, skin texture, hair, and all unique facial details with zero alteration - sits confidently in the center of an empty city street beneath an overpass. They lean casually against a graffiti-covered concrete pillar, surrounded by the glow of a modern skyline filled with tall glass buildings, illuminated windows, and neon reflections. The person wears a white-yellow shirt with bold red text, olive joggers, and red-white sneakers, captured in rich, detailed fabric texture. Long-exposure light trails from passing vehicles streak dynamically through the background in blue, red, orange, and white, adding a futuristic sense of motion. Shot from a low-angle, centered, symmetrical perspective, creating deep cinematic drama and powerful compositional balance. The atmosphere blends street photography with cyberpunk-style colors - moody, energetic, modern - with strong contrast, rich shadows, highly detailed surfaces, and professional lighting. Rendered in hyper-realistic 4K resolution, sharp, vivid, and immersive. Important: The person must retain 100% of the exact face from the uploaded reference image - same identity, same micro-details, same natural features - seamlessly integrated into this urban night scene.",
+      "prompt": "Transform the image into a vibrant street graffiti style. Use bold spray-paint textures, dripping paint effects, rough stencil shapes, and hand-drawn outlines. Incorporate urban elements like cracked walls, tags, and bold lettering. Use high-contrast, neon or primary colors, with an expressive, rebellious mood. Keep key elements recognizable, but stylized as if painted on a gritty city wall. No realism, no shadows — pure street art.",
       "images": [
-        "images/imp_1089.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1089.jpg"
       ]
     },
     {
@@ -13027,9 +13035,9 @@
       "id": "new",
       "title": "Street Mural Portrait",
       "cat": "",
-      "prompt": "Create an ultra-realistic cinematic portrait of a character (man or woman) based on the attached photo, captured leaning confidently against a vibrant graffiti mural.\nThe character wears a black jacket, dark jeans, and black Air Max sneakers, arms crossed, gazing to the side with a serious, self-assured expression.\nBehind them, a large, realistic mural features a painted portrait of the same person - same pose, outfit, and expression - surrounded by colorful urban graffiti.\nAbove the mural, the name \"ADI BRILL\" appears in vivid, stylized lettering.\nThe scene conveys street culture, self-expression, and artistic identity.\n\nEnsure 100% facial accuracy and realistic likeness to the reference photo - keep every micro-feature identical:\n* natural skin texture and tone, visible pores and imperfections,\n* true facial asymmetry and authentic proportions,\n* original hair details, eye color, and expression.\n\nNo face-altering filters, masks, retouching, or generative reinterpretation.\nMaintain natural lighting realism, physical shadows, and photographic optical depth.\nShot on Sony A7R IV, 85mm f/1.4, shallow depth of field, high dynamic range, Kodak Portra 400 color grading, soft daylight diffusion, and cinematic street atmosphere.",
+      "prompt": "A high-resolution, cinematic street mural on a large urban wall, featuring a close-up, semi-cartoon, semi-realistic portrait of a single person whose identity, facial features, hairstyle, accessories, skin tone, and age are taken exactly from the user’s uploaded reference photo, with the reference image used as the sole source for the main character’s appearance and expression, without altering bone structure or age, and only allowing minor styling tweaks to better integrate the character into the mural scene.\nThe character’s gender presentation is kept visually neutral, avoiding exaggerated masculine or feminine cues while still remaining fully consistent with the real person in the reference, preserving the same hairline, eye color, facial proportions, and any visible accessories such as glasses, earrings, or headwear, which should be redrawn faithfully unless a tiny adjustment is needed to match the mural composition.\nThe portrait shows the person from shoulders up, facing slightly toward the viewer with a calm, gentle, serene expression, eyes softly focused, conveying emotional ease and reassurance, with subtle line-work and soft shading that bridge the gap between realistic portraiture and clean cartoon outlines typical of polished contemporary street art.\nThe upper section of the wall is filled with an expansive field of blooming roses in various shades of soft pink, deep red, cream, and peach, surrounded by lush, saturated green leaves, painted with high-detail textures, layered petals, and subtle highlights that give the flowers a rich, almost tactile depth.\nClusters of roses cascade down the wall in flowing arcs, with some branches visually blending into the character’s hair so that sections of the hair transform seamlessly into layered rose petals and foliage, creating the illusion that the person is emerging from, or partially formed by, the floral composition.\nAround the character’s head, the densest roses and leaves form an elegant, organic floral crown, with overlapping blossoms that frame the face and create a romantic, dreamy halo effect, while still keeping the key facial features from the reference photo fully visible and accurate.\nA clear, soft blue sky with scattered fluffy white clouds occupies the upper background beyond the mural wall edges, adding airy depth and contrast to the saturated colors of the roses and the portrait, enhancing the serene and hopeful atmosphere.\nAt street level, the ground is rendered as realistic, slightly worn asphalt with detailed texture, subtle cracks, and reflected light, scattered with colorful fallen rose petals in different stages of fading, as if carried by wind from the mural into the real environment.\nA few casually dressed pedestrians walk or stand near the mural, painted small in scale and slightly blurred with soft motion to keep the focus on the portrait, reinforcing the sense that this is a living, urban street scene rather than a studio composition.\nThe overall lighting is bright yet soft, like an early morning or late afternoon glow, with gentle highlights on the character’s face and roses, and subtle shadows on the wall and asphalt, creating a dreamy, almost hyper-real visual quality typical of high-end photographic street art.\nColor grading leans toward warm, inviting tones with balanced contrast: vibrant rose colors, natural skin tones faithful to the reference photo, neutral gray asphalt, and a clean blue sky, all unified by a slightly cinematic, pastel-infused palette that supports a calm, reassuring mood.\nOn the mural wall, integrated into the composition near the portrait but not covering the character’s face, add the phrase\n“ Adi brill ” \nin a bold, legible, street-art graffiti style, with dynamic lettering, layered colors, and soft outlines, harmonizing with the floral palette while standing out clearly as a positive, encouraging message.\nThe Arabic text should read naturally as part of the artwork: slightly angled, with paint drips, spray textures, and subtle glow or shadow, placed so that some small rose elements weave in front of or behind parts of the letters, tying the message visually to the surrounding flowers and to the theme of emotional ease.\nEnsure the phrase’s meaning, “Adi brill ” is reflected in the character’s gentle expression, the light, open sky, and the soft scattering of petals, so that the entire mural communicates emotional simplicity, letting go of stress, and finding calm in the middle of the city’s hard surfaces.\nCompositionally, keep the character’s face as the central focal point, framed by the floral crown and guided by leading lines created by cascading roses and street-level perspective lines on the asphalt, with pedestrians and background details deliberately less sharp and less saturated to avoid stealing attention\nUse a high-resolution, ultra-detailed rendering style suitable for large-format wall art, with crisp edges, visible brush or spray-paint textures, and fine details \nFinal instruction: strictly base the main character’s identity, age, and key features on the single uploaded reference image, maintaining a gender-neutral presentation and avoiding any beautification that changes bone structure or age, while adapting clothing colors, lighting, and minor styling only as needed to harmonize with the dreamy, romantic, rose-filled street mural\nOutput:\nA realistic image that meets the above scene requirements. Please submit it in landscape dimensions, 16:9 aspect ratio, and high quality.",
       "images": [
-        "images/imp_1092.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1092.jpg"
       ]
     },
     {
@@ -13107,9 +13115,9 @@
       "id": "new",
       "title": "Surreal Illustration Dreamlike",
       "cat": "",
-      "prompt": "Transform this image into a digital illustration with a surreal, geometric art style. Apply glitch textures, abstract shapes, and cinematic composition. Use the original photo’s lighting and color palette to guide the atmosphere, while reimagining the scene in a stylized, dreamy, retro-futuristic way. ",
+      "prompt": "Transform the uploaded image into a surreal illustration with a whimsical, dream‑like vibe. Color palette: muted tones (soft greens, browns, greys) with occasional gentle pops of green.Lighting: soft, diffused, almost ethereal light that blends gradients and subtle highlights.Texture & medium feel: oil‑painting‑like brushstrokes, faint watercolor washes, or loose hand‑drawn linework, with a slight grainy texture. Mood & composition: exaggerated, expressive features (e.g., elongated faces or emotive eyes) characteristic of cartoonish or Muppet‑style illustrations, but applied in a surreal, slightly fantastical context.Overall aesthetic: blend realistic attention to detail with a touch of surreal whimsy—think serene, slightly uncanny atmosphere.",
       "images": [
-        "images/imp_1100.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1100.jpg"
       ]
     },
     {
@@ -16842,7 +16850,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776661023539,
+  "_publishedAt": 1776661546798,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
