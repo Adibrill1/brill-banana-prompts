@@ -3234,9 +3234,9 @@
       "id": "new",
       "title": "Change Person Pose",
       "cat": "",
-      "prompt": "Transform the uploaded photo into a vintage Halloween poster. Preserve the same person, face, hairstyle, pose, and outfit colors — do not replace the subject or change their skin tone or body shape. Add a classic black witch hat (slightly tilted with a brass buckle) and a flowing black satin cape with natural folds. Have the subject hold a glowing carved jack-o'-lantern, with warm candlelight illuminating the hands and chin. Create a diagonal split background of dark teal and burnt orange, with subtle mist and fine spider-web texture; place a full moon at the top-right and bat + ghost silhouettes at the top-left as small accents. Compose a 2:3 vertical poster, subject centered, cropped around the knees. Add an aged paper border, light film grain, and studio lighting (soft key from front-left, gentle rim from back-right). Add a bold vintage serif headline \"Halloween Night\" at the top and \"Trick or Treat\" at the bottom, off-white with slight emboss/outline; keep text crisp and readable. High detail, clean image, no watermark. Do not change the outfit's original colors or design; do not cover the face.",
+      "prompt": "The person is captured in a wide, low-profile warrior's crouch. Their right leg is deeply bent in a full squat with the foot flat on the ground, while the left leg is extended straight out to the side in a lateral lunge. The right arm is extended downward with the fist planted on the floor for support and stability. The left arm is raised high above the head, holding a katana horizontally. The torso is centered and slightly leaned forward, with the head facing forward and eyes locked in a direct, focused gaze.",
       "images": [
-        "images/imp_0089.jpg"
+        "/images/custom_added_imp_0089_img0.jpg"
       ]
     },
     {
@@ -17119,7 +17119,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776692062541,
+  "_publishedAt": 1776692609090,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
