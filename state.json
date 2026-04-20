@@ -801,7 +801,17 @@
     "added_imp_1249",
     "added_imp_1251",
     "added_imp_1254",
-    "added_imp_1256"
+    "added_imp_1256",
+    "added_imp_1263",
+    "added_imp_1265",
+    "added_imp_1262",
+    "added_imp_1266",
+    "added_imp_1268",
+    "added_imp_1267",
+    "added_imp_1270",
+    "added_imp_1271",
+    "added_imp_1273",
+    "added_imp_1272"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -14798,9 +14808,9 @@
       "id": "new",
       "title": "Woman Sitting On",
       "cat": "",
-      "prompt": "# A detailed, high-resolution photograph of the laboratory scene as seen in image_0.png, featuring the exact same scientist.\n\n**The Woman**: The image features the same specific scientist from image_0.png, a middle-aged woman with dark hair pulled back, wearing the same brown glasses and having the exact same facial features. She is wearing the same charcoal gray fleece jacket and the same blue t-shirt (mostly hidden).\n\n**The Action**: She is sitting in front of the large stereo microscope (the same model), looking through the eyepieces and using a manual pipette to transfer a small drop of clear liquid into an illuminated petri dish on the microscope's stage. The pipette and the dish are identical to those in image_0.png.\n\n**The Environment (Exact Recreation)**:\n* The lab bench is cluttered but functional, featuring all the elements visible in image_0.png.\n* The large stereo microscope is positioned in the center.\n* To her right is the second, inverted microscope with the flask of pink liquid on it.\n* Multiple test tube racks with blue, white, and red caps are arranged in the foreground.\n* The computer monitor in the background displays complex green fluorescent micrographs and charts.\n* Various laboratory glassware (such as beakers and vials) are present.\n* The background includes the large window and the blurred figure of the second scientist.\n* Natural daylight blends with the overhead lab lighting.\n\n**Depth of Field and Atmosphere**: A highly realistic photograph. The depth of field is shallow, keeping the scientist, the microscope, and the foreground test tubes in sharp focus, while softly blurring the background to create depth. The atmosphere conveys scientific concentration and professionalism. The textures of the fleece jacket, the glass, and the equipment are clearly visible.",
+      "prompt": "A full-body hyper-realistic studio portrait of [A glamorous woman in a purple satin dress, adorned with diamond jewelry] in a [elegant] pose, sitting gracefully on a large [ perfume bottle] positioned [horizontal lay down] on a smooth [purple] floor. The object appears oversized and realistic, perfectly integrated with the subject — not floating. Its surface shows accurate texture, reflections, and material depth. The pose defines the subject’s attitude and interaction with the object — natural, stylish, and expressive. The character is balanced and confident, matching the object’s tone and style. Background is seamless, same color for wall and floor, slightly lighter below with soft reflections. Lighting: clean professional studio setup — diffused key from front-left, mild fill from right, subtle rim for separation, evenly balanced exposure. Mood: cinematic luxury editorial with minimal composition and photorealistic realism.",
       "images": [
-        "images/imp_1260.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1260.jpg"
       ]
     },
     {
@@ -14808,9 +14818,9 @@
       "id": "new",
       "title": "Woman Sitting On",
       "cat": "",
-      "prompt": "# A detailed, high-resolution photograph of the laboratory scene as seen in image_0.png, featuring the exact same scientist.\n\n**The Woman**: The image features the same specific scientist from image_0.png, a middle-aged woman with dark hair pulled back, wearing the same brown glasses and having the exact same facial features. She is wearing the same charcoal gray fleece jacket and the same blue t-shirt (mostly hidden).\n\n**The Action**: She is sitting in front of the large stereo microscope (the same model), looking through the eyepieces and using a manual pipette to transfer a small drop of clear liquid into an illuminated petri dish on the microscope's stage. The pipette and the dish are identical to those in image_0.png.\n\n**The Environment (Exact Recreation)**:\n* The lab bench is cluttered but functional, featuring all the elements visible in image_0.png.\n* The large stereo microscope is positioned in the center.\n* To her right is the second, inverted microscope with the flask of pink liquid on it.\n* Multiple test tube racks with blue, white, and red caps are arranged in the foreground.\n* The computer monitor in the background displays complex green fluorescent micrographs and charts.\n* Various laboratory glassware (such as beakers and vials) are present.\n* The background includes the large window and the blurred figure of the second scientist.\n* Natural daylight blends with the overhead lab lighting.\n\n**Depth of Field and Atmosphere**: A highly realistic photograph. The depth of field is shallow, keeping the scientist, the microscope, and the foreground test tubes in sharp focus, while softly blurring the background to create depth. The atmosphere conveys scientific concentration and professionalism. The textures of the fleece jacket, the glass, and the equipment are clearly visible.",
+      "prompt": "Please take a photo in the photo studio, using the female face from the attached photo.\nThe shooting angle is frontal, with a white studio background, and the female is sitting on a chair.\nShe was dressed in a full set of white attire: a white suit jacket, a white skirt, and white high heels.\nShe has an elegant posture, with her chin resting on her hand, and a small white rose in her hand.\nThe soft light of the setting sun shone through the windows, casting a warm glow on the walls of the photo studio.",
       "images": [
-        "images/imp_1261.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1261.jpg"
       ]
     },
     {
@@ -14838,9 +14848,9 @@
       "id": "new",
       "title": "Woman Sitting On",
       "cat": "",
-      "prompt": "# A detailed, high-resolution photograph of the laboratory scene as seen in image_0.png, featuring the exact same scientist.\n\n**The Woman**: The image features the same specific scientist from image_0.png, a middle-aged woman with dark hair pulled back, wearing the same brown glasses and having the exact same facial features. She is wearing the same charcoal gray fleece jacket and the same blue t-shirt (mostly hidden).\n\n**The Action**: She is sitting in front of the large stereo microscope (the same model), looking through the eyepieces and using a manual pipette to transfer a small drop of clear liquid into an illuminated petri dish on the microscope's stage. The pipette and the dish are identical to those in image_0.png.\n\n**The Environment (Exact Recreation)**:\n* The lab bench is cluttered but functional, featuring all the elements visible in image_0.png.\n* The large stereo microscope is positioned in the center.\n* To her right is the second, inverted microscope with the flask of pink liquid on it.\n* Multiple test tube racks with blue, white, and red caps are arranged in the foreground.\n* The computer monitor in the background displays complex green fluorescent micrographs and charts.\n* Various laboratory glassware (such as beakers and vials) are present.\n* The background includes the large window and the blurred figure of the second scientist.\n* Natural daylight blends with the overhead lab lighting.\n\n**Depth of Field and Atmosphere**: A highly realistic photograph. The depth of field is shallow, keeping the scientist, the microscope, and the foreground test tubes in sharp focus, while softly blurring the background to create depth. The atmosphere conveys scientific concentration and professionalism. The textures of the fleece jacket, the glass, and the equipment are clearly visible.",
+      "prompt": "A 100% ultra-realistic photo. The photo features a female person with the exact face and facial details from the uploaded reference image.\nScene Description\nThe person  in a modern, minimalist studio sitting on a large, Black, 3D  sculpture of the word 【BRILL】.\nComposition & Style\n- The overall style is minimal and contemporary.\n- The letters of the word sculpture spelled out on the ground in front of a person, height reaching the person’s waist.",
       "images": [
-        "images/imp_1264.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1264.jpg"
       ]
     },
     {
@@ -14888,9 +14898,9 @@
       "id": "new",
       "title": "Woman Sitting On",
       "cat": "",
-      "prompt": "# A detailed, high-resolution photograph of the laboratory scene as seen in image_0.png, featuring the exact same scientist.\n\n**The Woman**: The image features the same specific scientist from image_0.png, a middle-aged woman with dark hair pulled back, wearing the same brown glasses and having the exact same facial features. She is wearing the same charcoal gray fleece jacket and the same blue t-shirt (mostly hidden).\n\n**The Action**: She is sitting in front of the large stereo microscope (the same model), looking through the eyepieces and using a manual pipette to transfer a small drop of clear liquid into an illuminated petri dish on the microscope's stage. The pipette and the dish are identical to those in image_0.png.\n\n**The Environment (Exact Recreation)**:\n* The lab bench is cluttered but functional, featuring all the elements visible in image_0.png.\n* The large stereo microscope is positioned in the center.\n* To her right is the second, inverted microscope with the flask of pink liquid on it.\n* Multiple test tube racks with blue, white, and red caps are arranged in the foreground.\n* The computer monitor in the background displays complex green fluorescent micrographs and charts.\n* Various laboratory glassware (such as beakers and vials) are present.\n* The background includes the large window and the blurred figure of the second scientist.\n* Natural daylight blends with the overhead lab lighting.\n\n**Depth of Field and Atmosphere**: A highly realistic photograph. The depth of field is shallow, keeping the scientist, the microscope, and the foreground test tubes in sharp focus, while softly blurring the background to create depth. The atmosphere conveys scientific concentration and professionalism. The textures of the fleece jacket, the glass, and the equipment are clearly visible.",
+      "prompt": "Use the uploaded photo as the face reference for both the large painted portrait in the background and the full-body woman in the foreground. Create a stylish cinematic scene with a woman sitting confidently on the table in her personal luxury office room. She wears a loose pastel-toned dress or an oversized soft-colored suit... The background features a huge artistic portrait of the same woman, painted with expressive pastel brushstrokes — pink, peach, beige — dynamic, sweeping strokes that create movement. Soft daylight, fashion-editorial mood, clean composition.",
       "images": [
-        "images/imp_1269.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/imp_1269.jpg"
       ]
     },
     {
@@ -16953,7 +16963,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776669311101,
+  "_publishedAt": 1776669554288,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
