@@ -852,9 +852,23 @@
     "added_imp_1332",
     "added_imp_1335",
     "added_1775630066393",
-    "added_imp_0661",
-    "added_imp_0379",
-    "added_imp_0925"
+    "added_1775206624742",
+    "added_imp_1282",
+    "added_1775315717510",
+    "added_1775317439415",
+    "added_1775325455091",
+    "added_1775325558079",
+    "added_1775325615460",
+    "added_1775325873241",
+    "added_1775326128417",
+    "added_1775326163805",
+    "added_1775327479954",
+    "added_1775327793704",
+    "added_1775327908607",
+    "added_1775328040902",
+    "added_1775324952074",
+    "added_1775328163435",
+    "added_1775328399194"
   ],
   "customImgs": {
     "orig_6": "images/custom_orig_6.jpg",
@@ -1053,8 +1067,7 @@
     "added_imp_0999": "/images/custom_added_imp_0999.jpg",
     "added_imp_1064": "/images/custom_added_imp_1064.jpg",
     "added_imp_1234": "/images/custom_added_imp_1234.jpg",
-    "added_imp_1247": "/images/custom_added_imp_1247.jpg",
-    "added_imp_0110": "/images/custom_added_imp_0110.jpg"
+    "added_imp_1247": "/images/custom_added_imp_1247.jpg"
   },
   "added": [
     {
@@ -1454,7 +1467,7 @@
       "cat": "",
       "prompt": "The breed of dog which biden had as a pet holding up a newspaper with the top headline from october 1st 2018 on a skateboard. A photo of the man/woman from the attached image, on the newspaper",
       "images": [
-        "/images/custom_added_1775325259630_img0.jpg"
+        "https://brill-banana-prompts-v3.vercel.app/images/custom_added_1775325259630_img0.jpg"
       ]
     },
     {
@@ -3354,7 +3367,7 @@
       "cat": "",
       "prompt": "CREATE a 64 K DSLR ultra-realistic cinematic portrait of the character (male or female, keeping the same face from the reference image), emerging dramatically from a large cracked playing card of the King of Spades.\nThe King figure has short hair and a well-groomed beard or refined facial features depending on gender, wearing an ornate crown with gold filigree and embedded red gems.\nThe character is dressed in luxurious robes with rich gold-and-crimson embroidery, draped across the shoulders with heavy regal folds.\nOne arm extends forward in a commanding, cinematic gesture, while the other rests naturally, revealing a subtle tattoo on the hand.\nThe cracked playing card looks like aged stone, with dust and debris breaking loose as the figure pushes through its surface.\nLighting is dramatic and low-key, emphasizing depth, shadows, and highlights across the crown and robes.\nBackground: dark gradient tone with faint atmospheric particles for a post-apocalyptic mood.\nThe name \"\nEnter Tomer\n\" is printed in fine lettering at the lower-right corner of the card.\nRender in Octane Render / Unreal Engine 5 style with photoreal materials, sharp optics, HDR global illumination, and cinematic depth of field.\nThe overall image evokes grandeur, authority, and quiet power, blending realism with subtle fantasy energy.\n",
       "images": [
-        "/images/custom_added_imp_0110_img0.jpg"
+        "images/imp_0110.jpg"
       ]
     },
     {
@@ -17007,7 +17020,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1776674618942,
+  "_publishedAt": 1776674647601,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
