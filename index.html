@@ -286,6 +286,11 @@ body.admin-open .prompt-wrap{display:block !important}
 .cat-check-label:hover{background:var(--bg4)}
 .cat-check-label input{display:none}
 .cat-check-label.checked{background:#f5a623;color:#000;border-color:#f5a623;font-weight:bold}
+.ec-cats{background:#7b1fa2;color:#fff}.ec-cats:hover{background:#9c27b0}
+.cat-popover{position:absolute;z-index:300;background:var(--modal-bg);border:1px solid var(--border2);border-radius:10px;padding:10px 12px;box-shadow:0 4px 24px rgba(0,0,0,.55);min-width:160px;top:0;left:0;right:0}
+.cat-popover .cat-check-label{display:flex;margin-bottom:5px}
+.cm-row{display:flex;gap:6px;align-items:center;margin-bottom:6px}
+.cm-inp{flex:1;padding:5px 8px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);font-size:13px}
 /* customer preview mode */
 /* ec-dup button */
 .ec-dup{background:#4caf50;color:#fff}.ec-dup:hover{background:#66bb6a}
@@ -327,6 +332,7 @@ body.admin-open .prompt-wrap{display:block !important}
   <button class="btn btn-edit" onclick="openWaTextModal()" title="ערוך הודעות וואטסאפ">📱 הודעות WA</button>
   <button class="btn btn-edit" onclick="openHeaderModal()" title="ערוך כותרת ראשית">✏️ כותרת</button>
   <button class="btn btn-edit" onclick="openServicesModal()" title="ערוך עמוד שירותים">🛍️ שירותים</button>
+  <button class="btn btn-edit" onclick="openCatsManager()" title="ניהול קטגוריות">🏷️ קטגוריות</button>
   <button class="btn btn-edit" onclick="exportCSV()" title="ייצוא לאקסל">📤 CSV</button>
   <span class="free-counter" id="freeCounter">🆓 0/50</span>
 </div>
@@ -4606,6 +4612,20 @@ set the scene indoors if possible</pre></div>
   </div>
   <div class="lb-counter" id="lb-counter"></div>
 </div>
+<div class="modal-bg" id="catsModal">
+  <div class="modal" style="max-width:420px">
+    <h2>🏷️ ניהול קטגוריות</h2>
+    <div id="catsManagerList"></div>
+    <div style="display:flex;gap:8px;margin-top:10px">
+      <input class="cm-inp" id="newCatInput" placeholder="שם קטגוריה חדשה...">
+      <button class="btn btn-add" onclick="addCatItem()">➕ הוסף</button>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-cancel" onclick="closeModal('catsModal')">ביטול</button>
+      <button class="btn btn-ok" onclick="saveCatsManager()">שמור</button>
+    </div>
+  </div>
+</div>
 <div class="modal-bg" id="promptModal">
   <div class="modal">
     <h2 id="modalTitle"></h2>
@@ -5710,6 +5730,89 @@ var CUSTOM_CATS = [
   {id:'fantasy',      label:'פנטזיה'},
   {id:'products',     label:'מוצרים'},
 ];
+function openCatsManager() {
+  if (!ADMIN_UNLOCKED) return;
+  var list = document.getElementById('catsManagerList');
+  list.innerHTML = '';
+  CUSTOM_CATS.forEach(function(c) {
+    var row = document.createElement('div');
+    row.className = 'cm-row';
+    row.innerHTML = '<input class="cm-inp" type="text" value="'+escHtml(c.label)+'" data-id="'+c.id+'">'
+      +'<button class="btn btn-edit" onclick="this.closest(\'.cm-row\').remove()" style="padding:4px 8px;font-size:12px">🗑️</button>';
+    list.appendChild(row);
+  });
+  document.getElementById('newCatInput').value = '';
+  openModal('catsModal');
+}
+function addCatItem() {
+  var inp = document.getElementById('newCatInput');
+  var label = inp.value.trim(); if (!label) return;
+  var list = document.getElementById('catsManagerList');
+  var row = document.createElement('div');
+  row.className = 'cm-row';
+  row.innerHTML = '<input class="cm-inp" type="text" value="'+escHtml(label)+'" data-id="custom_'+Date.now()+'">'
+    +'<button class="btn btn-edit" onclick="this.closest(\'.cm-row\').remove()" style="padding:4px 8px;font-size:12px">🗑️</button>';
+  list.appendChild(row); inp.value = '';
+}
+function saveCatsManager() {
+  var newCats = [];
+  document.querySelectorAll('#catsManagerList .cm-inp').forEach(function(inp) {
+    var label = inp.value.trim();
+    if (label) newCats.push({id: inp.getAttribute('data-id'), label: label});
+  });
+  CUSTOM_CATS = newCats;
+  state.customCats = newCats;
+  buildCatFilters();
+  markUnsaved(); closeModal('catsModal'); showToast('✅ הקטגוריות עודכנו');
+}
+
+var _catPopoverKey = null;
+function showCatPopover(key, triggerBtn) {
+  hideCatPopover();
+  _catPopoverKey = key;
+  var data = getCardData(key);
+  var sel = (data && data.cats) || [];
+  var pop = document.createElement('div');
+  pop.className = 'cat-popover'; pop.id = 'catPopover';
+  CUSTOM_CATS.forEach(function(c) {
+    var lbl = document.createElement('label');
+    lbl.className = 'cat-check-label' + (sel.indexOf(c.id) >= 0 ? ' checked' : '');
+    var inp = document.createElement('input');
+    inp.type = 'checkbox'; inp.value = c.id; inp.checked = sel.indexOf(c.id) >= 0;
+    inp.addEventListener('change', function() {
+      lbl.classList.toggle('checked', this.checked);
+      var checked = Array.from(pop.querySelectorAll('input:checked')).map(function(i){return i.value;});
+      saveCatsForCard(key, checked);
+    });
+    lbl.appendChild(inp); lbl.appendChild(document.createTextNode(c.label));
+    pop.appendChild(lbl);
+  });
+  triggerBtn.closest('.card').appendChild(pop);
+  setTimeout(function() { document.addEventListener('click', _closeCatPopOnClick); }, 10);
+}
+function _closeCatPopOnClick(e) {
+  var pop = document.getElementById('catPopover');
+  if (pop && !pop.contains(e.target)) hideCatPopover();
+}
+function hideCatPopover() {
+  var pop = document.getElementById('catPopover');
+  if (pop) pop.remove();
+  document.removeEventListener('click', _closeCatPopOnClick);
+  _catPopoverKey = null;
+}
+function saveCatsForCard(key, cats) {
+  if (key.startsWith('orig_')) {
+    var i = parseInt(key.replace('orig_', ''));
+    if (!state.promptEdits) state.promptEdits = {};
+    if (!state.promptEdits[key]) state.promptEdits[key] = {title:TITLES_ORIG[i], cat:CATS_ORIG[i], prompt:PROMPTS_ORIG[i]};
+    state.promptEdits[key].cats = cats;
+  } else {
+    var a = (state.added||[]).find(function(x){return x.key===key;});
+    if (a) a.cats = cats;
+  }
+  markUnsaved();
+}
+
 function populateCatChecks(selected) {
   var wrap = document.getElementById('mCatsWrap');
   if (!wrap) return;
@@ -5924,6 +6027,7 @@ function applyState(st) {
   applyWaConfig(st.waConfig);
   updateLicenseBtn();
   applyPaywallToAll();
+  if (st.customCats && st.customCats.length) CUSTOM_CATS = st.customCats;
   buildCatFilters();
   // restore WA share from state (fallback to localStorage for old states)
   shareWhatsApp = st.shareWhatsApp !== undefined ? !!st.shareWhatsApp : (localStorage.getItem('bb_share_wa') !== 'false');
@@ -6029,6 +6133,22 @@ function toggleEditMode() {
   document.getElementById('fab').style.display = editMode ? 'block' : 'none';
   document.getElementById('reorderToggle').style.display = editMode ? '' : 'none';
   if (!editMode && reorderMode) toggleReorderMode(); // exit reorder if edit mode off
+  document.querySelectorAll('#grid .card').forEach(function(card) {
+    var key = card.getAttribute('data-key');
+    var controls = card.querySelector('.edit-controls');
+    if (!controls) return;
+    if (editMode) {
+      if (!controls.querySelector('.ec-cats')) {
+        var b = document.createElement('button');
+        b.className = 'ec-btn ec-cats'; b.setAttribute('data-action','cats'); b.setAttribute('data-key',key);
+        b.textContent = '🏷️ קטגוריות';
+        controls.appendChild(b);
+      }
+    } else {
+      var eb = controls.querySelector('.ec-cats'); if (eb) eb.remove();
+      hideCatPopover();
+    }
+  });
 }
 function toggleReorderMode() {
   reorderMode = !reorderMode;
@@ -6162,6 +6282,7 @@ grid.addEventListener('click', function(e) {
   if (action === 'edit')   { if (!ADMIN_UNLOCKED) return; openEditModal(key); }
   if (action === 'free')   { if (!ADMIN_UNLOCKED) return; toggleFreeStatus(key); }
   if (action === 'dup')    { if (!ADMIN_UNLOCKED) return; duplicateCard(key); }
+  if (action === 'cats')   { if (!ADMIN_UNLOCKED) return; e.stopPropagation(); showCatPopover(key, btn); }
 });
 
 function deleteCard(key) {
@@ -6190,6 +6311,7 @@ function appendCard(p) {
     +'<button class="ec-btn ec-img" data-action="img" data-key="'+p.key+'">\u{1F5BC}\ufe0f \u05d4\u05d7\u05dc\u05e3</button>'
     +'<button class="ec-btn ec-edit" data-action="edit" data-key="'+p.key+'">\u270f\ufe0f \u05e2\u05e8\u05d5\u05da</button>'
     +'<button class="ec-btn ec-dup" data-action="dup" data-key="'+p.key+'">📋 שכפל</button>'
+    +'<button class="ec-btn ec-cats" data-action="cats" data-key="'+p.key+'">🏷️ קטגוריות</button>'
     +'</div>'
     +'<span class="free-badge" style="'+(isFree?'':'display:none')+'">\u{1F193} Free</span>'
     +'<div class="card-header"><span class="num">#'+p.id+'</span>'
