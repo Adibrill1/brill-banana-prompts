@@ -281,6 +281,11 @@ body.admin-open .prompt-wrap{display:block !important}
 .cat-filter-btn{background:var(--bg4);color:var(--text2);border:1px solid var(--border2);border-radius:20px;padding:5px 14px;font-size:12px;cursor:pointer;white-space:nowrap;transition:background .15s,color .15s}
 .cat-filter-btn:hover{background:var(--border2)}
 .cat-filter-btn.active{background:#f5a623;color:#000;border-color:#f5a623;font-weight:bold}
+.cat-checks-wrap{display:flex;flex-wrap:wrap;gap:8px;padding:6px 0}
+.cat-check-label{display:inline-flex;align-items:center;gap:5px;cursor:pointer;font-size:13px;color:var(--text2);padding:4px 12px;border-radius:20px;border:1px solid var(--border2);transition:background .15s,color .15s}
+.cat-check-label:hover{background:var(--bg4)}
+.cat-check-label input{display:none}
+.cat-check-label.checked{background:#f5a623;color:#000;border-color:#f5a623;font-weight:bold}
 /* customer preview mode */
 /* ec-dup button */
 .ec-dup{background:#4caf50;color:#fff}.ec-dup:hover{background:#66bb6a}
@@ -336,7 +341,7 @@ body.admin-open .prompt-wrap{display:block !important}
   <button class="btn btn-fav-action" id="btnSendFavs" style="display:none" onclick="openShareModal()">📤 שלח מועדפים</button>
   <button class="btn btn-fav-action" id="btnClearFavs" style="display:none" onclick="clearFavs()">🗑️ אפס בחירה</button>
 </div>
-<div class="cat-filter-bar" id="catFilterBar" style="display:none"></div>
+<div class="cat-filter-bar" id="catFilterBar"></div>
 <div class="cols-control">
   <span class="cols-label">מספר תמונות בשורה:</span>
   <input type="range" id="colsSlider" class="cols-slider" min="1" max="17" value="5">
@@ -4605,7 +4610,8 @@ set the scene indoors if possible</pre></div>
   <div class="modal">
     <h2 id="modalTitle"></h2>
     <label>כותרת</label><input type="text" id="mTitle" placeholder="שם הפרומפט">
-    <label>קטגוריה</label><input type="text" id="mCat" placeholder="Portrait, Fantasy, Product...">
+    <input type="hidden" id="mCat">
+    <label>קטגוריות</label><div id="mCatsWrap" class="cat-checks-wrap"></div>
     <label>טקסט הפרומפט</label><textarea id="mPrompt" placeholder="הכנס את הפרומפט כאן..."></textarea>
     <label>תמונה (אופציונלי) - העלה קובץ</label>
     <input type="file" id="mImgFile" accept="image/*">
@@ -5377,7 +5383,7 @@ function updateFreeCounter() {
   }
   // Show category filter only in partial mode
   var catBar = document.getElementById('catFilterBar');
-  if (catBar) catBar.style.display = (mode === 'partial') ? '' : 'none';
+  if (catBar) catBar.style.display = '';
 }
 
 function toggleFreeStatus(key) {
@@ -5695,6 +5701,32 @@ function duplicateCard(key) {
 }
 
 // ── קטגוריות ──────────────────────────────────────────────
+var CUSTOM_CATS = [
+  {id:'portrait',     label:'תדמית'},
+  {id:'places',       label:'מקומות'},
+  {id:'professions',  label:'מקצועות'},
+  {id:'animals',      label:'בעלי חיים'},
+  {id:'celebrities',  label:'מפורסמים'},
+  {id:'fantasy',      label:'פנטזיה'},
+  {id:'products',     label:'מוצרים'},
+];
+function populateCatChecks(selected) {
+  var wrap = document.getElementById('mCatsWrap');
+  if (!wrap) return;
+  wrap.innerHTML = '';
+  CUSTOM_CATS.forEach(function(c) {
+    var label = document.createElement('label');
+    label.className = 'cat-check-label' + (selected.indexOf(c.id) >= 0 ? ' checked' : '');
+    var inp = document.createElement('input');
+    inp.type = 'checkbox'; inp.value = c.id; inp.checked = selected.indexOf(c.id) >= 0;
+    inp.addEventListener('change', function() { label.classList.toggle('checked', this.checked); });
+    label.appendChild(inp); label.appendChild(document.createTextNode(c.label));
+    wrap.appendChild(label);
+  });
+}
+function getCheckedCats() {
+  return Array.from(document.querySelectorAll('#mCatsWrap input:checked')).map(function(i){return i.value;});
+}
 var activeCat = '';
 function isFreeCard(key) {
   return getFreeMode() === 'full' || !!(state.freePrompts && state.freePrompts[key]);
@@ -5708,6 +5740,7 @@ function buildCatFilters() {
     { id: 'free', label: '✅ חינם' },
     { id: 'paid', label: '🔒 בתשלום' }
   ];
+  CUSTOM_CATS.forEach(function(c) { defs.push({id:'cat:'+c.id, label:c.label}); });
   defs.forEach(function(d) {
     var btn = document.createElement('button');
     btn.className = 'cat-filter-btn' + (d.id === activeCat ? ' active' : '');
@@ -5978,7 +6011,9 @@ function getCardData(key) {
   if (key.startsWith('orig_')) {
     var i = parseInt(key.replace('orig_', ''));
     var imgs = state.customImgs[key] ? [state.customImgs[key]] : (IMAGES_ORIG[i] || []);
-    return { key:key, id:IDS_ORIG[i], title:TITLES_ORIG[i], cat:CATS_ORIG[i], prompt:PROMPTS_ORIG[i], images:imgs };
+    var edit = state.promptEdits && state.promptEdits[key];
+    var cats = (edit && edit.cats) || [];
+    return { key:key, id:IDS_ORIG[i], title:TITLES_ORIG[i], cat:CATS_ORIG[i], prompt:PROMPTS_ORIG[i], images:imgs, cats:cats };
   }
   return (state.added||[]).find(function(a){ return a.key===key; }) || null;
 }
@@ -6175,7 +6210,7 @@ function openAddModal() {
   editingKey = null;
   document.getElementById('modalTitle').textContent = '\u2795 \u05d4\u05d5\u05e1\u05e3 \u05e4\u05e8\u05d5\u05de\u05e4\u05d8 \u05d7\u05d3\u05e9';
   ['mTitle','mCat','mPrompt','mImgFile','mImgUrl'].forEach(function(id){document.getElementById(id).value='';});
-  resetPrev('mImgPrev'); openModal('promptModal');
+  populateCatChecks([]); resetPrev('mImgPrev'); openModal('promptModal');
 }
 function openEditModal(key) {
   editingKey = key; var p = getCardData(key); if (!p) return;
@@ -6183,6 +6218,7 @@ function openEditModal(key) {
   document.getElementById('mTitle').value  = p.title  || '';
   document.getElementById('mCat').value    = p.cat    || '';
   document.getElementById('mPrompt').value = p.prompt || '';
+  populateCatChecks(p.cats || []);
   document.getElementById('mImgFile').value = '';
   var url = p.images && p.images[0] && !p.images[0].startsWith('data:') ? p.images[0] : '';
   document.getElementById('mImgUrl').value = url;
@@ -6203,6 +6239,7 @@ function savePromptModal() {
   var title=document.getElementById('mTitle').value.trim();
   var cat=document.getElementById('mCat').value.trim();
   var prompt=document.getElementById('mPrompt').value.trim();
+  var cats=getCheckedCats();
   var prev=document.getElementById('mImgPrev');
   var imgSrc=prev.classList.contains('show')?prev.src:'';
   if (!title||!prompt){alert('\u05db\u05d5\u05ea\u05e8\u05ea \u05d5\u05e4\u05e8\u05d5\u05de\u05e4\u05d8 \u05d4\u05dd \u05e9\u05d3\u05d5\u05ea \u05d7\u05d5\u05d1\u05d4');return;}
@@ -6211,11 +6248,11 @@ function savePromptModal() {
       var i=parseInt(editingKey.replace('orig_',''));
       PROMPTS_ORIG[i]=prompt; TITLES_ORIG[i]=title; CATS_ORIG[i]=cat;
       if (!state.promptEdits) state.promptEdits={};
-      state.promptEdits[editingKey]={title:title,cat:cat,prompt:prompt};
+      state.promptEdits[editingKey]={title:title,cat:cat,prompt:prompt,cats:cats};
       if (imgSrc) state.customImgs[editingKey]=imgSrc;
     } else {
       var a=(state.added||[]).find(function(x){return x.key===editingKey;});
-      if (a){a.title=title;a.cat=cat;a.prompt=prompt;if(imgSrc)a.images=[imgSrc];}
+      if (a){a.title=title;a.cat=cat;a.prompt=prompt;a.cats=cats;if(imgSrc)a.images=[imgSrc];}
     }
     var card=document.querySelector('.card[data-key="'+editingKey+'"]');
     if (card) {
@@ -6237,7 +6274,7 @@ function savePromptModal() {
     markUnsaved(); closeModal('promptModal'); showToast('\u2705 \u05d4\u05e4\u05e8\u05d5\u05de\u05e4\u05d8 \u05e2\u05d5\u05d3\u05db\u05df - \u05dc\u05d7\u05e5 "\u05e4\u05e8\u05e1\u05dd"');
   } else {
     var newKey='added_'+Date.now();
-    var newP={key:newKey,id:'\u05d7\u05d3\u05e9',title:title,cat:cat,prompt:prompt,images:imgSrc?[imgSrc]:[]};
+    var newP={key:newKey,id:'\u05d7\u05d3\u05e9',title:title,cat:cat,prompt:prompt,cats:cats,images:imgSrc?[imgSrc]:[]};
     if (!state.added) state.added=[];
     state.added.push(newP); appendCard(newP); updateCount(); renumberCards();
     markUnsaved(); closeModal('promptModal'); showToast('\u2705 \u05d4\u05e4\u05e8\u05d5\u05de\u05e4\u05d8 \u05e0\u05d5\u05e1\u05e3 - \u05dc\u05d7\u05e5 "\u05e4\u05e8\u05e1\u05dd"');
@@ -6484,6 +6521,7 @@ function filterCards(q){
     var matchFav=!showFavsOnly||!!favs[key];
     var free=isFreeCard(key);
     var matchCat=!activeCat||(activeCat==='free'&&free)||(activeCat==='paid'&&!free);
+    if(!matchCat&&activeCat.startsWith('cat:')){var d=getCardData(key);matchCat=!!(d&&d.cats&&d.cats.indexOf(activeCat.slice(4))>=0);}
     var show=matchQ&&matchFav&&matchCat;
     c.style.display=show?'':'none'; if(show)visible++;
   });
