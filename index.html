@@ -6058,8 +6058,14 @@ async function publishChanges() {
   btn.disabled = true;
   btn.textContent = '\u{1F504} \u05e9\u05d5\u05de\u05e8...';
   try {
-    // Replace stale base64 with confirmed server paths to avoid exceeding 4.5MB body limit
-    var stateToPost = JSON.parse(JSON.stringify(state));
+    // Build stateToPost without duplicating base64 images already stored in customImgs
+    var stateToPost = {};
+    Object.keys(state).forEach(function(k){ stateToPost[k] = state[k]; });
+    stateToPost.added = (state.added || []).map(function(card) {
+      var imgs = (card.images || []).filter(function(src){ return src && !src.startsWith('data:'); });
+      return Object.assign({}, card, {images: imgs});
+    });
+    stateToPost.customImgs = Object.assign({}, state.customImgs || {});
     stateToPost._saved = true;
     stateToPost._publishedAt = Date.now();
     // Include header and services configs from localStorage
@@ -6119,7 +6125,10 @@ function getCardData(key) {
     var cats = (edit && edit.cats) || [];
     return { key:key, id:IDS_ORIG[i], title:TITLES_ORIG[i], cat:CATS_ORIG[i], prompt:PROMPTS_ORIG[i], images:imgs, cats:cats };
   }
-  return (state.added||[]).find(function(a){ return a.key===key; }) || null;
+  var a = (state.added||[]).find(function(x){ return x.key===key; });
+  if (!a) return null;
+  var aImgs = (state.customImgs && state.customImgs[key]) ? [state.customImgs[key]] : (a.images || []);
+  return Object.assign({}, a, {images: aImgs, cats: a.cats || []});
 }
 
 var reorderMode = false;
