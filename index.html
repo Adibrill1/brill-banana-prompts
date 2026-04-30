@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Brill Banana Prompts</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23f5a623'/%3E%3C/svg%3E">
 <!-- Meta בסיסי -->
 <meta name="description" content="קטלוג של 1,354 פרומפטים מתקדמים ליצירת תמונות אישיות ב-Nano Banana 2. העתק פרומפט בלחיצה וצור תמונות AI מדהימות.">
 <meta name="keywords" content="AI prompts, Nano Banana, image generation, פרומפטים, יצירת תמונות, בינה מלאכותית">
@@ -280,6 +281,16 @@ body.admin-open .prompt-wrap{display:block !important}
 .cat-filter-btn{background:var(--bg4);color:var(--text2);border:1px solid var(--border2);border-radius:20px;padding:5px 14px;font-size:12px;cursor:pointer;white-space:nowrap;transition:background .15s,color .15s}
 .cat-filter-btn:hover{background:var(--border2)}
 .cat-filter-btn.active{background:#f5a623;color:#000;border-color:#f5a623;font-weight:bold}
+.cat-checks-wrap{display:flex;flex-wrap:wrap;gap:8px;padding:6px 0}
+.cat-check-label{display:inline-flex;align-items:center;gap:5px;cursor:pointer;font-size:13px;color:var(--text2);padding:4px 12px;border-radius:20px;border:1px solid var(--border2);transition:background .15s,color .15s}
+.cat-check-label:hover{background:var(--bg4)}
+.cat-check-label input{display:none}
+.cat-check-label.checked{background:#f5a623;color:#000;border-color:#f5a623;font-weight:bold}
+.ec-cats{background:#7b1fa2;color:#fff}.ec-cats:hover{background:#9c27b0}
+.cat-popover{position:absolute;z-index:300;background:var(--modal-bg);border:1px solid var(--border2);border-radius:10px;padding:10px 12px;box-shadow:0 4px 24px rgba(0,0,0,.55);min-width:160px;top:0;left:0;right:0}
+.cat-popover .cat-check-label{display:flex;margin-bottom:5px}
+.cm-row{display:flex;gap:6px;align-items:center;margin-bottom:6px}
+.cm-inp{flex:1;padding:5px 8px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);font-size:13px}
 /* customer preview mode */
 /* ec-dup button */
 .ec-dup{background:#4caf50;color:#fff}.ec-dup:hover{background:#66bb6a}
@@ -321,6 +332,7 @@ body.admin-open .prompt-wrap{display:block !important}
   <button class="btn btn-edit" onclick="openWaTextModal()" title="ערוך הודעות וואטסאפ">📱 הודעות WA</button>
   <button class="btn btn-edit" onclick="openHeaderModal()" title="ערוך כותרת ראשית">✏️ כותרת</button>
   <button class="btn btn-edit" onclick="openServicesModal()" title="ערוך עמוד שירותים">🛍️ שירותים</button>
+  <button class="btn btn-edit" onclick="openCatsManager()" title="ניהול קטגוריות">🏷️ קטגוריות</button>
   <button class="btn btn-edit" onclick="exportCSV()" title="ייצוא לאקסל">📤 CSV</button>
   <span class="free-counter" id="freeCounter">🆓 0/50</span>
 </div>
@@ -335,7 +347,7 @@ body.admin-open .prompt-wrap{display:block !important}
   <button class="btn btn-fav-action" id="btnSendFavs" style="display:none" onclick="openShareModal()">📤 שלח מועדפים</button>
   <button class="btn btn-fav-action" id="btnClearFavs" style="display:none" onclick="clearFavs()">🗑️ אפס בחירה</button>
 </div>
-<div class="cat-filter-bar" id="catFilterBar" style="display:none"></div>
+<div class="cat-filter-bar" id="catFilterBar"></div>
 <div class="cols-control">
   <span class="cols-label">מספר תמונות בשורה:</span>
   <input type="range" id="colsSlider" class="cols-slider" min="1" max="17" value="5">
@@ -4600,11 +4612,26 @@ set the scene indoors if possible</pre></div>
   </div>
   <div class="lb-counter" id="lb-counter"></div>
 </div>
+<div class="modal-bg" id="catsModal">
+  <div class="modal" style="max-width:420px">
+    <h2>🏷️ ניהול קטגוריות</h2>
+    <div id="catsManagerList"></div>
+    <div style="display:flex;gap:8px;margin-top:10px">
+      <input class="cm-inp" id="newCatInput" placeholder="שם קטגוריה חדשה...">
+      <button class="btn btn-add" onclick="addCatItem()">➕ הוסף</button>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-cancel" onclick="closeModal('catsModal')">ביטול</button>
+      <button class="btn btn-ok" onclick="saveCatsManager()">שמור</button>
+    </div>
+  </div>
+</div>
 <div class="modal-bg" id="promptModal">
   <div class="modal">
     <h2 id="modalTitle"></h2>
     <label>כותרת</label><input type="text" id="mTitle" placeholder="שם הפרומפט">
-    <label>קטגוריה</label><input type="text" id="mCat" placeholder="Portrait, Fantasy, Product...">
+    <input type="hidden" id="mCat">
+    <label>קטגוריות</label><div id="mCatsWrap" class="cat-checks-wrap"></div>
     <label>טקסט הפרומפט</label><textarea id="mPrompt" placeholder="הכנס את הפרומפט כאן..."></textarea>
     <label>תמונה (אופציונלי) - העלה קובץ</label>
     <input type="file" id="mImgFile" accept="image/*">
@@ -5376,7 +5403,7 @@ function updateFreeCounter() {
   }
   // Show category filter only in partial mode
   var catBar = document.getElementById('catFilterBar');
-  if (catBar) catBar.style.display = (mode === 'partial') ? '' : 'none';
+  if (catBar) catBar.style.display = '';
 }
 
 function toggleFreeStatus(key) {
@@ -5694,6 +5721,115 @@ function duplicateCard(key) {
 }
 
 // ── קטגוריות ──────────────────────────────────────────────
+var CUSTOM_CATS = [
+  {id:'portrait',     label:'תדמית'},
+  {id:'places',       label:'מקומות'},
+  {id:'professions',  label:'מקצועות'},
+  {id:'animals',      label:'בעלי חיים'},
+  {id:'celebrities',  label:'מפורסמים'},
+  {id:'fantasy',      label:'פנטזיה'},
+  {id:'products',     label:'מוצרים'},
+];
+function openCatsManager() {
+  if (!ADMIN_UNLOCKED) return;
+  var list = document.getElementById('catsManagerList');
+  list.innerHTML = '';
+  CUSTOM_CATS.forEach(function(c) {
+    var row = document.createElement('div');
+    row.className = 'cm-row';
+    row.innerHTML = '<input class="cm-inp" type="text" value="'+escHtml(c.label)+'" data-id="'+c.id+'">'
+      +'<button class="btn btn-edit" onclick="this.closest(\'.cm-row\').remove()" style="padding:4px 8px;font-size:12px">🗑️</button>';
+    list.appendChild(row);
+  });
+  document.getElementById('newCatInput').value = '';
+  openModal('catsModal');
+}
+function addCatItem() {
+  var inp = document.getElementById('newCatInput');
+  var label = inp.value.trim(); if (!label) return;
+  var list = document.getElementById('catsManagerList');
+  var row = document.createElement('div');
+  row.className = 'cm-row';
+  row.innerHTML = '<input class="cm-inp" type="text" value="'+escHtml(label)+'" data-id="custom_'+Date.now()+'">'
+    +'<button class="btn btn-edit" onclick="this.closest(\'.cm-row\').remove()" style="padding:4px 8px;font-size:12px">🗑️</button>';
+  list.appendChild(row); inp.value = '';
+}
+function saveCatsManager() {
+  var newCats = [];
+  document.querySelectorAll('#catsManagerList .cm-inp').forEach(function(inp) {
+    var label = inp.value.trim();
+    if (label) newCats.push({id: inp.getAttribute('data-id'), label: label});
+  });
+  CUSTOM_CATS = newCats;
+  state.customCats = newCats;
+  buildCatFilters();
+  markUnsaved(); closeModal('catsModal'); showToast('✅ הקטגוריות עודכנו');
+}
+
+var _catPopoverKey = null;
+function showCatPopover(key, triggerBtn) {
+  hideCatPopover();
+  _catPopoverKey = key;
+  var data = getCardData(key);
+  var sel = (data && data.cats) || [];
+  var pop = document.createElement('div');
+  pop.className = 'cat-popover'; pop.id = 'catPopover';
+  CUSTOM_CATS.forEach(function(c) {
+    var lbl = document.createElement('label');
+    lbl.className = 'cat-check-label' + (sel.indexOf(c.id) >= 0 ? ' checked' : '');
+    var inp = document.createElement('input');
+    inp.type = 'checkbox'; inp.value = c.id; inp.checked = sel.indexOf(c.id) >= 0;
+    inp.addEventListener('change', function() {
+      lbl.classList.toggle('checked', this.checked);
+      var checked = Array.from(pop.querySelectorAll('input:checked')).map(function(i){return i.value;});
+      saveCatsForCard(key, checked);
+    });
+    lbl.appendChild(inp); lbl.appendChild(document.createTextNode(c.label));
+    pop.appendChild(lbl);
+  });
+  triggerBtn.closest('.card').appendChild(pop);
+  setTimeout(function() { document.addEventListener('click', _closeCatPopOnClick); }, 10);
+}
+function _closeCatPopOnClick(e) {
+  var pop = document.getElementById('catPopover');
+  if (pop && !pop.contains(e.target)) hideCatPopover();
+}
+function hideCatPopover() {
+  var pop = document.getElementById('catPopover');
+  if (pop) pop.remove();
+  document.removeEventListener('click', _closeCatPopOnClick);
+  _catPopoverKey = null;
+}
+function saveCatsForCard(key, cats) {
+  if (key.startsWith('orig_')) {
+    var i = parseInt(key.replace('orig_', ''));
+    if (!state.promptEdits) state.promptEdits = {};
+    if (!state.promptEdits[key]) state.promptEdits[key] = {title:TITLES_ORIG[i], cat:CATS_ORIG[i], prompt:PROMPTS_ORIG[i]};
+    state.promptEdits[key].cats = cats;
+  } else {
+    var a = (state.added||[]).find(function(x){return x.key===key;});
+    if (a) a.cats = cats;
+  }
+  markUnsaved();
+}
+
+function populateCatChecks(selected) {
+  var wrap = document.getElementById('mCatsWrap');
+  if (!wrap) return;
+  wrap.innerHTML = '';
+  CUSTOM_CATS.forEach(function(c) {
+    var label = document.createElement('label');
+    label.className = 'cat-check-label' + (selected.indexOf(c.id) >= 0 ? ' checked' : '');
+    var inp = document.createElement('input');
+    inp.type = 'checkbox'; inp.value = c.id; inp.checked = selected.indexOf(c.id) >= 0;
+    inp.addEventListener('change', function() { label.classList.toggle('checked', this.checked); });
+    label.appendChild(inp); label.appendChild(document.createTextNode(c.label));
+    wrap.appendChild(label);
+  });
+}
+function getCheckedCats() {
+  return Array.from(document.querySelectorAll('#mCatsWrap input:checked')).map(function(i){return i.value;});
+}
 var activeCat = '';
 function isFreeCard(key) {
   return getFreeMode() === 'full' || !!(state.freePrompts && state.freePrompts[key]);
@@ -5707,6 +5843,7 @@ function buildCatFilters() {
     { id: 'free', label: '✅ חינם' },
     { id: 'paid', label: '🔒 בתשלום' }
   ];
+  CUSTOM_CATS.forEach(function(c) { defs.push({id:'cat:'+c.id, label:c.label}); });
   defs.forEach(function(d) {
     var btn = document.createElement('button');
     btn.className = 'cat-filter-btn' + (d.id === activeCat ? ' active' : '');
@@ -5890,6 +6027,7 @@ function applyState(st) {
   applyWaConfig(st.waConfig);
   updateLicenseBtn();
   applyPaywallToAll();
+  if (st.customCats && st.customCats.length) CUSTOM_CATS = st.customCats;
   buildCatFilters();
   // restore WA share from state (fallback to localStorage for old states)
   shareWhatsApp = st.shareWhatsApp !== undefined ? !!st.shareWhatsApp : (localStorage.getItem('bb_share_wa') !== 'false');
@@ -5918,68 +6056,148 @@ function markUnsaved() {
 async function publishChanges() {
   var btn = document.getElementById('btnPublish');
   btn.disabled = true;
-  btn.textContent = '\u{1F504} \u05e9\u05d5\u05de\u05e8...';
+  var MAX_BATCH = 3;   // base64 images per uploadOnly call
+  var MAX_RETRIES = 4; // retries per batch on failure
+
+  // Helper: fetch with AbortController timeout + up to MAX_RETRIES on any failure
+  async function fetchWithRetry(url, opts, timeoutMs) {
+    var attempt = 0;
+    while (true) {
+      var ctrl = new AbortController();
+      var tid  = setTimeout(function() { ctrl.abort(); }, timeoutMs);
+      try {
+        var resp = await fetch(url, Object.assign({}, opts, { signal: ctrl.signal }));
+        clearTimeout(tid);
+        if (resp.ok) return resp;
+        if (attempt >= MAX_RETRIES) return resp; // caller handles non-ok
+        attempt++;
+        await new Promise(function(r) { setTimeout(r, 1000 * attempt); });
+      } catch(e) {
+        clearTimeout(tid);
+        if (attempt >= MAX_RETRIES) throw e;
+        attempt++;
+        await new Promise(function(r) { setTimeout(r, 1000 * attempt); });
+      }
+    }
+  }
+
   try {
-    // Replace stale base64 with confirmed server paths to avoid exceeding 4.5MB body limit
-    var stateToPost = JSON.parse(JSON.stringify(state));
+    // \u2500\u2500 Phase 1: upload pending base64 images in batches of MAX_BATCH \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+    var allPendingKeys = Object.keys(state.customImgs || {}).filter(function(k) {
+      return (state.customImgs[k] || '').startsWith('data:') && !serverCustomImgs[k];
+    });
+    var totalPending = allPendingKeys.length;
+    var uploadedSoFar = 0;
+
+    while (true) {
+      var pending = Object.keys(state.customImgs || {}).filter(function(k) {
+        return (state.customImgs[k] || '').startsWith('data:') && !serverCustomImgs[k];
+      });
+      if (!pending.length) break;
+
+      var batch = pending.slice(0, MAX_BATCH);
+      btn.textContent = totalPending > MAX_BATCH
+        ? '\u{1F504} \u05de\u05e2\u05dc\u05d4 ' + (uploadedSoFar + 1) + '\u2013' + Math.min(uploadedSoFar + batch.length, totalPending) + '/' + totalPending + '...'
+        : '\u{1F504} \u05e9\u05d5\u05de\u05e8...';
+
+      var batchImgs = {};
+      batch.forEach(function(k) { batchImgs[k] = state.customImgs[k]; });
+
+      var upResp = await fetchWithRetry('/api/save', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ uploadOnly: true, customImgs: batchImgs })
+      }, 20000);
+
+      if (!upResp.ok) {
+        var upErr = await upResp.json().catch(function() { return {}; });
+        throw new Error((upErr && upErr.error) || 'HTTP ' + upResp.status);
+      }
+      var upData = await upResp.json();
+      Object.keys(upData.uploads || {}).forEach(function(k) {
+        var url = upData.uploads[k];
+        if (url && !url.startsWith('data:')) {
+          serverCustomImgs[k] = url;
+          state.customImgs[k] = url;
+        }
+      });
+      uploadedSoFar += batch.length;
+    }
+
+    // \u2500\u2500 Phase 2: save full state.json (no base64 remaining) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+    btn.textContent = '\u{1F504} \u05e9\u05d5\u05de\u05e8...';
+    var stateToPost = {};
+    Object.keys(state).forEach(function(k) { stateToPost[k] = state[k]; });
+    stateToPost.added = (state.added || []).map(function(card) {
+      var imgs = (card.images || []).filter(function(src) { return src && !src.startsWith('data:'); });
+      return Object.assign({}, card, { images: imgs });
+    });
+    stateToPost.customImgs = Object.assign({}, state.customImgs || {});
+    // Strip any residual base64 (safety net)
+    Object.keys(stateToPost.customImgs).forEach(function(k) {
+      if ((stateToPost.customImgs[k] || '').startsWith('data:')) delete stateToPost.customImgs[k];
+    });
     stateToPost._saved = true;
     stateToPost._publishedAt = Date.now();
-    // Include header and services configs from localStorage
     var hdrCfg = JSON.parse(localStorage.getItem('bb_header_config') || 'null');
     if (hdrCfg) stateToPost.headerConfig = hdrCfg;
     var svcCfg = JSON.parse(localStorage.getItem('bb_services_config') || 'null');
     if (svcCfg) stateToPost.servicesConfig = svcCfg;
-    Object.keys(stateToPost.customImgs || {}).forEach(function(key) {
-      if ((stateToPost.customImgs[key] || '').startsWith('data:') && serverCustomImgs[key]) {
-        stateToPost.customImgs[key] = serverCustomImgs[key];
-      }
-    });
-    var ctrl = new AbortController();
-    var saveTimer = setTimeout(function(){ ctrl.abort(); }, 25000);
-    var r = await fetch('/api/save', {
+
+    var saveResp = await fetchWithRetry('/api/save', {
       method: 'POST',
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({state: stateToPost}),
-      signal: ctrl.signal
-    });
-    clearTimeout(saveTimer);
-    if (r.ok) {
-      var rData = await r.json();
-      // Update local state with server response (images converted from base64 to URLs)
-      if (rData.state) { state = rData.state; }
-      localStorage.setItem('nb_state', JSON.stringify(state));
-      pendingChanges = false;
-      document.getElementById('unsavedDot').classList.remove('show');
-      btn.disabled = false;
-      btn.textContent = '\u{1F310} \u05e4\u05e8\u05e1\u05dd \u05e9\u05d9\u05e0\u05d5\u05d9\u05d9\u05dd';
-      var freeCount = Object.keys(state.freePrompts || {}).length;
-      var mode = getFreeMode();
-      var statusMsg = mode === 'full'    ? '🟢 חינם מלא - כל הפרומפטים חינמיים'
-                    : mode === 'partial' ? '🟡 חינם חלקי - ' + freeCount + ' פרומפטים'
-                    :                     '🔴 גישה חינמית כבויה (' + freeCount + ' ברשימה)';
-      showToast('✅ פורסם - ' + statusMsg, 5000);
-    } else {
-      var errData = await r.json().catch(function(){return {};});
-      var errMsg = (errData && errData.error) ? errData.error : ('HTTP ' + r.status);
-      btn.disabled = false;
-      btn.textContent = '\u{1F310} \u05e4\u05e8\u05e1\u05dd \u05e9\u05d9\u05e0\u05d5\u05d9\u05d9\u05dd';
-      showToast('\u274c \u05e9\u05d2\u05d9\u05d0\u05d4: ' + errMsg);
-      console.error('Save failed:', errMsg);
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ state: stateToPost })
+    }, 20000);
+
+    if (!saveResp.ok) {
+      var saveErr = await saveResp.json().catch(function() { return {}; });
+      throw new Error((saveErr && saveErr.error) || 'HTTP ' + saveResp.status);
     }
+    var rData = await saveResp.json();
+    if (rData.state) {
+      var savedLocalImgs = Object.assign({}, state.customImgs || {});
+      state = rData.state;
+      if (!state.customImgs) state.customImgs = {};
+      Object.keys(savedLocalImgs).forEach(function(k) {
+        var localVal = savedLocalImgs[k] || '';
+        var serverVal = state.customImgs[k] || '';
+        if (serverVal && !serverVal.startsWith('data:')) {
+          serverCustomImgs[k] = serverVal;
+        } else if (localVal.startsWith('data:') && !serverCustomImgs[k]) {
+          state.customImgs[k] = localVal;
+        }
+      });
+    }
+    localStorage.setItem('nb_state', JSON.stringify(state));
+    pendingChanges = false;
+    document.getElementById('unsavedDot').classList.remove('show');
+    btn.disabled = false;
+    btn.textContent = '\u{1F310} \u05e4\u05e8\u05e1\u05dd \u05e9\u05d9\u05e0\u05d5\u05d9\u05d9\u05dd';
+    var freeCount = Object.keys(state.freePrompts || {}).length;
+    var mode = getFreeMode();
+    var statusMsg = mode === 'full'    ? '\u{1F7E2} \u05d7\u05d9\u05e0\u05dd \u05de\u05dc\u05d0 - \u05db\u05dc \u05d4\u05e4\u05e8\u05d5\u05de\u05e4\u05d8\u05d9\u05dd \u05d7\u05d9\u05e0\u05de\u05d9\u05d9\u05dd'
+                  : mode === 'partial' ? '\u{1F7E1} \u05d7\u05d9\u05e0\u05dd \u05d7\u05dc\u05e7\u05d9 - ' + freeCount + ' \u05e4\u05e8\u05d5\u05de\u05e4\u05d8\u05d9\u05dd'
+                  :                     '\u{1F534} \u05d2\u05d9\u05e9\u05d4 \u05d7\u05d9\u05e0\u05de\u05d9\u05ea \u05db\u05d1\u05d5\u05d9\u05d4 (' + freeCount + ' \u05d1\u05e8\u05e9\u05d9\u05de\u05d4)';
+    showToast('\u2705 \u05e4\u05d5\u05e8\u05e1\u05dd - ' + statusMsg, 5000);
   } catch(e) {
     btn.disabled = false;
     btn.textContent = '\u{1F310} \u05e4\u05e8\u05e1\u05dd \u05e9\u05d9\u05e0\u05d5\u05d9\u05d9\u05dd';
     showToast('\u274c \u05e9\u05d2\u05d9\u05d0\u05d4 \u05d1\u05e9\u05de\u05d9\u05e8\u05d4: ' + e.message);
   }
 }
-
 function getCardData(key) {
   if (key.startsWith('orig_')) {
     var i = parseInt(key.replace('orig_', ''));
     var imgs = state.customImgs[key] ? [state.customImgs[key]] : (IMAGES_ORIG[i] || []);
-    return { key:key, id:IDS_ORIG[i], title:TITLES_ORIG[i], cat:CATS_ORIG[i], prompt:PROMPTS_ORIG[i], images:imgs };
+    var edit = state.promptEdits && state.promptEdits[key];
+    var cats = (edit && edit.cats) || [];
+    return { key:key, id:IDS_ORIG[i], title:TITLES_ORIG[i], cat:CATS_ORIG[i], prompt:PROMPTS_ORIG[i], images:imgs, cats:cats };
   }
-  return (state.added||[]).find(function(a){ return a.key===key; }) || null;
+  var a = (state.added||[]).find(function(x){ return x.key===key; });
+  if (!a) return null;
+  var aImgs = (state.customImgs && state.customImgs[key]) ? [state.customImgs[key]] : (a.images || []);
+  return Object.assign({}, a, {images: aImgs, cats: a.cats || []});
 }
 
 var reorderMode = false;
@@ -5993,6 +6211,22 @@ function toggleEditMode() {
   document.getElementById('fab').style.display = editMode ? 'block' : 'none';
   document.getElementById('reorderToggle').style.display = editMode ? '' : 'none';
   if (!editMode && reorderMode) toggleReorderMode(); // exit reorder if edit mode off
+  document.querySelectorAll('#grid .card').forEach(function(card) {
+    var key = card.getAttribute('data-key');
+    var controls = card.querySelector('.edit-controls');
+    if (!controls) return;
+    if (editMode) {
+      if (!controls.querySelector('.ec-cats')) {
+        var b = document.createElement('button');
+        b.className = 'ec-btn ec-cats'; b.setAttribute('data-action','cats'); b.setAttribute('data-key',key);
+        b.textContent = '🏷️ קטגוריות';
+        controls.appendChild(b);
+      }
+    } else {
+      var eb = controls.querySelector('.ec-cats'); if (eb) eb.remove();
+      hideCatPopover();
+    }
+  });
 }
 function toggleReorderMode() {
   reorderMode = !reorderMode;
@@ -6126,6 +6360,7 @@ grid.addEventListener('click', function(e) {
   if (action === 'edit')   { if (!ADMIN_UNLOCKED) return; openEditModal(key); }
   if (action === 'free')   { if (!ADMIN_UNLOCKED) return; toggleFreeStatus(key); }
   if (action === 'dup')    { if (!ADMIN_UNLOCKED) return; duplicateCard(key); }
+  if (action === 'cats')   { if (!ADMIN_UNLOCKED) return; e.stopPropagation(); showCatPopover(key, btn); }
 });
 
 function deleteCard(key) {
@@ -6154,6 +6389,7 @@ function appendCard(p) {
     +'<button class="ec-btn ec-img" data-action="img" data-key="'+p.key+'">\u{1F5BC}\ufe0f \u05d4\u05d7\u05dc\u05e3</button>'
     +'<button class="ec-btn ec-edit" data-action="edit" data-key="'+p.key+'">\u270f\ufe0f \u05e2\u05e8\u05d5\u05da</button>'
     +'<button class="ec-btn ec-dup" data-action="dup" data-key="'+p.key+'">📋 שכפל</button>'
+    +'<button class="ec-btn ec-cats" data-action="cats" data-key="'+p.key+'">🏷️ קטגוריות</button>'
     +'</div>'
     +'<span class="free-badge" style="'+(isFree?'':'display:none')+'">\u{1F193} Free</span>'
     +'<div class="card-header"><span class="num">#'+p.id+'</span>'
@@ -6174,7 +6410,7 @@ function openAddModal() {
   editingKey = null;
   document.getElementById('modalTitle').textContent = '\u2795 \u05d4\u05d5\u05e1\u05e3 \u05e4\u05e8\u05d5\u05de\u05e4\u05d8 \u05d7\u05d3\u05e9';
   ['mTitle','mCat','mPrompt','mImgFile','mImgUrl'].forEach(function(id){document.getElementById(id).value='';});
-  resetPrev('mImgPrev'); openModal('promptModal');
+  populateCatChecks([]); resetPrev('mImgPrev'); openModal('promptModal');
 }
 function openEditModal(key) {
   editingKey = key; var p = getCardData(key); if (!p) return;
@@ -6182,6 +6418,7 @@ function openEditModal(key) {
   document.getElementById('mTitle').value  = p.title  || '';
   document.getElementById('mCat').value    = p.cat    || '';
   document.getElementById('mPrompt').value = p.prompt || '';
+  populateCatChecks(p.cats || []);
   document.getElementById('mImgFile').value = '';
   var url = p.images && p.images[0] && !p.images[0].startsWith('data:') ? p.images[0] : '';
   document.getElementById('mImgUrl').value = url;
@@ -6202,6 +6439,7 @@ function savePromptModal() {
   var title=document.getElementById('mTitle').value.trim();
   var cat=document.getElementById('mCat').value.trim();
   var prompt=document.getElementById('mPrompt').value.trim();
+  var cats=getCheckedCats();
   var prev=document.getElementById('mImgPrev');
   var imgSrc=prev.classList.contains('show')?prev.src:'';
   if (!title||!prompt){alert('\u05db\u05d5\u05ea\u05e8\u05ea \u05d5\u05e4\u05e8\u05d5\u05de\u05e4\u05d8 \u05d4\u05dd \u05e9\u05d3\u05d5\u05ea \u05d7\u05d5\u05d1\u05d4');return;}
@@ -6210,11 +6448,11 @@ function savePromptModal() {
       var i=parseInt(editingKey.replace('orig_',''));
       PROMPTS_ORIG[i]=prompt; TITLES_ORIG[i]=title; CATS_ORIG[i]=cat;
       if (!state.promptEdits) state.promptEdits={};
-      state.promptEdits[editingKey]={title:title,cat:cat,prompt:prompt};
+      state.promptEdits[editingKey]={title:title,cat:cat,prompt:prompt,cats:cats};
       if (imgSrc) state.customImgs[editingKey]=imgSrc;
     } else {
       var a=(state.added||[]).find(function(x){return x.key===editingKey;});
-      if (a){a.title=title;a.cat=cat;a.prompt=prompt;if(imgSrc)a.images=[imgSrc];}
+      if (a){a.title=title;a.cat=cat;a.prompt=prompt;a.cats=cats;if(imgSrc)a.images=[imgSrc];}
     }
     var card=document.querySelector('.card[data-key="'+editingKey+'"]');
     if (card) {
@@ -6236,7 +6474,7 @@ function savePromptModal() {
     markUnsaved(); closeModal('promptModal'); showToast('\u2705 \u05d4\u05e4\u05e8\u05d5\u05de\u05e4\u05d8 \u05e2\u05d5\u05d3\u05db\u05df - \u05dc\u05d7\u05e5 "\u05e4\u05e8\u05e1\u05dd"');
   } else {
     var newKey='added_'+Date.now();
-    var newP={key:newKey,id:'\u05d7\u05d3\u05e9',title:title,cat:cat,prompt:prompt,images:imgSrc?[imgSrc]:[]};
+    var newP={key:newKey,id:'\u05d7\u05d3\u05e9',title:title,cat:cat,prompt:prompt,cats:cats,images:imgSrc?[imgSrc]:[]};
     if (!state.added) state.added=[];
     state.added.push(newP); appendCard(newP); updateCount(); renumberCards();
     markUnsaved(); closeModal('promptModal'); showToast('\u2705 \u05d4\u05e4\u05e8\u05d5\u05de\u05e4\u05d8 \u05e0\u05d5\u05e1\u05e3 - \u05dc\u05d7\u05e5 "\u05e4\u05e8\u05e1\u05dd"');
@@ -6483,6 +6721,7 @@ function filterCards(q){
     var matchFav=!showFavsOnly||!!favs[key];
     var free=isFreeCard(key);
     var matchCat=!activeCat||(activeCat==='free'&&free)||(activeCat==='paid'&&!free);
+    if(!matchCat&&activeCat.startsWith('cat:')){var d=getCardData(key);matchCat=!!(d&&d.cats&&d.cats.indexOf(activeCat.slice(4))>=0);}
     var show=matchQ&&matchFav&&matchCat;
     c.style.display=show?'':'none'; if(show)visible++;
   });
