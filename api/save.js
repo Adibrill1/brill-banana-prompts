@@ -101,7 +101,7 @@ module.exports = async function handler(req, res) {
       var sha      = existing.status === 200 ? existing.data.sha : undefined;
       var putRes   = await ghPut(token, imgPath, m[2], sha, 'Upload image ' + key);
       return (putRes.status === 200 || putRes.status === 201)
-        ? '/images/' + imgPath.split('/').pop()
+        ? 'https://raw.githubusercontent.com/' + owner + '/' + repo + '/master/' + imgPath
         : src;
     }
 
