@@ -6056,7 +6056,7 @@ function markUnsaved() {
 async function publishChanges() {
   var btn = document.getElementById('btnPublish');
   btn.disabled = true;
-  btn.textContent = '\u{1F504} \u05e9\u05d5\u05de\u05e8...';
+  var MAX_IMGS_PER_BATCH = 3; // max base64 images per save call (Vercel 8s limit)
   try {
     // Build stateToPost without duplicating base64 images already stored in customImgs
     var stateToPost = {};
@@ -6073,11 +6073,27 @@ async function publishChanges() {
     if (hdrCfg) stateToPost.headerConfig = hdrCfg;
     var svcCfg = JSON.parse(localStorage.getItem('bb_services_config') || 'null');
     if (svcCfg) stateToPost.servicesConfig = svcCfg;
-    Object.keys(stateToPost.customImgs || {}).forEach(function(key) {
-      if ((stateToPost.customImgs[key] || '').startsWith('data:') && serverCustomImgs[key]) {
-        stateToPost.customImgs[key] = serverCustomImgs[key];
+    // Replace already-uploaded base64 with server paths; batch new uploads (3 per call)
+    var sentBase64 = 0;
+    Object.keys(stateToPost.customImgs).forEach(function(key) {
+      var val = stateToPost.customImgs[key] || '';
+      if (!val.startsWith('data:')) return;
+      if (serverCustomImgs[key]) {
+        stateToPost.customImgs[key] = serverCustomImgs[key]; // already on server
+      } else if (sentBase64 < MAX_IMGS_PER_BATCH) {
+        sentBase64++; // include in this batch for upload
+      } else {
+        delete stateToPost.customImgs[key]; // defer to next batch
       }
     });
+    var totalPending = Object.keys(state.customImgs || {}).filter(function(k) {
+      return (state.customImgs[k] || '').startsWith('data:') && !serverCustomImgs[k];
+    }).length;
+    if (totalPending > MAX_IMGS_PER_BATCH) {
+      btn.textContent = '\u{1F504} \u05de\u05e2\u05dc\u05d4 ' + sentBase64 + '/' + totalPending + '...';
+    } else {
+      btn.textContent = '\u{1F504} \u05e9\u05d5\u05de\u05e8...';
+    }
     var ctrl = new AbortController();
     var saveTimer = setTimeout(function(){ ctrl.abort(); }, 25000);
     var r = await fetch('/api/save', {
@@ -6089,19 +6105,41 @@ async function publishChanges() {
     clearTimeout(saveTimer);
     if (r.ok) {
       var rData = await r.json();
-      // Update local state with server response (images converted from base64 to URLs)
-      if (rData.state) { state = rData.state; }
+      // Merge server state while preserving local base64 for not-yet-uploaded images
+      if (rData.state) {
+        var savedLocalImgs = Object.assign({}, state.customImgs || {});
+        state = rData.state;
+        if (!state.customImgs) state.customImgs = {};
+        Object.keys(savedLocalImgs).forEach(function(k) {
+          var localVal = savedLocalImgs[k] || '';
+          var serverVal = state.customImgs[k] || '';
+          if (serverVal && !serverVal.startsWith('data:')) {
+            serverCustomImgs[k] = serverVal; // server confirmed upload
+          } else if (localVal.startsWith('data:') && !serverCustomImgs[k]) {
+            state.customImgs[k] = localVal; // restore unuploaded base64
+          }
+        });
+      }
       localStorage.setItem('nb_state', JSON.stringify(state));
+      // Check if more base64 images remain to upload - auto-retry
+      var stillPending = Object.keys(state.customImgs || {}).filter(function(k) {
+        return (state.customImgs[k] || '').startsWith('data:') && !serverCustomImgs[k];
+      }).length;
+      if (stillPending > 0) {
+        showToast('\u{1F4E4} \u05de\u05e2\u05dc\u05d4 \u05ea\u05de\u05d5\u05e0\u05d5\u05ea... \u05e0\u05e9\u05d0\u05e8\u05d5 ' + stillPending, 3000);
+        setTimeout(publishChanges, 800);
+        return;
+      }
       pendingChanges = false;
       document.getElementById('unsavedDot').classList.remove('show');
       btn.disabled = false;
       btn.textContent = '\u{1F310} \u05e4\u05e8\u05e1\u05dd \u05e9\u05d9\u05e0\u05d5\u05d9\u05d9\u05dd';
       var freeCount = Object.keys(state.freePrompts || {}).length;
       var mode = getFreeMode();
-      var statusMsg = mode === 'full'    ? '🟢 חינם מלא - כל הפרומפטים חינמיים'
-                    : mode === 'partial' ? '🟡 חינם חלקי - ' + freeCount + ' פרומפטים'
-                    :                     '🔴 גישה חינמית כבויה (' + freeCount + ' ברשימה)';
-      showToast('✅ פורסם - ' + statusMsg, 5000);
+      var statusMsg = mode === 'full'    ? '\u{1F7E2} \u05d7\u05d9\u05e0\u05dd \u05de\u05dc\u05d0 - \u05db\u05dc \u05d4\u05e4\u05e8\u05d5\u05de\u05e4\u05d8\u05d9\u05dd \u05d7\u05d9\u05e0\u05de\u05d9\u05d9\u05dd'
+                    : mode === 'partial' ? '\u{1F7E1} \u05d7\u05d9\u05e0\u05dd \u05d7\u05dc\u05e7\u05d9 - ' + freeCount + ' \u05e4\u05e8\u05d5\u05de\u05e4\u05d8\u05d9\u05dd'
+                    :                     '\u{1F534} \u05d2\u05d9\u05e9\u05d4 \u05d7\u05d9\u05e0\u05de\u05d9\u05ea \u05db\u05d1\u05d5\u05d9\u05d4 (' + freeCount + ' \u05d1\u05e8\u05e9\u05d9\u05de\u05d4)';
+      showToast('\u2705 \u05e4\u05d5\u05e8\u05e1\u05dd - ' + statusMsg, 5000);
     } else {
       var errData = await r.json().catch(function(){return {};});
       var errMsg = (errData && errData.error) ? errData.error : ('HTTP ' + r.status);
@@ -6116,7 +6154,6 @@ async function publishChanges() {
     showToast('\u274c \u05e9\u05d2\u05d9\u05d0\u05d4 \u05d1\u05e9\u05de\u05d9\u05e8\u05d4: ' + e.message);
   }
 }
-
 function getCardData(key) {
   if (key.startsWith('orig_')) {
     var i = parseInt(key.replace('orig_', ''));
