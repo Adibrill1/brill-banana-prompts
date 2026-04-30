@@ -5956,6 +5956,8 @@ document.documentElement.style.opacity = '1';
 // Then fetch authoritative state from server and re-apply if it has data
 fetch('/api/state').then(function(r){ return r.json(); }).then(function(serverState) {
   if (!isEmptyState(serverState)) {
+    // Never overwrite local state if user has unsaved changes (e.g. mid-import)
+    if (pendingChanges) return;
     // Skip stale server state: if local state was published MORE recently, keep it
     // (GitHub CDN can briefly serve old state.json right after a write)
     if (serverState._publishedAt && state._publishedAt && serverState._publishedAt < state._publishedAt) {
