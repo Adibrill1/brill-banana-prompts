@@ -86,11 +86,10 @@ module.exports = async function handler(req, res) {
   try {
     var body = req.body;
     if (typeof body === 'string') body = JSON.parse(body);
-    if (!body || !body.state) {
+    if (!body) {
       clearTimeout(hard); done = true;
-      return res.status(400).json({ error: 'missing state' });
+      return res.status(400).json({ error: 'missing body' });
     }
-    var newState = JSON.parse(JSON.stringify(body.state));
 
     // Helper: upload one base64 image, return the /images/ path
     async function uploadImg(key, src) {
@@ -106,13 +105,35 @@ module.exports = async function handler(req, res) {
         : src;
     }
 
-    // Upload base64 images from customImgs
+    // ── uploadOnly mode: just upload images, return URL map, skip state.json save ──
+    if (body.uploadOnly) {
+      var uImgs = body.customImgs || {};
+      var uKeys = Object.keys(uImgs).filter(function(k) {
+        return (uImgs[k] || '').startsWith('data:');
+      });
+      var uploads = {};
+      // Sequential to keep each request well within Vercel's 10s limit
+      for (var ui = 0; ui < uKeys.length; ui++) {
+        uploads[uKeys[ui]] = await uploadImg(uKeys[ui], uImgs[uKeys[ui]]);
+      }
+      if (done) return;
+      clearTimeout(hard); done = true;
+      return res.status(200).json({ ok: true, uploads: uploads });
+    }
+
+    if (!body.state) {
+      clearTimeout(hard); done = true;
+      return res.status(400).json({ error: 'missing state' });
+    }
+    var newState = JSON.parse(JSON.stringify(body.state));
+
+    // Upload base64 images from customImgs (fallback for direct saves)
     var imgKeys = Object.keys(newState.customImgs || {}).filter(function(k) {
       return (newState.customImgs[k] || '').startsWith('data:');
     });
-    await Promise.all(imgKeys.map(async function(key) {
-      newState.customImgs[key] = await uploadImg(key, newState.customImgs[key]);
-    }));
+    for (var ii = 0; ii < imgKeys.length; ii++) {
+      newState.customImgs[imgKeys[ii]] = await uploadImg(imgKeys[ii], newState.customImgs[imgKeys[ii]]);
+    }
 
     // Upload base64 images from added items (prevents state.json from growing huge)
     for (var addedItem of (newState.added || [])) {
