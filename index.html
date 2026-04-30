@@ -6454,7 +6454,7 @@ function savePromptModal() {
       if (imgSrc) state.customImgs[editingKey]=imgSrc;
     } else {
       var a=(state.added||[]).find(function(x){return x.key===editingKey;});
-      if (a){a.title=title;a.cat=cat;a.prompt=prompt;a.cats=cats;if(imgSrc)a.images=[imgSrc];}
+      if (a){a.title=title;a.cat=cat;a.prompt=prompt;a.cats=cats;if(imgSrc){a.images=[imgSrc];if(!state.customImgs)state.customImgs={};state.customImgs[editingKey]=imgSrc;}}
     }
     var card=document.querySelector('.card[data-key="'+editingKey+'"]');
     if (card) {
@@ -6477,6 +6477,7 @@ function savePromptModal() {
   } else {
     var newKey='added_'+Date.now();
     var newP={key:newKey,id:'\u05d7\u05d3\u05e9',title:title,cat:cat,prompt:prompt,cats:cats,images:imgSrc?[imgSrc]:[]};
+    if(imgSrc){if(!state.customImgs)state.customImgs={};state.customImgs[newKey]=imgSrc;}
     if (!state.added) state.added=[];
     state.added.push(newP); appendCard(newP); updateCount(); renumberCards();
     markUnsaved(); closeModal('promptModal'); showToast('\u2705 \u05d4\u05e4\u05e8\u05d5\u05de\u05e4\u05d8 \u05e0\u05d5\u05e1\u05e3 - \u05dc\u05d7\u05e5 "\u05e4\u05e8\u05e1\u05dd"');
