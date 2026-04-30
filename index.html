@@ -6091,6 +6091,10 @@ async function publishChanges() {
     var totalPending = allPendingKeys.length;
     var uploadedSoFar = 0;
 
+    // diagnostic: always show how many images Phase 1 found
+    showToast('\ud83d\udd0d debug: ' + totalPending + ' \u05ea\u05de\u05d5\u05e0\u05d5\u05ea \u05de\u05de\u05ea\u05d9\u05e0\u05d5\u05ea \u05dc\u05e2\u05dc\u05d9\u05d9\u05d4, customImgs=' + Object.keys(state.customImgs||{}).length, 8000);
+    await new Promise(function(r){ setTimeout(r, 500); }); // let toast render
+
     while (true) {
       var pending = Object.keys(state.customImgs || {}).filter(function(k) {
         return (state.customImgs[k] || '').startsWith('data:') && !serverCustomImgs[k];
