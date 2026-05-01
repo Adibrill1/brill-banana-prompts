@@ -5141,10 +5141,14 @@ function executeImport() {
   if (!cards.length) return;
   if (!state.added) state.added = [];
   var ts = Date.now();
+  var labelToId = {};
+  (CUSTOM_CATS || []).forEach(function(c) { labelToId[c.label] = c.id; });
   cards.forEach(function(c, i) {
     var key = 'added_import_' + ts + '_' + i;
     var imgSrc = (c.image && images[c.image]) ? images[c.image] : '';
-    var p = { key: key, title: c.title || '', cat: c.cat || '', prompt: c.prompt || '', images: imgSrc ? [imgSrc] : [] };
+    var cats = Array.isArray(c.cats) ? c.cats.slice() : [];
+    if (!cats.length && c.cat && labelToId[c.cat]) cats = [labelToId[c.cat]];
+    var p = { key: key, title: c.title || '', cat: c.cat || '', cats: cats, prompt: c.prompt || '', images: imgSrc ? [imgSrc] : [] };
     state.added.push(p);
     if (imgSrc) { if (!state.customImgs) state.customImgs = {}; state.customImgs[key] = imgSrc; }
     appendCard(p);
