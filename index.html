@@ -5734,6 +5734,17 @@ var CUSTOM_CATS = [
   {id:'fantasy',      label:'פנטזיה'},
   {id:'products',     label:'מוצרים'},
 ];
+function formatCatLabel(card) {
+  if (!card) return '';
+  var cats = card.cats || [];
+  if (cats.length) {
+    var byId = {};
+    (CUSTOM_CATS || []).forEach(function(c) { byId[c.id] = c.label; });
+    var labels = cats.map(function(id) { return byId[id] || ''; }).filter(Boolean);
+    if (labels.length) return labels.join(', ');
+  }
+  return card.cat || '';
+}
 function openCatsManager() {
   if (!ADMIN_UNLOCKED) return;
   var list = document.getElementById('catsManagerList');
@@ -5805,14 +5816,21 @@ function hideCatPopover() {
   _catPopoverKey = null;
 }
 function saveCatsForCard(key, cats) {
+  var data;
   if (key.startsWith('orig_')) {
     var i = parseInt(key.replace('orig_', ''));
     if (!state.promptEdits) state.promptEdits = {};
     if (!state.promptEdits[key]) state.promptEdits[key] = {title:TITLES_ORIG[i], cat:CATS_ORIG[i], prompt:PROMPTS_ORIG[i]};
     state.promptEdits[key].cats = cats;
+    data = state.promptEdits[key];
   } else {
     var a = (state.added||[]).find(function(x){return x.key===key;});
-    if (a) a.cats = cats;
+    if (a) { a.cats = cats; data = a; }
+  }
+  var cardEl = document.querySelector('.card[data-key="' + key + '"]');
+  if (cardEl && data) {
+    var catEl = cardEl.querySelector('.cat');
+    if (catEl) catEl.textContent = formatCatLabel(data);
   }
   markUnsaved();
 }
@@ -5993,7 +6011,7 @@ function applyState(st) {
     var i = parseInt(key.replace('orig_',''));
     if (!isNaN(i)) { PROMPTS_ORIG[i]=edit.prompt; TITLES_ORIG[i]=edit.title; CATS_ORIG[i]=edit.cat||''; }
     var h3=card.querySelector('h3'); if(h3) h3.textContent=edit.title;
-    var catEl=card.querySelector('.cat'); if(catEl) catEl.textContent=edit.cat||'';
+    var catEl=card.querySelector('.cat'); if(catEl) catEl.textContent=formatCatLabel(edit);
     var pre=card.querySelector('.prompt-text'); if(pre) pre.textContent=edit.prompt;
     card.setAttribute('data-search',(edit.title+' '+edit.prompt).toLowerCase());
   });
@@ -6405,7 +6423,7 @@ function appendCard(p) {
     +'</div>'
     +'<span class="free-badge" style="'+(isFree?'':'display:none')+'">\u{1F193} Free</span>'
     +'<div class="card-header"><span class="num">#'+p.id+'</span>'
-    +'<span class="cat">'+(p.cat||'')+'</span>'
+    +'<span class="cat">'+escHtml(formatCatLabel(p))+'</span>'
     +'<button class="copy-btn" data-action="copy" data-key="'+p.key+'">\u{1F4CB} Copy</button>'
     +'<button class="unlock-btn" data-action="unlock">🔒 פרימיום</button>'
     +'</div><h3>'+escHtml(p.title)+'</h3>'+thumbHtml
@@ -6469,7 +6487,7 @@ function savePromptModal() {
     var card=document.querySelector('.card[data-key="'+editingKey+'"]');
     if (card) {
       card.querySelector('h3').textContent=title;
-      card.querySelector('.cat').textContent=cat;
+      card.querySelector('.cat').textContent=formatCatLabel({cat:cat,cats:cats});
       card.querySelector('.prompt-text').textContent=prompt;
       card.setAttribute('data-search',(title+' '+prompt).toLowerCase());
       if (imgSrc) {
