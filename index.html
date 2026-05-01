@@ -5994,7 +5994,28 @@ fetch('/api/state').then(function(r){ return r.json(); }).then(function(serverSt
   // Offline: keep cached state already applied
 });
 
+function migrateStateCats(st) {
+  if (!st) return;
+  var cats = (st.customCats && st.customCats.length) ? st.customCats : CUSTOM_CATS;
+  var byLabel = {};
+  (cats || []).forEach(function(c) { byLabel[c.label] = c.id; });
+  (st.added || []).forEach(function(a) {
+    if ((!a.cats || !a.cats.length) && a.cat && byLabel[a.cat]) {
+      a.cats = [byLabel[a.cat]];
+    }
+  });
+  if (st.promptEdits) {
+    Object.keys(st.promptEdits).forEach(function(k) {
+      var e = st.promptEdits[k];
+      if (e && (!e.cats || !e.cats.length) && e.cat && byLabel[e.cat]) {
+        e.cats = [byLabel[e.cat]];
+      }
+    });
+  }
+}
+
 function applyState(st) {
+  migrateStateCats(st);
   // Reset DOM to original first (re-show any previously hidden cards)
   document.querySelectorAll('.card[data-key^="orig_"]').forEach(function(c){ c.style.display=''; });
   // Remove previously added cards
