@@ -5737,9 +5737,11 @@ var CUSTOM_CATS = [
 function formatCatLabel(card) {
   if (!card) return '';
   var cats = card.cats || [];
+  var src = (typeof state !== 'undefined' && state && state.customCats && state.customCats.length)
+    ? state.customCats : CUSTOM_CATS;
   if (cats.length) {
     var byId = {};
-    (CUSTOM_CATS || []).forEach(function(c) { byId[c.id] = c.label; });
+    (src || []).forEach(function(c) { byId[c.id] = c.label; });
     var labels = cats.map(function(id) { return byId[id] || ''; }).filter(Boolean);
     if (labels.length) return labels.join(', ');
   }
@@ -6015,6 +6017,7 @@ function migrateStateCats(st) {
 }
 
 function applyState(st) {
+  if (st && st.customCats && st.customCats.length) CUSTOM_CATS = st.customCats;
   migrateStateCats(st);
   // Reset DOM to original first (re-show any previously hidden cards)
   document.querySelectorAll('.card[data-key^="orig_"]').forEach(function(c){ c.style.display=''; });
@@ -6072,7 +6075,6 @@ function applyState(st) {
   applyWaConfig(st.waConfig);
   updateLicenseBtn();
   applyPaywallToAll();
-  if (st.customCats && st.customCats.length) CUSTOM_CATS = st.customCats;
   buildCatFilters();
   // restore WA share from state (fallback to localStorage for old states)
   shareWhatsApp = st.shareWhatsApp !== undefined ? !!st.shareWhatsApp : (localStorage.getItem('bb_share_wa') !== 'false');
