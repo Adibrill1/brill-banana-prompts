@@ -5106,9 +5106,11 @@ document.addEventListener('DOMContentLoaded', function() {
     files.forEach(function(file) {
       var reader = new FileReader();
       reader.onload = function(ev) {
-        _importData.images[file.name] = ev.target.result;
-        done++;
-        if (done === files.length) updateImportPreview();
+        compressImage(ev.target.result, 1200, 0.82).then(function(compressed) {
+          _importData.images[file.name] = compressed;
+          done++;
+          if (done === files.length) updateImportPreview();
+        });
       };
       reader.readAsDataURL(file);
     });
@@ -6103,7 +6105,7 @@ function markUnsaved() {
 async function publishChanges() {
   var btn = document.getElementById('btnPublish');
   btn.disabled = true;
-  var MAX_BATCH = 3;   // base64 images per uploadOnly call
+  var MAX_BATCH = 1;   // base64 images per uploadOnly call (Vercel 4.5MB body limit)
   var MAX_RETRIES = 4; // retries per batch on failure
 
   // Helper: fetch with AbortController timeout + up to MAX_RETRIES on any failure
@@ -6129,6 +6131,25 @@ async function publishChanges() {
   }
 
   try {
+    // \u2500\u2500 Pre-Phase 1: compress any oversized data: URLs to fit Vercel's 4.5MB body limit
+    var SIZE_LIMIT = 3000000; // ~3MB base64 (~2.2MB original) leaves headroom for JSON envelope
+    var dataKeys = Object.keys(state.customImgs || {}).filter(function(k) {
+      return (state.customImgs[k] || '').startsWith('data:');
+    });
+    for (var dki = 0; dki < dataKeys.length; dki++) {
+      var dk = dataKeys[dki];
+      var src = state.customImgs[dk];
+      if (src.length > SIZE_LIMIT) {
+        var smaller = await compressImage(src, 1200, 0.82);
+        // If first pass still too big, compress harder
+        if (smaller.length > SIZE_LIMIT) smaller = await compressImage(smaller, 900, 0.7);
+        state.customImgs[dk] = smaller;
+        // Mirror to state.added[i].images[0] if it matches the original data URL
+        var ac = (state.added || []).find(function(a){ return a.key === dk; });
+        if (ac && ac.images && ac.images[0] === src) ac.images[0] = smaller;
+      }
+    }
+
     // \u2500\u2500 Phase 1: upload pending base64 images in batches of MAX_BATCH \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     var allPendingKeys = Object.keys(state.customImgs || {}).filter(function(k) {
       return (state.customImgs[k] || '').startsWith('data:');
