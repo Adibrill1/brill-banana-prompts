@@ -4090,6 +4090,9 @@
       "prompt": "A photorealistic image of a vintage 1980s CRT television set on a wooden entertainment center. Inside the TV screen, [person from attached photo] is watching a movie, holding a bowl of popcorn. A real hand from outside the TV reaches into the screen, grabbing a handful of popcorn from the bowl. Popcorn pieces dramatically scatter in 3D, breaking out of the screen boundary with realistic physics. Nostalgic warm lighting, VHS aesthetic with subtle scan lines, hyperrealistic, 4K.",
       "images": [
         "/images/custom_added_1775315294386_img0.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -4189,6 +4192,9 @@
       "prompt": "A cinematic and ultra-realistic image of a confident woman (same face as uploaded reference) stepping into a powerful helicopter on a windswept landing strip during golden hour. She wears a dramatic layered technical light-gray jacket that billows wildly from the spinning rotor blades. One foot firmly planted on the boarding ramp, one hand gripping the edge of the hatch reflecting the blazing sky. Her expression is steely and fearless, like an elite operative embarking on a high-stakes mission. Dust, sparks, and dry leaves swirl dramatically around her from the helicopter engines, while cinematic lighting and subtle motion blur emphasize the sense of speed, power, and purpose in the scene",
       "images": [
         "/images/custom_added_1775316390609_img0.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -4277,6 +4283,9 @@
       "prompt": "Create for me based on the reference image, a grid image divided into 9 parts, each part 16:9 in size. Each part has a different scene of the same face image. Eats different foods: apple, ice cream, hamburger, pizza, sandwich, drinks coffee, candy, pasta",
       "images": [
         "/images/custom_added_1775317171851_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -4300,6 +4309,9 @@
       "prompt": "Create a hyper-realistic studio-style collage of the person in the uploaded photo.\nIdentity: Apply a CRITICAL IDENTITY LOCK to preserve the exact likeness, including facial features, hairstyle, skin tone, proportions, age, and clothing style.\nLighting: Strong, studio-quality lighting.\nBackground: Simple light gray.\nComposition: Arrange in a 3x3 grid (9 images). Each frame should show the person breaking through torn white paper, creating a 3D effect as if emerging from the background.\nExpressions & Poses: Each image must be unique and playful: pointing, laughing, pretending to sleep, drinking, winking, thinking, gesturing, etc. Ensure variety in facial expressions and body language.\nOutfits: Different outfit in each frame.\nRange from casual, semi-formal, sporty, to humorous or eccentric styles.\nOutput Settings:\nAspect Ratio: 9:16\nHigh resolution\nElegant, modern composition",
       "images": [
         "/images/custom_added_1775317325942_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -4323,6 +4335,9 @@
       "prompt": "Replace the man's face with the exact face from my uploaded photo. Use my real facial features 100% precisely: same eyes, nose, mouth, jawline, skin tone, hair color and hairstyle as in my photo. Do not change or stylize my face at all.\n\nThe person (me, with my real face from the photo) is a young man sitting in the open door of a white convertible car on a chaotic New York city street. He’s wearing a white slightly torn button-down shirt, black ripped jeans, and white sneakers. He’s holding a black pistol aimed forward with a serious, determined expression. Dynamic low-angle shot. Background: explosions, thick smoke, fire, shattered glass, abandoned cars, sparks flying near the car wheels. Warm dramatic lighting from the explosions, highly realistic action movie style, photorealistic, ultra-detailed, cinematic.",
       "images": [
         "/images/custom_added_1775317485371_img0.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -4346,6 +4361,9 @@
       "prompt": "Create a high-definition cinematic image of a vintage royal scene. The main character sits comfortably in an elegant gilded armchair in a lavish royal interior. {DOG_BREED} sits alertly beside the chair, matching the overall composition and perspective of the original reference image. Use the uploaded image as the sole source of the character's identity: preserve the face, age, skin tone, hairline, and proportions exactly as they are, without any changes to facial features or anatomy, regardless of gender or age. The character wears a finely tailored, double-breasted suit in a dark wool blend with a subtle striped pattern, white socks, and polished black leather shoes with laces, fitting naturally to their body shape. Soft ambient lighting, warm classic color gradations with shades of brown, muted gold, and gray, sophisticated cinematic tones, polished contrast, and fine film grain. Realistic 8K picture quality.\nMake sure to replace {DOG_BREED} with the user's answer before submitting.\nNegative comments: distortions, facial changes, extra limbs, malfunctions, unrealistic anatomy, inappropriate clothing, incorrect costume details, marks, low resolution, blurred face.",
       "images": [
         "/images/custom_added_1775317632054_img0.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -4356,6 +4374,9 @@
       "prompt": "The man stepping out of a luxury black SUV with door held open by a guard. Street smoke, headlights flaring, stylish mini leader pose, crisp shadows, realistic boss attitude, ultrasmooth cinematic lighting.",
       "images": [
         "/images/custom_added_1775317791902_img0.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -4394,6 +4415,9 @@
       "prompt": "Prompt: {\n\"image_prompt\": {\n\"subject\": \"Top-down aerial view of a man (from the uploaded photo) wearing a quilted mountain parka, sitting in pristine snow holding a thermal coffee mug. Double exposure effect: His jacket and body silhouette showcase rolling alpine hills at dawn, wildflower meadows, mountain goats on rocky outcrops, and a winding mountain trail leading to a sunrise peak.\",\n\"composition\": \"Vertical 9:16. 60% Top: Subject with layered mountain landscape double exposure creating depth. 40% Bottom: Untouched powder snow with gentle terrain contours for clean calendar text area.\",\n\"lighting\": \"Warm sunrise alpenglow illuminating the silhouette from within, soft diffused daylight on surrounding snow, atmospheric haze adding depth layers.\",\n\"text_overlay\": {\n\"title\": \"2026 CALENDAR\",\n\"style\": \"Text embossed into weathered stone or carved into alpine wood, high-contrast typography with mountain texture.\",\n\"grid_data\": \"3x4 grid with subtle topographic line accents.\"\n},\n\"quality\": \"8K, Photorealistic, Razor-sharp detail on face and typography, Cinematic with enhanced atmospheric perspective.\"\n}\n}",
       "images": [
         "/images/custom_added_1775318519248_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -4417,6 +4441,9 @@
       "prompt": "A daring man in all-black streetwear climbs the side of a tall rusted metal bridge tower high above a busy highway. , black beanie, gloves, . Cold misty air surrounds him as he exhales smoke from a cigar, creating a dramatic vapor trail. The scene is set on a gloomy overcast day, with a fog-covered city skyline and a wide river in the background. Cars with headlights on move along the highway far below, adding depth and scale. Moody teal-and-orange tones, realistic textures, gritty urban atmosphere, shallow depth of field, 85mm lens, cinematic contrast, hyper-realistic detail, action-thriller poster style.",
       "images": [
         "/images/custom_added_1775318888805_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -4427,6 +4454,9 @@
       "prompt": "Create a picture of them on the set of a high-octane movie.",
       "images": [
         "/images/custom_added_1775319076768_img0.jpg"
+      ],
+      "cats": [
+        "celebrities"
       ]
     },
     {
@@ -4503,6 +4533,10 @@
       "prompt": "A photo of a program for the Broadway show about \"Brill.ai\" players on a nice theater seat, it's professional and well made, glossy, we can see the cover and a page showing a photo of the stage.",
       "images": [
         "/images/custom_added_1775325309725_img0.jpg"
+      ],
+      "cats": [
+        "celebrities",
+        "products"
       ]
     },
     {
@@ -4513,6 +4547,9 @@
       "prompt": "Create a clean, professional product advertisement poster. Feature the woman from the image holding the lipstick and looking directly at the camera. The scene should be well-lit with a minimalist background to emphasize the product. Style: high-end commercial photography.",
       "images": [
         "/images/custom_added_1775325404421_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -4536,6 +4573,9 @@
       "prompt": "A modern magazine collage style poster about software development. The central image is a young female programmer with twin braids working on a laptop. Surrounding her are various torn paper photo elements: close-ups of code on screens, mechanical keyboards, a cup of coffee, handwritten notes on a tablet, and whiteboard system diagrams. Large, bold typography is layered over the collage, including \"SHIP IT\" and \"上线\" at the top, and \"SYSTEMS THINKING PROGRAMMER\" and \"调试模式\" at the bottom. The background is a mix of dark code terminals and graphic shapes with an orange accent. The overall feel is energetic and professional.",
       "images": [
         "/images/custom_added_1775325558079_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -4689,6 +4729,9 @@
       "prompt": "[Global Instructions]: A 3x3 grid collage, where all 9 cells must feature exactly the same woman. Strictly maintain the facial features consistent with the reference image. Do not change her facial features; only alter her expression, makeup, and styling to match each movie's theme.\nCell 1: Love Actually style - airport farewell scene wearing a Christmas hat, holding a wrapped gift, tender embrace, background with a giant airport Christmas tree and colorful light decorations, soft lighting\nCell 2: Home Alone style - surprised exaggerated expression with hands covering cheeks, wearing a crooked Christmas hat, background with a home Christmas tree, pile of gifts, and decorative lights, comedic effect\nCell 3: The Polar Express style - in front of a train window wearing a sleep cap, holding hot cocoa with a candy cane, outside the window a magical snowy landscape and Christmas village, dreamy blue and gold tones\nCell 4: The Nightmare Before Christmas style - real person in green-toned clothing with a red Christmas hat, goofy expression, holding stolen Christmas decorations, background with Christmas village lights and gifts, creative styling\nCell 5: Miracle on 34th Street style - retro department store scene wearing a classic red Christmas dress, holding a Christmas shopping bag, background with a giant Christmas tree and retro decorations, classic Hollywood lighting (center)\nCell 6: Elf style - complete elf outfit (green top, red striped socks, pointed hat with bells), joyful jumping pose, holding a candy cane, background with a candy-colored Christmas workshop\nCell 7: Frozen style - ice blue princess dress with snowflake crown, holding a magical ice crystal, snowflakes swirling, background with an ice crystal castle and a large Christmas tree, special festive candy elements, Disney magical feel\nCell 8: True Lies style - black dress with red Christmas accessories, holding champagne, background with a Christmas party scene featuring lights and decorative balls, elegant and mysterious\nCell 9: Last Christmas style - stylish woman in a red retro coat with a green scarf and gold earrings, holding a Christmas gift box, standing under the lights of a London Christmas market, background with a giant Covent Garden Christmas tree and festive shop windows, warm night scene lighting, expression full of hope, modern romantic movie aesthetic\nEach cell imitates the corresponding movie's color tones, lighting, and atmosphere, with Christmas decorative elements extremely prominent, movie poster composition, adding cinematic title text effects, professional movie still quality, 4K high definition",
       "images": [
         "/images/custom_added_1775327908607_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -4712,6 +4755,11 @@
       "prompt": "Illustration Processing:\nThe background is removed and the characters are turned into figurines and merchandise.\nTheme / Overview:\nA photorealistic movie theater lounge. A special event-themed space, set in a popcorn stand, is decorated with the world of the characters.\n\nLocation:\nA spacious popcorn stand in a large movie theater.\nThere is a cash register, with a popcorn machine inside.\nThere is a drink stand with a salesperson behind the counter.\nAbove the register are countless posters of showing movies.\n\nCharacters / Production:\nA character cosplayer is placed in the center of the screen.\nMerchandise such as figurines and acrylic stands are displayed on shelves.\nGiant stuffed animals and signboards are displayed realistically.\nA movie photo booth is set up and decorated with character designs.\n\nPlaces where characters are reflected:\nMovie posters currently being screened.\nPop-up advertisements for the collaboration menu.\nDrink cups and packaging.\nPopcorn buckets.\nLarge LED LCD panel.\n\nDesign / Advertising:\nCharacter illustrations are reflected on each poster in the lounge.\nVivid visuals of the collaboration food and drinks are displayed.\nAnimations and character footage are projected onto LED panels.\n\nCamera Angle:\nComposed from the front.\nEmphasis on the entire popcorn stand.\nA cosplayer is placed in the center, with merchandise and advertisements reflected around them.\nA slightly lower angle captures the LED panels and posters impressively.\n\nQuality / Atmosphere:\nPhotorealistic and detailed depiction.\nAn urban, realistic glossy feel, creating a cinema-like atmosphere with an event-like feel.\nResolution is 4K, aspect ratio is 4:3.",
       "images": [
         "/images/custom_added_1775328163435_img0.jpg"
+      ],
+      "cats": [
+        "custom_1777209981017",
+        "fantasy",
+        "products"
       ]
     },
     {
@@ -4748,6 +4796,9 @@
       "prompt": "A realistic scene where Tokyo Tower is occupied by a super gigantic woman. The surrounding buildings appear as small as toy models, while the woman is enormously large. The setting features a realistic city environment. The overall mood is quiet, warm, soothing, and cute.",
       "images": [
         "/images/custom_added_1775328743271_img0.jpg"
+      ],
+      "cats": [
+        "custom_1777209981017"
       ]
     },
     {
@@ -4758,6 +4809,9 @@
       "prompt": "Create a highly interactive challenge invitation thumbnail. Person action: The person in the image makes a provocative/inviting gesture (such as waving, pointing at the viewer, or giving a thumbs up). Expression: Confident, challenging smile or serious determined look. Background: Dynamic abstract geometric background with vibrant jumping colors. Interactive text prompts: Top large text: 'Do You Dare?' Central core text (with stroke and shadow): '7-Day Fitness Challenge' Bottom call-to-action (red button style): 'Click to Join ▶' Visual elements: Add countdown clock icon, place '50,000 participants' badge, top right difficulty label: '⭐⭐⭐ Medium Difficulty'. Effects: Dynamic light sweep effect creating urgency. Atmosphere: Full of energy and action, sparking viewer participation.",
       "images": [
         "/images/custom_added_1775328841824_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -4781,6 +4835,9 @@
       "prompt": "Create an image about \"ADI BRILL\" retold through a series of Polaroid photos pinned to a cork board. Each photo captures a key moment, with simple captions below. Arrange the photos in a loosely chronological path across the board, using colored strings to connect events and characters. Light the scene warmly to evoke nostalgia. Include incidental details, coffee cup rings, paper clips, handwritten notes, for authenticity.",
       "images": [
         "/images/custom_added_1775329113871_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -4791,6 +4848,9 @@
       "prompt": "A man is standing in a modern electronics store analyzing a digital camera. He is wearing a watch. On the table in front of him are sunglasses, headphones on a stand, a helmet, and a white sneaker. Use the labeled collage as a reference for all items. Style: realistic commercial photography.",
       "images": [
         "/images/custom_added_1775329152615_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -4801,6 +4861,9 @@
       "prompt": "A masterpiece winter series editorial photograph titled \"Red Spirit\" in a 3:4 aspect ratio, featuring a 2x2 grid collage layout with strict character facial and clothing color matching across all panels.\n\nEnvironment: Heavy blizzard with dense, large snowflakes filling the entire depth of field. Strong directional light from the left creates deep textures and high-contrast Rembrandt shadows. The color theme is high-contrast: consistent vibrant scarlet red, pure snow white, and matte black.\n\nCharacter details: The subject has almond eyes, refined nose, and M-shaped lips with natural frost-chilled redness on cheeks and nose bridge. Realistic skin texture with visible pores. Dark espresso hair with scattered snow particles.\n\nPanel 1 (Top Left): Medium close-up with chin tucked in red scarf, gentle half-smile, looking at camera.\n\nPanel 2 (Top Right): Profile close-up, looking upwards with dreamy and pensive expression.\n\nPanel 3 (Bottom Left): Medium shot with a vibrant red umbrella. The umbrella is solid saturated scarlet red, matching the scarf and beanie perfectly. Expression is vulnerable and melancholic with moist glistening eyes, head tilted slightly downward. Standing in the blizzard, the red umbrella creates a bold color block against the white snow.\n\nPanel 4 (Bottom Right): Waist-up medium shot with dynamic joy. Broad laugh or mischievous expression with eyes crinkled with happiness. Playfully lifting the red scarf with energetic and spontaneous movement.\n\nMaterials: Uniformity in red saturation across beanie, scarf, and umbrella sharing the same vivid scarlet tone. Textures include chunky-knit wool, soft cashmere, matte umbrella fabric, and heavy wool coat.\n\nProfessional Vogue editorial style, high-fashion winter photography, emotional narrative, extreme color contrast, 8k raw photo.",
       "images": [
         "/images/custom_added_1775329400763_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -4811,6 +4874,9 @@
       "prompt": "Horizontal 16:9 cinematic continuous storyboard, realistic documentary style. Reference Image 1 for character spatial relationship, position, and style; Reference Image 2 for character appearance. This prompt includes four specific frame instructions:\n\nPanel 1 (Side Profile Close-up): Focus on the facial features (platinum blonde hair, green eyes) of the character from Image 2 reading in bed, referencing Image 1. Apply background blur and retain the cool-toned lighting from Image 1.\n\nPanel 2 (Reading Back View): Recreate the action of “lying on the bed reading” from Image 1, but use the clothing of the character from Image 2, emphasizing the cherry blossom season outside the window.\n\nPanel 3 (Medium Shot Low Angle): Reference Image 1 for the action position. This is a highly dramatic perspective, reflecting the narrowness of the room and the spatial relationship of the character, highlighting details of the bookshelf and poster wall.\n\nPanel 4 (Full View/Fisheye): Add a wide-angle shot (referencing the perspective of Image 1) to establish the overall environment and set the mood of “staying home on a snowy day.”",
       "images": [
         "/images/custom_added_1775329459578_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -4888,6 +4954,9 @@
       "prompt": "Inspired by leaf-cutout art, delicately depict a fisherman casting a line into a serene lake through intricate hollow cutouts on a single, complete green leaf. All elements are organically connected by thin natural veins, ensuring no isolated or floating segments. The leaf surface has a glossy, wet appearance with tiny sparkling water droplets. Soft sunlight gently illuminates the leaf, creating subtle highlights and shadows. Background features a softly blurred lakeside landscape, providing a calm, peaceful atmosphere, captured in ultra-detailed 8K resolution for macro-level realism. Dynamic effect: drifting dandelion fluff gently floating through the air.",
       "images": [
         "/images/custom_added_1775330197096_img0.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -4924,6 +4993,9 @@
       "prompt": "\"intent\": \"Photorealistic documentation of a specific chalkboard art piece...\"",
       "images": [
         "/images/custom_added_1775330727316_img0.jpg"
+      ],
+      "cats": [
+        "custom_1777207875436"
       ]
     },
     {
@@ -4947,6 +5019,9 @@
       "prompt": "A commercial grade photograph of [uploaed reference image] posing inside a high-end museum exhibition space...",
       "images": [
         "/images/custom_added_1775330983701_img0.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -4957,6 +5032,9 @@
       "prompt": "A photo of a glossy magazine cover, the cover has the large bold words \"Nano Banana Pro\"",
       "images": [
         "/images/custom_added_1775331023815_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -5032,6 +5110,9 @@
       "prompt": "{\"image_prompt_structure\":{\"style_and_atmosphere\":{\"aesthetic\":\"Dark, grainy vintage film look (e.g., Kodak Portra 800)\",\"mood\":\"Dreamy, melancholic, blurry, atmospheric\",\"effects\":\"Heavy motion blur due to movement and wind, soft focus\"},\"subject\":{\"identity_instruction\":\"Crucial: Do not alter facial features from reference identity.\",\"appearance\":{\"hair\":\"Long, wavy brown hair, heavily blown about by the wind\"},\"attire\":\"Off-shoulder white knitted top\"},\"action_and_pose\":{\"description\":\"Subject is leaning their upper back backwards out of an open car window while the car is moving.\"},\"setting\":{\"location\":\"Passenger seat window of a vintage car\",\"time\":\"Night\",\"background\":\"Completely blurred streaks of dark city or road lights\"},\"lighting\":{\"description\":\"Low light, likely illuminated by a warm, soft vintage camera flash mixed with ambient streaking streetlights.\"}}}",
       "images": [
         "/images/custom_added_1775331633122_img0.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -5055,6 +5136,9 @@
       "prompt": "{\"character\":{\"identity\":\"rugged male wanderer\",\"age_range\":\"mid to late 30s\",\"face\":{\"keep_original\":true,\"weathering\":\"sun-worn skin, dirt streaks, natural roughness\",\"expression\":\"alert, scanning surroundings, fatigue visible\"},\"hair\":{\"color\":\"salt + pepper\",\"style\":\"untamed, beard untrimmed\"},\"outfit\":{\"upper\":{\"layers\":\"distressed plaid flannel under worn denim jacket\",\"tones\":\"faded reds + blues\"},\"lower\":{\"type\":\"heavy jeans\",\"condition\":\"dark grey, dirt-caked knees\"}}},\"gear\":{\"backpack\":{\"style\":\"large survival pack\",\"color\":\"olive green\"}},\"environment\":{\"location\":\"nature-reclaimed urban district\",\"details\":[\"abandoned vehicles pushed aside\",\"plant growth bursting through road fractures\"],\"atmosphere\":\"stillness, overgrown melancholy\",\"lighting\":\"soft cloud-covered daylight\"},\"camera\":{\"style\":\"cinematic realism\",\"lens\":\"35mm wide\",\"framing\":\"full-body, diagonal walk direction\",\"ratio\":\"16:9\"}}",
       "images": [
         "/images/custom_added_1775331712606_img0.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -5088,6 +5172,9 @@
       "prompt": "{\"intent\":\"Generate a photorealistic, high-fidelity smartphone photograph simulating a raw night-time capture at a bustling Asian night market.\",\"subject\":{\"attire\":\"Vivid royal blue satin deep-V crop top with a front tie/knot detail...\",\"pose\":\"Seated at a table, facing the camera directly. Right hand holding a clear plastic cup...\"},\"environment\":{\"location\":\"Semi-outdoor night market dining tent.\",\"background\":\"White canopy tent structure visible above...\"},\"lighting\":{\"style\":\"Direct on-camera smartphone flash simulation.\"},\"camera\":{\"aesthetic\":\"Mobile photography, Apple iPhone 16 Pro Max simulation.\"}}",
       "images": [
         "/images/custom_added_1775331916971_img0.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -5098,6 +5185,9 @@
       "prompt": "A top-down perspective of a young man lying on a clean white floor, styled in a classic 90s outfit: a loose graphic tee, light-washed denim jeans, chunky sneakers, and over-ear retro headphones. He holds a portable cassette player in one hand, the tape slightly exposed. Scattered around him are colorful vinyl records, chunky old CRT televisions, and vintage electronics, arranged with clear spacing to create a nostalgic 90s atmosphere.",
       "images": [
         "/images/custom_added_1775332040436_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -5108,6 +5198,9 @@
       "prompt": "{\"scene\":{\"subject\":{\"pose\":\"Sitting on the floor, facing forward\",\"expression\":\"Slightly serious or pensive, direct eye contact\",\"apparel\":{\"top\":\"Off-white or cream tank top with small dark cherry embroidery\",\"bottom\":\"Distressed denim shorts\"}},\"action\":{\"right_hand\":\"Holding up a Coca-Cola can\"},\"environment\":{\"main_fixture\":\"Open, retro-style refrigerator\",\"fridge_contents\":[\"Coca-Cola cans\",\"Ramune bottles\"]},\"style_and_mood\":{\"lighting\":\"Warm, slightly muted\",\"aesthetic\":\"Cool, casual, retro\",\"theme\":\"Beverage focus\"}}}",
       "images": [
         "/images/custom_added_1775332074370_img0.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -5196,6 +5289,9 @@
       "prompt": "A close-up, euphoric concert photograph taken from the front row captures a world-famous pop icon in her 30s radiant on a glittering arena stage. She has wavy blonde hair, red lipstick, and is wearing a sparkling silver sequined bodysuit, passionately playing a rhinestone-covered acoustic guitar.",
       "images": [
         "/images/custom_added_1775332535360_img0.jpg"
+      ],
+      "cats": [
+        "celebrities"
       ]
     },
     {
@@ -5245,6 +5341,9 @@
       "prompt": "{\"Scene_Details\":{\"Setting\":\"Vast English landscape with rolling golden-brown hills.\",\"Atmosphere\":\"Moody and atmospheric with dark, brooding clouds.\"},\"Character_Details\":{\"Description\":\"Lone man walking through the landscape.\",\"Clothing\":\"Long, dark medieval-style cloak or hooded coat.\"},\"Stylistic_Instructions\":{\"Tone\":\"Cinematic, dramatic, solitary.\",\"Color_Grade\":\"Earthy ochres and cool greys.\"}}",
       "images": [
         "/images/custom_added_1775332738232_img0.jpg"
+      ],
+      "cats": [
+        "fantasy"
       ]
     },
     {
@@ -5294,6 +5393,9 @@
       "prompt": "Create a storyboard from the uploaded image, highlighting key moments and transitions with cinematic angles, camera movements, and framing that capture the scene's mood and narrative flow.",
       "images": [
         "/images/custom_added_1775333008591_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -5304,6 +5406,9 @@
       "prompt": "{\n  \"scene_description\": \"A vibrant, mixed-media masterpiece featuring a photorealistic version of the person...\",\n  \"illustration_layer\": { \"style\": \"Thick-line Pop Art cartoons\" }\n}",
       "images": [
         "/images/custom_added_1775333047339_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -5340,6 +5445,9 @@
       "prompt": "{\"Objective\":\"Transform the user's descriptive scene prompt into a structured JSON format...\",\"Persona_Details\":{\"Character\":\"Man wearing glasses\",\"Clothing\":{\"Outerwear\":\"Orange winter clothing\",\"Footwear\":\"Dark red and black ice boots\"},\"Behavior\":\"Ice fishing with a research-focused approach\"},\"Environment_Details\":{\"Setting\":\"Frozen ice pond\",\"Tent_Color\":\"Light brown\",\"Sky\":\"White, cloudy, heavy atmosphere\",\"Scene_Composition\":{\"Subject_Position\":\"Slightly right of center\",\"Purpose\":\"Emphasize ice landscape\"}},\"Objects_and_Props\":{\"Ice_Fishing_Equipment\":[\"Black front cover\",\"Fishing tools\"],\"Observed_Items\":[\"Small objects placed near the tent entrance\"]},\"Technical_Attributes\":{\"Style\":\"High-resolution realism\",\"Resolution\":\"4K\",\"Detail_Emphasis\":[\"Folds of tent fabric\",\"Texture of the ice\"]}}",
       "images": [
         "/images/custom_added_1775333414809_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -5350,6 +5458,9 @@
       "prompt": "{\"Objective\":\"Transform the user's descriptive scene prompt into a structured JSON format...\",\"Persona_Details\":{\"Character\":\"Man wearing glasses\",\"Clothing\":{\"Outerwear\":\"Orange winter clothing\",\"Footwear\":\"Dark red and black ice boots\"},\"Behavior\":\"Ice fishing with a research-focused approach\"},\"Environment_Details\":{\"Setting\":\"Frozen ice pond\",\"Tent_Color\":\"Light brown\",\"Sky\":\"White, cloudy, heavy atmosphere\",\"Scene_Composition\":{\"Subject_Position\":\"Slightly right of center\",\"Purpose\":\"Emphasize ice landscape\"}},\"Objects_and_Props\":{\"Ice_Fishing_Equipment\":[\"Black front cover\",\"Fishing tools\"],\"Observed_Items\":[\"Small objects placed near the tent entrance\"]},\"Technical_Attributes\":{\"Style\":\"High-resolution realism\",\"Resolution\":\"4K\",\"Detail_Emphasis\":[\"Folds of tent fabric\",\"Texture of the ice\"]}}",
       "images": [
         "/images/custom_added_1775333454287_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -5360,6 +5471,9 @@
       "prompt": "Show the behind the scenes view of this movie set of this exact scene. Keeping the characters in position, but showing the technical equipment, lighting, and ambient motion of the crew. Denoise and crisp the image.",
       "images": [
         "/images/custom_added_1775333488877_img0.jpg"
+      ],
+      "cats": [
+        "celebrities"
       ]
     },
     {
@@ -5370,6 +5484,9 @@
       "prompt": "Recreate the person from [Image1] in four different camera perspectives. Keep the subject’s identity, body proportions, and clothing consistent across all four images.",
       "images": [
         "/images/custom_added_1775333527214_img0.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -5380,6 +5497,9 @@
       "prompt": "{\"label\":\"direct-flash-gamer-girl\",\"tags\":[\"direct-flash\",\"retro-gamer-room\",\"90s-photography\"],\"Subject\":[\"young woman in her early 20s... seated cross-legged on a couch, holding a game controller\"],\"Lighting\":\"strong direct on-camera flash aimed straight at the subject... ambient tungsten lamp in the background\",\"Mood\":\"intimate, playful, nostalgic, confidently casual with a strong gamer-at-home vibe\"}",
       "images": [
         "/images/custom_added_1775333663742_img0.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -5400,6 +5520,9 @@
       "prompt": "{\"camera\":{\"lens\":\"ultra_wide_fisheye_12mm\",\"distortion\":\"strong_exaggeration\"},\"subject\":{\"pose\":\"leaning_forward_sipping_drink\",\"clothing\":{\"top\":\"bright_green_knit_sweater\",\"accessory\":\"chunky_blue_sunglasses\"}},\"drink\":{\"type\":\"iced_matcha_latte\"},\"composition\":{\"focus\":\"face_extreme_closeup\",\"mood\":\"funny_intimate_casual\"}}",
       "images": [
         "/images/custom_added_1775333769897_img0.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -7439,6 +7562,9 @@
       "prompt": "{\n  \"scene\": {\n    \"type\": \"extreme_environment_selfie\",\n    \"location\": \"offshore oil rig during violent storm\",\n    \"description\": \"partially damaged oil rig platform surrounded by massive dark ocean waves, heavy rain and wind, dramatic industrial setting\"\n  },\n\n  \"subject\": {\n    \"reference\": \"@input_image\",\n    \"identity_lock\": true,\n    \"face\": {\n      \"preserve_exact_features\": true,\n      \"natural_skin_texture\": true,\n      \"no_age_modification\": true,\n      \"no_beautification\": true\n    },\n    \"expression\": \"calm and composed, slight natural curiosity\",\n    \"hair\": {\n      \"behavior\": \"wind-blown, reacting naturally to storm\",\n      \"no_style_change\": true\n    },\n    \"clothing\": {\n      \"type\": \"realistic waterproof jacket or hoodie\",\n      \"behavior\": \"wet, slightly moving in wind\",\n      \"fit\": \"appropriate for child\"\n    }\n  },\n\n  \"camera\": {\n    \"type\": \"smartphone selfie\",\n    \"lens\": \"26mm wide-angle\",\n    \"angle\": \"eye-level, arm-length\",\n    \"framing\": \"4:5 vertical\",\n    \"distortion\": \"slight edge distortion like real phone\",\n    \"focus\": \"sharp on face\"\n  },\n\n  \"lighting\": {\n    \"environment\": \"overcast storm light\",\n    \"tones\": \"cold gray and slate\",\n    \"secondary\": \"subtle orange industrial lights reflecting on wet metal\",\n    \"effects\": \"rain, mist, salt spray catching light\"\n  },\n\n  \"environment_details\": {\n    \"elements\": [\n      \"massive waves crashing\",\n      \"wet steel beams\",\n      \"rust, peeling paint\",\n      \"warning stripes\",\n      \"industrial cables\",\n      \"rotating hazard lights in fog\"\n    ],\n    \"depth\": \"strong atmospheric depth with fading ocean background\"\n  },\n\n  \"style\": {\n    \"photorealistic\": true,\n    \"cinematic\": true,\n    \"camera_simulation\": \"Sony A7R V\",\n    \"settings\": {\n      \"aperture\": \"f/4\",\n      \"shutter\": \"1/1600\",\n      \"ISO\": 640\n    },\n    \"details\": [\n      \"visible pores\",\n      \"realistic iris detail\",\n      \"fine hair strands\",\n      \"wet fabric texture\",\n      \"subtle sensor grain\",\n      \"slight chromatic aberration\"\n    ]\n  },\n\n  \"composition\": {\n    \"subject_dominant\": true,\n    \"leading_lines\": \"metal beams and catwalks\",\n    \"asymmetry\": \"open ocean in background\",\n    \"clean_frame\": true\n  },\n\n  \"negative_prompt\": [\n    \"no text\",\n    \"no watermark\",\n    \"no logos\",\n    \"no duplicated labels\",\n    \"no age estimation text\",\n    \"no extra fingers\",\n    \"no distorted hands\",\n    \"no warped anatomy\",\n    \"no duplicate limbs\",\n    \"no cartoon style\",\n    \"no plastic skin\",\n    \"no low resolution\",\n    \"no clutter\",\n    \"no gore\",\n    \"no injury\",\n    \"no panic\"\n  ]\n}",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0187.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -7599,6 +7725,9 @@
       "prompt": "a vibrant pop-art illustration of a stylish woman in a dynamic pose | bold orange background with black polka dots over a white graphic layer | collage-style composition with torn magazine cutouts, retro textures, and quirky comic-style speech bubbles | exaggerated movement and playful expression | vivid daylight illumination with crisp shadows | bright, saturated color palette mimicking a photo taken with a Canon EOS R5 and 35mm f/1.8 lens | fun, high-energy atmosphere with bold outlines and vintage flair --ar 3:4 --v 7.0 --raw ",
       "images": [
         "images/imp_0202.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -7619,6 +7748,10 @@
       "prompt": "A 1/7 scale commercialized collectible figure of the character from the photo, crafted in a highly realistic style. The figure is placed in a detailed beach environment with sand, seashells, and gentle ocean waves. The entire toy display is enclosed inside a clear souvenir glass bottle, giving it a premium miniature diorama look, with realistic lighting and shadows",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0204.jpg"
+      ],
+      "cats": [
+        "custom_1777209981017",
+        "products"
       ]
     },
     {
@@ -7789,6 +7922,9 @@
       "prompt": "An avant-garde contemporary art exhibition space themed around the reference image.\nThe entire exhibition hall (20.0 m x 20.0 m x 8.0 m) integrates architecture, lighting, flooring, walls, \nand ceiling into the artistic expression.\n\nAt the far end of the hall stands a massive wall 20 meters wide and 8 meters high.\nIn the center of this wall, the theme from the reference image is presented in a monumental artistic form.\nThe image is vivid and three-dimensional, rising toward the viewer, becoming the focal point of the entire space.\n\nA system-generated exhibition title plaque is installed below the central wall.\nThe title must be abstract, symbolic, and poetic, and must reflect a contemporary artwork.\nNo price display is provided.\n\nThe floor is polished granite with a reflectance of 0.35–0.40.\nPatterns and light derived from the reference image cascade across the surface of the work,\nresonating with the entire space as if responding to the footsteps of visitors.\nTactile paving bricks are in a similar color, seamlessly integrated, but only 5 mm high, providing a clear texture.\nThe work extends in a straight line from the entrance to the wall, creating a pause point before the artwork.\nAfter viewing, visitors are naturally guided to an opening on the right side (3 m wide x 3 m high).\nIn emergencies, floor-level emergency lighting ensures illumination of 1 lux.\n\nThe left and right walls and the ceiling each reinterpret an abstract element from the reference image,\ntransforming the entire space into a single artwork.\nThe flow of color, form, and light unifies the experience into an artistic whole.\n\nVisitor capacity is limited to 8–25 people.\nAll visitors face the large wall, moving in a straight line and pausing at the designated point.\nNo one looks back toward the entrance.\nOnly one staff member is stationed near the right-side entrance beside the wall.\nAll faces are blurred to ensure anonymity.\n\nThe composition is stable, with the central vanishing point always aligned with the center of the wall.\nVerticality is within ±0.5°.\nFloor reflections are precise, human figures appear natural.\nHands always show five fingers, eyes are symmetrical within a 3% margin.\nFabrics remain flat with no deformation.\n\nForbidden content: Elements unrelated to the reference image, missing or broken tactile paving,\nvisitors facing the entrance, logos or watermarks, overcrowding, toy-like gloss, 2D flat projections,\nneon glow, teal-orange tones, oversaturation, perspective collapse, mismatched reflections,\nanatomical anomalies, extra limbs, distorted faces, excessive outlines, banding, or vignetting.\n\nDoD: The entire venue will be a contemporary artwork centered on the theme of the reference image,\nwith the innermost structure forming a unified experience.\nThe tactile paving synchronizes perfectly with the flow of light, creating a clear pause point.\nVisitors are immersed in the space itself, and even in reproduction, SSIM will remain stable at 0.95 or above.",
       "images": [
         "images/imp_0220.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -7822,6 +7958,9 @@
       "prompt": "Convert this person into a retro vintage grainy but bright image, black party-wear saree, 90s film aesthetic. She is standing against a solid, deep wall with dramatic shadows and contrast, creating a mysterious and artistic atmosphere. The environment feels windy and romanticised. Lighting is warm, with golden sunset tones evoking golden hour glow. The background is minimalist and slightly textured. Her expression is moody, calm, yet subtly happy and introspective",
       "images": [
         "/images/custom_added_imp_0223_img0.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -7965,6 +8104,9 @@
       "prompt": "Use the uploaded reference image as the absolute source for facial identity.\n\nCRITICAL IDENTITY LOCK:\nThe face must be a highly realistic, 1:1 reproduction of the person in the reference image. Maintain exact facial structure, skin texture, eye color, and natural expression. DO NOT apply caricature distortions to the facial features (no exaggerated eyes, no cartoonish nose, no over-plumped lips on the face itself). The realism of the face must contrast sharply with the exaggerated body.\n\nCONCEPT:\nCreate a humorous, over-the-top high-fashion caricature of a glamorous socialite, where the body is a caricature but the face remains hyper-realistic.\n\nCaricature Body & Proportions:\n\nNeck: Extremely elongated, elegant, and swan-like.\n\nTorso: Tiny, tapered \"wasp\" waist with dramatic, humorous proportions.\n\nSilhouette: Ultra-slim, tall, and gangly legs.\n\nPose: A smug, overly glamorous, red-carpet runway pose.\n\nOutfit & Accessories:\n\nA form-fitting, ultra-high-fashion designer suit with dramatic, cartoon-like proportions.\n\nGlossy, high-end dress shoes.\n\nOversized luxury sunglasses (pushed up or held to ensure the realistic face is visible).\n\nA tiny dog tucked inside an extravagant designer handbag.\n\nScene:\n\nA chaotic Red Carpet event.\n\nCharacter surrounded by bright, flashing paparazzi lights and popping bulbs.\n\nGlamorous, celebrity-obsessed atmosphere with high-gloss highlights and deep shadows.\n\nStyle:\n\nA \"Realistic Face on Caricature Body\" aesthetic.\n\nSharp, polished, fashion-editorial energy.\n\nVivid lighting and high-drama red-carpet sparkle.\n\nClean rendering with professional digital art finish.",
       "images": [
         "images/imp_0236.jpg"
+      ],
+      "cats": [
+        "animals"
       ]
     },
     {
@@ -8077,6 +8219,9 @@
       "prompt": "Create merchandise using this character image.",
       "images": [
         "images/imp_0246.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -8203,6 +8348,9 @@
       "prompt": "Please create a pose sheet for this illustration, making various poses!",
       "images": [
         "images/imp_0258.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -8336,6 +8484,9 @@
       "prompt": "Design comic convention booth \"Brill.ai\"  and exhibition space",
       "images": [
         "images/imp_0270.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -8376,6 +8527,9 @@
       "prompt": "Design comic convention booth and exhibition space",
       "images": [
         "images/imp_0274.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -8416,6 +8570,9 @@
       "prompt": "Create an addictively intriguing 12 part story with 12 images with these two characters in a classic black and white film noir detective story. Make it about missing treasure that they get clues for throughout and then finally discover. The story is thrilling throughout with emotional highs and lows and ending on a great twist and high note. Do not include any words or text on the images but tell the story purely through the imagery itself.",
       "images": [
         "/images/custom_added_imp_0278_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -8483,6 +8640,9 @@
       "prompt": "Tiny diorama shop for Brill.ai. Roof made of oversized \"Brill.ai\", big Brill.ai logo sign above the window, vendor handing a \"Brill.ai\" to a customer, ground covered with many \"Brill.ai\". Hand-made polymer-clay look, studio macro photo, soft light, shallow depth of field, vertical 3:4",
       "images": [
         "images/imp_0284.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -8550,6 +8710,9 @@
       "prompt": "Apply an artistic red–blue double-exposure effect using two poses of the same character. Keep the base layer as the original pose, and generate a second pose where character's head angle, facial direction, or expression is slightly different, as if captured a moment earlier or later. Color the second pose in red, the base pose in cyan, and offset the layers to create a clean ghosting effect. Preserve skin texture, tattoos, and contrast while keeping the background minimal.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0290.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -8734,6 +8897,9 @@
       "prompt": "{\n  \"task\": \"high_fashion_macro_eye_luxury\",\n  \"output\": {\n    \"type\": \"single_image\",\n    \"resolution\": \"ultra_hyper_realistic_8k\",\n    \"realism\": \"extreme_photographic_realism\",\n    \"skin_enhancement\": \"high_end_editorial_enhancement_preserving_real_texture\",\n    \"retouching\": \"luxury_beauty_retouch_not_ai_smooth\"\n  },\n  \"composition\": {\n    \"shot_type\": \"extreme_macro_close_up\",\n    \"camera_angle\": \"slightly_low_side_angle\",\n    \"framing\": \"tight_partial_eye_crop\",\n    \"focus\": \"razor_sharp_on_iris_and_sclera\",\n    \"depth_of_field\": \"ultra_shallow_macro_dof_with_soft_falloff\"\n  },\n  \"subject\": {\n    \"type\": \"human_eye\",\n    \"gender\": \"female\",\n    \"eye_position\": \"looking_upwards\",\n    \"skin\": {\n      \"texture\": \"real_skin_with_visible_pores_micro_details\",\n      \"enhancement\": \"clarity_boosted_not_plastic\",\n      \"finish\": \"clean_luminous_natural\"\n    },\n    \"eye_details\": {\n      \"eye_color\": \"intense_cool_hazel_with_blue_green_reflections\",\n      \"iris_detail\": \"highly_defined_fibers_and_radial_patterns\",\n      \"sclera\": \"clean_bright_off_white_realistic\",\n      \"capillaries\": {\n        \"visibility\": \"sharp_and_crisp\",\n        \"pattern\": \"organic_blood_vessels\"\n      },\n      \"moisture\": \"high_gloss_natural_tear_film\"\n    },\n    \"eyelashes\": {\n      \"detail\": \"ultra_defined_individual_strands\",\n      \"contrast\": \"slightly_emphasized\"\n    }\n  },\n  \"branding\": {\n    \"brand\": \"Adi Brill\",\n    \"logo_formation\": {\n      \"method\": \"capillaries_forming_prada_logo_inside_the_eye\",\n      \"integration\": \"biological_and_seamless\",\n      \"placement\": \"lower_sclera\",\n      \"visibility\": \"clearly_readable_but_organic\"\n    },\n    \"constraints\": [\n      \"no_text_overlay\",\n      \"no_graphic_logo\",\n      \"no_typography\"\n    ]\n  },\n  \"lighting\": {\n    \"type\": \"bright_high_fashion_macro\",\n    \"key_light\": \"large_softbox_front_high_intensity\",\n    \"fill_light\": \"clean_balanced_fill\",\n    \"rim_light\": \"subtle_cool_rim_on_lashes\",\n    \"exposure\": \"bright_but_not_overexposed\",\n    \"contrast\": \"clean_editorial_contrast\"\n  },\n  \"color_grading\": {\n    \"style\": \"cool_luxury_editorial\",\n    \"temperature\": \"cool_bias\",\n    \"saturation\": \"controlled_but_vibrant_eye_color\",\n    \"clarity\": \"high_microcontrast\",\n    \"grain\": \"very_fine_film_grain\"\n  },\n  \"quality_controls\": {\n    \"avoid\": [\n      \"cgi_eye\",\n      \"overly_smooth_skin\",\n      \"medical_clinical_look\",\n      \"flat_lighting\",\n      \"ai_symmetry\",\n      \"fake_color_banding\"\n    ]\n  }\n}",
       "images": [
         "images/imp_0307.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -9158,6 +9324,9 @@
       "prompt": "Rockabilly Pin-up /// Photorealistic, dark vintage, body view, extremely detailed Stunning sexy female rockabilly Pin-up with red lip and voluminous Victory Rolls haircut wearing white blouse with blue latex suit in V shape and Circle skirt, octane render, epic ambiant light, very dark lighting, extremely detailed face with eyes and iris, Grease style",
       "images": [
         "images/imp_0345.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -9234,6 +9403,9 @@
       "prompt": "CREATE Hyper-realistic, cinematic journey style image.\nMid-shot (half-body) focusing on a praying figure at the Western Wall plaza in Jerusalem at night, based on the provided reference image (male or female).\n\nThe figure is captured in a dynamic and expressive pose, with hands raised upwards towards the dark, slightly cloudy night sky in deep and heartfelt prayer. Eyes are open, filled with wonder, love, and spiritual transcendence.\n\nAttire should match the gender of the reference:\n- Male: elegant modern suit with a stylish kippah (and optional tallit).\n- Female: elegant and modest attire with an elegant head covering (mitpachat).\n\nSubtle ethereal atmospheric effects - soft mist, glowing light particles, and sacred rays of illumination - descend from the heavens, symbolizing the divine Shekhinah presence. A dramatic light display bursts through the clouds, bathing the scene in a holy cinematic glow.\n\nShot with RED V-Raptor, 50mm T1.4 cine lens, low-angle mid-shot, shallow depth of field.\nWarm highlights emphasize the praying figure against the cool-toned night plaza.\n\nKodak 5219 film emulation adds cinematic texture, grain, and atmospheric depth.\nThe overall mood conveys deep Jewish faith, spirituality, and a sublime sense of sacred connection.",
       "images": [
         "images/imp_0352.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -9267,6 +9439,9 @@
       "prompt": "CREATE a hyper-realistic blister pack containing four miniature figurines, each required to replicate the exact facial identity of the person in the uploaded reference image.\n\nUse the uploaded reference image as a strict facial identity source.\n\nCRITICAL IDENTITY LOCK:\nThe face must match the reference image exactly — identical facial structure, proportions, eye shape and color, eyelids, brow thickness, lips, nose shape, beard pattern, beard color, skin tone, micro-texture, smile characteristics, and every subtle facial detail. \nNo reinterpretation, no stylization, no aging or de-aging, no facial-hair changes, and no anatomical alterations. \nA perfect 1:1 facial reproduction is mandatory for all four figurines, even if clothing or body type varies. This facial identity lock is absolute.\n\nScene:\nA pharmaceutical-style blister pack partially pulled from a white box labeled “Friends – Contains: Social Contacts,” positioned on a soft pastel pink background.\n\nCamera:\nFull-frame digital camera, 85mm macro lens, ultra-sharp optics, top-down flat-lay composition, product photography style.\n\nLighting:\nSoft diffused studio lighting at 45 degrees, gentle shadows, realistic plastic reflections, accurate subsurface scattering on skin.\n\nMaterials & realism:\nHyper-detailed blister plastic, subtle micro-scratches, realistic cardboard texture on the packaging, perfect light refractions.\n\nFigurine design:\nFour miniature figurines with different outfits (e.g., casual black shirt, business attire, color variations) but with the exact same locked facial identity. \nSkin rendering includes micro-pores, natural shine, and photorealistic shading.\n\nCinematic & technical:\nShallow depth of field, crisp focus on the blister and faces, mild filmic halation, light grain simulation, high dynamic range, ultra-clean product photography finish.\n\nnano-banana optimized.\nRefer to the uploaded image as the required identity reference.",
       "images": [
         "/images/custom_added_imp_0355_img0.jpg"
+      ],
+      "cats": [
+        "custom_1777209981017"
       ]
     },
     {
@@ -9287,6 +9462,9 @@
       "prompt": "Inspired by leaf-cutout art, delicately depict a fisherman casting a line into a serene lake through intricate hollow cutouts on a single, complete green leaf. All elements are organically connected by thin natural veins, ensuring no isolated or floating segments. The leaf surface has a glossy, wet appearance with tiny sparkling water droplets. Soft sunlight gently illuminates the leaf, creating subtle highlights and shadows. Background features a softly blurred lakeside landscape, providing a calm, peaceful atmosphere, captured in ultra-detailed 8K resolution for macro-level realism. Dynamic effect: drifting dandelion fluff gently floating through the air.",
       "images": [
         "images/imp_0357.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -9376,6 +9554,9 @@
       "prompt": "Use the uploaded reference image as a strict facial identity source.\n\nCRITICAL IDENTITY LOCK:\nThe face must match the reference image exactly - identical facial structure, proportions, eyes, lips, nose, skin tone, texture, hairstyle, and micro-details.\nNo changes, no reinterpretation, no age shifts, no added or removed facial hair.\nA perfect 1:1 facial reproduction is mandatory.\nThis applies whether the character is interpreted as male or female.\n\nCREATE an authentic GTA V gameplay screenshot showing the player character facing the camera directly.\n\nScene Requirements:\n• The player character stands still on a Los Santos street.\n• The character’s BODY, clothing, proportions, and animation remain exactly like a normal GTA V player model.\n• The character turns fully toward the camera (180°), allowing a complete frontal view of the face.\n• Replace ONLY the face with the uploaded reference face using CRITICAL IDENTITY LOCK.\n• Integrate the face naturally with GTA V lighting, shadows, highlights, and color grading.\n• Maintain the hairstyle from the reference image.\n• No extra characters with the reference face. No floating faces.\n\nCamera:\n• Third-person frontal view (the player walks toward the camera or stands facing it directly).\n• Slight cinematic zoom typical of GTA V idle animations.\n• Keep depth of field and color palette strictly GTA V.\n\nHUD:\n• Include full GTA V gameplay UI:\n - Minimap in bottom-left\n - Health and armor bars\n - Weapon icon\n• Add a dynamic top-screen notification:\n “Objective Updated”\n (GTA V style, white text on dark UI box)\n\nEnvironment:\n• Daytime Los Santos street.\n• Cars, traffic, pedestrians (male NPCs only).\n• Realistic shadows consistent with GTA V sunlight.\n• No real-world logos, no cartoon style, no poster effects.\n\nFinal result:\nA fully authentic GTA V screenshot with ONLY the face replaced using perfect identity-locked accuracy, naturally integrated into the game world with a full frontal camera angle.",
       "images": [
         "images/imp_0365.jpg"
+      ],
+      "cats": [
+        "custom_1777209981017"
       ]
     },
     {
@@ -9409,6 +9590,10 @@
       "prompt": "Using the user-uploaded image as the primary visual reference, generate a cohesive 3×3 image grid (nine panels total).\n\nCORE CONCEPT:\nThe nine panels together form a short cinematic visual story.\nAll panels must depict the same character(s), environment, and universe established by the reference image.\nMaintain strict consistency in:\n- character identity (face, body, hairstyle)\n- clothing and accessories\n- art style and rendering quality\n- color palette and lighting logic\n\nSTORY STRUCTURE:\nThe grid should read naturally from left to right, top to bottom, like film storyboards or a manga page.\nEach panel represents a distinct moment, emotion, or action beat.\nThere should be a clear sense of progression, not repetition.\n\nPANEL DIRECTION (GUIDELINE):\n\n1. Anchor Frame – use the original uploaded image as-is, establishing character, style, and environment.\n2. Reframed Presence – same moment as Panel 1 but with a different crop or angle, showing posture or silhouette.\n3. Emotional Close-up – focus on face or key detail, highlighting expression or mood.\n4. Perspective Shift – side view, back view, or over-the-shoulder, showing subtle narrative progression.\n5. Key Moment – central narrative or emotional focal point of the story.\n6. Dynamic Action – character movement, interaction, or dynamic pose.\n7. Quiet Aftermath – calm moment after the action, reflection, or pause.\n8. World Detail – environment, objects, lighting, or atmosphere, may include partial character.\n9. Resolution / Open Ending – final emotional state or symbolic conclusion, leaving a lasting impression.\n\nCAMERA & COMPOSITION:\n- Vary camera angles (wide, medium, close-up, low-angle, top-down)\n- Use cinematic framing and depth of field\n- Avoid repeating identical compositions\n- Subtle changes in time, motion, or emotion across panels\n\nVISUAL QUALITY:\n- High detail, sharp focus\n- Cohesive cinematic lighting\n- Natural shadows and realistic or stylistically consistent materials\n- No text, no subtitles, no speech bubbles\n- No visible borders or frames between panels\n\nFINAL OUTPUT:\nA clean, evenly spaced 3×3 grid that feels like keyframes from a short film or a manga chapter.\nThe result should feel intentional, emotional, and story-driven.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0368.jpg"
+      ],
+      "cats": [
+        "custom_1777209981017",
+        "products"
       ]
     },
     {
@@ -9442,6 +9627,9 @@
       "prompt": "Using the character from Image 2, generate [x] emoji stickers based on various poses from Image 1.",
       "images": [
         "images/imp_0371.jpg"
+      ],
+      "cats": [
+        "custom_1777209981017"
       ]
     },
     {
@@ -9486,6 +9674,9 @@
       "prompt": "Generate the Front, Rear, Left, Right, Top, Bottom views on white. Evenly spaced. Consistent subject. Isometric Perspective Equivalence.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0375.jpg"
+      ],
+      "cats": [
+        "custom_1777207890896"
       ]
     },
     {
@@ -9695,6 +9886,9 @@
       "prompt": "A realistic photographic work. A gigantic statue of this person has been placed in a square in the center of Tokyo, with people looking up at it.",
       "images": [
         "images/imp_0395.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -9715,6 +9909,9 @@
       "prompt": "A scene where Tokyo Tower is occupied by a super gigantic woman. The surrounding buildings appear as small as toy models, while the woman is enormously large. The setting features a realistic city environment. The overall mood is quiet, warm, soothing, and cute.",
       "images": [
         "images/imp_0397.jpg"
+      ],
+      "cats": [
+        "custom_1777209981017"
       ]
     },
     {
@@ -9975,6 +10172,9 @@
       "prompt": "Create for me based on the reference image, a grid image divided into 9 parts, each part 16:9 in size. Each part has a different scene of the same face image. Eats different foods: apple, ice cream, hamburger, pizza, sandwich, drinks coffee, candy, pasta",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0420.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -10005,6 +10205,9 @@
       "prompt": "Prompt: {\n\"image_prompt\": {\n\"subject\": \"Top-down aerial view of a man (from the uploaded photo) wearing a quilted mountain parka, sitting in pristine snow holding a thermal coffee mug. Double exposure effect: His jacket and body silhouette showcase rolling alpine hills at dawn, wildflower meadows, mountain goats on rocky outcrops, and a winding mountain trail leading to a sunrise peak.\",\n\"composition\": \"Vertical 9:16. 60% Top: Subject with layered mountain landscape double exposure creating depth. 40% Bottom: Untouched powder snow with gentle terrain contours for clean calendar text area.\",\n\"lighting\": \"Warm sunrise alpenglow illuminating the silhouette from within, soft diffused daylight on surrounding snow, atmospheric haze adding depth layers.\",\n\"text_overlay\": {\n\"title\": \"2026 CALENDAR\",\n\"style\": \"Text embossed into weathered stone or carved into alpine wood, high-contrast typography with mountain texture.\",\n\"grid_data\": \"3x4 grid with subtle topographic line accents.\"\n},\n\"quality\": \"8K, Photorealistic, Razor-sharp detail on face and typography, Cinematic with enhanced atmospheric perspective.\"\n}\n}",
       "images": [
         "/images/custom_added_imp_0423_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -10198,6 +10401,9 @@
       "prompt": "A photorealistic image of a vintage 1980s CRT television set on a wooden entertainment center. Inside the TV screen, [person from attached photo] is watching a movie, holding a bowl of popcorn. A real hand from outside the TV reaches into the screen, grabbing a handful of popcorn from the bowl. Popcorn pieces dramatically scatter in 3D, breaking out of the screen boundary with realistic physics. Nostalgic warm lighting, VHS aesthetic with subtle scan lines, hyperrealistic, 4K.",
       "images": [
         "images/imp_0441.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -10238,6 +10444,9 @@
       "prompt": "Photorealistic pen tablet screen. Realistic first-person hand holding the pen tablet and pen.\nThe original image is reproduced on the pen tablet in an unfinished state. The line art has been extracted from the original image. Portions of the line art have been colored with the same coloring as the original image. Unfinished coloring. Must not be monochrome. About 70% of the coloring is done.\nClose-up. The pen tip is touching the tablet screen.",
       "images": [
         "images/imp_0445.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -10393,6 +10602,9 @@
       "prompt": "{\"intent\":\"Generate a photorealistic, high-fidelity smartphone photograph simulating a raw night-time capture at a bustling Asian night market.\",\"subject\":{\"attire\":\"Vivid royal blue satin deep-V crop top with a front tie/knot detail...\",\"pose\":\"Seated at a table, facing the camera directly. Right hand holding a clear plastic cup...\"},\"environment\":{\"location\":\"Semi-outdoor night market dining tent.\",\"background\":\"White canopy tent structure visible above...\"},\"lighting\":{\"style\":\"Direct on-camera smartphone flash simulation.\"},\"camera\":{\"aesthetic\":\"Mobile photography, Apple iPhone 16 Pro Max simulation.\"}}",
       "images": [
         "/images/custom_added_imp_0459_img0.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -10413,6 +10625,9 @@
       "prompt": "A close-up photograph of a middle-aged woman with dark hair and a serious, direct expression, standing in an ancient, moss-covered forest at night. She has distinctive glasses perched on her head, with lenses containing miniature, swirling galaxy patterns. strands of glowing starlight are intricately woven through her hair. She wears a black velvet robe adorned with embroidered gold hexagonal star motifs. Before her, her hands are open, cupping a powerful, active, swirling spiral galaxy vortex of vibrant blue and gold cosmic light. A fine network of glowing constellation-like lines emanates from the vortex, connecting to the starlight strands in her hair. She wears a simple silver ring on her right hand. The background features deep, dark tree trunks and a magnificent, expansive night sky with a visible Milky Way galaxy and multiple bright shooting stars (meteors). The lighting is dynamic, focusing intense cosmic light from the vortex onto her face and hands, contrasted with the deep natural light of the night forest.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0461.jpg"
+      ],
+      "cats": [
+        "fantasy"
       ]
     },
     {
@@ -10436,6 +10651,9 @@
       "prompt": "A close-up photorealistic image capturing a woman bursting out from a physical, folded newspaper spread across a rustic wooden table. The woman, identical to the one in image_9.png, with dark hair and a serious gaze, wearing a beige striped sweater, emerges from a ragged tear in the center of the paper, her body outside while the edges of the tear surround her. Surrounding the tear, generic newspaper sections with headlines are visible: a large crossword puzzle on the top-left, a sports article section (\"Sports news and more stories to read\") with a small athlete photo on the top-right. Yellow and black hand-drawn doodles are scribbled around the central area, including stars, exclamation points, and curved arrows. In the bottom-left corner, the connected 'Brill' logo and the text \"Alessandro di Maria\" and the line \"Instagram/TikTok alcexmej\" are preserved exactly. A realistic human hand with a yellow wooden pencil is in the upper-right corner, pointing toward the doodles. The composition is a medium overhead shot with natural lighting. All text content is replicated verbatim.",
       "images": [
         "/images/custom_added_imp_0463_img0.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -10456,6 +10674,9 @@
       "prompt": "A commercial grade photograph of [uploaed reference image] posing inside a high-end museum exhibition space...",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0465.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -10546,6 +10767,9 @@
       "prompt": "Transform the uploaded image into a handcrafted mosaic made entirely from broken matzo pieces arranged on a rustic wooden table. Reinterpret all visible elements from the original image as matzo fragments, using lighter pieces for highlights and slightly toasted darker pieces for shadows, contours, and details. The final result should look like the original image has been recreated as edible Passover food art laid flat on a wooden surface, with scattered matzo crumbs, broken pieces, flour dust, and a few whole matzo sheets around it. Photorealistic, warm natural lighting, top-down or slightly angled overhead view, ultra detailed textures, rustic editorial food photography.",
       "images": [
         "images/imp_0474.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -10629,6 +10853,9 @@
       "prompt": "A photorealistic 12-panel grid collage layout (3 columns x 4 rows) depicting the 24-hour daily routine of a trendy 24-year-old  beauty influencer named \"ADI\". Aspect ratio 3:4. Each panel is a high-quality snapshot. Cinematic, highly detailed, photorealistic, lifestyle photography.",
       "images": [
         "/images/custom_added_imp_0482_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -10649,6 +10876,9 @@
       "prompt": "{\n    \"generation_request\": {\n      \"meta_data\": { \"tool\": \"NanoBananaPro\", \"task_type\": \"photorealistic_multi_panel_grid\", \"version\": \"v1.0\" },\n      \"output_settings\": { \"layout\": { \"type\": \"2x2_grid\", \"border\": \"thin_white_gutter\", \"frame_consistency_rule\": \"same_person_same_outfit\" }, \"aspect_ratio\": \"4:5\", \"resolution\": \"ultra_high_res\", \"render_style\": \"flash_pop_color\" },\n      \"reference_constraints\": { \"character_reference_image\": \"{argument name=\"character reference image\" default=\"UPLOAD_REF_IMAGE\"}\", \"use_reference_face_only\": true, \"identity_lock\": true, \"strict_face_match\": true },\n      \"global_prompt\": {\n        \"scene\": \"American Diner, retro 50s style. Red leather booths, checkerboard floor, neon sign outside window.\",\n        \"subject\": {\n          \"type\": \"influencer\",\n          \"identity\": \"same person as reference image\",\n          \"hair\": \"high pigtails with ribbons\",\n          \"makeup\": \"winged liner, freckles\",\n          \"outfit\": \"cropped ringer tee, denim shorts, knee high socks, converse\",\n          \"prop\": \"strawberry milkshake with two straws and cherry\"\n        },\n        \"camera\": { \"capture\": \"retro flash\", \"lens_equivalent\": \"35mm\", \"focus\": \"subject\", \"depth_of_field\": \"sharp\" }\n      },\n      \"frames\": [\n        { \"frame_id\": \"A\", \"position\": \"top_left\", \"shot_type\": \"sipping_milkshake\", \"pose\": \"Sipping milkshake aggressively, looking up at camera under lashes.\", \"expression\": \"playful, innocent\" },\n        { \"frame_id\": \"B\", \"position\": \"top_right\", \"shot_type\": \"cherry_bite\", \"pose\": \"Holding the cherry by the stem near mouth.\", \"expression\": \"seductive, fun\" },\n        { \"frame_id\": \"C\", \"position\": \"bottom_left\", \"shot_type\": \"booth_knees\", \"pose\": \"Kneeling on the booth seat, looking out the window.\", \"expression\": \"bored, waiting\" },\n        { \"frame_id\": \"D\", \"position\": \"bottom_right\", \"shot_type\": \"messy_face\", \"pose\": \"Swipe of whipped cream on nose, laughing.\", \"expression\": \"goofy\" }\n      ]\n    }\n  }",
       "images": [
         "images/imp_0484.jpg"
+      ],
+      "cats": [
+        "custom_1777207890896"
       ]
     },
     {
@@ -10748,6 +10978,9 @@
       "prompt": "A low-resolution digital photo taken on a 2005 Sony CyberShot. A group of Japanese teenagers hanging out in a Shibuya mall food court in Tokyo. Harsh on-camera flash, slightly blown-out highlights, digital noise in the shadows. The skin texture looks slightly waxy due to early digital processing. An orange date stamp appears in the bottom right corner reading '18/01/2005'. Candid, awkward angles, Mixi photo aesthetic.",
       "images": [
         "images/imp_0493.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -10771,6 +11004,9 @@
       "prompt": "A kinetic sand sculpture of a person, fine-grain texture and flowing edges, caught mid-collapse, ambient natural lighting, soft tones of warm beige, soft terracotta, and pale sand, photographed in a windswept coastal blue setting.",
       "images": [
         "/images/custom_added_imp_0495_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -10831,6 +11067,10 @@
       "prompt": "create a hyper-realistic composite image of a LABUBU-style collectible figure inside a branded 3D toy box.\n\n Use the exact real human face from the uploaded photo, preserving all lighting, texture, and expression exactly as captured. Do not modify or stylize the face in any way.\n The figure has fluffy fur in [FUR COLOR].\n Maintain strong visual contrast between the hyper-realistic human face and the illustrated LABUBU-style body.\n The body holds a small yellow rubber duck.\n The ears are fully covered by the fur.\n The box design follows these specifications precisely:\n\n   White vertical 3D toy box with visible perspective.\n   Transparent front window showing the full figure.\n   Top section: “LABUBU!” in bold white on dark blue strip, white circle with “01” top-right.\n   Bottom section: purple banner with \"ADI BRILL\" in uppercase black letters.\n   Inside background gradient orange → blue.\n   Small round sticker bottom-left with text “Brill.ai.”\n The box rests on a clean light wooden table with soft natural shadows.\n Cinematic studio lighting, subtle reflections, and professional product photography look.\n The final image should look like a premium, physical collectible photographed in a real studio, highlighting the contrast between realism and fantasy.",
       "images": [
         "images/imp_0501.jpg"
+      ],
+      "cats": [
+        "celebrities",
+        "custom_1777209981017"
       ]
     },
     {
@@ -10938,6 +11178,9 @@
       "prompt": "Make this object transparent.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0511.jpg"
+      ],
+      "cats": [
+        "custom_1777207875436"
       ]
     },
     {
@@ -10997,6 +11240,9 @@
       "prompt": "A man is standing in a modern electronics store analyzing a digital camera. He is wearing a watch. On the table in front of him are sunglasses, headphones on a stand, a helmet, and a white sneaker. Use the labeled collage as a reference for all items. Style: realistic commercial photography.\n",
       "images": [
         "images/imp_0516.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -11017,6 +11263,9 @@
       "prompt": "A daring man in all-black streetwear climbs the side of a tall rusted metal bridge tower high above a busy highway. , black beanie, gloves, . Cold misty air surrounds him as he exhales smoke from a cigar, creating a dramatic vapor trail. The scene is set on a gloomy overcast day, with a fog-covered city skyline and a wide river in the background. Cars with headlights on move along the highway far below, adding depth and scale. Moody teal-and-orange tones, realistic textures, gritty urban atmosphere, shallow depth of field, 85mm lens, cinematic contrast, hyper-realistic detail, action-thriller poster style.",
       "images": [
         "images/imp_0518.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -11288,6 +11537,9 @@
       "prompt": "{\"Objective\":\"Transform the user's descriptive scene prompt into a structured JSON format...\",\"Persona_Details\":{\"Character\":\"Man wearing glasses\",\"Clothing\":{\"Outerwear\":\"Orange winter clothing\",\"Footwear\":\"Dark red and black ice boots\"},\"Behavior\":\"Ice fishing with a research-focused approach\"},\"Environment_Details\":{\"Setting\":\"Frozen ice pond\",\"Tent_Color\":\"Light brown\",\"Sky\":\"White, cloudy, heavy atmosphere\",\"Scene_Composition\":{\"Subject_Position\":\"Slightly right of center\",\"Purpose\":\"Emphasize ice landscape\"}},\"Objects_and_Props\":{\"Ice_Fishing_Equipment\":[\"Black front cover\",\"Fishing tools\"],\"Observed_Items\":[\"Small objects placed near the tent entrance\"]},\"Technical_Attributes\":{\"Style\":\"High-resolution realism\",\"Resolution\":\"4K\",\"Detail_Emphasis\":[\"Folds of tent fabric\",\"Texture of the ice\"]}}",
       "images": [
         "images/imp_0543.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -11331,6 +11583,9 @@
       "prompt": "Use the person in the uploaded image. Do not change or alter the face, bone structure, gender, age, skin tone, hairstyle, or identity. Keep the same hair length and style exactly as in the uploaded photo.\nPose: Head slightly tilted downward, eyes looking directly into the camera, creating a strong, mysterious expression.\nClothing: A black high-neck sweater. One hand casually touching or lightly adjusting the collar (not covering the mouth). The face remains mostly visible, only a subtle gesture with the hand near the collar.\nLighting & Background: Warm, soft studio lighting with a gentle shadow on one side of the face. Dark red background, plain, uniform, no patterns. Slight background blur, delicate film grain, and soft vignette on the edges.\nFraming: Chest-up portrait, subject centered in the frame.\nRendering Style: Photorealistic, high resolution, natural realistic skin texture, no beautification, preserve real facial details and identity.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0547.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -11341,6 +11596,9 @@
       "prompt": "Replace the man's face with the exact face from my uploaded photo. Use my real facial features 100% precisely: same eyes, nose, mouth, jawline, skin tone, hair color and hairstyle as in my photo. Do not change or stylize my face at all.\n\nThe person (me, with my real face from the photo) is a young man sitting in the open door of a white convertible car on a chaotic New York city street. He’s wearing a white slightly torn button-down shirt, black ripped jeans, and white sneakers. He’s holding a black pistol aimed forward with a serious, determined expression. Dynamic low-angle shot. Background: explosions, thick smoke, fire, shattered glass, abandoned cars, sparks flying near the car wheels. Warm dramatic lighting from the explosions, highly realistic action movie style, photorealistic, ultra-detailed, cinematic.",
       "images": [
         "images/imp_0548.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -11451,6 +11709,9 @@
       "prompt": "Create a high-definition cinematic image of a vintage royal scene. The main character sits comfortably in an elegant gilded armchair in a lavish royal interior. {DOG_BREED} sits alertly beside the chair, matching the overall composition and perspective of the original reference image. Use the uploaded image as the sole source of the character's identity: preserve the face, age, skin tone, hairline, and proportions exactly as they are, without any changes to facial features or anatomy, regardless of gender or age. The character wears a finely tailored, double-breasted suit in a dark wool blend with a subtle striped pattern, white socks, and polished black leather shoes with laces, fitting naturally to their body shape. Soft ambient lighting, warm classic color gradations with shades of brown, muted gold, and gray, sophisticated cinematic tones, polished contrast, and fine film grain. Realistic 8K picture quality.\nMake sure to replace {DOG_BREED} with the user's answer before submitting.\nNegative comments: distortions, facial changes, extra limbs, malfunctions, unrealistic anatomy, inappropriate clothing, incorrect costume details, marks, low resolution, blurred face.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0558.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -11471,6 +11732,9 @@
       "prompt": "Create a high-definition cinematic image of a vintage royal scene. The main character sits comfortably in an elegant gilded armchair in a lavish royal interior. {DOG_BREED} sits alertly beside the chair, matching the overall composition and perspective of the original reference image. Use the uploaded image as the sole source of the character's identity: preserve the face, age, skin tone, hairline, and proportions exactly as they are, without any changes to facial features or anatomy, regardless of gender or age. The character wears a finely tailored, double-breasted suit in a dark wool blend with a subtle striped pattern, white socks, and polished black leather shoes with laces, fitting naturally to their body shape. Soft ambient lighting, warm classic color gradations with shades of brown, muted gold, and gray, sophisticated cinematic tones, polished contrast, and fine film grain. Realistic 8K picture quality.\nMake sure to replace {DOG_BREED} with the user's answer before submitting.\nNegative comments: distortions, facial changes, extra limbs, malfunctions, unrealistic anatomy, inappropriate clothing, incorrect costume details, marks, low resolution, blurred face.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0560.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -11491,6 +11755,9 @@
       "prompt": "Create A dynamic, candid-style photo in a dimly lit, rustic tavern. A character beasd on the picture I attached here, with facial features and hairstyle faithfully preserved from the input image, is laughing exuberantly, arm around a companion, raising a beer mug. Beside him, a highly realistic Darth Vader in full costume with red glowing eyes that looks evil also holds a beer mug. A strong star-like lens flare emanates from Vader's helmet, The background and scene takes place in an Irish bar with happy people around drinking a lot.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0562.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -11560,6 +11827,9 @@
       "prompt": "Create a photorealistic image of a man (use the provided image for accurate facial features) wearing all-white clothing—a linen shirt and light trousers—floating serenely in the lotus position on the calm surface of a body of water. The man's eyes are closed, in a state of meditation and tranquility, with a serene and balanced expression. Below him, a gentle circular ripple forms in the water, as if the air around him is gently touching the surface. The perfect reflection of the man and the sky appears in the body of water. The setting is natural and harmonious, with gentle mountains in the background and a golden late-afternoon sky dotted with scattered clouds illuminated by the soft light of sunset. The atmosphere should convey peace, balance, and spirituality. Warm natural lighting, photographic realism, sharp focus, and balanced composition.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0568.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -11805,6 +12075,9 @@
       "prompt": "Prompt: {\n\"image_prompt\": {\n\"subject\": \"Top-down aerial view of a man (from the uploaded photo) wearing a quilted mountain parka, sitting in pristine snow holding a thermal coffee mug. Double exposure effect: His jacket and body silhouette showcase rolling alpine hills at dawn, wildflower meadows, mountain goats on rocky outcrops, and a winding mountain trail leading to a sunrise peak.\",\n\"composition\": \"Vertical 9:16. 60% Top: Subject with layered mountain landscape double exposure creating depth. 40% Bottom: Untouched powder snow with gentle terrain contours for clean calendar text area.\",\n\"lighting\": \"Warm sunrise alpenglow illuminating the silhouette from within, soft diffused daylight on surrounding snow, atmospheric haze adding depth layers.\",\n\"text_overlay\": {\n\"title\": \"2026 CALENDAR\",\n\"style\": \"Text embossed into weathered stone or carved into alpine wood, high-contrast typography with mountain texture.\",\n\"grid_data\": \"3x4 grid with subtle topographic line accents.\"\n},\n\"quality\": \"8K, Photorealistic, Razor-sharp detail on face and typography, Cinematic with enhanced atmospheric perspective.\"\n}\n}",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0590.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -11848,6 +12121,9 @@
       "prompt": "Depict me (use my face exactly as in the uploaded photo) sitting on a flying drone with my legs fully dangling, laughing and looking at the camera while holding a steaming cup of hot coffee. Keep my hairstyle, glasses, and facial details 100% accurate. Outfit: beige overcoat layered over a black knit sweater, slim-fit trousers, and sleek shoes.\n\nThe drone hovers over an Indonesian urban cityscape with tall buildings and roads below.\n\nUltra-realistic style, soft natural lighting, DSLR quality, highly detailed textures on skin, hair, clothing, and the coffee cup.\n\nCinematic aerial perspective, vertical 9:16 composition, dynamic yet balanced framing, emphasizing the drone and the joyful coffee moment with freely hanging legs",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0594.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -12011,6 +12287,9 @@
       "prompt": "{\"Scene_Details\":{\"Setting\":\"Vast English landscape with rolling golden-brown hills.\",\"Atmosphere\":\"Moody and atmospheric with dark, brooding clouds.\"},\"Character_Details\":{\"Description\":\"Lone man walking through the landscape.\",\"Clothing\":\"Long, dark medieval-style cloak or hooded coat.\"},\"Stylistic_Instructions\":{\"Tone\":\"Cinematic, dramatic, solitary.\",\"Color_Grade\":\"Earthy ochres and cool greys.\"}}",
       "images": [
         "images/imp_0609.jpg"
+      ],
+      "cats": [
+        "fantasy"
       ]
     },
     {
@@ -12051,6 +12330,9 @@
       "prompt": "Create a hyper-realistic movie poster inspired by The Black Phone 2, based on the uploaded reference photo of me. The composition should look like a professional cinematic poster - dramatic, moody, and detailed.\n\nI am walking down a suburban sidewalk wearing a white T-shirt with a black home telephone print, gray jeans, and white Air Force Ones. The scene features elegant villas, green lawns, and a dark flat-black 1986 Chevrolet van beside me. The driver, seen through the open window, is the masked villain from The Black Phone, wearing the same mask, hat, and glasses as in the original movie - make his likeness exact and cinematic.\n\nUse dynamic poster lighting - contrast of golden-hour sunlight and dark cinematic tones. The focus is on both faces, my realistic likeness and the villain’s accurate masked face.\n\nAdd a movie-poster layout:\n- Title: “THE BLACK PHONE II” (in large bold cinematic font, positioned at the bottom or center).\n- Subtitle: “A Blumhouse Production” or similar tagline at the top.\n- Maintain realistic shadows, color grading, and film-style composition.\n\nThe result should look like an official The Black Phone 2 poster where I am the main character.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0613.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -12196,6 +12478,9 @@
       "prompt": "A photorealistic image of an ultra-detailed sculpture of the subject in image made of shining marble. The sculpture should display smooth and reflective marble surface, emphasizing its luster and artistic craftsmanship. The design is elegant, highlighting the beauty and depth of marble. The lighting in the image should enhance the sculpture's contours and textures, creating a visually stunning and mesmerizing effect",
       "images": [
         "images/imp_0626.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -12239,6 +12524,9 @@
       "prompt": "{\n  \"scene_description\": \"A vibrant, mixed-media masterpiece featuring a photorealistic version of the person...\",\n  \"illustration_layer\": { \"style\": \"Thick-line Pop Art cartoons\" }\n}",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0630.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -12259,6 +12547,9 @@
       "prompt": "beautiful mature female, full body, large breasts, trench coat, ribbons, {{collar}}, medium shot, {{masterpiece}}, facing viewer, {{beautiful detailed face}}, brown eyes, lips, extremely detailed, 8K wallpaper, {best quality}, by Tom Bagshaw, by Gerhard Richter",
       "images": [
         "images/imp_0632.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -12327,6 +12618,9 @@
       "prompt": "Create merchandise display and shelf arrangements",
       "images": [
         "images/imp_0638.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -12387,6 +12681,10 @@
       "prompt": "Using this location, create an isometric HD-2D Minecraft-style image of the landmark (buildings only).",
       "images": [
         "images/imp_0644.jpg"
+      ],
+      "cats": [
+        "custom_1777207890896",
+        "custom_1777209981017"
       ]
     },
     {
@@ -12687,6 +12985,9 @@
       "prompt": "A hyper-realistic, professional interior design photograph of a modern living room inspired by a [Superhero]. The room has clean lines, a neutral color palette of greys, blacks, and whites, with accents of [Theme Color]. A large, stylized 3D wall sculpture of the [Superhero] dominates the main wall. Subtle thematic details are placed throughout the room, such as framed art prints of blueprints, a floor lamp designed to resemble a specific motif (e.g., a shield or logo), and a side table with a few well-placed props (e.g., a stylized helmet). The furniture is contemporary and minimalist, with a large, comfortable sofa and a low coffee table. Dramatic, focused lighting highlights the main wall sculpture, while warm ambient light from windows and lamps creates an inviting atmosphere. The overall style is sophisticated and elegant, a subtle homage rather than an overt fan-tribute.",
       "images": [
         "images/imp_0671.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -12777,6 +13078,9 @@
       "prompt": "Create a hyper-realistic 4K collectible figure inside a bright yellow cardboard display box with a clear plastic window in the front.\nReplace the figure’s face with the human eyes and facial features taken from the uploaded external image.\nThe character is an original design called 'Nano Banana 2': a small stylized doll with tiny cartoonish legs, wearing bold red Nike Air sneakers.\nAdd a Santa-themed banana hat: a peeled banana shaped like a Santa hat, with the banana peel opening naturally around the head like stylized petals.\nPlace a custom artistic logo on the box titled 'Nano Banana 2' in a unique, creative font.\nSet the box on a luxurious wooden store shelf.\nBehind it, a modern TV screen displays animated Nano Banana branding.\nUse ultra-detailed textures, dramatic cinematic product-display lighting, and extremely sharp 4K hyper-realism.\nPreserve the holiday Santa atmosphere throughout the scene.",
       "images": [
         "images/imp_0679.jpg"
+      ],
+      "cats": [
+        "custom_1777209981017"
       ]
     },
     {
@@ -12797,6 +13101,9 @@
       "prompt": "A photo of a glossy magazine cover, the cover has the large bold words \"Nano Banana Pro\"",
       "images": [
         "images/imp_0681.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -12830,6 +13137,9 @@
       "prompt": "Transform the original object into a human-like character, strictly preserving the object’s shape, materials, and distinctive design features.\nAdd proportionate human arms and legs, and expressive eyes with a slight cartoonish charm - eyes full of personality and a warm, friendly smile.\nPlace the character in a visually coherent environment that reflects the object’s personality and function, enhanced with dramatic cinematic light and shadow interplay that emphasizes texture and depth.\n\nRender in a hyper-realistic visual style with sharp, detailed surfaces, vivid yet natural colors, and soft atmospheric lighting.\nApply subtle post-processing polish, realistic reflections, and refined material realism to achieve a balanced look - both amusing and surprising, yet faithful to the visual essence of the original object.\n\nCamera: full-frame DSLR simulation, 50mm lens, shallow depth of field.\nLighting: cinematic soft key with natural rim highlights.\nMood: whimsical realism - playful but physically grounded.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0684.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -12886,6 +13196,9 @@
       "prompt": "Overlay the [glass] effect from Image 2 onto the photo in Image 1",
       "images": [
         "images/imp_0689.jpg"
+      ],
+      "cats": [
+        "custom_1777207875436"
       ]
     },
     {
@@ -12896,6 +13209,9 @@
       "prompt": "Overlay the [glass] effect from Image 2 onto the photo in Image 1",
       "images": [
         "images/imp_0690.jpg"
+      ],
+      "cats": [
+        "custom_1777207875436"
       ]
     },
     {
@@ -12916,6 +13232,9 @@
       "prompt": "Person's face attached in the image (do not change facial features of the person from the uploaded photo. Keep the face of the person 100% accurate from the reference image. Keep the original face of the attached person unchanged and realistic) embossed in profile, crafted with realistic engraved textures and fine relief detailing. The coin surface shows light reflections, scratches, and metallic sheen. Include subtle inscriptions or symbols around the border to resemble authentic minting. Centered on a dark, minimal background to emphasize the coin's texture and realism.",
       "images": [
         "images/imp_0692.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -13084,6 +13403,10 @@
       "prompt": "Transform the person in the photo into a LEGO minifigure packaging box style, presented in isometric perspective. Label the box with the title \"Brill.ai\". Inside the box, display the LEGO minifigure based on the person in the photo, along with their essential items (such as makeup, bags, or other items) as LEGO accessories. Beside the box, also display the actual LEGO minifigure itself, unpackaged, rendered in a realistic and vivid style.",
       "images": [
         "images/imp_0707.jpg"
+      ],
+      "cats": [
+        "custom_1777207890896",
+        "custom_1777209981017"
       ]
     },
     {
@@ -13265,6 +13588,9 @@
       "prompt": "A dramatic outdoor shot shows the person attached in the uploaded reference image (keep the face 100% accurate) crossing a long rope bridge over a deep valley. They stop mid-way and smile at the camera.",
       "images": [
         "images/imp_0724.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -13397,6 +13723,9 @@
       "prompt": "Ultra-realistic 8K, A crowded house party at night, packed with young adults dancing and laughing under colorful falling confetti. In the center, the person attached in the uploaded reference image ( Keep the face of the person 100% accurate from the reference image ) walks forward smiling, wearing [a patterned button-down shirt slightly open at the chest and black trousers]. A large python is draped over the person's shoulders as holding it calmly, and the crowd around the person reacts with excitement and surprise. People hold drinks, raise their hands, and cheer. Warm indoor lighting, sharp flash photography look, candid party energy. A playful banner with writing [\"Your're stronger than your thinking].\" hangs in the background. Shot in dynamic documentary style, vibrant atmosphere, realistic skin textures, natural expressions, crisp details. CAMERA: Fujifilm GFX 100S, 50mm lens.",
       "images": [
         "images/imp_0736.jpg"
+      ],
+      "cats": [
+        "animals"
       ]
     },
     {
@@ -13503,6 +13832,9 @@
       "prompt": "Create a highly cinematic, Hollywood-style photo of a person using the face from the uploaded image. The person is standing in a dark room, facing slightly toward the camera, while a large open doorway behind them emits an intense bright white light. The light is so strong that it creates a powerful silhouette effect around the person, with glowing edges outlining their body. Soft fog or smoke fills the air, making the light rays visible and dramatic. The contrast between the dark room and the bright doorway is strong and cinematic. The person is wearing a stylish  outfit such as a long coat, fitted clothes, and boots. Their posture is calm, confident, and slightly mysterious. Ultra realistic photography, dramatic lighting, volumetric light rays, deep shadows, atmospheric depth, Hollywood movie scene composition, 8k detail.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0746.jpg"
+      ],
+      "cats": [
+        "celebrities"
       ]
     },
     {
@@ -13625,6 +13957,9 @@
       "prompt": "A tropical forest photo shows the person attached in the uploaded reference image (keep the face 100% accurate) laughing as a bright parrot lands on their shoulder. Leaves shine all around them.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0757.jpg"
+      ],
+      "cats": [
+        "animals"
       ]
     },
     {
@@ -13698,6 +14033,9 @@
       "prompt": "The person attached in the image ( Keep the face of the person 100% accurate from the reference image ) is lying flat on whose back on a dark wooden floor in the middle of a chaotic party aftermath. The person's body is stretched out and relaxed, slightly diagonal within the frame. One of arms is bent at the elbow, resting loosely near their torso, while the other arm lies relaxed by their side. The posture feels careless and exhausted, as if having completely given in to the moment after a long night of celebration. The head is turned slightly to the side, resting directly on the floor.\n\nThe person attached in the image is wearing dark sunglasses, completely obscuring eyes, giving an indifferent, detached expression. Between lips, the person is holding a party horn angled upward, frozen mid-blow, reinforcing a playful yet worn-out party mood. The facial expression appears calm, detached, and slightly dazed rather than joyful or posed.\n\nThe person attached in the image is dressed in a classic black suit with a clean. The suit jacket is slightly open, revealing a white dress shirt underneath with the top buttons undone, adding to the relaxed, end-of-the-night feeling. Wrapped loosely around neck and shoulders is a metallic gold tinsel garland, creating a festive contrast against the dark suit fabric. The textures of the suit are matte and smooth, while the tinsel reflects light in sharp highlights.\n\nThe floor around the person attached in the image is covered in colorful party confetti, metallic streamers, and scattered decorative pieces in gold, silver, and bright colors. Surrounding the person attached in the image, only the lower bodies of other party guests are visible: legs in formal trousers, dress shoes, and sheer stockings with high heels. These figures stand around the person casually, partially cropped by the frame, emphasizing their position on the ground and the chaotic party environment.\n\nThe lighting is low and dramatic, with focused highlights illuminating the face, suit, tinsel, and the confetti immediately around the person attached in the image. Shadows fall naturally across the floor, adding depth and contrast. The scene feels candid, cinematic, and slightly decadent, capturing the raw aftermath of a celebration rather than a polished party moment.\n\nThe camera is positioned above the person attached in the image, shooting from a high angle directly downward, creating a strong top-down perspective. The image is captured with a moderately wide lens (approximately 28mm–35mm), allowing the surrounding environment, confetti, and people’s legs to remain visible while keeping the person attached in the image as the central subject. The depth of field is moderate, with clear detail across the scene and slight softening toward the edges.\n\nThe final image has a cinematic, editorial photography style with realistic lighting, rich contrast, visible textures, and a gritty, end-of-the-night party atmosphere. The face of the person attached in the image must remain exactly the same as the reference, fully preserved with accurate facial structure, proportions, and expression.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0764.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -13741,6 +14079,9 @@
       "prompt": "Stylize the extracted subject from the uploaded image with a plush, ultra-soft fuzzy texture, as if the person is made entirely from velvet or microfiber. Skin, hair, and clothing should appear smooth, rounded, and fabric-like, with visible fiber texture and soft lighting. Retain realistic facial structure and proportions, but stylize gently like a handmade plush doll. Use clean studio lighting to create subtle highlights and diffused shadows. Replace the original background with a light neutral gray to increase contrast. The final result should feel warm, tactile, and toy-like, while preserving identity cues.Ratio[2:3]",
       "images": [
         "images/imp_0768.jpg"
+      ],
+      "cats": [
+        "custom_1777209981017"
       ]
     },
     {
@@ -13804,6 +14145,9 @@
       "prompt": "Create a highly interactive challenge invitation thumbnail. Person action: The person in the image makes a provocative/inviting gesture (such as waving, pointing at the viewer, or giving a thumbs up). Expression: Confident, challenging smile or serious determined look. Background: Dynamic abstract geometric background with vibrant jumping colors. Interactive text prompts: Top large text: 'Do You Dare?' Central core text (with stroke and shadow): '7-Day Fitness Challenge' Bottom call-to-action (red button style): 'Click to Join ▶' Visual elements: Add countdown clock icon, place '50,000 participants' badge, top right difficulty label: '⭐⭐⭐ Medium Difficulty'. Effects: Dynamic light sweep effect creating urgency. Atmosphere: Full of energy and action, sparking viewer participation.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0774.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -13824,6 +14168,9 @@
       "prompt": "Capture the raw and spontaneous energy of an early 2000s paparazzi photo. A person from the attached reference image (keep the face 100% accurate) is illuminated by the harsh flash of a camera, standing on a city street at night with one hand on the receiver of a public phone. As they turn toward the camera, their expression is cold and distant. They’re wearing relaxed-fit streetwear — casual wide-leg pants and an oversized plain top in neutral tones. The urban background is a blur of car lights, and the image features the classic red digital timestamp.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0776.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -13854,6 +14201,9 @@
       "prompt": "The person attached in the uploaded reference image (keep the face 100% accurate) stands on a cliff edge at sunrise. Soft wind blows shirt. Golden light hits face as the person look over a huge valley with clouds moving below them..",
       "images": [
         "images/imp_0779.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -13864,6 +14214,9 @@
       "prompt": "A relaxed street photo shows the person attached in the uploaded reference image (keep the face 100% accurate) sitting on steps playing an acoustic guitar. A small crowd listens nearby. They smile naturally while mid-song.",
       "images": [
         "images/imp_0780.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -14059,6 +14412,9 @@
       "prompt": "A stunning night shot shows the person attached in the uploaded reference image (keep the face 100% accurate) standing on snowy ground under bright green northern lights. They smile while looking at the sky.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0797.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -14447,6 +14803,9 @@
       "prompt": "Create A hyper-realistic, 8k, low-angle shot with a slight Dutch tilt captures a colossal, clear plastic water bottle, partially buried and angled in coarse beach sand, dominating the mid-ground. Inside this giant bottle, a character based on the picture I attached here, is depicted in a state of distress, thrashing in water that fills the lower half of the bottle. The person, wearing a black t-shirt, dark blue pants, and white sneakers, has their arms raised, mouth open, and is surrounded by dynamic, splashing water, creating a powerful sense of entrapment and struggle. The scene is illuminated by harsh, high-contrast cinematic daylight, with strong highlights reflecting off the wet plastic bottle and the churning water within, indicating a bright, sunny day. Volumetric lighting emphasizes the water's transparency and movement. The foreground features highly detailed texture of the sand, interspersed with various pieces of plastic debris, including a crumpled white plastic bag, an orange bottle cap, and a red plastic bottle fragment, reinforcing a theme of pollution. In the background, a vibrant turquoise ocean with gentle waves meets a bright, slightly hazy blue sky, with the sun's glare visible in the upper left, all rendered with sharp focus on the immediate subject and a subtle depth of field for the background elements.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0831.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -14500,6 +14859,9 @@
       "prompt": "Keep this person's likeness identical. Restyle into a 1960s beehive hairstyle\nand tailored suit, warm studio backdrop.",
       "images": [
         "images/imp_0836.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -14592,6 +14954,10 @@
       "prompt": "Create an ultra-realistic cinematic poster-style photograph using a real human face reference image. Keep the reference face exactly as it is - no alteration of structure or identity. The referenced person (male or female) sits gracefully on a moss-covered tree stump in the Smurfs’ village during golden hour. Papa Smurf stands nearby offering a tiny wooden cup, and Smurfette touches the person’s arm gently, smiling warmly. Other Smurfs peek playfully from mushroom houses with chimney smoke and golden light. The person’s clothing softly reflects the surrounding tones - gentle hints of forest green and Smurf blue blending naturally with the warm sunlight.\n\nLighting: rich golden-hour sunlight, subtle rim light highlighting hair and shoulders, gentle reflections from leaves and Smurfs’ skin. Volumetric light beams, light dust in air, warm haze for cinematic depth.  \nCamera: Canon EOS R5, 35mm f/1.4, aperture f/1.8, ISO 100, eye-level cinematic angle, shallow depth of field, natural bokeh.  \nComposition: symmetrical yet organic framing, Smurfs forming a visual arc around the person, background softly blurred but glowing.  \nFilm simulation: Kodak Vision3 250D, fine cinematic grain, soft contrast, natural saturation, warm color harmony.  \nPost: global illumination, perfect shadow integration under the stump, realistic material fidelity, atmospheric realism, 8K poster-quality image.\n\n-- Reference requirement:\nUse the uploaded face as the exact identity. Maintain every facial detail, only matching lighting and color to blend seamlessly with the fantasy environment.",
       "images": [
         "images/imp_0844.jpg"
+      ],
+      "cats": [
+        "celebrities",
+        "products"
       ]
     },
     {
@@ -14774,6 +15140,10 @@
       "prompt": "{\"prompt\": \"Transform the person in the provided reference image (@img1) into a 3x3 grid of nine photorealistic close-up portraits. In every panel, keep the subject’s original facial features, bone structure, skin tone, and natural hair color exactly as seen in @img1. Do not alter age, gender, expression, or face shape. Only the hairstyle should change. Go wild, extreme, creative, exaggerated, and varied with the hair designs while maintaining the original hair color. Each of the nine panels should feature a dramatically different hairstyle, including realistic, surreal, avant-garde, and over-the-top styles. Maintain identity consistency across all nine portraits.\", \"hairstyles\": [ \"Ultra-short classic fade\", \"Massive wavy shoulder-length volume\", \"Hyper-slicked glass-shine backcombed hair\", \"Oversized geometric afro\", \"Samurai top-knot with shaved patterns\", \"Wild explosive curls with chaotic texture\", \"Completely bald (keeping facial features intact)\", \"Aggressive high mohawk with sharp silhouette\", \"Super-long straight hair with heavy dramatic bangs\" ], \"format\": \"3x3 grid\", \"style\": \"photorealistic, high-contrast, premium studio lighting\", \"subject\": \"The person from @img1 with identity preserved\", \"background\": \"Solid black\"}",
       "images": [
         "images/imp_0861.jpg"
+      ],
+      "cats": [
+        "fantasy",
+        "products"
       ]
     },
     {
@@ -14844,6 +15214,9 @@
       "prompt": "Using this photo, create a 3*3 photo booth grid, each one with a different pose and expression, no repeats",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0868.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -14854,6 +15227,9 @@
       "prompt": "Create a vertical vintage photo booth strip with 3 frames one under the other, showing the same person from the reference photo at age, 80, 90 and 100.\n\nKeep the face perfectly identical to the reference in all frames, same facial structure, same features, same identity.\n\nThe aging must be very clear and realistic, with strong elderly characteristics.\n\nAge 80 with deep wrinkles, age spots, thinner frame and reduced white or silver hair.\n\nAge 90 with very advanced aging, fragile posture, very thin white hair with visible scalp.\n\nAge 100 extremely old, very fragile body, almost bald or only a few thin white strands, very strong skin texture.\n\nThe person must be fully dressed in all frames.",
       "images": [
         "/images/custom_added_imp_0869_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -14874,6 +15250,9 @@
       "prompt": "Transform the uploaded photo into a geometric, flat-style travel stamp illustration. Use bold, simplified shapes, clean vector lines, and a limited 3–5 color flat palette. Keep 2–3 key elements from the original image (e.g. main object, background shape, landmark). Apply no gradients or shadows. Center the artwork in a square canvas with a perforated stamp border, taking up 60–70% of the space. Use a solid contrasting background outside the stamp. No text or labels.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0871.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -14894,6 +15273,9 @@
       "prompt": "{\n  \"generation_request\": {\n    \"meta_data\": {\n      \"task_type\": \"black_and_white_photobooth_expression_grid_4x4\",\n      \"language\": \"en\",\n      \"priority\": \"highest\",\n      \"version\": \"v1.0_BW_PHOTOBOOTH_EXPRESSIONS_4X4\"\n    },\n    \"input\": {\n      \"mode\": \"image_to_image\",\n      \"reference_image_usage\": \"very_high\",\n      \"preserve_identity\": true,\n      \"preserve_facial_features\": true,\n      \"preserve_hairstyle\": true,\n      \"notes\": \"Use the reference as the primary anchor. Create a black-and-white photobooth-style expression grid. Keep the same identity and hair. Each panel should show a different facial expression. Minimal background, direct photobooth flash look, natural skin texture.\"\n    },\n    \"output\": {\n      \"aspect_ratio\": \"1:1\",\n      \"resolution\": \"ultra_high\",\n      \"num_images\": 1,\n      \"layout\": {\n        \"type\": \"grid\",\n        \"rows\": 4,\n        \"cols\": 4,\n        \"gutter\": \"thin\",\n        \"panel_consistency\": \"high\"\n      },\n      \"sharpness\": \"crisp_photobooth\",\n      \"grain\": \"subtle_analog_bw\"\n    },\n    \"scene\": {\n      \"concept\": \"classic photobooth contact sheet with expressive faces\",\n      \"environment\": \"plain neutral backdrop, no props\",\n      \"lighting\": {\n        \"style\": \"direct photobooth flash\",\n        \"key_light\": \"front flash, slightly hard but flattering\",\n        \"shadows\": \"soft short shadows behind subject\",\n        \"avoid\": \"cinematic side light, dramatic backgrounds\"\n      },\n      \"camera\": {\n        \"lens\": \"50mm\",\n        \"distance\": \"tight head-and-shoulders framing\",\n        \"focus\": \"eyes sharp in every panel\"\n      }\n    },\n    \"subject\": {\n      \"type\": \"reference person\",\n      \"wardrobe\": \"simple strapless or bare-shoulder photobooth look (no logos)\",\n      \"hair\": \"keep same hairstyle across all panels\",\n      \"makeup\": \"minimal, natural\",\n      \"anatomy_rules\": \"correct facial proportions, no warped eyes/mouth\"\n    },\n    \"expression_set\": {\n      \"panel_01\": \"scrunched smile, eyes squeezed slightly\",\n      \"panel_02\": \"intense stare with fingers framing eyes\",\n      \"panel_03\": \"big laugh, mouth open, joyful\",\n      \"panel_04\": \"bored / unimpressed face, chin in hands\",\n      \"panel_05\": \"sad pout, watery eyes look\",\n      \"panel_06\": \"goofy face with both hands making small horns above head\",\n      \"panel_07\": \"playful tongue out, cheeky grin\",\n      \"panel_08\": \"angry glare, eyebrows down\",\n      \"panel_09\": \"flirty look, hand touching cheek\",\n      \"panel_10\": \"surprised wide eyes, mouth slightly open\",\n      \"panel_11\": \"fake scream / excited shout, hands near face\",\n      \"panel_12\": \"mischievous grin with claw-like hand pose\",\n      \"panel_13\": \"confused frown, lips pressed\",\n      \"panel_14\": \"crying face, hands on head, dramatic\",\n      \"panel_15\": \"tongue out with eyes closed, playful\",\n      \"panel_16\": \"duck face with small devil horns gesture\"\n    },\n    \"style\": {\n      \"color\": \"pure black and white\",\n      \"contrast\": \"medium-high\",\n      \"background\": \"flat gray\",\n      \"finish\": \"slight photobooth grain, clean edges\"\n    },\n    \"quality_control\": {\n      \"identity_lock\": \"strict\",\n      \"hands_priority\": \"high\",\n      \"avoid\": [\n        \"extra fingers\",\n        \"missing fingers\",\n        \"deformed hands\",\n        \"warped face\",\n        \"uneven eyes\",\n        \"melted mouth\",\n        \"plastic skin\",\n        \"text\",\n        \"watermark\",\n        \"logo\"\n      ]\n    },\n    \"negative_prompt\": [\n      \"color\",\n      \"sepia\",\n      \"overly cinematic lighting\",\n      \"beauty retouch plastic skin\",\n      \"low resolution\",\n      \"blur\",\n      \"distorted anatomy\"\n    ]\n  }\n}",
       "images": [
         "images/imp_0873.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -14904,6 +15286,10 @@
       "prompt": "Re-imagine this person as a\nphotorealistic PEZ dispenser\nwith a long stem and a glossy,\ntoy-plastic head. An original\n[Fruit Mix] PEZ pack lies beside it\non a seamless white\nbackground. Capture crisp\nplastic reflections",
       "images": [
         "images/imp_0874.jpg"
+      ],
+      "cats": [
+        "celebrities",
+        "custom_1777209981017"
       ]
     },
     {
@@ -14934,6 +15320,9 @@
       "prompt": "Create a picture of them on the set of a high-octane movie.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0877.jpg"
+      ],
+      "cats": [
+        "celebrities"
       ]
     },
     {
@@ -14964,6 +15353,9 @@
       "prompt": "Using the original image, recreate a pirate's wanted poster drawn on parchment.\nBrown monochrome, with the texture of aged parchment.\nRetain the style and character design of the original image down to the smallest detail, and paste it large at the top of the wanted poster.\nA close-up of the face. Have the character wear a pirate hat.\nWrite the bounty amount at the bottom of the poster. The bounty amount will be random, and a fictitious currency unit will be used.\nBelow the bounty amount, write the crime in small letters. Use a fictitious language. English or Chinese characters may not be used.",
       "images": [
         "images/imp_0880.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -15021,6 +15413,9 @@
       "prompt": "Create an image about \"ADI BRILL\" retold through a series of Polaroid photos pinned to a cork board. Each photo captures a key moment, with simple captions below. Arrange the photos in a loosely chronological path across the board, using colored strings to connect events and characters. Light the scene warmly to evoke nostalgia. Include incidental details, coffee cup rings, paper clips, handwritten notes, for authenticity.",
       "images": [
         "images/imp_0885.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -15054,6 +15449,9 @@
       "prompt": "A close-up, euphoric concert photograph taken from the front row captures a world-famous pop icon in her 30s radiant on a glittering arena stage. She has wavy blonde hair, red lipstick, and is wearing a sparkling silver sequined bodysuit, passionately playing a rhinestone-covered acoustic guitar.",
       "images": [
         "images/imp_0888.jpg"
+      ],
+      "cats": [
+        "celebrities"
       ]
     },
     {
@@ -15064,6 +15462,11 @@
       "prompt": "Illustration Processing:\nThe background is removed and the characters are turned into figurines and merchandise.\nTheme / Overview:\nA photorealistic movie theater lounge. A special event-themed space, set in a popcorn stand, is decorated with the world of the characters.\n\nLocation:\nA spacious popcorn stand in a large movie theater.\nThere is a cash register, with a popcorn machine inside.\nThere is a drink stand with a salesperson behind the counter.\nAbove the register are countless posters of showing movies.\n\nCharacters / Production:\nA character cosplayer is placed in the center of the screen.\nMerchandise such as figurines and acrylic stands are displayed on shelves.\nGiant stuffed animals and signboards are displayed realistically.\nA movie photo booth is set up and decorated with character designs.\n\nPlaces where characters are reflected:\nMovie posters currently being screened.\nPop-up advertisements for the collaboration menu.\nDrink cups and packaging.\nPopcorn buckets.\nLarge LED LCD panel.\n\nDesign / Advertising:\nCharacter illustrations are reflected on each poster in the lounge.\nVivid visuals of the collaboration food and drinks are displayed.\nAnimations and character footage are projected onto LED panels.\n\nCamera Angle:\nComposed from the front.\nEmphasis on the entire popcorn stand.\nA cosplayer is placed in the center, with merchandise and advertisements reflected around them.\nA slightly lower angle captures the LED panels and posters impressively.\n\nQuality / Atmosphere:\nPhotorealistic and detailed depiction.\nAn urban, realistic glossy feel, creating a cinema-like atmosphere with an event-like feel.\nResolution is 4K, aspect ratio is 4:3.",
       "images": [
         "images/imp_0889.jpg"
+      ],
+      "cats": [
+        "custom_1777209981017",
+        "fantasy",
+        "products"
       ]
     },
     {
@@ -15182,6 +15585,9 @@
       "prompt": "Use the uploaded reference image as a strict facial identity source.\n\nCRITICAL IDENTITY LOCK:\nThe face must match the reference image exactly — identical facial structure, proportions, eyes, lips, nose, skin tone, texture, hairstyle, and micro-details.\nNo changes, no reinterpretation, no beautification, no age shifts, and no added or removed facial hair.\nA perfect 1:1 facial reproduction is mandatory.\nThis applies whether the generated character is interpreted as male or female.\n\nCREATE a warm, rustic kitchen scene with old-world charm: wooden beams overhead, stone walls, and soft natural light filtering through leaded glass windows. A cluttered wooden dining table sits at the center, covered with plates of partially eaten food, spilled ingredients, wine glasses, and scattered fruits and vegetables — the lively aftermath of a shared meal.\n\nIn the background, hanging pots and pans, a vintage stove, and open shelves filled with jars and cookware emphasize the cozy, vintage atmosphere.\n\nIn the foreground sits a cheerful fairy-tale princess inspired by the classic Snow White storybook archetype (not a Disney likeness). \nShe has fair skin, a short black bob hairstyle with a red bow, and wears a stylized interpretation of the classic Snow White color palette: a blue bodice, puffed sleeves with red accents, and a yellow skirt. She rests comfortably in a high-backed wooden chair, leaning her head on her hand with an expression that mixes exhaustion, contentment, and dreamy amusement.\n\nNext to her sits a second character created using the uploaded reference image with CRITICAL IDENTITY LOCK. \nThis character may be male or female, depending on the reference image. \nThe character wears a vintage military-style brown cap tilted to the side, a cream-colored vertically striped long-sleeve shirt with sleeves rolled up, and a loosely tied brown neckerchief. They are holding a glass of red wine as they sit beside the fairy-tale princess.\n\nLighting:\nWarm painterly illumination highlights the princess’s face, the subtle facial details of the identity-locked character, and the chaotic tabletop. Soft shadows and warm tones create a cozy, magical, storybook atmosphere.\n\nStyle:\nDetailed, painterly illustration with rich textures, vibrant colors, and a blend of rustic realism and fairy-tale whimsy.",
       "images": [
         "images/imp_0899.jpg"
+      ],
+      "cats": [
+        "celebrities"
       ]
     },
     {
@@ -15218,6 +15624,10 @@
       "prompt": "A photo of a program for the Broadway show about \"Brill.ai\" players on a nice theater seat, it's professional and well made, glossy, we can see the cover and a page showing a photo of the stage.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_0902.jpg"
+      ],
+      "cats": [
+        "celebrities",
+        "products"
       ]
     },
     {
@@ -15238,6 +15648,9 @@
       "prompt": "A modern magazine collage style poster about software development. The central image is a young female programmer with twin braids working on a laptop. Surrounding her are various torn paper photo elements: close-ups of code on screens, mechanical keyboards, a cup of coffee, handwritten notes on a tablet, and whiteboard system diagrams. Large, bold typography is layered over the collage, including \"SHIP IT\" and \"上线\" at the top, and \"SYSTEMS THINKING PROGRAMMER\" and \"调试模式\" at the bottom. The background is a mix of dark code terminals and graphic shapes with an orange accent. The overall feel is energetic and professional.",
       "images": [
         "images/imp_0904.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -15258,6 +15671,9 @@
       "prompt": "Create an ultra realistic photograph based on the picture I attached here without changing your facial features with a 100% faithful and accurate face, No mask on the face,\nThe scene shows the character dressed as version of \"punk Deadpool\" walking in serious and determined expression in lit Times Square at night.\nIs costume is tight, in dark red and black, with detailed texture of technological fabric and turquoise web black lines covering the torso and arms. On the chest is the Deadpool symbol in turquoise black. Over the man's costume the traditional wears a vest with torn sleeves. There are pointed metal rivet details, spikes, and band patches and anarchist symbols on the vest.\nOn feet wear high top red old skool tennis vans.\nOn his wrists she wears leather punk munhequeiras with pointed metal spikes.\nIn one hand he holds the traditional Deadpool mask, It has at the top of the mask a sharp,\nOn the other hand he carries a guitar, with a dark blue strap, customized inspired by the Dean ML model, accompanied by rock band and anarchist symbols.\nScenario:\nA busy urban street at night, similar to Times Square, New York. The scene is saturated with vibrant neon lights from skyscrapers and digital billboards (outdoors) with advertisements. The street is wet, heavily reflecting the purple, magenta and cyan lights. There is a yellow taxi in the middle of the street. The sky is dark and hazy, adding dramatic contrast to the bright lights.\nAmerican shot, street perspective, high contrast, depth of field, bokeh, night photography, subtle cyberpunk-futuristic style, ultra realistic cinematic photography ultra detailed quality 8k\nWell-marked clothing texture",
       "images": [
         "images/imp_0906.jpg"
+      ],
+      "cats": [
+        "celebrities"
       ]
     },
     {
@@ -15298,6 +15714,9 @@
       "prompt": "RAW-ISO [100] - [F2.8-1/200 24mm] settings",
       "images": [
         "images/imp_0910.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -15318,6 +15737,9 @@
       "prompt": "Recreate the person from [Image1] in four different camera perspectives. Keep the subject’s identity, body proportions, and clothing consistent across all four images.",
       "images": [
         "images/imp_0912.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -15447,6 +15869,9 @@
       "prompt": "Please use the uploaded image as a character reference (only for facial features, hairstyle, facial structure, temperament, etc., and do not use the original image's background) to recreate a completely new scene.\n\nThe scene is set by the window inside a bus, with a sad, melancholic, and depressed atmosphere. The character should be naturally integrated into this new environment, with their head gently resting against the bus window. The character in the shot should remain in clear focus, while the background is appropriately blurred.\n\nIncorporate a glassmorphism-style music player UI into the image, but it should not be a floating layer or an interface pasted onto the image; instead, it should be seamlessly attached and embedded on the surface of the bus window glass, existing on the same plane as the glass.\n· If the window has a tilted angle, the UI must match it exactly, including perspective and compression distortion.\n· The texture should present an extremely thin glass-like quality, with realistic subtle reflection and refraction effects.\n· UI position: Placed on the window glass in the slightly left-center part of the image.\n· Display content:\n· Song title: Red\n· Artist: Taylor Swift\n\nOverall image requirements:\n· Composition ratio: 1:1\n· Style: Cinematic feel, realistic compositing, finely detailed textures, strong emotional impact\n· Lens: Medium shot or medium close-up, eye-level angle\n· Depth of field: Shallow depth of field, with the background showing soft blur (bokeh)\n· Lighting: Soft, low saturation, strong atmospheric quality, consistent with the light coming through the window (such as cold light from an overcast or rainy day)\n· Color tone: Darker, grayer, with cinematic color grading\n\nThe character is wearing in-ear wireless earphones:\n· Realistically fitted to the ears, without any sense of incongruity\n· Color: Black or dark color\n· No earphone cords should be visible, and it should not be an exaggerated over-ear gaming headset\n\nThe overall mood of the image needs to echo the song \"Red - Taylor Swift,\" conveying a sense of loneliness and heartbreak immersed in a sad song.",
       "images": [
         "images/imp_0924.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -17226,6 +17651,9 @@
       "prompt": "Use the uploaded reference image as the absolute source for facial identity.\n\nCRITICAL IDENTITY LOCK:\nThe face must be a highly realistic, 1:1 reproduction of the person in the reference image. Maintain exact facial structure, skin texture, eye color, and natural expression. DO NOT apply caricature distortions to the facial features (no exaggerated eyes, no cartoonish nose, no over-plumped lips on the face itself). The realism of the face must contrast sharply with the exaggerated body.\n\nCONCEPT:\nCreate a humorous, over-the-top high-fashion caricature of a glamorous socialite, where the body is a caricature but the face remains hyper-realistic.\n\nCaricature Body & Proportions:\n\nNeck: Extremely elongated, elegant, and swan-like.\n\nTorso: Tiny, tapered \"wasp\" waist with dramatic, humorous proportions.\n\nSilhouette: Ultra-slim, tall, and gangly legs.\n\nPose: A smug, overly glamorous, red-carpet runway pose.\n\nOutfit & Accessories:\n\nA form-fitting, ultra-high-fashion designer suit with dramatic, cartoon-like proportions.\n\nGlossy, high-end dress shoes.\n\nOversized luxury sunglasses (pushed up or held to ensure the realistic face is visible).\n\nA tiny dog tucked inside an extravagant designer handbag.\n\nScene:\n\nA chaotic Red Carpet event.\n\nCharacter surrounded by bright, flashing paparazzi lights and popping bulbs.\n\nGlamorous, celebrity-obsessed atmosphere with high-gloss highlights and deep shadows.\n\nStyle:\n\nA \"Realistic Face on Caricature Body\" aesthetic.\n\nSharp, polished, fashion-editorial energy.\n\nVivid lighting and high-drama red-carpet sparkle.\n\nClean rendering with professional digital art finish.",
       "images": [
         "images/imp_1074.jpg"
+      ],
+      "cats": [
+        "animals"
       ]
     },
     {
@@ -17345,6 +17773,9 @@
       "prompt": "Steampunk style picture of Tudor England, the Tower. Characters include Anne of Cleves, Henry VIII. Behind Anne of Cleves, the ghosts of Henry VIII's previous wives: Catherine of Aragon, Anne Boleyn, Jane Seymour.  ",
       "images": [
         "images/imp_1085.jpg"
+      ],
+      "cats": [
+        "fantasy"
       ]
     },
     {
@@ -17365,6 +17796,9 @@
       "prompt": "Create a storyboard from the uploaded image, highlighting key moments and transitions with cinematic angles, camera movements, and framing that capture the scene's mood and narrative flow.",
       "images": [
         "images/imp_1087.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -17433,6 +17867,9 @@
       "prompt": "“A hyper-realistic cinematic image. The uploaded image is a photo of the subject (male or female) — this photo should be used faithfully as a reference for the face, body, clothing, and individual features.\nThe scene takes place at an elevated point near the Egyptian Pyramids, with a wide, clear view of the Giza pyramids in the background, the golden desert, and the intense blue sky.\nThe subject is wearing a black t-shirt with the text ‘Brill.ai.’ in white letters on the chest, along with a black watch, maintaining the appearance and posture of the original photo.\nThe golden light of late afternoon illuminates the landscape, creating warm, realistic tones. A slight desert haze adds atmospheric depth.\nThe camera angle is wide and slightly low, conveying a sense of grandeur, freedom, and inspiration.\nCinematic style, 16:9 aspect ratio, ultra-realistic, with fine details in lighting, sand texture, and impeccable facial sharpness.\n--ar 16:9 --style photographic --quality 2”",
       "images": [
         "images/imp_1093.jpg"
+      ],
+      "cats": [
+        "fantasy"
       ]
     },
     {
@@ -17621,6 +18058,10 @@
       "prompt": "A photo of a program for the Broadway show about TCG players on a nice theater seat, it's professional and well made, glossy, we can see the cover and a page showing a photo of the stage.",
       "images": [
         "images/imp_1110.jpg"
+      ],
+      "cats": [
+        "celebrities",
+        "products"
       ]
     },
     {
@@ -17641,6 +18082,9 @@
       "prompt": "Generates a photorealistic theme park image based on the original image.\nThe theme park and the people enjoying it are depicted in an extremely photorealistic style. Daytime. Sunny.\nThe color scheme and design are extracted from the original image and applied to the color scheme and design of various facilities.\nVehicles and buildings based on the original image, mascot costumes that are a distorted version of the original image, and signs with the original image printed on them are placed within the image.\nThe mascot costume design should use the original image as a motif, but be moderately distorted to create a photorealistic look.\nThe sizes of the people and mascot costumes must not be unrealistic.\nEven if the original image is anime-style, the final image must be a photorealistic theme park. Be sure to follow these rules.",
       "images": [
         "images/imp_1112.jpg"
+      ],
+      "cats": [
+        "custom_1777209981017"
       ]
     },
     {
@@ -17681,6 +18125,9 @@
       "prompt": "A horizontal split-screen cinematic shot of Times Square, New York, seamlessly blending two different eras: 1920s on the left and present day on the right.\n\nOn the left side (1920s): show era-appropriate architecture, interior or environment design, materials, vehicles, and props that clearly belong to that historical period. People wear authentic clothing from 1920s, including hairstyles, accessories, and typical items in their hands (such as books, umbrellas, instruments, letters, newspapers, etc.). The overall mood feels nostalgic and historically accurate.\n\nOn the right side (present day): show the same scene in the modern era, with updated architecture or renovated structures, contemporary materials (glass, steel, LED screens, modern furniture), modern vehicles or equipment, and current technology (smartphones, laptops, cameras, etc.). People wear contemporary fashion that matches today's style in this setting.\n\nIn the center: the two eras merge and overlap organically, without a hard dividing line. Elements from 1920s and present day visually interact: people from different times look at each other, walk through each other's space, or seem surprised by the other era's technology and objects. Architecture and environment smoothly morph from old to new (for example, stone gates turning into modern campus gates, classical concert hall décor fading into a futuristic stage, old street shops transforming into neon-lit storefronts).\n\nMake sure the scene is not just a simple left/right comparison but a dynamic time-travel interaction where buildings, clothing, props, and human gestures clearly emphasize the contrast and fusion between the two eras. Photorealistic, 8k resolution, cinematic lighting, wide angle, highly detailed textures, rich sense of time-travel storytelling. Aspect Ratio: 4:3",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1116.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -17711,6 +18158,10 @@
       "prompt": "Illustration Processing:\nThe background is erased and characters are turned into figurines and merchandise.\nTheme / Overview:\nA photorealistic Tokyo train interior. The entire car is decorated with character advertisements and merchandise, creating a special space tailored for a collaboration event.\nCharacters / Production:\nSeveral character cosplayers are standing in the foreground of the screen.\nLife-size panels and life-size figures are displayed in the center and back of the train.\n100cm character figures are on display.\nMany character stuffed toys are lined up in empty seats.\nAdvertising / Display:\nCharacter illustrations are reflected in advertisements on the straps.\nCharacter illustrations are displayed on poster advertisements inside the train.\nCharacter illustrations and animations are displayed on additional LED displays installed inside the train.\nIllustration Processing:\nThe background is erased and characters are turned into figurines and merchandise.\nNear-life-size figures, 100cm figures, deformed figures, and stuffed toys are realistically depicted.\nCamera Angle:\nA frontal composition emphasizes the bustling atmosphere inside the train.\nA large shot of a cosplayer in the foreground, with figures, panels, and stuffed animals in the background.\nA low angle captures the strap advertisements and LED displays impressively.\nQuality / Atmosphere:\nPhotorealistic and detailed depiction.\nAn urban, realistic glossy feel.\nResolution is 4K, aspect ratio is 4:3.",
       "images": [
         "images/imp_1119.jpg"
+      ],
+      "cats": [
+        "custom_1777209981017",
+        "products"
       ]
     },
     {
@@ -17804,6 +18255,9 @@
       "prompt": "Transform the uploaded image into a minimalist illustration with an airy, warm pastel palette. Use clean, crisp lines, a flat 2‑D perspective, and subtle, gentle shadows. Keep the composition light and uncluttered, emphasizing simplicity and the soft glow of the color scheme",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1128.jpg"
+      ],
+      "cats": [
+        "custom_1777207875436"
       ]
     },
     {
@@ -17824,6 +18278,9 @@
       "prompt": "Transform this image into a 5-piece jewelry collection.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1130.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -17864,6 +18321,9 @@
       "prompt": "turn this photo into a character figure. Behind it, place a box with the character's image printed on it, and a computer showing the Blender modeling process on its screen.\nIn front of the box, add a round plastic base with the character figure standing on it.\nset the scene indoors if possible",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1134.jpg"
+      ],
+      "cats": [
+        "custom_1777209981017"
       ]
     },
     {
@@ -17904,6 +18364,9 @@
       "prompt": "Have these two characters fight using the pose from Figure 3. Add appropriate visual backgrounds and scene interactions. Generated image ratio is 16:9",
       "images": [
         "images/imp_1138.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -17944,6 +18407,9 @@
       "prompt": "Make this image of two people look like it was taken with a Polaroid camera. There should be no obvious subjects or props. It should look like a random shot captured by chance. The image should appear like a snapshot without any special attention.\nInclude a slight motion blur and light from the camera flash in a dark area that spreads evenly throughout the photo. Don't distort the face. Change the background behind the two people to a white curtain. The guy should be touching my face.",
       "images": [
         "images/imp_1142.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -17984,6 +18450,9 @@
       "prompt": "Create a typographic illustration shaped like a [OBJECT], where the text itself forms the shape - bold and playful lettering style that fills the entire silhouette - letters adapt fluidly to the curves and contours of the object - vibrant and contrasting color palette that fits the theme - background is solid and enhances the focus on the main shape - vector-style, clean, high resolution, poster format, 1:1 aspect ratio.",
       "images": [
         "images/imp_1146.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -18007,6 +18476,9 @@
       "prompt": "{\n  \"prompt\": {\n    \"subject\": {\n      \"description\": \"A collection of five vintage Polaroid instant photographs featuring the same young Asian woman, arranged casually on a textured surface.Use the face without any change\",\n      \"appearance\": {\n        \"hair\": \"Wavy, black hair.\",\n        \"skin\": \"smooth and fair skin.\",\n        \"makeup\": \"Natural, dewy makeup with defined brows and neutral lip color.\",\n        \"clothing\": \"Black tank top.\",\n        \"accessories\": \"Gold pendant necklaces.\"\n      },\n      \"poses\": [\n        {\n          \"photo\": \"Top left\",\n          \"description\": \"Winking, sticking out tongue, making a peace sign.\"\n        },\n        {\n          \"photo\": \"Top right\",\n          \"description\": \"Blowing a kiss.\"\n        },\n        {\n          \"photo\": \"Center\",\n          \"description\": \"Looking off-camera, hand on cheek.\"\n        },\n        {\n          \"photo\": \"Bottom left\",\n          \"description\": \"Making a kissy face, peace sign.\"\n        },\n        {\n          \"photo\": \"Bottom right\",\n          \"description\": \"Laughing broadly, head tilted.\"\n        }\n      ]\n    },\n    \"environment\": {\n      \"surface\": \"Thick, cream-colored knit wool blanket with a textured stitch pattern.\",\n      \"details\": \"Several red lipstick kiss marks imprinted directly onto the blanket fabric.\",\n      \"arrangement\": \"The five Polaroid prints are scattered naturally, overlapping slightly.\"\n    },\n    \"lighting\": {\n      \"type\": \"Soft, overhead ambient light, likely natural daylight, illuminating the entire scene.\",\n      \"photo_lighting\": \"Direct studio flash within the Polaroid photos, creating a bright, slightly overexposed look with soft shadows.\"\n    },\n    \"mood\": \"Playful, casual, nostalgic, warm, and personal.\",\n    \"camera_details\": {\n      \"style\": \"Ultra Photorealistic overhead photograph.\",\n      \"focus\": \"Sharp focus on the Polaroid prints and the textures of the blanket.\",\n      \"perspective\": \"Top-down view.\",\n      \"film_type\": \"Vintage Polaroid instant film with classic white borders and slight wear.\" Ratio 3.4\n    }\n  }\n}",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1148.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -18136,6 +18608,9 @@
       "prompt": "{\n  \"image_generation_request\": {\n    \"meta_protocols\": {\n      \"reference_adherence\": {\n        \"instruction\": \"Use the provided photo as a strict face reference.\",\n        \"tolerance\": \"Zero deviation\",\n        \"parameters\": \"Preserve facial proportions, skin texture, expression, and identity with 100% accuracy.\",\n        \"stylization_constraint\": \"Do not stylize or alter facial features.\"\n      },\n      \"format_style\": \"Editorial winter poster–style multi-panel collage\",\n      \"aesthetic_quality\": \"Spontaneous iPhone photography (candid, cozy, realistic)\",\n      \"global_textures\": \"Soft snowfall, subtle analog grain, slight handheld imperfections\"\n    },\n    \"consistent_elements\": {\n      \"subject_wardrobe\": {\n        \"coat\": \"Short faux-fur coat\",\n        \"legwear\": \"Black tights\",\n        \"footwear\": \"Classic UGG boots\",\n        \"style_notes\": \"Simple, cozy, unmistakably winter\"\n      },\n      \"primary_device\": {\n        \"model\": \"iPhone 17 Pro Max\",\n        \"color\": \"Silver\",\n        \"usage\": \"Held by subject in relevant frames\"\n      },\n      \"color_palette\": [\n        \"Warm ambers\",\n        \"Soft reds\",\n        \"Pine greens\",\n        \"Muted winter greys\"\n      ]\n    },\n    \"layout_configuration\": {\n      \"panel_1_top_left\": {\n        \"scene_type\": \"Reflective shop-window shot at dusk\",\n        \"lighting_and_atmosphere\": \"Faint Christmas lights, garlands, frosted glass edges, warm highlights on fur\",\n        \"subject_action\": \"Holding phone partially covering face\",\n        \"optical_effects\": \"Passing silhouettes, layered reflections, gentle ghosting, natural glass curvature distortion\"\n      },\n      \"panel_2_top_right\": {\n        \"scene_type\": \"Ultra-wide street portrait (snowy sidewalk/Christmas market)\",\n        \"camera_angle\": \"Close, downward-angled\",\n        \"subject_pose\": \"Leaning forward casually, hands in coat pockets\",\n        \"visibility_check\": \"Black tights and UGG boots clearly visible\",\n        \"motion_dynamics\": \"Falling snow with slight motion blur\",\n        \"lens_characteristics\": \"Subtle perspective warping to reinforce handheld unstaged feel\"\n      },\n      \"panel_3_bottom_right\": {\n        \"scene_type\": \"Intimate overhead selfie\",\n        \"lighting\": \"Warm street or café lighting\",\n        \"props\": {\n          \"held_item\": \"Takeaway holiday drink (coffee or mulled wine)\",\n          \"accessories\": \"Wired earphones visible\"\n        },\n        \"texture_focus\": \"Sharply detailed fur texture and winter fabrics\",\n        \"mood\": \"Nostalgic holiday atmosphere enhanced by soft grain\"\n      }\n    },\n    \"graphic_overlay\": {\n      \"element\": \"Minimal Apple Music–style mini player\",\n      \"content\": \"Popular Christmas song (e.g., 'Last Christmas' or 'All I Want for Christmas Is You')\",\n      \"style\": \"Rendered flat and clean, no shadows\",\n      \"position\": \"Floating across the center of the collage\"\n    }\n  }\n}",
       "images": [
         "images/imp_1160.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -18219,6 +18694,9 @@
       "prompt": "{\"intent\":\"Generate a photorealistic, high-fidelity smartphone photograph simulating a raw night-time capture at a bustling Asian night market.\",\"subject\":{\"attire\":\"Vivid royal blue satin deep-V crop top with a front tie/knot detail...\",\"pose\":\"Seated at a table, facing the camera directly. Right hand holding a clear plastic cup...\"},\"environment\":{\"location\":\"Semi-outdoor night market dining tent.\",\"background\":\"White canopy tent structure visible above...\"},\"lighting\":{\"style\":\"Direct on-camera smartphone flash simulation.\"},\"camera\":{\"aesthetic\":\"Mobile photography, Apple iPhone 16 Pro Max simulation.\"}}",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1167.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -18239,6 +18717,9 @@
       "prompt": "Nighttime flash photo with Y2K aesthetic, red digital timestamp in corner. Young woman at a public payphone, face based exactly on uploaded image, turning back toward camera with a detached look. Wearing corset top and loose cargo jeans, nands in back pockets. Strong flash contrast and blurred car lights in urban background, raw early-2000s paparazzi vibe.",
       "images": [
         "images/imp_1169.jpg"
+      ],
+      "cats": [
+        "custom_1777207890896"
       ]
     },
     {
@@ -18285,6 +18766,9 @@
       "prompt": "A woman doing yoga (tree pose) on a cliff overlooking the sea, wearing earth-colored activewear, the morning sun rising behind her, a feeling of strength and peace.",
       "images": [
         "/images/custom_added_imp_1173_img0.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -18338,6 +18822,9 @@
       "prompt": "{\"label\":\"direct-flash-gamer-girl\",\"tags\":[\"direct-flash\",\"retro-gamer-room\",\"90s-photography\"],\"Subject\":[\"young woman in her early 20s... seated cross-legged on a couch, holding a game controller\"],\"Lighting\":\"strong direct on-camera flash aimed straight at the subject... ambient tungsten lamp in the background\",\"Mood\":\"intimate, playful, nostalgic, confidently casual with a strong gamer-at-home vibe\"}",
       "images": [
         "images/imp_1178.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -18404,6 +18891,9 @@
       "prompt": "{ \"Objective\": \"Create a 3x3 Instagram-style grid of low-quality smartphone photos featuring the same attractive, beautiful, sensual, athletic Asian woman enjoying Disneyland, clearly showing iconic park elements, rides, and mascots.\", \"Composition\": { \"layout\": \"3x3 grid\", \"aspect_ratio\": \"1:1\", \"framing\": \"each square captures a different candid Disneyland moment, forming a cohesive Instagram profile\" }, \"Subject\": { \"type\": \"young Asian woman\", \"appearance\": { \"beauty\": \"extremely attractive, natural beauty\", \"body\": \"athletic, fit physique\", \"skin\": \"natural texture, no glossiness, no smoothing\", \"makeup\": \"light, natural\", \"expression\": \"joyful, playful, candid\" }, \"consistency\": \"same woman across all 9 photos\" }, \"Wardrobe\": { \"style\": \"Disneyland themed outfits\", \"details\": [ \"Mickey/Minnie ears headband\", \"Disney-themed crop tops or hoodies\", \"casual shorts or skirts\", \"sneakers\", \"colorful, playful  clothing\" ] }, \"Scenes\": [ { \"position\": \"top left\", \"location\": \"roller coaster ride\", \"pose\": \"mid-ride candid, wind-blown hair, excited expression\" }, { \"position\": \"top center\", \"location\": \"Disney castle\", \"pose\": \"standing in front, casual pose, slightly off-center\" }, { \"position\": \"top right\", \"location\": \"posing with mascot (e.g., Mickey Mouse)\", \"pose\": \"playful pose, smiling\" }, { \"position\": \"middle left\", \"location\": \"theme park street with shops\", \"pose\": \"walking candid, holding snack or drink\" }, { \"position\": \"middle center\", \"location\": \"carousel or classic ride\", \"pose\": \"sitting on ride, laughing naturally\" }, { \"position\": \"middle right\", \"location\": \"posing with another mascot (e.g., princess or character)\", \"pose\": \"fun interaction, slightly posed but natural\" }, { \"position\": \"bottom left\", \"location\": \"nighttime Disneyland lights\", \"pose\": \"slightly blurred candid shot, glowing lights behind\" }, { \"position\": \"bottom center\", \"location\": \"food stand\", \"pose\": \"holding Disneyland snack (e.g., churro), casual smile\" }, { \"position\": \"bottom right\", \"location\": \"wide park view with rides\", \"pose\": \"back facing  camera or looking away, scenic shot\" } ], \"Photography\": {\n\"camera\": \"smartphone\",\n\"style\": \"Instagram casual travel\",\n\"quality\": \"intentionally low quality\",\n\"lighting\": \"natural sunlight, uneven exposure\",\n\"imperfections\": [\n\"motion blur\",\n\"grain/noise\",\n\"slight overexposure or underexposure\",\n\"lens distortion\",\n\"unbalanced framing\" ], \"effects\": [ \"no beauty filter\", \"no skin retouching\", \"authentic dynamic range\", \"slightly inconsistent color tones\" ] }, \"Mood\": \"fun, energetic, playful, theme park adventure\", \"Rendering\": { \"style_keywords\": [ \"instagram grid\", \"disneyland photos\", \"theme park lifestyle\", \"smartphone photography\", \"candid moments\", \"low quality aesthetic\" ], \"realism\": \"highly realistic smartphone look\", \"detail_level\": \"natural imperfect detail\", \"aspect_ratio\": \"--ar 1:1\" }, \"Response_Format\": { \"type\": \"image_generation_prompt_json\", \"editable_fields\": [ \"scenes\", \"wardrobe\", \"lighting\", \"poses\" ] }\n}",
       "images": [
         "/images/custom_added_imp_1184_img0.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -18460,6 +18950,10 @@
       "prompt": "Use the face without any  change. A high-quality 2x2 creative photo collage of a young woman with long wavy black hair , posing inside cardboard boxes for a Christmas-themed challenge. She wears a cream, red, and green Fair Isle knit sweater.\nLayout & Interaction (Crucial):The right side features a continuous action across two panels. Red wine is poured from the top-right panel and flows vertically down into the bottom-right panel.\nPanel Details:\n\nTop Left: She blows artificial snow from her palms towards the camera.\nBottom Left: She holds glowing fairy lights and a red bauble, smiling warmly.\nTop Right: She leans on the box edge, holding a wine bottle, pouring red wine downwards so the liquid stream exits the bottom of this frame.\nBottom Right: She is positioned below, holding a wine glass that catches the stream of wine pouring down from the panel above. She is looking up, watching the wine flow into her glass.\n\nStyle: Creative box challenge photography, seamless cross-panel interaction, festive mood, soft studio lighting, ultra-realistic textures.",
       "images": [
         "/images/custom_added_imp_1189_img0.jpg"
+      ],
+      "cats": [
+        "fantasy",
+        "products"
       ]
     },
     {
@@ -18470,6 +18964,9 @@
       "prompt": "[Global Instructions]: A 3x3 grid collage, where all 9 cells must feature exactly the same woman. Strictly maintain the facial features consistent with the reference image. Do not change her facial features; only alter her expression, makeup, and styling to match each movie's theme.\nCell 1: Love Actually style - airport farewell scene wearing a Christmas hat, holding a wrapped gift, tender embrace, background with a giant airport Christmas tree and colorful light decorations, soft lighting\nCell 2: Home Alone style - surprised exaggerated expression with hands covering cheeks, wearing a crooked Christmas hat, background with a home Christmas tree, pile of gifts, and decorative lights, comedic effect\nCell 3: The Polar Express style - in front of a train window wearing a sleep cap, holding hot cocoa with a candy cane, outside the window a magical snowy landscape and Christmas village, dreamy blue and gold tones\nCell 4: The Nightmare Before Christmas style - real person in green-toned clothing with a red Christmas hat, goofy expression, holding stolen Christmas decorations, background with Christmas village lights and gifts, creative styling\nCell 5: Miracle on 34th Street style - retro department store scene wearing a classic red Christmas dress, holding a Christmas shopping bag, background with a giant Christmas tree and retro decorations, classic Hollywood lighting (center)\nCell 6: Elf style - complete elf outfit (green top, red striped socks, pointed hat with bells), joyful jumping pose, holding a candy cane, background with a candy-colored Christmas workshop\nCell 7: Frozen style - ice blue princess dress with snowflake crown, holding a magical ice crystal, snowflakes swirling, background with an ice crystal castle and a large Christmas tree, special festive candy elements, Disney magical feel\nCell 8: True Lies style - black dress with red Christmas accessories, holding champagne, background with a Christmas party scene featuring lights and decorative balls, elegant and mysterious\nCell 9: Last Christmas style - stylish woman in a red retro coat with a green scarf and gold earrings, holding a Christmas gift box, standing under the lights of a London Christmas market, background with a giant Covent Garden Christmas tree and festive shop windows, warm night scene lighting, expression full of hope, modern romantic movie aesthetic\nEach cell imitates the corresponding movie's color tones, lighting, and atmosphere, with Christmas decorative elements extremely prominent, movie poster composition, adding cinematic title text effects, professional movie still quality, 4K high definition",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1190.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -18493,6 +18990,9 @@
       "prompt": "{\n  \"scene\": \"Outdoor close-up on a skyscraper rooftop in New York City at dusk\",\n  \"setting\": {\n    \"location\": \"High-rise skyscraper rooftop\",\n    \"environment\": \"Panoramic New York City skyline with towering buildings, glowing city lights below, faint wind effects\",\n    \"lighting\": \"Warm golden hour sunset mixed with cool city glow and dramatic long shadows\"\n  },\n  \"subject\": {\n    \"type\": \"person\",\n    \"gender_presentation\": \"female\",\n    \"appearance\": {\n      \"skin_tone\": \"fair glowing\",\n      \"hair\": \"long wavy blonde hair flowing freely in the rooftop breeze\",\n      \"outfit\": \"full-body Supergirl-inspired DC costume: form-fitting blue long-sleeve leotard with red House of El 'S' emblem on chest, short red skirt, flowing red cape billowing behind, red knee-high boots with gold trim\",\n      \"footwear\": \"iconic red Supergirl boots\"\n    },\n    \"pose\": \"standing confidently near the rooftop edge, both hands on hips\",\n    \"expression\": \"neutral yet composed with subtle confident smile and heroic intensity\",\n    \"body_language\": \"powerful, relaxed heroic stance emphasizing strength and poise\"\n  },\n  \"objects\": {\n    \"held_items\": [\n      \"smartphone\"\n    ],\n    \"background_items\": [\n      \"distant Empire State Building and city skyline\",\n      \"rooftop HVAC units\",\n      \"safety railing\",\n      \"ambient city haze\"\n    ]\n  },\n  \"composition\": {\n    \"shot_type\": \"full-body close-up,\n    \"camera_angle\": \"slightly low eye-level for heroic emphasis\",\n    \"framing\": \"centered subject with dramatic city skyline filling the background\"\n  },\n  \"mood\": [\n    \"confident\",\n    \"powerful\",\n    \"heroic\",\n    \"bold\"\n  ],\n  \"themes\": [\n    \"superhero empowerment\",\n    \"DC character cosplay\",\n    \"urban adventure\",\n    \"strength and confidence\"\n  ],\n  \"use_cases\": [\n    \"social media content\",\n    \"superhero cosplay branding\",\n    \"character-inspired visuals\",\n    \"empowerment and fantasy imagery\"\n  ]\n}",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1192.jpg"
+      ],
+      "cats": [
+        "celebrities"
       ]
     },
     {
@@ -18526,6 +19026,9 @@
       "prompt": "Convert this person into a retro vintage grainy but bright image, black party-wear saree, 90s film aesthetic. She is standing against a solid, deep wall with dramatic shadows and contrast, creating a mysterious and artistic atmosphere. The environment feels windy and romanticised. Lighting is warm, with golden sunset tones evoking golden hour glow. The background is minimalist and slightly textured. Her expression is moody, calm, yet subtly happy and introspective",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1195.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -18579,6 +19082,9 @@
       "prompt": "A real-life woman is presented in a vertical triptych collage composition, depicting three consecutive moments (a calm stance, a direct confrontation, and a startled reaction). Each panel deliberately uses left–right offset positioning to create a coherent visual narrative flow.\n\nThe image is shot in a photorealistic, cinematic live-action style, high resolution with subtle natural grain, true contrast, hard natural daylight, a clear blue sky, and deep depth of field consistent with real lens behavior. The scene takes place in an open outdoor environment.\n\nThe subject wears a cowboy hat, a short-sleeve button-up shirt, and a brownish-red long skirt. Her makeup is retro-inspired, with distinct red lipstick and clearly defined eye makeup.\n\nTop panel:\nThe subject is positioned toward the right, leaving open sky on the left. She stands with arms crossed, looking toward the lower-left with a surprised expression.\nMiddle panel:\nThe subject is positioned toward the left, aiming a firearm with the barrel angled toward the lower-right. Her expression is focused and sharp, and the shot is taken from a slightly top-down angle. In this panel, both the subject and the weapon intentionally break through the top and bottom panel borders, overlapping the frame lines to create a clear layered effect. The middle panel serves as the primary visual focal point.\n\nBottom panel:\nThe subject is positioned in the lower-right corner, leaving more negative space on the left. She raises both hands defensively, her eyes naturally widened in surprise, looking toward the upper-left. The subject intentionally breaks the panel frame and overlaps the border lines, forming a distinct layered composition.\nThe image maintains a 2:3 aspect ratio and a photorealistic live-action style, explicitly avoiding illustration or comic aesthetics.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1200.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -18668,6 +19174,9 @@
       "prompt": "Horizontal triptych of a woman in a lavender field at sunrise.\nTop: Waist-up, eyes closed, pale lilac dress, one hand in hair, blurred lavender foreground.\nMiddle: Close-up, looking at camera, tousled hair, sheer scarf, sunlight on face.\nBottom: Three-quarter shot, holding lavender bouquet, flowing skirt, soft pastel sky, warm dreamy tones.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1208.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -18810,6 +19319,9 @@
       "prompt": "Capture the subject with 3 cameras at all times, using image 2 as the reference for layout.\nThe image is displayed from the top. Subject in swimming suit.\n\nCamera 1: Upper-body back view, walking along a sunlit water park walkway, colorful slides and pools on both sides,crowded, bright summer sunlight reflecting off the water. (Establishes scene and narrative direction.)\n\nCamera 2: Extreme close-up of face, excited and slightly nervous expression, eyes sparkling, background softly blurred with water and colorful attractions. (Emotional core and layout reference.)\n\nCamera 3: Low-angled three-quarter front view, capturing movement and energy, hands holding a pool float, sunlight glinting on wet surfaces across her silhouette. (Action detail and story tension.)",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1221.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -18889,6 +19401,9 @@
       "prompt": "A young woman reference form uploaded image kneeling in deep snow, captured in a front profile view while taking a photograph. \nShe is positioned in the center of the frame, leaning forward slightly to look through her camera's viewfinder. \n\nClothing : \n\nA thick, winter parka jacket in a color-block design featuring light pastel blue and white panels. She is wearing black winter trousers and thick, beige, knitted mittens/gloves. \n\n Accessories \nA professional black DSLR or mirrorless camera with a prominent zoom lens held in her hands.\nA mustard-yellow canvas backpack is strapped to her back, providing a colorful contrast to the cool tones. \n\nEnvironment \n\nA serene winter forest setting. The background is filled with tall pine trees heavily laden with fresh white snow. The ground is covered in a thick, soft layer of undisturbed snow.\n\nCamera \nMedium shot, eye-level angle. Shallow depth of field (bokeh) used to keep the subject sharp while softly blurring the snowy trees in the background. High-resolution photography style.\n\n Style \nPhotorealistic, cinematic winter lifestyle photography, nature portrait, serene and cold aesthetic, 8k resolution, highly detailed",
       "images": [
         "images/imp_1228.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -18935,6 +19450,9 @@
       "prompt": "{\"image_prompt_structure\":{\"style_and_atmosphere\":{\"aesthetic\":\"Dark, grainy vintage film look (e.g., Kodak Portra 800)\",\"mood\":\"Dreamy, melancholic, blurry, atmospheric\",\"effects\":\"Heavy motion blur due to movement and wind, soft focus\"},\"subject\":{\"identity_instruction\":\"Crucial: Do not alter facial features from reference identity.\",\"appearance\":{\"hair\":\"Long, wavy brown hair, heavily blown about by the wind\"},\"attire\":\"Off-shoulder white knitted top\"},\"action_and_pose\":{\"description\":\"Subject is leaning their upper back backwards out of an open car window while the car is moving.\"},\"setting\":{\"location\":\"Passenger seat window of a vintage car\",\"time\":\"Night\",\"background\":\"Completely blurred streaks of dark city or road lights\"},\"lighting\":{\"description\":\"Low light, likely illuminated by a warm, soft vintage camera flash mixed with ambient streaking streetlights.\"}}}",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1232.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -19025,6 +19543,9 @@
       "prompt": "A young, cheerful woman is captured in a fun and spontaneous moment, playing in an outdoor water fountain. She is completely wet, her dark hair drenched and dripping, and she has a wide, infectious smile, looking at the camera. She is wearing a loose summer dress in a wine or burgundy shade, with lace or textured details on the bodice and a bow at the waist, which is wet and slightly transparent in some areas, creating a light-through effect. She is barefoot, holding her shoes, a similar color to the dress, in her left hand. The pose is dynamic, with her slightly lifting the skirt of her dress with her right hand, as if dancing or having fun in the water. The fountain's splashes are visible around her, with water droplets sparkling in the light. In the background, a large, rustic flowerpot adds a touch of color and nature. The lighting is natural and bright, possibly from a sunny day, which enhances the water's shimmer and the joy of the scene.\n\nProfessional camera settings: Camera: Full-frame DSLR/Mirrorless with a high frame rate (FPS) to capture the movement of the water. Lens: 50mm f/1.4 or 85mm f/1.8 (for a full-body close-up that highlights the model and the environment). Aperture (f-stop): f/3.5 - f/5.6 (to ensure sharpness on the model and water splashes, while the background remains slightly blurred). ISO: 200 - 400 (to take advantage of daylight). Shutter speed: 1/1000s - 1/2000s (essential for freezing water droplets and movement). Lighting: Direct, abundant natural sunlight, ideally in the morning or late afternoon for a softer glow. The light should come from a direction that makes the water droplets sparkle. A silver reflector can be used discreetly to fill in shadows and highlight the face.\n\nInstructions for the \"nano banana\": Instruct the model to pose in a water fountain, completely wet, with wet hair and a wide, cheerful smile, looking at the camera. She should wear a wine-colored summer dress and be barefoot, holding her shoes in her hand. The pose should be dynamic, as if she were dancing, with her hand lifting the skirt of her dress. The splashes of water from the fountain should be visible around her.\n\n\"Please use the female user's reference photo to apply all of her facial features, facial structure, eye color, skin tone, hair style, and color to the female figure in the image.\"",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1240.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -19065,6 +19586,9 @@
       "prompt": "Beautiful woman with a perfectly proportioned figure, smiling happily and naturally, posing beside a large cheerful snowman in deep fresh snow, heavy snowfall all around, wearing a cream-colored tight knit sweater with realistic fabric texture, elegant burgundy wool scarf wrapped warmly around her neck, fitted grey leggings suitable for winter, natural confident pose, relaxed body language, detailed realistic face with soft freckles, bright expressive eyes, gentle rosy cheeks from the cold, subtle natural makeup, glossy lips, flowing hair with individual strands visible, snowflakes resting on hair and clothing, charming snowy European alpine village in the background, traditional wooden chalets with sloped roofs covered in thick snow, warm glowing windows creating cozy contrast, snow-covered trees and pathways, visible footprints in the snow, cinematic winter lighting with soft diffused highlights, cold blue tones balanced by warm ambient light, shallow depth of field, ultra-high resolution, photorealistic style, hyper-detailed textures, realistic skin tones, crisp focus, professional photography look, magical winter wonderland atmosphere, cozy yet cinematic mood, masterpiece quality, sharp, clean, flawless composition",
       "images": [
         "images/imp_1244.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -19111,6 +19635,9 @@
       "prompt": "אישה יושבת על עדן החלון בפיג'מת משי, קוראת ספר בזמן שיורד שלג בחוץ, חתול מתכרבל לידה, אווירת \"Hygge\" סקנדינבית חמימה.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1248.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -19167,6 +19694,9 @@
       "prompt": "A young Japanese beauty sitting beside a train window, turning her head back toward the camera with a calm, slightly distant expression. soft sunset light coming through the window, warm tones. she wears a white lace camisole with an exposed back, smooth skin, long straight black hair with blunt bangs, and a light-colored beret. blurred scenery outside the window, slight reflections on the glass. cinematic film style, fine film grain, subtle film grain texture, soft focus, shallow depth of field, warm atmosphere, nostalgic mood. ultra-realistic portrait photography, 85mm lens, F1.4, soft lighting, high detail. --ar 9:16",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1253.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -19210,6 +19740,9 @@
       "prompt": "{\n  \"subject\": {\n    \"description\": \"Young woman with a cool, edgy aesthetic\",\n    \"features\": {\n      \"hair\": \"Messy, shoulder-length dark brunette bob with soft waves and wispy bangs\",\n      \"makeup\": \"Dewy skin, glossy peach-toned lips, subtle winged eyeliner, and defined brows\",\n      \"notable_details\": \"Silver eyebrow piercing on her right brow, long manicured nails with a mix of nude and dark brown polish\"\n    },\n    \"pose\": \"Sitting in a car, looking directly at the camera with a confident expression, one hand raised with a finger touching her bottom lip\"\n  },\n  \"fashion\": {\n    \"clothing\": \"Black oversized t-shirt with bold blue and pink graphic lettering\",\n    \"accessories\": \"Small, rectangular 90s-style black sunglasses with gold metal frames, worn slightly down the bridge of the nose\"\n  },\n  \"environment\": {\n    \"setting\": \"Inside a car at night\",\n    \"background\": \"Car interior with leather seats, blurry city lights and a green traffic light visible through the window\",\n    \"lighting\": \"Low-light indoor car setting, soft cool-toned overhead cabin light, subtle flash effect creating soft shadows\"\n  },\n  \"technical_specs\": {\n    \"camera_style\": \"High-quality mobile phone selfie, slight film grain\",\n    \"composition\": \"Medium shot, portrait orientation\",\n    \"color_palette\": [\"Deep black\", \"Electric blue\", \"Warm brunette\", \"Soft peach\", \"Muted gold\"]\n  }\n}",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1257.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -19220,6 +19753,9 @@
       "prompt": "young woman, short dark hair, streetwear, black ripped denim jacket, graphic t-shirt, black leather pants, high-top sneakers, hoop earrings, crossbody bag, sitting on black chair (slightly turned, one leg extended), direct gaze, minimal light grey studio, soft even lighting, cinematic --ar 16:9 --v 7.0",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1258.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -19256,6 +19792,9 @@
       "prompt": "Please take a photo in the photo studio, using the female face from the attached photo.\nThe shooting angle is frontal, with a white studio background, and the female is sitting on a chair.\nShe was dressed in a full set of white attire: a white suit jacket, a white skirt, and white high heels.\nShe has an elegant posture, with her chin resting on her hand, and a small white rose in her hand.\nThe soft light of the setting sun shone through the windows, casting a warm glow on the walls of the photo studio.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1261.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -19286,6 +19825,9 @@
       "prompt": "A 100% ultra-realistic photo. The photo features a female person with the exact face and facial details from the uploaded reference image.\nScene Description\nThe person  in a modern, minimalist studio sitting on a large, Black, 3D  sculpture of the word 【BRILL】.\nComposition & Style\n- The overall style is minimal and contemporary.\n- The letters of the word sculpture spelled out on the ground in front of a person, height reaching the person’s waist.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1264.jpg"
+      ],
+      "cats": [
+        "products"
       ]
     },
     {
@@ -19389,6 +19931,9 @@
       "prompt": "A candid snapshot of a young woman with straight black hair, blunt bangs, large expressive eyes, and fair skin, standing casually in a bustling Tokyo street, wearing a low-cut crop top and high-waisted shorts, slight motion blur on the edges, natural daylight filtering through buildings, captured as if from a hidden angle with a smartphone camera. --ar 9:16 --v 7.0 --s 50 --raw ",
       "images": [
         "images/imp_1274.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -19409,6 +19954,9 @@
       "prompt": "A photorealistic full-body shot of a stunning young woman standing at center court of a professional basketball arena. She is wearing a customized, cropped basketball jersey and matching loose athletic shorts, paired with high socks and high-top sneakers. She holds a basketball against her hip with one hand, looking confidently at the camera. Her hair is tied back in a high, sporty ponytail. The background features a blurred indoor arena with bright stadium lights reflecting off the polished wooden floor. The lighting is dramatic and crisp, capturing a K-pop idol aesthetic.",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1276.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -19475,6 +20023,9 @@
       "prompt": "A cinematic and ultra-realistic image of a confident woman (same face as uploaded reference) stepping into a powerful helicopter on a windswept landing strip during golden hour. She wears a dramatic layered technical light-gray jacket that billows wildly from the spinning rotor blades. One foot firmly planted on the boarding ramp, one hand gripping the edge of the hatch reflecting the blazing sky. Her expression is steely and fearless, like an elite operative embarking on a high-stakes mission. Dust, sparks, and dry leaves swirl dramatically around her from the helicopter engines, while cinematic lighting and subtle motion blur emphasize the sense of speed, power, and purpose in the scene",
       "images": [
         "images/imp_1282.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -19535,6 +20086,9 @@
       "prompt": "Ultra-realistic cinematic studio scene of a woman supervising a miniature behind-the-scenes film set starring her tiny self.\nShe checks a miniature monitor while the small figure stands near scaled lighting rigs.\nBoth versions share identical facial features, body language, and clothing.\nMini director chairs, cables, clapperboards, and lenses fill the studio space.\nLow-key cinematic lighting emphasizes realism and depth.\nShallow depth of field, immersive framing, ultra-photorealistic 8K detail.\nStyle: cinematic studio realism, no illustration, no CGI.",
       "images": [
         "images/imp_1288.jpg"
+      ],
+      "cats": [
+        "custom_1777207890896"
       ]
     },
     {
@@ -19545,6 +20099,9 @@
       "prompt": "{ \"vibe_title_en\": \"Ivory Surrender\", \"master_prompt\": \"A hyper-realistic avant-garde editorial photograph of The Protagonist experiencing an 'Ethereal Surrender.' The subject's head is gently tilted back, eyes softly closed in a state of peaceful, dreamlike submission, radiating a calm, transparent vulnerability. They are wearing an impossibly intricate, towering headpiece and structured bodice constructed entirely of real cream-colored plaster roses, heavy matte ceramic spheres, intricate lacework, and antique gold filigree. This surreal attire is captured as a high-budget practical effect with tangible physical weight, casting real shadows. The setting is a deeply claustrophobic, relentlessly busy master sculptor's atelier. The foreground and background are choked with thousands of pearl- \"meta\": { \"intent\": \"Avant-Garde Editorial  Photography\", \"priorities\": \"Surrealism, Heavy Clutter, Backlit Halation, Intricate Textures, Emotional Surrender\", \"device_profile\": \"High-Resolution Displays\" }, \"frame\": { \"aspect\": \"3:4\", \"composition\": \"Symmetrical Frontal Portrait amidst Chaos\", \"layout\": \"Center-weighted subject engulfed by suspended foreground bokeh and a deeply cluttered background\", \"camera_angle\": \"Eye-level, straight on\", \"tilt_roll_degrees\": \"0\" }, \"subject\": { \"gender\": \"Female\", \"identity\": \"The Protagonist\", \"demographics\": \"Ageless, ethereal presence\", \"face\": \"Relaxed features, pristine porcelain- \"hair\": \"Obscured by or integrated into the massive surreal headpiece\", \"body\": \"Static, heavily burdened by the surreal  garments yet completely relaxed\", \"expression\": \"Serene, weightless, dreamlike submission\", \"pose\": \"Head gently tilted back, eyes closed, radiating calm vulnerability\" }, \"wardrobe_accessories\": { \"garments\": [ { \"item\": \"Lace- \"material\": \"Hardened cream plaster, raw silk, intricate physical lacework\", \"color\": \"Ivory, cream, soft white\", \"fit\": \"Rigidly sculpted but organically flowing into the environment\" } ], \"accessories\": [ { \"item\": \"Massive towering floral and spherical headpiece\", \"color\": \"Cream, antique gold, matte white\", \"material\": \"Matte ceramic spheres, carved resin roses, gold wire filigree\", \"brand_style\": \"Avant-Garde High-Fashion Sculptural\" } ] }, \"environment\": { \"setting\": \"Claustrophobic, wildly cluttered master sculptor's atelier\", \"surfaces\": \"Dusty wooden workbenches, shattered plaster molds, chalk-covered floors\", \"depth\": \"Shallow focus with dense foreground interference of suspended spheres and a deeply cluttered, hazy background\", \"atmosphere\": \"Thick with floating chalk dust and heavily backlit ethereal haze\", \"lens_interaction\": \"Massive glowing lens flares, halation around edges, milky contrast bleed\" }, \"lighting\": { \"key\": \"Intense, blown-out diffused backlight from directly behind the subject\", \"fill\": \"Soft, bounced ambient wrap-around light gently defining the face\", \"rim\": \"Overwhelming, bleeding rim light dissolving the edges of the silhouette\", \"shadows\": \"Lifted, milky shadows with low contrast and rich midtones\", \"color_temperature\": \"Warm, creamy 5500K with glowing amber undertones\", \"sensor_flare\": \"Prominent anamorphic-style bloom, circular cinematic lens flares, and edge bleeding\" }, \" camera\": { \"lens_type\": \"Medium Format Prime\", \"focal_length\": \"100mm\", \"aperture\": \"f/2.2\", \"focus\": \"Critically sharp on the subject's closed eyelashes and immediate cheek texture\", \"sensor_format\": \"Medium Format (Hasselblad H6D)\", \"perspective_distortion\": \"Zero distortion, highly compressed background\" }, \"post_processing\": { \"color\": \"Desaturated pastels, dominant ivory, cream, and muted antique gold\", \"tonality\": \"High-key, low contrast, hazy blown-out highlights\", \"texture\": \"Fine analog film grain (Kodak Portra 160), tactile micro-contrast on focused physical elements\", \"digital_sharpening\": \"None, optical softness and halation preserved\", \"chromatic_aberration\": \"Subtle organic color fringing at the high-contrast blown-out edges\" }, \"negative_specifications\": [ \"Neon\", \"Cyberpunk\", \"Minimalist\", \"Blank background\", \"CGI\", \"Plastic skin\", \"Sharp digital edges\", \"3D render\", \"Daylight outdoors\", \"Empty space\", \"Modern office\", \"Coffee shop\", \"Open eyes\", \"Looking at camera\" ]\n}",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1289.jpg"
+      ],
+      "cats": [
+        "fantasy"
       ]
     },
     {
@@ -19922,6 +20479,11 @@
       "prompt": "Create a colorful Y2K scrapbook–style poster collage with a vibrant, chaotic-yet-balanced aesthetic. The image should feel like an early-2000s magazine scrapbook filled with stickers, cutouts, doodles, and playful graphic elements. The overall style is frameless, highly artistic, visually dense, and extremely engaging.\n\nThe same young Y2K-styled woman appears multiple times throughout the collage, wearing the same outfit and hairstyle in every appearance, but shown in different poses and cutout-style compositions. Her identity must remain perfectly consistent across all instances, with full face-lock accuracy and no facial distortion or changes.\n\nThe collage includes the following scenes and poses:\n\nA close-up shot where she forms a heart shape with her fingers\n\nA full-body squatting pose, resting her chin on her hand while holding a white Polaroid camera\n\nA mid-shot touching her cheek while blowing pink bubblegum\n\nA mid-shot smiling elegantly while holding a cat\n\nA seated pose with one eye winking and a peace sign gesture\n\nA mid-shot holding a bouquet of daisy flowers\n\nAt the center of the composition is the main subject in a confident, playful Y2K pose. She slightly pops one hip to the side, faces the camera directly with a cute-cool expression and a subtle pout, and holds a lens-flare keychain in one hand. The vibe is candid, nostalgic, and unmistakably early 2000s.\n\nHer outfit consists of a cropped oversized pastel sweater decorated with embroidered patches, paired with a pastel skirt and a white belt. She wears white ankle socks with colorful pastel stripes and white sneakers. Accessories include colorful plastic bracelets, chunky bright rings, and a sparkling belly chain.\n\nHer hairstyle is a classic Y2K half-up, half-down look with wavy dark brown hair. The lower strands are tinted bubblegum pink, with thin front tendrils framing the face and pastel flower clips adding a playful touch.\n\nThe collage is packed with additional visual elements such as heart, star, and butterfly stickers, retro sparkles, Polaroid frames, neon outlines, doodle borders, and magazine-style cutout text reading “SO CUTE!”, “199X!”, and “GIRL VIBES”. The lighting is pastel and dreamy, with a glossy retro glow and holographic textures, pastel gradients, glitter accents, and playful doodles layered throughout.\n\nColor grading is bold and cinematic with a neon Y2K palette. Lighting resembles soft on-camera flash. Skin texture appears smooth and glossy, consistent with high-end Y2K editorial imagery. The rendering is high-detail, hyperrealistic within the Y2K aesthetic, in ultra-high resolution, with a perfectly balanced and artistic composition.\n\nAvoid anything that breaks the Y2K style. Do not include modern 2020s fashion, messy layouts, blurred faces, distorted hands, extra limbs, warped facial features, low resolution, heavy grain, muted colors, watermarks, or visible AI artifacts. The final image should feel polished, nostalgic, and authentically Y2K rather than modern or realistic in a contemporary sense.",
       "images": [
         "images/imp_1322.jpg"
+      ],
+      "cats": [
+        "custom_1777207890896",
+        "custom_1777209981017",
+        "products"
       ]
     },
     {
@@ -19942,6 +20504,9 @@
       "prompt": "A young man in his early 20s with a strong hero aura that feels earned, not loud. His presence is calm, grounded, and confident, the kind that does not need to prove itself. He stands tall with relaxed shoulders, hands loosely at his sides or tucked into wide pockets, posture effortless but powerful. His expression is focused and steady, eyes carrying quiet determination and depth.\nHe wears a unique baggy outfit that blends modern streetwear with a heroic edge. An oversized structured jacket or long coat drapes over a loose fit hoodie or high neck top, creating layered volume. Wide leg trousers fall naturally with soft folds, slightly cropped at the ankle, paired with chunky boots or clean sneakers. The fabric looks heavy and premium, moving slowly with his steps.\nThe color palette is bold but controlled, deep black, charcoal, muted olive, stone grey, or a hint of rust or steel blue. Subtle details like stitched panels, utility straps, asymmetrical cuts, or textured seams add character",
       "images": [
         "https://brill-banana-prompts-v3.vercel.app/images/imp_1324.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -20091,6 +20656,9 @@
       "prompt": "A close-up photograph capturing a female cellist with dark, graying hair and glasses perched on her head, intensely focused on playing her instrument on a concert hall stage. She is positioned center-right, wearing a black blazer. Her warm brown cello is in the foreground. Surrounding her in the background are other cellists from her section, a conductor raising his baton, and a blurred audience, all bathed in warm stage lighting. The depth of field highlights her and her cello. This image has been created to closely replicate the visual information contained within the reference image provided.",
       "images": [
         "/images/custom_added_1775758572651_img0.jpg"
+      ],
+      "cats": [
+        "portrait"
       ]
     },
     {
@@ -45638,7 +46206,9 @@
       "key": "added_import_1778441889658_113",
       "title": "Cannes Film Festival",
       "cat": "מפורסמים, מקומות, תדמית",
-      "cats": [],
+      "cats": [
+        "celebrities"
+      ],
       "prompt": "A low-angle close-up shot in a three-piece tuxedo, confidently walking the red carpet at the Cannes Film Festival. Paparazzi flashbulbs erupt all around the person. They are wearing designer shades, holding a gold statue in one hand, and giving a smug smile. Velvet ropes, elegant evening wear, and modern architecture in the background.",
       "images": [
         "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_import_1778441889658_113.jpg"
@@ -47711,7 +48281,9 @@
       "key": "added_import_1778441889658_280",
       "title": "Christ",
       "cat": "מקומות, תדמית",
-      "cats": [],
+      "cats": [
+        "celebrities"
+      ],
       "prompt": "✝️🕶️ Editorial Theme: \"Insane at the Top\"\n\n🎭 Concept\n\nAn editorial essay set on the staircases of Christ the Redeemer in Rio de Janeiro. A person is sitting with a firm posture, wearing a black t-shirt with the word \"INSANE\", light blue shorts, white sneakers, and dark sunglasses. The sideways glance and frontal composition create a contrast between urban attitude and the spiritual monument in the background. The presence of tourists around adds context and spontaneity to the scene.\n\n🎥 Technical Specifications\n\nCamera: Canon EOS R5 or Nikon Z9\n\nLens: 50mm f/1.2 — ideal for portraits with emotional depth and soft focus\n\nCamera angle: frontal, slightly low, with vertical framing (4:5 format)\n\nResolution: Ultra HD (8K), capturing details in skin, fabric, staircase, and sky\n\nLighting: intense natural light, with defined shadows and reflections on the glasses and sneakers\n\nVisual style: urban editorial with spiritual aesthetic and cultural contrast\n\n🧍‍♂️ Pose\n\nSitting in Silence: a person sitting with hands on knees, looking to the side — introspective and firm expression\n\n🌟 Visual Highlights\n\nMonument in the Background: Christ the Redeemer frames the scene with grandeur\n\n\"INSANE\" Print: creates a contrast between attitude and spirituality\n\nStaircase Texture: adds depth and urban context\n\nMood: firm, contemplative, and cultural — ideal for editorials mixing fashion, identity, and Brazilian landscape",
       "images": [
         "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_import_1778441889658_280.jpg"
@@ -47969,7 +48541,9 @@
       "key": "added_import_1778441889658_301",
       "title": "Christ",
       "cat": "מקומות, תדמית",
-      "cats": [],
+      "cats": [
+        "celebrities"
+      ],
       "prompt": "✝️🕶️ Editorial Theme: \"Insane at the Top\"\n\n🎭 Concept\n\nAn editorial essay set on the staircases of Christ the Redeemer in Rio de Janeiro. A person is sitting with a firm posture, wearing a black t-shirt with the word \"INSANE\", light blue shorts, white sneakers, and dark sunglasses. The sideways glance and frontal composition create a contrast between urban attitude and the spiritual monument in the background. The presence of tourists around adds context and spontaneity to the scene.\n\n🎥 Technical Specifications\n\nCamera: Canon EOS R5 or Nikon Z9\n\nLens: 50mm f/1.2 — ideal for portraits with emotional depth and soft focus\n\nCamera angle: frontal, slightly low, with vertical framing (4:5 format)\n\nResolution: Ultra HD (8K), capturing details in skin, fabric, staircase, and sky\n\nLighting: intense natural light, with defined shadows and reflections on the glasses and sneakers\n\nVisual style: urban editorial with spiritual aesthetic and cultural contrast\n\n🧍‍♂️ Pose\n\nSitting in Silence: a person sitting with hands on knees, looking to the side — introspective and firm expression\n\n🌟 Visual Highlights\n\nMonument in the Background: Christ the Redeemer frames the scene with grandeur\n\n\"INSANE\" Print: creates a contrast between attitude and spirituality\n\nStaircase Texture: adds depth and urban context\n\nMood: firm, contemplative, and cultural — ideal for editorials mixing fashion, identity, and Brazilian landscape",
       "images": [
         "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_import_1778441889658_301.jpg"
@@ -48952,7 +49526,9 @@
       "key": "added_import_1778441889658_381",
       "title": "Guardians Rather Than Threats",
       "cat": "מקצועות, עם בעלי חיים, פנטזיה, תדמית",
-      "cats": [],
+      "cats": [
+        "products"
+      ],
       "prompt": "A hyper-realistic, cinematic daytime scene in an extremely cold wilderness camp.\n\nThe person from the reference photos is sitting on a large fallen tree trunk lying horizontally on the frozen ground, its rough bark covered with patches of snow and ice. A freshly lit campfire burns just in front of the person, flames fighting against the icy wind. Snow and frost cover the ground, and the breath of the person is clearly visible in the freezing air.\n\nTwo large, powerful wolves stay close—one positioned slightly ahead of the person, standing alert and watchful, the other just behind and to the side, calm but dominant—clearly acting as guardians rather than threats. Their thick fur is detailed with frost and snow particles.\n\nThe person wears rugged cold-weather clothing: a dark insulated jacket, tactical pants, heavy boots, and gloves. The posture of the person is grounded and confident while sitting on the log, legs apart for balance, forearms resting naturally on the thighs, gaze fixed forward as if anticipating something unseen beyond the camp. The scene feels dynamic: strong cold wind pushing snow sideways, subtle movement in the wolves’ fur, glowing embers drifting from the fire.\n\nCamera placed at mid-distance with a slightly low angle to enhance realism, strength, and scale. Natural cold daylight with a muted color palette—icy blues and steel grays contrasted by the warm orange glow of the fire.\n\nUltra-realistic textures, cinematic depth of field, sharp focus, dramatic yet realistic lighting. Full-body figures visible, fit physique, strict adherence to reference photos, maximum realism.\n\nNo fantasy elements, no stylization, no exaggerated effects — raw, grounded survival atmosphere.",
       "images": [
         "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_import_1778441889658_381.jpg"
@@ -53248,7 +53824,9 @@
       "key": "added_import_1778441889658_729",
       "title": "Guardians Rather Than Threats",
       "cat": "מקצועות, עם בעלי חיים, פנטזיה, תדמית",
-      "cats": [],
+      "cats": [
+        "products"
+      ],
       "prompt": "A hyper-realistic, cinematic daytime scene in an extremely cold wilderness camp.\n\nThe person from the reference photos is sitting on a large fallen tree trunk lying horizontally on the frozen ground, its rough bark covered with patches of snow and ice. A freshly lit campfire burns just in front of the person, flames fighting against the icy wind. Snow and frost cover the ground, and the breath of the person is clearly visible in the freezing air.\n\nTwo large, powerful wolves stay close—one positioned slightly ahead of the person, standing alert and watchful, the other just behind and to the side, calm but dominant—clearly acting as guardians rather than threats. Their thick fur is detailed with frost and snow particles.\n\nThe person wears rugged cold-weather clothing: a dark insulated jacket, tactical pants, heavy boots, and gloves. The posture of the person is grounded and confident while sitting on the log, legs apart for balance, forearms resting naturally on the thighs, gaze fixed forward as if anticipating something unseen beyond the camp. The scene feels dynamic: strong cold wind pushing snow sideways, subtle movement in the wolves’ fur, glowing embers drifting from the fire.\n\nCamera placed at mid-distance with a slightly low angle to enhance realism, strength, and scale. Natural cold daylight with a muted color palette—icy blues and steel grays contrasted by the warm orange glow of the fire.\n\nUltra-realistic textures, cinematic depth of field, sharp focus, dramatic yet realistic lighting. Full-body figures visible, fit physique, strict adherence to reference photos, maximum realism.\n\nNo fantasy elements, no stylization, no exaggerated effects — raw, grounded survival atmosphere.",
       "images": [
         "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_import_1778441889658_729.jpg"
@@ -53540,7 +54118,9 @@
       "key": "added_import_1778441889658_753",
       "title": "Cannes Film Festival",
       "cat": "מפורסמים, מקומות, תדמית",
-      "cats": [],
+      "cats": [
+        "celebrities"
+      ],
       "prompt": "A low-angle close-up shot in a three-piece tuxedo, confidently walking the red carpet at the Cannes Film Festival. Paparazzi flashbulbs erupt all around the person. They are wearing designer shades, holding a gold statue in one hand, and giving a smug smile. Velvet ropes, elegant evening wear, and modern architecture in the background.",
       "images": [
         "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_import_1778441889658_753.jpg"
