@@ -1,4 +1,5 @@
 const https = require('https');
+const zlib  = require('zlib');
 
 const owner = 'Adibrill1';
 const repo  = 'brill-banana-prompts';
@@ -84,8 +85,16 @@ module.exports = async function handler(req, res) {
   }, 8000);
 
   try {
-    var body = req.body;
-    if (typeof body === 'string') body = JSON.parse(body);
+    var body;
+    if (req.headers['x-body-encoding'] === 'gzip+json') {
+      var chunks = [];
+      for await (var chunk of req) chunks.push(chunk);
+      var raw = Buffer.concat(chunks);
+      body = JSON.parse(zlib.gunzipSync(raw).toString('utf-8'));
+    } else {
+      body = req.body;
+      if (typeof body === 'string') body = JSON.parse(body);
+    }
     if (!body) {
       clearTimeout(hard); done = true;
       return res.status(400).json({ error: 'missing body' });

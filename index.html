@@ -6218,11 +6218,24 @@ async function publishChanges() {
     var svcCfg = JSON.parse(localStorage.getItem('bb_services_config') || 'null');
     if (svcCfg) stateToPost.servicesConfig = svcCfg;
 
-    var saveResp = await fetchWithRetry('/api/save', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ state: stateToPost })
-    }, 20000);
+    var saveBodyJson = JSON.stringify({ state: stateToPost });
+    var saveOpts;
+    if (typeof CompressionStream !== 'undefined' && saveBodyJson.length > 500000) {
+      var gzStream = new Blob([saveBodyJson]).stream().pipeThrough(new CompressionStream('gzip'));
+      var gzBuf = await new Response(gzStream).arrayBuffer();
+      saveOpts = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/octet-stream', 'X-Body-Encoding': 'gzip+json' },
+        body: gzBuf
+      };
+    } else {
+      saveOpts = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: saveBodyJson
+      };
+    }
+    var saveResp = await fetchWithRetry('/api/save', saveOpts, 20000);
 
     if (!saveResp.ok) {
       var saveErr = await saveResp.json().catch(function() { return {}; });
