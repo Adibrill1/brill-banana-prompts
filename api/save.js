@@ -183,7 +183,7 @@ module.exports = async function handler(req, res) {
     if (result.status !== 200 && result.status !== 201) {
       return res.status(500).json({ error: 'GitHub ' + result.status + ': ' + JSON.stringify(result.data).substring(0, 200) });
     }
-    res.status(200).json({ ok: true, state: newState });
+    res.status(200).json({ ok: true, _publishedAt: newState._publishedAt || Date.now() });
   } catch(e) {
     if (!done) { clearTimeout(hard); done = true; res.status(500).json({ error: e.message }); }
   }

@@ -6241,21 +6241,16 @@ async function publishChanges() {
       var saveErr = await saveResp.json().catch(function() { return {}; });
       throw new Error((saveErr && saveErr.error) || 'HTTP ' + saveResp.status);
     }
-    var rData = await saveResp.json();
-    if (rData.state) {
-      var savedLocalImgs = Object.assign({}, state.customImgs || {});
-      state = rData.state;
-      if (!state.customImgs) state.customImgs = {};
-      Object.keys(savedLocalImgs).forEach(function(k) {
-        var localVal = savedLocalImgs[k] || '';
-        var serverVal = state.customImgs[k] || '';
-        if (serverVal && !serverVal.startsWith('data:')) {
-          serverCustomImgs[k] = serverVal;
-        } else if (localVal.startsWith('data:') && !serverCustomImgs[k]) {
-          state.customImgs[k] = localVal;
-        }
-      });
-    }
+    var rData = await saveResp.json().catch(function() { return {}; });
+    // Server now returns minimal { ok, _publishedAt } to avoid hitting Vercel's
+    // 4.5MB response body limit on large states. The local stateToPost IS the
+    // canonical post-save state - we already have it in memory.
+    state = stateToPost;
+    if (rData._publishedAt) state._publishedAt = rData._publishedAt;
+    Object.keys(state.customImgs || {}).forEach(function(k) {
+      var v = state.customImgs[k] || '';
+      if (v && !v.startsWith('data:')) serverCustomImgs[k] = v;
+    });
     localStorage.setItem('nb_state', JSON.stringify(state));
     pendingChanges = false;
     document.getElementById('unsavedDot').classList.remove('show');
