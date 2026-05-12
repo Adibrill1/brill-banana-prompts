@@ -4031,7 +4031,10 @@
     "added_import_1778441889658_890": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_import_1778441889658_890.jpg",
     "added_import_1778441889658_891": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_import_1778441889658_891.jpg",
     "added_import_1778441889658_892": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_import_1778441889658_892.jpg",
-    "added_import_1778441889658_893": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_import_1778441889658_893.jpg"
+    "added_import_1778441889658_893": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_import_1778441889658_893.jpg",
+    "added_1778564585288": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1778564585288.jpg",
+    "added_1778564639948": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1778564639948.jpg",
+    "added_1778564715472": "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1778564715472.jpg"
   },
   "added": [
     {
@@ -55858,6 +55861,39 @@
       "images": [
         "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_import_1778441889658_893.jpg"
       ]
+    },
+    {
+      "key": "added_1778564585288",
+      "id": "חדש",
+      "title": "אחד להרבה",
+      "cat": "",
+      "prompt": "https://aistudio.google.com/u/1/prompts/1rrKXXiDGjAKJxlaU7qvgmLAFpBp0s6gD",
+      "cats": [],
+      "images": [
+        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1778564585288.jpg"
+      ]
+    },
+    {
+      "key": "added_1778564639948",
+      "id": "חדש",
+      "title": "החלף ל- Person",
+      "cat": "",
+      "prompt": "https://aistudio.google.com/u/1/prompts/1TINLc9FuQjZMSZ887Bp_RwHgAQkm5KUL",
+      "cats": [],
+      "images": [
+        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1778564639948.jpg"
+      ]
+    },
+    {
+      "key": "added_1778564715472",
+      "id": "חדש",
+      "title": "תמונה לפרומפט",
+      "cat": "",
+      "prompt": "https://aistudio.google.com/u/1/prompts/1wgFwAiqumjILwGvcJpxNHo_gysBKUDwO",
+      "cats": [],
+      "images": [
+        "https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/images/custom_added_1778564715472.jpg"
+      ]
     }
   ],
   "order": [
@@ -59753,7 +59789,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1778564302457,
+  "_publishedAt": 1778564741087,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
