@@ -83,6 +83,9 @@ h1{text-align:center;color:#f5a623;font-size:2em;margin-bottom:6px}
 #freeToggleBtn.free-partial:hover{background:#ffc04d}
 #freeToggleBtn.free-full{background:#4caf50;color:#fff;border-color:#4caf50}
 #freeToggleBtn.free-full:hover{background:#66bb6a}
+#freeToggleBtn.free-catalog{background:#2196f3;color:#fff;border-color:#2196f3}
+#freeToggleBtn.free-catalog:hover{background:#42a5f5}
+body.catalog-mode .copy-btn{display:none !important}
 .btn-add{background:#4caf50;color:#fff}
 .btn-add:hover{background:#66bb6a}
 .btn-publish{background:#e91e63;color:#fff}
@@ -5250,7 +5253,7 @@ function getFreeMode() {
 function shouldShowFull(key) {
   if (!ADMIN_UNLOCKED && isPremiumUser()) return true;
   var mode = getFreeMode();
-  if (mode === 'full') return true;
+  if (mode === 'full' || mode === 'catalog') return true;
   if (mode === 'partial') return !!(state.freePrompts && state.freePrompts[key]);
   return false;
 }
@@ -5399,12 +5402,13 @@ function updateFreeCounter() {
   el.textContent = '🆓 ' + count + '/50';
   el.classList.toggle('at-limit', count >= 50);
   var mode = getFreeMode();
-  document.body.classList.toggle('free-full', mode === 'full');
+  document.body.classList.toggle('free-full', mode === 'full' || mode === 'catalog');
+  document.body.classList.toggle('catalog-mode', mode === 'catalog');
   var btn = document.getElementById('freeToggleBtn');
   if (btn) {
-    var labels = { off: 'כבוי', partial: 'חינם חלקי', full: 'חינם מלא' };
+    var labels = { off: 'כבוי', partial: 'חינם חלקי', full: 'חינם מלא', catalog: 'קטלוג' };
     btn.textContent = labels[mode] || 'כבוי';
-    btn.classList.remove('free-off', 'free-partial', 'free-full');
+    btn.classList.remove('free-off', 'free-partial', 'free-full', 'free-catalog');
     btn.classList.add('free-' + (mode || 'off'));
   }
   // Show category filter only in partial mode
@@ -5689,13 +5693,14 @@ function toggleFreeEnabled() {
   var mode = getFreeMode();
   if (mode === 'off') mode = 'partial';
   else if (mode === 'partial') mode = 'full';
+  else if (mode === 'full') mode = 'catalog';
   else mode = 'off';
   state.freeMode = mode;
   delete state.freeEnabled;
   applyPaywallToAll();
   updateFreeCounter();
   markUnsaved();
-  var msgs = { off: '🔴 גישה חינמית כבויה', partial: '🟡 חינם חלקי הופעל', full: '🟢 חינם מלא הופעל' };
+  var msgs = { off: '🔴 גישה חינמית כבויה', partial: '🟡 חינם חלקי הופעל', full: '🟢 חינם מלא הופעל', catalog: '🔵 מצב קטלוג הופעל' };
   showToast(msgs[mode]);
 }
 
@@ -5858,7 +5863,8 @@ function getCheckedCats() {
 }
 var activeCat = '';
 function isFreeCard(key) {
-  return getFreeMode() === 'full' || !!(state.freePrompts && state.freePrompts[key]);
+  var m = getFreeMode();
+  return m === 'full' || m === 'catalog' || !!(state.freePrompts && state.freePrompts[key]);
 }
 function buildCatFilters() {
   var bar = document.getElementById('catFilterBar');
@@ -6259,6 +6265,7 @@ async function publishChanges() {
     var freeCount = Object.keys(state.freePrompts || {}).length;
     var mode = getFreeMode();
     var statusMsg = mode === 'full'    ? '\u{1F7E2} \u05d7\u05d9\u05e0\u05dd \u05de\u05dc\u05d0 - \u05db\u05dc \u05d4\u05e4\u05e8\u05d5\u05de\u05e4\u05d8\u05d9\u05dd \u05d7\u05d9\u05e0\u05de\u05d9\u05d9\u05dd'
+                  : mode === 'catalog' ? '\u{1F535} \u05de\u05e6\u05d1 \u05e7\u05d8\u05dc\u05d5\u05d2 - \u05db\u05e8\u05d8\u05d9\u05e1\u05d9\u05d5\u05ea \u05dc\u05e6\u05e4\u05d9\u05d9\u05d4 \u05d1\u05dc\u05d1\u05d3 (\u05dc\u05dc\u05d0 \u05d4\u05e2\u05ea\u05e7\u05d4)'
                   : mode === 'partial' ? '\u{1F7E1} \u05d7\u05d9\u05e0\u05dd \u05d7\u05dc\u05e7\u05d9 - ' + freeCount + ' \u05e4\u05e8\u05d5\u05de\u05e4\u05d8\u05d9\u05dd'
                   :                     '\u{1F534} \u05d2\u05d9\u05e9\u05d4 \u05d7\u05d9\u05e0\u05de\u05d9\u05ea \u05db\u05d1\u05d5\u05d9\u05d4 (' + freeCount + ' \u05d1\u05e8\u05e9\u05d9\u05de\u05d4)';
     showToast('\u2705 \u05e4\u05d5\u05e8\u05e1\u05dd - ' + statusMsg, 5000);
