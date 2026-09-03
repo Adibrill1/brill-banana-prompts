@@ -1,4 +1,5 @@
 const https = require('https');
+const zlib  = require('zlib');
 
 const owner = 'Adibrill1';
 const repo  = 'brill-banana-prompts';
@@ -61,7 +62,24 @@ module.exports = async function handler(req, res) {
       return res.status(200).json(empty);
     }
 
+    // Parse to validate — a corrupt state.json falls through to the catch below
+    // rather than being served to the client.
     var content = JSON.parse(jsonStr);
+
+    // state.json has grown past Vercel's ~4.5MB response limit, and a function
+    // that exceeds it fails outright. The client's fetch then hits its .catch()
+    // and silently keeps the baked-in fallback state, which carries no cats[] —
+    // so every category filter comes back empty while "all" still works.
+    // Gzip keeps the response about 0.9MB. Browsers always send this header and
+    // decompress transparently, so the client needs no change.
+    if (/\bgzip\b/.test(String(req.headers['accept-encoding'] || ''))) {
+      var gz = zlib.gzipSync(jsonStr);
+      res.setHeader('Content-Type', 'application/json');
+      res.setHeader('Content-Encoding', 'gzip');
+      res.setHeader('Content-Length', gz.length);
+      res.setHeader('Vary', 'Accept-Encoding');
+      return res.status(200).end(gz);
+    }
     res.status(200).json(content);
   } catch(e) {
     res.status(200).json(empty);
