@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          sparse-checkout: index.html
+          sparse-checkout-cone-mode: false
 
       - name: Replace ADMIN_HASH
         run: |
