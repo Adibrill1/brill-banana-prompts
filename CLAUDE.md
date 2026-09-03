@@ -46,6 +46,19 @@ Three things learned doing this:
   `api/save.js` accepts gzip (`X-Body-Encoding: gzip+json`) and deliberately
   returns only `{ok, _publishedAt}` — do not make it echo the state back, that
   reintroduces a 413.
+- The same limit bites on the **read** side as `state.json` grows: at 5.06MB
+  `/api/state` could not return it at all, so the function failed and the
+  client's `fetch('/api/state').catch()` silently kept the baked-in fallback
+  state. `api/state.js` now gzips its response (~5MB → ~0.87MB); browsers
+  decompress transparently. If `state.json` keeps growing, that headroom is
+  finite — splitting the payload is the next step, not a bigger gzip.
+- **That fallback is a trap when debugging.** The inline `var state` in
+  `index.html` (line ~4948) is an old snapshot with **no `cats[]` and no
+  `customCats`**. When `/api/state` fails the page still renders and looks
+  healthy, but every category filter returns zero while "הכל" works — because
+  "all" short-circuits before the `cats` check. A category filter that shows
+  nothing is a symptom of the state fetch failing, not of the filter code.
+  Check `/api/state` in the Network tab before reading `filterCards`.
 - Images are uploaded in a separate phase before the state save, one per
   request, and compressed on import. Raw camera-resolution base64 will 413.
 - Commits titled `Update state` come from the live site's publish flow, not
