@@ -1,0 +1,30 @@
+name: Patch admin hash
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Replace ADMIN_HASH
+        run: |
+          set -e
+          OLD=5e197c727f35540497cc6ccf587287aa24793be3c54a89ee8009a2520b286fd0
+          NEW=23d1d954d91fc0899774810ea01ec11bbbf1dc4d155ad722c527da4db1df6ca0
+          test "$(grep -c "$OLD" index.html)" = "1"
+          sed -i "s/$OLD/$NEW/" index.html
+          test "$(grep -c "$NEW" index.html)" = "1"
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Update admin password hash"
+          git push
