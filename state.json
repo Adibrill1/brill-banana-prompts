@@ -50145,8 +50145,8 @@
       "title": "Portrait with Fish",
       "cat": "עם בעלי חיים, תדמית",
       "cats": [
-        "animals",
-        "portrait"
+        "portrait",
+        "products"
       ],
       "prompt": "(use facial description from the uploaded image)\nFace match 99.9999%\nA black and white portrait of a person. The composition uses an extreme wide-angle lens (or \"fish-eye\" perspective) and a low camera angle to create a dramatic, distorted effect. The person is angled slightly away from the camera, looking back over their shoulder with an intense, serious, and focused expression.\n\nThe right hand of the person is aggressively extended directly toward the camera, dramatically filling the foreground. The fingers are slightly curled, creating a commanding or demanding gesture.\nLighting and Style: High-contrast black and white photography with dramatic, hard studio lighting that creates deep shadows and stark highlights, particularly on the extended hand and face. The background is a pure, bright white or light gray, isolating the person and maximizing the contrast. The image should have a gritty, cinematic, and intense feel.\nAttire:\nThe person is wearing a layered, semi-casual outfit, including a collared shirt (possibly striped or textured) under a dark, long jacket or overcoat with prominent buttons.\n\nStyle: Cinematic, dramatic portrait, high contrast, film noir.\nTechnique: Wide-angle, low-angle perspective, exaggerated foreground.\nQuality: Professional studio photography, ultra-realistic, 8k resolution.",
       "images": [
@@ -54369,8 +54369,8 @@
       "title": "Portrait with Fish",
       "cat": "עם בעלי חיים, תדמית",
       "cats": [
-        "animals",
-        "portrait"
+        "portrait",
+        "products"
       ],
       "prompt": "(use facial description from the uploaded image)\nFace match 99.9999%\nA black and white portrait of a person. The composition uses an extreme wide-angle lens (or \"fish-eye\" perspective) and a low camera angle to create a dramatic, distorted effect. The person is angled slightly away from the camera, looking back over their shoulder with an intense, serious, and focused expression.\n\nThe right hand of the person is aggressively extended directly toward the camera, dramatically filling the foreground. The fingers are slightly curled, creating a commanding or demanding gesture.\nLighting and Style: High-contrast black and white photography with dramatic, hard studio lighting that creates deep shadows and stark highlights, particularly on the extended hand and face. The background is a pure, bright white or light gray, isolating the person and maximizing the contrast. The image should have a gritty, cinematic, and intense feel.\nAttire:\nThe person is wearing a layered, semi-casual outfit, including a collared shirt (possibly striped or textured) under a dark, long jacket or overcoat with prominent buttons.\n\nStyle: Cinematic, dramatic portrait, high contrast, film noir.\nTechnique: Wide-angle, low-angle perspective, exaggerated foreground.\nQuality: Professional studio photography, ultra-realistic, 8k resolution.",
       "images": [
@@ -59763,7 +59763,8 @@
     "added_imp_0122": true,
     "added_imp_0006": true,
     "added_imp_0009": true,
-    "added_imp_0011": true
+    "added_imp_0011": true,
+    "added_import_1778441889658_428": true
   },
   "hiddenCats": [
     "Art Style",
@@ -59795,7 +59796,7 @@
   "catHidden": false,
   "shareWhatsApp": false,
   "freeMode": "full",
-  "_publishedAt": 1778647989792,
+  "_publishedAt": 1788495899679,
   "waConfig": {
     "phone": "972523919350",
     "purchaseMsg": "היי! אני רוצה לרכוש גישה מלאה לכל הפרומפטים -Brill Banana Prompts 🍌",
