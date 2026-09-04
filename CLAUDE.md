@@ -67,13 +67,17 @@ path is healthy and the problem is elsewhere.
 
 ## Publishing / Vercel
 
-- **`GITHUB_TOKEN` (Vercel env var) is what publishing runs on.** It went
-  missing once, and `api/state.js` returned `empty` on its very first line —
-  that was the empty-categories outage above, not a size problem. Reads no
-  longer depend on it: the repo is public, so `api/state.js` now falls back to
-  an anonymous `raw.githubusercontent.com` fetch (verified 200, 5.3MB, 0.63s).
-  **`api/save.js` still needs a valid token — without one, publishing is dead
-  even though the site looks fine.**
+- **`GITHUB_TOKEN` (Vercel env var) is what publishing runs on.** It expired
+  once — set Apr 24, last successful publish May 13 — and `/api/state` then
+  returned `empty`, which was the empty-categories outage above, not a size
+  problem. **Seeing the variable listed in Vercel proves nothing: an expired
+  token fails exactly like a missing one**, so check the expiry date on GitHub
+  rather than the variable's presence. Reads no longer depend on it — the repo
+  is public, so `api/state.js` falls back to an anonymous
+  `raw.githubusercontent.com` fetch (verified 200, 5.3MB, 0.63s). **`api/save.js`
+  still needs a valid token; without one publishing is dead while the site looks
+  perfectly healthy.** Fine-grained tokens need `Contents: Read and write` on
+  this repo.
 - Vercel serverless has a ~4.5MB limit on **both** request and response bodies.
   `api/save.js` accepts gzip (`X-Body-Encoding: gzip+json`) and deliberately
   returns only `{ok, _publishedAt}` — do not make it echo the state back, that
