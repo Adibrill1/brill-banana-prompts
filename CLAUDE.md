@@ -67,6 +67,9 @@ path is healthy and the problem is elsewhere.
 
 ## Publishing / Vercel
 
+- **⏰ The current `GITHUB_TOKEN` expires 2027-09-03 (3 September 2027).**
+  Rotated 2026-09-04. Rotate it again before that date — the failure mode
+  described in the next bullet is completely silent.
 - **`GITHUB_TOKEN` (Vercel env var) is what publishing runs on.** It expired
   once — set Apr 24, last successful publish May 13 — and `/api/state` then
   returned `empty`, which was the empty-categories outage above, not a size
