@@ -40,29 +40,52 @@ Three things learned doing this:
   still running for minutes after it had finished and pushed. A run was
   cancelled on that stale reading; the work had already landed.
 
+## The empty-categories failure, and how to diagnose it
+
+Symptom: every category filter shows nothing, while "הכל" shows all the cards
+and their images. **This is almost never a bug in `filterCards`.** "All"
+short-circuits on `!activeCat` before the `cats` check; every other filter
+reads `cats`. So an empty filter means the page is running on state that has
+no `cats[]` — which means `/api/state` did not deliver.
+
+The inline `var state` in `index.html` (line ~4948) is an old snapshot with
+**no `cats[]` and no `customCats`**. When `/api/state` returns nothing usable,
+the client keeps it and the page still renders and looks healthy.
+
+Both client paths fail silently, which is what makes this hard to see:
+
+```js
+fetch('/api/state').then(r => r.json()).then(function (serverState) {
+  if (!isEmptyState(serverState)) { /* only applied if non-empty */ }
+}).catch(function () { /* swallowed */ });
+```
+
+**Diagnose by opening `/api/state` in a browser tab before reading any client
+code.** `{"deleted":[],"customImgs":{},"added":[],"order":[]}` is the handler's
+`empty` constant — the function ran and gave up. A wall of JSON means the read
+path is healthy and the problem is elsewhere.
+
 ## Publishing / Vercel
 
+- **`GITHUB_TOKEN` (Vercel env var) is what publishing runs on.** It went
+  missing once, and `api/state.js` returned `empty` on its very first line —
+  that was the empty-categories outage above, not a size problem. Reads no
+  longer depend on it: the repo is public, so `api/state.js` now falls back to
+  an anonymous `raw.githubusercontent.com` fetch (verified 200, 5.3MB, 0.63s).
+  **`api/save.js` still needs a valid token — without one, publishing is dead
+  even though the site looks fine.**
 - Vercel serverless has a ~4.5MB limit on **both** request and response bodies.
   `api/save.js` accepts gzip (`X-Body-Encoding: gzip+json`) and deliberately
   returns only `{ok, _publishedAt}` — do not make it echo the state back, that
   reintroduces a 413.
-- The same limit bites on the **read** side as `state.json` grows: at 5.06MB
-  `/api/state` could not return it at all, so the function failed and the
-  client's `fetch('/api/state').catch()` silently kept the baked-in fallback
-  state. `api/state.js` now gzips its response (~5MB → ~0.87MB); browsers
-  decompress transparently. If `state.json` keeps growing, that headroom is
-  finite — splitting the payload is the next step, not a bigger gzip.
-- **That fallback is a trap when debugging.** The inline `var state` in
-  `index.html` (line ~4948) is an old snapshot with **no `cats[]` and no
-  `customCats`**. When `/api/state` fails the page still renders and looks
-  healthy, but every category filter returns zero while "הכל" works — because
-  "all" short-circuits before the `cats` check. A category filter that shows
-  nothing is a symptom of the state fetch failing, not of the filter code.
-  Check `/api/state` in the Network tab before reading `filterCards`.
+- `state.json` passed that limit on the **read** side too (5.06MB), so
+  `api/state.js` gzips its response (~5MB → ~0.87MB); browsers decompress
+  transparently. That headroom is finite — when it runs out, split the payload
+  rather than reaching for a stronger gzip.
 - Images are uploaded in a separate phase before the state save, one per
   request, and compressed on import. Raw camera-resolution base64 will 413.
 - Commits titled `Update state` come from the live site's publish flow, not
-  from a session.
+  from a session. A long gap in them means publishing has been broken.
 
 ## State model
 
