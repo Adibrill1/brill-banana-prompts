@@ -19,12 +19,14 @@ YAML, `api/*.js` — go through those tools without trouble.
 
 ## When `git push` fails
 
-Claude Code Remote containers for this repo have had no GitHub credentials:
-`git fetch` works (public repo, anonymous read), `git push` fails with
-`Invalid username or token`. Confirm once, then stop hunting for a token —
-there isn't one in the environment, the MCP server holds it server-side.
+Credentials vary by container — **test with `git push --dry-run` before
+assuming either way.** Some sessions can push normally (2026-09-05 did, and
+`index.html` went up that way). Others have none at all: `git fetch` works
+(public repo, anonymous read) and `git push` fails with
+`Invalid username or token`. In that case stop hunting for a token — there
+isn't one in the environment, the MCP server holds it server-side.
 
-Route that works for a large file: commit a temporary `workflow_dispatch`
+Route that works for a large file with no credentials: commit a temporary `workflow_dispatch`
 workflow, run it, delete it. The runner edits the file and pushes with the
 built-in Actions token, so the file never has to travel through a tool call.
 
@@ -64,6 +66,29 @@ fetch('/api/state').then(r => r.json()).then(function (serverState) {
 code.** `{"deleted":[],"customImgs":{},"added":[],"order":[]}` is the handler's
 `empty` constant — the function ran and gave up. A wall of JSON means the read
 path is healthy and the problem is elsewhere.
+
+## Performance: ~3,600 cards are in the DOM at once
+
+There is no virtualisation — every card is a live node — so anything that runs
+per card inside a click handler is multiplied by ~3,600.
+
+`getCardData()` is the trap. For an added card it does `state.added.find(...)`,
+a linear scan of 4,000+ entries. Calling it in a loop over `.card` is therefore
+quadratic. Category filtering did exactly that: 442ms per click, 202ms of it
+inside `getCardData`, which Chrome reported as an INP violation on
+`.cat-filter-btn`. `filterCards()` now builds a `key -> cats` Map once per call
+and reads `cats` straight out of it — the same click is ~36ms.
+
+**Never call `getCardData()` from inside a loop over `.card`.** Build a Map
+first. `exportCSV()` still does it; it's not on a hot path, but it's the next
+candidate if anything there ever feels slow.
+
+To measure, serve the real `index.html` and `state.json` locally and drive it
+with Playwright — `executablePath:
+'/opt/pw-browsers/chromium-1194/chrome-linux/chrome'`, since the npm-installed
+Playwright expects a different browser build. Time `setActiveCat()` directly.
+Always diff the visible card set against the old logic, per category, so an
+optimisation can't quietly change what is displayed.
 
 ## Publishing / Vercel
 
