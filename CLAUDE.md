@@ -83,10 +83,44 @@ and reads `cats` straight out of it — the same click is ~36ms.
 first. `exportCSV()` still does it; it's not on a hot path, but it's the next
 candidate if anything there ever feels slow.
 
+**Script was only part of it.** With the Map in place a category click still
+measured 472ms of real INP, because the cost had moved to style and layout
+over ~3,600 live nodes. `.card` is now `content-visibility:auto` with
+`contain-intrinsic-size:auto 430px`, which lets the browser skip layout and
+paint for off-screen cards — that is what took worst-case INP to ~128ms.
+Don't remove it without re-measuring. A dynamically measured intrinsic height
+was tried and removed: an off-screen card reports the placeholder height back,
+so the value fed on itself, and `auto` already remembers real sizes once a
+card has rendered. CLS while scrolling is 0.
+
+## Never size grid columns with a bare `1fr`
+
+`1fr` means `minmax(auto, 1fr)`, and that `auto` minimum lets a single card's
+min-content widen **every** column. `.card-header` — the number, the Hebrew
+category list, and the `white-space:nowrap` Copy button — had a min-content of
+379px against a 358px column. So whenever the widest card was in the active
+filter, the whole grid grew and the page scrolled sideways by up to 66px; a
+different filter meant a different widest card and therefore a different card
+size. That is what "the cards change size between categories" was.
+
+Columns are `minmax(0,1fr)` now, in the CSS **and** in `setGridCols()`, which
+writes `grid-template-columns` inline and would otherwise override it. `.card`,
+`.card-header` and `.cat` carry `min-width:0` so the category label ellipsises
+instead of pushing. Verify with
+`document.documentElement.scrollWidth - clientWidth` — it must be 0 in every
+category.
+
 To measure, serve the real `index.html` and `state.json` locally and drive it
 with Playwright — `executablePath:
 '/opt/pw-browsers/chromium-1194/chrome-linux/chrome'`, since the npm-installed
-Playwright expects a different browser build. Time `setActiveCat()` directly.
+Playwright expects a different browser build.
+
+Measure INP with a `PerformanceObserver` on `event` entries that have an
+`interactionId`, after a real `page.click()` — timing `setActiveCat()`
+synchronously only captures script and will tell you a fixed page is fast when
+it is not. When observing `layout-shift`, do **not** pass `buffered: true`:
+it replays every shift since load and reported a bogus CLS of 0.63 here.
+
 Always diff the visible card set against the old logic, per category, so an
 optimisation can't quietly change what is displayed.
 
