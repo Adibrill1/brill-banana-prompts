@@ -6805,13 +6805,24 @@ function bookSessionWhatsApp() {
 }
 function filterCards(q){
   q=q.toLowerCase().trim(); var visible=0;
+  // Build a key->cats index once per call. Resolving each card through
+  // getCardData() instead meant a linear scan of state.added (4k+ entries)
+  // per card - ~200ms of every category click, and what tripped Chrome's
+  // INP warning on .cat-filter-btn.
+  var catId=activeCat.indexOf('cat:')===0?activeCat.slice(4):null;
+  var catIdx=null;
+  if(catId){catIdx=new Map();(state.added||[]).forEach(function(a){catIdx.set(a.key,a.cats||[]);});}
   document.querySelectorAll('.card').forEach(function(c){
     var key=c.getAttribute('data-key');
     var matchQ=!q||c.getAttribute('data-search').includes(q);
     var matchFav=!showFavsOnly||!!favs[key];
     var free=isFreeCard(key);
     var matchCat=!activeCat||(activeCat==='free'&&free)||(activeCat==='paid'&&!free);
-    if(!matchCat&&activeCat.startsWith('cat:')){var d=getCardData(key);matchCat=!!(d&&d.cats&&d.cats.indexOf(activeCat.slice(4))>=0);}
+    if(!matchCat&&catId){
+      var cats=catIdx.get(key);
+      if(!cats&&key.indexOf('orig_')===0){var ed=state.promptEdits&&state.promptEdits[key];cats=(ed&&ed.cats)||[];}
+      matchCat=!!(cats&&cats.indexOf(catId)>=0);
+    }
     var show=matchQ&&matchFav&&matchCat;
     c.style.display=show?'':'none'; if(show)visible++;
   });
