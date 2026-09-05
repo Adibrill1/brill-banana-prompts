@@ -6024,6 +6024,21 @@ function migrateStateCats(st) {
   }
 }
 
+// document.querySelector on a [data-key] attribute walks the whole document, so
+// calling it once per key in applyState's loops was quadratic against ~4,600
+// cards - state.order alone is 3,677 keys. applyState took 6.6s, and a category
+// click that landed while it ran was blocked for all of it. With this index it
+// is ~0.44s and the DOM it produces is byte-identical.
+// First match wins, which is what querySelector returned.
+function indexCards() {
+  var m = new Map();
+  document.querySelectorAll('.card[data-key]').forEach(function(c) {
+    var k = c.getAttribute('data-key');
+    if (!m.has(k)) m.set(k, c);
+  });
+  return m;
+}
+
 function applyState(st) {
   if (st && st.customCats && st.customCats.length) CUSTOM_CATS = st.customCats;
   migrateStateCats(st);
@@ -6032,13 +6047,15 @@ function applyState(st) {
   // Remove previously added cards
   document.querySelectorAll('.card[data-key^="added_"]').forEach(function(c){ c.remove(); });
 
+  var byKey = indexCards();
+
   st.deleted.forEach(function(key) {
-    var el = document.querySelector('.card[data-key="' + key + '"]');
-    if (el) el.remove();
+    var el = byKey.get(key);
+    if (el) { el.remove(); byKey.delete(key); }
   });
   Object.keys(st.promptEdits||{}).forEach(function(key) {
     var edit = st.promptEdits[key];
-    var card = document.querySelector('.card[data-key="' + key + '"]');
+    var card = byKey.get(key);
     if (!card) return;
     var i = parseInt(key.replace('orig_',''));
     if (!isNaN(i)) { PROMPTS_ORIG[i]=edit.prompt; TITLES_ORIG[i]=edit.title; CATS_ORIG[i]=edit.cat||''; }
@@ -6051,8 +6068,9 @@ function applyState(st) {
     if ((st.deleted||[]).indexOf(p.key) !== -1) return;
     appendCard(p);
   });
+  byKey = indexCards();   // appendCard() added nodes the index does not know about
   Object.keys(st.customImgs||{}).forEach(function(key) {
-    var card = document.querySelector('.card[data-key="' + key + '"]');
+    var card = byKey.get(key);
     if (!card) return;
     var img = card.querySelector('.thumb');
     var src = st.customImgs[key];
@@ -6070,7 +6088,7 @@ function applyState(st) {
   if (st.order && st.order.length) {
     var grid = document.getElementById('grid');
     st.order.forEach(function(key) {
-      var card = document.querySelector('.card[data-key="' + key + '"]');
+      var card = byKey.get(key);
       if (card) grid.appendChild(card);
     });
   }
