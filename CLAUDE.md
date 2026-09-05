@@ -83,6 +83,21 @@ and reads `cats` straight out of it — the same click is ~36ms.
 first. `exportCSV()` still does it; it's not on a hot path, but it's the next
 candidate if anything there ever feels slow.
 
+`document.querySelector('.card[data-key="..."]')` is the same trap wearing a
+different hat — an attribute selector walks the whole document. `applyState()`
+called it once per key in four loops (`state.order` alone is 3,677 keys) and
+took **6.6 seconds** of blocking script. It runs when `/api/state` resolves a
+second or two after load, so a category click landing in that window waited for
+all of it and reported INP near 10s — huge, but only now and then, which made
+it look unrelated to the steady ~130ms clicks. `indexCards()` builds one
+`key -> element` Map and applyState is now ~440ms. **Resolve keys through an
+index; never through the document.** The remaining single-card `querySelector`
+calls (delete, edit modal, image modal) are user actions, not loops, and are
+fine.
+
+`JSON.stringify(state)` plus the `localStorage` write were measured at 87ms
+combined — not worth touching. Measure before optimising anything else here.
+
 **Script was only part of it.** With the Map in place a category click still
 measured 472ms of real INP, because the cost had moved to style and layout
 over ~3,600 live nodes. `.card` is now `content-visibility:auto` with
@@ -120,6 +135,22 @@ Measure INP with a `PerformanceObserver` on `event` entries that have an
 synchronously only captures script and will tell you a fixed page is fast when
 it is not. When observing `layout-shift`, do **not** pass `buffered: true`:
 it replays every shift since load and reported a bogus CLS of 0.63 here.
+
+**An occasional huge INP is a different bug from a steady bad one.** Steady
+~130ms clicks and a rare 9.8s click had separate causes; the rare one only
+reproduces if you click *during* page load, so drive the click right after the
+button appears rather than waiting for the state to settle.
+
+`Profiler.setSamplingInterval` at 200µs inflates self-time badly — it attributed
+4.7s to `querySelector` where wall-clock timing of the whole function said 6.6s
+total. Use it to find *which* function, then confirm the size of the win by
+timing that function with `performance.now()` and no profiler attached.
+
+To prove a refactor changed nothing, fingerprint the DOM after load — ordered
+`data-key` list plus each card's `thumb` src, title and category label — and
+SHA-256 it on both sides. Run the two sides from the repo root; a `git stash`
+issued from the scratchpad silently fails and you end up comparing a build
+against itself.
 
 Always diff the visible card set against the old logic, per category, so an
 optimisation can't quietly change what is displayed.
