@@ -1,204 +1,39 @@
-# brill-banana-prompts
+# Brill Studio gallery — maintainer guide
 
-Hebrew-language prompt gallery. Single-page app on Vercel; `state.json` in this
-repo is the source of truth for cards and is written by the site's own admin UI.
+Read `README.md` for setup, routes, deployment settings and the access-control boundary.
 
-## Critical: never edit index.html in GitHub's web editor
+## Current architecture
 
-`index.html` is ~3.4MB. GitHub cannot load a file that size in its web editor —
-it opens **blank**, showing `Enter file contents here`. Committing from that
-blank editor replaces the entire file with an empty one. This came within one
-click of happening.
+- `src/`: React/TypeScript visitor gallery, built with Vite. Keep the initial HTML small. Request bounded metadata from `/api/catalog`; load full prompt text through `/api/prompt` only when needed.
+- `admin.html`: separate authenticated editor retaining import, export, category and ordering workflows. `editor/uploads.mjs` uploads pending images before publishing state. Do not put the catalog, password hash or license keys back into frontend HTML.
+- `services.html`: services page; published configuration comes from the catalog API. Saved desktop size settings must not override mobile layout.
+- `api/` and `lib/`: Vercel Node functions, catalog normalization, repository storage, authenticated sessions and image transformation.
+- `content/originals.json`: 241 original records extracted from commit `7e300e1`; server-only migration input. `state.json` remains authoritative for published changes.
 
-Edit it locally, or patch it server-side (see below).
+## Data invariants
 
-The same size puts it out of reach of the GitHub MCP write tools:
-`create_or_update_file` and `push_files` take the full file content as a
-tool-call argument, and 3.4MB does not fit. Small files — this one, workflow
-YAML, `api/*.js` — go through those tools without trouble.
+Preserve existing card keys, favorites, order, category membership and prompt text. `lib/catalog.cjs` is the shared visitor read model. Unlisted cards precede the explicitly ordered cards, matching the original DOM append order. Custom image overrides take precedence over image arrays. Legacy category labels map to current IDs; labels come from `state.customCats`.
 
-## When `git push` fails
+Never call `getCardData()` or a document-wide card selector in a loop in the legacy editor. Build a key-to-record or key-to-element Map first. The editor still displays the full catalog, so retain its `content-visibility` optimization. The visitor page renders at most 36 cards under normal navigation.
 
-Credentials vary by container — **test with `git push --dry-run` before
-assuming either way.** Some sessions can push normally (2026-09-05 did, and
-`index.html` went up that way). Others have none at all: `git fetch` works
-(public repo, anonymous read) and `git push` fails with
-`Invalid username or token`. In that case stop hunting for a token — there
-isn't one in the environment, the MCP server holds it server-side.
+Use `minmax(0,1fr)` in grids and `min-width:0` on flexible content. Clamp saved desktop column counts for phones. Verify horizontal overflow at 320px and 390px, with long titles and category labels.
 
-Route that works for a large file with no credentials: commit a temporary `workflow_dispatch`
-workflow, run it, delete it. The runner edits the file and pushes with the
-built-in Actions token, so the file never has to travel through a tool call.
+## Publishing and images
 
-Three things learned doing this:
+`/api/save` requires a server-authenticated administrator and the editor's `baseRevision`. A stale or racing write returns 409. Never retry with the newer SHA while retaining a stale payload. Offer a backup of unsaved work instead.
 
-- **Use sparse checkout.** A full `actions/checkout` here takes 5+ minutes
-  because of `images/`. `sparse-checkout: index.html` with
-  `sparse-checkout-cone-mode: false` takes 2 seconds.
-- **Guard the edit.** Require the old value to appear exactly once before
-  replacing it (`test "$(grep -c "$OLD" index.html)" = "1"`), so a re-run
-  fails safely instead of doing something unintended.
-- **Don't trust a single status reading.** The Actions API reported a step as
-  still running for minutes after it had finished and pushed. A run was
-  cancelled on that stale reading; the work had already landed.
+Upload images separately before the state save. Preserve every image in multi-image cards and services; do not silently strip base64 entries. New files are content-hashed WebP assets; replacing an image must not overwrite an older URL. `/api/img` allows only known source hosts/paths, bounded dimensions and bounded input sizes.
 
-## The empty-categories failure, and how to diagnose it
+Large state responses and publishing requests use gzip to stay below Vercel's body limits. Keep save responses small. If the compressed catalog eventually outgrows those limits, migrate storage or split data; do not embed it in HTML again.
 
-Symptom: every category filter shows nothing, while "הכל" shows all the cards
-and their images. **This is almost never a bug in `filterCards`.** "All"
-short-circuits on `!activeCat` before the `cats` check; every other filter
-reads `cats`. So an empty filter means the page is running on state that has
-no `cats[]` — which means `/api/state` did not deliver.
+`GITHUB_TOKEN` in Vercel needs Contents read/write permission for this repository. Its last recorded expiry was 2027-09-03; check the actual token when diagnosing publishing. Token presence alone does not prove validity. `SESSION_SECRET` is preferred for signed cookies, with existing server tokens as fallback. Never expose these as `VITE_` variables.
 
-The inline `var state` in `index.html` (line ~4948) is an old snapshot with
-**no `cats[]` and no `customCats`**. When `/api/state` returns nothing usable,
-the client keeps it and the page still renders and looks healthy.
+The repository and its history already publicly contain prompt data and license keys. Authenticated application endpoints do not remove that exposure. A private paid catalog needs private storage and replacement of historically exposed keys.
 
-Both client paths fail silently, which is what makes this hard to see:
+## Verification and safe local work
 
-```js
-fetch('/api/state').then(r => r.json()).then(function (serverState) {
-  if (!isEmptyState(serverState)) { /* only applied if non-empty */ }
-}).catch(function () { /* swallowed */ });
-```
+Run `npm test` and `npm run build`. The tests exercise migration, search and paging, authentication, license expiry/revocation, bounded gzip handling, upload retries and concurrent publishing. Validate important user flows in a browser, including a phone-sized viewport. `npm run preview` serves the production build with local read-only APIs.
 
-**Diagnose by opening `/api/state` in a browser tab before reading any client
-code.** `{"deleted":[],"customImgs":{},"added":[],"order":[]}` is the handler's
-`empty` constant — the function ran and gave up. A wall of JSON means the read
-path is healthy and the problem is elsewhere.
+Both local server modes force `LOCAL_DATA=1` and cannot publish to GitHub. Vercel preview deployments also reject publishing, image uploads and license-key mutations. `LOCAL_ADMIN_PASSWORD` is an optional local test override, not a production password. Never commit real secrets. Keep state, originals and license files out of `dist/`.
 
-## Performance: ~3,600 cards are in the DOM at once
-
-There is no virtualisation — every card is a live node — so anything that runs
-per card inside a click handler is multiplied by ~3,600.
-
-`getCardData()` is the trap. For an added card it does `state.added.find(...)`,
-a linear scan of 4,000+ entries. Calling it in a loop over `.card` is therefore
-quadratic. Category filtering did exactly that: 442ms per click, 202ms of it
-inside `getCardData`, which Chrome reported as an INP violation on
-`.cat-filter-btn`. `filterCards()` now builds a `key -> cats` Map once per call
-and reads `cats` straight out of it — the same click is ~36ms.
-
-**Never call `getCardData()` from inside a loop over `.card`.** Build a Map
-first. `exportCSV()` still does it; it's not on a hot path, but it's the next
-candidate if anything there ever feels slow.
-
-`document.querySelector('.card[data-key="..."]')` is the same trap wearing a
-different hat — an attribute selector walks the whole document. `applyState()`
-called it once per key in four loops (`state.order` alone is 3,677 keys) and
-took **6.6 seconds** of blocking script. It runs when `/api/state` resolves a
-second or two after load, so a category click landing in that window waited for
-all of it and reported INP near 10s — huge, but only now and then, which made
-it look unrelated to the steady ~130ms clicks. `indexCards()` builds one
-`key -> element` Map and applyState is now ~440ms. **Resolve keys through an
-index; never through the document.** The remaining single-card `querySelector`
-calls (delete, edit modal, image modal) are user actions, not loops, and are
-fine.
-
-`JSON.stringify(state)` plus the `localStorage` write were measured at 87ms
-combined — not worth touching. Measure before optimising anything else here.
-
-**Script was only part of it.** With the Map in place a category click still
-measured 472ms of real INP, because the cost had moved to style and layout
-over ~3,600 live nodes. `.card` is now `content-visibility:auto` with
-`contain-intrinsic-size:auto 430px`, which lets the browser skip layout and
-paint for off-screen cards — that is what took worst-case INP to ~128ms.
-Don't remove it without re-measuring. A dynamically measured intrinsic height
-was tried and removed: an off-screen card reports the placeholder height back,
-so the value fed on itself, and `auto` already remembers real sizes once a
-card has rendered. CLS while scrolling is 0.
-
-## Never size grid columns with a bare `1fr`
-
-`1fr` means `minmax(auto, 1fr)`, and that `auto` minimum lets a single card's
-min-content widen **every** column. `.card-header` — the number, the Hebrew
-category list, and the `white-space:nowrap` Copy button — had a min-content of
-379px against a 358px column. So whenever the widest card was in the active
-filter, the whole grid grew and the page scrolled sideways by up to 66px; a
-different filter meant a different widest card and therefore a different card
-size. That is what "the cards change size between categories" was.
-
-Columns are `minmax(0,1fr)` now, in the CSS **and** in `setGridCols()`, which
-writes `grid-template-columns` inline and would otherwise override it. `.card`,
-`.card-header` and `.cat` carry `min-width:0` so the category label ellipsises
-instead of pushing. Verify with
-`document.documentElement.scrollWidth - clientWidth` — it must be 0 in every
-category.
-
-To measure, serve the real `index.html` and `state.json` locally and drive it
-with Playwright — `executablePath:
-'/opt/pw-browsers/chromium-1194/chrome-linux/chrome'`, since the npm-installed
-Playwright expects a different browser build.
-
-Measure INP with a `PerformanceObserver` on `event` entries that have an
-`interactionId`, after a real `page.click()` — timing `setActiveCat()`
-synchronously only captures script and will tell you a fixed page is fast when
-it is not. When observing `layout-shift`, do **not** pass `buffered: true`:
-it replays every shift since load and reported a bogus CLS of 0.63 here.
-
-**An occasional huge INP is a different bug from a steady bad one.** Steady
-~130ms clicks and a rare 9.8s click had separate causes; the rare one only
-reproduces if you click *during* page load, so drive the click right after the
-button appears rather than waiting for the state to settle.
-
-`Profiler.setSamplingInterval` at 200µs inflates self-time badly — it attributed
-4.7s to `querySelector` where wall-clock timing of the whole function said 6.6s
-total. Use it to find *which* function, then confirm the size of the win by
-timing that function with `performance.now()` and no profiler attached.
-
-To prove a refactor changed nothing, fingerprint the DOM after load — ordered
-`data-key` list plus each card's `thumb` src, title and category label — and
-SHA-256 it on both sides. Run the two sides from the repo root; a `git stash`
-issued from the scratchpad silently fails and you end up comparing a build
-against itself.
-
-Always diff the visible card set against the old logic, per category, so an
-optimisation can't quietly change what is displayed.
-
-## Publishing / Vercel
-
-- **⏰ The current `GITHUB_TOKEN` expires 2027-09-03 (3 September 2027).**
-  Rotated 2026-09-04. Rotate it again before that date — the failure mode
-  described in the next bullet is completely silent.
-- **`GITHUB_TOKEN` (Vercel env var) is what publishing runs on.** It expired
-  once — set Apr 24, last successful publish May 13 — and `/api/state` then
-  returned `empty`, which was the empty-categories outage above, not a size
-  problem. **Seeing the variable listed in Vercel proves nothing: an expired
-  token fails exactly like a missing one**, so check the expiry date on GitHub
-  rather than the variable's presence. Reads no longer depend on it — the repo
-  is public, so `api/state.js` falls back to an anonymous
-  `raw.githubusercontent.com` fetch (verified 200, 5.3MB, 0.63s). **`api/save.js`
-  still needs a valid token; without one publishing is dead while the site looks
-  perfectly healthy.** Fine-grained tokens need `Contents: Read and write` on
-  this repo.
-- Vercel serverless has a ~4.5MB limit on **both** request and response bodies.
-  `api/save.js` accepts gzip (`X-Body-Encoding: gzip+json`) and deliberately
-  returns only `{ok, _publishedAt}` — do not make it echo the state back, that
-  reintroduces a 413.
-- `state.json` passed that limit on the **read** side too (5.06MB), so
-  `api/state.js` gzips its response (~5MB → ~0.87MB); browsers decompress
-  transparently. That headroom is finite — when it runs out, split the payload
-  rather than reaching for a stronger gzip.
-- Images are uploaded in a separate phase before the state save, one per
-  request, and compressed on import. Raw camera-resolution base64 will 413.
-- Commits titled `Update state` come from the live site's publish flow, not
-  from a session. A long gap in them means publishing has been broken.
-
-## State model
-
-- The page carries an inline `var state = {...}` for first paint; `/api/state`
-  is authoritative and is applied on load.
-- Cards carry `cats[]` (category ids). `cat` (a Hebrew label string) is legacy.
-  `migrateStateCats()` maps `cat` to `cats[]` on every `applyState()` — that is
-  what stops a backfill from being wiped by the next publish from a browser
-  whose in-memory state predates it.
-- Read category labels from `state.customCats` when present, never from the
-  hardcoded `CUSTOM_CATS`; the user renames categories.
-- `localStorage.nb_state` is a cache. When a shipped change doesn't show up in
-  the browser, clear it before concluding the deploy failed.
-
-## Admin
-
-`ADMIN_HASH` in `index.html` is a SHA-256 of the admin password. It cannot be
-reversed — to change the password, hash the new one
-(`echo -n 'pw' | sha256sum`) and replace the constant.
+The image archive is large; use sparse checkout excluding `/images/` for source-code work. Test `git push --dry-run` rather than assuming credentials are present. If authentication is unavailable, stop looking for tokens and deliver the local change or use the configured GitHub connector.
