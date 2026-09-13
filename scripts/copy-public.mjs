@@ -1,5 +1,5 @@
 import fs from "node:fs";
-for (const file of ["admin.html", "services.html", "og-image.jpg"])
+for (const file of ["admin.html", "services.html", "og-brill-studio.jpg"])
   fs.copyFileSync(file, "dist/" + file);
 fs.cpSync("editor", "dist/editor", { recursive: true });
 // State, original prompts, license keys and the source image archive stay out of static output.

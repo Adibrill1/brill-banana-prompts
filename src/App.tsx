@@ -254,7 +254,7 @@ export default function App() {
       favoriteKeys
         .map(
           (key) =>
-            "https://brill-banana-prompts-v3.vercel.app/?prompt=" +
+            "https://brill-studio.vercel.app/?prompt=" +
             encodeURIComponent(key),
         )
         .join("\n");

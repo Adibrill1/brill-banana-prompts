@@ -1,5 +1,7 @@
 # Brill Studio gallery
 
+Public address: https://brill-studio.vercel.app. Vercel project: `brill-studio`.
+
 Hebrew/RTL prompt gallery, upgraded from the original single-file application.
 
 The visitor application uses React and TypeScript, built with Vite. It requests 36 lightweight card records per page, searches the complete catalog on the server, and fetches full prompt text only when opened or copied. Favorite IDs and the existing theme preference are preserved. Responsive image variants are generated with Sharp and cached by the browser and Vercel CDN.
