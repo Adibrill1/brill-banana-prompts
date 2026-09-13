@@ -1,3 +1,5 @@
+const { isAdmin } = require('../lib/auth.cjs');
+const repository = require('../lib/repository.cjs');
 const https = require('https');
 
 const owner = 'Adibrill1';
@@ -70,15 +72,13 @@ function ghPut(token, filePath, content, sha, message) {
 }
 
 module.exports = async function handler(req, res) {
-  setCORS(res);
+  // Administrative endpoints are same-origin only.
   if (req.method === 'OPTIONS') { res.status(200).end(); return; }
 
-  // Auth: admin token from env
-  const adminToken = process.env.ADMIN_TOKEN;
-  const provided   = req.headers['x-admin-token'] || (req.body && req.body.adminToken);
-  if (!adminToken || provided !== adminToken) {
-    res.status(401).json({ error: 'Unauthorized' }); return;
-  }
+  res.setHeader('Cache-Control', 'private, no-store');
+  if (!isAdmin(req)) { res.status(401).json({ error: 'Unauthorized' }); return; }
+  if (process.env.LOCAL_DATA === '1' && req.method !== 'GET') { res.status(503).json({ error: 'Local preview is read-only' }); return; }
+  repository.invalidate('keys.json');
 
   const ghToken = process.env.GITHUB_TOKEN;
   if (!ghToken) { res.status(500).json({ error: 'Server config error' }); return; }

@@ -1,0 +1,2695 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brill Banana Prompts</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23f5a623'/%3E%3C/svg%3E">
+<!-- Meta בסיסי -->
+<meta name="description" content="קטלוג של 1,354 פרומפטים מתקדמים ליצירת תמונות אישיות ב-Nano Banana 2. העתק פרומפט בלחיצה וצור תמונות AI מדהימות.">
+<meta name="keywords" content="AI prompts, Nano Banana, image generation, פרומפטים, יצירת תמונות, בינה מלאכותית">
+<meta name="author" content="Brill Banana">
+<link rel="canonical" href="https://brill-banana-prompts-v3.vercel.app/">
+<!-- Open Graph – פייסבוק, ווטסאפ, טלגרם -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Brill Banana Prompts - קטלוג פרומפטים ליצירת תמונות AI">
+<meta property="og:description" content="קטלוג של 1,354 פרומפטים מתקדמים ליצירת תמונות אישיות ב-Nano Banana 2. העתק פרומפט בלחיצה.">
+<meta property="og:image" content="https://brill-banana-prompts-v3.vercel.app/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://brill-banana-prompts-v3.vercel.app/">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="Brill Banana Prompts">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Brill Banana Prompts - קטלוג פרומפטים ליצירת תמונות AI">
+<meta name="twitter:description" content="קטלוג של 1,354 פרומפטים מתקדמים ליצירת תמונות אישיות ב-Nano Banana 2.">
+<meta name="twitter:image" content="https://brill-banana-prompts-v3.vercel.app/og-image.jpg">
+<!-- Structured Data – JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Brill Banana Prompts",
+  "description": "קטלוג פרומפטים מתקדמים ליצירת תמונות אישיות ב-Nano Banana 2",
+  "url": "https://brill-banana-prompts-v3.vercel.app/",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "ILS",
+    "description": "גישה חינמית לפרומפטים נבחרים"
+  }
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0f0f0f;--bg2:#1a1a1a;--bg3:#111;--bg4:#2a2a2a;
+  --border:#2a2a2a;--border2:#333;--border3:#222;
+  --text:#e0e0e0;--text2:#aaa;--text3:#bbb;--text4:#888;
+  --card-bg:#1a1a1a;--prompt-bg:#111;--modal-bg:#1e1e1e;
+  --input-bg:#111;--no-thumb:#111;--no-thumb-border:#333;
+  --h3:#fff;--thumb-bg:#111;
+  --search-w:340px;
+}
+body.light .banana{text-shadow:0 2px 8px rgba(0,0,0,0.45),0 1px 3px rgba(0,0,0,0.3)}
+body.light{
+  --bg:#f0f0f0;--bg2:#ffffff;--bg3:#f8f8f8;--bg4:#e8e8e8;
+  --border:#ddd;--border2:#ccc;--border3:#e0e0e0;
+  --text:#1a1a1a;--text2:#555;--text3:#444;--text4:#777;
+  --card-bg:#ffffff;--prompt-bg:#f5f5f5;--modal-bg:#ffffff;
+  --input-bg:#f8f8f8;--no-thumb:#ebebeb;--no-thumb-border:#ccc;
+  --h3:#111;--thumb-bg:#ddd;
+}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);padding:20px;transition:background .2s,color .2s}
+body.admin-open{padding-top:60px}
+h1{text-align:center;color:#f5a623;font-size:2em;margin-bottom:6px}
+.subtitle{text-align:center;color:var(--text4);margin-bottom:16px;font-size:13px}
+.toolbar{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:16px;padding:0 4px}
+.search{width:180px;padding:6px 12px;font-size:13px;border:2px solid var(--border2);border-radius:8px;background:var(--bg2);color:var(--text);transition:border-color .15s}
+.search:focus{outline:none;border-color:#f5a623}
+.btn{padding:9px 18px;border:none;border-radius:7px;cursor:pointer;font-weight:bold;font-size:13px;white-space:nowrap;transition:background .15s,color .15s}
+.btn-edit{background:var(--bg4);color:#f5a623;border:1px solid #f5a623}
+.btn-edit:hover,.btn-edit.active{background:#f5a623;color:#000}
+#orderBar{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+#catFilterBar{margin-bottom:14px;padding:0;gap:6px}
+#waToggle.active{background:#25d366;color:#fff;border-color:#25d366}
+#waToggle.active:hover{background:#1ebe5d}
+#freeToggleBtn.free-off{background:#e53935;color:#fff;border-color:#e53935}
+#freeToggleBtn.free-off:hover{background:#ef5350}
+#freeToggleBtn.free-partial{background:#f5a623;color:#000;border-color:#f5a623}
+#freeToggleBtn.free-partial:hover{background:#ffc04d}
+#freeToggleBtn.free-full{background:#4caf50;color:#fff;border-color:#4caf50}
+#freeToggleBtn.free-full:hover{background:#66bb6a}
+#freeToggleBtn.free-catalog{background:#2196f3;color:#fff;border-color:#2196f3}
+#freeToggleBtn.free-catalog:hover{background:#42a5f5}
+body.catalog-mode .copy-btn{display:none !important}
+.btn-add{background:#4caf50;color:#fff}
+.btn-add:hover{background:#66bb6a}
+.btn-publish{background:#e91e63;color:#fff}
+.btn-publish:hover{background:#f06292}
+.btn-publish:disabled{background:#555;color:#888;cursor:not-allowed}
+.count{text-align:center;color:var(--text4);font-size:12px;margin-bottom:18px}
+/* theme toggle */
+.btn-theme{background:var(--bg4);color:var(--text);border:1px solid var(--border2);font-size:16px;padding:7px 12px;border-radius:7px;cursor:pointer;transition:background .15s}
+.btn-theme:hover{background:var(--border2)}
+#themeBtn{position:fixed;top:12px;left:12px;z-index:9999}
+body.admin-open #themeBtn{top:70px}
+#topRightBar{position:fixed;top:12px;right:12px;z-index:9999;display:flex;align-items:center;gap:10px}
+body.admin-open #topRightBar{top:70px}
+.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;max-width:1900px;margin:0 auto}
+@media(max-width:1600px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:1200px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:500px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))};:root{--search-w:100%}}
+@media(max-width:380px){.grid{grid-template-columns:minmax(0,1fr)}}
+/* mobile tweaks */
+@media(max-width:600px){
+  body{padding:12px 8px}
+  h1{font-size:1.5em}
+  .subtitle{font-size:11px}
+  .toolbar{gap:6px}
+  .btn{padding:8px 12px;font-size:12px}
+  .search{font-size:14px;padding:9px 12px}
+  .cols-control{gap:6px}
+  input[type=range].cols-slider{width:100%;max-width:calc(100vw - 120px)}
+  .card{padding:10px}
+  .copy-btn{padding:6px 10px;font-size:11px}
+  .prompt-text{font-size:10px;max-height:90px}
+  h3{font-size:12px}
+}
+.card{background:var(--card-bg);border:1px solid var(--border);border-radius:12px;padding:14px;transition:border-color .2s,box-shadow .2s,background .2s;position:relative;display:flex;flex-direction:column;min-width:0;content-visibility:auto;contain-intrinsic-size:auto 430px}
+.card:hover{border-color:#f5a623}
+.card.dragging{opacity:.25;transform:scale(0.97);border-color:#f5a623 !important;box-shadow:0 0 0 2px #f5a623}
+.card.drop-before{border-left:4px solid #4caf50 !important;box-shadow:-4px 0 12px rgba(76,175,80,0.5)}
+.card.drop-after{border-right:4px solid #4caf50 !important;box-shadow:4px 0 12px rgba(76,175,80,0.5)}
+.card-header{display:flex;align-items:center;gap:8px;margin-bottom:8px;min-width:0}
+.num{color:#f5a623;font-weight:bold;font-size:12px;min-width:32px}
+.cat{background:var(--bg4);color:var(--text2);font-size:11px;padding:2px 8px;border-radius:20px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.copy-btn{background:#f5a623;color:#000;border:none;padding:7px 14px;border-radius:6px;cursor:pointer;font-weight:bold;font-size:12px;white-space:nowrap}
+.copy-btn:hover{background:#ffc04d}
+.copy-btn.ok{background:#4caf50;color:#fff}
+.edit-controls{display:none;gap:5px;margin-bottom:10px;flex-wrap:wrap;align-items:center}
+.body-edit .edit-controls{display:flex}
+.body-edit .ec-drag{display:none !important}
+#grid.reorder-mode .ec-drag{display:inline-flex !important}
+.ec-btn{border:none;border-radius:6px;padding:5px 10px;cursor:pointer;font-size:12px;font-weight:bold}
+.ec-del{background:#e53935;color:#fff;order:10;width:100%;text-align:center}.ec-del:hover{background:#ef5350}
+.ec-img{background:#7b1fa2;color:#fff;order:1}.ec-img:hover{background:#9c27b0}
+.ec-edit{background:#1565c0;color:#fff;order:-1}.ec-edit:hover{background:#1976d2}
+.ec-drag{background:#555;color:#ddd;cursor:grab;user-select:none;display:inline-flex;align-items:center;gap:4px;padding:4px 10px;font-size:13px;border-radius:4px;letter-spacing:1px}
+.ec-drag:hover{background:#666;color:#fff}
+.ec-drag:active{cursor:grabbing;background:#f5a623;color:#000}
+.thumb-wrap{position:relative;cursor:pointer;border-radius:8px;overflow:hidden;margin-bottom:10px;width:100%;padding-bottom:100%;height:0;background:var(--thumb-bg)}
+.admin-open .card.free-selected .thumb-wrap{outline:3px solid #4caf50;outline-offset:-3px}
+.admin-open .card.free-selected .thumb-wrap::before{content:'✓';position:absolute;top:5px;right:5px;background:#4caf50;color:#fff;font-size:12px;font-weight:bold;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:2;line-height:20px;text-align:center}
+
+.thumb{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.thumb-wrap:hover .thumb{transform:scale(1.04)}
+.thumb-overlay{position:absolute;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s}
+.thumb-wrap:hover .thumb-overlay{opacity:1}
+.thumb-overlay span{color:#fff;font-size:14px;font-weight:bold;background:rgba(0,0,0,.5);padding:5px 12px;border-radius:20px}
+.no-thumb{display:flex;align-items:center;justify-content:center;width:100%;padding-bottom:100%;height:0;position:relative;background:var(--no-thumb);border-radius:8px;margin-bottom:10px;border:1px dashed var(--no-thumb-border)}
+.no-thumb span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:var(--text4);font-size:13px;white-space:nowrap}
+h3{font-size:13px;font-weight:600;color:var(--h3);margin-bottom:8px;line-height:1.4;direction:ltr;text-align:left;overflow-wrap:anywhere}
+.prompt-text{background:var(--prompt-bg);border:1px solid var(--border3);border-radius:8px;padding:10px;font-size:11px;line-height:1.6;white-space:pre-wrap;word-break:break-word;color:var(--text3);max-height:120px;overflow-y:auto;direction:ltr;text-align:left;font-family:'Consolas','Courier New',monospace}
+.lb-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:1000;align-items:center;justify-content:center;flex-direction:column}
+.lb-overlay.open{display:flex}
+.lb-img{max-width:90vw;max-height:80vh;border-radius:10px;object-fit:contain}
+.lb-title{color:#fff;font-size:15px;font-weight:600;margin-top:12px;text-align:center;max-width:600px}
+.lb-close{position:absolute;top:18px;right:22px;color:#fff;font-size:32px;cursor:pointer;line-height:1}
+.lb-nav{display:flex;gap:14px;margin-top:10px}
+.lb-nav button{background:#333;color:#fff;border:none;padding:7px 18px;border-radius:6px;cursor:pointer}
+.lb-nav button:hover{background:#555}
+.lb-counter{color:#888;font-size:12px;margin-top:5px}
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:2000;align-items:center;justify-content:center}
+.modal-bg.open{display:flex}
+.modal{background:var(--modal-bg);border:1px solid var(--border2);border-radius:14px;padding:28px;width:520px;max-width:95vw;max-height:90vh;overflow-y:auto}
+.modal h2{color:#f5a623;margin-bottom:18px;font-size:18px}
+.modal label{display:block;color:var(--text2);font-size:12px;margin-bottom:5px;margin-top:14px}
+.modal input,.modal textarea{width:100%;background:var(--input-bg);border:1px solid var(--border2);color:var(--text);border-radius:7px;padding:9px 12px;font-size:13px;font-family:inherit}
+.modal textarea{min-height:120px;resize:vertical;direction:ltr;text-align:left;font-family:'Consolas','Courier New',monospace}
+.modal input:focus,.modal textarea:focus{outline:none;border-color:#f5a623}
+.modal-footer{display:flex;gap:10px;margin-top:20px;justify-content:flex-end;flex-wrap:wrap}
+.btn-cancel{background:var(--bg4);color:var(--text2)}.btn-cancel:hover{background:var(--border2)}
+.btn-ok{background:#f5a623;color:#000}.btn-ok:hover{background:#ffc04d}
+.img-preview{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px;margin-top:10px;display:none;border:1px solid var(--border2)}
+.img-preview.show{display:block}
+.or-div{text-align:center;color:var(--text4);margin:10px 0;font-size:12px}
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:#4caf50;color:#fff;padding:10px 24px;border-radius:8px;font-weight:bold;font-size:14px;pointer-events:none;opacity:0;transition:opacity .25s;z-index:9999}
+.toast.show{opacity:1}
+.svc-size-row{display:flex;align-items:center;gap:8px;font-size:12px}
+.svc-size-row label{min-width:120px;color:var(--text2);text-align:right;white-space:nowrap}
+.svc-size-ctrl{display:flex;align-items:center;gap:6px;flex:1}
+.svc-size-ctrl input[type=range]{flex:1;accent-color:var(--primary)}
+.svc-sz-val{min-width:36px;text-align:left;color:var(--primary);font-weight:700;font-size:12px}
+.fab{display:none;position:fixed;bottom:28px;right:28px;background:#4caf50;color:#fff;border:none;width:56px;height:56px;border-radius:50%;font-size:28px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.5);z-index:500}
+.fab:hover{background:#66bb6a}
+.admin-bar{display:none;position:fixed;top:0;left:0;right:0;height:48px;background:#1a0800;border-bottom:2px solid #f5a623;padding:0 16px;z-index:800;align-items:center;gap:8px;flex-wrap:nowrap;overflow-x:auto}
+.admin-bar.open{display:flex}
+.admin-bar .admin-label{color:#f5a623;font-size:13px;font-weight:bold;flex:1;white-space:nowrap}
+.unsaved-dot{width:8px;height:8px;border-radius:50%;background:#e91e63;display:none;margin-right:4px}
+.unsaved-dot.show{display:inline-block}
+/* Reorder mode */
+.btn-reorder{background:#ff9800;color:#000}
+.btn-reorder:hover{background:#ffa726}
+.btn-reorder.active{background:#4caf50;color:#fff}
+.reorder-mode{grid-template-columns:repeat(auto-fill,minmax(105px,1fr)) !important;gap:5px !important}
+.reorder-mode .card{padding:5px;cursor:grab;border-radius:8px;user-select:none;transition:none}
+.reorder-mode .card .prompt-text,.reorder-mode .card .copy-btn,.reorder-mode .card .cat,.reorder-mode .card .ec-del,.reorder-mode .card .ec-img,.reorder-mode .card .ec-edit{display:none !important}
+.reorder-mode .card .edit-controls{margin-bottom:3px;justify-content:center}
+.reorder-mode .card .ec-drag{width:100%;justify-content:center;padding:2px 4px;font-size:10px;border-radius:3px;pointer-events:none}
+.reorder-mode .card .card-header{margin-bottom:3px}
+.reorder-mode .card h3{font-size:9px;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.2}
+.reorder-mode .card .thumb-wrap,.reorder-mode .card .no-thumb{margin-bottom:0;border-radius:5px}
+.reorder-mode .card .num{font-size:10px}
+.reorder-mode .card.drop-before{border-left:3px solid #4caf50 !important;box-shadow:-3px 0 8px rgba(76,175,80,0.6)}
+.reorder-mode .card.drop-after{border-right:3px solid #4caf50 !important;box-shadow:3px 0 8px rgba(76,175,80,0.6)}
+/* Compact mode (many columns) - mirrors reorder mode appearance */
+.compact-mode{max-width:none !important}
+.compact-mode .card{padding:5px;border-radius:8px;user-select:none}
+.compact-mode .card .prompt-text,.compact-mode .card .cat{display:none !important}
+.compact-mode .card .ec-del,.compact-mode .card .ec-img,.compact-mode .card .ec-edit{display:none !important}
+.compact-mode .card .copy-btn{padding:4px 7px;font-size:10px}
+.compact-mode .card .edit-controls{margin-bottom:3px;justify-content:center}
+.compact-mode .card .card-header{margin-bottom:3px}
+.compact-mode .card h3{font-size:9px;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.2}
+.compact-mode .card .thumb-wrap,.compact-mode .card .no-thumb{margin-bottom:0;border-radius:5px}
+.compact-mode .card .num{font-size:10px}
+/* Columns slider */
+.cols-control{display:flex;align-items:center;gap:10px;justify-content:center;margin:14px 0;flex-wrap:wrap}
+.cols-label{color:#888;font-size:12px;white-space:nowrap}
+.cols-val{color:#f5a623;font-weight:bold;font-size:14px;min-width:22px;text-align:center}
+input[type=range].cols-slider{-webkit-appearance:none;appearance:none;width:220px;max-width:58vw;height:5px;border-radius:3px;background:linear-gradient(to right,#f5a623 var(--pct,31%),var(--border2) var(--pct,31%));outline:none;cursor:pointer;flex-shrink:0}
+input[type=range].cols-slider::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:#f5a623;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.6);border:2px solid #1a1a1a;transition:transform .1s}
+input[type=range].cols-slider::-webkit-slider-thumb:active{transform:scale(1.25)}
+input[type=range].cols-slider::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#f5a623;cursor:pointer;border:2px solid #1a1a1a;box-shadow:0 2px 8px rgba(0,0,0,.6)}
+input[type=range].cols-slider::-moz-range-progress{background:#f5a623;height:5px;border-radius:3px}
+.fav-btn{background:none;border:none;cursor:pointer;font-size:15px;padding:2px 3px;line-height:1;opacity:0.3;transition:opacity .15s,transform .15s;flex-shrink:0}
+.fav-btn:hover{opacity:0.75;transform:scale(1.2)}
+.fav-btn.fav-on{opacity:1}
+.btn-fav-filter{background:var(--bg2);color:var(--text4);border:1px solid var(--border2);font-size:12px}
+.btn-fav-filter:hover{background:var(--bg4);color:var(--text2)}
+.btn-fav-filter.active{background:var(--bg2);color:var(--text4);border-color:var(--border2)}
+.btn-fav-action{background:var(--bg2);color:var(--text4);border:1px solid var(--border2);font-size:12px}
+.btn-fav-action:hover{background:var(--bg4);color:var(--text2)}
+.share-modal-list{list-style:none;max-height:300px;overflow-y:auto;background:var(--prompt-bg);border:1px solid var(--border2);border-radius:8px;padding:10px;margin:14px 0;direction:ltr;text-align:left}
+.share-modal-list li{padding:4px 0;border-bottom:1px solid var(--border3);font-size:12px;color:var(--text3)}
+.share-modal-list li:last-child{border-bottom:none}
+.btn-wa{background:#25d366;color:#fff}.btn-wa:hover{background:#1ebe5d}
+/* Paywall */
+.prompt-wrap{position:relative;overflow:hidden;margin-bottom:0;flex:1}
+/* Hide prompt text for regular users - admin still sees it */
+body:not(.admin-open) .prompt-wrap{display:none}
+body.admin-open .prompt-wrap{display:block !important}
+.card.locked-prompt .prompt-wrap::after{content:'';position:absolute;bottom:0;left:0;right:0;height:55px;background:linear-gradient(to bottom,transparent,var(--card-bg) 90%);pointer-events:none}
+.card.locked-prompt .prompt-text{max-height:55px;overflow:hidden;margin-bottom:0;user-select:none;-webkit-user-select:none;pointer-events:none}
+.card.locked-prompt .copy-btn{display:none !important}
+.unlock-btn{background:#e53935;color:#fff;border:none;padding:7px 14px;border-radius:6px;cursor:pointer;font-weight:bold;font-size:12px;white-space:nowrap;display:none}
+.unlock-btn:hover{background:#ef5350}
+.card.locked-prompt .unlock-btn{display:inline-block}
+.free-badge{display:none !important}
+.ec-free{background:#4caf50;color:#fff}.ec-free:hover{background:#66bb6a}
+.ec-free.is-premium{background:#f5a623;color:#000}.ec-free.is-premium:hover{background:#ffc04d}
+.free-counter{color:#4caf50;font-size:12px;font-weight:bold;white-space:nowrap;display:none}
+.free-counter.at-limit{color:#e53935}
+.body-edit .free-counter{display:inline}
+.btn-license{background:var(--bg2);color:#f5a623;border:1px solid #f5a623;font-size:12px}
+.btn-license:hover{background:#f5a623;color:#000}
+.btn-license.active{background:linear-gradient(135deg,#f5a623,#f97316);color:#000;border-color:#f97316}
+.license-benefits{list-style:none;margin:12px 0;padding:0}
+.license-benefits li{padding:4px 0;color:var(--text2);font-size:13px}
+.license-benefits li::before{content:'✓ ';color:#4caf50;font-weight:bold}
+.buy-btn{display:block;width:100%;padding:13px;background:linear-gradient(135deg,#f5a623,#f97316);color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:bold;cursor:pointer;text-align:center;text-decoration:none;margin-top:8px;transition:opacity .15s}
+.buy-btn:hover{opacity:.88}
+.license-divider{text-align:center;color:var(--text4);margin:16px 0;font-size:12px;position:relative}
+.license-divider::before,.license-divider::after{content:'';position:absolute;top:50%;width:42%;height:1px;background:var(--border2)}
+.license-divider::before{left:0}.license-divider::after{right:0}
+.license-expiry{font-size:11px;color:#4caf50;margin-top:4px}
+.keys-list{list-style:none;max-height:260px;overflow-y:auto;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;padding:8px;margin:12px 0}
+.keys-list li{display:flex;align-items:center;justify-content:space-between;padding:6px 4px;border-bottom:1px solid var(--border3);font-size:13px;gap:8px}
+.keys-list li:last-child{border-bottom:none}
+.key-val{font-family:'Consolas','Courier New',monospace;color:#f5a623;font-size:12px;flex:1}
+.key-name{color:var(--text2);font-size:12px;min-width:80px}
+.key-del{background:#e53935;color:#fff;border:none;border-radius:5px;padding:3px 9px;cursor:pointer;font-size:11px;white-space:nowrap}
+.key-del:hover{background:#ef5350}
+.keys-add-row{display:flex;gap:6px;flex-wrap:wrap}
+.keys-add-row input{flex:1;min-width:80px}
+.keys-search{width:100%;padding:7px 10px;border:1px solid var(--border2);border-radius:6px;background:var(--input-bg);color:var(--text);font-size:12px;margin-bottom:4px}
+.keys-search:focus{outline:none;border-color:#f5a623}
+/* category filter bar */
+.cat-filter-bar{display:flex;flex-wrap:nowrap;gap:6px;justify-content:center;max-width:1900px;margin:0 auto 8px;padding:0}
+.cat-filter-btn{background:var(--bg4);color:var(--text2);border:1px solid var(--border2);border-radius:20px;padding:5px 14px;font-size:12px;cursor:pointer;white-space:nowrap;transition:background .15s,color .15s}
+.cat-filter-btn:hover{background:var(--border2)}
+.cat-filter-btn.active{background:#f5a623;color:#000;border-color:#f5a623;font-weight:bold}
+.cat-checks-wrap{display:flex;flex-wrap:wrap;gap:8px;padding:6px 0}
+.cat-check-label{display:inline-flex;align-items:center;gap:5px;cursor:pointer;font-size:13px;color:var(--text2);padding:4px 12px;border-radius:20px;border:1px solid var(--border2);transition:background .15s,color .15s}
+.cat-check-label:hover{background:var(--bg4)}
+.cat-check-label input{display:none}
+.cat-check-label.checked{background:#f5a623;color:#000;border-color:#f5a623;font-weight:bold}
+.ec-cats{background:#7b1fa2;color:#fff}.ec-cats:hover{background:#9c27b0}
+.cat-popover{position:absolute;z-index:300;background:var(--modal-bg);border:1px solid var(--border2);border-radius:10px;padding:10px 12px;box-shadow:0 4px 24px rgba(0,0,0,.55);min-width:160px;top:0;left:0;right:0}
+.cat-popover .cat-check-label{display:flex;margin-bottom:5px}
+.cm-row{display:flex;gap:6px;align-items:center;margin-bottom:6px}
+.cm-inp{flex:1;padding:5px 8px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);font-size:13px}
+/* customer preview mode */
+/* ec-dup button */
+.ec-dup{background:#4caf50;color:#fff}.ec-dup:hover{background:#66bb6a}
+.ec-free{display:none!important}
+/* access modal tabs */
+.access-tabs{display:flex;gap:0;border-bottom:2px solid var(--border2);margin-bottom:16px}
+.access-tab{flex:1;padding:9px;background:none;border:none;cursor:pointer;font-size:13px;font-weight:bold;color:var(--text4);border-bottom:2px solid transparent;margin-bottom:-2px;transition:color .15s}
+.access-tab.active{color:#f5a623;border-bottom-color:#f5a623}
+.access-tab-panel{display:none}.access-tab-panel.active{display:block}
+/* hidden cats */
+
+/* Responsive editor: keep controls in flow and overlays above the header. */
+#topRightBar{position:static;justify-content:center;flex-wrap:wrap;margin:12px 48px 20px;z-index:auto}
+#themeBtn{z-index:20}
+.admin-bar{position:sticky;top:0;flex-wrap:wrap;height:auto;z-index:30;max-height:35dvh;overflow:auto}
+body.admin-open{padding-top:20px}
+body.admin-open #themeBtn{top:12px}
+.cat-filter-bar{overflow-x:auto;justify-content:flex-start;max-width:100%;overscroll-behavior-x:contain}
+.cat-filter-btn{flex-shrink:0;min-height:44px}
+.lb-overlay{z-index:10000}.modal-bg{z-index:10001}.toast{z-index:11000}
+.lb-close{min-width:44px;min-height:44px;background:#222;border:1px solid #555;border-radius:50%}
+@media(max-width:600px){
+  body,body.admin-open{padding:12px 8px}.card{padding:10px}.copy-btn{min-height:44px;padding:8px 10px;font-size:12px}
+  .fav-btn,.ec-btn{min-width:44px;min-height:44px}h3{font-size:14px}.prompt-text{font-size:14px;max-height:160px}
+  .modal{max-height:calc(100dvh - 24px);overflow-y:auto;max-width:calc(100vw - 20px)}
+  .cols-control{gap:6px}input[type=range].cols-slider{width:100%;max-width:calc(100vw - 140px)}
+  #topRightBar .search{font-size:16px;width:100%}
+}
+</style>
+<script>
+(function(){
+  // Apply theme before first paint
+  if(localStorage.getItem('bb_theme')==='light') document.documentElement.setAttribute('data-theme','light');
+  // Hide until JS state is ready
+  document.documentElement.style.opacity='0';
+})();
+</script>
+</head>
+<body>
+<button class="btn btn-theme" id="themeBtn" onclick="toggleTheme()" title="מצב לילה/יום">🌙</button>
+<div id="topRightBar">
+  <button class="btn btn-license" id="accessBtn" onclick="openAccessModal('premium')">🔒 פרימיום</button>
+  <input class="search" id="mainSearch" type="search" placeholder="🔍 חיפוש..." oninput="filterCards(this.value)" autocomplete="off">
+</div>
+<div class="admin-bar" id="adminBar">
+  <a class="admin-label" href="/">← חזרה לגלריה</a>
+  <button class="btn btn-edit" onclick="exportStateBackup()">גיבוי JSON</button>
+  <span class="unsaved-dot" id="unsavedDot" title="יש שינויים לא מפורסמים"></span>
+  <button class="btn btn-edit free-off" id="freeToggleBtn" onclick="toggleFreeEnabled()" title="הדלק/כבה גישה חינמית">כבוי</button>
+  <button class="btn btn-edit" id="editToggle" onclick="toggleEditMode()">✏️ מצב עריכה</button>
+  <button class="btn btn-reorder" id="reorderToggle" onclick="toggleReorderMode()" style="display:none">🔀 סדר</button>
+  <button class="btn btn-add" onclick="openAddModal()">➕ הוסף</button>
+  <button class="btn btn-publish" id="btnPublish" onclick="publishChanges()" disabled>🌐 פרסם שינויים</button>
+  <button class="btn btn-edit" id="waToggle" onclick="toggleWaShare()" title="שליחת מועדפים ב-WhatsApp">💬 WA</button>
+  <button class="btn btn-edit" onclick="openKeysModal()">🔑 ססמאות</button>
+  <button class="btn btn-edit" onclick="openImportModal()" title="ייבוא כרטיסיות בקבוצה">📥 ייבוא</button>
+  <button class="btn btn-edit" onclick="openPremiumTextModal()" title="ערוך טקסטים בחלון הפרימיום">🔒 פרימיום</button>
+  <button class="btn btn-edit" onclick="openWaTextModal()" title="ערוך הודעות וואטסאפ">📱 הודעות WA</button>
+  <button class="btn btn-edit" onclick="openHeaderModal()" title="ערוך כותרת ראשית">✏️ כותרת</button>
+  <button class="btn btn-edit" onclick="openServicesModal()" title="ערוך עמוד שירותים">🛍️ שירותים</button>
+  <button class="btn btn-edit" onclick="openCatsManager()" title="ניהול קטגוריות">🏷️ קטגוריות</button>
+  <button class="btn btn-edit" onclick="exportCSV()" title="ייצוא לאקסל">📤 CSV</button>
+  <span class="free-counter" id="freeCounter">🆓 0/50</span>
+</div>
+<p id="adminLoadError" role="alert" hidden></p>
+<h1 id="mainTitle">Brill <span class="banana">🍌</span> Banana Prompts</h1>
+<p class="subtitle" id="subtitle1" style="margin-bottom:4px">קטלוג פרומפטים מתעדכן ליצירת תמונות אישיות ב- Nano Banana 2</p>
+<p class="subtitle" style="margin-bottom:20px"><span id="subtitle-count">0</span> <span id="subtitle2">פרומפטים | 📋 Copy להעתקה | לחץ על תמונה לתצוגה מוגדלת</span></p>
+<a id="servicesLink" href="/services" style="display:none;color:var(--primary);font-size:13px;text-decoration:none;border:1px solid var(--primary);padding:4px 14px;border-radius:20px;margin-bottom:16px;transition:background .15s">🛍️ שירותים והזמנות</a>
+<div id="orderBar" style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:14px">
+  <button class="btn" id="btnMainOrder" style="display:none;background:#4caf50;color:#fff" onclick="location.href='/services#order'"><span style="font-size:18px;vertical-align:middle">🛒</span> הזמנת תמונות</button>
+  <button class="btn" id="btnMainSession" style="display:none;background:#1565c0;color:#fff" onclick="location.href='/services#session'">📅 קביעת סשן</button>
+  <button class="btn btn-fav-filter" id="favFilterBtn" onclick="toggleFavFilter()">❤️ מועדפים</button>
+  <button class="btn btn-fav-action" id="btnSendFavs" style="display:none" onclick="openShareModal()">📤 שלח מועדפים</button>
+  <button class="btn btn-fav-action" id="btnClearFavs" style="display:none" onclick="clearFavs()">🗑️ אפס בחירה</button>
+</div>
+<div class="cat-filter-bar" id="catFilterBar"></div>
+<div class="cols-control">
+  <span class="cols-label">מספר תמונות בשורה:</span>
+  <input type="range" id="colsSlider" class="cols-slider" min="1" max="17" value="5">
+  <span class="cols-val" id="colsVal">5</span>
+</div>
+<div id="favCountRow" style="display:none;text-align:center;color:#f5a623;font-weight:bold;font-size:14px;margin-bottom:10px"></div>
+<div class="grid" id="grid"></div>
+<button class="fab" id="fab" onclick="openAddModal()" title="הוסף פרומפט">＋</button>
+<div class="lb-overlay" id="lb">
+  <button class="lb-close" id="lb-close" aria-label="סגירת תמונה">✕</button>
+  <img class="lb-img" id="lb-img" src="" alt="">
+  <div class="lb-title" id="lb-title"></div>
+  <div class="lb-nav" id="lb-nav" style="display:none">
+    <button id="lb-prev">◄ הקודם</button>
+    <button id="lb-next">הבא ►</button>
+  </div>
+  <div class="lb-counter" id="lb-counter"></div>
+</div>
+<div class="modal-bg" id="catsModal">
+  <div class="modal" style="max-width:420px">
+    <h2>🏷️ ניהול קטגוריות</h2>
+    <div id="catsManagerList"></div>
+    <div style="display:flex;gap:8px;margin-top:10px">
+      <input class="cm-inp" id="newCatInput" placeholder="שם קטגוריה חדשה...">
+      <button class="btn btn-add" onclick="addCatItem()">➕ הוסף</button>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-cancel" onclick="closeModal('catsModal')">ביטול</button>
+      <button class="btn btn-ok" onclick="saveCatsManager()">שמור</button>
+    </div>
+  </div>
+</div>
+<div class="modal-bg" id="promptModal">
+  <div class="modal">
+    <h2 id="modalTitle"></h2>
+    <label>כותרת</label><input type="text" id="mTitle" placeholder="שם הפרומפט">
+    <input type="hidden" id="mCat">
+    <label>קטגוריות</label><div id="mCatsWrap" class="cat-checks-wrap"></div>
+    <label>טקסט הפרומפט</label><textarea id="mPrompt" placeholder="הכנס את הפרומפט כאן..."></textarea>
+    <label>תמונה (אופציונלי) - העלה קובץ</label>
+    <input type="file" id="mImgFile" accept="image/*">
+    <div class="or-div">- או -</div>
+    <input type="text" id="mImgUrl" placeholder="URL של תמונה">
+    <img class="img-preview" id="mImgPrev" alt="">
+    <div class="modal-footer">
+      <button class="btn btn-cancel" id="mCancel">ביטול</button>
+      <button class="btn btn-ok" id="mOk">שמור</button>
+    </div>
+  </div>
+</div>
+<div class="modal-bg" id="imgModal">
+  <div class="modal">
+    <h2>🖼️ החלף תמונה</h2>
+    <label>העלה קובץ</label>
+    <input type="file" id="iImgFile" accept="image/*">
+    <div class="or-div">- או -</div>
+    <input type="text" id="iImgUrl" placeholder="URL של תמונה">
+    <img class="img-preview" id="iImgPrev" alt="">
+    <div class="modal-footer">
+      <button class="btn btn-cancel" id="iCancel">ביטול</button>
+      <button class="btn btn-ok" id="iOk">החלף</button>
+    </div>
+  </div>
+</div>
+<div class="modal-bg" id="keysModal">
+  <div class="modal" style="max-width:500px">
+    <h2>🔑 ניהול ססמאות גישה</h2>
+    <input class="keys-search" id="keysSearch" type="search" placeholder="🔍 חפש לפי שם או ססמא..." oninput="filterKeysList(this.value)">
+    <ul class="keys-list" id="keysList"><li style="color:var(--text4);text-align:center">טוען...</li></ul>
+    <p style="color:var(--text2);font-size:12px;margin-bottom:8px">הוסף ססמא חדשה:</p>
+    <div class="keys-add-row">
+      <input type="text" id="newKeyVal" placeholder="ססמא (לדוגמה: BB-2024-SARAH)" style="direction:ltr">
+      <input type="text" id="newKeyName" placeholder="שם הלקוח">
+      <input type="number" id="newKeyMonths" placeholder="חודשים (ריק = לנצח)" min="1" max="120" style="width:80px">
+      <button class="btn btn-ok" onclick="addKey()">➕ הוסף</button>
+    </div>
+    <p id="keysError" style="display:none;color:#e53935;font-size:12px;margin-top:6px"></p>
+    <div class="modal-footer">
+      <button class="btn btn-cancel" onclick="closeModal('keysModal')">סגור</button>
+    </div>
+  </div>
+</div>
+<!-- Custom confirm dialog -->
+<div class="modal-bg" id="confirmModal" style="z-index:3000">
+  <div class="modal" style="max-width:360px;text-align:center">
+    <p style="color:#f5a623;font-size:13px;font-weight:bold;margin-bottom:10px">Brill Banana Prompts</p>
+    <h2 style="color:var(--text);font-size:15px;margin-bottom:20px" id="confirmModalMsg"></h2>
+    <div class="modal-footer" style="justify-content:center;gap:12px">
+      <button class="btn btn-ok" id="confirmModalYes" style="min-width:80px">כן</button>
+      <button class="btn btn-cancel" onclick="closeModal('confirmModal')" style="min-width:80px">לא</button>
+    </div>
+  </div>
+</div>
+<div class="modal-bg" id="accessModal">
+  <div class="modal" style="max-width:460px">
+    <div class="access-tabs">
+      <button class="access-tab active" id="tabPremium" onclick="switchAccessTab('premium')">🔑 פרימיום</button>
+      <button class="access-tab" id="tabAdmin" onclick="switchAccessTab('admin')">🔒 מנהלת</button>
+    </div>
+    <!-- Premium tab -->
+    <div class="access-tab-panel active" id="panelPremium">
+      <div id="licenseActiveInfo" style="display:none">
+        <p style="color:#4caf50;font-size:14px;margin-bottom:8px">✅ Premium Active</p>
+        <p class="license-expiry" id="licenseExpiry"></p>
+        <div class="modal-footer">
+          <button class="btn btn-cancel" onclick="closeModal('accessModal')">סגור</button>
+          <button class="btn" style="background:#e53935;color:#fff" onclick="deactivateLicense()">התנתק</button>
+        </div>
+      </div>
+      <div id="licenseInactiveInfo">
+        <label style="margin-top:0">יש לך מפתח גישה?</label>
+        <div style="display:flex;gap:8px;margin-bottom:4px">
+          <input type="text" id="licenseKeyInput" placeholder="הזן מפתח כאן..." style="flex:1;direction:ltr">
+          <button class="btn btn-ok" onclick="activateLicenseKey()">✅ הפעל</button>
+        </div>
+        <p id="licenseError" style="display:none;color:#e53935;font-size:12px;margin-top:4px"></p>
+        <div class="license-divider">or</div>
+        <p id="modalPrice" style="color:var(--text2);font-size:13px;margin-bottom:8px;font-weight:bold">גישה מלאה לשנה - 59 ₪</p>
+        <ul class="license-benefits">
+          <li id="modalBullet1">גישה מלאה לכל הפרומפטים</li>
+          <li id="modalBullet2">העתקה בלחיצה אחת</li>
+          <li id="modalBullet3">פרומפטים חדשים נוספים מדי פעם</li>
+          <li id="modalBullet4">תוקף ל-12 חודשים</li>
+        </ul>
+        <a id="buyBtn" href="#" target="_blank" class="buy-btn">💬 לרכישה שלח/י הודעה - 59 ₪</a>
+        <div class="modal-footer" style="margin-top:16px">
+          <button class="btn btn-cancel" onclick="closeModal('accessModal')">סגור</button>
+        </div>
+      </div>
+    </div>
+    <!-- Admin tab -->
+    <div class="access-tab-panel" id="panelAdmin">
+      <label style="margin-top:0">סיסמת מנהלת:</label>
+      <div style="display:flex;gap:8px;margin-bottom:4px">
+        <input type="password" id="adminPwInput" placeholder="הזן סיסמה..." style="flex:1;direction:ltr" onkeydown="if(event.key==='Enter')tryUnlockFromModal()">
+        <button class="btn btn-ok" onclick="tryUnlockFromModal()">🔓 כניסה</button>
+      </div>
+      <p id="adminLoginError" style="display:none;color:#e53935;font-size:12px;margin-top:4px"></p>
+      <div class="modal-footer" style="margin-top:16px">
+        <button class="btn btn-cancel" onclick="closeModal('accessModal')">סגור</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-bg" id="unlockModal">
+  <div class="modal" style="max-width:420px">
+    <h2>🔒 פרומפט פרימיום</h2>
+    <p style="color:var(--text2);font-size:13px;margin:12px 0">כדי לראות את הפרומפט המלא ולהעתיק אותו, נדרשת גישת פרימיום.</p>
+    <a id="unlockBuyBtn" href="#" target="_blank" class="buy-btn">💬 לרכישה שלח/י הודעה - 59 ₪</a>
+    <div class="license-divider" style="margin:14px 0">יש לך מפתח?</div>
+    <div style="display:flex;gap:8px">
+      <input type="text" id="unlockKeyInput" placeholder="הזן מפתח גישה..." style="flex:1;direction:ltr">
+      <button class="btn btn-ok" onclick="activateLicenseKey('unlockKeyInput')">✅ הפעל</button>
+    </div>
+    <p id="unlockError" style="display:none;color:#e53935;font-size:12px;margin-top:4px"></p>
+    <div class="modal-footer">
+      <button class="btn btn-cancel" onclick="closeModal('unlockModal')">סגור</button>
+    </div>
+  </div>
+</div>
+<div class="modal-bg" id="importModal">
+  <div class="modal" style="max-width:500px">
+    <h2>📥 ייבוא כרטיסיות</h2>
+    <p style="color:var(--text2);font-size:12px;margin-bottom:14px">הכן קובץ JSON עם הפרומפטים ותמונות עם שמות תואמים.</p>
+    <label>1. קובץ JSON</label>
+    <input type="file" id="importJsonFile" accept=".json" style="margin-bottom:12px">
+    <label>2. תמונות (בחרי מספר קבצים)</label>
+    <input type="file" id="importImgFiles" accept="image/*" multiple style="margin-bottom:14px">
+    <div id="importPreview" style="display:none;max-height:220px;overflow-y:auto;border:1px solid var(--border2);border-radius:8px;padding:10px;margin-bottom:14px;font-size:12px"></div>
+    <p style="color:var(--text4);font-size:11px;margin-bottom:14px">
+      פורמט JSON לדוגמה:<br>
+      <code style="direction:ltr;display:block;background:var(--prompt-bg);padding:6px;border-radius:5px;margin-top:4px">[{"title":"שם","cat":"קטגוריה","prompt":"...","image":"photo.jpg"}]</code>
+    </p>
+    <div class="modal-footer">
+      <button class="btn btn-cancel" onclick="closeModal('importModal')">סגור</button>
+      <button class="btn btn-ok" id="importExecBtn" onclick="executeImport()" disabled>📥 ייבא</button>
+    </div>
+  </div>
+</div>
+<div class="modal-bg" id="waTextModal">
+  <div class="modal" style="max-width:460px">
+    <h2>📱 עריכת הודעות וואטסאפ</h2>
+    <label>מספר טלפון (ללא + וללא רווחים)</label>
+    <input type="text" id="wtPhone" placeholder="972523919350" style="direction:ltr">
+    <label style="margin-top:14px">הודעת בקשת רכישה</label>
+    <textarea id="wtPurchaseMsg" rows="3" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);font-size:13px;resize:vertical;direction:rtl"></textarea>
+    <label style="margin-top:14px">פתיחת הודעת מועדפים <span style="color:var(--text4);font-size:11px">(השתמש ב-{n} למספר הכרטיסיות)</span></label>
+    <textarea id="wtFavsPrefix" rows="2" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);font-size:13px;resize:vertical;direction:rtl"></textarea>
+    <label style="margin-top:14px">🛒 הודעת הזמנת תמונות <span style="color:var(--text4);font-size:11px">({n} = מספר תמונות)</span></label>
+    <textarea id="wtOrderMsg" rows="2" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);font-size:13px;resize:vertical;direction:rtl"></textarea>
+    <label style="margin-top:14px">📅 הודעת קביעת סשן צילום</label>
+    <textarea id="wtSessionMsg" rows="3" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);font-size:13px;resize:vertical;direction:rtl"></textarea>
+    <div class="modal-footer" style="margin-top:16px">
+      <button class="btn btn-cancel" onclick="closeModal('waTextModal')">סגור</button>
+      <button class="btn btn-ok" onclick="saveWaTexts()">✅ שמור</button>
+    </div>
+  </div>
+</div>
+<div class="modal-bg" id="premiumTextModal">
+  <div class="modal" style="max-width:460px">
+    <h2>🖊️ עריכת חלון פרימיום</h2>
+    <label>כותרת מחיר</label>
+    <input type="text" id="ptPrice" placeholder="גישה מלאה לשנה - 59 ₪">
+    <label style="margin-top:10px">שורה 1</label>
+    <input type="text" id="ptB1" placeholder="גישה מלאה לכל הפרומפטים">
+    <label style="margin-top:10px">שורה 2</label>
+    <input type="text" id="ptB2" placeholder="העתקה בלחיצה אחת">
+    <label style="margin-top:10px">שורה 3</label>
+    <input type="text" id="ptB3" placeholder="פרומפטים חדשים נוספים מדי פעם">
+    <label style="margin-top:10px">שורה 4</label>
+    <input type="text" id="ptB4" placeholder="תוקף ל-12 חודשים">
+    <label style="margin-top:10px">טקסט כפתור רכישה</label>
+    <input type="text" id="ptBuyText" placeholder="💬 לרכישה שלח/י הודעה - 59 ₪">
+    <label style="margin-top:10px">קישור כפתור רכישה (URL)</label>
+    <input type="text" id="ptBuyUrl" placeholder="https://wa.me/..." style="direction:ltr">
+    <div class="modal-footer" style="margin-top:16px">
+      <button class="btn btn-cancel" onclick="closeModal('premiumTextModal')">סגור</button>
+      <button class="btn btn-ok" onclick="savePremiumTexts()">✅ שמור</button>
+    </div>
+  </div>
+</div>
+<div class="modal-bg" id="headerModal">
+  <div class="modal" style="max-width:480px">
+    <h2>✏️ עריכת כותרת ראשית</h2>
+    <label>כותרת ראשית (הטקסט לצידי הבננה)</label>
+    <input type="text" id="hdr_title" placeholder="Brill Banana Prompts">
+    <label style="margin-top:12px">שורה 1 - כתובית עליונה</label>
+    <input type="text" id="hdr_sub1" placeholder="קטלוג פרומפטים מתעדכן ליצירת תמונות אישיות ב- Nano Banana 2">
+    <label style="margin-top:12px">שורה 2 - כתובית תחתונה (אחרי מספר הפרומפטים)</label>
+    <input type="text" id="hdr_sub2" placeholder="פרומפטים | 📋 Copy להעתקה | לחץ על תמונה לתצוגה מוגדלת">
+    <div class="modal-footer" style="margin-top:16px">
+      <button class="btn btn-cancel" onclick="closeModal('headerModal')">סגור</button>
+      <button class="btn btn-ok" onclick="saveHeaderContent()">✅ שמור</button>
+    </div>
+  </div>
+</div>
+<div class="modal-bg" id="servicesModal">
+  <div class="modal" style="max-width:540px">
+    <h2>🛍️ עריכת עמוד שירותים</h2>
+    <label>כותרת Hero</label>
+    <input type="text" id="svc_heroTitle" placeholder="הזמנת תמונות AI אישיות 🍌">
+    <label style="margin-top:10px">תת-כותרת Hero</label>
+    <textarea id="svc_heroSub" rows="2" style="width:100%;padding:8px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);font-size:13px;resize:vertical;direction:rtl"></textarea>
+    <hr style="border-color:var(--border2);margin:16px 0">
+    <b style="color:var(--primary)">🛒 הזמנת תמונות</b>
+    <label style="margin-top:10px">מחיר (תמונה בודדת)</label>
+    <input type="text" id="svc_orderPrice" placeholder="10 ₪">
+    <label style="margin-top:10px">הערת מחיר</label>
+    <input type="text" id="svc_orderNote" placeholder="לתמונה בודדת | 5 ₪ לתמונה בחבילה של 20+">
+    <hr style="border-color:var(--border2);margin:16px 0">
+    <b style="color:#7b2ff7">🔓 מנוי שנתי</b>
+    <label style="margin-top:10px">מחיר מנוי</label>
+    <input type="text" id="svc_subPrice" placeholder="59 ₪">
+    <label style="margin-top:10px">הערת מנוי</label>
+    <input type="text" id="svc_subNote" placeholder="תשלום חד-פעמי לשנה שלמה">
+    <hr style="border-color:var(--border2);margin:16px 0">
+    <b style="color:var(--primary)">📅 סשן בזום</b>
+    <label style="margin-top:10px">מחיר סשן</label>
+    <input type="text" id="svc_sessionPrice" placeholder="350 ₪">
+    <label style="margin-top:10px">הערת סשן</label>
+    <input type="text" id="svc_sessionNote" placeholder="סשן של שעה מלאה">
+    <hr style="border-color:var(--border2);margin:16px 0">
+    <b>📞 הודעות WhatsApp</b>
+    <label style="margin-top:10px">הודעה - הזמנת תמונות</label>
+    <input type="text" id="svc_orderMsg" placeholder="היי, אשמח להזמין תמונות AI 🍌">
+    <label style="margin-top:10px">הודעה - מנוי שנתי</label>
+    <input type="text" id="svc_subMsg" placeholder="היי, אשמח לרכוש מנוי שנתי לקטלוג 🍌">
+    <label style="margin-top:10px">הודעה - סשן בזום</label>
+    <input type="text" id="svc_sessionMsg" placeholder="היי, אשמח לקבוע סשן אישי בזום 🍌">
+    <hr style="border-color:var(--border2);margin:16px 0">
+    <b>🖼️ גלריית דוגמאות</b>
+    <p style="font-size:12px;color:var(--text2);margin:4px 0 10px">עדכן/י עד 8 תמונות - כתובת URL וכיתוב לכל תמונה</p>
+    <div id="svc_galleryRows" style="display:flex;flex-direction:column;gap:8px"></div>
+    <hr style="border-color:var(--border2);margin:16px 0">
+    <b>📐 גודל איזורים</b>
+    <p style="font-size:12px;color:var(--text2);margin:4px 0 10px">שנה/י את גודל הטקסט בכל חלק של העמוד (באחוזים)</p>
+    <div style="display:flex;flex-direction:column;gap:8px" id="svc_sizesWrap">
+      <div class="svc-size-row"><label>Hero - כותרת ראשית</label><div class="svc-size-ctrl"><input type="range" min="60" max="160" step="5" id="svc_sz_hero" oninput="document.getElementById('svc_sz_hero_val').textContent=this.value+'%'"><span class="svc-sz-val" id="svc_sz_hero_val">100%</span></div></div>
+      <div class="svc-size-row"><label>איך זה עובד</label><div class="svc-size-ctrl"><input type="range" min="60" max="160" step="5" id="svc_sz_how" oninput="document.getElementById('svc_sz_how_val').textContent=this.value+'%'"><span class="svc-sz-val" id="svc_sz_how_val">100%</span></div></div>
+      <div class="svc-size-row"><label>מחירים</label><div class="svc-size-ctrl"><input type="range" min="60" max="160" step="5" id="svc_sz_pricing" oninput="document.getElementById('svc_sz_pricing_val').textContent=this.value+'%'"><span class="svc-sz-val" id="svc_sz_pricing_val">100%</span></div></div>
+      <div class="svc-size-row"><label>גלריה - טקסט</label><div class="svc-size-ctrl"><input type="range" min="60" max="160" step="5" id="svc_sz_gallery" oninput="document.getElementById('svc_sz_gallery_val').textContent=this.value+'%'"><span class="svc-sz-val" id="svc_sz_gallery_val">100%</span></div></div>
+      <div class="svc-size-row"><label>גלריה - עמודות</label><div class="svc-size-ctrl"><input type="range" min="2" max="6" step="1" id="svc_sz_galcols" oninput="document.getElementById('svc_sz_galcols_val').textContent=this.value"><span class="svc-sz-val" id="svc_sz_galcols_val">4</span></div></div>
+      <div class="svc-size-row"><label>שאלות נפוצות</label><div class="svc-size-ctrl"><input type="range" min="60" max="160" step="5" id="svc_sz_faq" oninput="document.getElementById('svc_sz_faq_val').textContent=this.value+'%'"><span class="svc-sz-val" id="svc_sz_faq_val">100%</span></div></div>
+      <div class="svc-size-row"><label>יצירת קשר</label><div class="svc-size-ctrl"><input type="range" min="60" max="160" step="5" id="svc_sz_contact" oninput="document.getElementById('svc_sz_contact_val').textContent=this.value+'%'"><span class="svc-sz-val" id="svc_sz_contact_val">100%</span></div></div>
+    </div>
+    <div class="modal-footer" style="margin-top:16px">
+      <button class="btn btn-cancel" onclick="closeModal('servicesModal')">סגור</button>
+      <button class="btn btn-ok" onclick="saveServicesContent()">✅ שמור ופרסם</button>
+    </div>
+  </div>
+</div>
+<div class="modal-bg" id="shareModal">
+  <div class="modal">
+    <h2>❤️ המועדפים שלי</h2>
+    <p id="shareCount" style="color:#e91e63;font-size:13px;margin-bottom:4px"></p>
+    <ul class="share-modal-list" id="shareList"></ul>
+    <div class="modal-footer" style="flex-wrap:wrap;gap:8px">
+      <button class="btn btn-cancel" onclick="closeModal('shareModal')">סגור</button>
+      <button class="btn" style="background:#444;color:#fff" onclick="copyFavsList()">📋 העתק רשימה</button>
+      <button class="btn" style="background:#4caf50;color:#fff" id="btnOrder" onclick="orderImagesWhatsApp()">🛒 הזמנת תמונות</button>
+      <button class="btn" style="background:#1565c0;color:#fff" id="btnSession" onclick="bookSessionWhatsApp()">📅 קביעת סשן</button>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const PROMPTS_ORIG = [];
+const TITLES_ORIG = [];
+const CATS_ORIG = [];
+const IDS_ORIG = [];
+const IMAGES_ORIG = [];
+
+
+var ADMIN_UNLOCKED = false;
+var editMode = false;
+var pendingChanges = false;
+
+async function hashStr(s) {
+  var buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
+  return Array.from(new Uint8Array(buf)).map(function(b){return b.toString(16).padStart(2,'0');}).join('');
+}
+
+function tryUnlock() {
+  openAccessModal('admin');
+}
+
+async function tryUnlockFromModal() {
+  var input = document.getElementById('adminPwInput');
+  var error = document.getElementById('adminLoginError');
+  if (!input.value) return;
+  error.style.display = 'none';
+  try {
+    var response = await fetch('/api/session', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password: input.value }) });
+    var data = await response.json();
+    if (!response.ok) throw new Error(data.error || 'הכניסה נכשלה');
+    input.value = '';
+    await loadAdminData();
+    closeModal('accessModal');
+    showToast('הכניסה הצליחה');
+  } catch(e) { error.textContent = e.message; error.style.display = ''; }
+}
+
+async function loadAdminData() {
+  var response = await fetch('/api/state');
+  var data = await response.json();
+  if (!response.ok) throw new Error(data.error || 'טעינת הנתונים נכשלה');
+  _baseRevision = data._revision;
+  _originalData = data._originals || [];
+  delete data._revision; delete data._originals;
+  // Keep uploaded source URLs usable outside the old static image folder.
+  function imageUrl(src) {
+    return /^\/?images\//.test(src) ? 'https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/' + src.replace(/^\//, '') : src;
+  }
+  Object.keys(data.customImgs || {}).forEach(function(key) { data.customImgs[key] = imageUrl(data.customImgs[key]); });
+  (data.added || []).forEach(function(p) { p.images = (p.images || []).map(imageUrl); });
+  _originalData.forEach(function(p, i) {
+    PROMPTS_ORIG[i] = p.prompt; TITLES_ORIG[i] = p.title; CATS_ORIG[i] = p.cat;
+    IDS_ORIG[i] = p.id; IMAGES_ORIG[i] = (p.images || []).map(imageUrl);
+  });
+  state = data; serverCustomImgs = data.customImgs || {};
+  ADMIN_UNLOCKED = true;
+  document.getElementById('adminBar').classList.add('open');
+  document.body.classList.add('admin-open');
+  document.getElementById('adminLoadError').hidden = true;
+  applyState(state);
+}
+function exportStateBackup() {
+  var blob = new Blob([JSON.stringify(state, null, 2)], {type:'application/json'});
+  var a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+  a.download = 'brill-backup-' + new Date().toISOString().slice(0,10) + '.json'; a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); }, 1000);
+}
+
+// Full editor state is loaded from the authenticated API, never from a browser cache.
+var state = { deleted: [], customImgs: {}, added: [], order: [] };
+var serverCustomImgs = {}; // image paths confirmed uploaded on server
+var _baseRevision = null;
+var _originalData = [];
+
+function isEmptyState(st) {
+  if (!st) return true;
+  if (st._saved) return false; // explicitly saved state, always use it
+  return ((!st.deleted||!st.deleted.length) && (!st.added||!st.added.length) && (!st.order||!st.order.length) && (!st.customImgs||!Object.keys(st.customImgs).length) && (!st.promptEdits||!Object.keys(st.promptEdits).length) && (!st.freePrompts||!Object.keys(st.freePrompts).length) && !st.freeEnabled && !st.freeMode);
+}
+
+// ── Keys Management ──────────────────────────────────────
+var _adminToken = ''; // Same-origin HttpOnly session authorizes administrative requests.
+
+async function openKeysModal() {
+  if (!ADMIN_UNLOCKED) return;
+  document.getElementById('keysError').style.display = 'none';
+  var ks = document.getElementById('keysSearch'); if (ks) ks.value = '';
+  openModal('keysModal');
+  await loadKeys();
+}
+
+async function loadKeys() {
+  var list = document.getElementById('keysList');
+  list.innerHTML = '<li style="color:var(--text4);text-align:center">טוען...</li>';
+  try {
+    var r = await fetch('/api/keys', { headers: { 'X-Admin-Token': _adminToken } });
+    if (r.status === 401) { _adminToken = null; localStorage.removeItem('bb_admin_token'); closeModal('keysModal'); showToast('❌ Token שגוי'); return; }
+    var data = await r.json();
+    renderKeysList(data.keys || {});
+  } catch(e) {
+    list.innerHTML = '<li style="color:#e53935">שגיאת חיבור</li>';
+  }
+}
+
+function renderKeysList(keys) {
+  var list = document.getElementById('keysList');
+  var entries = Object.entries(keys);
+  if (!entries.length) {
+    list.innerHTML = '<li style="color:var(--text4);text-align:center">אין ססמאות עדיין</li>';
+    return;
+  }
+  list.innerHTML = '';
+  entries.forEach(function(entry) {
+    var k = entry[0], v = entry[1];
+    var li = document.createElement('li');
+    li.setAttribute('data-key-val', k);
+    li.setAttribute('data-key-name', v.name || '');
+    var now = new Date();
+    var expired = v.expiresAt && new Date(v.expiresAt) < now;
+    var expiryStr = v.expiresAt
+      ? (expired ? '⚠️ פג: ' : '⏳ עד: ') + new Date(v.expiresAt).toLocaleDateString('he-IL')
+      : '♾️ לנצח';
+    var lastUsedStr = v.lastUsed
+      ? '👁️ ' + new Date(v.lastUsed).toLocaleDateString('he-IL')
+      : '👁️ טרם נוצל';
+    li.innerHTML = '<div style="flex:1;min-width:0">'
+      + '<div style="display:flex;gap:8px;align-items:center">'
+      + '<span class="key-name">' + escHtml(v.name || '-') + '</span>'
+      + '<span class="key-val">' + escHtml(k) + '</span>'
+      + '</div>'
+      + '<div style="display:flex;gap:12px;margin-top:3px;font-size:11px;color:var(--text4)">'
+      + '<span style="' + (expired ? 'color:#e53935' : '') + '">' + expiryStr + '</span>'
+      + '<span>' + lastUsedStr + '</span>'
+      + '</div></div>'
+      + '<button class="key-del" onclick="deleteKey(\'' + escHtml(k) + '\')">🗑️ מחק</button>';
+    list.appendChild(li);
+  });
+}
+
+async function addKey() {
+  var keyVal    = document.getElementById('newKeyVal').value.trim();
+  var keyName   = document.getElementById('newKeyName').value.trim();
+  var keyMonths = parseInt(document.getElementById('newKeyMonths').value) || 0;
+  var errEl     = document.getElementById('keysError');
+  if (!keyVal) { errEl.textContent = 'יש להזין ססמא'; errEl.style.display = ''; return; }
+  errEl.style.display = 'none';
+  try {
+    var body = { key: keyVal, name: keyName };
+    if (keyMonths > 0) body.months = keyMonths;
+    var r = await fetch('/api/keys', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Admin-Token': _adminToken },
+      body: JSON.stringify(body)
+    });
+    var data = await r.json();
+    if (r.ok) {
+      document.getElementById('newKeyVal').value = '';
+      document.getElementById('newKeyName').value = '';
+      document.getElementById('newKeyMonths').value = '';
+      renderKeysList(data.keys || {});
+      showToast('✅ ססמא נוספה');
+    } else {
+      errEl.textContent = data.error || 'שגיאה'; errEl.style.display = '';
+    }
+  } catch(e) { errEl.textContent = 'שגיאת חיבור'; errEl.style.display = ''; }
+}
+
+async function deleteKey(key) {
+  if (!confirm('למחוק ססמא: ' + key + '?')) return;
+  try {
+    var r = await fetch('/api/keys', {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json', 'X-Admin-Token': _adminToken },
+      body: JSON.stringify({ key: key })
+    });
+    var data = await r.json();
+    if (r.ok) { renderKeysList(data.keys || {}); showToast('🗑️ ססמא נמחקה'); }
+    else showToast('❌ ' + (data.error || 'שגיאה'));
+  } catch(e) { showToast('❌ שגיאת חיבור'); }
+}
+// ─────────────────────────────────────────────────────────
+
+// ── Paywall ──────────────────────────────────────────────
+// ── Batch Import ──────────────────────────────────────────
+var _importData = { cards: [], images: {} };
+
+function openImportModal() {
+  _importData = { cards: [], images: {} };
+  document.getElementById('importJsonFile').value = '';
+  document.getElementById('importImgFiles').value = '';
+  document.getElementById('importPreview').style.display = 'none';
+  document.getElementById('importExecBtn').disabled = true;
+  openModal('importModal');
+}
+
+// Apply header config on load
+(function(){
+  var cfg = JSON.parse(localStorage.getItem('bb_header_config') || 'null');
+  if (cfg) applyHeaderConfig(cfg);
+})();
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('importJsonFile').addEventListener('change', function(e) {
+    var file = e.target.files[0];
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function(ev) {
+      try {
+        _importData.cards = JSON.parse(ev.target.result);
+        if (!Array.isArray(_importData.cards)) throw new Error();
+        updateImportPreview();
+      } catch(err) {
+        alert('קובץ JSON לא תקין');
+        _importData.cards = [];
+      }
+    };
+    reader.readAsText(file);
+  });
+
+  document.getElementById('importImgFiles').addEventListener('change', function(e) {
+    _importData.images = {};
+    var files = Array.from(e.target.files);
+    var done = 0;
+    if (!files.length) { updateImportPreview(); return; }
+    files.forEach(function(file) {
+      var reader = new FileReader();
+      reader.onload = function(ev) {
+        compressImage(ev.target.result, 1200, 0.82).then(function(compressed) {
+          _importData.images[file.name] = compressed;
+          done++;
+          if (done === files.length) updateImportPreview();
+        });
+      };
+      reader.readAsDataURL(file);
+    });
+  });
+});
+
+function updateImportPreview() {
+  var cards = _importData.cards;
+  var images = _importData.images;
+  var preview = document.getElementById('importPreview');
+  var btn = document.getElementById('importExecBtn');
+  if (!cards.length) { preview.style.display = 'none'; btn.disabled = true; return; }
+  var rows = cards.map(function(c, i) {
+    var hasImg = c.image && images[c.image];
+    var imgStatus = !c.image ? '<span style="color:var(--text4)">ללא תמונה</span>'
+                  : hasImg   ? '<span style="color:#4caf50">✅ ' + c.image + '</span>'
+                  :            '<span style="color:#e53935">❌ לא נמצאה: ' + c.image + '</span>';
+    return '<div style="padding:4px 0;border-bottom:1px solid var(--border3)">'
+      + '<strong>' + (c.title || 'ללא שם') + '</strong> · ' + (c.cat || '') + '<br>' + imgStatus + '</div>';
+  }).join('');
+  preview.innerHTML = '<div style="margin-bottom:6px;font-weight:bold">' + cards.length + ' כרטיסיות:</div>' + rows;
+  preview.style.display = 'block';
+  btn.disabled = false;
+  btn.textContent = '📥 ייבא ' + cards.length + ' כרטיסיות';
+}
+
+function executeImport() {
+  var cards = _importData.cards;
+  var images = _importData.images;
+  if (!cards.length) return;
+  if (!state.added) state.added = [];
+  var ts = Date.now();
+  var labelToId = {};
+  (CUSTOM_CATS || []).forEach(function(c) { labelToId[c.label] = c.id; });
+  cards.forEach(function(c, i) {
+    var key = 'added_import_' + ts + '_' + i;
+    var imgSrc = (c.image && images[c.image]) ? images[c.image] : '';
+    var cats = Array.isArray(c.cats) ? c.cats.slice() : [];
+    if (!cats.length && c.cat && labelToId[c.cat]) cats = [labelToId[c.cat]];
+    var p = { key: key, title: c.title || '', cat: c.cat || '', cats: cats, prompt: c.prompt || '', images: imgSrc ? [imgSrc] : [] };
+    state.added.push(p);
+    if (imgSrc) { if (!state.customImgs) state.customImgs = {}; state.customImgs[key] = imgSrc; }
+    appendCard(p);
+  });
+  updateCount(); renumberCards();
+  markUnsaved();
+  closeModal('importModal');
+  showToast('✅ יובאו ' + cards.length + ' כרטיסיות - לחץ פרסם לשמירה');
+}
+
+var DEFAULT_WA_CONFIG = {
+  phone: '972523919350',
+  purchaseMsg: 'היי! אני רוצה לרכוש גישה מלאה ל-Brill Banana Prompts 🍌',
+  favsPrefix: 'בחרתי {n} תמונות מ-Brill Banana Prompts:',
+  orderMsg: 'היי! אני מעוניין/ת להזמין את התמונות הבאות ({n} תמונות) 🛒',
+  sessionMsg: 'היי! אני מעוניין/ת לקבוע סשן צילום 📅\n\nאלו התמונות שאהבתי:'
+};
+var PURCHASE_WA_URL = 'https://wa.me/972523919350?text=' + encodeURIComponent(DEFAULT_WA_CONFIG.purchaseMsg);
+var WA_FAVS_PREFIX = DEFAULT_WA_CONFIG.favsPrefix;
+var WA_ORDER_MSG   = DEFAULT_WA_CONFIG.orderMsg;
+var WA_SESSION_MSG = DEFAULT_WA_CONFIG.sessionMsg;
+
+function applyWaConfig(cfg) {
+  cfg = cfg || {};
+  var d = DEFAULT_WA_CONFIG;
+  var phone  = (cfg.phone       || d.phone).replace(/\D/g,'');
+  var purMsg = cfg.purchaseMsg  || d.purchaseMsg;
+  var favsPfx= cfg.favsPrefix   || d.favsPrefix;
+  var orderMsg  = cfg.orderMsg   || d.orderMsg;
+  var sessionMsg= cfg.sessionMsg || d.sessionMsg;
+  ADMIN_WHATSAPP = phone;
+  PURCHASE_WA_URL = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(purMsg);
+  WA_FAVS_PREFIX  = favsPfx;
+  WA_ORDER_MSG    = orderMsg;
+  WA_SESSION_MSG  = sessionMsg;
+  // update buy buttons href
+  ['buyBtn','unlockBuyBtn'].forEach(function(id) {
+    var btn = document.getElementById(id);
+    if (btn && (!btn.getAttribute('href') || btn.getAttribute('href') === '#' || btn.getAttribute('href').indexOf('wa.me') !== -1)) {
+      // only override if no custom URL was set via modalConfig
+      var mc = state.modalConfig;
+      if (!mc || !mc.buyUrl) btn.href = PURCHASE_WA_URL;
+    }
+  });
+}
+
+function openWaTextModal() {
+  var cfg = state.waConfig || {};
+  var d = DEFAULT_WA_CONFIG;
+  document.getElementById('wtPhone').value       = cfg.phone       || d.phone;
+  document.getElementById('wtPurchaseMsg').value = cfg.purchaseMsg || d.purchaseMsg;
+  document.getElementById('wtFavsPrefix').value  = cfg.favsPrefix  || d.favsPrefix;
+  document.getElementById('wtOrderMsg').value    = cfg.orderMsg    || d.orderMsg;
+  document.getElementById('wtSessionMsg').value  = cfg.sessionMsg  || d.sessionMsg;
+  openModal('waTextModal');
+}
+
+function saveWaTexts() {
+  state.waConfig = {
+    phone:       document.getElementById('wtPhone').value.trim().replace(/\D/g,'') || DEFAULT_WA_CONFIG.phone,
+    purchaseMsg: document.getElementById('wtPurchaseMsg').value.trim() || DEFAULT_WA_CONFIG.purchaseMsg,
+    favsPrefix:  document.getElementById('wtFavsPrefix').value.trim()  || DEFAULT_WA_CONFIG.favsPrefix,
+    orderMsg:    document.getElementById('wtOrderMsg').value.trim()    || DEFAULT_WA_CONFIG.orderMsg,
+    sessionMsg:  document.getElementById('wtSessionMsg').value.trim()  || DEFAULT_WA_CONFIG.sessionMsg
+  };
+  applyWaConfig(state.waConfig);
+  markUnsaved();
+  closeModal('waTextModal');
+  showToast('✅ הודעות WA עודכנו - לחץ פרסם לשמירה');
+}
+
+function isPremiumUser() {
+  try {
+    var d = JSON.parse(localStorage.getItem('brill_license') || 'null');
+    if (!d) return false;
+    return new Date(d.expiresAt) > new Date();
+  } catch(e) { return false; }
+}
+
+function getLicenseExpiry() {
+  try {
+    var d = JSON.parse(localStorage.getItem('brill_license') || 'null');
+    if (!d) return null;
+    return new Date(d.expiresAt);
+  } catch(e) { return null; }
+}
+
+function getFreeMode() {
+  // migrate old freeEnabled format on the fly
+  if (!state.freeMode && state.freeEnabled !== undefined) {
+    state.freeMode = state.freeEnabled ? 'partial' : 'off';
+    delete state.freeEnabled;
+  }
+  return state.freeMode || 'off';
+}
+
+function shouldShowFull(key) {
+  if (!ADMIN_UNLOCKED && isPremiumUser()) return true;
+  var mode = getFreeMode();
+  if (mode === 'full' || mode === 'catalog') return true;
+  if (mode === 'partial') return !!(state.freePrompts && state.freePrompts[key]);
+  return false;
+}
+
+function updateLicenseBtn() {
+  var btn = document.getElementById('accessBtn');
+  if (!btn) return;
+  if (isPremiumUser()) {
+    btn.textContent = '✅ פרימיום';
+    btn.classList.add('active');
+  } else {
+    btn.textContent = '🔒 פרימיום';
+    btn.classList.remove('active');
+  }
+}
+
+function openLicenseModal() { openAccessModal('premium'); }
+function openAccessModal(tab) {
+  tab = tab || 'premium';
+  switchAccessTab(tab);
+  if (tab === 'premium') {
+    var active = isPremiumUser();
+    document.getElementById('licenseActiveInfo').style.display = active ? '' : 'none';
+    document.getElementById('licenseInactiveInfo').style.display = active ? 'none' : '';
+    if (active) {
+      var exp = getLicenseExpiry();
+      document.getElementById('licenseExpiry').textContent = exp ? 'תוקף עד: ' + exp.toLocaleDateString('he-IL') : '';
+    }
+    document.getElementById('licenseError').style.display = 'none';
+  }
+  document.getElementById('adminLoginError').style.display = 'none';
+  document.getElementById('adminPwInput').value = '';
+  document.getElementById('licenseKeyInput').value = '';
+  document.getElementById('buyBtn').href = PURCHASE_WA_URL;
+  openModal('accessModal');
+}
+
+function openUnlockModal() {
+  document.getElementById('unlockError').style.display = 'none';
+  document.getElementById('unlockKeyInput').value = '';
+  document.getElementById('unlockBuyBtn').href = PURCHASE_WA_URL;
+  openModal('unlockModal');
+}
+
+async function activateLicenseKey(inputId) {
+  inputId = inputId || 'licenseKeyInput';
+  var key = document.getElementById(inputId).value.trim();
+  var errEl = document.getElementById(inputId === 'licenseKeyInput' ? 'licenseError' : 'unlockError');
+  if (!key) { errEl.textContent = 'יש להזין מפתח'; errEl.style.display = ''; return; }
+  errEl.style.display = 'none';
+
+  try {
+    var r = await fetch('/api/license', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({license_key: key})
+    });
+    var data = await r.json();
+    if (data.valid) {
+      try {
+        var prevLicense = JSON.parse(localStorage.getItem('brill_license') || 'null');
+        if (prevLicense && prevLicense.key !== key) {
+          // Save current favorites under the old key before switching
+          localStorage.setItem('bb_favs_' + prevLicense.key, JSON.stringify(favs));
+        }
+        // Load favorites saved for this key (empty if first time)
+        favs = JSON.parse(localStorage.getItem('bb_favs_' + key) || '{}');
+        localStorage.setItem('bb_favs', JSON.stringify(favs));
+        document.querySelectorAll('.fav-btn').forEach(function(b){
+          var k = b.getAttribute('data-key');
+          b.classList.toggle('fav-on', !!favs[k]);
+          b.textContent = favs[k] ? '❤️' : '🤍';
+        });
+        updateFavCount();
+      } catch(e) {}
+      var licenseData = {
+        key: key,
+        activatedAt: new Date().toISOString(),
+        expiresAt: new Date(Date.now() + 365*24*60*60*1000).toISOString()
+      };
+      localStorage.setItem('brill_license', JSON.stringify(licenseData));
+      closeModal('accessModal');
+      closeModal('unlockModal');
+      updateLicenseBtn();
+      applyPaywallToAll();
+      showToast('🎉 גישת פרימיום הופעלה!');
+    } else {
+      errEl.textContent = data.error || 'מפתח לא תקין';
+      errEl.style.display = '';
+    }
+  } catch(e) {
+    errEl.textContent = 'שגיאת חיבור - נסי שוב';
+    errEl.style.display = '';
+  }
+}
+
+function customConfirm(msg, onYes) {
+  document.getElementById('confirmModalMsg').textContent = msg;
+  var yesBtn = document.getElementById('confirmModalYes');
+  yesBtn.onclick = function() { closeModal('confirmModal'); onYes(); };
+  openModal('confirmModal');
+}
+
+function deactivateLicense() {
+  customConfirm('להתנתק מהמכשיר הזה?', function() {
+    // Save favorites under this key before logging out, then clear the display
+    try {
+      var cur = JSON.parse(localStorage.getItem('brill_license') || 'null');
+      if (cur && cur.key) {
+        localStorage.setItem('bb_favs_' + cur.key, JSON.stringify(favs));
+      }
+    } catch(e) {}
+    favs = {};
+    localStorage.setItem('bb_favs', JSON.stringify(favs));
+    document.querySelectorAll('.fav-btn').forEach(function(b){ b.classList.remove('fav-on'); b.textContent = '🤍'; });
+    updateFavCount();
+    localStorage.removeItem('brill_license');
+    closeModal('accessModal');
+    updateLicenseBtn();
+    applyPaywallToAll();
+    showToast('התנתקת בהצלחה');
+  });
+}
+
+function applyPaywallToAll() {
+  document.querySelectorAll('.card').forEach(function(card) {
+    var key = card.getAttribute('data-key');
+    applyPaywallToCard(card, key);
+  });
+}
+
+function applyPaywallToCard(card, key) {
+  var full = shouldShowFull(key);
+  card.classList.toggle('locked-prompt', !full);
+  // free badge
+  var isFree = !!(state.freePrompts && state.freePrompts[key]);
+  var badge = card.querySelector('.free-badge');
+  if (badge) badge.style.display = isFree ? '' : 'none';
+  card.classList.toggle('free-selected', isFree);
+}
+
+function updateFreeCounter() {
+  var count = Object.keys(state.freePrompts || {}).length;
+  var el = document.getElementById('freeCounter');
+  if (!el) return;
+  el.textContent = '🆓 ' + count + '/50';
+  el.classList.toggle('at-limit', count >= 50);
+  var mode = getFreeMode();
+  document.body.classList.toggle('free-full', mode === 'full' || mode === 'catalog');
+  document.body.classList.toggle('catalog-mode', mode === 'catalog');
+  var btn = document.getElementById('freeToggleBtn');
+  if (btn) {
+    var labels = { off: 'כבוי', partial: 'חינם חלקי', full: 'חינם מלא', catalog: 'קטלוג' };
+    btn.textContent = labels[mode] || 'כבוי';
+    btn.classList.remove('free-off', 'free-partial', 'free-full', 'free-catalog');
+    btn.classList.add('free-' + (mode || 'off'));
+  }
+  // Show category filter only in partial mode
+  var catBar = document.getElementById('catFilterBar');
+  if (catBar) catBar.style.display = '';
+}
+
+function toggleFreeStatus(key) {
+  if (!state.freePrompts) state.freePrompts = {};
+  var count = Object.keys(state.freePrompts).length;
+  if (!state.freePrompts[key] && count >= 50) {
+    showToast('⚠️ ניתן לסמן עד 50 פרומפטים חינמיים');
+    return;
+  }
+  if (state.freePrompts[key]) delete state.freePrompts[key];
+  else state.freePrompts[key] = true;
+  // update button text
+  var card = document.querySelector('.card[data-key="'+key+'"]');
+  if (card) {
+    var btn = card.querySelector('.ec-free');
+    if (btn) {
+      btn.classList.toggle('is-premium', !!state.freePrompts[key]);
+      btn.textContent = state.freePrompts[key] ? '🔒 Set Premium' : '🆓 Set Free';
+    }
+    applyPaywallToCard(card, key);
+  }
+  updateFreeCounter();
+  markUnsaved();
+}
+
+// ── פתח/סגור הכל ──────────────────────────────────────────
+var DEFAULT_MODAL_CONFIG = {
+  price: 'גישה מלאה לשנה - 59 ₪',
+  bullets: ['גישה מלאה לכל הפרומפטים','העתקה בלחיצה אחת','פרומפטים חדשים נוספים מדי פעם','תוקף ל-12 חודשים'],
+  buyText: '💬 לרכישה שלח/י הודעה - 59 ₪',
+  buyUrl: ''
+};
+
+function applyModalConfig(cfg) {
+  cfg = cfg || {};
+  var d = DEFAULT_MODAL_CONFIG;
+  var price = cfg.price || d.price;
+  var bullets = cfg.bullets && cfg.bullets.length === 4 ? cfg.bullets : d.bullets;
+  var buyText = cfg.buyText || d.buyText;
+  var buyUrl  = cfg.buyUrl  || d.buyUrl;
+  var el;
+  el = document.getElementById('modalPrice');   if (el) el.textContent = price;
+  el = document.getElementById('modalBullet1'); if (el) el.textContent = bullets[0];
+  el = document.getElementById('modalBullet2'); if (el) el.textContent = bullets[1];
+  el = document.getElementById('modalBullet3'); if (el) el.textContent = bullets[2];
+  el = document.getElementById('modalBullet4'); if (el) el.textContent = bullets[3];
+  ['buyBtn','unlockBuyBtn'].forEach(function(id) {
+    var btn = document.getElementById(id);
+    if (!btn) return;
+    btn.textContent = buyText;
+    if (buyUrl) { btn.href = buyUrl; btn.style.pointerEvents = ''; btn.style.opacity = ''; }
+    else        { btn.href = '#'; }
+  });
+}
+
+function openPremiumTextModal() {
+  var cfg = state.modalConfig || {};
+  var d = DEFAULT_MODAL_CONFIG;
+  document.getElementById('ptPrice').value   = cfg.price   || d.price;
+  document.getElementById('ptB1').value      = (cfg.bullets && cfg.bullets[0]) || d.bullets[0];
+  document.getElementById('ptB2').value      = (cfg.bullets && cfg.bullets[1]) || d.bullets[1];
+  document.getElementById('ptB3').value      = (cfg.bullets && cfg.bullets[2]) || d.bullets[2];
+  document.getElementById('ptB4').value      = (cfg.bullets && cfg.bullets[3]) || d.bullets[3];
+  document.getElementById('ptBuyText').value = cfg.buyText || d.buyText;
+  document.getElementById('ptBuyUrl').value  = cfg.buyUrl  || d.buyUrl;
+  openModal('premiumTextModal');
+}
+
+function savePremiumTexts() {
+  state.modalConfig = {
+    price:   document.getElementById('ptPrice').value.trim()   || DEFAULT_MODAL_CONFIG.price,
+    bullets: [
+      document.getElementById('ptB1').value.trim() || DEFAULT_MODAL_CONFIG.bullets[0],
+      document.getElementById('ptB2').value.trim() || DEFAULT_MODAL_CONFIG.bullets[1],
+      document.getElementById('ptB3').value.trim() || DEFAULT_MODAL_CONFIG.bullets[2],
+      document.getElementById('ptB4').value.trim() || DEFAULT_MODAL_CONFIG.bullets[3]
+    ],
+    buyText: document.getElementById('ptBuyText').value.trim() || DEFAULT_MODAL_CONFIG.buyText,
+    buyUrl:  document.getElementById('ptBuyUrl').value.trim()
+  };
+  applyModalConfig(state.modalConfig);
+  markUnsaved();
+  closeModal('premiumTextModal');
+  showToast('✅ החלון עודכן - לחץ פרסם לשמירה');
+}
+
+var DEFAULT_HEADER_CONFIG = {
+  title: 'Brill 🍌 Banana Prompts',
+  sub1: 'קטלוג פרומפטים מתעדכן ליצירת תמונות אישיות ב- Nano Banana 2',
+  sub2: 'פרומפטים | 📋 Copy להעתקה | לחץ על תמונה לתצוגה מוגדלת'
+};
+function applyHeaderConfig(cfg) {
+  cfg = cfg || DEFAULT_HEADER_CONFIG;
+  var t = document.getElementById('mainTitle');
+  if (t) t.innerHTML = (cfg.title || DEFAULT_HEADER_CONFIG.title).replace('🍌','<span class="banana">🍌</span>');
+  var s1 = document.getElementById('subtitle1');
+  if (s1) s1.textContent = cfg.sub1 || DEFAULT_HEADER_CONFIG.sub1;
+  var s2 = document.getElementById('subtitle2');
+  if (s2) s2.textContent = cfg.sub2 || DEFAULT_HEADER_CONFIG.sub2;
+}
+function openHeaderModal() {
+  var cfg = JSON.parse(localStorage.getItem('bb_header_config') || 'null') || DEFAULT_HEADER_CONFIG;
+  document.getElementById('hdr_title').value = cfg.title || DEFAULT_HEADER_CONFIG.title;
+  document.getElementById('hdr_sub1').value  = cfg.sub1  || DEFAULT_HEADER_CONFIG.sub1;
+  document.getElementById('hdr_sub2').value  = cfg.sub2  || DEFAULT_HEADER_CONFIG.sub2;
+  openModal('headerModal');
+}
+function saveHeaderContent() {
+  var cfg = {
+    title: document.getElementById('hdr_title').value.trim() || DEFAULT_HEADER_CONFIG.title,
+    sub1:  document.getElementById('hdr_sub1').value.trim()  || DEFAULT_HEADER_CONFIG.sub1,
+    sub2:  document.getElementById('hdr_sub2').value.trim()  || DEFAULT_HEADER_CONFIG.sub2
+  };
+  localStorage.setItem('bb_header_config', JSON.stringify(cfg));
+  applyHeaderConfig(cfg);
+  closeModal('headerModal');
+  markUnsaved();
+  showToast('✅ הכותרת עודכנה - לחץ פרסם לשמירה');
+}
+var DEFAULT_SERVICES_CONFIG = {
+  heroTitle: 'הזמנת תמונות AI אישיות 🍌',
+  heroSub: 'תמונות מקצועיות שנוצרות ב-AI על בסיס התמונה שלך - בסגנונות מרהיבים ובדיוק מושלם',
+  orderPrice: '10 ₪', orderNote: 'לתמונה בודדת | 5 ₪ לתמונה בחבילה של 20+',
+  subPrice: '59 ₪', subNote: 'תשלום חד-פעמי לשנה שלמה',
+  sessionPrice: '350 ₪', sessionNote: 'סשן של שעה מלאה',
+  orderMsg: 'היי, אשמח להזמין תמונות AI 🍌',
+  subMsg: 'היי, אשמח לרכוש מנוי שנתי לקטלוג 🍌',
+  sessionMsg: 'היי, אשמח לקבוע סשן אישי בזום 🍌',
+  sectionSizes: { hero:100, how:100, pricing:100, gallery:100, galcols:4, faq:100, contact:100 },
+  gallery: [
+    {src:'images/241.jpg', caption:'ציור מיניאטורה'},
+    {src:'images/226.jpg', caption:'אינטראקציה תלת-מימדית'},
+    {src:'images/181.jpg', caption:'פורטרט מטבע בולט'},
+    {src:'https://nanobananai.site/images/case232/output.webp', caption:'פורצלן ביו-מכני'},
+    {src:'https://nanobananai.site/images/case206/output.webp', caption:'אריזת מוצר'},
+    {src:'https://nanobananai.site/images/case190/output.webp', caption:'שער מגזין TIME'},
+    {src:'https://nanobananai.site/images/case183/output.webp', caption:'פנטזיה סרוגה'},
+    {src:'https://nanobananai.site/images/case199/output.webp', caption:'פוסטר קומיקס'}
+  ]
+};
+function openServicesModal() {
+  var cfg = JSON.parse(localStorage.getItem('bb_services_config') || 'null') || DEFAULT_SERVICES_CONFIG;
+  document.getElementById('svc_heroTitle').value   = cfg.heroTitle   || DEFAULT_SERVICES_CONFIG.heroTitle;
+  document.getElementById('svc_heroSub').value     = cfg.heroSub     || DEFAULT_SERVICES_CONFIG.heroSub;
+  document.getElementById('svc_orderPrice').value  = cfg.orderPrice  || DEFAULT_SERVICES_CONFIG.orderPrice;
+  document.getElementById('svc_orderNote').value   = cfg.orderNote   || DEFAULT_SERVICES_CONFIG.orderNote;
+  document.getElementById('svc_subPrice').value    = cfg.subPrice    || DEFAULT_SERVICES_CONFIG.subPrice;
+  document.getElementById('svc_subNote').value     = cfg.subNote     || DEFAULT_SERVICES_CONFIG.subNote;
+  document.getElementById('svc_sessionPrice').value= cfg.sessionPrice|| DEFAULT_SERVICES_CONFIG.sessionPrice;
+  document.getElementById('svc_sessionNote').value = cfg.sessionNote || DEFAULT_SERVICES_CONFIG.sessionNote;
+  document.getElementById('svc_orderMsg').value    = cfg.orderMsg    || DEFAULT_SERVICES_CONFIG.orderMsg;
+  document.getElementById('svc_subMsg').value      = cfg.subMsg      || DEFAULT_SERVICES_CONFIG.subMsg;
+  document.getElementById('svc_sessionMsg').value  = cfg.sessionMsg  || DEFAULT_SERVICES_CONFIG.sessionMsg;
+  // Populate size sliders
+  var sz = cfg.sectionSizes || DEFAULT_SERVICES_CONFIG.sectionSizes;
+  [['hero',100],['how',100],['pricing',100],['gallery',100],['faq',100],['contact',100]].forEach(function(pair){
+    var el = document.getElementById('svc_sz_'+pair[0]);
+    var vl = document.getElementById('svc_sz_'+pair[0]+'_val');
+    if (el) { el.value = sz[pair[0]] !== undefined ? sz[pair[0]] : pair[1]; }
+    if (vl) { vl.textContent = el.value + '%'; }
+  });
+  var colEl = document.getElementById('svc_sz_galcols');
+  var colVl = document.getElementById('svc_sz_galcols_val');
+  if (colEl) { colEl.value = sz.galcols !== undefined ? sz.galcols : 4; }
+  if (colVl) { colVl.textContent = colEl.value; }
+  // Build gallery rows
+  var galRows = document.getElementById('svc_galleryRows');
+  galRows.innerHTML = '';
+  var galCfg = (cfg.gallery && cfg.gallery.length) ? cfg.gallery : DEFAULT_SERVICES_CONFIG.gallery;
+  for (var i = 0; i < 8; i++) {
+    var item = galCfg[i] || {src:'', caption:''};
+    var isLocal = item.src && item.src.startsWith('data:');
+    var row = document.createElement('div');
+    row.style.cssText = 'display:flex;gap:6px;align-items:center;padding:6px 8px;border-radius:8px;background:var(--bg3);border:1px solid var(--border2)';
+    // Preview thumbnail (clickable = open file picker)
+    var previewHtml = '<div style="position:relative;flex-shrink:0;cursor:pointer" onclick="document.getElementById(\'svc_gal_file_'+i+'\').click()" title="לחץ/י להחלפת תמונה">'
+      + '<img id="svc_gal_prev_'+i+'" src="'+(item.src||'')+'" style="width:52px;height:52px;object-fit:cover;border-radius:6px;border:2px solid var(--border2);background:var(--bg4);display:block" onerror="this.style.opacity=0.3">'
+      + '<div style="position:absolute;inset:0;background:rgba(0,0,0,0.45);border-radius:6px;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .15s" class="gal-hover-overlay"><span style="color:#fff;font-size:18px">📷</span></div>'
+      + '<input type="file" id="svc_gal_file_'+i+'" accept="image/*" style="display:none" onchange="galFileChosen('+i+',this)">'
+      + '</div>';
+    // URL input (hidden when local file, shown for URL mode)
+    var urlHtml = '<input type="text" id="svc_gal_src_'+i+'" placeholder="URL תמונה" value="'+(isLocal ? '' : escHtml(item.src||''))+'" style="flex:2;padding:5px 8px;font-size:11px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);direction:ltr'+(isLocal ? ';display:none' : '')+'" oninput="updateGalPreview('+i+')">';
+    // Local file badge
+    var localBadge = '<span id="svc_gal_local_'+i+'" style="font-size:10px;color:#4caf50;flex:2;text-align:right;padding-right:4px;'+(isLocal ? '' : 'display:none')+'">✅ מהמחשב</span>';
+    var capHtml = '<input type="text" id="svc_gal_cap_'+i+'" placeholder="כיתוב" value="'+escHtml(item.caption||'')+'" style="flex:1;min-width:80px;padding:5px 8px;font-size:12px;border-radius:6px;border:1px solid var(--border2);background:var(--input-bg);color:var(--text);direction:rtl">';
+    var numHtml = '<span style="min-width:16px;color:var(--text2);font-size:11px;text-align:center">'+(i+1)+'</span>';
+    row.innerHTML = numHtml + previewHtml + urlHtml + localBadge + capHtml;
+    galRows.appendChild(row);
+    // Store local data separately so save can retrieve it
+    if (isLocal) row.dataset.localSrc = item.src;
+  }
+  // Hover overlay effect
+  document.querySelectorAll('.gal-hover-overlay').forEach(function(ov){
+    var wrap = ov.parentElement;
+    wrap.addEventListener('mouseenter', function(){ ov.style.opacity='1'; });
+    wrap.addEventListener('mouseleave', function(){ ov.style.opacity='0'; });
+  });
+  openModal('servicesModal');
+}
+function escHtml(s){ return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function updateGalPreview(i) {
+  var src = document.getElementById('svc_gal_src_'+i).value.trim();
+  document.getElementById('svc_gal_prev_'+i).src = src || '';
+}
+function galFileChosen(i, input) {
+  var file = input.files[0];
+  if (!file) return;
+  var MAX = 900; // max dimension px
+  var QUALITY = 0.82;
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var img = new Image();
+    img.onload = function() {
+      var w = img.width, h = img.height;
+      if (w > MAX || h > MAX) {
+        var ratio = Math.min(MAX/w, MAX/h);
+        w = Math.round(w*ratio); h = Math.round(h*ratio);
+      }
+      var canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+      var dataUrl = canvas.toDataURL('image/jpeg', QUALITY);
+      // Update preview
+      document.getElementById('svc_gal_prev_'+i).src = dataUrl;
+      document.getElementById('svc_gal_prev_'+i).style.opacity = '1';
+      // Store on row dataset
+      var rows = document.getElementById('svc_galleryRows').children;
+      rows[i].dataset.localSrc = dataUrl;
+      // Hide URL input, show badge
+      var urlIn = document.getElementById('svc_gal_src_'+i);
+      var badge = document.getElementById('svc_gal_local_'+i);
+      if (urlIn) urlIn.style.display = 'none';
+      if (badge) badge.style.display = '';
+    };
+    img.src = e.target.result;
+  };
+  reader.readAsDataURL(file);
+}
+function saveServicesContent() {
+  var phone = ADMIN_WHATSAPP || '972523919350';
+  var cfg = {
+    heroTitle:    document.getElementById('svc_heroTitle').value.trim()    || DEFAULT_SERVICES_CONFIG.heroTitle,
+    heroSub:      document.getElementById('svc_heroSub').value.trim()      || DEFAULT_SERVICES_CONFIG.heroSub,
+    orderPrice:   document.getElementById('svc_orderPrice').value.trim()   || DEFAULT_SERVICES_CONFIG.orderPrice,
+    orderNote:    document.getElementById('svc_orderNote').value.trim()    || DEFAULT_SERVICES_CONFIG.orderNote,
+    subPrice:     document.getElementById('svc_subPrice').value.trim()     || DEFAULT_SERVICES_CONFIG.subPrice,
+    subNote:      document.getElementById('svc_subNote').value.trim()      || DEFAULT_SERVICES_CONFIG.subNote,
+    sessionPrice: document.getElementById('svc_sessionPrice').value.trim() || DEFAULT_SERVICES_CONFIG.sessionPrice,
+    sessionNote:  document.getElementById('svc_sessionNote').value.trim()  || DEFAULT_SERVICES_CONFIG.sessionNote,
+    orderMsg:     document.getElementById('svc_orderMsg').value.trim()     || DEFAULT_SERVICES_CONFIG.orderMsg,
+    subMsg:       document.getElementById('svc_subMsg').value.trim()       || DEFAULT_SERVICES_CONFIG.subMsg,
+    sessionMsg:   document.getElementById('svc_sessionMsg').value.trim()   || DEFAULT_SERVICES_CONFIG.sessionMsg,
+    phone: phone,
+    sectionSizes: (function(){
+      function szVal(id){ var el=document.getElementById('svc_sz_'+id); return el ? parseInt(el.value) : 100; }
+      return { hero:szVal('hero'), how:szVal('how'), pricing:szVal('pricing'), gallery:szVal('gallery'), galcols:szVal('galcols'), faq:szVal('faq'), contact:szVal('contact') };
+    })(),
+    gallery: (function(){
+      var g = [];
+      var rows = document.getElementById('svc_galleryRows').children;
+      for (var i = 0; i < 8; i++) {
+        var srcEl = document.getElementById('svc_gal_src_'+i);
+        var capEl = document.getElementById('svc_gal_cap_'+i);
+        var localSrc = rows[i] ? rows[i].dataset.localSrc : '';
+        var src = localSrc || (srcEl ? srcEl.value.trim() : '');
+        g.push({src: src, caption: capEl ? capEl.value.trim() : ''});
+      }
+      return g;
+    })()
+  };
+  localStorage.setItem('bb_services_config', JSON.stringify(cfg));
+  closeModal('servicesModal');
+  markUnsaved();
+  showToast('✅ עמוד השירותים עודכן - לחץ פרסם לשמירה');
+}
+function toggleFreeEnabled() {
+  var mode = getFreeMode();
+  if (mode === 'off') mode = 'partial';
+  else if (mode === 'partial') mode = 'full';
+  else if (mode === 'full') mode = 'catalog';
+  else mode = 'off';
+  state.freeMode = mode;
+  delete state.freeEnabled;
+  applyPaywallToAll();
+  updateFreeCounter();
+  markUnsaved();
+  var msgs = { off: '🔴 גישה חינמית כבויה', partial: '🟡 חינם חלקי הופעל', full: '🟢 חינם מלא הופעל', catalog: '🔵 מצב קטלוג הופעל' };
+  showToast(msgs[mode]);
+}
+
+// ── שכפל כרטיס ────────────────────────────────────────────
+function duplicateCard(key) {
+  var p = getCardData(key);
+  if (!p) return;
+  var newKey = 'dup_' + Date.now();
+  var maxId = 0;
+  document.querySelectorAll('.card[data-key]').forEach(function(c) {
+    var d = getCardData(c.getAttribute('data-key'));
+    if (d && d.id > maxId) maxId = d.id;
+  });
+  var newCard = { cats: (p.cats || []).slice(), key: newKey, id: maxId + 1, title: p.title + ' (עותק)', cat: p.cat, prompt: p.prompt, images: p.images ? p.images.slice() : [] };
+  if (!state.added) state.added = [];
+  state.added.push(newCard);
+  appendCard(newCard);
+  initPaywallDOM();
+  // move new card to appear right after original
+  var origEl = document.querySelector('.card[data-key="' + key + '"]');
+  var newEl  = document.querySelector('.card[data-key="' + newKey + '"]');
+  if (origEl && newEl && origEl.nextSibling !== newEl) {
+    origEl.parentNode.insertBefore(newEl, origEl.nextSibling);
+  }
+  applyPaywallToCard(newEl, newKey);
+  initFavBtns();
+  markUnsaved();
+  showToast('📋 הכרטיס שוכפל');
+}
+
+// ── קטגוריות ──────────────────────────────────────────────
+var CUSTOM_CATS = [
+  {id:'portrait',     label:'תדמית'},
+  {id:'places',       label:'מקומות'},
+  {id:'professions',  label:'מקצועות'},
+  {id:'animals',      label:'בעלי חיים'},
+  {id:'celebrities',  label:'מפורסמים'},
+  {id:'fantasy',      label:'פנטזיה'},
+  {id:'products',     label:'מוצרים'},
+];
+function formatCatLabel(card) {
+  if (!card) return '';
+  var cats = card.cats || [];
+  var src = (typeof state !== 'undefined' && state && state.customCats && state.customCats.length)
+    ? state.customCats : CUSTOM_CATS;
+  if (cats.length) {
+    var byId = {};
+    (src || []).forEach(function(c) { byId[c.id] = c.label; });
+    var labels = cats.map(function(id) { return byId[id] || ''; }).filter(Boolean);
+    if (labels.length) return labels.join(', ');
+  }
+  return card.cat || '';
+}
+function openCatsManager() {
+  if (!ADMIN_UNLOCKED) return;
+  var list = document.getElementById('catsManagerList');
+  list.innerHTML = '';
+  CUSTOM_CATS.forEach(function(c) {
+    var row = document.createElement('div');
+    row.className = 'cm-row';
+    row.innerHTML = '<input class="cm-inp" type="text" value="'+escHtml(c.label)+'" data-id="'+c.id+'">'
+      +'<button class="btn btn-edit" onclick="this.closest(\'.cm-row\').remove()" style="padding:4px 8px;font-size:12px">🗑️</button>';
+    list.appendChild(row);
+  });
+  document.getElementById('newCatInput').value = '';
+  openModal('catsModal');
+}
+function addCatItem() {
+  var inp = document.getElementById('newCatInput');
+  var label = inp.value.trim(); if (!label) return;
+  var list = document.getElementById('catsManagerList');
+  var row = document.createElement('div');
+  row.className = 'cm-row';
+  row.innerHTML = '<input class="cm-inp" type="text" value="'+escHtml(label)+'" data-id="custom_'+Date.now()+'">'
+    +'<button class="btn btn-edit" onclick="this.closest(\'.cm-row\').remove()" style="padding:4px 8px;font-size:12px">🗑️</button>';
+  list.appendChild(row); inp.value = '';
+}
+function saveCatsManager() {
+  var newCats = [];
+  document.querySelectorAll('#catsManagerList .cm-inp').forEach(function(inp) {
+    var label = inp.value.trim();
+    if (label) newCats.push({id: inp.getAttribute('data-id'), label: label});
+  });
+  CUSTOM_CATS = newCats;
+  state.customCats = newCats;
+  buildCatFilters();
+  markUnsaved(); closeModal('catsModal'); showToast('✅ הקטגוריות עודכנו');
+}
+
+var _catPopoverKey = null;
+function showCatPopover(key, triggerBtn) {
+  hideCatPopover();
+  _catPopoverKey = key;
+  var data = getCardData(key);
+  var sel = (data && data.cats) || [];
+  var pop = document.createElement('div');
+  pop.className = 'cat-popover'; pop.id = 'catPopover';
+  CUSTOM_CATS.forEach(function(c) {
+    var lbl = document.createElement('label');
+    lbl.className = 'cat-check-label' + (sel.indexOf(c.id) >= 0 ? ' checked' : '');
+    var inp = document.createElement('input');
+    inp.type = 'checkbox'; inp.value = c.id; inp.checked = sel.indexOf(c.id) >= 0;
+    inp.addEventListener('change', function() {
+      lbl.classList.toggle('checked', this.checked);
+      var checked = Array.from(pop.querySelectorAll('input:checked')).map(function(i){return i.value;});
+      saveCatsForCard(key, checked);
+    });
+    lbl.appendChild(inp); lbl.appendChild(document.createTextNode(c.label));
+    pop.appendChild(lbl);
+  });
+  triggerBtn.closest('.card').appendChild(pop);
+  setTimeout(function() { document.addEventListener('click', _closeCatPopOnClick); }, 10);
+}
+function _closeCatPopOnClick(e) {
+  var pop = document.getElementById('catPopover');
+  if (pop && !pop.contains(e.target)) hideCatPopover();
+}
+function hideCatPopover() {
+  var pop = document.getElementById('catPopover');
+  if (pop) pop.remove();
+  document.removeEventListener('click', _closeCatPopOnClick);
+  _catPopoverKey = null;
+}
+function saveCatsForCard(key, cats) {
+  var data;
+  if (key.startsWith('orig_')) {
+    var i = parseInt(key.replace('orig_', ''));
+    if (!state.promptEdits) state.promptEdits = {};
+    if (!state.promptEdits[key]) state.promptEdits[key] = {title:TITLES_ORIG[i], cat:CATS_ORIG[i], prompt:PROMPTS_ORIG[i]};
+    state.promptEdits[key].cats = cats;
+    data = state.promptEdits[key];
+  } else {
+    var a = (state.added||[]).find(function(x){return x.key===key;});
+    if (a) { a.cats = cats; data = a; }
+  }
+  var cardEl = document.querySelector('.card[data-key="' + key + '"]');
+  if (cardEl && data) {
+    var catEl = cardEl.querySelector('.cat');
+    if (catEl) catEl.textContent = formatCatLabel(data);
+  }
+  markUnsaved();
+}
+
+function populateCatChecks(selected) {
+  var wrap = document.getElementById('mCatsWrap');
+  if (!wrap) return;
+  wrap.innerHTML = '';
+  CUSTOM_CATS.forEach(function(c) {
+    var label = document.createElement('label');
+    label.className = 'cat-check-label' + (selected.indexOf(c.id) >= 0 ? ' checked' : '');
+    var inp = document.createElement('input');
+    inp.type = 'checkbox'; inp.value = c.id; inp.checked = selected.indexOf(c.id) >= 0;
+    inp.addEventListener('change', function() { label.classList.toggle('checked', this.checked); });
+    label.appendChild(inp); label.appendChild(document.createTextNode(c.label));
+    wrap.appendChild(label);
+  });
+}
+function getCheckedCats() {
+  return Array.from(document.querySelectorAll('#mCatsWrap input:checked')).map(function(i){return i.value;});
+}
+var activeCat = '';
+function isFreeCard(key) {
+  var m = getFreeMode();
+  return m === 'full' || m === 'catalog' || !!(state.freePrompts && state.freePrompts[key]);
+}
+function buildCatFilters() {
+  var bar = document.getElementById('catFilterBar');
+  if (!bar) return;
+  bar.innerHTML = '';
+  var defs = [
+    { id: '',     label: '🌐 הכל' },
+    { id: 'free', label: '✅ חינם' },
+    { id: 'paid', label: '🔒 בתשלום' }
+  ];
+  CUSTOM_CATS.forEach(function(c) { defs.push({id:'cat:'+c.id, label:c.label}); });
+  defs.forEach(function(d) {
+    var btn = document.createElement('button');
+    btn.className = 'cat-filter-btn' + (d.id === activeCat ? ' active' : '');
+    btn.textContent = d.label;
+    btn.setAttribute('data-cat', d.id);
+    btn.onclick = function() { setActiveCat(d.id); };
+    bar.appendChild(btn);
+  });
+}
+function setActiveCat(cat) {
+  activeCat = cat;
+  document.querySelectorAll('.cat-filter-btn').forEach(function(btn) {
+    btn.classList.toggle('active', btn.getAttribute('data-cat') === cat);
+  });
+  filterCards(document.querySelector('.search').value);
+}
+
+// ── ייצוא CSV ──────────────────────────────────────────────
+function exportCSV() {
+  var rows = [['ID','Title','Category','Prompt']];
+  document.querySelectorAll('.card[data-key]').forEach(function(card) {
+    if (card.style.display === 'none') return;
+    var key = card.getAttribute('data-key');
+    var p = getCardData(key);
+    if (!p) return;
+    function esc(s) { s = (s||'').replace(/"/g,'""'); return '"'+s+'"'; }
+    rows.push([p.id, esc(p.title), esc(p.cat), esc(p.prompt)]);
+  });
+  var csv = rows.map(function(r){ return r.join(','); }).join('\r\n');
+  var blob = new Blob(['\uFEFF'+csv], {type:'text/csv;charset=utf-8;'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url; a.download = 'brill-banana-prompts.csv'; a.click();
+  URL.revokeObjectURL(url);
+  showToast('📤 הקובץ יורד...');
+}
+
+// ── חיפוש ססמאות ──────────────────────────────────────────
+function filterKeysList(q) {
+  q = q.toLowerCase().trim();
+  document.querySelectorAll('#keysList li[data-key-val]').forEach(function(li) {
+    var val = (li.getAttribute('data-key-val') || '').toLowerCase();
+    var name = (li.getAttribute('data-key-name') || '').toLowerCase();
+    li.style.display = (!q || val.includes(q) || name.includes(q)) ? '' : 'none';
+  });
+}
+
+// ── לשוניות modal גישה ────────────────────────────────────
+function switchAccessTab(tab) {
+  ['premium','admin'].forEach(function(t) {
+    document.getElementById('tabPremium'.replace('premium', 'tab' + t.charAt(0).toUpperCase() + t.slice(1))).classList.toggle('active', t === tab);
+    document.getElementById('panel' + t.charAt(0).toUpperCase() + t.slice(1)).classList.toggle('active', t === tab);
+  });
+}
+
+// ── הסתרת קטגוריות - נשלט ע"י מצב חינם, ללא כפתור ידני ──
+
+
+// Auto-activate from Lemon Squeezy redirect
+(function(){
+  var params = new URLSearchParams(window.location.search);
+  var lk = params.get('license_key');
+  if (lk) {
+    window.history.replaceState({}, '', window.location.pathname);
+    fetch('/api/license', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({license_key:lk})})
+      .then(function(r){return r.json();}).then(function(data){
+        if (data.valid) {
+          localStorage.setItem('brill_license', JSON.stringify({key:lk, activatedAt:new Date().toISOString(), expiresAt:new Date(Date.now()+365*24*60*60*1000).toISOString()}));
+          showToast('🎉 גישת פרימיום הופעלה!');
+          updateLicenseBtn();
+          applyPaywallToAll();
+        }
+      }).catch(function(){});
+  }
+})();
+// ─────────────────────────────────────────────────────────
+
+// Theme
+(function(){
+  var saved = localStorage.getItem('bb_theme');
+  if (saved === 'light') document.body.classList.add('light');
+  function updateBtn(){
+    var btn = document.getElementById('themeBtn');
+    if (btn) btn.textContent = document.body.classList.contains('light') ? '🌞' : '🌙';
+  }
+  updateBtn();
+  window.toggleTheme = function(){
+    document.body.classList.toggle('light');
+    localStorage.setItem('bb_theme', document.body.classList.contains('light') ? 'light' : 'dark');
+    updateBtn();
+    var s = document.getElementById('colsSlider');
+    if (s && window._updateSliderTrack) window._updateSliderTrack(parseInt(s.value));
+  };
+})();
+
+// Favorites
+var ADMIN_WHATSAPP = '972523919350';
+var shareWhatsApp = localStorage.getItem('bb_share_wa') !== 'false';
+var favs = {};
+try { favs = JSON.parse(localStorage.getItem('bb_favs') || '{}'); } catch(e) {}
+var showFavsOnly = false;
+
+// Load the full editor state only after server-side authentication.
+document.documentElement.style.opacity = '1';
+fetch('/api/session').then(function(r){ return r.json(); }).then(async function(session) {
+  if (session.admin) {
+    try { await loadAdminData(); }
+    catch(e) { var error = document.getElementById('adminLoadError'); error.textContent = e.message; error.hidden = false; }
+  } else { openAccessModal('admin'); }
+}).catch(function(){ openAccessModal('admin'); });
+
+function migrateStateCats(st) {
+  if (!st) return;
+  var cats = (st.customCats && st.customCats.length) ? st.customCats : CUSTOM_CATS;
+  var byLabel = {};
+  (cats || []).forEach(function(c) { byLabel[c.label] = c.id; });
+  (st.added || []).forEach(function(a) {
+    if ((!a.cats || !a.cats.length) && a.cat && byLabel[a.cat]) {
+      a.cats = [byLabel[a.cat]];
+    }
+  });
+  if (st.promptEdits) {
+    Object.keys(st.promptEdits).forEach(function(k) {
+      var e = st.promptEdits[k];
+      if (e && (!e.cats || !e.cats.length) && e.cat && byLabel[e.cat]) {
+        e.cats = [byLabel[e.cat]];
+      }
+    });
+  }
+}
+
+// document.querySelector on a [data-key] attribute walks the whole document, so
+// calling it once per key in applyState's loops was quadratic against ~4,600
+// cards - state.order alone is 3,677 keys. applyState took 6.6s, and a category
+// click that landed while it ran was blocked for all of it. With this index it
+// is ~0.44s and the DOM it produces is byte-identical.
+// First match wins, which is what querySelector returned.
+function indexCards() {
+  var m = new Map();
+  document.querySelectorAll('.card[data-key]').forEach(function(c) {
+    var k = c.getAttribute('data-key');
+    if (!m.has(k)) m.set(k, c);
+  });
+  return m;
+}
+
+function applyState(st) {
+  // Rebuild original records from authenticated data, never from public HTML.
+  document.querySelectorAll('.card[data-key^="orig_"]').forEach(function(c){ c.remove(); });
+  _originalData.forEach(function(p, i) {
+    appendCard(Object.assign({}, p, {images: IMAGES_ORIG[i]}));
+  });
+  if (st && st.customCats && st.customCats.length) CUSTOM_CATS = st.customCats;
+  migrateStateCats(st);
+  // Reset DOM to original first (re-show any previously hidden cards)
+  document.querySelectorAll('.card[data-key^="orig_"]').forEach(function(c){ c.style.display=''; });
+  // Remove previously added cards
+  document.querySelectorAll('.card:not([data-key^="orig_"])').forEach(function(c){ c.remove(); });
+
+  var byKey = indexCards();
+
+  st.deleted.forEach(function(key) {
+    var el = byKey.get(key);
+    if (el) { el.remove(); byKey.delete(key); }
+  });
+  Object.keys(st.promptEdits||{}).forEach(function(key) {
+    var edit = st.promptEdits[key];
+    var card = byKey.get(key);
+    if (!card) return;
+    var i = parseInt(key.replace('orig_',''));
+    if (!isNaN(i)) { PROMPTS_ORIG[i]=edit.prompt; TITLES_ORIG[i]=edit.title; CATS_ORIG[i]=edit.cat||''; }
+    var h3=card.querySelector('h3'); if(h3) h3.textContent=edit.title;
+    var catEl=card.querySelector('.cat'); if(catEl) catEl.textContent=formatCatLabel(edit);
+    var pre=card.querySelector('.prompt-text'); if(pre) pre.textContent=edit.prompt;
+    card.setAttribute('data-search',(edit.title+' '+edit.prompt).toLowerCase());
+  });
+  (st.added||[]).forEach(function(p) {
+    if ((st.deleted||[]).indexOf(p.key) !== -1) return;
+    appendCard(p);
+  });
+  byKey = indexCards();   // appendCard() added nodes the index does not know about
+  Object.keys(st.customImgs||{}).forEach(function(key) {
+    var card = byKey.get(key);
+    if (!card) return;
+    var img = card.querySelector('.thumb');
+    var src = st.customImgs[key];
+    if (img) { img.src = src; }
+    else {
+      var noThumb = card.querySelector('.no-thumb');
+      if (noThumb) {
+        var wrap = document.createElement('div');
+        wrap.className = 'thumb-wrap'; wrap.setAttribute('data-lb-key', key);
+        wrap.innerHTML = '<img class="thumb" src="' + escHtml(src) + '" alt="" loading="lazy"><div class="thumb-overlay"><span>\U0001f50d הצג תמונה</span></div>';
+        noThumb.replaceWith(wrap);
+      }
+    }
+  });
+  if (st.order && st.order.length) {
+    var grid = document.getElementById('grid');
+    st.order.forEach(function(key) {
+      var card = byKey.get(key);
+      if (card) grid.appendChild(card);
+    });
+  }
+  updateCount();
+  renumberCards();
+  initFavBtns();
+  initPaywallDOM();
+  updateFreeCounter();
+  applyModalConfig(st.modalConfig);
+  applyWaConfig(st.waConfig);
+  updateLicenseBtn();
+  applyPaywallToAll();
+  buildCatFilters();
+  // restore WA share from state (fallback to localStorage for old states)
+  shareWhatsApp = st.shareWhatsApp !== undefined ? !!st.shareWhatsApp : (localStorage.getItem('bb_share_wa') !== 'false');
+  updateWaButtons();
+  // Apply header and services configs from server state
+  if (st.headerConfig) {
+    localStorage.setItem('bb_header_config', JSON.stringify(st.headerConfig));
+    applyHeaderConfig(st.headerConfig);
+  }
+  if (st.servicesConfig) {
+    localStorage.setItem('bb_services_config', JSON.stringify(st.servicesConfig));
+  }
+  // restore free toggle button label
+  var totalCards = document.querySelectorAll('#grid .card[data-key]').length;
+  var freeCount = Object.keys(st.freePrompts || {}).length;
+  updateFreeCounter();
+}
+
+function markUnsaved() {
+  pendingChanges = true;
+  document.getElementById('unsavedDot').classList.add('show');
+  var btn = document.getElementById('btnPublish');
+  if (btn) btn.disabled = false;
+}
+
+async function publishChanges() {
+  if (!ADMIN_UNLOCKED || !_baseRevision) { showToast('יש להיכנס ולטעון את הנתונים לפני שמירה'); return; }
+  var btn = document.getElementById('btnPublish');
+  btn.disabled = true;
+  var MAX_RETRIES = 4; // retries per batch on failure
+
+  // Retry temporary failures only; conflicts and authorization errors need user action.
+  async function fetchWithRetry(url, opts, timeoutMs) {
+    var attempt = 0;
+    while (true) {
+      var ctrl = new AbortController();
+      var tid  = setTimeout(function() { ctrl.abort(); }, timeoutMs);
+      try {
+        var resp = await fetch(url, Object.assign({}, opts, { signal: ctrl.signal }));
+        clearTimeout(tid);
+        if (resp.ok || (resp.status >= 400 && resp.status < 500)) return resp;
+        if (attempt >= MAX_RETRIES) return resp; // caller handles non-ok
+        attempt++;
+        await new Promise(function(r) { setTimeout(r, 1000 * attempt); });
+      } catch(e) {
+        clearTimeout(tid);
+        if (attempt >= MAX_RETRIES) throw e;
+        attempt++;
+        await new Promise(function(r) { setTimeout(r, 1000 * attempt); });
+      }
+    }
+  }
+
+  try {
+    var svcCfg = JSON.parse(localStorage.getItem('bb_services_config') || 'null') || state.servicesConfig || {};
+    var uploads = await import('/editor/uploads.mjs');
+    try {
+      await uploads.uploadPendingImages(state, svcCfg, {
+        compress: compressImage,
+        onProgress: function(done, total) { btn.textContent = 'מעלה תמונה ' + done + ' מתוך ' + total + '…'; },
+        upload: async function(key, src) {
+          var images = {}; images[key] = src;
+          var response = await fetchWithRetry('/api/save', {
+            method: 'POST', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ uploadOnly: true, customImgs: images })
+          }, 30000);
+          var data = await response.json();
+          if (!response.ok) throw new Error(data.error || 'העלאת התמונה נכשלה');
+          return data.uploads && data.uploads[key];
+        }
+      });
+    } finally {
+      state.servicesConfig = svcCfg;
+      localStorage.setItem('bb_services_config', JSON.stringify(svcCfg));
+    }
+    btn.textContent = 'שומר…';
+    // Keep all images in their original positions; never silently discard pending data.
+    var stateToPost = JSON.parse(JSON.stringify(state));
+    if (JSON.stringify(stateToPost).includes('data:image/')) throw new Error('נוספה תמונה במהלך ההעלאה. יש ללחוץ שוב על פרסום.');
+    stateToPost._saved = true;
+    stateToPost._publishedAt = Date.now();
+    var hdrCfg = JSON.parse(localStorage.getItem('bb_header_config') || 'null');
+    if (hdrCfg) stateToPost.headerConfig = hdrCfg;
+    var svcCfg = JSON.parse(localStorage.getItem('bb_services_config') || 'null');
+    if (svcCfg) stateToPost.servicesConfig = svcCfg;
+
+    stateToPost.order = Array.from(document.querySelectorAll('#grid .card[data-key]')).map(function(c){return c.getAttribute('data-key');});
+    var saveBodyJson = JSON.stringify({ state: stateToPost, baseRevision: _baseRevision });
+    var saveOpts;
+    if (typeof CompressionStream !== 'undefined' && saveBodyJson.length > 500000) {
+      var gzStream = new Blob([saveBodyJson]).stream().pipeThrough(new CompressionStream('gzip'));
+      var gzBuf = await new Response(gzStream).arrayBuffer();
+      saveOpts = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/octet-stream', 'X-Body-Encoding': 'gzip+json' },
+        body: gzBuf
+      };
+    } else {
+      saveOpts = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: saveBodyJson
+      };
+    }
+    var saveResp = await fetchWithRetry('/api/save', saveOpts, 20000);
+
+    if (!saveResp.ok) {
+      var saveErr = await saveResp.json().catch(function() { return {}; });
+      throw new Error((saveErr && saveErr.error) || 'HTTP ' + saveResp.status);
+    }
+    var rData = await saveResp.json().catch(function() { return {}; });
+    // Server now returns minimal { ok, _publishedAt } to avoid hitting Vercel's
+    // 4.5MB response body limit on large states. The local stateToPost IS the
+    // canonical post-save state - we already have it in memory.
+    state = stateToPost;
+    if (rData._publishedAt) state._publishedAt = rData._publishedAt;
+    _baseRevision = rData.revision;
+    Object.keys(state.customImgs || {}).forEach(function(k) {
+      var v = state.customImgs[k] || '';
+      if (v && !v.startsWith('data:')) serverCustomImgs[k] = v;
+    });
+    // Full catalog data is not cached in browser storage.
+    pendingChanges = false;
+    document.getElementById('unsavedDot').classList.remove('show');
+    btn.disabled = false;
+    btn.textContent = '\u{1F310} \u05e4\u05e8\u05e1\u05dd \u05e9\u05d9\u05e0\u05d5\u05d9\u05d9\u05dd';
+    var freeCount = Object.keys(state.freePrompts || {}).length;
+    var mode = getFreeMode();
+    var statusMsg = mode === 'full'    ? '\u{1F7E2} \u05d7\u05d9\u05e0\u05dd \u05de\u05dc\u05d0 - \u05db\u05dc \u05d4\u05e4\u05e8\u05d5\u05de\u05e4\u05d8\u05d9\u05dd \u05d7\u05d9\u05e0\u05de\u05d9\u05d9\u05dd'
+                  : mode === 'catalog' ? '\u{1F535} \u05de\u05e6\u05d1 \u05e7\u05d8\u05dc\u05d5\u05d2 - \u05db\u05e8\u05d8\u05d9\u05e1\u05d9\u05d5\u05ea \u05dc\u05e6\u05e4\u05d9\u05d9\u05d4 \u05d1\u05dc\u05d1\u05d3 (\u05dc\u05dc\u05d0 \u05d4\u05e2\u05ea\u05e7\u05d4)'
+                  : mode === 'partial' ? '\u{1F7E1} \u05d7\u05d9\u05e0\u05dd \u05d7\u05dc\u05e7\u05d9 - ' + freeCount + ' \u05e4\u05e8\u05d5\u05de\u05e4\u05d8\u05d9\u05dd'
+                  :                     '\u{1F534} \u05d2\u05d9\u05e9\u05d4 \u05d7\u05d9\u05e0\u05de\u05d9\u05ea \u05db\u05d1\u05d5\u05d9\u05d4 (' + freeCount + ' \u05d1\u05e8\u05e9\u05d9\u05de\u05d4)';
+    showToast('\u2705 \u05e4\u05d5\u05e8\u05e1\u05dd - ' + statusMsg, 5000);
+  } catch(e) {
+    btn.disabled = false;
+    btn.textContent = '\u{1F310} \u05e4\u05e8\u05e1\u05dd \u05e9\u05d9\u05e0\u05d5\u05d9\u05d9\u05dd';
+    showToast('\u274c \u05e9\u05d2\u05d9\u05d0\u05d4 \u05d1\u05e9\u05de\u05d9\u05e8\u05d4: ' + e.message);
+  }
+}
+function getCardData(key) {
+  if (key.startsWith('orig_')) {
+    var i = parseInt(key.replace('orig_', ''));
+    var imgs = state.customImgs[key] ? [state.customImgs[key]] : (IMAGES_ORIG[i] || []);
+    var edit = state.promptEdits && state.promptEdits[key];
+    var cats = (edit && edit.cats) || [];
+    return { key:key, id:IDS_ORIG[i], title:TITLES_ORIG[i], cat:CATS_ORIG[i], prompt:PROMPTS_ORIG[i], images:imgs, cats:cats };
+  }
+  var a = (state.added||[]).find(function(x){ return x.key===key; });
+  if (!a) return null;
+  var aImgs = (state.customImgs && state.customImgs[key]) ? [state.customImgs[key]] : (a.images || []);
+  return Object.assign({}, a, {images: aImgs, cats: a.cats || []});
+}
+
+var reorderMode = false;
+function toggleEditMode() {
+  if (!ADMIN_UNLOCKED) return;
+  editMode = !editMode;
+  document.body.classList.toggle('body-edit', editMode);
+  var btn = document.getElementById('editToggle');
+  btn.classList.toggle('active', editMode);
+  btn.textContent = editMode ? '\u2705 \u05e1\u05d9\u05d5\u05dd \u05e2\u05e8\u05d9\u05db\u05d4' : '\u270f\ufe0f \u05de\u05e6\u05d1 \u05e2\u05e8\u05d9\u05db\u05d4';
+  document.getElementById('fab').style.display = editMode ? 'block' : 'none';
+  document.getElementById('reorderToggle').style.display = editMode ? '' : 'none';
+  if (!editMode && reorderMode) toggleReorderMode(); // exit reorder if edit mode off
+  document.querySelectorAll('#grid .card').forEach(function(card) {
+    var key = card.getAttribute('data-key');
+    var controls = card.querySelector('.edit-controls');
+    if (!controls) return;
+    if (editMode) {
+      if (!controls.querySelector('.ec-cats')) {
+        var b = document.createElement('button');
+        b.className = 'ec-btn ec-cats'; b.setAttribute('data-action','cats'); b.setAttribute('data-key',key);
+        b.textContent = '🏷️ קטגוריות';
+        controls.appendChild(b);
+      }
+    } else {
+      var eb = controls.querySelector('.ec-cats'); if (eb) eb.remove();
+      hideCatPopover();
+    }
+  });
+}
+function toggleReorderMode() {
+  reorderMode = !reorderMode;
+  document.getElementById('grid').classList.toggle('reorder-mode', reorderMode);
+  var btn = document.getElementById('reorderToggle');
+  btn.textContent = reorderMode ? '\u2705 \u05e1\u05d9\u05d5\u05dd \u05e1\u05d9\u05d3\u05d5\u05e8' : '\ud83d\udd00 \u05e1\u05d3\u05e8';
+  btn.classList.toggle('active', reorderMode);
+}
+
+// Pointer-based drag-and-drop (smooth, works on touch too)
+var grid = document.getElementById('grid');
+var pDragEl = null, pClone = null, pOffX = 0, pOffY = 0;
+
+function clearDropIndicators() {
+  document.querySelectorAll('.card.drop-before,.card.drop-after').forEach(function(c){
+    c.classList.remove('drop-before','drop-after');
+  });
+}
+
+function getCardUnderPointer(x, y) {
+  if (pClone) pClone.style.display = 'none';
+  var els = document.elementsFromPoint(x, y);
+  if (pClone) pClone.style.display = '';
+  for (var i = 0; i < els.length; i++) {
+    var t = els[i].closest ? els[i].closest('.card') : null;
+    if (t && t !== pDragEl) return t;
+  }
+  return null;
+}
+
+var scrollRaf = null;
+function autoScroll(clientY) {
+  var zone = 80, speed = 0;
+  if (clientY < zone) speed = -Math.round((zone - clientY) / 8);
+  else if (clientY > window.innerHeight - zone) speed = Math.round((clientY - (window.innerHeight - zone)) / 8);
+  if (scrollRaf) cancelAnimationFrame(scrollRaf);
+  if (speed !== 0) {
+    (function scroll(){ window.scrollBy(0, speed); scrollRaf = requestAnimationFrame(scroll); })();
+  }
+}
+
+document.addEventListener('pointerdown', function(e) {
+  if (!editMode || !reorderMode) return;
+  if (e.target.closest('button') || e.target.closest('.modal-bg')) return;
+  var card = e.target.closest('.card');
+  if (!card) return;
+  e.preventDefault();
+  pDragEl = card;
+  var rect = card.getBoundingClientRect();
+  pOffX = e.clientX - rect.left;
+  pOffY = e.clientY - rect.top;
+  // In reorder mode clone is smaller; in normal mode same size
+  var cloneW = reorderMode ? rect.width : rect.width;
+  pClone = card.cloneNode(true);
+  var rot = reorderMode ? 'rotate(2deg)' : 'rotate(1deg)';
+  pClone.style.cssText = 'position:fixed;z-index:9999;width:'+cloneW+'px;pointer-events:none;opacity:0.88;transform:scale(0.95) '+rot+';box-shadow:0 16px 48px rgba(0,0,0,0.7);border:2px solid #f5a623 !important;border-radius:8px;transition:none;';
+  pClone.style.left = (e.clientX - pOffX) + 'px';
+  pClone.style.top  = (e.clientY - pOffY) + 'px';
+  document.body.appendChild(pClone);
+  pDragEl.style.opacity = '0.2';
+  pDragEl.style.outline = '2px dashed #f5a623';
+  document.body.style.userSelect = 'none';
+  document.body.style.cursor = 'grabbing';
+}, {passive: false});
+
+document.addEventListener('pointermove', function(e) {
+  if (!pClone) return;
+  e.preventDefault();
+  pClone.style.left = (e.clientX - pOffX) + 'px';
+  pClone.style.top  = (e.clientY - pOffY) + 'px';
+  autoScroll(e.clientY);
+  clearDropIndicators();
+  var target = getCardUnderPointer(e.clientX, e.clientY);
+  if (target) {
+    var rect = target.getBoundingClientRect();
+    if (e.clientX >= rect.left + rect.width / 2) target.classList.add('drop-after');
+    else target.classList.add('drop-before');
+  }
+}, {passive: false});
+
+document.addEventListener('pointerup', function(e) {
+  if (scrollRaf) { cancelAnimationFrame(scrollRaf); scrollRaf = null; }
+  if (!pDragEl) return;
+  var target = getCardUnderPointer(e.clientX, e.clientY);
+  if (target) {
+    var insertAfter = target.classList.contains('drop-after');
+    clearDropIndicators();
+    if (insertAfter) grid.insertBefore(pDragEl, target.nextSibling);
+    else grid.insertBefore(pDragEl, target);
+    state.order = Array.from(document.querySelectorAll('.card')).map(function(c){ return c.getAttribute('data-key'); });
+    renumberCards();
+    markUnsaved();
+    showToast('\u2195\ufe0f \u05d4\u05e1\u05d3\u05e8 \u05e2\u05d5\u05d3\u05db\u05df \u2014 \u05dc\u05d7\u05e5 "\u05e4\u05e8\u05e1\u05dd" \u05dc\u05e9\u05de\u05d9\u05e8\u05d4');
+  }
+  clearDropIndicators();
+  if (pClone) { pClone.remove(); pClone = null; }
+  if (pDragEl) { pDragEl.style.opacity = ''; pDragEl.style.outline = ''; pDragEl = null; }
+  document.body.style.userSelect = '';
+  document.body.style.cursor = '';
+});
+
+document.addEventListener('pointercancel', function() {
+  if (scrollRaf) { cancelAnimationFrame(scrollRaf); scrollRaf = null; }
+  clearDropIndicators();
+  if (pClone) { pClone.remove(); pClone = null; }
+  if (pDragEl) { pDragEl.style.opacity = ''; pDragEl.style.outline = ''; pDragEl = null; }
+  document.body.style.userSelect = '';
+  document.body.style.cursor = '';
+});
+
+grid.addEventListener('click', function(e) {
+  var btn = e.target.closest('[data-action]');
+  if (!btn) {
+    var wrap = e.target.closest('.thumb-wrap');
+    if (wrap) {
+      if (ADMIN_UNLOCKED && !editMode && !reorderMode) {
+        var card = wrap.closest('.card[data-key]');
+        if (card) { toggleFreeStatus(card.getAttribute('data-key')); markUnsaved(); updateFreeCounter(); }
+      } else {
+        openLightbox(wrap.getAttribute('data-lb-key'));
+      }
+    }
+    return;
+  }
+  var action = btn.getAttribute('data-action');
+  var key    = btn.getAttribute('data-key');
+  if (action === 'copy')   copyPrompt(key, btn);
+  if (action === 'unlock') openAccessModal('premium');
+  if (action === 'del')    { if (!ADMIN_UNLOCKED) return; deleteCard(key); }
+  if (action === 'img')    { if (!ADMIN_UNLOCKED) return; openImgModal(key); }
+  if (action === 'edit')   { if (!ADMIN_UNLOCKED) return; openEditModal(key); }
+  if (action === 'free')   { if (!ADMIN_UNLOCKED) return; toggleFreeStatus(key); }
+  if (action === 'dup')    { if (!ADMIN_UNLOCKED) return; duplicateCard(key); }
+  if (action === 'cats')   { if (!ADMIN_UNLOCKED) return; e.stopPropagation(); showCatPopover(key, btn); }
+});
+
+function deleteCard(key) {
+  if (!confirm('\u05dc\u05de\u05d7\u05d5\u05e7 \u05d0\u05ea \u05d4\u05e4\u05e8\u05d5\u05de\u05e4\u05d8 \u05d4\u05d6\u05d4?')) return;
+  state.deleted.push(key);
+  var el = document.querySelector('.card[data-key="' + key + '"]');
+  if (el) el.remove();
+  updateCount(); renumberCards();
+  markUnsaved();
+  showToast('\u{1F5D1}\ufe0f \u05d4\u05e4\u05e8\u05d5\u05de\u05e4\u05d8 \u05e0\u05de\u05d7\u05e7 - \u05dc\u05d7\u05e5 "\u05e4\u05e8\u05e1\u05dd" \u05dc\u05e9\u05de\u05d9\u05e8\u05d4');
+}
+
+function appendCard(p) {
+  var thumb = p.images && p.images.length ? p.images[0] : '';
+  var thumbHtml = thumb
+    ? '<div class="thumb-wrap" data-lb-key="'+p.key+'"><img class="thumb" src="'+escHtml(thumb)+'" alt="" loading="lazy"><div class="thumb-overlay"><span>\U0001f50d \u05d4\u05e6\u05d2 \u05ea\u05de\u05d5\u05e0\u05d4</span></div></div>'
+    : '<div class="no-thumb"><span>\u05d0\u05d9\u05df \u05ea\u05de\u05d5\u05e0\u05d4</span></div>';
+  var el = document.createElement('div');
+  el.className = 'card';
+  el.setAttribute('data-key', p.key);
+  el.setAttribute('data-search', ((p.title||'')+' '+(p.prompt||'')).toLowerCase());
+  var isFree = !!(state.freePrompts && state.freePrompts[p.key]);
+  el.innerHTML = '<div class="edit-controls">'
+    +'<span class="ec-btn ec-drag">&#x22EE;&#x22EE; \u05d2\u05e8\u05d5\u05e8</span>'
+    +'<button class="ec-btn ec-del" data-action="del" data-key="'+p.key+'">\u{1F5D1}\ufe0f \u05de\u05d7\u05e7</button>'
+    +'<button class="ec-btn ec-img" data-action="img" data-key="'+p.key+'">\u{1F5BC}\ufe0f \u05d4\u05d7\u05dc\u05e3</button>'
+    +'<button class="ec-btn ec-edit" data-action="edit" data-key="'+p.key+'">\u270f\ufe0f \u05e2\u05e8\u05d5\u05da</button>'
+    +'<button class="ec-btn ec-dup" data-action="dup" data-key="'+p.key+'">📋 שכפל</button>'
+    +'<button class="ec-btn ec-cats" data-action="cats" data-key="'+p.key+'">🏷️ קטגוריות</button>'
+    +'</div>'
+    +'<span class="free-badge" style="'+(isFree?'':'display:none')+'">\u{1F193} Free</span>'
+    +'<div class="card-header"><span class="num">#'+p.id+'</span>'
+    +'<span class="cat">'+escHtml(formatCatLabel(p))+'</span>'
+    +'<button class="copy-btn" data-action="copy" data-key="'+p.key+'">\u{1F4CB} Copy</button>'
+    +'<button class="unlock-btn" data-action="unlock">🔒 פרימיום</button>'
+    +'</div><h3>'+escHtml(p.title)+'</h3>'+thumbHtml
+    +'<div class="prompt-wrap"><pre class="prompt-text">'+escHtml(p.prompt)+'</pre></div>';
+  if (editMode) el.setAttribute('draggable','true');
+  document.getElementById('grid').appendChild(el);
+  var header = el.querySelector('.card-header');
+  if (header) { var copyBtn = header.querySelector('.copy-btn'); if (copyBtn) header.insertBefore(makeFavBtn(p.key), copyBtn); else header.appendChild(makeFavBtn(p.key)); }
+}
+
+var editingKey = null;
+function openAddModal() {
+  if (!ADMIN_UNLOCKED) return;
+  editingKey = null;
+  document.getElementById('modalTitle').textContent = '\u2795 \u05d4\u05d5\u05e1\u05e3 \u05e4\u05e8\u05d5\u05de\u05e4\u05d8 \u05d7\u05d3\u05e9';
+  ['mTitle','mCat','mPrompt','mImgFile','mImgUrl'].forEach(function(id){document.getElementById(id).value='';});
+  populateCatChecks([]); resetPrev('mImgPrev'); openModal('promptModal');
+}
+function openEditModal(key) {
+  editingKey = key; var p = getCardData(key); if (!p) return;
+  document.getElementById('modalTitle').textContent = '\u270f\ufe0f \u05e2\u05e8\u05d5\u05da \u05e4\u05e8\u05d5\u05de\u05e4\u05d8';
+  document.getElementById('mTitle').value  = p.title  || '';
+  document.getElementById('mCat').value    = p.cat    || '';
+  document.getElementById('mPrompt').value = p.prompt || '';
+  populateCatChecks(p.cats || []);
+  document.getElementById('mImgFile').value = '';
+  var url = p.images && p.images[0] && !p.images[0].startsWith('data:') ? p.images[0] : '';
+  document.getElementById('mImgUrl').value = url;
+  var prev = document.getElementById('mImgPrev');
+  if (p.images && p.images[0]) { prev.src=p.images[0]; prev.classList.add('show'); } else resetPrev('mImgPrev');
+  openModal('promptModal');
+}
+document.getElementById('mImgFile').addEventListener('change', function(){fileToPreview(this,'mImgPrev','mImgUrl');});
+document.getElementById('mImgUrl').addEventListener('input',   function(){urlToPreview(this.value,'mImgPrev','mImgFile');});
+document.getElementById('iImgFile').addEventListener('change', function(){fileToPreview(this,'iImgPrev','iImgUrl');});
+document.getElementById('iImgUrl').addEventListener('input',   function(){urlToPreview(this.value,'iImgPrev','iImgFile');});
+document.getElementById('mOk').addEventListener('click', savePromptModal);
+document.getElementById('mCancel').addEventListener('click', function(){closeModal('promptModal');});
+document.getElementById('iOk').addEventListener('click', saveImgModal);
+document.getElementById('iCancel').addEventListener('click', function(){closeModal('imgModal');});
+
+function savePromptModal() {
+  var title=document.getElementById('mTitle').value.trim();
+  var cat=document.getElementById('mCat').value.trim();
+  var prompt=document.getElementById('mPrompt').value.trim();
+  var cats=getCheckedCats();
+  var prev=document.getElementById('mImgPrev');
+  var imgSrc=prev.classList.contains('show')?prev.src:'';
+  if (!title||!prompt){alert('\u05db\u05d5\u05ea\u05e8\u05ea \u05d5\u05e4\u05e8\u05d5\u05de\u05e4\u05d8 \u05d4\u05dd \u05e9\u05d3\u05d5\u05ea \u05d7\u05d5\u05d1\u05d4');return;}
+  if (editingKey) {
+    if (editingKey.startsWith('orig_')) {
+      var i=parseInt(editingKey.replace('orig_',''));
+      PROMPTS_ORIG[i]=prompt; TITLES_ORIG[i]=title; CATS_ORIG[i]=cat;
+      if (!state.promptEdits) state.promptEdits={};
+      state.promptEdits[editingKey]={title:title,cat:cat,prompt:prompt,cats:cats};
+      if (imgSrc) state.customImgs[editingKey]=imgSrc;
+    } else {
+      var a=(state.added||[]).find(function(x){return x.key===editingKey;});
+      if (a){a.title=title;a.cat=cat;a.prompt=prompt;a.cats=cats;if(imgSrc){a.images=[imgSrc];if(!state.customImgs)state.customImgs={};state.customImgs[editingKey]=imgSrc;}}
+    }
+    var card=document.querySelector('.card[data-key="'+editingKey+'"]');
+    if (card) {
+      card.querySelector('h3').textContent=title;
+      card.querySelector('.cat').textContent=formatCatLabel({cat:cat,cats:cats});
+      card.querySelector('.prompt-text').textContent=prompt;
+      card.setAttribute('data-search',(title+' '+prompt).toLowerCase());
+      if (imgSrc) {
+        var img=card.querySelector('.thumb');
+        var noThumb=card.querySelector('.no-thumb');
+        if (img){img.src=imgSrc;}
+        else if (noThumb){
+          var w=document.createElement('div');w.className='thumb-wrap';w.setAttribute('data-lb-key',editingKey);
+          w.innerHTML='<img class="thumb" src="'+escHtml(imgSrc)+'" alt="" loading="lazy"><div class="thumb-overlay"><span>\U0001f50d \u05d4\u05e6\u05d2 \u05ea\u05de\u05d5\u05e0\u05d4</span></div>';
+          noThumb.replaceWith(w);
+        }
+      }
+    }
+    markUnsaved(); closeModal('promptModal'); showToast('\u2705 \u05d4\u05e4\u05e8\u05d5\u05de\u05e4\u05d8 \u05e2\u05d5\u05d3\u05db\u05df - \u05dc\u05d7\u05e5 "\u05e4\u05e8\u05e1\u05dd"');
+  } else {
+    var newKey='added_'+Date.now();
+    var newP={key:newKey,id:'\u05d7\u05d3\u05e9',title:title,cat:cat,prompt:prompt,cats:cats,images:imgSrc?[imgSrc]:[]};
+    if(imgSrc){if(!state.customImgs)state.customImgs={};state.customImgs[newKey]=imgSrc;}
+    if (!state.added) state.added=[];
+    state.added.push(newP); appendCard(newP); updateCount(); renumberCards();
+    markUnsaved(); closeModal('promptModal'); showToast('\u2705 \u05d4\u05e4\u05e8\u05d5\u05de\u05e4\u05d8 \u05e0\u05d5\u05e1\u05e3 - \u05dc\u05d7\u05e5 "\u05e4\u05e8\u05e1\u05dd"');
+  }
+}
+
+var imgModalKey=null;
+function openImgModal(key){
+  imgModalKey=key;
+  document.getElementById('iImgFile').value=''; document.getElementById('iImgUrl').value='';
+  resetPrev('iImgPrev'); openModal('imgModal');
+}
+function saveImgModal(){
+  var prev=document.getElementById('iImgPrev');
+  if (!prev.classList.contains('show')||!prev.src){alert('\u05d1\u05d7\u05e8 \u05ea\u05de\u05d5\u05e0\u05d4 \u05ea\u05d7\u05d9\u05dc\u05d4');return;}
+  var src=prev.src;
+  if (!state.customImgs) state.customImgs={};
+  state.customImgs[imgModalKey]=src;
+  if (imgModalKey.startsWith('added_')){var a=(state.added||[]).find(function(x){return x.key===imgModalKey;});if(a)a.images=[src];}
+  var card=document.querySelector('.card[data-key="'+imgModalKey+'"]');
+  if (card){
+    var img=card.querySelector('.thumb');var noThumb=card.querySelector('.no-thumb');
+    if (img){img.src=src;}
+    else if (noThumb){
+      var w2=document.createElement('div');w2.className='thumb-wrap';w2.setAttribute('data-lb-key',imgModalKey);
+      w2.innerHTML='<img class="thumb" src="'+escHtml(src)+'" alt="" loading="lazy"><div class="thumb-overlay"><span>\U0001f50d \u05d4\u05e6\u05d2 \u05ea\u05de\u05d5\u05e0\u05d4</span></div>';
+      noThumb.replaceWith(w2);
+    }
+  }
+  markUnsaved(); closeModal('imgModal'); showToast('\u2705 \u05d4\u05ea\u05de\u05d5\u05e0\u05d4 \u05d4\u05d5\u05d7\u05dc\u05e4\u05d4 - \u05dc\u05d7\u05e5 "\u05e4\u05e8\u05e1\u05dd"');
+}
+
+var lbKey=null,lbIdx=0;
+function openLightbox(key){lbKey=key;lbIdx=0;showLbImg();document.getElementById('lb').classList.add('open');}
+function showLbImg(){
+  var p=getCardData(lbKey); if(!p||!p.images||!p.images.length)return;
+  document.getElementById('lb-img').src=p.images[lbIdx];
+  document.getElementById('lb-title').textContent=p.title;
+  document.getElementById('lb-nav').style.display=p.images.length>1?'flex':'none';
+  document.getElementById('lb-counter').textContent=p.images.length>1?(lbIdx+1)+'/'+p.images.length:'';
+}
+document.getElementById('lb-close').addEventListener('click',function(){document.getElementById('lb').classList.remove('open');});
+document.getElementById('lb').addEventListener('click',function(e){if(e.target===this)this.classList.remove('open');});
+document.getElementById('lb-prev').addEventListener('click',function(){var p=getCardData(lbKey);lbIdx=(lbIdx-1+p.images.length)%p.images.length;showLbImg();});
+document.getElementById('lb-next').addEventListener('click',function(){var p=getCardData(lbKey);lbIdx=(lbIdx+1)%p.images.length;showLbImg();});
+document.addEventListener('keydown',function(e){
+  if(!document.getElementById('lb').classList.contains('open'))return;
+  if(e.key==='Escape')document.getElementById('lb').classList.remove('open');
+  if(e.key==='ArrowRight'){var p=getCardData(lbKey);lbIdx=(lbIdx-1+p.images.length)%p.images.length;showLbImg();}
+  if(e.key==='ArrowLeft'){var p2=getCardData(lbKey);lbIdx=(lbIdx+1)%p2.images.length;showLbImg();}
+});
+
+function copyPrompt(key,btn){
+  var p=getCardData(key); if(!p)return;
+  function done(){btn.textContent='\u2705 Copied!';btn.classList.add('ok');showToast('\u2705 \u05d4\u05d5\u05e2\u05ea\u05e7!');setTimeout(function(){btn.textContent='\u{1F4CB} Copy';btn.classList.remove('ok');},2000);}
+  navigator.clipboard.writeText(p.prompt).then(done).catch(function(){
+    var ta=document.createElement('textarea');ta.value=p.prompt;ta.style.cssText='position:fixed;opacity:0';
+    document.body.appendChild(ta);ta.focus();ta.select();document.execCommand('copy');document.body.removeChild(ta);done();
+  });
+}
+function makeFavBtn(key) {
+  var b = document.createElement('button');
+  b.className = 'fav-btn' + (favs[key] ? ' fav-on' : '');
+  b.setAttribute('data-key', key);
+  b.title = 'מועדפים';
+  b.textContent = favs[key] ? '❤️' : '🤍';
+  b.addEventListener('click', function(e) {
+    e.stopPropagation();
+    if (favs[key]) delete favs[key]; else favs[key] = true;
+    localStorage.setItem('bb_favs', JSON.stringify(favs));
+    document.querySelectorAll('.fav-btn[data-key="'+key+'"]').forEach(function(btn){
+      btn.classList.toggle('fav-on', !!favs[key]);
+      btn.textContent = favs[key] ? '❤️' : '🤍';
+    });
+    updateFavCount();
+    if (showFavsOnly) filterCards(document.querySelector('.search').value);
+  });
+  return b;
+}
+function initFavBtns() {
+  document.querySelectorAll('.card').forEach(function(card) {
+    var key = card.getAttribute('data-key');
+    if (!key || card.querySelector('.fav-btn')) return;
+    var header = card.querySelector('.card-header');
+    if (header) { var copyBtn = header.querySelector('.copy-btn'); if (copyBtn) header.insertBefore(makeFavBtn(key), copyBtn); else header.appendChild(makeFavBtn(key)); }
+  });
+}
+function initPaywallDOM() {
+  // Inject paywall elements into orig_ cards (baked HTML, not via appendCard)
+  document.querySelectorAll('.card[data-key^="orig_"]').forEach(function(card) {
+    var key = card.getAttribute('data-key');
+    // wrap prompt-text in prompt-wrap if not already done
+    var pre = card.querySelector('.prompt-text');
+    if (pre && !pre.parentElement.classList.contains('prompt-wrap')) {
+      var wrap = document.createElement('div');
+      wrap.className = 'prompt-wrap';
+      pre.parentNode.insertBefore(wrap, pre);
+      wrap.appendChild(pre);
+    }
+    // add unlock button into card-header (next to copy-btn) if missing
+    if (!card.querySelector('.unlock-btn')) {
+      var ub = document.createElement('button');
+      ub.className = 'unlock-btn';
+      ub.setAttribute('data-action', 'unlock');
+      ub.textContent = '🔒 פרימיום';
+      var copyBtn = card.querySelector('.copy-btn');
+      if (copyBtn) copyBtn.insertAdjacentElement('afterend', ub);
+      else card.querySelector('.card-header').appendChild(ub);
+    }
+    // add free badge if missing
+    if (!card.querySelector('.free-badge')) {
+      var badge = document.createElement('span');
+      badge.className = 'free-badge';
+      badge.textContent = '🆓 Free';
+      badge.style.display = 'none';
+      card.insertBefore(badge, card.firstChild);
+    }
+    // add duplicate button in edit-controls if missing
+    var ec = card.querySelector('.edit-controls');
+    if (ec && !ec.querySelector('.ec-dup')) {
+      var db = document.createElement('button');
+      db.className = 'ec-btn ec-dup';
+      db.setAttribute('data-action', 'dup');
+      db.setAttribute('data-key', key);
+      db.textContent = '📋 שכפל';
+      ec.appendChild(db);
+    }
+  });
+}
+function updateFavCount() {
+  var count = Object.keys(favs).length;
+  var row = document.getElementById('favCountRow');
+  if (row) { row.style.display = showFavsOnly ? '' : 'none'; row.textContent = count + ' תמונות נבחרו'; }
+}
+function toggleFavFilter() {
+  showFavsOnly = !showFavsOnly;
+  var btn = document.getElementById('favFilterBtn');
+  if (btn) { btn.classList.toggle('active', showFavsOnly); btn.innerHTML = showFavsOnly ? '<span style="color:#f5a623">⬆</span> חזרה לגלריה' : '❤️ מועדפים'; }
+  var s = showFavsOnly ? '' : 'none';
+  document.getElementById('btnSendFavs').style.display = s;
+  document.getElementById('btnClearFavs').style.display = s;
+  var alb = document.getElementById('accessBtn'); if (alb) alb.style.display = showFavsOnly ? 'none' : '';
+  updateFavCount();
+  filterCards(document.querySelector('.search').value);
+}
+function updateWaButtons() {
+  var vis = shareWhatsApp ? '' : 'none';
+  ['btnMainOrder','btnMainSession','servicesLink'].forEach(function(id){
+    var el = document.getElementById(id);
+    if (el) el.style.display = vis;
+  });
+  var waBtn = document.getElementById('waToggle');
+  if (waBtn) { waBtn.classList.toggle('active', shareWhatsApp); waBtn.title = shareWhatsApp ? 'WhatsApp מופעל - לחץ לכיבוי' : 'WhatsApp כבוי - לחץ להפעלה'; }
+}
+function toggleWaShare() {
+  shareWhatsApp = !shareWhatsApp;
+  state.shareWhatsApp = shareWhatsApp;
+  markUnsaved();
+  updateWaButtons();
+}
+function clearFavs() {
+  var count = Object.keys(favs).length;
+  if (!count) return;
+  if (!confirm('האם למחוק את כל ' + count + ' המועדפים שלך?')) return;
+  favs = {};
+  localStorage.setItem('bb_favs', JSON.stringify(favs));
+  document.querySelectorAll('.fav-btn').forEach(function(b){ b.classList.remove('fav-on'); b.textContent = '🤍'; });
+  updateFavCount();
+  filterCards(document.querySelector('.search').value);
+}
+function getFavCards() {
+  return Array.from(document.querySelectorAll('.card')).filter(function(c){
+    return !!favs[c.getAttribute('data-key')];
+  });
+}
+function openShareModal() {
+  var cards = getFavCards();
+  var list = document.getElementById('shareList');
+  var countEl = document.getElementById('shareCount');
+  list.innerHTML = '';
+  if (!cards.length) {
+    if (countEl) countEl.textContent = '';
+    list.innerHTML='<li style="color:#666">אין מועדפים עדיין - לחצי על 🤍 בכרטיסים שאהבת</li>';
+  } else {
+    if (countEl) countEl.textContent = 'בחרת ' + cards.length + ' תמונות';
+    cards.forEach(function(c){
+      var num = c.getAttribute('data-orig-num') || (c.querySelector('.num')||{}).textContent || '';
+      var title = (c.querySelector('h3')||{}).textContent || '';
+      var li = document.createElement('li');
+      li.textContent = num + ' - ' + title;
+      list.appendChild(li);
+    });
+  }
+  var waVisible = shareWhatsApp ? '' : 'none';
+  ['btnOrder','btnSession'].forEach(function(id){ document.getElementById(id).style.display = waVisible; });
+  openModal('shareModal');
+}
+function copyFavsList() {
+  var cards = getFavCards();
+  if (!cards.length) return;
+  var text = 'בחרתי ' + cards.length + ' תמונות מ-Brill Banana Prompts:\n' + cards.map(function(c){
+    var num = c.getAttribute('data-orig-num') || (c.querySelector('.num')||{}).textContent || '';
+    var title = (c.querySelector('h3')||{}).textContent || '';
+    return num + ' - ' + title;
+  }).join('\n');
+  var ta = document.createElement('textarea');
+  ta.value = text; ta.style.cssText='position:fixed;opacity:0';
+  document.body.appendChild(ta); ta.focus(); ta.select();
+  document.execCommand('copy'); document.body.removeChild(ta);
+  showToast('הרשימה הועתקה!');
+}
+function getFavListText() {
+  return getFavCards().map(function(c){
+    var num = c.getAttribute('data-orig-num') || (c.querySelector('.num')||{}).textContent || '';
+    var title = (c.querySelector('h3')||{}).textContent || '';
+    return num + ' - ' + title;
+  }).join('\n');
+}
+function sendFavsWhatsApp() {
+  var cards = getFavCards();
+  if (!cards.length) return;
+  var prefix = (WA_FAVS_PREFIX || DEFAULT_WA_CONFIG.favsPrefix).replace('{n}', cards.length);
+  var text = prefix + '\n' + getFavListText();
+  window.open('https://wa.me/'+ADMIN_WHATSAPP+'?text='+encodeURIComponent(text), '_blank');
+}
+function orderImagesWhatsApp() {
+  var cards = getFavCards();
+  if (!cards.length) return;
+  var prefix = (WA_ORDER_MSG || DEFAULT_WA_CONFIG.orderMsg).replace('{n}', cards.length);
+  var text = prefix + '\n' + getFavListText();
+  window.open('https://wa.me/'+ADMIN_WHATSAPP+'?text='+encodeURIComponent(text), '_blank');
+}
+function bookSessionWhatsApp() {
+  var cards = getFavCards();
+  var prefix = WA_SESSION_MSG || DEFAULT_WA_CONFIG.sessionMsg;
+  var text = cards.length ? prefix + '\n' + getFavListText() : prefix;
+  window.open('https://wa.me/'+ADMIN_WHATSAPP+'?text='+encodeURIComponent(text), '_blank');
+}
+function filterCards(q){
+  q=q.toLowerCase().trim(); var visible=0;
+  // Build a key->cats index once per call. Resolving each card through
+  // getCardData() instead meant a linear scan of state.added (4k+ entries)
+  // per card - ~200ms of every category click, and what tripped Chrome's
+  // INP warning on .cat-filter-btn.
+  var catId=activeCat.indexOf('cat:')===0?activeCat.slice(4):null;
+  var catIdx=null;
+  if(catId){catIdx=new Map();(state.added||[]).forEach(function(a){catIdx.set(a.key,a.cats||[]);});}
+  document.querySelectorAll('.card').forEach(function(c){
+    var key=c.getAttribute('data-key');
+    var matchQ=!q||c.getAttribute('data-search').includes(q);
+    var matchFav=!showFavsOnly||!!favs[key];
+    var free=isFreeCard(key);
+    var matchCat=!activeCat||(activeCat==='free'&&free)||(activeCat==='paid'&&!free);
+    if(!matchCat&&catId){
+      var cats=catIdx.get(key);
+      if(!cats&&key.indexOf('orig_')===0){var ed=state.promptEdits&&state.promptEdits[key];cats=(ed&&ed.cats)||[];}
+      matchCat=!!(cats&&cats.indexOf(catId)>=0);
+    }
+    var show=matchQ&&matchFav&&matchCat;
+    c.style.display=show?'':'none'; if(show)visible++;
+  });
+  var sc=document.getElementById('subtitle-count'); if(sc)sc.textContent=visible;
+  renumberCards();
+}
+function updateCount(){var v=Array.from(document.querySelectorAll('.card')).filter(function(c){return c.style.display!=='none';}).length;var sc=document.getElementById('subtitle-count');if(sc)sc.textContent=v;}
+function renumberCards(){
+  if(showFavsOnly){
+    document.querySelectorAll('.card').forEach(function(c){
+      var el=c.querySelector('.num');
+      var saved=c.getAttribute('data-orig-num');
+      if(el&&saved)el.textContent=saved;
+    });
+    return;
+  }
+  var n=1;document.querySelectorAll('.card').forEach(function(c){if(c.style.display==='none')return;var el=c.querySelector('.num');if(el){el.textContent='#'+n;c.setAttribute('data-orig-num','#'+n);}n++;});
+}
+
+// Columns slider
+(function(){
+  var slider=document.getElementById('colsSlider');
+  var valEl=document.getElementById('colsVal');
+  var gridEl=document.getElementById('grid');
+  function defaultCols(){
+    var w=window.innerWidth;
+    if(w<=500)return 1;
+    if(w<=800)return 2;
+    if(w<=1200)return 3;
+    if(w<=1600)return 4;
+    return 5;
+  }
+  function updateSliderTrack(n){
+    var pct=((n-1)/16*100)+'%';
+    var trackColor=document.body.classList.contains('light')?'#ccc':'#444';
+    slider.style.background='linear-gradient(to left,#f5a623 '+pct+','+trackColor+' '+pct+')';
+  }
+  window._updateSliderTrack = updateSliderTrack;
+  function setGridCols(n){
+    var max = window.innerWidth <= 600 ? 2 : window.innerWidth <= 1000 ? 4 : 8;
+    n = Math.min(max, Math.max(1, Number.isFinite(n) ? n : defaultCols()));
+    slider.max = max;
+    gridEl.style.gridTemplateColumns='repeat('+n+',minmax(0,1fr))';
+    gridEl.style.maxWidth = n >= 8 ? 'none' : '';
+    gridEl.classList.toggle('compact-mode', n >= 8);
+    updateSliderTrack(n);
+    valEl.textContent=n;
+    slider.value=n;
+  }
+  var saved=localStorage.getItem('nb_admin_cols');
+  setGridCols(saved?Math.min(17,Math.max(1,parseInt(saved))):defaultCols());
+  slider.addEventListener('input',function(){
+    var n=parseInt(this.value);
+    setGridCols(n);
+    localStorage.setItem('nb_admin_cols',n);
+  });
+  // Re-apply after window resize if no saved preference
+  window.addEventListener('resize',function(){
+    var saved = parseInt(localStorage.getItem('nb_admin_cols'));
+    setGridCols(Number.isFinite(saved) ? saved : defaultCols());
+  });
+})();
+function escHtml(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
+function compressImage(src,maxDim,quality){
+  return new Promise(function(resolve){
+    var img=new Image();
+    img.onload=function(){
+      var w=img.naturalWidth,h=img.naturalHeight;
+      if(w>maxDim||h>maxDim){if(w>h){h=Math.round(h*maxDim/w);w=maxDim;}else{w=Math.round(w*maxDim/h);h=maxDim;}}
+      var c=document.createElement('canvas');c.width=w;c.height=h;
+      c.getContext('2d').drawImage(img,0,0,w,h);
+      resolve(c.toDataURL('image/jpeg',quality));
+    };
+    img.onerror=function(){resolve(src);};
+    img.src=src;
+  });
+}
+function fileToPreview(input,prevId,urlId){
+  if(!input.files||!input.files[0])return;
+  var r=new FileReader();
+  r.onload=function(e){
+    compressImage(e.target.result,900,0.82).then(function(compressed){
+      var p=document.getElementById(prevId);p.src=compressed;p.classList.add('show');
+      document.getElementById(urlId).value='';
+    });
+  };
+  r.readAsDataURL(input.files[0]);
+}
+function urlToPreview(url,prevId,fileId){
+  var p=document.getElementById(prevId);
+  if(url){p.src=url;p.classList.add('show');document.getElementById(fileId).value='';}else resetPrev(prevId);
+}
+function resetPrev(id){var p=document.getElementById(id);p.src='';p.classList.remove('show');}
+var modalFocus = new Map();
+function openModal(id){
+  var el=document.getElementById(id); modalFocus.set(id,document.activeElement);
+  el.classList.add('open');el.setAttribute('role','dialog');el.setAttribute('aria-modal','true');
+  var heading=el.querySelector('h2,h3');if(heading){if(!heading.id)heading.id=id+'Title';el.setAttribute('aria-labelledby',heading.id);}
+  document.body.style.overflow='hidden';var first=el.querySelector('input:not([type=hidden]),button,select,textarea');if(first)first.focus();
+}
+function closeModal(id){
+  document.getElementById(id).classList.remove('open');
+  if(!document.querySelector('.modal-bg.open'))document.body.style.overflow='';
+  var previous=modalFocus.get(id);if(previous&&previous.isConnected)previous.focus();modalFocus.delete(id);
+}
+document.addEventListener('keydown',function(e){
+  var modals=document.querySelectorAll('.modal-bg.open');var el=modals[modals.length-1];if(!el)return;
+  if(e.key==='Escape'){e.preventDefault();closeModal(el.id);return;}
+  if(e.key!=='Tab')return;
+  var items=Array.from(el.querySelectorAll('button,input,select,textarea,a[href],[tabindex="0"]')).filter(function(x){return !x.disabled&&x.offsetParent!==null;});
+  if(!items.length)return;var first=items[0],last=items[items.length-1];
+  if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+  if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+});
+window.addEventListener('beforeunload',function(e){if(pendingChanges){e.preventDefault();e.returnValue='';}});
+['promptModal','imgModal'].forEach(function(id){
+  document.getElementById(id).addEventListener('click',function(e){if(e.target===this)closeModal(id);});
+});
+var toastT;
+function showToast(msg,dur){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove('show');},dur||2800);}
+
+</script>
+</body>
+</html>
