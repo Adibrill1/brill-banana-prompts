@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>הזמנת תמונות AI אישיות | Brill Banana Prompts</title>
+<title>הזמנת תמונות AI אישיות | Brill Studio</title>
 <meta name="description" content="הזמינו תמונות AI מותאמות אישית - תמונה בודדת מ-10 ₪, חבילות מ-5 ₪ לתמונה, או סשן אישי בזום. 241+ סגנונות לבחירה.">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -79,8 +79,8 @@ section{padding:80px 20px;max-width:1000px;margin:0 auto}
 
 /* ── GALLERY ── */
 #gallery{background:var(--bg2);max-width:100%;padding:80px 20px}
-.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:920px;margin:0 auto 40px}
-@media(max-width:700px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+.gallery-grid{display:grid;grid-template-columns:repeat(var(--gallery-cols,4),minmax(0,1fr));gap:12px;max-width:920px;margin:0 auto 40px}
+@media(max-width:700px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .gallery-item{border-radius:8px;overflow:hidden;cursor:pointer;position:relative;aspect-ratio:1;background:var(--bg4)}
 .gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
 .gallery-item:hover img{transform:scale(1.05)}
@@ -128,10 +128,16 @@ body.rh-mode .rh:hover .rh-knob,.rh.dragging .rh-knob{transform:translateX(-50%)
 
 @media(max-width:600px){
   section{padding:60px 16px}
+  #hero,#how-it-works,#pricing,#gallery,#faq,#contact{font-size:100%!important}
+  #hero{min-height:80svh;padding:100px 20px 60px}
   #hero h1{font-size:1.8em}
   .steps-wrap,.pricing-wrap{flex-direction:column;align-items:center}
   .price-card{max-width:100%}
 }
+#themeBtn,#backBtn,#galColsCtrl button{min-width:44px;min-height:44px}
+#backBtn{display:flex;align-items:center}
+:focus-visible{outline:3px solid var(--primary);outline-offset:4px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.fade-in{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -323,8 +329,25 @@ body.rh-mode .rh:hover .rh-knob,.rh.dragging .rh-knob{transform:translateX(-50%)
 
 <script>
 // ── SERVICES CONFIG ──
-(function(){
-  var cfg = JSON.parse(localStorage.getItem('bb_services_config') || 'null');
+function prepareGalleryImage(image) {
+  var src=image.getAttribute('src')||'';
+  var raw='https://raw.githubusercontent.com/Adibrill1/brill-banana-prompts/master/';
+  if (/^\/?images\/[\w.-]+$/.test(src)) src=raw+src.replace(/^\//,'');
+  try {
+    var url=new URL(src);
+    if(url.protocol!=='https:')return;
+    if(/^brill-banana-prompts(?:-v3)?\.vercel\.app$/.test(url.hostname)&&/^\/images\/[\w.-]+$/.test(url.pathname))src=raw+url.pathname.slice(1);
+  } catch(e) { return; }
+  image.dataset.original=src;image.src=src;image.decoding='async';image.width=640;image.height=640;
+  if(src.indexOf(raw+'images/')===0||/^https:\/\/nanobananai\.site\/images\/case\d+\/output\.webp$/.test(src)){
+    image.src='/api/img?src='+encodeURIComponent(src)+'&w=640';
+    image.srcset=[320,640,960].map(function(w){return '/api/img?src='+encodeURIComponent(src)+'&w='+w+' '+w+'w';}).join(', ');
+    image.sizes='(max-width: 700px) 50vw, 25vw';
+    image.onerror=function(){image.onerror=null;image.removeAttribute('srcset');image.src=src;};
+  }
+}
+document.querySelectorAll('.gallery-item img').forEach(prepareGalleryImage);
+function applyServicesConfig(cfg){
   if (!cfg) return;
   var phone = cfg.phone || '972523919350';
   function waUrl(msg){ return 'https://wa.me/'+phone+'?text='+encodeURIComponent(msg); }
@@ -346,14 +369,14 @@ body.rh-mode .rh:hover .rh-knob,.rh.dragging .rh-knob{transform:translateX(-50%)
     var sz = cfg.sectionSizes;
     var sectionMap = { hero:'hero', how:'how-it-works', pricing:'pricing', gallery:'gallery', faq:'faq', contact:'contact' };
     Object.keys(sectionMap).forEach(function(key) {
-      if (sz[key] !== undefined && sz[key] !== 100) {
+      if (sz[key] !== undefined) {
         var el = document.getElementById(sectionMap[key]);
-        if (el) el.style.fontSize = sz[key] + '%';
+        if (el) el.style.fontSize = Math.max(50,Math.min(200,Number(sz[key])||100)) + '%';
       }
     });
     if (sz.galcols) {
       var grid = document.querySelector('.gallery-grid');
-      if (grid) grid.style.gridTemplateColumns = 'repeat('+sz.galcols+',1fr)';
+      if (grid) grid.style.setProperty('--gallery-cols',Math.max(2,Math.min(6,Number(sz.galcols)||4)));
     }
   }
   // Gallery
@@ -366,13 +389,19 @@ body.rh-mode .rh:hover .rh-knob,.rh.dragging .rh-knob{transform:translateX(-50%)
         var div = document.createElement('div');
         div.className = 'gallery-item';
         div.setAttribute('onclick', 'openLb(this)');
-        div.innerHTML = '<img src="' + item.src + '" alt="' + item.caption + '" loading="lazy">'
-          + '<div class="gallery-caption">' + item.caption + '</div>';
+        var image=document.createElement('img'); image.src=item.src;image.alt=item.caption||'';image.loading='lazy';
+        prepareGalleryImage(image);
+        var caption=document.createElement('div');caption.className='gallery-caption';caption.textContent=item.caption||'';
+        div.appendChild(image);div.appendChild(caption);
         grid.appendChild(div);
       });
     }
   }
-})();
+}
+try { applyServicesConfig(JSON.parse(localStorage.getItem('bb_services_config') || 'null')); } catch(e) {}
+fetch('/api/catalog?limit=1').then(function(r){ if(!r.ok)throw new Error();return r.json(); }).then(function(data){
+  var cfg=data.config.services;applyServicesConfig(cfg);try{localStorage.setItem('bb_services_config',JSON.stringify(cfg));}catch(e){}
+}).catch(function(){});
 // ── THEME ──
 (function(){
   if(localStorage.getItem('bb_theme')==='light') document.documentElement.setAttribute('data-theme','light');
@@ -413,7 +442,8 @@ faqs.forEach(function(f, i){
 
 // ── LIGHTBOX ──
 function openLb(el){
-  var src = el.querySelector('img').src;
+  var image = el.querySelector('img');
+  var src = image.dataset.original || image.src;
   document.getElementById('lbImg').src = src;
   document.getElementById('lb').classList.add('open');
 }
@@ -426,8 +456,9 @@ var obs = new IntersectionObserver(function(entries){
 document.querySelectorAll('.fade-in').forEach(function(el){ obs.observe(el); });
 
 // ── ADMIN DRAG RESIZE ──
-(function(){
-  if (!localStorage.getItem('bb_admin_token')) return;
+function initAdminResize(){
+  // Resizing is enabled only after the server confirms the admin session.
+  if (!window._adminSession) return;
 
   var btn = document.getElementById('adminResizeBtn');
   if (!btn) return;
@@ -473,7 +504,7 @@ document.querySelectorAll('.fade-in').forEach(function(el){ obs.observe(el); });
     var n = Math.max(2, Math.min(6, parseInt(numEl.textContent) + d));
     numEl.textContent = n;
     var grid = document.querySelector('.gallery-grid');
-    if (grid) grid.style.gridTemplateColumns = 'repeat(' + n + ',1fr)';
+    if (grid) grid.style.setProperty('--gallery-cols',n);
     persist('galcols', n);
   };
 
@@ -548,7 +579,8 @@ document.querySelectorAll('.fade-in').forEach(function(el){ obs.observe(el); });
     var gc = document.getElementById('galColsCtrl');
     if (gc) gc.style.display = on ? 'flex' : 'none';
   });
-})();
+}
+fetch('/api/session').then(function(r){return r.json();}).then(function(data){window._adminSession=data.admin;if(data.admin)initAdminResize();}).catch(function(){});
 </script>
 </body>
 </html>

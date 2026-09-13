@@ -1,119 +1,42 @@
-const https = require('https');
-
-const owner = 'Adibrill1';
-const repo  = 'brill-banana-prompts';
-
-function setCORS(res) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-}
-
-function ghGet(token, filePath) {
-  return new Promise(function(resolve) {
-    var opts = {
-      hostname: 'api.github.com',
-      port: 443,
-      path: '/repos/' + owner + '/' + repo + '/contents/' + filePath,
-      method: 'GET',
-      headers: {
-        'Authorization': 'token ' + token,
-        'User-Agent': 'brill-banana/1.0',
-        'Accept': 'application/vnd.github.v3+json'
-      }
-    };
-    var req = https.request(opts, function(r) {
-      var chunks = [];
-      r.on('data', function(c) { chunks.push(c); });
-      r.on('end', function() {
-        try { resolve({ status: r.statusCode, data: JSON.parse(Buffer.concat(chunks).toString()) }); }
-        catch(e) { resolve({ status: r.statusCode, data: {} }); }
-      });
-    });
-    req.setTimeout(8000, function() { req.destroy(); resolve({ status: 0, data: {} }); });
-    req.on('error', function() { resolve({ status: 0, data: {} }); });
-    req.end();
-  });
-}
-
-function ghPut(token, filePath, content, sha, message) {
-  return new Promise(function(resolve) {
-    var bodyObj = { message: message, content: content };
-    if (sha) bodyObj.sha = sha;
-    var bodyStr = JSON.stringify(bodyObj);
-    var opts = {
-      hostname: 'api.github.com',
-      port: 443,
-      path: '/repos/' + owner + '/' + repo + '/contents/' + filePath,
-      method: 'PUT',
-      headers: {
-        'Authorization': 'token ' + token,
-        'User-Agent': 'brill-banana/1.0',
-        'Accept': 'application/vnd.github.v3+json',
-        'Content-Type': 'application/json',
-        'Content-Length': Buffer.byteLength(bodyStr)
-      }
-    };
-    var req = https.request(opts, function(r) {
-      var chunks = [];
-      r.on('data', function(c) { chunks.push(c); });
-      r.on('end', function() {
-        try { resolve({ status: r.statusCode, data: JSON.parse(Buffer.concat(chunks).toString()) }); }
-        catch(e) { resolve({ status: r.statusCode, data: {} }); }
-      });
-    });
-    req.setTimeout(8000, function() { req.destroy(); resolve({ status: 0, data: {} }); });
-    req.on('error', function() { resolve({ status: 0, data: {} }); });
-    req.write(bodyStr);
-    req.end();
-  });
-}
-
-module.exports = async function handler(req, res) {
-  setCORS(res);
-  if (req.method === 'OPTIONS') { res.status(200).end(); return; }
-  if (req.method !== 'POST') { res.status(405).json({ error: 'Method not allowed' }); return; }
-
-  var license_key = (req.body && req.body.license_key) ? req.body.license_key.trim() : '';
-  if (!license_key) {
-    res.status(400).json({ valid: false, error: 'Missing license_key' });
-    return;
-  }
-
-  const token = process.env.GITHUB_TOKEN;
-  if (!token) { res.status(500).json({ valid: false, error: 'Server config error' }); return; }
-
+const repository = require("../lib/repository.cjs");
+const { json, readBody, sameOrigin } = require("../lib/http.cjs");
+const { setSession, clearSession } = require("../lib/auth.cjs");
+module.exports = async (req, res) => {
+  if (req.method !== "POST")
+    return json(req, res, 405, { error: "Method not allowed" });
+  if (!sameOrigin(req)) return json(req, res, 403, { error: "Forbidden" });
   try {
-    var result = await ghGet(token, 'keys.json');
-    if (result.status !== 200 || !result.data.content) {
-      res.status(500).json({ valid: false, error: 'Could not load keys' });
-      return;
+    const body = await readBody(req, 4096);
+    const key =
+      typeof body.license_key === "string" ? body.license_key.trim() : "";
+    const { state } = await repository.read("keys.json");
+    const entry = Object.hasOwn(state.keys || {}, key) ? state.keys[key] : null;
+    const expires = entry?.expiresAt
+      ? Date.parse(entry.expiresAt)
+      : Date.now() + 365 * 86400000;
+    if (!entry || !Number.isFinite(expires) || expires <= Date.now()) {
+      clearSession(req, res, "license");
+      return json(req, res, 200, {
+        valid: false,
+        error: "מפתח לא תקין או שפג תוקפו",
+      });
     }
-    var sha = result.data.sha;
-    var keysData = JSON.parse(Buffer.from(result.data.content, 'base64').toString('utf8'));
-    var keys = keysData.keys || {};
-
-    if (!keys[license_key]) {
-      res.status(200).json({ valid: false, error: 'מפתח לא תקין' });
-      return;
-    }
-
-    var keyEntry = keys[license_key];
-
-    // Check expiry
-    if (keyEntry.expiresAt && new Date(keyEntry.expiresAt) < new Date()) {
-      res.status(200).json({ valid: false, error: 'הרישיון פג תוקף' });
-      return;
-    }
-
-    // Update lastUsed (fire and forget — don't block the response)
-    keyEntry.lastUsed = new Date().toISOString();
-    keysData.keys = keys;
-    var encoded = Buffer.from(JSON.stringify(keysData, null, 2)).toString('base64');
-    ghPut(token, 'keys.json', encoded, sha, 'Update lastUsed: ' + license_key);
-
-    res.status(200).json({ valid: true, name: keyEntry.name || '' });
-  } catch(e) {
-    res.status(500).json({ valid: false, error: 'Server error' });
+    setSession(
+      req,
+      res,
+      "license",
+      { key },
+      Math.min(expires - Date.now(), 7 * 86400000),
+    );
+    return json(req, res, 200, {
+      valid: true,
+      name: entry.name || "",
+      expiresAt: new Date(expires).toISOString(),
+    });
+  } catch {
+    return json(req, res, 503, {
+      valid: false,
+      error: "שגיאת חיבור. נסו שוב.",
+    });
   }
 };
