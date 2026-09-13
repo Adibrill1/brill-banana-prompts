@@ -45,7 +45,7 @@ Keep the existing `GITHUB_TOKEN` with repository Contents read/write permission.
 
 The existing GitHub token expiry recorded before this rewrite was **2027-09-03**; this release does not rotate it. Validate current permissions/expiry when deploying. Login and publishing require an available signing secret and GitHub token in the target environment.
 
-Before replacing the live site, verify a preview deployment's login, one controlled publish, license activation/expiry, services settings, and real-device performance. Local tests mock remote writes; no real publish or license-key mutation is performed by the test suite. Image transformation adds server/CDN work; monitor its usage with actual traffic.
+Local and Vercel preview environments cannot publish state, upload images or change license keys in the live repository. Before replacing the live site, verify the preview's login, license activation/expiry, services settings, and real-device performance. After an approved production release, verify one controlled publish. Local tests mock remote writes; no real publish or license-key mutation is performed by the test suite. Image transformation adds server/CDN work; monitor its usage with actual traffic.
 
 ## Access-control boundary
 

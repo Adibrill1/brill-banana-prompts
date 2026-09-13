@@ -34,6 +34,6 @@ The repository and its history already publicly contain prompt data and license 
 
 Run `npm test` and `npm run build`. The tests exercise migration, search and paging, authentication, license expiry/revocation, bounded gzip handling, upload retries and concurrent publishing. Validate important user flows in a browser, including a phone-sized viewport. `npm run preview` serves the production build with local read-only APIs.
 
-Both local server modes force `LOCAL_DATA=1` and cannot publish to GitHub. `LOCAL_ADMIN_PASSWORD` is an optional local test override, not a production password. Never commit real secrets. Keep state, originals and license files out of `dist/`.
+Both local server modes force `LOCAL_DATA=1` and cannot publish to GitHub. Vercel preview deployments also reject publishing, image uploads and license-key mutations. `LOCAL_ADMIN_PASSWORD` is an optional local test override, not a production password. Never commit real secrets. Keep state, originals and license files out of `dist/`.
 
 The image archive is large; use sparse checkout excluding `/images/` for source-code work. Test `git push --dry-run` rather than assuming credentials are present. If authentication is unavailable, stop looking for tokens and deliver the local change or use the configured GitHub connector.

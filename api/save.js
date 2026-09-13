@@ -5,9 +5,13 @@ module.exports = async (req, res) => {
   if (req.method !== "POST")
     return json(req, res, 405, { error: "Method not allowed" });
   if (!isAdmin(req)) return json(req, res, 401, { error: "נדרשת כניסת מנהל" });
-  if (!process.env.GITHUB_TOKEN || process.env.LOCAL_DATA === "1")
+  if (
+    !process.env.GITHUB_TOKEN ||
+    process.env.LOCAL_DATA === "1" ||
+    process.env.VERCEL_ENV === "preview"
+  )
     return json(req, res, 503, {
-      error: "השמירה אינה מופעלת בסביבת התצוגה המקומית",
+      error: "פרסום שינויים זמין באתר הראשי בלבד. תצוגת הניסיון מיועדת לבדיקה.",
     });
   try {
     const body = await readBody(req, 24 * 1024 * 1024);

@@ -435,3 +435,37 @@ test("editor uploads preserve secondary images, deduplicate sources and resume a
   ]);
   assert.equal(services.gallery[0].src, "https://example.test/second.webp");
 });
+
+test("Vercel previews cannot mutate production data even with valid server credentials", async () => {
+  const before = {
+    token: process.env.GITHUB_TOKEN,
+    local: process.env.LOCAL_DATA,
+    environment: process.env.VERCEL_ENV,
+  };
+  process.env.GITHUB_TOKEN = "fixture-never-sent";
+  process.env.LOCAL_DATA = "0";
+  process.env.VERCEL_ENV = "preview";
+  try {
+    for (const name of ["save", "keys"]) {
+      const response = res();
+      await require("../api/" + name + ".js")(
+        req({
+          method: "POST",
+          headers: { "x-admin-token": process.env.ADMIN_TOKEN },
+          body: "{invalid",
+        }),
+        response,
+      );
+      assert.equal(response.statusCode, 503);
+    }
+  } finally {
+    for (const [key, value] of Object.entries({
+      GITHUB_TOKEN: before.token,
+      LOCAL_DATA: before.local,
+      VERCEL_ENV: before.environment,
+    })) {
+      if (value === undefined) delete process.env[key];
+      else process.env[key] = value;
+    }
+  }
+});

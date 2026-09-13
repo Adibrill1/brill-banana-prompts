@@ -109,8 +109,11 @@ module.exports = async function handler(req, res) {
     res.status(401).json({ error: "Unauthorized" });
     return;
   }
-  if (process.env.LOCAL_DATA === "1" && req.method !== "GET") {
-    res.status(503).json({ error: "Local preview is read-only" });
+  if (
+    (process.env.LOCAL_DATA === "1" || process.env.VERCEL_ENV === "preview") &&
+    req.method !== "GET"
+  ) {
+    res.status(503).json({ error: "Preview is read-only" });
     return;
   }
   repository.invalidate("keys.json");
