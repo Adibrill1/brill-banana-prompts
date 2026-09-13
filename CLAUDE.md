@@ -14,7 +14,7 @@ Read `README.md` for setup, routes, deployment settings and the access-control b
 
 Preserve existing card keys, favorites, order, category membership and prompt text. `lib/catalog.cjs` is the shared visitor read model. Unlisted cards precede the explicitly ordered cards, matching the original DOM append order. Custom image overrides take precedence over image arrays. Legacy category labels map to current IDs; labels come from `state.customCats`.
 
-Never call `getCardData()` or a document-wide card selector in a loop in the legacy editor. Build a key-to-record or key-to-element Map first. The editor still displays the full catalog, so retain its `content-visibility` optimization. The visitor page renders at most 36 cards under normal navigation.
+Never call `getCardData()` or a document-wide card selector in a loop in the legacy editor. Build a key-to-record or key-to-element Map first. The editor still displays the full catalog, so retain its `content-visibility` optimization. The visitor page renders at most 100 cards under normal navigation, with lazy image loading and 1–7 responsive columns.
 
 Use `minmax(0,1fr)` in grids and `min-width:0` on flexible content. Clamp saved desktop column counts for phones. Verify horizontal overflow at 320px and 390px, with long titles and category labels.
 

@@ -152,9 +152,9 @@ test("catalog API returns only bounded metadata, with small compressed payload",
   );
   const data = body(response);
   assert.equal(response.statusCode, 200);
-  assert.equal(data.items.length, 36);
+  assert.equal(data.items.length, 100);
   assert.equal(data.total, records.length);
-  assert.equal(data.pages, Math.ceil(records.length / 36));
+  assert.equal(data.pages, Math.ceil(records.length / 100));
   assert(!data.items.some((p) => Object.hasOwn(p, "prompt")));
   assert(
     response.body.length < 16000,
@@ -165,20 +165,53 @@ test("catalog API returns only bounded metadata, with small compressed payload",
 test("paging is stable and clamps limits and pages", async () => {
   const response = res();
   await require("../api/catalog.js")(
-    req({ query: { page: "2", limit: "36" } }),
+    req({ query: { page: "2", limit: "100" } }),
     response,
   );
   assert.deepEqual(
     body(response).items.map((p) => p.key),
-    records.slice(36, 72).map((p) => p.key),
+    records.slice(100, 200).map((p) => p.key),
   );
   const last = res();
   await require("../api/catalog.js")(
     req({ query: { page: "99999", limit: "99999" } }),
     last,
   );
-  assert(body(last).items.length <= 48);
+  assert(body(last).items.length <= 100);
   assert.equal(body(last).page, body(last).pages);
+  assert.deepEqual(
+    body(last).items.map((p) => p.key),
+    records.slice((body(last).page - 1) * 100).map((p) => p.key),
+  );
+  const capped = res();
+  await require("../api/catalog.js")(
+    req({ query: { limit: "99999" } }),
+    capped,
+  );
+  assert.equal(body(capped).items.length, 100);
+  const minimal = res();
+  await require("../api/catalog.js")(req({ query: { limit: "1" } }), minimal);
+  assert.equal(body(minimal).items.length, 1);
+});
+test("favorites paginate 100 cards without skipping or repeating selected records", async () => {
+  const keys = records
+    .filter((_, index) => index % 3 === 0)
+    .slice(0, 135)
+    .map((p) => p.key);
+  const pages = [];
+  for (const page of [1, 2]) {
+    const response = res();
+    await require("../api/catalog.js")(
+      req({ method: "POST", body: { keys, page } }),
+      response,
+    );
+    const data = body(response);
+    assert.equal(data.pages, 2);
+    assert.equal(data.total, 135);
+    assert.equal(data.items.length, page === 1 ? 100 : 35);
+    pages.push(...data.items.map((p) => p.key));
+  }
+  assert.deepEqual(pages, keys);
 });
 test("search finds prompt text beyond the first page; favorites span the entire catalog", async () => {
   const target = records[600];

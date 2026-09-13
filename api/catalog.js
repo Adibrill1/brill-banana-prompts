@@ -21,7 +21,7 @@ module.exports = async (req, res) => {
     );
     const limit = Math.max(
       1,
-      Math.min(48, Number.parseInt(params.limit) || 36),
+      Math.min(100, Number.parseInt(params.limit) || 100),
     );
     const data = await repository.read("state.json", { fallback: true });
     const all = catalog.normalize(data.state);

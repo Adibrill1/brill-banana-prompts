@@ -18,7 +18,7 @@ export function loadCatalog(
     q: selection.q,
     category: selection.category,
     page: String(selection.page),
-    limit: "36",
+    limit: "100",
   };
   return selection.favorites
     ? request<Catalog>("/api/catalog", {

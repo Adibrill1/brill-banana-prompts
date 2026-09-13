@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import type { Card, Detail } from "./types";
 import { loadDetail } from "./api";
 import { Dialog } from "./Dialog";
+import { CopyButton, type CopyState } from "./CopyButton";
 export function PromptDialog({
   card,
   onClose,
@@ -11,6 +12,8 @@ export function PromptDialog({
   favorite,
   onFavorite,
   onCopy,
+  copyState,
+  copyDisabled,
   onUnlock,
 }: {
   card: Card;
@@ -21,6 +24,8 @@ export function PromptDialog({
   favorite: boolean;
   onFavorite: () => void;
   onCopy: () => void;
+  copyState: CopyState;
+  copyDisabled: boolean;
   onUnlock: () => void;
 }) {
   const [detail, setDetail] = useState<Detail | null>(null);
@@ -116,9 +121,13 @@ export function PromptDialog({
           <h2 dir="auto">{card.title}</h2>
           <div className="detail-actions">
             {!detail || detail.copyEnabled ? (
-              <button className="primary-button" onClick={onCopy}>
-                העתקת פרומפט ↗
-              </button>
+              <CopyButton
+                className="primary-button"
+                label="העתקת פרומפט"
+                onClick={onCopy}
+                state={copyState}
+                disabled={copyDisabled}
+              />
             ) : detail.locked ? (
               <button className="primary-button" onClick={onUnlock}>
                 פתיחת גישת פרימיום
@@ -133,6 +142,11 @@ export function PromptDialog({
               {favorite ? "♥" : "♡"}
             </button>
           </div>
+          {copyState === "error" && (
+            <p role="alert">
+              ההעתקה לא הושלמה. נסו שוב, או סמנו והעתיקו את הטקסט למטה.
+            </p>
+          )}
           {error ? (
             <div role="alert">
               <p>{error}</p>

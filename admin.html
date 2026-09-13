@@ -131,6 +131,11 @@ body.admin-open #topRightBar{top:70px}
 .copy-btn{background:#f5a623;color:#000;border:none;padding:7px 14px;border-radius:6px;cursor:pointer;font-weight:bold;font-size:12px;white-space:nowrap}
 .copy-btn:hover{background:#ffc04d}
 .copy-btn.ok{background:#4caf50;color:#fff}
+.copy-feedback{transition:transform .1s,background-color .15s}
+.copy-feedback:active:not(:disabled){transform:translateY(1px) scale(.96)}
+.copy-feedback[aria-busy="true"]{opacity:1;cursor:progress;box-shadow:inset 0 0 0 2px #fff8}
+.copy-feedback.ok{background:#b7e4c4!important;color:#173c24!important}
+@media(prefers-reduced-motion:reduce){.copy-feedback{transition:none}}
 .edit-controls{display:none;gap:5px;margin-bottom:10px;flex-wrap:wrap;align-items:center}
 .body-edit .edit-controls{display:flex}
 .body-edit .ec-drag{display:none !important}
@@ -669,7 +674,7 @@ body.admin-open #themeBtn{top:12px}
     <ul class="share-modal-list" id="shareList"></ul>
     <div class="modal-footer" style="flex-wrap:wrap;gap:8px">
       <button class="btn btn-cancel" onclick="closeModal('shareModal')">סגור</button>
-      <button class="btn" style="background:#444;color:#fff" onclick="copyFavsList()">📋 העתק רשימה</button>
+      <button class="btn copy-feedback" style="background:#444;color:#fff" onclick="copyFavsList(this)">📋 העתק רשימה</button>
       <button class="btn" style="background:#4caf50;color:#fff" id="btnOrder" onclick="orderImagesWhatsApp()">🛒 הזמנת תמונות</button>
       <button class="btn" style="background:#1565c0;color:#fff" id="btnSession" onclick="bookSessionWhatsApp()">📅 קביעת סשן</button>
     </div>
@@ -2229,7 +2234,7 @@ function appendCard(p) {
     +'<span class="free-badge" style="'+(isFree?'':'display:none')+'">\u{1F193} Free</span>'
     +'<div class="card-header"><span class="num">#'+p.id+'</span>'
     +'<span class="cat">'+escHtml(formatCatLabel(p))+'</span>'
-    +'<button class="copy-btn" data-action="copy" data-key="'+p.key+'">\u{1F4CB} Copy</button>'
+    +'<button class="copy-btn copy-feedback" data-action="copy" data-key="'+p.key+'">\u{1F4CB} Copy</button>'
     +'<button class="unlock-btn" data-action="unlock">🔒 פרימיום</button>'
     +'</div><h3>'+escHtml(p.title)+'</h3>'+thumbHtml
     +'<div class="prompt-wrap"><pre class="prompt-text">'+escHtml(p.prompt)+'</pre></div>';
@@ -2363,13 +2368,31 @@ document.addEventListener('keydown',function(e){
   if(e.key==='ArrowLeft'){var p2=getCardData(lbKey);lbIdx=(lbIdx+1)%p2.images.length;showLbImg();}
 });
 
+async function copyTextWithFeedback(text,btn,message){
+  if(btn.disabled)return;
+  clearTimeout(btn.copyTimer);
+  if(!btn.copyLabel)btn.copyLabel=btn.textContent;
+  btn.disabled=true;btn.classList.remove('ok');
+  btn.setAttribute('aria-busy','true');btn.setAttribute('aria-live','polite');
+  btn.textContent='מעתיק…';
+  try{
+    try{await navigator.clipboard.writeText(text);}
+    catch(error){
+      var ta=document.createElement('textarea');ta.value=text;ta.style.cssText='position:fixed;opacity:0';
+      document.body.appendChild(ta);
+      try{ta.focus();ta.select();if(!document.execCommand('copy'))throw error;}
+      finally{ta.remove();btn.focus({preventScroll:true});}
+    }
+    btn.textContent='✓ הועתק';btn.classList.add('ok');showToast(message);
+  }catch(error){
+    btn.textContent='נסו שוב';showToast('ההעתקה לא הושלמה. נסו שוב או סמנו והעתיקו את הטקסט.');
+  }finally{
+    btn.disabled=false;btn.setAttribute('aria-busy','false');
+    btn.copyTimer=setTimeout(function(){btn.textContent=btn.copyLabel;btn.classList.remove('ok');},2500);
+  }
+}
 function copyPrompt(key,btn){
-  var p=getCardData(key); if(!p)return;
-  function done(){btn.textContent='\u2705 Copied!';btn.classList.add('ok');showToast('\u2705 \u05d4\u05d5\u05e2\u05ea\u05e7!');setTimeout(function(){btn.textContent='\u{1F4CB} Copy';btn.classList.remove('ok');},2000);}
-  navigator.clipboard.writeText(p.prompt).then(done).catch(function(){
-    var ta=document.createElement('textarea');ta.value=p.prompt;ta.style.cssText='position:fixed;opacity:0';
-    document.body.appendChild(ta);ta.focus();ta.select();document.execCommand('copy');document.body.removeChild(ta);done();
-  });
+  var p=getCardData(key);if(p)copyTextWithFeedback(p.prompt,btn,'הפרומפט הועתק!');
 }
 function makeFavBtn(key) {
   var b = document.createElement('button');
@@ -2508,7 +2531,7 @@ function openShareModal() {
   ['btnOrder','btnSession'].forEach(function(id){ document.getElementById(id).style.display = waVisible; });
   openModal('shareModal');
 }
-function copyFavsList() {
+function copyFavsList(btn) {
   var cards = getFavCards();
   if (!cards.length) return;
   var text = 'בחרתי ' + cards.length + ' תמונות מ-Brill Studio:\n' + cards.map(function(c){
@@ -2516,11 +2539,7 @@ function copyFavsList() {
     var title = (c.querySelector('h3')||{}).textContent || '';
     return num + ' - ' + title;
   }).join('\n');
-  var ta = document.createElement('textarea');
-  ta.value = text; ta.style.cssText='position:fixed;opacity:0';
-  document.body.appendChild(ta); ta.focus(); ta.select();
-  document.execCommand('copy'); document.body.removeChild(ta);
-  showToast('הרשימה הועתקה!');
+  copyTextWithFeedback(text,btn,'הרשימה הועתקה!');
 }
 function getFavListText() {
   return getFavCards().map(function(c){
