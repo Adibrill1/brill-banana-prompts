@@ -9,6 +9,10 @@ import {
 import {
   loadCatalog,
   loadDetail,
+  initialCatalog,
+  peekDetail,
+  preloadDetails,
+  setDetailContext,
   preference,
   readPreference,
   request,
@@ -49,8 +53,11 @@ export default function App() {
   const selectionRef = useRef(selection);
   selectionRef.current = selection;
   const [query, setQuery] = useState(selection.q);
-  const [catalog, setCatalog] = useState<Catalog | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [catalog, setCatalog] = useState<Catalog | null>(() =>
+    initialCatalog(selection),
+  );
+  const [loading, setLoading] = useState(() => !initialCatalog(selection));
+  const firstLoad = useRef(true);
   const [error, setError] = useState("");
   const [reload, setReload] = useState(0);
   const [favorites, setFavorites] = useState(initialFavorites);
@@ -109,6 +116,14 @@ export default function App() {
   }, [query, selection.q]);
   useEffect(() => {
     const controller = new AbortController();
+    if (firstLoad.current) {
+      firstLoad.current = false;
+      if (catalog) {
+        store("bb_services_config", catalog.config.services);
+        store("bb_header_config", catalog.config.header);
+        return;
+      }
+    }
     setLoading(true);
     setError("");
     loadCatalog(selection, favoriteKeys, controller.signal)
@@ -140,6 +155,23 @@ export default function App() {
       theme === "light" ? "light" : "dark";
     preference("bb_theme", theme);
   }, [theme]);
+  useEffect(() => {
+    if (!catalog) return;
+    setDetailContext(catalog.revision, premium);
+    const keys = catalog.items
+      .filter(
+        (card) =>
+          premium ||
+          ["full", "catalog"].includes(catalog.config.freeMode) ||
+          (catalog.config.freeMode === "partial" && card.free),
+      )
+      .map((card) => card.key);
+    // Start after the visible image requests. One bounded request fills the whole page's copy cache.
+    const timer = setTimeout(() => {
+      void preloadDetails(keys);
+    }, 150);
+    return () => clearTimeout(timer);
+  }, [catalog, premium]);
   useEffect(() => {
     let active = true;
     const params = new URLSearchParams(location.search);
@@ -208,16 +240,24 @@ export default function App() {
     copying.current = true;
     clearTimeout(copyTimer.current);
     setCopyFeedback({ key: card.key, state: "pending" });
-    const text = loadDetail(card.key).then((detail) => {
-      if (!detail.copyEnabled || detail.prompt === null)
-        throw new Error(
-          detail.locked ? "נדרשת גישת פרימיום" : "ההעתקה אינה זמינה כרגע",
-        );
-      return detail.prompt;
-    });
+    const cached = peekDetail(card.key);
+    const text = (cached ? Promise.resolve(cached) : loadDetail(card.key)).then(
+      (detail) => {
+        if (!detail.copyEnabled || detail.prompt === null)
+          throw new Error(
+            detail.locked ? "נדרשת גישת פרימיום" : "ההעתקה אינה זמינה כרגע",
+          );
+        return detail.prompt;
+      },
+    );
     // Start clipboard permission in the click gesture; Safari can reject it after an awaited fetch.
     try {
-      if (navigator.clipboard?.write && typeof ClipboardItem !== "undefined")
+      if (cached?.copyEnabled && cached.prompt !== null)
+        await navigator.clipboard.writeText(cached.prompt);
+      else if (
+        navigator.clipboard?.write &&
+        typeof ClipboardItem !== "undefined"
+      )
         await navigator.clipboard.write([
           new ClipboardItem({
             "text/plain": text.then(

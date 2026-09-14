@@ -22,3 +22,5 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
+        env:
+          BRILL_IMAGE_LIMIT: 3

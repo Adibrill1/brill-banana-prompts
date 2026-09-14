@@ -351,6 +351,7 @@ body.admin-open #themeBtn{top:12px}
   <button class="btn btn-reorder" id="reorderToggle" onclick="toggleReorderMode()" style="display:none">🔀 סדר</button>
   <button class="btn btn-add" onclick="openAddModal()">➕ הוסף</button>
   <button class="btn btn-publish" id="btnPublish" onclick="publishChanges()" disabled>🌐 פרסם שינויים</button>
+  <span id="publicationStatus" role="status" style="font-size:12px"></span>
   <button class="btn btn-edit" id="waToggle" onclick="toggleWaShare()" title="שליחת מועדפים ב-WhatsApp">💬 WA</button>
   <button class="btn btn-edit" onclick="openKeysModal()">🔑 ססמאות</button>
   <button class="btn btn-edit" onclick="openImportModal()" title="ייבוא כרטיסיות בקבוצה">📥 ייבוא</button>
@@ -752,6 +753,7 @@ function exportStateBackup() {
 var state = { deleted: [], customImgs: {}, added: [], order: [] };
 var serverCustomImgs = {}; // image paths confirmed uploaded on server
 var _baseRevision = null;
+var _publicationController = null;
 var _originalData = [];
 
 function isEmptyState(st) {
@@ -2012,13 +2014,28 @@ async function publishChanges() {
     document.getElementById('unsavedDot').classList.remove('show');
     btn.disabled = false;
     btn.textContent = '\u{1F310} \u05e4\u05e8\u05e1\u05dd \u05e9\u05d9\u05e0\u05d5\u05d9\u05d9\u05dd';
-    var freeCount = Object.keys(state.freePrompts || {}).length;
-    var mode = getFreeMode();
-    var statusMsg = mode === 'full'    ? '\u{1F7E2} \u05d7\u05d9\u05e0\u05dd \u05de\u05dc\u05d0 - \u05db\u05dc \u05d4\u05e4\u05e8\u05d5\u05de\u05e4\u05d8\u05d9\u05dd \u05d7\u05d9\u05e0\u05de\u05d9\u05d9\u05dd'
-                  : mode === 'catalog' ? '\u{1F535} \u05de\u05e6\u05d1 \u05e7\u05d8\u05dc\u05d5\u05d2 - \u05db\u05e8\u05d8\u05d9\u05e1\u05d9\u05d5\u05ea \u05dc\u05e6\u05e4\u05d9\u05d9\u05d4 \u05d1\u05dc\u05d1\u05d3 (\u05dc\u05dc\u05d0 \u05d4\u05e2\u05ea\u05e7\u05d4)'
-                  : mode === 'partial' ? '\u{1F7E1} \u05d7\u05d9\u05e0\u05dd \u05d7\u05dc\u05e7\u05d9 - ' + freeCount + ' \u05e4\u05e8\u05d5\u05de\u05e4\u05d8\u05d9\u05dd'
-                  :                     '\u{1F534} \u05d2\u05d9\u05e9\u05d4 \u05d7\u05d9\u05e0\u05de\u05d9\u05ea \u05db\u05d1\u05d5\u05d9\u05d4 (' + freeCount + ' \u05d1\u05e8\u05e9\u05d9\u05de\u05d4)';
-    showToast('\u2705 \u05e4\u05d5\u05e8\u05e1\u05dd - ' + statusMsg, 5000);
+    showToast('השינויים נשמרו. מכינים את התמונות ואת הגלריה לפרסום.', 5000);
+    if (_publicationController) _publicationController.abort();
+    _publicationController = new AbortController();
+    var publicationSignal = _publicationController.signal;
+    var publicationStatus = document.getElementById('publicationStatus');
+    publicationStatus.textContent = 'העדכון בהכנה — אפשר להמשיך לערוך';
+    import('/editor/deployment.mjs').then(function(module) {
+      return module.waitForPublication(rData.revision, {
+        signal: publicationSignal,
+        read: async function() {
+          var response = await fetch('/api/catalog?limit=1&publication=' + encodeURIComponent(rData.revision), { cache: 'no-store', signal: publicationSignal });
+          if (!response.ok) throw new Error('Publication status unavailable');
+          return response.json();
+        }
+      });
+    }).then(function(ready) {
+      if (publicationSignal.aborted) return;
+      publicationStatus.textContent = ready ? '✓ העדכון זמין באתר' : 'העדכון עדיין בהכנה; אפשר לבדוק שוב ברענון האתר';
+      if (ready) showToast('✓ הגלריה המעודכנת זמינה באתר', 5000);
+    }).catch(function() {
+      if (!publicationSignal.aborted) publicationStatus.textContent = 'השינויים נשמרו; אפשר לבדוק את הפרסום ברענון האתר';
+    });
   } catch(e) {
     btn.disabled = false;
     btn.textContent = '\u{1F310} \u05e4\u05e8\u05e1\u05dd \u05e9\u05d9\u05e0\u05d5\u05d9\u05d9\u05dd';

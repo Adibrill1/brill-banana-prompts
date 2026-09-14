@@ -4,11 +4,11 @@ Read `README.md` for setup, routes, deployment settings and the access-control b
 
 ## Current architecture
 
-- `src/`: React/TypeScript visitor gallery, built with Vite. Keep the initial HTML small. Request bounded metadata from `/api/catalog`; load full prompt text through `/api/prompt` only when needed.
+- `src/`: React/TypeScript visitor gallery, built with Vite. Embed only the first 100 metadata records in initial HTML. Use versioned static catalog pages and `/api/catalog` for search. Preload readable prompt details through one bounded private POST, shared with Copy and the viewer; never embed protected texts.
 - `admin.html`: separate authenticated editor retaining import, export, category and ordering workflows. `editor/uploads.mjs` uploads pending images before publishing state. Do not put the catalog, password hash or license keys back into frontend HTML.
 - `services.html`: services page; published configuration comes from the catalog API. Saved desktop size settings must not override mobile layout.
 - `api/` and `lib/`: Vercel Node functions, catalog normalization, repository storage, authenticated sessions and image transformation.
-- `content/originals.json`: 241 original records extracted from commit `7e300e1`; server-only migration input. `state.json` remains authoritative for published changes.
+- `content/originals.json`: 241 original records extracted from commit `7e300e1`; server-only migration input. `state.json` remains authoritative for published changes. `content/published.json` and `content/image-manifest.json` are generated, server-only release inputs.
 
 ## Data invariants
 
@@ -24,6 +24,8 @@ Use `minmax(0,1fr)` in grids and `min-width:0` on flexible content. Keep separat
 
 Upload images separately before the state save. Preserve every image in multi-image cards and services; do not silently strip base64 entries. New files are content-hashed WebP assets; replacing an image must not overwrite an older URL. `/api/img` allows only known source hosts/paths, bounded dimensions and bounded input sizes.
 
+A state save is publicly visible only after the matching Vercel deployment. Keep the editor’s saved/deployed status distinction. `scripts/prepare-images.mjs` generates all five WebP sizes before publication, reusing variants by source bytes and recipe. Never use global publication time in prepared image URLs. Public metadata uses a separate release revision (state + manifest + schema); the editor compares `stateRevision`.
+
 Large state responses and publishing requests use gzip to stay below Vercel's body limits. Keep save responses small. If the compressed catalog eventually outgrows those limits, migrate storage or split data; do not embed it in HTML again.
 
 `GITHUB_TOKEN` in Vercel needs Contents read/write permission for this repository. Its last recorded expiry was 2027-09-03; check the actual token when diagnosing publishing. Token presence alone does not prove validity. `SESSION_SECRET` is preferred for signed cookies, with existing server tokens as fallback. Never expose these as `VITE_` variables.
@@ -32,7 +34,7 @@ The repository and its history already publicly contain prompt data and license 
 
 ## Verification and safe local work
 
-Run `npm test` and `npm run build`. The tests exercise migration, search and paging, authentication, license expiry/revocation, bounded gzip handling, upload retries and concurrent publishing. Validate important user flows in a browser, including a phone-sized viewport. `npm run preview` serves the production build with local read-only APIs.
+Run `npm test` and `npm run build`. The tests exercise migration, search and paging, authentication, license expiry/revocation, bounded gzip handling, upload retries and concurrent publishing. Validate important user flows in a browser, including a phone-sized viewport. `LOCAL_PUBLISHED=1 npm run preview` serves the production build and prepared snapshot with local read-only APIs. A limited image build is allowed only for local/CI checks; every Vercel release must prepare the complete catalog.
 
 Both local server modes force `LOCAL_DATA=1` and cannot publish to GitHub. Vercel preview deployments also reject publishing, image uploads and license-key mutations. `LOCAL_ADMIN_PASSWORD` is an optional local test override, not a production password. Never commit real secrets. Keep state, originals and license files out of `dist/`.
 

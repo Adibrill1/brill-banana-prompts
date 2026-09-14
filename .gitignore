@@ -6,3 +6,6 @@ dist/
 .env.local
 work/
 .DS_Store
+content/published.json
+content/image-manifest.json
+content/image-build-report.json
