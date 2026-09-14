@@ -6,7 +6,7 @@ Hebrew/RTL prompt gallery, upgraded from the original single-file application.
 
 The visitor application uses React and TypeScript, built with Vite. It requests 100 lightweight card records per page, searches the complete catalog on the server, and fetches full prompt text only when opened or copied. Favorite IDs and the existing theme preference are preserved. Responsive image variants are generated with Sharp and cached by the browser and Vercel CDN; offscreen images load lazily.
 
-Visitors can select 1–7 images per row on desktop, up to 3 on tablets and 2 on phones. The saved desktop preference survives resizing. Copy buttons show progress immediately and a green confirmation only after clipboard success, in both the gallery and prompt viewer.
+Visitors can select 1–7 images per row at every screen size. Desktop, tablet and phone choices are saved separately, with comfortable defaults of 4, 3 and 2 columns. Copy buttons appear directly on gallery cards and inside the prompt viewer, including catalog mode for already-readable prompts. They show progress immediately and a green confirmation only after clipboard success. Protected prompts still require access.
 
 ## Local development
 
@@ -35,7 +35,7 @@ The existing administrator password works locally. For isolated UI testing, star
 - `state.json` remains the publishing source of truth in this incremental release. No database migration or third-party account is required.
 - `content/originals.json` losslessly extracts the 241 original records from commit `7e300e1`. It is server data, excluded from static output.
 - `lib/catalog.cjs` combines originals, added cards, edits, deletions, image overrides and ordering into one read model. Unlisted cards stay before explicitly ordered cards, matching the old page. Existing IDs are never reassigned.
-- `bb_favs` and `brill_license` remain compatible. `bb_gallery_columns` stores the 1–7-column preference, clamped for smaller screens without overwriting the desktop choice. The previous large/compact setting supplies the initial default.
+- `bb_favs` and `brill_license` remain compatible. `bb_gallery_columns` stores the desktop 1–7-column preference; `_tablet` and `_mobile` keys store independent choices on smaller screens. The previous large/compact setting supplies the initial desktop default.
 - The editor still loads the full catalog, but only authenticated administrators request it. Visitor browsing is always bounded to a page of cards.
 - New image uploads use content-hashed WebP filenames. Existing sources remain intact. The image proxy uses versioned request URLs; no destructive batch conversion of the archive is performed.
 - Repository reads use a short in-memory cache plus CDN caching for public metadata. Admin reads are fresh and uncacheable. A failed public read may use an explicitly marked last-good/bundled snapshot; admin editing never silently loads an empty fallback.

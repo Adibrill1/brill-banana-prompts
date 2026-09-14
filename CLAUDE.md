@@ -16,7 +16,7 @@ Preserve existing card keys, favorites, order, category membership and prompt te
 
 Never call `getCardData()` or a document-wide card selector in a loop in the legacy editor. Build a key-to-record or key-to-element Map first. The editor still displays the full catalog, so retain its `content-visibility` optimization. The visitor page renders at most 100 cards under normal navigation, with lazy image loading and 1–7 responsive columns.
 
-Use `minmax(0,1fr)` in grids and `min-width:0` on flexible content. Clamp saved desktop column counts for phones. Verify horizontal overflow at 320px and 390px, with long titles and category labels.
+Use `minmax(0,1fr)` in grids and `min-width:0` on flexible content. Keep separate column preferences for desktop, tablets and phones. All offer 1–7 columns, while phones default to 2. Verify horizontal overflow at 320px and 390px, with long titles and category labels.
 
 ## Publishing and images
 

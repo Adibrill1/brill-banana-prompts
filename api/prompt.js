@@ -25,7 +25,7 @@ module.exports = async (req, res) => {
       images: card.images.map((src) => catalog.imageUrl(src, 1600, version)),
       prompt: readable ? card.prompt : null,
       locked: !readable,
-      copyEnabled: readable && catalog.mode(state) !== "catalog",
+      copyEnabled: readable,
     });
   } catch {
     return json(req, res, 503, { error: "לא ניתן לטעון את הפרומפט כרגע" });

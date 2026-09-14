@@ -284,7 +284,9 @@ test("premium prompt text is withheld unless free or server-authorized", async (
     );
     return body(r);
   };
-  assert.equal((await run({})).prompt, null);
+  const locked = await run({});
+  assert.equal(locked.prompt, null);
+  assert.equal(locked.copyEnabled, false);
   assert.equal(
     (await run({ "x-admin-token": process.env.ADMIN_TOKEN })).prompt,
     "Private text",
@@ -292,8 +294,12 @@ test("premium prompt text is withheld unless free or server-authorized", async (
   value.freeMode = "partial";
   value.freePrompts = { added_test: true };
   assert.equal((await run({})).copyEnabled, true);
-  value.freeMode = "catalog";
+  value.freePrompts = {};
   assert.equal((await run({})).copyEnabled, false);
+  value.freeMode = "catalog";
+  const catalogDetail = await run({});
+  assert.equal(catalogDetail.prompt, "Private text");
+  assert.equal(catalogDetail.copyEnabled, true);
 });
 test("save validation accepts existing data and rejects malformed or duplicate records", () => {
   assert(save.validateState(state));

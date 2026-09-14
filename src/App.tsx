@@ -211,7 +211,7 @@ export default function App() {
     const text = loadDetail(card.key).then((detail) => {
       if (!detail.copyEnabled || detail.prompt === null)
         throw new Error(
-          detail.locked ? "נדרשת גישת פרימיום" : "ההעתקה אינה זמינה במצב קטלוג",
+          detail.locked ? "נדרשת גישת פרימיום" : "ההעתקה אינה זמינה כרגע",
         );
       return detail.prompt;
     });
@@ -520,10 +520,10 @@ export default function App() {
                     copyFeedback?.key === card.key ? copyFeedback.state : "idle"
                   }
                   copyDisabled={copyFeedback?.state === "pending"}
-                  catalogMode={config?.freeMode === "catalog"}
                   canCopy={
                     premium ||
                     config?.freeMode === "full" ||
+                    config?.freeMode === "catalog" ||
                     (config?.freeMode === "partial" && card.free)
                   }
                 />

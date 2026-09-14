@@ -12,7 +12,6 @@ export function PromptCard({
   copyState,
   copyDisabled,
   canCopy,
-  catalogMode,
 }: {
   card: Card;
   index: number;
@@ -25,7 +24,6 @@ export function PromptCard({
   copyState: CopyState;
   copyDisabled: boolean;
   canCopy: boolean;
-  catalogMode: boolean;
 }) {
   return (
     <article className="prompt-card" data-key={card.key}>
@@ -72,16 +70,14 @@ export function PromptCard({
           <button onClick={onOpen}>{card.title}</button>
         </h2>
         <div className="card-actions">
-          {!catalogMode && (
-            <CopyButton
-              className={"copy-button " + (canCopy ? "" : "locked")}
-              onClick={onCopy}
-              state={copyState}
-              disabled={copyDisabled}
-              label={canCopy ? "העתקה" : "פרימיום"}
-              icon={canCopy ? "↗" : "◇"}
-            />
-          )}
+          <CopyButton
+            className={"copy-button " + (canCopy ? "" : "locked")}
+            onClick={onCopy}
+            state={copyState}
+            disabled={copyDisabled}
+            label={canCopy ? "העתקה" : "פרימיום"}
+            icon={canCopy ? "⧉" : "◇"}
+          />
           <button
             className={"icon-button favorite " + (favorite ? "selected" : "")}
             onClick={onFavorite}

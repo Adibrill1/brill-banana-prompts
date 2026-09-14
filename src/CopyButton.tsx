@@ -5,7 +5,7 @@ export function CopyButton({
   disabled = false,
   onClick,
   label = "העתקה",
-  icon = "↗",
+  icon = "⧉",
   className = "copy-button",
 }: {
   state?: CopyState;
