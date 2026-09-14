@@ -1,4 +1,11 @@
-import { lazy, Suspense, useEffect, useRef, useState } from "react";
+import {
+  lazy,
+  Suspense,
+  useEffect,
+  useRef,
+  useState,
+  type CSSProperties,
+} from "react";
 import {
   loadCatalog,
   loadDetail,
@@ -9,6 +16,8 @@ import {
   store,
 } from "./api";
 import { PromptCard } from "./PromptCard";
+import type { CopyState } from "./CopyButton";
+import { useGalleryColumns } from "./useGalleryColumns";
 import type { Card, Catalog, Selection } from "./types";
 const PromptDialog = lazy(() =>
   import("./PromptDialog").then((m) => ({ default: m.PromptDialog })),
@@ -46,9 +55,7 @@ export default function App() {
   const [reload, setReload] = useState(0);
   const [favorites, setFavorites] = useState(initialFavorites);
   const [theme, setTheme] = useState(() => readPreference("bb_theme", "dark"));
-  const [layout, setLayout] = useState(() =>
-    readPreference("bb_gallery_layout", "compact"),
-  );
+  const { columns, maximum, setColumns } = useGalleryColumns();
   const [opened, setOpened] = useState<Card | null>(null);
   const [access, setAccess] = useState(false);
   const [premium, setPremium] = useState(false);
@@ -57,7 +64,14 @@ export default function App() {
     undefined,
   );
   const resultsRef = useRef<HTMLDivElement>(null);
-  const [copying, setCopying] = useState(false);
+  const [copyFeedback, setCopyFeedback] = useState<{
+    key: string;
+    state: CopyState;
+  } | null>(null);
+  const copying = useRef(false);
+  const copyTimer = useRef<ReturnType<typeof setTimeout> | undefined>(
+    undefined,
+  );
   const favoriteKeys = Object.keys(favorites).filter((key) => favorites[key]);
   const favoritesSignature = selection.favorites ? favoriteKeys.join(",") : "";
   const notify = (message: string) => {
@@ -127,9 +141,6 @@ export default function App() {
     preference("bb_theme", theme);
   }, [theme]);
   useEffect(() => {
-    preference("bb_gallery_layout", layout);
-  }, [layout]);
-  useEffect(() => {
     let active = true;
     const params = new URLSearchParams(location.search);
     const activationKey = params.get("license_key");
@@ -170,6 +181,7 @@ export default function App() {
     return () => {
       active = false;
       clearTimeout(noticeTimer.current);
+      clearTimeout(copyTimer.current);
     };
   }, []);
   function toggleFavorite(card: Card) {
@@ -182,7 +194,7 @@ export default function App() {
     });
   }
   async function copy(card: Card) {
-    if (copying) return;
+    if (copying.current) return;
     if (
       !premium &&
       catalog &&
@@ -193,11 +205,13 @@ export default function App() {
       setAccess(true);
       return;
     }
-    setCopying(true);
+    copying.current = true;
+    clearTimeout(copyTimer.current);
+    setCopyFeedback({ key: card.key, state: "pending" });
     const text = loadDetail(card.key).then((detail) => {
       if (!detail.copyEnabled || detail.prompt === null)
         throw new Error(
-          detail.locked ? "נדרשת גישת פרימיום" : "ההעתקה אינה זמינה במצב קטלוג",
+          detail.locked ? "נדרשת גישת פרימיום" : "ההעתקה אינה זמינה כרגע",
         );
       return detail.prompt;
     });
@@ -212,13 +226,16 @@ export default function App() {
           }),
         ]);
       else await navigator.clipboard.writeText(await text);
+      setCopyFeedback({ key: card.key, state: "success" });
+      copyTimer.current = setTimeout(() => setCopyFeedback(null), 2500);
       notify("הפרומפט הועתק");
     } catch {
       await text.catch(() => undefined);
+      setCopyFeedback({ key: card.key, state: "error" });
       setOpened(card);
       notify("אפשר להעתיק את הטקסט מתוך חלון הפרומפט.");
     } finally {
-      setCopying(false);
+      copying.current = false;
     }
   }
   const config = catalog?.config;
@@ -390,28 +407,21 @@ export default function App() {
                 <span aria-hidden="true">♡</span> מועדפים{" "}
                 <span>{favoriteKeys.length}</span>
               </button>
-              <div
-                className="layout-toggle"
-                role="group"
-                aria-label="גודל כרטיסים"
-              >
-                <button
-                  className={layout === "large" ? "active" : ""}
-                  aria-pressed={layout === "large"}
-                  aria-label="כרטיסים גדולים"
-                  onClick={() => setLayout("large")}
+              <label className="column-control">
+                תמונות בשורה
+                <select
+                  value={columns}
+                  onChange={(event) => setColumns(Number(event.target.value))}
                 >
-                  ▣
-                </button>
-                <button
-                  className={layout !== "large" ? "active" : ""}
-                  aria-pressed={layout !== "large"}
-                  aria-label="גלריה צפופה"
-                  onClick={() => setLayout("compact")}
-                >
-                  ▦
-                </button>
-              </div>
+                  {Array.from({ length: maximum }, (_, index) => index + 1).map(
+                    (count) => (
+                      <option key={count} value={count}>
+                        {count}
+                      </option>
+                    ),
+                  )}
+                </select>
+              </label>
             </div>
           </div>
           {selection.favorites && config?.shareWhatsApp && (
@@ -480,8 +490,14 @@ export default function App() {
           ) : (
             <div
               className={
-                "gallery-grid " + (layout === "large" ? "large-cards" : "")
+                "gallery-grid " +
+                (columns <= 3
+                  ? "large-cards"
+                  : columns >= 6
+                    ? "dense-cards"
+                    : "")
               }
+              style={{ "--gallery-columns": columns } as CSSProperties}
               data-testid="gallery"
             >
               {catalog.items.map((card, index) => (
@@ -489,7 +505,7 @@ export default function App() {
                   key={card.key}
                   card={card}
                   index={index}
-                  large={layout === "large"}
+                  columns={columns}
                   favorite={!!favorites[card.key]}
                   labels={
                     card.cats
@@ -500,10 +516,14 @@ export default function App() {
                   onFavorite={() => toggleFavorite(card)}
                   onOpen={() => setOpened(card)}
                   onCopy={() => copy(card)}
-                  catalogMode={config?.freeMode === "catalog"}
+                  copyState={
+                    copyFeedback?.key === card.key ? copyFeedback.state : "idle"
+                  }
+                  copyDisabled={copyFeedback?.state === "pending"}
                   canCopy={
                     premium ||
                     config?.freeMode === "full" ||
+                    config?.freeMode === "catalog" ||
                     (config?.freeMode === "partial" && card.free)
                   }
                 />
@@ -567,6 +587,10 @@ export default function App() {
             favorite={!!favorites[opened.key]}
             onFavorite={() => toggleFavorite(opened)}
             onCopy={() => copy(opened)}
+            copyState={
+              copyFeedback?.key === opened.key ? copyFeedback.state : "idle"
+            }
+            copyDisabled={copyFeedback?.state === "pending"}
             onUnlock={() => {
               setOpened(null);
               setAccess(true);
