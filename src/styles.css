@@ -328,25 +328,24 @@ h1 {
   color: var(--accent);
   font-size: 11px;
 }
-.layout-toggle {
+.column-control {
   display: flex;
-  padding: 3px;
-  border-radius: 9px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-}
-.layout-toggle button {
-  border: 0;
-  min-width: 40px;
-  min-height: 38px;
-  padding: 4px 10px;
+  align-items: center;
+  gap: 8px;
   color: var(--muted);
-  font-size: 22px;
-  background: none;
+  font-size: 12px;
+  white-space: nowrap;
 }
-.layout-toggle button.active {
+.column-control select {
+  min-width: 56px;
+  min-height: 44px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
   background: var(--surface2);
   color: var(--text);
+  font: inherit;
+  cursor: pointer;
 }
 .favorites-actions {
   display: flex;
@@ -368,14 +367,12 @@ h1 {
 }
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(var(--gallery-columns, 4), minmax(0, 1fr));
   gap: 20px;
   transition: opacity 0.15s;
 }
-.gallery-grid.large-cards {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
 .prompt-card {
+  container-type: inline-size;
   min-width: 0;
   border: 1px solid var(--line);
   border-radius: 15px;
@@ -497,7 +494,7 @@ h1 {
   padding: 8px 13px;
   min-height: 44px;
 }
-.copy-button span {
+.copy-button .copy-icon {
   color: var(--accent);
   font-size: 17px;
 }
@@ -510,6 +507,44 @@ h1 {
 }
 .copy-button.locked {
   color: var(--muted);
+}
+.copy-feedback {
+  gap: 8px;
+  transition:
+    transform 0.1s,
+    background-color 0.15s,
+    color 0.15s;
+}
+.copy-feedback:active:not(:disabled) {
+  transform: translateY(1px) scale(0.96);
+}
+.copy-feedback[data-copy-state="pending"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--ink);
+  opacity: 1;
+  cursor: progress;
+}
+.copy-feedback[data-copy-state="success"] {
+  background: #b7e4c4;
+  border-color: #b7e4c4;
+  color: #173c24;
+}
+.copy-feedback[data-copy-state="error"] {
+  border-color: var(--accent);
+}
+.copy-feedback[data-copy-state="pending"] .copy-icon,
+.copy-feedback[data-copy-state="success"] span {
+  color: inherit;
+}
+.copy-spinner {
+  width: 13px;
+  height: 13px;
+  flex: 0 0 13px;
+  border: 2px solid currentColor;
+  border-inline-end-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
 }
 .favorite {
   border: 0;
@@ -831,18 +866,9 @@ footer > a:last-child {
     object-fit: contain;
   }
 }
-@media (max-width: 1450px) {
-  .gallery-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
 @media (max-width: 1000px) {
   .gallery-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 14px;
-  }
-  .gallery-grid.large-cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .gallery-heading {
     gap: 25px;
@@ -991,20 +1017,12 @@ footer > a:last-child {
     padding: 0 4px;
     gap: 5px;
   }
-  .layout-toggle {
-    padding: 2px;
-  }
-  .layout-toggle button {
-    min-width: 35px;
-    min-height: 40px;
-    padding: 2px 7px;
+  .column-control {
+    font-size: 11px;
+    gap: 6px;
   }
   .gallery-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
-  }
-  .gallery-grid.large-cards {
-    grid-template-columns: minmax(0, 1fr);
   }
   .large-cards .image-button img {
     object-fit: contain;
@@ -1086,6 +1104,70 @@ footer > a:last-child {
   }
   .pagination {
     padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+.gallery-grid.dense-cards {
+  gap: clamp(4px, 1vw, 12px);
+}
+@container (max-width: 180px) {
+  .card-content {
+    padding: 8px;
+  }
+  .card-actions {
+    gap: 4px;
+  }
+  .copy-button {
+    padding: 4px;
+    font-size: 11px;
+    gap: 3px;
+  }
+}
+@container (max-width: 135px) {
+  .card-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .favorite {
+    width: 100%;
+    min-width: 0;
+  }
+  .copy-button {
+    min-width: 0;
+    justify-content: center;
+  }
+}
+@container (max-width: 80px) {
+  .card-content {
+    padding: 3px;
+  }
+  .card-category,
+  .image-count {
+    display: none;
+  }
+  .card-content h2 {
+    font-size: 10px;
+    min-height: 30px;
+    overflow-wrap: anywhere;
+  }
+  .card-number {
+    top: 2px;
+    right: 2px;
+    padding: 1px 2px;
+    font-size: 8px;
+  }
+  .copy-button {
+    flex-direction: column;
+    padding: 2px 0;
+    font-size: 9px;
+    gap: 0;
+  }
+  .copy-button .copy-icon {
+    font-size: 13px;
+    line-height: 14px;
+  }
+  .favorite {
+    font-size: 20px;
+    padding: 2px 0;
   }
 }
 @media (prefers-reduced-motion: reduce) {

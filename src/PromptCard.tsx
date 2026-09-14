@@ -1,26 +1,29 @@
 import type { Card } from "./types";
+import { CopyButton, type CopyState } from "./CopyButton";
 export function PromptCard({
   card,
   index,
-  large,
+  columns,
   favorite,
   labels,
   onFavorite,
   onOpen,
   onCopy,
+  copyState,
+  copyDisabled,
   canCopy,
-  catalogMode,
 }: {
   card: Card;
   index: number;
-  large: boolean;
+  columns: number;
   favorite: boolean;
   labels: string;
   onFavorite: () => void;
   onOpen: () => void;
   onCopy: () => void;
+  copyState: CopyState;
+  copyDisabled: boolean;
   canCopy: boolean;
-  catalogMode: boolean;
 }) {
   return (
     <article className="prompt-card" data-key={card.key}>
@@ -33,11 +36,7 @@ export function PromptCard({
           <img
             src={card.image.src}
             srcSet={card.image.srcSet || undefined}
-            sizes={
-              large
-                ? "(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw"
-                : "(max-width: 600px) 50vw, (max-width: 1000px) 33vw, (max-width: 1450px) 25vw, 20vw"
-            }
+            sizes={`${100 / columns}vw`}
             width="640"
             height="640"
             alt={card.title}
@@ -71,15 +70,14 @@ export function PromptCard({
           <button onClick={onOpen}>{card.title}</button>
         </h2>
         <div className="card-actions">
-          {!catalogMode && (
-            <button
-              className={"copy-button " + (canCopy ? "" : "locked")}
-              onClick={onCopy}
-            >
-              {canCopy ? "העתקה" : "פרימיום"}{" "}
-              <span aria-hidden="true">{canCopy ? "↗" : "◇"}</span>
-            </button>
-          )}
+          <CopyButton
+            className={"copy-button " + (canCopy ? "" : "locked")}
+            onClick={onCopy}
+            state={copyState}
+            disabled={copyDisabled}
+            label={canCopy ? "העתקה" : "פרימיום"}
+            icon={canCopy ? "⧉" : "◇"}
+          />
           <button
             className={"icon-button favorite " + (favorite ? "selected" : "")}
             onClick={onFavorite}
