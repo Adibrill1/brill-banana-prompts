@@ -13,6 +13,7 @@ export type Card = {
   };
 };
 export type Detail = Card & {
+  revision: string;
   images: string[];
   prompt: string | null;
   locked: boolean;
@@ -39,6 +40,7 @@ export type Config = {
   services: Record<string, unknown>;
 };
 export type Catalog = {
+  stateRevision?: string;
   items: Card[];
   total: number;
   catalogTotal: number;

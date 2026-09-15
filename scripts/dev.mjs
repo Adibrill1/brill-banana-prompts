@@ -37,6 +37,7 @@ const mime = {
   ".css": "text/css; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
   ".mjs": "text/javascript; charset=utf-8",
+  ".json": "application/json; charset=utf-8",
   ".jpg": "image/jpeg",
   ".webp": "image/webp",
   ".png": "image/png",
@@ -65,7 +66,7 @@ const server = http.createServer(async (req, res) => {
       return await require("../api/" + name + ".js")(req, res);
     }
     if (
-      /^\/(?:state\.json|keys\.json|content(?:\/|$)|lib(?:\/|$)|tests(?:\/|$)|scripts(?:\/|$)|\.env)/.test(
+      /^\/(?:state\.json|keys\.json|content(?:\/|$)|lib(?:\/|$)|node_modules\/\.cache(?:\/|$)|work(?:\/|$)|tests(?:\/|$)|scripts(?:\/|$)|\.env)/.test(
         url.pathname,
       )
     ) {
@@ -80,7 +81,8 @@ const server = http.createServer(async (req, res) => {
     const relative =
       aliases[url.pathname] ||
       decodeURIComponent(url.pathname).replace(/^\//, "");
-    const base = production ? path.join(root, "dist") : root;
+    const generated = /^\/(media|catalog)\//.test(url.pathname);
+    const base = production || generated ? path.join(root, "dist") : root;
     const file = path.resolve(base, relative);
     if (!file.startsWith(base + path.sep)) {
       res.writeHead(404).end();
@@ -89,7 +91,7 @@ const server = http.createServer(async (req, res) => {
     if (
       fs.existsSync(file) &&
       fs.statSync(file).isFile() &&
-      (production || /\.(?:html|jpg|png|webp)$/.test(file))
+      (production || generated || /\.(?:html|jpg|png|webp)$/.test(file))
     ) {
       let body = fs.readFileSync(file);
       if (!production && file.endsWith("index.html"))

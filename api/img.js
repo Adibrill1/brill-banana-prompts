@@ -1,7 +1,7 @@
 const sharp = require("sharp");
 const { RAW } = require("../lib/repository.cjs");
 const { imageSource } = require("../lib/catalog.cjs");
-const WIDTHS = new Set([320, 640, 960, 1600]);
+const WIDTHS = new Set([320, 480, 640, 960, 1600]);
 const cache = new Map();
 const inflight = new Map();
 let cacheBytes = 0;
