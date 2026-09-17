@@ -29,9 +29,10 @@ MAX_IMG_DIM  = 800  # max width or height in pixels after resize
 JPEG_QUALITY = 82   # JPEG quality; 82 gives ~150-200 KB for typical AI portrait
 
 # ── paths ──────────────────────────────────────────────────────────────────────
-ALLPICS_DIR  = r'C:\Users\User\Downloads\Allpics'
+SCRIPT_DIR   = os.path.dirname(os.path.abspath(__file__))
+ALLPICS_DIR  = os.path.join(SCRIPT_DIR, 'Allpics')
 CSV_FILE     = os.path.join(ALLPICS_DIR, 'flow_full_prompts.csv')
-REPO_DIR     = r'C:\Users\User\Desktop\ClaudeCode\prompts\brill-banana-prompts'
+REPO_DIR     = SCRIPT_DIR
 STATE_FILE   = os.path.join(REPO_DIR, 'state.json')
 INDEX_FILE   = os.path.join(REPO_DIR, 'index.html')
 IMG_DEST_DIR = os.path.join(REPO_DIR, 'images')
